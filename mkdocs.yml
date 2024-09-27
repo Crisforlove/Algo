@@ -1,0 +1,64 @@
+site_name: "Algo Curriculum"  # 这是你的网站名称
+# 添加用于 GitHub Pages 的部署路径
+repo_url: https://github.com/Crisforlove/Algo.git
+
+
+nav:
+  - Home: index.md
+  - docs:
+      - Lesson 1:
+          - Java: lesson1/Lesson1 Java.md
+          - Python: lesson1/Lesson1 Python.md
+          - C++: lesson1/Lesson1 C++.md
+      - Lesson 2:
+          - Java: lesson2/Lesson2 Java.md
+          - Python: lesson2/Lesson2 Python.md
+          - C++: lesson2/Lesson2 C++.md
+      - Lesson 3:
+          - Java: lesson3/Lesson3 Java.md
+          - Python: lesson3/Lesson3 Python.md
+          - C++: lesson3/Lesson3 C++.md
+      - Lesson 4:
+          - Java: lesson4/Lesson4 Java.md
+          - Python: lesson4/Lesson4 Python.md
+          - C++: lesson4/Lesson4 C++.md
+      - Lesson 5:
+          - Java: lesson5/Lesson5 Java.md
+          - Python: lesson5/Lesson5 Python.md
+          - C++: lesson5/Lesson5 C++.md
+      - Lesson 6:
+          - Java: lesson6/Lesson6 Java.md
+          - Python: lesson6/Lesson6 Python.md
+          - C++: lesson6/Lesson6 C++.md
+      - Lesson 7:
+          - Java: lesson7/Lesson7 Java.md
+          - Python: lesson7/Lesson7 Python.md
+          - C++: lesson7/Lesson7 C++.md
+      - Lesson 8:
+          - Java: lesson8/Lesson8 Java.md
+          - Python: lesson8/Lesson8 Python.md
+          - C++: lesson8/Lesson8 C++.md
+      - Lesson 9:
+          - Java: lesson9/Lesson9 Java.md
+          - Python: lesson9/Lesson9 Python.md
+          - C++: lesson9/Lesson9 C++.md
+      - Lesson 10:
+          - Java: lesson10/Lesson10 Java.md
+          - Python: lesson10/Lesson10 Python.md
+          - C++: lesson10/Lesson10 C++.md
+      - Lesson 11:
+          - Java: lesson11/Lesson11 Java.md
+          - Python: lesson11/Lesson11 Python.md
+          - C++: lesson11/Lesson11 C++.md
+      - Lesson 12:
+          - Java: lesson12/Lesson12 Java.md
+          - Python: lesson12/Lesson12 Python.md
+          - C++: lesson12/Lesson12 C++.md
+      - Lesson 14:
+          - Java: lesson14/Lesson14 Java.md
+          - Python: lesson14/Lesson14 Python.md
+          - C++: lesson14/Lesson14 C++.md
+      - Lesson 15:
+            - Java: lesson15/Lesson15 Java.md
+            - Python: lesson15/Lesson15 Python.md
+            - C++: lesson15/Lesson15 C++.md
