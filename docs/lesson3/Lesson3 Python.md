@@ -45,7 +45,7 @@
 - 函数内容以冒号 **:** 起始，并且函数内的代码缩进。
 - **return [表达式]** 结束函数，选择性地返回一个值给调用方，不带表达式的 return 相当于返回 None。
 
-![image-20240724220418977](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson3/lesson3/Image/image-20240724220418977.png?raw=true
+![image-20240724220418977](Image/image-20240724220418977.png)
 )
 
 ### 1.1 语法

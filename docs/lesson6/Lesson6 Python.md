@@ -30,13 +30,13 @@ LeetCode是一个在线编程竞技平台，旨在帮助‌程序员提升编程
 官网：https://leetcode.cn
 
 - **首先在菜单中点击‘题库’：**
-![image1](images/Picture%201.png)
+![image1](images/Picture 1.png)
 
 - **搜索框中可以输入题号、标题等查找相应题目**
-![image2](images/Picture%202.png)
+![image2](images/Picture 2.png)
 
 - **搜索时可以设置题目难度**
-![image3](images/Picture%203.png)
+![image3](images/Picture 3.png)
 
 ### 1.2 Leetcode 题目
 
@@ -48,27 +48,27 @@ LeetCode是一个在线编程竞技平台，旨在帮助‌程序员提升编程
 
 3. 提示：给出一些变量在test case中的范围
 
-![image4](images/Picture%204.png)
+![image4](images/Picture 4.png)
 ### 1.3 Leetcode题解
 
 题解：点击题解后即可查看该题的几种解法
 
-![image5](images/Picture%205.png)
+![image5](images/Picture 5.png)
 ### 1.4 Leetcode提交记录
 
 点击‘提交记录’可查看以往提交内容
 
-![image6](images/Picture%206.png)
+![image6](images/Picture 6.png)
 
 点击其中一条，即出现该次提交的详情，包括性能与代码内容
 
-![image7](images/Picture%207.png)
+![image7](images/Picture 7.png)
 
 ### 1.5 Leetcode做题分析
 
 点击头像，查看做题分析、进度管理等，即可查看自己的做题内容
 
-![image8](images/Picture%208.png)
+![image8](images/Picture 8.png)
 
 ## 2. 更多常用字符串函数用法和文档查找方法
 

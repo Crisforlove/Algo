@@ -1,0 +1,4087 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../lesson14/Lesson14%20C%2B%2B/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
+    
+    
+      
+        <title>Lesson 15 - Algo Curriculum</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lesson-15" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Algo Curriculum" class="md-header__button md-logo" aria-label="Algo Curriculum" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algo Curriculum
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lesson 15
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Crisforlove/Algo.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Algo Curriculum" class="md-nav__button md-logo" aria-label="Algo Curriculum" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Algo Curriculum
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Crisforlove/Algo.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson1/Lesson1%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson2/Lesson2%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson3/Lesson3%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson4/Lesson4%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson5/Lesson5%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson6/Lesson6%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson7/Lesson7%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson8/Lesson8%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson9/Lesson9%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson10/Lesson10%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson11/Lesson11%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson12/Lesson12%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson13/Lesson13%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson14/Lesson14%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lesson15%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson4/Lesson4%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson5/Lesson5%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson6/Lesson6%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson7/Lesson7%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson8/Lesson8%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson9/Lesson9%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson10/Lesson10%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson11/Lesson11%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson12/Lesson12%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson13/Lesson13%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson14/Lesson14%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lesson15%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson1/Lesson1%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson2/Lesson2%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson3/Lesson3%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson4/Lesson4%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson5/Lesson5%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson6/Lesson6%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson7/Lesson7%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson8/Lesson8%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson9/Lesson9%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson10/Lesson10%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson11/Lesson11%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson12/Lesson12%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson13/Lesson13%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson14/Lesson14%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lesson 15
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 15
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-prefix-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 前缀和（Prefix Sum）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 前缀和（Prefix Sum）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      构建前缀和数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      思考：这段代码有没有什么问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="思考：这段代码有没有什么问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组越界
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      解决方式：添加条件判断
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      思考：有没有更好的解决方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="思考：有没有更好的解决方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      构建前缀和数组时多开一格
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prefixsum" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结：prefixSum 多开一格的原因与好处
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="总结：prefixSum 多开一格的原因与好处">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      避免边界问题：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例解释
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      优点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      缺点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-difference-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 差分数组（Difference Array）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 差分数组（Difference Array）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      构建差分数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      更新区间
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      恢复原数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考代码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      优点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      缺点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 例题讲解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 前缀和
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#311-lc303-" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 LC303 区域和检索 - 数组不可变
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1.1 LC303 区域和检索 - 数组不可变">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      解题思路
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解题思路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      前缀和数组定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何计算区间和
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      步骤：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考解答
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prefixsum_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      prefixSum 需要多开一格的原因
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 差分数组例题讲解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#321-lc2848" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 LC2848 与车相交的点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2.1 LC2848 与车相交的点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      解题思路
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解题思路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      具体步骤：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      特别注意：为什么需要 C + 2 的长度
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="特别注意：为什么需要 C + 2 的长度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      案例分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考解答
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      解释
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 举一反三
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 前缀和举一反三
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#411-lc724" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1 LC724 寻找数组的中心下标
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1.1 LC724 寻找数组的中心下标">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      解题思路
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考解答
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码解释
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#412-lc1588" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2 LC1588 所有奇数长度子数组的和
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1.2 LC1588 所有奇数长度子数组的和">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      解题思路
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解题思路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      详细思路：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考解答
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码解释
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#413-lc1732" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3 LC1732 找到最高海拔
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1.3 LC1732 找到最高海拔">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      思路讲解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考解答
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 差分数组举一反三
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#421-lc1094" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1 LC1094 拼车
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2.1 LC1094 拼车">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目解析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      思路讲解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      步骤
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码解释
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#422-lc1854" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2 LC1854 人口最多的年份
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2.2 LC1854 人口最多的年份">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目解析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      思路
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码解释
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#423-lc1450" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.3 LC1450 在既定时间做作业的学生人数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2.3 LC1450 在既定时间做作业的学生人数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      思路讲解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 课后练习
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 课后练习">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      前缀和
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      差分数组
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-prefix-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 前缀和（Prefix Sum）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 前缀和（Prefix Sum）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      构建前缀和数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      思考：这段代码有没有什么问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="思考：这段代码有没有什么问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组越界
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      解决方式：添加条件判断
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      思考：有没有更好的解决方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="思考：有没有更好的解决方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      构建前缀和数组时多开一格
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prefixsum" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结：prefixSum 多开一格的原因与好处
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="总结：prefixSum 多开一格的原因与好处">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      避免边界问题：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例解释
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      优点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      缺点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-difference-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 差分数组（Difference Array）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 差分数组（Difference Array）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      构建差分数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      更新区间
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      恢复原数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考代码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      优点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      缺点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 例题讲解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 前缀和
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#311-lc303-" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 LC303 区域和检索 - 数组不可变
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1.1 LC303 区域和检索 - 数组不可变">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      解题思路
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解题思路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      前缀和数组定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何计算区间和
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      步骤：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考解答
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prefixsum_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      prefixSum 需要多开一格的原因
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 差分数组例题讲解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#321-lc2848" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 LC2848 与车相交的点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2.1 LC2848 与车相交的点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      解题思路
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解题思路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      具体步骤：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      特别注意：为什么需要 C + 2 的长度
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="特别注意：为什么需要 C + 2 的长度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      案例分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考解答
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      解释
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 举一反三
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 前缀和举一反三
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#411-lc724" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1 LC724 寻找数组的中心下标
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1.1 LC724 寻找数组的中心下标">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      解题思路
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考解答
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码解释
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#412-lc1588" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2 LC1588 所有奇数长度子数组的和
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1.2 LC1588 所有奇数长度子数组的和">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      解题思路
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解题思路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      详细思路：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考解答
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码解释
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#413-lc1732" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3 LC1732 找到最高海拔
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1.3 LC1732 找到最高海拔">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      思路讲解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考解答
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 差分数组举一反三
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#421-lc1094" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1 LC1094 拼车
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2.1 LC1094 拼车">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目解析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      思路讲解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      步骤
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码解释
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#422-lc1854" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2 LC1854 人口最多的年份
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2.2 LC1854 人口最多的年份">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目解析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      思路
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码解释
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#423-lc1450" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.3 LC1450 在既定时间做作业的学生人数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2.3 LC1450 在既定时间做作业的学生人数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      思路讲解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 课后练习
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 课后练习">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      前缀和
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      差分数组
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="lesson-15">Lesson 15: 前缀和与差分数组</h1>
+<h2 id="_1">目录</h2>
+<ul>
+<li><a href="#1-前缀和prefix-sum">1. 前缀和（Prefix Sum）</a></li>
+<li><a href="#2-差分数组difference-array">2. 差分数组（Difference Array）</a></li>
+<li>
+<p><a href="#3-例题讲解">3. 例题讲解</a></p>
+<ul>
+<li><a href="#31-前缀和例题">3.1 前缀和例题</a><ul>
+<li><a href="#311-lc303-区域和检索---数组不可变">3.1.1 LC303 区域和检索 - 数组不可变</a></li>
+</ul>
+</li>
+<li><a href="#32-差分数组例题讲解">3.2 差分数组例题</a><ul>
+<li><a href="#321-lc2848-与车相交的点">3.2.1 LC2848 与车相交的点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#4-举一反三">4. 举一反三</a></p>
+<ul>
+<li><a href="#41-前缀和举一反三">4.1 前缀和举一反三</a><ul>
+<li><a href="#411-lc724-寻找数组的中心下标">4.1.1 LC724 寻找数组的中心下标</a></li>
+<li><a href="#412-lc1588-所有奇数长度子数组的和">4.1.2 LC1588 所有奇数长度子数组的和</a></li>
+<li><a href="#413-lc1732-找到最高海拔">4.1.3 LC1732 找到最高海拔</a></li>
+</ul>
+</li>
+<li><a href="#42-差分数组举一反三">4.2 差分数组举一反三</a><ul>
+<li><a href="#421-lc1094-拼车">4.2.1 LC1094 拼车</a></li>
+<li><a href="#422-lc1854-人口最多的年份">4.2.2 LC1854 人口最多的年份</a></li>
+<li><a href="#423-lc1450-在既定时间做作业的学生人数">4.2.3 LC1450 在既定时间做作业的学生人数</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#5-课后练习">5. 课后练习</a></li>
+</ul>
+<hr />
+<h2 id="1-prefix-sum">1. 前缀和（Prefix Sum）</h2>
+<h3 id="_2">定义</h3>
+<p>前缀和是一种常用的算法技巧，用来快速计算数组中任意区间的元素之和。前缀和数组的每个元素表示原数组从起点到该位置的元素和。通过使用前缀和，可以在常数时间内高效计算任意区间的和，而不需要每次都重新遍历数组。</p>
+<p>给定一个长度为 <code>n</code> 的数组 <code>A</code>，前缀和数组 <code>P</code> 的定义如下：</p>
+<ul>
+<li><code>P[i] = A[0] + A[1] + ... + A[i]</code>，对于所有 <code>i</code> 在区间 <code>[0, n-1]</code> 内。</li>
+</ul>
+<h3 id="_3">构建前缀和数组</h3>
+<p>构建前缀和数组的时间复杂度是 <code>O(n)</code>，因为我们只需要遍历一遍数组即可计算出所有前缀和。按照这个思路，代码如下：</p>
+<pre><code class="language-cpp">#include &lt;vector&gt;
+using namespace std;
+
+vector&lt;int&gt; prefixSum(vector&lt;int&gt;&amp; arr) {
+    int n = arr.size();
+    vector&lt;int&gt; prefix(n);  // 前缀和数组与原数组同长度
+
+    // 初始化第一个元素
+    prefix[0] = arr[0];  // 第一个前缀和就是数组的第一个元素
+
+    // 构建前缀和数组
+    for (int i = 1; i &lt; n; i++) {
+        prefix[i] = prefix[i - 1] + arr[i];
+    }
+    return prefix;
+}
+
+// 计算区间和 [i, j]
+int rangeSum(vector&lt;int&gt;&amp; prefix, int i, int j) {
+    return prefix[j] - prefix[i - 1];
+}
+</code></pre>
+<h3 id="_4">思考：这段代码有没有什么问题</h3>
+<h4 id="_5">数组越界</h4>
+<p>对于：</p>
+<pre><code class="language-cpp">return prefix[j] - prefix[i - 1];
+</code></pre>
+<p>当计算区间和 [0, j]，即i = 0 时，数组会越界。</p>
+<h4 id="_6">解决方式：添加条件判断</h4>
+<pre><code class="language-cpp">#include &lt;vector&gt;
+using namespace std;
+
+vector&lt;int&gt; prefixSum(vector&lt;int&gt;&amp; arr) {
+    int n = arr.size();
+    vector&lt;int&gt; prefix(n);  // 前缀和数组与原数组同长度
+
+    // 初始化第一个元素
+    prefix[0] = arr[0];  // 第一个前缀和就是数组的第一个元素
+
+    // 构建前缀和数组
+    for (int i = 1; i &lt; n; i++) {
+        prefix[i] = prefix[i - 1] + arr[i];
+    }
+    return prefix;
+}
+
+// 计算区间和 [i, j]
+int rangeSum(vector&lt;int&gt;&amp; prefix, int i, int j) {
+    if (i == 0) {
+        return prefix[j];  // 当 i = 0 时，直接返回 prefix[j]
+    } else {
+        return prefix[j] - prefix[i - 1];  // 否则，使用 prefix[j] - prefix[i-1]
+    }
+}
+
+</code></pre>
+<h3 id="_7">思考：有没有更好的解决方式</h3>
+<h4 id="_8">构建前缀和数组时多开一格</h4>
+<pre><code class="language-cpp">#include &lt;vector&gt;
+using namespace std;
+
+// 构建前缀和数组，前缀和数组多一格，并使 prefix[0] = 0
+vector&lt;int&gt; prefixSum(vector&lt;int&gt;&amp; arr) {
+    int n = arr.size();
+    vector&lt;int&gt; prefix(n + 1);  // 前缀和数组比原数组多一位
+    prefix[0] = 0; 
+
+    // 构建前缀和数组
+    for (int i = 1; i &lt;= n; i++) {
+        prefix[i] = prefix[i - 1] + arr[i - 1]; 
+    }
+    return prefix;
+}
+</code></pre>
+<h3 id="prefixsum">总结：<code>prefixSum</code> 多开一格的原因与好处</h3>
+<h4 id="_9">避免边界问题：</h4>
+<p>假设你不多开一格，并且前缀和数组 <code>prefix[i]</code> 表示 <code>arr[0]</code> 到 <code>arr[i]</code> 的和，那么对于区间 <code>[i, j]</code> 的和，你需要计算：</p>
+<ul>
+<li><code>区间和 [i, j] = prefix[j] - prefix[i-1]</code></li>
+</ul>
+<p>但此时，如果 <code>i = 0</code>，就会出现 <code>prefix[-1]</code> 访问越界的问题。为了避免每次都要额外判断 <code>i = 0</code> 的情况，可以通过多开一格，让 <code>prefix[0] = 0</code>，从而使得：</p>
+<ul>
+<li><code>区间和 [0, j] = prefix[j + 1] - prefix[0]</code></li>
+</ul>
+<p>这样，即使 <code>i = 0</code> 时，也不用特别判断，直接套用通用公式 <code>prefix[j + 1] - prefix[i]</code>，从而避免越界问题。</p>
+<h3 id="_10">代码实现</h3>
+<pre><code class="language-cpp">#include &lt;vector&gt;
+using namespace std;
+
+// 构建前缀和数组，前缀和数组多开一格，prefix[0] = 0
+vector&lt;int&gt; prefixSum(vector&lt;int&gt;&amp; arr) {
+    int n = arr.size();
+    vector&lt;int&gt; prefix(n + 1);  // 前缀和数组比原数组多一位
+    prefix[0] = 0; 
+
+    // 构建前缀和数组
+    for (int i = 1; i &lt;= n; i++) {
+        prefix[i] = prefix[i - 1] + arr[i - 1];
+    }
+    return prefix;
+}
+
+// 计算区间和 [i, j]
+int rangeSum(vector&lt;int&gt;&amp; prefix, int i, int j) {
+    return prefix[j + 1] - prefix[i];
+}
+</code></pre>
+<h3 id="_11">示例解释</h3>
+<p>假设我们有一个数组 <code>arr = {1, 2, 3, 4}</code>，对应的前缀和数组 <code>prefix</code> 为：</p>
+<pre><code>arr:     1   2   3   4
+prefix:  0   1   3   6   10
+</code></pre>
+<ul>
+<li><code>prefix[1] = 1</code> 表示 <code>arr[0]</code> 的和为 1。</li>
+<li><code>prefix[2] = 3</code> 表示 <code>arr[0] + arr[1]</code> 的和为 3。</li>
+<li><code>prefix[3] = 6</code> 表示 <code>arr[0] + arr[1] + arr[2]</code> 的和为 6。</li>
+<li><code>prefix[4] = 10</code> 表示 <code>arr[0] + arr[1] + arr[2] + arr[3]</code> 的和为 10。</li>
+</ul>
+<p>要计算区间 <code>[i, j]</code> 的和，比如 <code>[1, 3]</code>，我们直接用公式：</p>
+<pre><code>区间和 [1, 3] = prefix[4] - prefix[1] = 10 - 1 = 9
+</code></pre>
+<p>这是因为 <code>arr[1] + arr[2] + arr[3] = 2 + 3 + 4 = 9</code>。</p>
+<h3 id="_12">优点</h3>
+<ul>
+<li><strong>高效查询</strong>：对于频繁的区间和查询，前缀和可以在 <code>O(1)</code> 的时间内给出结果。</li>
+<li><strong>简洁</strong>：前缀和的概念简单易用，可以用于多种场景。</li>
+</ul>
+<h3 id="_13">缺点</h3>
+<ul>
+<li><strong>空间消耗</strong>：需要额外的数组存储前缀和，会占用额外的空间。</li>
+</ul>
+<h2 id="2-difference-array">2. 差分数组（Difference Array）</h2>
+<h4 id="_14">定义</h4>
+<p>差分数组是一种快速处理数组区间更新的技巧。它能够在常数时间内对数组的区间进行加减操作，并在最终需要时构建出原始数组的结果。</p>
+<p>给定一个数组 <code>A</code>，其差分数组 <code>D</code> 定义如下：</p>
+<ul>
+<li><code>D[0] = A[0]</code></li>
+<li><code>D[i] = A[i] - A[i-1]</code>，对于所有 <code>i</code> 在区间 <code>[1, n-1]</code> 内。</li>
+</ul>
+<p>也就是说，差分数组的每个元素表示原数组相邻元素之间的差。</p>
+<h4 id="_15">构建差分数组</h4>
+<p>构建差分数组的时间复杂度是 <code>O(n)</code>，因为我们只需要遍历一遍原数组即可计算差分数组。代码如下：</p>
+<pre><code class="language-cpp">// 构建差分数组
+vector&lt;int&gt; buildDifferenceArray(const vector&lt;int&gt;&amp; arr) {
+    int n = arr.size();
+    vector&lt;int&gt; diff(n);  // 初始化差分数组
+    diff[0] = arr[0];     // 差分数组的第一个元素等于原数组的第一个元素
+
+    for (int i = 1; i &lt; n; i++) {
+        diff[i] = arr[i] - arr[i - 1];  // 计算差分
+    }
+
+    return diff;
+}
+</code></pre>
+<h4 id="_16">更新区间</h4>
+<p>差分数组的一个强大之处在于，可以在常数时间内对原数组的一个区间 <code>[l, r]</code> 进行加 <code>x</code> 操作。具体方法如下：</p>
+<ul>
+<li><code>D[l] += x</code> （表示从 <code>l</code> 开始加 <code>x</code>）</li>
+<li>如果 <code>r + 1 &lt; n</code>，则 <code>D[r + 1] -= x</code> （表示从 <code>r + 1</code> 开始减去 <code>x</code>，恢复后续不受影响）</li>
+</ul>
+<h4 id="_17">恢复原数组</h4>
+<p>在完成所有区间操作后，可以通过前缀和的方式恢复原数组。恢复操作的时间复杂度为 <code>O(n)</code>，代码如下：</p>
+<pre><code class="language-cpp">// 通过差分数组恢复原数组
+vector&lt;int&gt; recoverArrayFromDifference(const vector&lt;int&gt;&amp; diff) {
+    int n = diff.size();
+    vector&lt;int&gt; arr(n);  // 初始化恢复后的原数组
+    arr[0] = diff[0];    // 原数组的第一个元素等于差分数组的第一个元素
+
+    for (int i = 1; i &lt; n; i++) {
+        arr[i] = arr[i - 1] + diff[i];  // 通过累加差分数组恢复原数组
+    }
+
+    return arr;
+}
+</code></pre>
+<h4 id="_18">示例</h4>
+<p>假设有一个数组 <code>A = {2, 5, 7, 11, 15}</code>，构建它的差分数组 <code>D</code>：</p>
+<ul>
+<li><code>D[0] = 2</code></li>
+<li><code>D[1] = 5 - 2 = 3</code></li>
+<li><code>D[2] = 7 - 5 = 2</code></li>
+<li><code>D[3] = 11 - 7 = 4</code></li>
+<li><code>D[4] = 15 - 11 = 4</code></li>
+</ul>
+<p>因此差分数组为 <code>D = {2, 3, 2, 4, 4}</code>。</p>
+<p>如果要对区间 <code>[1, 3]</code> 加 <code>2</code>，那么：</p>
+<ul>
+<li><code>D[1] += 2</code>，差分数组变为 <code>D = {2, 5, 2, 4, 4}</code></li>
+<li><code>D[4] -= 2</code>，差分数组变为 <code>D = {2, 5, 2, 4, 2}</code></li>
+</ul>
+<p>最终通过前缀和可以恢复出修改后的数组。</p>
+<h4 id="_19">参考代码</h4>
+<pre><code class="language-cpp">// 构建差分数组
+vector&lt;int&gt; buildDifferenceArray(const vector&lt;int&gt;&amp; arr) {
+    int n = arr.size();
+    vector&lt;int&gt; diff(n);
+    diff[0] = arr[0];  // 差分数组的第一个元素等于原数组的第一个元素
+
+    for (int i = 1; i &lt; n; i++) {
+        diff[i] = arr[i] - arr[i - 1];  // 计算差分
+    }
+
+    return diff;
+}
+
+// 对区间 [l, r] 加上 x
+void updateRange(vector&lt;int&gt;&amp; diff, int l, int r, int x) {
+    diff[l] += x;  // 在 l 位置加 x
+    if (r + 1 &lt; diff.size()) {
+        diff[r + 1] -= x;  // 在 r+1 位置减 x，确保后续不受影响
+    }
+}
+
+// 通过差分数组恢复原数组
+vector&lt;int&gt; recoverArrayFromDifference(const vector&lt;int&gt;&amp; diff) {
+    int n = diff.size();
+    vector&lt;int&gt; arr(n);
+    arr[0] = diff[0];  // 原数组的第一个元素
+
+    for (int i = 1; i &lt; n; i++) {
+        arr[i] = arr[i - 1] + diff[i];  // 通过累加差分数组恢复原数组
+    }
+
+    return arr;
+}
+
+int main() {
+    vector&lt;int&gt; A = {2, 5, 7, 11, 15};
+    vector&lt;int&gt; D = buildDifferenceArray(A);
+
+    // 对区间 [1, 3] 加上 2
+    updateRange(D, 1, 3, 2);
+
+    // 恢复修改后的原数组
+    vector&lt;int&gt; updatedA = recoverArrayFromDifference(D);
+
+    // 输出恢复后的数组
+    for (int num : updatedA) {
+        cout &lt;&lt; num &lt;&lt; &quot; &quot;;  // 输出结果应为 2 7 9 13 15
+    }
+    cout &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+<h4 id="_20">优点</h4>
+<ul>
+<li><strong>高效更新</strong>：可以在 <code>O(1)</code> 的时间内对数组的区间进行加减操作，适用于需要频繁更新的场景。</li>
+<li><strong>简单恢复</strong>：通过一次遍历即可恢复原数组，时间复杂度为 <code>O(n)</code>。</li>
+</ul>
+<h4 id="_21">缺点</h4>
+<ul>
+<li><strong>只适用于加减操作</strong>：差分数组只能处理加减更新，无法用于乘法或其他复杂操作。</li>
+<li><strong>额外的空间消耗</strong>：需要存储一个与原数组大小相同的差分数组。</li>
+</ul>
+<h2 id="3">3. 例题讲解</h2>
+<h2 id="31">3.1 前缀和</h2>
+<h2 id="311-lc303-">3.1.1 LC303 区域和检索 - 数组不可变</h2>
+<h3 id="_22">题目描述</h3>
+<p>给定一个整数数组 <code>nums</code>，处理以下类型的多个查询:</p>
+<p>计算索引 <code>left</code> 和 <code>right</code>（包含 <code>left</code> 和 <code>right</code>）之间的 <code>nums</code> 元素的和，其中 <code>left</code> &lt;= <code>right</code></p>
+<p>实现 NumArray 类：
+- NumArray(int[] nums) 使用数组 <code>nums</code> 初始化对象
+- int sumRange(int i, int j) 返回数组 <code>nums</code> 中索引 <code>left</code> 和 <code>right</code> 之间的元素的总和 ，包含 <code>left</code> 和 <code>right</code> 两点（也就是 nums[left] + nums[left + 1] + ... + nums[right] ）</p>
+<h3 id="_23">解题思路</h3>
+<p>我们可以通过 <strong>前缀和</strong> 的方式优化计算多个区间的和。通过构建一个前缀和数组，我们可以快速求出任意区间的和。</p>
+<h4 id="_24">前缀和数组定义</h4>
+<p>对于给定的数组 <code>nums</code>，我们构建一个前缀和数组 <code>prefixSum</code>，其中 <code>prefixSum[i]</code> 表示数组 <code>nums</code> 从第 0 项到第 i 项的元素之和。</p>
+<p>用公式表示为：
+- <code>prefixSum[i] = nums[0] + nums[1] + ... + nums[i]</code></p>
+<h4 id="_25">如何计算区间和</h4>
+<p>要计算 <code>nums[i]</code> 到 <code>nums[j]</code> 之间的和，可以通过前缀和数组来实现：
+- <code>sumRange(i, j) = prefixSum[j + 1] - prefixSum[i]</code></p>
+<p>注意这里的 <code>prefixSum[j + 1]</code> 是为了处理数组的边界问题，使得计算区间和时只需简单的减法。</p>
+<h3 id="_26">步骤：</h3>
+<ol>
+<li>构建前缀和数组：通过遍历数组 <code>nums</code>，构建前缀和数组 <code>prefixSum</code>。</li>
+<li>查询区间和：通过前缀和数组计算任意区间 <code>[left, right]</code> 的和。</li>
+</ol>
+<h3 id="_27">参考解答</h3>
+<pre><code class="language-cpp">class NumArray {
+public:
+    // 前缀和数组
+    vector&lt;int&gt; prefixSum;
+
+    // 构造函数，初始化前缀和数组
+    NumArray(vector&lt;int&gt;&amp; nums) {
+        int n = nums.size();
+        prefixSum.resize(n + 1, 0);  // 前缀和数组大小为n+1，初始为0
+        for (int i = 0; i &lt; n; ++i) {
+            prefixSum[i + 1] = prefixSum[i] + nums[i];  // 构建前缀和数组
+        }
+    }
+
+    // 返回区间 [left, right] 的元素和
+    int sumRange(int left, int right) {
+        return prefixSum[right + 1] - prefixSum[left];  // 使用前缀和数组计算区间和
+    }
+};
+</code></pre>
+<h3 id="_28">示例</h3>
+<p>以数组 <code>nums = [-2, 0, 3, -5, 2, -1]</code> 为例，前缀和数组 <code>prefixSum</code> 如下：</p>
+<ul>
+<li><code>prefixSum[0] = 0</code></li>
+<li><code>prefixSum[1] = -2</code></li>
+<li><code>prefixSum[2] = -2</code></li>
+<li><code>prefixSum[3] = 1</code></li>
+<li><code>prefixSum[4] = -4</code></li>
+<li><code>prefixSum[5] = -2</code></li>
+<li><code>prefixSum[6] = -3</code></li>
+</ul>
+<p>查询示例：
+- <code>sumRange(0, 2)</code> 返回 <code>1</code>，即 <code>prefixSum[3] - prefixSum[0] = 1 - 0 = 1</code>
+- <code>sumRange(2, 5)</code> 返回 <code>-1</code>，即 <code>prefixSum[6] - prefixSum[2] = -3 - (-2) = -1</code>
+- <code>sumRange(0, 5)</code> 返回 <code>-3</code>，即 <code>prefixSum[6] - prefixSum[0] = -3 - 0 = -3</code></p>
+<h3 id="prefixsum_1"><code>prefixSum</code> 需要多开一格的原因</h3>
+<ul>
+<li>在前缀和的定义中，<code>prefixSum[i]</code> 表示从数组 <code>nums[0]</code> 到 <code>nums[i-1]</code> 的和。这样，<code>prefixSum[0]</code> 就表示没有元素时的和，即 <code>0</code>。</li>
+<li>例如，若 <code>nums</code> 数组的长度为 <code>n</code>，我们需要计算从 <code>nums[0]</code> 到 <code>nums[j]</code> 的和时，<code>prefixSum[j + 1]</code> 就表示从 <code>nums[0]</code> 到 <code>nums[j]</code> 的和。</li>
+<li>因此需要多开一格防止数组越界。</li>
+</ul>
+<h2 id="32">3.2 差分数组例题讲解</h2>
+<h2 id="321-lc2848">3.2.1 LC2848 与车相交的点</h2>
+<h3 id="_29">问题描述</h3>
+<p>给定一个下标从 0 开始的二维整数列表 <code>nums</code>，其中 <code>nums[i] = [start_i, end_i]</code> 表示第 <code>i</code> 辆车在数轴上占据的区间 <code>[start_i, end_i]</code>。需要返回数轴上被<strong>至少一辆车覆盖的整数点的数目</strong>。</p>
+<h3 id="_30">解题思路</h3>
+<p>我们可以使用<strong>差分数组</strong>来高效解决这个问题。差分数组是解决区间更新和查询问题的常用技巧，它可以帮助我们快速计算区间上的变化和覆盖情况。</p>
+<h4 id="_31">具体步骤：</h4>
+<ol>
+<li>
+<p><strong>寻找数轴的最大端点</strong>：
+   由于给定的区间终点可能不同，为了高效地构建差分数组，我们首先要找到所有区间中的最大端点 <code>C</code>。这样，我们只需考虑 <code>1</code> 到 <code>C</code> 之间的点。</p>
+</li>
+<li>
+<p><strong>构建差分数组</strong>：</p>
+<ul>
+<li>初始化一个长度为 <code>C + 2</code> 的差分数组 <code>diff</code>，其中 <code>diff[i]</code> 表示点 <code>i</code> 处开始被覆盖的次数变化，<code>diff[i + 1]</code> 表示结束覆盖的变化。</li>
+<li>对于每个区间 <code>[start_i, end_i]</code>，在 <code>diff[start_i]</code> 位置增加 <code>1</code>，在 <code>diff[end_i + 1]</code> 位置减去 <code>1</code>。这表明区间 <code>[start_i, end_i]</code> 内的所有点被覆盖。</li>
+</ul>
+</li>
+<li>
+<p><strong>构建前缀和</strong>：</p>
+<ul>
+<li>遍历差分数组 <code>diff</code>，逐步累加，得到前缀和数组。前缀和数组中，每个位置的值表示该点被覆盖的次数。如果前缀和值大于 <code>0</code>，说明该点被至少一辆车覆盖。</li>
+</ul>
+</li>
+<li>
+<p><strong>统计被覆盖的点数</strong>：</p>
+<ul>
+<li>遍历前缀和数组，统计所有被覆盖的点，即前缀和大于 <code>0</code> 的点。</li>
+</ul>
+</li>
+</ol>
+<h3 id="c-2">特别注意：为什么需要 <code>C + 2</code> 的长度</h3>
+<p>当处理到某个区间 <code>[start, end]</code> 时，我们在 <code>end + 1</code> 位置进行减 <code>1</code> 操作，这就需要确保 <code>end + 1</code> 在差分数组的范围内，防止越界。因此，我们在初始化差分数组时，需要为 <code>C + 1</code> 和 <code>C + 2</code> 留出空间。</p>
+<h4 id="_32">案例分析</h4>
+<p>假设我们有如下区间输入：</p>
+<pre><code class="language-plaintext">nums = [[1, 3], [2, 5], [4, 6]]
+</code></pre>
+<ol>
+<li>
+<p><strong>寻找最大终点 <code>C</code></strong>：</p>
+<ul>
+<li>通过遍历 <code>nums</code>，我们可以发现最大终点 <code>C</code> 为 <code>6</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>构建差分数组</strong>：</p>
+<ul>
+<li>初始化一个差分数组 <code>diff</code>，长度为 <code>C + 2 = 8</code>，即 <code>diff[0]</code> 到 <code>diff[7]</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>差分数组填充过程</strong>：</p>
+<ul>
+<li>对于第一个区间 <code>[1, 3]</code>：<ul>
+<li><code>diff[1] += 1</code> （从 <code>1</code> 开始覆盖）</li>
+<li><code>diff[4] -= 1</code> （从 <code>4</code> 位置不再覆盖）</li>
+</ul>
+</li>
+<li>对于第二个区间 <code>[2, 5]</code>：<ul>
+<li><code>diff[2] += 1</code> （从 <code>2</code> 开始覆盖）</li>
+<li><code>diff[6] -= 1</code> （从 <code>6</code> 位置不再覆盖）</li>
+</ul>
+</li>
+<li>对于第三个区间 <code>[4, 6]</code>：<ul>
+<li><code>diff[4] += 1</code> （从 <code>4</code> 开始覆盖）</li>
+<li><code>diff[7] -= 1</code> （从 <code>7</code> 位置不再覆盖）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>可以发现，对于本题而言，需要 <code>C + 2</code> 大小的数组才不会发生越界的情况。</p>
+<h3 id="_33">参考解答</h3>
+<pre><code class="language-cpp">class Solution {
+public:
+    int numberOfPoints(vector&lt;vector&lt;int&gt;&gt;&amp; nums) {
+        int C = 0;
+
+        // 找出最大终点 C
+        for (const auto&amp; interval : nums) {
+            C = max(C, interval[1]);
+        }
+
+        // 差分数组，长度为 C + 2，避免越界
+        vector&lt;int&gt; diff(C + 2, 0);
+
+        // 构建差分数组
+        for (const auto&amp; interval : nums) {
+            int start = interval[0];    // 区间起始点
+            int end = interval[1];      // 区间结束点
+
+            // 标记区间的开始：从 'start' 位置开始，覆盖的点加 1
+            diff[start] += 1;
+
+            // 标记区间的结束：'end + 1' 位置不再覆盖，因此减 1
+            diff[end + 1] -= 1;
+        }
+
+        int ans = 0, count = 0;
+
+        // 计算前缀和，统计被覆盖的点数
+        for (int i = 1; i &lt;= C; ++i) {
+            count += diff[i];  // 前缀和
+            if (count &gt; 0) {
+                ++ans;  // 如果被覆盖，计数加 1
+            }
+        }
+
+        return ans;
+    }
+};
+</code></pre>
+<h3 id="_34">解释</h3>
+<ol>
+<li>
+<p><strong>寻找最大终点 <code>C</code></strong>：</p>
+<ul>
+<li>遍历输入列表 <code>nums</code>，找到所有区间中的最大终点。这样我们只需要处理从 <code>1</code> 到 <code>C</code> 范围内的点。</li>
+</ul>
+</li>
+<li>
+<p><strong>构建差分数组</strong>：</p>
+<ul>
+<li>对于每个区间 <code>[start_i, end_i]</code>，在 <code>diff[start_i]</code> 位置加 <code>1</code>，表示从 <code>start_i</code> 开始有车覆盖；在 <code>diff[end_i + 1]</code> 位置减 <code>1</code>，表示从 <code>end_i + 1</code> 以后不再有覆盖。</li>
+</ul>
+</li>
+<li>
+<p><strong>计算前缀和</strong>：</p>
+<ul>
+<li>遍历差分数组 <code>diff</code>，逐点累加前缀和。每个点的前缀和表示该点被覆盖的车的数量。若前缀和大于 <code>0</code>，说明该点被至少一辆车覆盖。</li>
+</ul>
+</li>
+<li>
+<p><strong>统计被覆盖的点数</strong>：</p>
+<ul>
+<li>统计前缀和大于 <code>0</code> 的点，即为被车覆盖的整数点。</li>
+</ul>
+</li>
+</ol>
+<h2 id="4">4. 举一反三</h2>
+<h2 id="41">4.1 前缀和举一反三</h2>
+<h2 id="411-lc724">4.1.1 LC724 寻找数组的中心下标</h2>
+<h3 id="_35">题目描述</h3>
+<p>给定一个整数数组 <code>nums</code>，请计算并返回数组的<strong>中心下标</strong>。数组的中心下标是满足以下条件的一个下标 <code>i</code>：</p>
+<ul>
+<li>
+<p><code>nums[0] + nums[1] + ... + nums[i-1] = nums[i+1] + nums[i+2] + ... + nums[n-1]</code>，即 <code>i</code> 左边元素的和等于右边元素的和。</p>
+</li>
+<li>
+<p>如果中心下标位于数组的最左端，那么左侧的和视为 0，因为下标左边没有元素；同样地，如果中心下标位于数组的最右端，则右侧的和视为 0。</p>
+</li>
+<li>
+<p>如果数组有多个中心下标，返回<strong>最靠近左边的</strong>那个。如果数组不存在中心下标，则返回 <code>-1</code>。</p>
+</li>
+</ul>
+<h3 id="_36">解题思路</h3>
+<p>我们可以通过<strong>前缀和</strong>的思想来解决这个问题。核心思想是，遍历数组的每个下标 <code>i</code>，检查它是否满足条件：左侧的前缀和等于右侧的前缀和。</p>
+<p>假设数组的总和为 <code>total</code>，那么对于任意下标 <code>i</code>，左侧的前缀和为 <code>leftSum</code>，右侧的前缀和为 <code>total - leftSum - nums[i]</code>。如果满足 <code>leftSum == total - leftSum - nums[i]</code>，那么 <code>i</code> 就是中心下标。</p>
+<h3 id="_37">参考解答</h3>
+<pre><code class="language-cpp">class Solution {
+public:
+    int pivotIndex(vector&lt;int&gt;&amp; nums) {
+        // 计算数组的总和
+        int total = 0;
+        for (int num : nums) {
+            total += num;
+        }
+
+        // 遍历数组，计算每个下标的左侧和，并检查是否满足条件
+        int leftSum = 0;
+        for (int i = 0; i &lt; nums.size(); i++) {
+            // 如果左侧和等于右侧和（右侧和 = 总和 - 左侧和 - 当前元素）
+            if (leftSum == total - leftSum - nums[i]) {
+                return i;
+            }
+            // 更新左侧和
+            leftSum += nums[i];
+        }
+
+        // 如果没有找到中心下标，返回 -1
+        return -1;
+    }
+};
+</code></pre>
+<h3 id="_38">代码解释</h3>
+<ol>
+<li><strong>计算数组的总和</strong>：首先，遍历整个数组，计算所有元素的总和 <code>total</code>。</li>
+<li><strong>遍历数组，寻找中心下标</strong>：<ul>
+<li>初始化左侧和 <code>leftSum = 0</code>。</li>
+<li>遍历数组的每一个元素 <code>nums[i]</code>，检查是否满足 <code>leftSum == total - leftSum - nums[i]</code>。如果满足，则当前的 <code>i</code> 就是中心下标。</li>
+<li>如果不满足条件，继续遍历，同时更新左侧和 <code>leftSum += nums[i]</code>。</li>
+</ul>
+</li>
+<li><strong>返回结果</strong>：如果找到了符合条件的下标，直接返回该下标；如果遍历完数组都没有找到，返回 <code>-1</code>。</li>
+</ol>
+<h2 id="412-lc1588">4.1.2 LC1588 所有奇数长度子数组的和</h2>
+<h3 id="_39">问题描述</h3>
+<p>给定一个正整数数组 <code>arr</code>，要求计算数组中所有可能的奇数长度子数组的和。一个<strong>子数组</strong>是指数组中一段连续的子序列。我们需要返回<strong>所有奇数长度子数组</strong>的和。</p>
+<h3 id="_40">解题思路</h3>
+<p>要高效地求解这个问题，可以使用<strong>前缀和</strong>来快速计算子数组的和。</p>
+<h4 id="_41">详细思路：</h4>
+<ol>
+<li>
+<p><strong>定义前缀和数组</strong>：前缀和数组可以帮助我们快速计算任意区间 <code>[i, j]</code> 的和。设 <code>prefixSum[i]</code> 表示 <code>arr</code> 数组前 <code>i</code> 个元素的累加和。这样 <code>arr[i] + arr[i+1] + ... + arr[j]</code> 可以用 <code>prefixSum[j+1] - prefixSum[i]</code> 表示。</p>
+</li>
+<li>
+<p><strong>遍历所有子数组</strong>：我们枚举数组中的每一个起点 <code>i</code>，并从该起点开始，枚举所有可能的奇数长度的子数组。</p>
+<ul>
+<li>奇数长度的子数组可能是长度为 1、3、5、7... 的子数组。</li>
+<li>在遍历过程中，使用前缀和数组计算每个奇数长度子数组的和。</li>
+</ul>
+</li>
+<li>
+<p><strong>累加和</strong>：对于每一个奇数长度的子数组，计算其和并累加到最终结果中。</p>
+</li>
+</ol>
+<h3 id="_42">参考解答</h3>
+<pre><code class="language-cpp">class Solution {
+public:
+    int sumOddLengthSubarrays(vector&lt;int&gt;&amp; arr) {
+        int n = arr.size();
+        vector&lt;int&gt; prefixSum(n + 1, 0);  // 前缀和数组
+
+        // 构建前缀和数组
+        for (int i = 0; i &lt; n; i++) {
+            prefixSum[i + 1] = prefixSum[i] + arr[i];
+        }
+
+        int totalSum = 0;
+
+        // 遍历所有可能的奇数长度子数组
+        for (int start = 0; start &lt; n; start++) {
+            for (int length = 1; start + length &lt;= n; length += 2) {  // 只考虑奇数长度
+                int end = start + length - 1;
+                totalSum += prefixSum[end + 1] - prefixSum[start];  // 使用前缀和计算子数组和
+            }
+        }
+
+        return totalSum;
+    }
+};
+</code></pre>
+<h3 id="_43">代码解释</h3>
+<ol>
+<li>
+<p><strong>构建前缀和数组</strong>：</p>
+<ul>
+<li><code>prefixSum[i + 1] = prefixSum[i] + arr[i]</code>，表示前 <code>i+1</code> 个元素的累加和。</li>
+<li><code>prefixSum[i+1] - prefixSum[start]</code> 可以快速得到从 <code>arr[start]</code> 到 <code>arr[end]</code> 的子数组和。</li>
+</ul>
+</li>
+<li>
+<p><strong>遍历奇数长度子数组</strong>：</p>
+<ul>
+<li><code>start</code> 表示子数组的起始位置。</li>
+<li><code>length</code> 表示子数组的长度，只取奇数（<code>1, 3, 5...</code>）。</li>
+<li>使用前缀和数组快速计算每个奇数长度子数组的和，并将其累加到 <code>totalSum</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>返回结果</strong>：</p>
+<ul>
+<li>最后返回 <code>totalSum</code>，即所有奇数长度子数组的和。</li>
+</ul>
+</li>
+</ol>
+<h2 id="413-lc1732">4.1.3 LC1732 找到最高海拔</h2>
+<h3 id="_44">问题描述</h3>
+<p>有一个自行车手打算进行一场公路骑行，这条路线总共由 <code>n + 1</code> 个不同海拔的点组成。自行车手从海拔为 <code>0</code> 的点 <code>0</code> 开始骑行。</p>
+<p>给你一个长度为 <code>n</code> 的整数数组 <code>gain</code>，其中 <code>gain[i]</code> 是点 <code>i</code> 和点 <code>i + 1</code> 的净海拔高度差（<code>0 &lt;= i &lt; n</code>）。请你返回最高点的海拔。</p>
+<h3 id="_45">思路讲解</h3>
+<p>为了找到最高海拔，我们可以使用<strong>前缀和</strong>的思想：</p>
+<ol>
+<li>
+<p><strong>初始化</strong>：我们从海拔 <code>0</code> 开始骑行，所以可以设定 <code>currentAltitude</code> 为 <code>0</code>，并用 <code>maxAltitude</code> 来记录当前最高海拔。</p>
+</li>
+<li>
+<p><strong>遍历数组</strong>：依次遍历 <code>gain</code> 数组中的每个海拔高度差：</p>
+<ul>
+<li>将当前的 <code>gain[i]</code> 加到 <code>currentAltitude</code> 中，得到当前海拔。</li>
+<li>更新 <code>maxAltitude</code> 为 <code>max(maxAltitude, currentAltitude)</code>，即在每次计算完当前海拔后，检查是否需要更新最高海拔。</li>
+</ul>
+</li>
+<li>
+<p><strong>返回结果</strong>：遍历完成后，<code>maxAltitude</code> 就是我们要找的最高海拔。</p>
+</li>
+</ol>
+<h3 id="_46">参考解答</h3>
+<pre><code class="language-cpp">class Solution {
+public:
+    int largestAltitude(vector&lt;int&gt;&amp; gain) {
+        int currentAltitude = 0; // 当前海拔
+        int maxAltitude = 0;     // 最高海拔
+
+        // 遍历 gain 数组
+        for (int i = 0; i &lt; gain.size(); ++i) {
+            currentAltitude += gain[i]; // 更新当前海拔
+            maxAltitude = max(maxAltitude, currentAltitude); // 更新最高海拔
+        }
+
+        return maxAltitude; // 返回最高海拔
+    }
+};
+</code></pre>
+<h2 id="42">4.2 差分数组举一反三</h2>
+<h2 id="421-lc1094">4.2.1 LC1094 拼车</h2>
+<h3 id="_47">题目描述</h3>
+<p>车上最初有 <code>capacity</code> 个空座位。车只能向一个方向行驶（也就是说，不允许掉头或改变方向）</p>
+<p>给定整数 <code>capacity</code> 和一个数组 <code>trips</code>，trip[i] = [numPassengers<sub>i</sub>, from<sub>i</sub>, to<sub>i</sub>] 表示第 i 次旅行有 numPassengers<sub>i</sub> 乘客，接他们和放他们的位置分别是 from<sub>i</sub> 和 to<sub>i</sub>。这些位置是从汽车的初始位置向东的公里数。</p>
+<p>当且仅当你可以在所有给定的行程中接送所有乘客时，返回 <code>true</code>，否则请返回 <code>false</code>。</p>
+<h3 id="_48">题目解析</h3>
+<p>题目要求判断能否在所有给定行程中接送乘客，给定条件为：
+- 每次行程有特定数量的乘客，需要从一个起点 <code>from</code> 接上，并在 <code>to</code> 位置放下。
+- 汽车有一个初始载客量 <code>capacity</code>，只能向一个方向行驶。</p>
+<p>核心问题在于：
+- 判断某个时间点乘客数量是否会超过汽车的最大载客量。</p>
+<h3 id="_49">思路讲解</h3>
+<p>我们可以使用<strong>差分数组</strong>来解决这个问题，思路如下：
+1. 每次在某个起点 <code>from</code> 位置增加乘客数量，在终点 <code>to</code> 位置减少乘客数量。通过这种方式，我们可以标记每个位置上的乘客变化情况。
+2. 然后通过遍历这些标记，累加每个位置的乘客数，检查是否在任何位置超出汽车的最大载客量 <code>capacity</code>。</p>
+<h3 id="_50">步骤</h3>
+<ol>
+<li><strong>创建差分数组</strong>：差分数组的大小取决于最远的行程终点，表示沿途的每个位置乘客的变化情况。</li>
+<li><strong>处理每个行程</strong>：对于每个行程，在差分数组的 <code>from</code> 位置增加乘客，在 <code>to</code> 位置减少乘客。</li>
+<li><strong>前缀和计算当前乘客数</strong>：通过计算差分数组的前缀和，得到每个位置实际的乘客数，并判断是否超出载客量。</li>
+</ol>
+<h3 id="_51">代码实现</h3>
+<pre><code class="language-cpp">class Solution {
+public:
+    bool carPooling(vector&lt;vector&lt;int&gt;&gt;&amp; trips, int capacity) {
+        // 找出最远的目的地，用于确定差分数组的大小
+        int maxDistance = 0;
+        for (const auto&amp; trip : trips) {
+            maxDistance = max(maxDistance, trip[2]);
+        }
+
+        // 差分数组，用于记录每个位置乘客数的变化
+        vector&lt;int&gt; diff(maxDistance + 1, 0);
+
+        // 处理每个行程，更新差分数组
+        for (const auto&amp; trip : trips) {
+            int numPassengers = trip[0];  // 乘客数量
+            int from = trip[1];           // 上车位置
+            int to = trip[2];             // 下车位置
+
+            // 上车位置增加乘客
+            diff[from] += numPassengers;
+            // 下车位置减少乘客
+            diff[to] -= numPassengers;
+        }
+
+        // 前缀和计算当前车上的乘客数量，判断是否超出容量
+        int currentPassengers = 0;
+        for (int i = 0; i &lt;= maxDistance; i++) {
+            currentPassengers += diff[i];
+            if (currentPassengers &gt; capacity) {
+                return false;  // 超出容量
+            }
+        }
+
+        return true;  // 所有位置都未超出容量
+    }
+};
+</code></pre>
+<h3 id="_52">代码解释</h3>
+<ol>
+<li><strong>找出最远的目的地</strong>：我们通过遍历每个行程，找到最远的终点 <code>to</code>，从而确定差分数组的大小。</li>
+<li><strong>构建差分数组</strong>：对于每个行程，记录乘客的变化情况：<ul>
+<li>在 <code>from</code> 位置上车，因此 <code>diff[from]</code> 加上该行程的乘客数。</li>
+<li>在 <code>to</code> 位置下车，因此 <code>diff[to]</code> 减去该行程的乘客数。</li>
+</ul>
+</li>
+<li><strong>前缀和计算</strong>：通过遍历差分数组计算车上实际的乘客数 <code>currentPassengers</code>，一旦超过 <code>capacity</code>，返回 <code>false</code>。</li>
+</ol>
+<h2 id="422-lc1854">4.2.2 LC1854 人口最多的年份</h2>
+<p>给你一个二维整数数组 <code>logs</code>，其中每个 logs[i] = [birth<sub>i</sub>, death<sub>i</sub>] 表示第 i 个人的出生和死亡年份。</p>
+<p>年份 <code>x</code> 的人口定义为这一年期间活着的人的数目。第 i 个人被计入年份 <code>x</code> 的人口需要满足：<code>x</code> 在闭区间 [birth<sub>i</sub>, death<sub>i</sub> - 1] 内。注意，人不应当计入他们死亡当年的人口中。</p>
+<p>返回人口最多且最早的年份。</p>
+<h3 id="_53">题目解析</h3>
+<p>我们需要找到一个年份，该年份的人口数最多，且如果有多个年份人口数相同，返回最早的那个年份。</p>
+<p>每个人的生存年份是一个区间 <code>[birthi, deathi - 1]</code>，即从出生年算起到死亡年份的前一年为止。我们要统计每个年份的生存人口数。</p>
+<h3 id="_54">思路</h3>
+<ol>
+<li>
+<p><strong>差分数组思想</strong>：</p>
+<ul>
+<li>我们可以把出生当年的人口加 1，死亡当年的人口减 1。然后，通过差分数组求出每一年的实际人口变化。</li>
+<li>通过计算每年的前缀和（即累积人数变化），得到每年的人口数量。</li>
+</ul>
+</li>
+<li>
+<p><strong>步骤概述</strong>：</p>
+<ul>
+<li>初始化一个数组 <code>years</code> 来表示年份的人口变化（可以从最早年份开始，直到死亡的最大年份结束）。</li>
+<li>遍历每个人的 <code>birthi</code> 和 <code>deathi</code>：<ul>
+<li>在 <code>birthi</code> 位置增加人口数量（即 <code>years[birthi] += 1</code>）。</li>
+<li>在 <code>deathi</code> 位置减少人口数量（即 <code>years[deathi] -= 1</code>，因为死亡年不计入人口数）。</li>
+</ul>
+</li>
+<li>通过前缀和计算每一年的实际人口数量，找到人口最多的年份。</li>
+</ul>
+</li>
+</ol>
+<h3 id="_55">代码实现</h3>
+<pre><code class="language-cpp">class Solution {
+public:
+    int maximumPopulation(vector&lt;vector&lt;int&gt;&gt;&amp; logs) {
+        // 假设年份范围从1950到2050
+        vector&lt;int&gt; populationChange(101, 0); // 存储人口变化的数组，范围为1950到2050
+
+        // 记录每个人的出生和死亡年份对人口的影响
+        for (const auto&amp; log : logs) {
+            int birth = log[0] - 1950;
+            int death = log[1] - 1950;
+            populationChange[birth] += 1;  // 出生年份人口增加
+            populationChange[death] -= 1;  // 死亡年份人口减少
+        }
+
+        // 计算每一年的实际人口，并找出人口最多的年份
+        int maxPopulation = 0;
+        int maxYear = 1950;
+        int currentPopulation = 0;
+
+        // 遍历每一年，计算人口数量
+        for (int year = 0; year &lt; 101; year++) {
+            currentPopulation += populationChange[year]; // 通过前缀和计算当前年份的人口
+            if (currentPopulation &gt; maxPopulation) {
+                maxPopulation = currentPopulation;
+                maxYear = 1950 + year; // 记录人口最多的年份
+            }
+        }
+
+        return maxYear;
+    }
+};
+</code></pre>
+<h3 id="_56">代码解释</h3>
+<ol>
+<li>
+<p><strong>年份映射</strong>：</p>
+<ul>
+<li>由于年份范围是从 1950 年到 2050 年，因此我们使用长度为 101 的数组 <code>populationChange</code> 来记录每一年的人口变化情况。<code>populationChange[0]</code> 对应的是 1950 年，<code>populationChange[100]</code> 对应的是 2050 年。</li>
+</ul>
+</li>
+<li>
+<p><strong>处理每个人的出生和死亡年份</strong>：</p>
+<ul>
+<li>对于每个人，出生年份会使当年的人口增加 1 (<code>populationChange[birth] += 1</code>)。</li>
+<li>死亡年份会使该年的人口减少 1 (<code>populationChange[death] -= 1</code>)，因为死亡年不计入该年的人口。</li>
+</ul>
+</li>
+<li>
+<p><strong>前缀和计算</strong>：</p>
+<ul>
+<li>通过遍历年份，累加每年的人口变化，实时计算当前年份的实际人口数量。</li>
+<li>找到最大人口对应的年份，如果出现多个最大值，自动返回最早的年份，因为我们按顺序遍历年份。</li>
+</ul>
+</li>
+</ol>
+<h2 id="423-lc1450">4.2.3 LC1450 在既定时间做作业的学生人数</h2>
+<h3 id="_57">题目描述</h3>
+<p>给你两个整数数组 <code>startTime</code>（开始时间）和 <code>endTime</code>（结束时间），并指定一个整数 <code>queryTime</code> 作为查询时间。</p>
+<p>已知，第 <code>i</code> 名学生在 <code>startTime[i]</code> 时开始写作业并于 <code>endTime[i]</code> 时完成作业。</p>
+<p>请返回在查询时间 <code>queryTime</code> 时正在做作业的学生人数。形式上，返回能够使 <code>queryTime</code> 处于区间 <code>[startTime[i], endTime[i]]</code>（含）的学生人数。</p>
+<p>请使用差分数组的方法完成此题。</p>
+<h3 id="_58">思路讲解</h3>
+<ol>
+<li>
+<p><strong>定义范围</strong>：</p>
+<ul>
+<li>创建一个足够大的差分数组，数组的大小至少为 <code>maxTime + 2</code>，防止越界</li>
+<li>当我们处理某个学生的作业时间 <code>[startTime[i], endTime[i]]</code> 时，我们在 <code>startTime[i]</code> 位置上增加 1，表示从这个时刻开始有一个学生在做作业。</li>
+<li>因为题目要求包含<code>endTime</code>，即<code>endTime</code>时学生仍在做作业，因此需要在 <code>endTime[i] + 1</code> 位置上减少 1，表示从 <code>endTime[i] + 1</code> 这个时刻开始，这个学生不再做作业。</li>
+<li>如果 <code>endTime</code> 是最大时间，比如 <code>maxTime</code>，那么 <code>endTime[i] + 1</code> 将会是 <code>maxTime + 1</code>。</li>
+<li>为了确保我们在访问 <code>diff</code> 数组的 <code>endTime[i] + 1</code> 位置时不会越界，因此我们需要将差分数组的长度设为 <code>maxTime + 2</code>。这样可以确保数组索引不会超出界限。</li>
+</ul>
+</li>
+<li>
+<p><strong>构建差分数组</strong>：</p>
+<ul>
+<li>对于每个学生的作业时间 <code>[startTime[i], endTime[i]]</code>，在差分数组的 <code>startTime[i]</code> 位置增加 <code>1</code>，在 <code>endTime[i] + 1</code> 位置减少 <code>1</code>。这样可以标记在作业开始和结束时的变化。</li>
+</ul>
+</li>
+<li>
+<p><strong>计算前缀和</strong>：</p>
+<ul>
+<li>遍历差分数组并计算前缀和，以得到在每个时间点的正在做作业的学生人数。</li>
+</ul>
+</li>
+<li>
+<p><strong>查询结果</strong>：</p>
+<ul>
+<li>最后，根据 <code>queryTime</code> 的值直接返回差分数组中对应的结果。</li>
+</ul>
+</li>
+</ol>
+<h3 id="_59">代码实现</h3>
+<pre><code class="language-cpp">#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+class Solution {
+public:
+    int busyStudent(vector&lt;int&gt;&amp; startTime, vector&lt;int&gt;&amp; endTime, int queryTime) {
+        // 找到结束时间的最大值
+        int maxTime = 0;
+        for (int end : endTime) {
+            maxTime = max(maxTime, end);
+        }
+
+        // 初始化差分数组，长度为 maxTime + 2，避免越界
+        vector&lt;int&gt; diff(maxTime + 2, 0);
+
+        // 更新差分数组
+        for (int i = 0; i &lt; startTime.size(); i++) {
+            diff[startTime[i]] += 1;          // 开始写作业
+            diff[endTime[i] + 1] -= 1;        // 停止写作业
+        }
+
+        // 计算前缀和，得到每个时间点的在做作业的学生人数
+        int currentCount = 0;
+        for (int i = 0; i &lt;= queryTime; i++) {
+            currentCount += diff[i];
+        }
+
+        return currentCount;  // 返回在 queryTime 时正在做作业的学生人数
+    }
+};
+</code></pre>
+<h2 id="5">5. 课后练习</h2>
+<h3 id="_60">前缀和</h3>
+<table>
+<thead>
+<tr>
+<th>题目编号</th>
+<th>题目名称</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LC238</td>
+<td>除自身以外数组的乘积</td>
+<td>给定一个整数数组 <code>nums</code>，返回一个数组，其中每个元素是 <code>nums</code> 中其他所有元素的乘积。</td>
+</tr>
+<tr>
+<td>LC560</td>
+<td>和为 K 的子数组</td>
+<td>给定一个整数数组 <code>nums</code> 和一个整数 <code>k</code>，计算 <code>nums</code> 中和为 <code>k</code> 的连续子数组的个数。</td>
+</tr>
+<tr>
+<td>LC1991</td>
+<td>找到数组的中心位置</td>
+<td>给定一个整数数组，找到中心位置，使得该位置左边的元素和等于右边的元素和，返回该位置的索引。</td>
+</tr>
+<tr>
+<td>LC3028</td>
+<td>边界上的蚂蚁</td>
+<td>给定一个数组，模拟蚂蚁在边界上移动，返回最后蚂蚁的位置。</td>
+</tr>
+<tr>
+<td>LC974</td>
+<td>和可被 K 整除的子数组</td>
+<td>给定一个整数数组 <code>nums</code> 和一个整数 <code>k</code>，返回 <code>nums</code> 中和可被 <code>k</code> 整除的子数组的个数。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_61">差分数组</h3>
+<table>
+<thead>
+<tr>
+<th>题目编号</th>
+<th>题目名称</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LC995</td>
+<td>K 连续位的最小翻转次数</td>
+<td>给定一个二进制数组，求出将 <code>K</code> 个连续的位翻转为 <code>1</code> 所需的最小翻转次数。</td>
+</tr>
+<tr>
+<td>LC1109</td>
+<td>航班预定统计</td>
+<td>给定一个二维数组 <code>bookings</code>，每个航班的乘客预定信息，计算每个航班的最终乘客数量。</td>
+</tr>
+<tr>
+<td>LC1893</td>
+<td>检查是否区域内所有整数都被覆盖</td>
+<td>给定一个二维数组 <code>ranges</code>，检查是否在指定的区间内所有整数都被覆盖。</td>
+</tr>
+<tr>
+<td>LC2381</td>
+<td>字母移位II</td>
+<td>给定一个字符串和一个移位值，返回移位后的新字符串。</td>
+</tr>
+<tr>
+<td>LC2251</td>
+<td>花期内花的数目</td>
+<td>给定一个植物的花期和一个查询，返回在查询范围内开花的植物数目。</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+    
+  </body>
+</html>
