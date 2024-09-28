@@ -74,34 +74,34 @@ Java中格式化字符串可以使用 `String.format` 方法
 `%s` 用于格式化字符串。
 
 **示例：**
-   ```java
-   String name = "小明";
-   int age = 10;
-   String formattedString = String.format("我叫 %s 今年 %d 岁!", name, age);
-   System.out.println(formattedString); // 输出：我叫 小明 今年 10 岁!
-   ```
+```java
+String name = "小明";
+int age = 10;
+String formattedString = String.format("我叫 %s 今年 %d 岁!", name, age);
+System.out.println(formattedString); // 输出：我叫 小明 今年 10 岁!
+```
 
 **%d：格式化整数**
 
 `%d` 用于格式化整数。
 
 **示例：**
-   ```java
-   int number = 12345;
-   String formattedNumber = String.format("数字：%d", number);
-   System.out.println(formattedNumber); // 输出：数字：12345
-   ```
+```java
+int number = 12345;
+String formattedNumber = String.format("数字：%d", number);
+System.out.println(formattedNumber); // 输出：数字：12345
+```
 
 **%f：格式化浮点数**
 
 `%f` 用于格式化浮点数，默认保留六位小数。
 
 **示例：**
-   ```java
-   double pi = 3.14159;
-   String formattedPi = String.format("π 的近似值为：%.2f", pi);
-   System.out.println(formattedPi); // 输出：π 的近似值为：3.14
-   ```
+```java
+double pi = 3.14159;
+String formattedPi = String.format("π 的近似值为：%.2f", pi);
+System.out.println(formattedPi); // 输出：π 的近似值为：3.14
+```
 
 
 ### 使用示例
@@ -218,97 +218,97 @@ public class EscapeCharacters {
 ### 6.1 `length()`
 - **功能：** 返回字符串的长度。
 - **示例：**
-  ```java
-  String str = "Hello, World!";
-  int length = str.length();  // 13
-  ```
+```java
+String str = "Hello, World!";
+int length = str.length();  // 13
+```
 
 ### 6.2 `charAt(int index)`
 - **功能：** 返回指定位置的字符。
 - **示例：**
-  ```java
-  String str = "Hello";
-  char ch = str.charAt(1);  // 'e'
-  ```
+```java
+String str = "Hello";
+char ch = str.charAt(1);  // 'e'
+```
 
 ### 6.3 `substring(int beginIndex, int endIndex)`
 - **功能：** 返回从 `beginIndex` 到 `endIndex` 之间的子字符串。
 - **示例：**
-  ```java
-  String str = "Hello, World!";
-  String substr = str.substring(7, 12);  // "World"
-  ```
+```java
+String str = "Hello, World!";
+String substr = str.substring(7, 12);  // "World"
+```
 
 ### 6.4 `toLowerCase()`
 - **功能：** 将字符串转换为小写。
 - **示例：**
-  ```java
-  String str = "HELLO";
-  String lower = str.toLowerCase();  // "hello"
-  ```
+```java
+String str = "HELLO";
+String lower = str.toLowerCase();  // "hello"
+```
 
 ### 6.5 `toUpperCase()`
 - **功能：** 将字符串转换为大写。
 - **示例：**
-  ```java
-  String str = "hello";
-  String upper = str.toUpperCase();  // "HELLO"
-  ```
+```java
+String str = "hello";
+String upper = str.toUpperCase();  // "HELLO"
+```
 
 ### 6.6 `trim()`
 - **功能：** 去除字符串前后的空白字符。
 - **示例：**
-  ```java
-  String str = "   Hello, World!   ";
-  String trimmed = str.trim();  // "Hello, World!"
-  ```
+```java
+String str = "   Hello, World!   ";
+String trimmed = str.trim();  // "Hello, World!"
+```
 
 ### 6.7 `replace(CharSequence target, CharSequence replacement)`
 - **功能：** 替换字符串中的指定子字符串。
 - **示例：**
-  ```java
-  String str = "Hello, World!";
-  String replaced = str.replace("World", "Java");  // "Hello, Java!"
-  ```
+```java
+String str = "Hello, World!";
+String replaced = str.replace("World", "Java");  // "Hello, Java!"
+```
 
 ### 6.8 `split(String regex)`
 - **功能：** 根据正则表达式分割字符串。
 - **示例：**
-  ```java
-  String str = "apple,banana,cherry";
-  String[] fruits = str.split(",");  // ["apple", "banana", "cherry"]
-  ```
+```java
+String str = "apple,banana,cherry";
+String[] fruits = str.split(",");  // ["apple", "banana", "cherry"]
+```
 
 ### 6.9 `concat(String str)`
 - **功能：** 将指定的字符串连接到当前字符串的末尾。
 - **示例：**
-  ```java
-  String str = "Hello";
-  String concatenated = str.concat(", World!");  // "Hello, World!"
-  ```
+```java
+String str = "Hello";
+String concatenated = str.concat(", World!");  // "Hello, World!"
+```
 
 ### 6.10 **字符串连接运算符 `+`**
 
    字符串连接运算符 `+` 用于将两个字符串连接起来。
 
    **示例：**
-   ```java
-   String str1 = "Hello";
-   String str2 = "World";
-   String result = str1 + str2;
-   System.out.println(result); // 输出：HelloWorld
-   ```
+```java
+String str1 = "Hello";
+String str2 = "World";
+String result = str1 + str2;
+System.out.println(result); // 输出：HelloWorld
+```
 
 ### 6.11 **重复输出字符串运算符 `repeat()`**
 
    Java 11 引入了 `repeat()` 方法来重复字符串。
 
    **示例：**
-   ```java
-   String str = "Hello";
-   String repeatedStr = str.repeat(3);
-   System.out.println(repeatedStr); // 输出：HelloHelloHello
-   ```
+```java
+String str = "Hello";
+String repeatedStr = str.repeat(3);
+System.out.println(repeatedStr); // 输出：HelloHelloHello
+```
 
    注意：`repeat()` 方法在 Java 11 及以上版本可用。
 
@@ -317,46 +317,46 @@ public class EscapeCharacters {
    `charAt()` 方法用于获取字符串中指定位置的字符。
 
    **示例：**
-   ```java
-   String str = "Hello";
-   char ch = str.charAt(1); // 获取索引为1的字符，即第2个字符 'e'
-   System.out.println(ch); // 输出：e
-   ```
+```java
+String str = "Hello";
+char ch = str.charAt(1); // 获取索引为1的字符，即第2个字符 'e'
+System.out.println(ch); // 输出：e
+```
 
 ### 6.13 **截取子字符串 `substring()`**
 
    `substring()` 方法用于截取字符串的一部分。
 
    **示例：**
-   ```java
-   String str = "HelloWorld";
-   String subStr = str.substring(3, 7); // 从索引3开始到索引6（不包括7）的子字符串，即 "loWo"
-   System.out.println(subStr); // 输出：loWo
-   ```
+```java
+String str = "HelloWorld";
+String subStr = str.substring(3, 7); // 从索引3开始到索引6（不包括7）的子字符串，即 "loWo"
+System.out.println(subStr); // 输出：loWo
+```
 
 ### 6.14 **成员运算符 `contains()`**
 
    `contains()` 方法用于检查字符串是否包含指定的字符序列。
 
    **示例：**
-   ```java
-   String str = "HelloWorld";
-   boolean contains = str.contains("Wo"); // 检查是否包含 "Wo"
-   System.out.println(contains); // 输出：true
-   ```
+```java
+String str = "HelloWorld";
+boolean contains = str.contains("Wo"); // 检查是否包含 "Wo"
+System.out.println(contains); // 输出：true
+```
 
 ### 6.15 **成员运算符 `indexOf()` 和 `lastIndexOf()`**
 
    `indexOf()` 和 `lastIndexOf()` 方法用于获取字符或字符串在目标字符串中第一次出现的位置索引和最后一次出现的位置索引。
 
    **示例：**
-   ```java
-   String str = "HelloWorld";
-   int firstIndex = str.indexOf('o'); // 第一次出现 'o' 的位置索引，索引从0开始
-   int lastIndex = str.lastIndexOf('o'); // 最后一次出现 'o' 的位置索引
-   System.out.println("第一次出现 'o' 的位置索引：" + firstIndex); // 输出：4
-   System.out.println("最后一次出现 'o' 的位置索引：" + lastIndex); // 输出：7
-   ```
+```java
+String str = "HelloWorld";
+int firstIndex = str.indexOf('o'); // 第一次出现 'o' 的位置索引，索引从0开始
+int lastIndex = str.lastIndexOf('o'); // 最后一次出现 'o' 的位置索引
+System.out.println("第一次出现 'o' 的位置索引：" + firstIndex); // 输出：4
+System.out.println("最后一次出现 'o' 的位置索引：" + lastIndex); // 输出：7
+```
 
 
 ## 7. 课后练习

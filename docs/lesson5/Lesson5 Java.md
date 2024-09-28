@@ -29,23 +29,23 @@
 在Java中，数组的声明和初始化可以分为以下几种方式：
 
 - **声明数组变量：** 声明数组需要指定数组的类型和变量名，但不分配内存空间。
-  ```java
-  int[] myArray;
-  ```
+```java
+int[] myArray;
+```
 - **创建数组并分配内存空间：** 使用`new`关键字创建数组并指定数组的大小（即元素个数）。
-  ```java
-  myArray = new int[5]; // 创建了一个包含5个整数元素的数组
-  ```
+```java
+myArray = new int[5]; // 创建了一个包含5个整数元素的数组
+```
 
 - **同时声明和初始化：** 也可以在声明数组变量时直接初始化数组。
-  ```java
-  int[] myArray = new int[5]; // 声明并初始化一个包含5个整数元素的数组
-  ```
+```java
+int[] myArray = new int[5]; // 声明并初始化一个包含5个整数元素的数组
+```
 
 - **使用数组初始化列表（Array Initializer）：** 在声明数组时直接指定初始元素的值，Java会根据提供的元素个数自动确定数组大小。
-  ```java
-  int[] myArray = {1, 2, 3, 4, 5}; // 声明并初始化包含5个整数元素的数组
-  ```
+```java
+int[] myArray = {1, 2, 3, 4, 5}; // 声明并初始化包含5个整数元素的数组
+```
 
 ### 1.2 访问数组元素
 
@@ -252,6 +252,7 @@ public class Main {
 迭代器（Iterator）是 Java 集合框架中一个重要的设计模式，允许程序员在不暴露集合内部结构的情况下，逐个访问集合中的元素。它提供了一种统一的方式来遍历集合，包括 `List`、`Set` 和 `Map` 等。
 
 主要的方法包括：
+
    - `boolean hasNext()`: 如果迭代器有更多元素可供遍历，则返回 `true`。
    - `E next()`: 返回迭代器的下一个元素。
 
@@ -406,100 +407,100 @@ public class ArrayListSearchExample {
 ### `ArrayList`
 
 1. **题目：** 创建一个包含1-5整数的`ArrayList`，并打印这些整数。
-   ```java
-   import java.util.ArrayList;
-   
-   public class ArrayListExample {
-       public static void main(String[] args) {
-        // To be implemented
-       }
-   }
-   ```
+```java
+import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+     // To be implemented
+    }
+}
+```
 
    **解答：**
-   ```java
-   import java.util.ArrayList;
-   
-   public class ArrayListExample {
-       public static void main(String[] args) {
-           ArrayList<Integer> list = new ArrayList<>();
-           list.add(1);
-           list.add(2);
-           list.add(3);
-           list.add(4);
-           list.add(5);
-           System.out.println(list);
-       }
-   }
-   ```
+```java
+import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        System.out.println(list);
+    }
+}
+```
 
 2. **题目：** 从一个`ArrayList`中移除特定的元素，比如数字3。
-   ```java
-   import java.util.ArrayList;
-   
-   public class ArrayListExample {
-       public static void main(String[] args) {
-           ArrayList<Integer> list = new ArrayList<>();
-           list.add(1);
-           list.add(2);
-           list.add(3);
-           list.add(4);
-           list.add(5);
-   
-            // To be implemented
-   
-           System.out.println(list);
-       }
-   }
-   ```
+```java
+import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+
+         // To be implemented
+
+        System.out.println(list);
+    }
+}
+```
    **解答：**
-   ```java
-   import java.util.ArrayList;
-   
-   public class ArrayListExample {
-       public static void main(String[] args) {
-           ArrayList<Integer> list = new ArrayList<>();
-           list.add(1);
-           list.add(2);
-           list.add(3);
-           list.add(4);
-           list.add(5);
-           list.remove(Integer.valueOf(3));  // 使用包装类来移除特定元素
-           System.out.println(list);
-       }
-   }
-   ```
+```java
+import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.remove(Integer.valueOf(3));  // 使用包装类来移除特定元素
+        System.out.println(list);
+    }
+}
+```
 
 3. **题目：** 访问`ArrayList`中的第三个元素并打印出来。
-   ```java
-   import java.util.ArrayList;
-   
-   public class ArrayListExample {
-       public static void main(String[] args) {
-           ArrayList<String> list = new ArrayList<>();
-           list.add("A");
-           list.add("B");
-           list.add("C");
-           list.add("D");
-           // To be implemented
-       }
-   }
-   ```
+```java
+import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("D");
+        // To be implemented
+    }
+}
+```
    **解答：**
-   ```java
-   import java.util.ArrayList;
-   
-   public class ArrayListExample {
-       public static void main(String[] args) {
-           ArrayList<String> list = new ArrayList<>();
-           list.add("A");
-           list.add("B");
-           list.add("C");
-           list.add("D");
-           System.out.println(list.get(2));  // 索引从0开始，所以第三个元素是索引2
-       }
-   }
-   ```
+```java
+import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("D");
+        System.out.println(list.get(2));  // 索引从0开始，所以第三个元素是索引2
+    }
+}
+```
 
 
 ### `线性搜索`

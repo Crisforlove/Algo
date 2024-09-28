@@ -222,7 +222,7 @@ int main() {
 
 ### 4.6.1 C++ 字符串运算符
 
-1. **字符串连接运算符 `+`**
+1.**字符串连接运算符 `+`**
 
    字符串连接运算符 `+` 用于将两个字符串连接起来。
 
@@ -234,7 +234,7 @@ int main() {
    cout << result << endl; // 输出：HelloWorld
    ```
 
-2. **通过索引获取字符 `operator[]`**
+2.**通过索引获取字符 `operator[]`**
 
    `operator[]` 用于获取字符串中指定位置的字符。
 
@@ -245,7 +245,7 @@ int main() {
    cout << ch << endl; // 输出：e
    ```
 
-3. **截取子字符串 `substr()`**
+3.**截取子字符串 `substr()`**
 
    `substr()` 方法用于截取字符串的一部分。
 
@@ -256,13 +256,11 @@ int main() {
    cout << subStr << endl; // 输出：loWo
    ```
 
-4. **成员运算符 `find()` 和 `rfind()`**
+4.**成员运算符 `find()` 和 `rfind()`**
 
    `find()` 和 `rfind()` 方法用于获取字符或字符串在目标字符串中第一次出现的位置索引和最后一次出现的位置索引。
 
-   **示例
-
-：**
+   **示例 ：**
    ```cpp
    string str = "HelloWorld";
    size_t firstIndex = str.find('o'); // 第一次出现 'o' 的位置索引，索引从0开始

@@ -25,14 +25,14 @@
 在Java中，方法（Methods）是用来执行特定任务的代码块，可以被重复调用。
 
 ### 1.1 方法的定义语法
-
- ```java
+ 
+```java
  修饰符 返回类型 方法名(参数列表) {
      // 方法体
      // 可以包含一系列的语句来实现特定功能
      // 可以使用参数，并且可能会返回一个值
  }
- ```
+```
 
 - **修饰符（Modifiers）**：可以是 `public`、`private`、`protected` 。
 - **返回类型（Return Type）**：方法可以返回一个值的类型，如果方法不返回任何值，则使用 `void`。
@@ -54,7 +54,7 @@
 - **描述**：`public` 修饰符表示方法可以被任何类访问。
 - **示例**：
 
- ```java
+```java
 public class Main {
     public static void greet(String name) {
         System.out.println("Hello, " + name + "!");
@@ -64,7 +64,7 @@ public class Main {
         greet("Alice"); // 输出：Hello, Alice!
     }
 }
- ```
+```
 
 ### 1.3 返回类型
 
@@ -72,23 +72,23 @@ public class Main {
 
 **示例1：返回类型为 `int`**
 
- ```java
+```java
  public class MathUtils {
      public int add(int a, int b) {
          return a + b;
      }
  }
- ```
+```
 
 **示例2：返回类型为 `void`**
 
- ```java
+```java
  public class Printer {
      public void printMessage(String message) {
          System.out.println(message);
      }
  }
- ```
+```
 
 ### 1.4 方法名命名规则
 
@@ -163,13 +163,13 @@ public static void main(String[] args) {
 
 形式参数是在函数定义时声明的参数，它们作为函数的一部分，用来接收调用函数时传递的实际参数的值。形式参数在函数定义的括号内部声明，并指定它们的类型和名称。例如，以下是一个简单的函数定义，它有两个形式参数：
 
- ```java
+```java
  public void calculateSum(int a, int b) {
      // 函数体
      int sum = a + b;
      System.out.println("Sum: " + sum);
  }
- ```
+```
 
 在这个例子中，`calculateSum` 是一个函数，它接受两个形式参数 `a` 和 `b`，它们的类型都是 `int`。这些形式参数在函数被调用时用于接收传递给函数的实际参数的值。
 
@@ -177,7 +177,7 @@ public static void main(String[] args) {
 
 实际参数是在调用函数时传递给函数的值或者表达式。它们是真正用来执行函数操作的数据。在函数调用时，实际参数被传递给函数的形式参数。例如，下面是如何调用上面定义的 `calculateSum` 函数，并传递实际参数：
 
- ```java
+```java
  public class Main {
      public static void main(String[] args) {
          int num1 = 10;
@@ -194,7 +194,7 @@ public static void main(String[] args) {
          System.out.println("Sum: " + sum);
      }
  }
- ```
+```
 
 在这个示例中，`num1` 和 `num2` 是 `main` 函数中的两个变量，它们作为实际参数传递给 `calculateSum` 函数。在函数调用 `calculateSum(num1, num2);` 中，`num1` 和 `num2` 分别传递给 `a` 和 `b` 形式参数，进而在函数内部计算它们的和。
 
@@ -207,7 +207,7 @@ public static void main(String[] args) {
 
 ### 4.1 方法的定义
 ### 题目 1: 在MathUtils中定义 multiply 方法，它会接受两个 float 参数，并返回它们的乘积。
- ```java
+```java
  public class MathUtils {
 
     // To be implemented
@@ -218,9 +218,9 @@ public static void main(String[] args) {
         System.out.println("The product is: " + product);  // 输出应该是 17.6
     }
 }
- ```
+```
 解答
- ```java
+```java
 public class MathUtils {
     public float multiply(float a, float b) {
         return a * b;
@@ -232,11 +232,11 @@ public class MathUtils {
         System.out.println("The product is: " + product);  // 输出应该是 17.6
     }
 }
- ```
+```
 
 ### 题目 2: 请将下列代码（Lesson2课后练习）的点单、打印客户点单内容、计算订单总价三个功能封装成独立的方法。
 
- ```java
+```java
  import java.util.Scanner;
 
  public class RestaurantOrder {
@@ -306,10 +306,10 @@ public class MathUtils {
          scanner.close();
      }
  }
- ```
+```
 
 参考答案
- ```java
+```java
  import java.util.Scanner;
 
  public class RestaurantOrder {
@@ -376,7 +376,7 @@ public class MathUtils {
          return burgers * BURGER_PRICE + fries * FRIES_PRICE + cokes * COKE_PRICE;
      }
  }
- ```
+```
 
 
 ### 4.2 形式参数与实际参数

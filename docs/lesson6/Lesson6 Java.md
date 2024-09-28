@@ -158,6 +158,7 @@ class Solution {
 **常规思路**
 1. **去除多余空格**: 在处理字符串之前，我们可以先考虑如何处理字符串中可能存在的多余空格问题（如前后空格或多重空格）。但实际实现中，通常不需要专门去除空格，只需要正确地分割单词即可。   
    检测一个单词的开始：
+
    - `s.charAt(i) != ' '`：当前字符不是空格。
    - `(i == 0 || s.charAt(i - 1) == ' ')`：当前字符是第一个字符，或者前一个字符是空格。
 
@@ -183,15 +184,15 @@ class Solution {
 }
 ```
 **调用函数法**
- ```java
- class Solution {
- public int countWords(String s) {
-         // 使用空格分隔字符串并计算单词数
-         String[] words = s.split("\\s+");
-         return words.length;
-     }
+```java
+class Solution {
+public int countWords(String s) {
+     // 使用空格分隔字符串并计算单词数
+     String[] words = s.split("\\s+");
+     return words.length;
  }
- ```
+}
+```
 ## 举一反三
 
 ### LC709. 转换成小写字母

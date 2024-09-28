@@ -226,11 +226,11 @@ switch (dayOfWeek) {
 在Java中，循环语句用于重复执行一段代码，直到满足某个条件为止或达到指定的次数。主要的循环语句有以下几种：
 
 ### 2.1 **for循环**：
-   ```java
-   for (initialization; condition; update) {
-       // 循环体
-   }
-   ```
+```java
+for (initialization; condition; update) {
+    // 循环体
+}
+```
    - `initialization`：循环变量的初始化。
    - `condition`：循环条件，每次循环开始前都会检查。
    - `update`：循环变量更新，通常是增加或减少循环变量的值。
@@ -287,36 +287,36 @@ Count is: 5
 ```
 
 ### 2.4 **while循环**：
-   ```java
-   while (condition) {
-       // 循环体
-   }
-   ```
+```java
+while (condition) {
+    // 循环体
+}
+```
    - `condition`：循环条件，在每次循环迭代开始之前评估。
    
    示例：
-   ```java
-   int i = 1;
-   while (i <= 5) {
-       System.out.println("Count is: " + i);
-       i++;
-   }
-   ```
+```java
+int i = 1;
+while (i <= 5) {
+    System.out.println("Count is: " + i);
+    i++;
+}
+```
 
 ### 2.5 **增强for循环（foreach循环）**：
    用于遍历数组或集合中的元素，不需要显式地控制循环变量。
-   ```java
-   for (type element : array/collection) {
-       // 循环体
-   }
-   ```
+```java
+for (type element : array/collection) {
+    // 循环体
+}
+```
    示例：
-   ```java
-   int[] numbers = {1, 2, 3, 4, 5};
-   for (int number : numbers) {
-       System.out.println("Number is: " + number);
-   }
-   ```
+```java
+int[] numbers = {1, 2, 3, 4, 5};
+for (int number : numbers) {
+    System.out.println("Number is: " + number);
+}
+```
 
 ## 3. break 语句
 在Java中，`break` 是一种控制流语句，通常用于在循环或 switch 语句中提前结束代码块的执行。具体来说，`break` 语句可以用于以下两种情况：
@@ -325,48 +325,48 @@ Count is: 5
    当在循环中执行 `break` 语句时，程序将立即退出当前的循环，继续执行循环后面的代码。这对于在满足某个条件后不再继续执行循环体内的代码非常有用。
 
    示例：
-   ```java
-   for (int i = 1; i <= 10; i++) {
-       System.out.println(i);
-       if (i == 5) {
-           break; // 当 i 等于 5 时退出循环
-       }
-   }
-   ```
+```java
+for (int i = 1; i <= 10; i++) {
+    System.out.println(i);
+    if (i == 5) {
+        break; // 当 i 等于 5 时退出循环
+    }
+}
+```
    输出：
-   ```
-   1
-   2
-   3
-   4
-   5
-   ```
+```
+1
+2
+3
+4
+5
+```
 
 ### 3.2 **在 switch 语句中使用 `break`**：
    在 switch 语句中，每个 `case` 分支通常会在执行完毕后继续执行下一个 `case` 分支，除非在某个 `case` 分支中使用了 `break` 语句。这时程序将跳出 switch 语句，不再继续执行后续的 `case` 分支。
 
    示例：
-   ```java
-   int dayOfWeek = 3;
-   switch (dayOfWeek) {
-       case 1:
-           System.out.println("Monday");
-           break;
-       case 2:
-           System.out.println("Tuesday");
-           break;
-       case 3:
-           System.out.println("Wednesday");
-           break;
-       default:
-           System.out.println("Invalid day");
-           break;
-   }
-   ```
+```java
+int dayOfWeek = 3;
+switch (dayOfWeek) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    case 3:
+        System.out.println("Wednesday");
+        break;
+    default:
+        System.out.println("Invalid day");
+        break;
+}
+```
    输出：
-   ```
-   Wednesday
-   ```
+```
+Wednesday
+```
 
 ### 注意事项：
 - `break` 语句只能用在循环 (`for`, `while`, `do-while`) 或 switch 语句的内部。

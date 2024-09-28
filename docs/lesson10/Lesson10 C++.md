@@ -33,35 +33,37 @@
 - **去重功能**：当需要存储不重复的元素时，`unordered_set` 是理想的选择。例如，用于存储唯一的用户ID、用户名等。
 - **集合操作**：`unordered_set` 支持经典的集合操作，如交集、并集和差集，能够有效处理两个集合间的运算。
 
-   - **交集**（两个集合共有的元素）：
-     ```cpp
-     std::unordered_set<int> set1 = {1, 2, 3};
-     std::unordered_set<int> set2 = {2, 3, 4};
-     std::unordered_set<int> intersection;
+1.**交集**（两个集合共有的元素）：
+```cpp
+   std::unordered_set<int> set1 = {1, 2, 3};
+   std::unordered_set<int> set2 = {2, 3, 4};
+   std::unordered_set<int> intersection;
      
-     for (int elem : set1) {
-         if (set2.find(elem) != set2.end()) {
-             intersection.insert(elem);
-         }
-     }
-     // intersection 现在是 {2, 3}
-     ```
-   - **并集**（两个集合的所有元素）：
-     ```cpp
-     std::unordered_set<int> union_set = set1;
-     union_set.insert(set2.begin(), set2.end());
-     // union_set 现在是 {1, 2, 3, 4}
-     ```
-   - **差集**（仅存在于第一个集合的元素）：
-     ```cpp
-     std::unordered_set<int> difference;
-     for (int elem : set1) {
-         if (set2.find(elem) == set2.end()) {
-             difference.insert(elem);
-         }
-     }
-     // difference 现在是 {1}
-     ```
+   for (int elem : set1) {
+      if (set2.find(elem) != set2.end()) {
+          intersection.insert(elem);
+      }
+   }
+   // intersection 现在是 {2, 3}
+```
+
+2.**并集**（两个集合的所有元素）：
+
+```cpp
+std::unordered_set<int> union_set = set1;
+union_set.insert(set2.begin(), set2.end());
+// union_set 现在是 {1, 2, 3, 4}
+```
+3.**差集**（仅存在于第一个集合的元素）：
+```cpp
+std::unordered_set<int> difference;
+for (int elem : set1) {
+ if (set2.find(elem) == set2.end()) {
+     difference.insert(elem);
+ }
+}
+// difference 现在是 {1}
+```
 
 ### 1.3 完整实例
 
