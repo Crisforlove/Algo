@@ -627,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Lesson2%20Python/" class="md-nav__link">
+      <a href="../Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1952,234 +1952,369 @@
 </ul>
 <h3 id="11-if">1.1 if 语句</h3>
 <p>使用<code>if</code>语句来指定一个代码块，如果条件为<code>true</code>,则执行该代码块。
-语法：</p>
-<pre><code class="language-cpp">if (condition) {
-  // 如果条件为 true，则执行的代码块
-}
-</code></pre>
-<p>请注意，<code>if</code>是小写字母。大写字母（<code>If</code> 或 <code>IF</code>）将生成错误。</p>
-<p>以下为示例：</p>
-<pre><code class="language-cpp">int a = 20;
-int b = 10;
-if (a &gt; b) {
-  cout &lt;&lt; &quot;a is greater than b&quot;;
-}
-</code></pre>
+语法：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="c1">// 如果条件为 true，则执行的代码块</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+请注意，<code>if</code>是小写字母。大写字母（<code>If</code> 或 <code>IF</code>）将生成错误。</p>
+<p>以下为示例：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a is greater than b&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="12-else">1.2 else 语句</h3>
 <p>如果 if 语句中的布尔表达式成立（true），则执行 if 语句中的代码块，如果不成立（false），则执行else语句中的代码块。</p>
-<p>语法：</p>
-<pre><code class="language-cpp">if (condition) {
-  // 如果条件为 true，则执行的代码块
-} else {
-  // 如果条件为 false，则执行的代码块
-}
-</code></pre>
-<p>以下为示例：</p>
-<pre><code class="language-cpp">int a = 66;
-int b = 666;
-if (a &gt; b) {
-  cout &lt;&lt; &quot;a is greater than b&quot;;
-}
-else{
-    cout &lt;&lt; &quot;a is smaller than b&quot;;
-}
-</code></pre>
+<p>语法：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="c1">// 如果条件为 true，则执行的代码块</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="c1">// 如果条件为 false，则执行的代码块</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+以下为示例：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">66</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">666</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a is greater than b&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">}</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="k">else</span><span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a is smaller than b&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="13-else-if">1.3 else if 语句</h3>
-<p><code>else if</code>在第一个条件为 false 时指定一个新条件。</p>
-<pre><code class="language-cpp">if (condition1) {
-  // 如果 condition1 为 true，则执行的代码块
-} else if (condition2) {
-  // 如果 condition1 为 false 且 condition2 为 true，则执行的代码块
-} else {
-  // 如果 condition1 和 condition2 均为 false，则执行的代码块
-}
-</code></pre>
-<p>以下为示例：</p>
-<pre><code class="language-cpp">int a = 66;
-int b = 666;
-if (a &gt; b) {
-  cout &lt;&lt; &quot;a is greater than b&quot;;
-}
-else if (a == b){
-    cout &lt;&lt; &quot;a is equal to b&quot;;
-}
-else {
-    cout &lt;&lt; &quot;a is smaller than b&quot;;
-}
-</code></pre>
+<p><code>else if</code>在第一个条件为 false 时指定一个新条件。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="c1">// 如果 condition1 为 true，则执行的代码块</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span><span class="c1">// 如果 condition1 为 false 且 condition2 为 true，则执行的代码块</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">  </span><span class="c1">// 如果 condition1 和 condition2 均为 false，则执行的代码块</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+以下为示例：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">66</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">666</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a is greater than b&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">}</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a is equal to b&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">}</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a is smaller than b&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="14-switch">1.4 switch 语句</h3>
 <p><code>switch</code>语句用于根据不同的条件执行不同的代码块。相比于多重的<code>if-else</code>结构，当有多个条件需要判断时，<code>switch</code>语句显得更加清晰和简洁。</p>
-<p>语法：</p>
-<pre><code class="language-cpp">switch (expression) {
-    case constant1:
-        // 代码块1
-        break;
-    case constant2:
-        // 代码块2
-        break;
-    ...
-    default:
-        // 默认代码块
-        break;
-}
-</code></pre>
-<ul>
-<li><code>expression</code>: 是一个整数表达式（可以是int、char等类型）。</li>
-<li><code>case</code>：每个case后跟一个常量值，当expression的值与该常量相等时，执行对应的代码块。</li>
-<li><code>break</code>：表示退出switch语句。如果没有break，程序会继续执行后续的case代码块（即“穿透”）。</li>
-<li><code>default</code>：当所有的case都不匹配时，执行default后的代码块。</li>
-</ul>
-<p>以下为示例：</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-
-int main() {
-    int day = 3;
-    switch (day) {
-        case 1:
-            std::cout &lt;&lt; &quot;Monday&quot; &lt;&lt; std::endl;
-            break;
-        case 2:
-            std::cout &lt;&lt; &quot;Tuesday&quot; &lt;&lt; std::endl;
-            break;
-        case 3:
-            std::cout &lt;&lt; &quot;Wednesday&quot; &lt;&lt; std::endl;
-            break;
-        case 4:
-            std::cout &lt;&lt; &quot;Thursday&quot; &lt;&lt; std::endl;
-            break;
-        case 5:
-            std::cout &lt;&lt; &quot;Friday&quot; &lt;&lt; std::endl;
-            break;
-        case 6:
-            std::cout &lt;&lt; &quot;Saturday&quot; &lt;&lt; std::endl;
-            break;
-        case 7:
-            std::cout &lt;&lt; &quot;Sunday&quot; &lt;&lt; std::endl;
-            break;
-        default:
-            std::cout &lt;&lt; &quot;Invalid day&quot; &lt;&lt; std::endl;
-            break;
-    }
-
-    return 0;
-}
-</code></pre>
+<p>语法：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">expression</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">constant1</span><span class="p">:</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">        </span><span class="c1">// 代码块1</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">constant2</span><span class="p">:</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">        </span><span class="c1">// 代码块2</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">    </span><span class="k">default</span><span class="o">:</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">        </span><span class="c1">// 默认代码块</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+* <code>expression</code>: 是一个整数表达式（可以是int、char等类型）。
+* <code>case</code>：每个case后跟一个常量值，当expression的值与该常量相等时，执行对应的代码块。
+* <code>break</code>：表示退出switch语句。如果没有break，程序会继续执行后续的case代码块（即“穿透”）。
+* <code>default</code>：当所有的case都不匹配时，执行default后的代码块。</p>
+<p>以下为示例：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span>
+<span class="normal"><a href="#__codelineno-7-28">28</a></span>
+<span class="normal"><a href="#__codelineno-7-29">29</a></span>
+<span class="normal"><a href="#__codelineno-7-30">30</a></span>
+<span class="normal"><a href="#__codelineno-7-31">31</a></span>
+<span class="normal"><a href="#__codelineno-7-32">32</a></span>
+<span class="normal"><a href="#__codelineno-7-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Monday&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Tuesday&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Wednesday&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="p">:</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Thursday&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Friday&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">6</span><span class="p">:</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Saturday&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">7</span><span class="p">:</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Sunday&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="w">        </span><span class="k">default</span><span class="o">:</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a><span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Invalid day&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-7-30" name="__codelineno-7-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31"></a>
+<a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="2-c">2. C++的循环语句</h2>
 <p>循环语句用于反复执行某段代码，直到满足特定条件。C++提供了三种基本的循环语句：
 * <code>for</code>循环
 * <code>while</code>循环</p>
 <h3 id="21-for">2.1 for 循环</h3>
-<p>语法：</p>
-<pre><code class="language-cpp">for (initialization; condition; increment/decrement) {
-    // 循环体
-}
-</code></pre>
-<ul>
-<li><code>initialization</code>：用于初始化循环控制变量，在循环开始前执行一次。通常用于定义并初始化循环计数器变量。例如：<code>int i = 0;</code>。</li>
-<li><code>condition</code>：循环继续执行的条件表达式。在每次循环开始时进行计算，如果条件为true，则执行循环体；否则，退出循环，例如<code>i &lt; 5</code>。</li>
-<li><code>increment/decrement</code>：在每次循环体执行后执行的操作，通常用于更新循环控制变量,例如<code>i++</code>（递增），<code>i--</code>（递减）。</li>
-</ul>
-<p>以下为示例（<strong>顺序遍历</strong>）：</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-
-int main() {
-    for (int i = 0; i &lt; 5; i++) {
-        std::cout &lt;&lt; &quot;i = &quot; &lt;&lt; i &lt;&lt; std::endl;
-    }
-    return 0;
-}
-</code></pre>
-<p>在这个例子中，<code>i</code>从0开始，每次循环<code>i</code>加1，直到<code>i</code>不小于5。输出结果为：</p>
-<pre><code class="language-cpp">i = 0
-i = 1
-i = 2
-i = 3
-i = 4
-</code></pre>
+<p>语法：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">initialization</span><span class="p">;</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span><span class="w"> </span><span class="n">increment</span><span class="o">/</span><span class="n">decrement</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="c1">// 循环体</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+* <code>initialization</code>：用于初始化循环控制变量，在循环开始前执行一次。通常用于定义并初始化循环计数器变量。例如：<code>int i = 0;</code>。
+* <code>condition</code>：循环继续执行的条件表达式。在每次循环开始时进行计算，如果条件为true，则执行循环体；否则，退出循环，例如<code>i &lt; 5</code>。
+* <code>increment/decrement</code>：在每次循环体执行后执行的操作，通常用于更新循环控制变量,例如<code>i++</code>（递增），<code>i--</code>（递减）。</p>
+<p>以下为示例（<strong>顺序遍历</strong>）：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span>
+<span class="normal"><a href="#__codelineno-9-7">7</a></span>
+<span class="normal"><a href="#__codelineno-9-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;i = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p>在这个例子中，<code>i</code>从0开始，每次循环<code>i</code>加1，直到<code>i</code>不小于5。输出结果为：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+</code></pre></div></td></tr></table></div></p>
 <h4 id="_1">倒序遍历</h4>
 <p>倒序遍历是指从一个较大的值开始，逐步递减循环变量，直到达到指定的条件为止。这种遍历方式与顺序遍历（从小到大递增）相反。在C++中，通过设置for循环的初始化条件、判断条件和递减操作，可以实现倒序遍历。</p>
-<p>假设我们希望从一个较大的数字开始，逐步减少该数字，直到达到一个特定值。我们可以通过以下代码实现:</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-
-int main() {
-    for (int i = 5; i &gt; 0; i--) {
-        std::cout &lt;&lt; &quot;i = &quot; &lt;&lt; i &lt;&lt; std::endl;
-    }
-    return 0;
-}
-</code></pre>
-<p>在这个例子中，i 的初始值为5，每次循环i减1，直到i不大于0。输出结果为：</p>
-<pre><code class="language-cpp">i = 5
-i = 4
-i = 3
-i = 2
-i = 1
-</code></pre>
+<p>假设我们希望从一个较大的数字开始，逐步减少该数字，直到达到一个特定值。我们可以通过以下代码实现:
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span>
+<span class="normal"><a href="#__codelineno-11-7">7</a></span>
+<span class="normal"><a href="#__codelineno-11-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;i = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+在这个例子中，i 的初始值为5，每次循环i减1，直到i不大于0。输出结果为：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="22-while">2.2 <code>while</code>循环</h3>
-<p>语法</p>
-<pre><code class="language-cpp">while (condition) {
-    // 循环体
-}
-</code></pre>
-<p><code>condition</code>：在每次循环开始时计算。如果为<code>true</code>，执行循环体；否则，退出循环。</p>
-<p>以下为示例：</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-
-int main() {
-    int i = 0;
-    while (i &lt; 5) {
-        std::cout &lt;&lt; &quot;i = &quot; &lt;&lt; i &lt;&lt; std::endl;
-        i++;
-    }
-    return 0;
-}
-</code></pre>
-<p>在这个例子中，<code>i</code>从0开始，每次循环<code>i</code>加1，直到<code>i</code>不小于5。输出结果与<code>for</code>循环相同。</p>
+<p>语法
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">    </span><span class="c1">// 循环体</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<code>condition</code>：在每次循环开始时计算。如果为<code>true</code>，执行循环体；否则，退出循环。</p>
+<p>以下为示例：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;i = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">        </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+在这个例子中，<code>i</code>从0开始，每次循环<code>i</code>加1，直到<code>i</code>不小于5。输出结果与<code>for</code>循环相同。</p>
 <h2 id="3-break-continue">3. Break 和 Continue</h2>
 <h3 id="31-break">3.1 <code>break</code>语句</h3>
 <p><code>break</code>语句用于立即退出循环，不再执行循环体中的其他代码，也不会继续进行下一次循环。</p>
-<p>以下为示例</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-
-int main() {
-    for (int i = 0; i &lt; 10; i++) {
-        if (i == 5) {
-            break; // 当i等于5时，退出循环
-        }
-        std::cout &lt;&lt; &quot;i = &quot; &lt;&lt; i &lt;&lt; std::endl;
-    }
-    return 0;
-}
-</code></pre>
-<p>在这个例子中，当<code>i</code>等于5时，<code>break</code>语句会立即退出循环。输出结果为：</p>
-<pre><code>i = 0
-i = 1
-i = 2
-i = 3
-i = 4
-</code></pre>
+<p>以下为示例
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"> </span><span class="c1">// 当i等于5时，退出循环</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;i = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+在这个例子中，当<code>i</code>等于5时，<code>break</code>语句会立即退出循环。输出结果为：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span>
+<span class="normal"><a href="#__codelineno-16-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>i = 0
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>i = 1
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>i = 2
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>i = 3
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a>i = 4
+</code></pre></div></td></tr></table></div></p>
 <h3 id="32-continue">3.2 <code>continue</code>语句</h3>
 <p><code>continue</code>语句用于跳过当前循环中的剩余代码，立即开始下一次循环。</p>
 <h5 id="_2">示例代码</h5>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-
-int main() {
-    for (int i = 0; i &lt; 10; i++) {
-        if (i % 2 == 0) {
-            continue; // 如果i是偶数，跳过本次循环，继续下一次循环
-        }
-        std::cout &lt;&lt; &quot;i = &quot; &lt;&lt; i &lt;&lt; std::endl;
-    }
-    return 0;
-}
-</code></pre>
-<p>在这个例子中，当<code>i</code>是偶数时，<code>continue</code>语句会跳过当前循环的剩余部分，继续下一次循环。输出结果为：</p>
-<pre><code>i = 1
-i = 3
-i = 5
-i = 7
-i = 9
-</code></pre>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">            </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// 如果i是偶数，跳过本次循环，继续下一次循环</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;i = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+在这个例子中，当<code>i</code>是偶数时，<code>continue</code>语句会跳过当前循环的剩余部分，继续下一次循环。输出结果为：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span>
+<span class="normal"><a href="#__codelineno-18-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>i = 1
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>i = 3
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a>i = 5
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a>i = 7
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a>i = 9
+</code></pre></div></td></tr></table></div></p>
 <h2 id="4">4. 课后练习</h2>
 <h3 id="41">4.1 点餐程序</h3>
 <h4 id="_3">题目描述：</h4>
@@ -2200,106 +2335,201 @@ i = 9
 <li>选择退出程序。</li>
 </ol>
 <p>程序的输出应如下所示：</p>
-<pre><code>请点单（输入-1退出）：
-0
-请输入汉堡的数量：1
-请输入薯条的数量：2
-请输入可乐的数量：3
-
-客户点单内容：
-汉堡 x 2
-薯条 x 1
-可乐 x 3
-
-本次点单总价：48.5 元
-
-请点单（输入-1退出）：
-0
-请输入汉堡的数量：1
-请输入薯条的数量：2
-请输入可乐的数量：2
-
-客户点单内容：
-汉堡 x 1
-薯条 x 2
-可乐 x 2
-
-本次点单总价：35.0 元
-
-请点单（输入-1退出）：
--1
-
-所有顾客的总销售额：83.5 元
-
-请点单（输入0退出）：
-请输入汉堡的数量：0
-
-所有顾客的总销售额：83.5 元
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-19-10">10</a></span>
+<span class="normal"><a href="#__codelineno-19-11">11</a></span>
+<span class="normal"><a href="#__codelineno-19-12">12</a></span>
+<span class="normal"><a href="#__codelineno-19-13">13</a></span>
+<span class="normal"><a href="#__codelineno-19-14">14</a></span>
+<span class="normal"><a href="#__codelineno-19-15">15</a></span>
+<span class="normal"><a href="#__codelineno-19-16">16</a></span>
+<span class="normal"><a href="#__codelineno-19-17">17</a></span>
+<span class="normal"><a href="#__codelineno-19-18">18</a></span>
+<span class="normal"><a href="#__codelineno-19-19">19</a></span>
+<span class="normal"><a href="#__codelineno-19-20">20</a></span>
+<span class="normal"><a href="#__codelineno-19-21">21</a></span>
+<span class="normal"><a href="#__codelineno-19-22">22</a></span>
+<span class="normal"><a href="#__codelineno-19-23">23</a></span>
+<span class="normal"><a href="#__codelineno-19-24">24</a></span>
+<span class="normal"><a href="#__codelineno-19-25">25</a></span>
+<span class="normal"><a href="#__codelineno-19-26">26</a></span>
+<span class="normal"><a href="#__codelineno-19-27">27</a></span>
+<span class="normal"><a href="#__codelineno-19-28">28</a></span>
+<span class="normal"><a href="#__codelineno-19-29">29</a></span>
+<span class="normal"><a href="#__codelineno-19-30">30</a></span>
+<span class="normal"><a href="#__codelineno-19-31">31</a></span>
+<span class="normal"><a href="#__codelineno-19-32">32</a></span>
+<span class="normal"><a href="#__codelineno-19-33">33</a></span>
+<span class="normal"><a href="#__codelineno-19-34">34</a></span>
+<span class="normal"><a href="#__codelineno-19-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>请点单（输入-1退出）：
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>0
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>请输入汉堡的数量：1
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>请输入薯条的数量：2
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a>请输入可乐的数量：3
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a>客户点单内容：
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a>汉堡 x 2
+<a id="__codelineno-19-9" name="__codelineno-19-9"></a>薯条 x 1
+<a id="__codelineno-19-10" name="__codelineno-19-10"></a>可乐 x 3
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a>
+<a id="__codelineno-19-12" name="__codelineno-19-12"></a>本次点单总价：48.5 元
+<a id="__codelineno-19-13" name="__codelineno-19-13"></a>
+<a id="__codelineno-19-14" name="__codelineno-19-14"></a>请点单（输入-1退出）：
+<a id="__codelineno-19-15" name="__codelineno-19-15"></a>0
+<a id="__codelineno-19-16" name="__codelineno-19-16"></a>请输入汉堡的数量：1
+<a id="__codelineno-19-17" name="__codelineno-19-17"></a>请输入薯条的数量：2
+<a id="__codelineno-19-18" name="__codelineno-19-18"></a>请输入可乐的数量：2
+<a id="__codelineno-19-19" name="__codelineno-19-19"></a>
+<a id="__codelineno-19-20" name="__codelineno-19-20"></a>客户点单内容：
+<a id="__codelineno-19-21" name="__codelineno-19-21"></a>汉堡 x 1
+<a id="__codelineno-19-22" name="__codelineno-19-22"></a>薯条 x 2
+<a id="__codelineno-19-23" name="__codelineno-19-23"></a>可乐 x 2
+<a id="__codelineno-19-24" name="__codelineno-19-24"></a>
+<a id="__codelineno-19-25" name="__codelineno-19-25"></a>本次点单总价：35.0 元
+<a id="__codelineno-19-26" name="__codelineno-19-26"></a>
+<a id="__codelineno-19-27" name="__codelineno-19-27"></a>请点单（输入-1退出）：
+<a id="__codelineno-19-28" name="__codelineno-19-28"></a>-1
+<a id="__codelineno-19-29" name="__codelineno-19-29"></a>
+<a id="__codelineno-19-30" name="__codelineno-19-30"></a>所有顾客的总销售额：83.5 元
+<a id="__codelineno-19-31" name="__codelineno-19-31"></a>
+<a id="__codelineno-19-32" name="__codelineno-19-32"></a>请点单（输入0退出）：
+<a id="__codelineno-19-33" name="__codelineno-19-33"></a>请输入汉堡的数量：0
+<a id="__codelineno-19-34" name="__codelineno-19-34"></a>
+<a id="__codelineno-19-35" name="__codelineno-19-35"></a>所有顾客的总销售额：83.5 元
+</code></pre></div></td></tr></table></div>
 <h4 id="_6">参考解答：</h4>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-
-int main() {
-    // 定义价格常量
-    const double BURGER_PRICE = 12.5;
-    const double FRIES_PRICE = 6.0;
-    const double COKE_PRICE = 4.5;
-
-    // 初始化总销售额
-    double totalSales = 0.0;
-
-    // 创建输入流
-    int option = 0;
-    int burgers = 0, fries = 0, cokes = 0;
-
-    // 开始循环，直到顾客选择退出
-    while (true) {
-        // 获取用户点单
-        cout &lt;&lt; &quot;\n请点单（输入-1退出，其他整数进入点单）：&quot;;
-        cin &gt;&gt; option;
-
-        // 如果输入为-1，则退出循环
-        if (option == -1) {
-            break;
-        }
-
-        cout &lt;&lt; &quot;请输入汉堡的数量：&quot;;
-        cin &gt;&gt; burgers;
-
-        cout &lt;&lt; &quot;请输入薯条的数量：&quot;;
-        cin &gt;&gt; fries;
-
-        cout &lt;&lt; &quot;请输入可乐的数量：&quot;;
-        cin &gt;&gt; cokes;
-
-        // 打印客户点单内容
-        cout &lt;&lt; &quot;\n客户点单内容：&quot; &lt;&lt; endl;
-        if (burgers &gt; 0) {
-            cout &lt;&lt; &quot;汉堡 x &quot; &lt;&lt; burgers &lt;&lt; endl;
-        }
-        if (fries &gt; 0) {
-            cout &lt;&lt; &quot;薯条 x &quot; &lt;&lt; fries &lt;&lt; endl;
-        }
-        if (cokes &gt; 0) {
-            cout &lt;&lt; &quot;可乐 x &quot; &lt;&lt; cokes &lt;&lt; endl;
-        }
-
-        // 计算本次点单的总价
-        double orderTotal = burgers * BURGER_PRICE + fries * FRIES_PRICE + cokes * COKE_PRICE;
-        // 累加到总销售额
-        totalSales += orderTotal;
-
-        // 打印本次点单的总价
-        cout &lt;&lt; &quot;\n本次点单总价：&quot; &lt;&lt; orderTotal &lt;&lt; &quot; 元&quot; &lt;&lt; endl;
-    }
-
-    // 打印所有顾客的总销售额
-    cout &lt;&lt; &quot;\n所有顾客的总销售额：&quot; &lt;&lt; totalSales &lt;&lt; &quot; 元&quot; &lt;&lt; endl;
-
-    return 0;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-20-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-20-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-20-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-20-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-20-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-20-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-20-10">10</a></span>
+<span class="normal"><a href="#__codelineno-20-11">11</a></span>
+<span class="normal"><a href="#__codelineno-20-12">12</a></span>
+<span class="normal"><a href="#__codelineno-20-13">13</a></span>
+<span class="normal"><a href="#__codelineno-20-14">14</a></span>
+<span class="normal"><a href="#__codelineno-20-15">15</a></span>
+<span class="normal"><a href="#__codelineno-20-16">16</a></span>
+<span class="normal"><a href="#__codelineno-20-17">17</a></span>
+<span class="normal"><a href="#__codelineno-20-18">18</a></span>
+<span class="normal"><a href="#__codelineno-20-19">19</a></span>
+<span class="normal"><a href="#__codelineno-20-20">20</a></span>
+<span class="normal"><a href="#__codelineno-20-21">21</a></span>
+<span class="normal"><a href="#__codelineno-20-22">22</a></span>
+<span class="normal"><a href="#__codelineno-20-23">23</a></span>
+<span class="normal"><a href="#__codelineno-20-24">24</a></span>
+<span class="normal"><a href="#__codelineno-20-25">25</a></span>
+<span class="normal"><a href="#__codelineno-20-26">26</a></span>
+<span class="normal"><a href="#__codelineno-20-27">27</a></span>
+<span class="normal"><a href="#__codelineno-20-28">28</a></span>
+<span class="normal"><a href="#__codelineno-20-29">29</a></span>
+<span class="normal"><a href="#__codelineno-20-30">30</a></span>
+<span class="normal"><a href="#__codelineno-20-31">31</a></span>
+<span class="normal"><a href="#__codelineno-20-32">32</a></span>
+<span class="normal"><a href="#__codelineno-20-33">33</a></span>
+<span class="normal"><a href="#__codelineno-20-34">34</a></span>
+<span class="normal"><a href="#__codelineno-20-35">35</a></span>
+<span class="normal"><a href="#__codelineno-20-36">36</a></span>
+<span class="normal"><a href="#__codelineno-20-37">37</a></span>
+<span class="normal"><a href="#__codelineno-20-38">38</a></span>
+<span class="normal"><a href="#__codelineno-20-39">39</a></span>
+<span class="normal"><a href="#__codelineno-20-40">40</a></span>
+<span class="normal"><a href="#__codelineno-20-41">41</a></span>
+<span class="normal"><a href="#__codelineno-20-42">42</a></span>
+<span class="normal"><a href="#__codelineno-20-43">43</a></span>
+<span class="normal"><a href="#__codelineno-20-44">44</a></span>
+<span class="normal"><a href="#__codelineno-20-45">45</a></span>
+<span class="normal"><a href="#__codelineno-20-46">46</a></span>
+<span class="normal"><a href="#__codelineno-20-47">47</a></span>
+<span class="normal"><a href="#__codelineno-20-48">48</a></span>
+<span class="normal"><a href="#__codelineno-20-49">49</a></span>
+<span class="normal"><a href="#__codelineno-20-50">50</a></span>
+<span class="normal"><a href="#__codelineno-20-51">51</a></span>
+<span class="normal"><a href="#__codelineno-20-52">52</a></span>
+<span class="normal"><a href="#__codelineno-20-53">53</a></span>
+<span class="normal"><a href="#__codelineno-20-54">54</a></span>
+<span class="normal"><a href="#__codelineno-20-55">55</a></span>
+<span class="normal"><a href="#__codelineno-20-56">56</a></span>
+<span class="normal"><a href="#__codelineno-20-57">57</a></span>
+<span class="normal"><a href="#__codelineno-20-58">58</a></span>
+<span class="normal"><a href="#__codelineno-20-59">59</a></span>
+<span class="normal"><a href="#__codelineno-20-60">60</a></span>
+<span class="normal"><a href="#__codelineno-20-61">61</a></span>
+<span class="normal"><a href="#__codelineno-20-62">62</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">    </span><span class="c1">// 定义价格常量</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">BURGER_PRICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12.5</span><span class="p">;</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">FRIES_PRICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6.0</span><span class="p">;</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">COKE_PRICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.5</span><span class="p">;</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9"></a>
+<a id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="w">    </span><span class="c1">// 初始化总销售额</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">totalSales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12"></a>
+<a id="__codelineno-20-13" name="__codelineno-20-13"></a><span class="w">    </span><span class="c1">// 创建输入流</span>
+<a id="__codelineno-20-14" name="__codelineno-20-14"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-20-15" name="__codelineno-20-15"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">burgers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">fries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">cokes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-20-16" name="__codelineno-20-16"></a>
+<a id="__codelineno-20-17" name="__codelineno-20-17"></a><span class="w">    </span><span class="c1">// 开始循环，直到顾客选择退出</span>
+<a id="__codelineno-20-18" name="__codelineno-20-18"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-19" name="__codelineno-20-19"></a><span class="w">        </span><span class="c1">// 获取用户点单</span>
+<a id="__codelineno-20-20" name="__codelineno-20-20"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">请点单（输入-1退出，其他整数进入点单）：&quot;</span><span class="p">;</span>
+<a id="__codelineno-20-21" name="__codelineno-20-21"></a><span class="w">        </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">option</span><span class="p">;</span>
+<a id="__codelineno-20-22" name="__codelineno-20-22"></a>
+<a id="__codelineno-20-23" name="__codelineno-20-23"></a><span class="w">        </span><span class="c1">// 如果输入为-1，则退出循环</span>
+<a id="__codelineno-20-24" name="__codelineno-20-24"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">option</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-25" name="__codelineno-20-25"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-20-26" name="__codelineno-20-26"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-20-27" name="__codelineno-20-27"></a>
+<a id="__codelineno-20-28" name="__codelineno-20-28"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;请输入汉堡的数量：&quot;</span><span class="p">;</span>
+<a id="__codelineno-20-29" name="__codelineno-20-29"></a><span class="w">        </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">burgers</span><span class="p">;</span>
+<a id="__codelineno-20-30" name="__codelineno-20-30"></a>
+<a id="__codelineno-20-31" name="__codelineno-20-31"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;请输入薯条的数量：&quot;</span><span class="p">;</span>
+<a id="__codelineno-20-32" name="__codelineno-20-32"></a><span class="w">        </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">fries</span><span class="p">;</span>
+<a id="__codelineno-20-33" name="__codelineno-20-33"></a>
+<a id="__codelineno-20-34" name="__codelineno-20-34"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;请输入可乐的数量：&quot;</span><span class="p">;</span>
+<a id="__codelineno-20-35" name="__codelineno-20-35"></a><span class="w">        </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">cokes</span><span class="p">;</span>
+<a id="__codelineno-20-36" name="__codelineno-20-36"></a>
+<a id="__codelineno-20-37" name="__codelineno-20-37"></a><span class="w">        </span><span class="c1">// 打印客户点单内容</span>
+<a id="__codelineno-20-38" name="__codelineno-20-38"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">客户点单内容：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-20-39" name="__codelineno-20-39"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">burgers</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-40" name="__codelineno-20-40"></a><span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;汉堡 x &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">burgers</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-20-41" name="__codelineno-20-41"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-20-42" name="__codelineno-20-42"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fries</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-43" name="__codelineno-20-43"></a><span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;薯条 x &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">fries</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-20-44" name="__codelineno-20-44"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-20-45" name="__codelineno-20-45"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cokes</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-46" name="__codelineno-20-46"></a><span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;可乐 x &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cokes</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-20-47" name="__codelineno-20-47"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-20-48" name="__codelineno-20-48"></a>
+<a id="__codelineno-20-49" name="__codelineno-20-49"></a><span class="w">        </span><span class="c1">// 计算本次点单的总价</span>
+<a id="__codelineno-20-50" name="__codelineno-20-50"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">orderTotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">burgers</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">BURGER_PRICE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fries</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">FRIES_PRICE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cokes</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">COKE_PRICE</span><span class="p">;</span>
+<a id="__codelineno-20-51" name="__codelineno-20-51"></a><span class="w">        </span><span class="c1">// 累加到总销售额</span>
+<a id="__codelineno-20-52" name="__codelineno-20-52"></a><span class="w">        </span><span class="n">totalSales</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">orderTotal</span><span class="p">;</span>
+<a id="__codelineno-20-53" name="__codelineno-20-53"></a>
+<a id="__codelineno-20-54" name="__codelineno-20-54"></a><span class="w">        </span><span class="c1">// 打印本次点单的总价</span>
+<a id="__codelineno-20-55" name="__codelineno-20-55"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">本次点单总价：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">orderTotal</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; 元&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-20-56" name="__codelineno-20-56"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-20-57" name="__codelineno-20-57"></a>
+<a id="__codelineno-20-58" name="__codelineno-20-58"></a><span class="w">    </span><span class="c1">// 打印所有顾客的总销售额</span>
+<a id="__codelineno-20-59" name="__codelineno-20-59"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">所有顾客的总销售额：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">totalSales</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; 元&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-20-60" name="__codelineno-20-60"></a>
+<a id="__codelineno-20-61" name="__codelineno-20-61"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-20-62" name="__codelineno-20-62"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="42-11003">4.2 计算并输出1到100之间所有不能被3整除的数的平方和</h3>
 <h4 id="_7">题目描述：</h4>
 <p>编写一个程序，计算并输出1到100之间所有不能被3整除的数的平方和。在计算过程中，如果平方和超过1000，则停止计算并输出当前的平方和值。</p>
@@ -2318,39 +2548,65 @@ int main() {
 <li>最终输出停止时的平方和值。</li>
 </ol>
 <h4 id="_9">参考解答：</h4>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-
-int main() {
-    int sum = 0;
-
-    for (int i = 1; i &lt;= 100; i++) {
-        if (i % 3 == 0) {
-            continue; // 跳过能被3整除的数
-        }
-
-        int square = i * i;
-        sum += square;
-
-        if (sum &gt; 1000) {
-            std::cout &lt;&lt; &quot;当前平方和超过1000，停止计算。\n&quot;;
-            std::cout &lt;&lt; &quot;当前平方和为: &quot; &lt;&lt; sum &lt;&lt; &quot;\n&quot;;
-            break;
-        }
-    }
-
-    if (sum &lt;= 1000) {
-        std::cout &lt;&lt; &quot;最终平方和为: &quot; &lt;&lt; sum &lt;&lt; &quot;\n&quot;;
-    }
-
-    return 0;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span>
+<span class="normal"><a href="#__codelineno-21-13">13</a></span>
+<span class="normal"><a href="#__codelineno-21-14">14</a></span>
+<span class="normal"><a href="#__codelineno-21-15">15</a></span>
+<span class="normal"><a href="#__codelineno-21-16">16</a></span>
+<span class="normal"><a href="#__codelineno-21-17">17</a></span>
+<span class="normal"><a href="#__codelineno-21-18">18</a></span>
+<span class="normal"><a href="#__codelineno-21-19">19</a></span>
+<span class="normal"><a href="#__codelineno-21-20">20</a></span>
+<span class="normal"><a href="#__codelineno-21-21">21</a></span>
+<span class="normal"><a href="#__codelineno-21-22">22</a></span>
+<span class="normal"><a href="#__codelineno-21-23">23</a></span>
+<span class="normal"><a href="#__codelineno-21-24">24</a></span>
+<span class="normal"><a href="#__codelineno-21-25">25</a></span>
+<span class="normal"><a href="#__codelineno-21-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="w">            </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// 跳过能被3整除的数</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">square</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a><span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">square</span><span class="p">;</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a>
+<a id="__codelineno-21-14" name="__codelineno-21-14"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sum</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15"></a><span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;当前平方和超过1000，停止计算。</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<a id="__codelineno-21-16" name="__codelineno-21-16"></a><span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;当前平方和为: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<a id="__codelineno-21-17" name="__codelineno-21-17"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-21-18" name="__codelineno-21-18"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-21-19" name="__codelineno-21-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-21-20" name="__codelineno-21-20"></a>
+<a id="__codelineno-21-21" name="__codelineno-21-21"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sum</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-22" name="__codelineno-21-22"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;最终平方和为: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<a id="__codelineno-21-23" name="__codelineno-21-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-21-24" name="__codelineno-21-24"></a>
+<a id="__codelineno-21-25" name="__codelineno-21-25"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-21-26" name="__codelineno-21-26"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_10">示例运行和输出：</h4>
 <p>在运行上述代码时，会依次计算1到100之间所有不能被3整除的数的平方，并累加到平方和变量<code>sum</code>中。如果累加过程中发现平方和超过1000，则停止计算，并输出当前的平方和值。</p>
-<p>输出示例：</p>
-<pre><code>当前平方和超过1000，停止计算。
-当前平方和为: 1025
-</code></pre>
+<p>输出示例：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>当前平方和超过1000，停止计算。
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>当前平方和为: 1025
+</code></pre></div></td></tr></table></div></p>
 
 
 

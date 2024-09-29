@@ -1323,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1344,7 +1344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1365,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2754,96 +2754,164 @@
 <li><code>entrySet()</code>：返回 <code>HashMap</code> 中所有键值对的集合。</li>
 </ul>
 <h3 id="14">1.4 示例代码</h3>
-<pre><code class="language-java">import java.util.HashMap;
-
-public class HashMapExample {
-    public static void main(String[] args) {
-        // 创建一个 HashMap 实例
-        HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
-
-        // 添加键值对
-        map.put(&quot;Apple&quot;, 10);
-        map.put(&quot;Banana&quot;, 20);
-        map.put(&quot;Orange&quot;, 30);
-
-        // 获取键值对
-        System.out.println(&quot;Apple: &quot; + map.get(&quot;Apple&quot;));  // 输出: Apple: 10
-
-        // 判断是否包含键或值
-        System.out.println(&quot;Contains key 'Banana': &quot; + map.containsKey(&quot;Banana&quot;)); // 输出: true
-        System.out.println(&quot;Contains value 30: &quot; + map.containsValue(30));         // 输出: true
-
-        // 删除键值对
-        map.remove(&quot;Banana&quot;);
-        System.out.println(&quot;After removal of 'Banana': &quot; + map);
-
-        // 获取 HashMap 的大小
-        System.out.println(&quot;Size of map: &quot; + map.size());
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HashMapExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="c1">// 创建一个 HashMap 实例</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="c1">// 添加键值对</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="c1">// 获取键值对</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Apple: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">));</span><span class="w">  </span><span class="c1">// 输出: Apple: 10</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="c1">// 判断是否包含键或值</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Contains key &#39;Banana&#39;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出: true</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Contains value 30: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">containsValue</span><span class="p">(</span><span class="mi">30</span><span class="p">));</span><span class="w">         </span><span class="c1">// 输出: true</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">        </span><span class="c1">// 删除键值对</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;After removal of &#39;Banana&#39;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">map</span><span class="p">);</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">        </span><span class="c1">// 获取 HashMap 的大小</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Size of map: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_2">运行结果：</h3>
-<pre><code>Apple: 10
-Contains key 'Banana': true
-Contains value 30: true
-After removal of 'Banana': {Apple=10, Orange=30}
-Size of map: 2
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Apple: 10
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Contains key &#39;Banana&#39;: true
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Contains value 30: true
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>After removal of &#39;Banana&#39;: {Apple=10, Orange=30}
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Size of map: 2
+</code></pre></div></td></tr></table></div>
 <h3 id="15-hashmap">1.5. <strong>遍历<code>HashMap</code></strong></h3>
 <p>Java的<code>HashMap</code>提供了多种遍历方式：</p>
 <p><strong>1.5.1 遍历键</strong></p>
 <p>可以使用<code>keySet()</code>方法获取所有键，并遍历它们：</p>
-<pre><code class="language-java">for (KeyType key : map.keySet()) {
-    System.out.println(key);
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">KeyType</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>1.5.2 遍历值</strong></p>
 <p>可以使用<code>values()</code>方法获取所有值并遍历它们：</p>
-<pre><code class="language-java">for (ValueType value : map.values()) {
-    System.out.println(value);
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">ValueType</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">values</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>1.5.3 遍历键值对</strong></p>
 <p>可以使用<code>entrySet()</code>方法遍历所有键值对：</p>
-<pre><code class="language-java">for (Map.Entry&lt;KeyType, ValueType&gt; entry : map.entrySet()) {
-    System.out.println(&quot;Key: &quot; + entry.getKey() + &quot;, Value: &quot; + entry.getValue());
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">KeyType</span><span class="p">,</span><span class="w"> </span><span class="n">ValueType</span><span class="o">&gt;</span><span class="w"> </span><span class="n">entry</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">entrySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Key: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="na">getKey</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Value: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_3">示例代码</h4>
-<pre><code class="language-java">import java.util.HashMap;
-import java.util.Map;
-
-public class HashMapTraversalExample {
-
-    public static void main(String[] args) {
-
-        // 创建并初始化一个 HashMap
-        HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
-        map.put(&quot;Apple&quot;, 10);
-        map.put(&quot;Banana&quot;, 20);
-        map.put(&quot;Orange&quot;, 30);
-        map.put(&quot;Grapes&quot;, 40);
-
-        // 1. 遍历键 (key) 集合
-        System.out.println(&quot;遍历键集合 (Keys):&quot;);
-        for (String key : map.keySet()) {
-            System.out.println(&quot;Key: &quot; + key);
-        }
-
-        // 2. 遍历值 (value) 集合
-        System.out.println(&quot;\n遍历值集合 (Values):&quot;);
-        for (Integer value : map.values()) {
-            System.out.println(&quot;Value: &quot; + value);
-        }
-
-        // 3. 遍历键值对 (key-value pairs)
-        System.out.println(&quot;\n遍历键值对 (Key-Value Pairs):&quot;);
-        for (Map.Entry&lt;String, Integer&gt; entry : map.entrySet()) {
-            System.out.println(&quot;Key: &quot; + entry.getKey() + &quot;, Value: &quot; + entry.getValue());
-        }
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span>
+<span class="normal"><a href="#__codelineno-5-28">28</a></span>
+<span class="normal"><a href="#__codelineno-5-29">29</a></span>
+<span class="normal"><a href="#__codelineno-5-30">30</a></span>
+<span class="normal"><a href="#__codelineno-5-31">31</a></span>
+<span class="normal"><a href="#__codelineno-5-32">32</a></span>
+<span class="normal"><a href="#__codelineno-5-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HashMapTraversalExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">        </span><span class="c1">// 创建并初始化一个 HashMap</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">);</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Grapes&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">);</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">        </span><span class="c1">// 1. 遍历键 (key) 集合</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;遍历键集合 (Keys):&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Key: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">        </span><span class="c1">// 2. 遍历值 (value) 集合</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n遍历值集合 (Values):&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">values</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Value: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="w">        </span><span class="c1">// 3. 遍历键值对 (key-value pairs)</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n遍历键值对 (Key-Value Pairs):&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">entry</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">entrySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Key: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="na">getKey</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Value: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="16">1.6 哈希表的原理和性质</h3>
 <h4 id="161">1.6.1 基本结构</h4>
 <ul>
@@ -2900,17 +2968,18 @@ public class HashMapTraversalExample {
 <li>通过某种哈希算法计算得到哈希值。</li>
 <li>将哈希值对桶数量（数组长度）<code>capacity</code> 取模，从而获取该 <code>key</code> 对应的数组索引 <code>index</code>。</li>
 </ol>
-<p><code>java
-   index = hash(key) % capacity;</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hash</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">capacity</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
 <p>随后，我们可以利用 <code>index</code> 在哈希表中访问对应的桶，从而获取 <code>value</code>。</p>
 <p>设数组长度 <code>capacity = 100</code>，哈希算法 <code>hash(key) = key</code>，则哈希函数为 <code>key % 100</code>。下图以 <code>key</code> 为学号和 <code>value</code> 为姓名的例子，展示了哈希函数的工作原理。</p>
 <p><img alt="哈希函数工作原理" src="https://www.hello-algo.com/chapter_hashing/hash_map.assets/hash_function.png" /></p>
 <h3 id="_4">哈希冲突与性能</h3>
 <p>从本质上看，哈希函数的作用是将所有 <code>key</code> 构成的输入空间映射到数组所有索引构成的输出空间，而输入空间往往远大于输出空间。因此，<strong>理论上必然存在多个输入对应相同输出的情况</strong>。</p>
 <p>例如，使用上述哈希函数，当输入的 <code>key</code> 后两位相同时，哈希函数的输出结果也相同。假设查询学号为 12836 和 20336 的两个学生时，我们得到：</p>
-<pre><code>12836 % 100 = 36
-20336 % 100 = 36
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>12836 % 100 = 36
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>20336 % 100 = 36
+</code></pre></div></td></tr></table></div>
 <p>为了解决这个问题，<code>HashMap</code> 使用以下策略：</p>
 <p>在 <code>HashMap</code> 中，哈希冲突发生时，会将多个键值对存储在同一个桶中。这会导致以下几点特性：</p>
 <ol>
@@ -2944,106 +3013,189 @@ public class HashMapTraversalExample {
 <li>统计每个字符/数字/元素的频率</li>
 </ul>
 <h4 id="_6">示例代码</h4>
-<pre><code class="language-java">import java.util.HashMap;
-
-public class FrequencyCounter {
-    public static void main(String[] args) {
-        String input = &quot;hello world&quot;;
-        HashMap&lt;Character, Integer&gt; frequencyMap = countFrequency(input);
-
-        // 打印每个字符的频率
-        for (Character key : frequencyMap.keySet()) {
-            System.out.println(key + &quot;: &quot; + frequencyMap.get(key));
-        }
-    }
-
-    // 统计字符频率
-    public static HashMap&lt;Character, Integer&gt; countFrequency(String s) {
-        HashMap&lt;Character, Integer&gt; freqMap = new HashMap&lt;&gt;();
-
-        for (char c : s.toCharArray()) {
-            // 如果字符已经在哈希表中，则增加计数
-            if (freqMap.containsKey(c)) {
-                freqMap.put(c, freqMap.get(c) + 1);
-            } else {
-                // 如果字符不在哈希表中，初始化计数为 1
-                freqMap.put(c, 1);
-            }
-        }
-        return freqMap;
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span>
+<span class="normal"><a href="#__codelineno-8-28">28</a></span>
+<span class="normal"><a href="#__codelineno-8-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FrequencyCounter</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello world&quot;</span><span class="p">;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Character</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">frequencyMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">countFrequency</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">        </span><span class="c1">// 打印每个字符的频率</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Character</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">frequencyMap</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">frequencyMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">key</span><span class="p">));</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">    </span><span class="c1">// 统计字符频率</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Character</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">countFrequency</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Character</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">freqMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">            </span><span class="c1">// 如果字符已经在哈希表中，则增加计数</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">freqMap</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">c</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">                </span><span class="n">freqMap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">freqMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">                </span><span class="c1">// 如果字符不在哈希表中，初始化计数为 1</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">                </span><span class="n">freqMap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">freqMap</span><span class="p">;</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="172">1.7.2 快速查找</h4>
 <p>快速查找是通过哈希表实现的，它利用哈希函数的性质在常数时间内完成查找任务。其核心在于高效性——相比于列表遍历的 O(n)时间复杂度，字典通过哈希查找可以在 O(1) 时间内找到对应的值。快速查找并不关心具体的映射关系，而是着重强调查找速度的提升。</p>
 <p><strong>简单来说，快速查找是字典利用哈希表实现的高效查找操作，强调时间复杂度为 O(1)，适用于在数据集中快速定位特定元素。</strong></p>
 <p>例如，通过给定学生学号，查找对应的学生姓名时，字典通过哈希表可以快速返回查询结果。</p>
-<pre><code class="language-java">import java.util.HashMap;
-
-public class HashMapExample {
-    public static void main(String[] args) {
-        // 创建 HashMap，存储学号和姓名
-        HashMap&lt;Integer, String&gt; students = new HashMap&lt;&gt;();
-
-        // 向 HashMap 添加键值对
-        students.put(1001, &quot;Alice&quot;);
-        students.put(1002, &quot;Bob&quot;);
-        students.put(1003, &quot;Charlie&quot;);
-
-        // 根据学号快速查找对应的学生姓名
-        int studentId = 1002;
-        System.out.println(students.get(studentId));  // 输出：Bob
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HashMapExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">        </span><span class="c1">// 创建 HashMap，存储学号和姓名</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="c1">// 向 HashMap 添加键值对</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">        </span><span class="n">students</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="mi">1001</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">);</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">        </span><span class="n">students</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="mi">1002</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bob&quot;</span><span class="p">);</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">        </span><span class="n">students</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="mi">1003</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Charlie&quot;</span><span class="p">);</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">        </span><span class="c1">// 根据学号快速查找对应的学生姓名</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">studentId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1002</span><span class="p">;</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">students</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">studentId</span><span class="p">));</span><span class="w">  </span><span class="c1">// 输出：Bob</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="173">1.7.3 哈希映射</h4>
 <p>哈希映射是一个更广泛的概念，表示通过哈希函数将一个键（key）映射到一个值（value），这种键值对可以用于构建各种关系，不仅限于频率统计或快速查找。例如，将人名映射到学校，或者将学校映射到一个包含所有学生的人名列表，都是哈希映射的应用。哈希映射可以支持一对一、一对多等复杂的关系结构。</p>
 <p><strong>简单来说，哈希映射是广泛使用的映射机制，能够灵活实现键值对关系，应用于更多复杂场景，如一对一、一对多的映射。</strong></p>
 <h3 id="_7">一对一映射示例</h3>
-<pre><code class="language-java">import java.util.HashMap;
-
-public class HashMapExample {
-    public static void main(String[] args) {
-        // 创建一个HashMap用于存储人名到学校的映射（人名 -&gt; 学校）
-        HashMap&lt;String, String&gt; peopleToSchool = new HashMap&lt;&gt;();
-
-        // 添加一些键值对
-        peopleToSchool.put(&quot;Alice&quot;, &quot;Harvard&quot;);
-        peopleToSchool.put(&quot;Bob&quot;, &quot;MIT&quot;);
-
-        // 打印映射
-        System.out.println(&quot;Alice's school: &quot; + peopleToSchool.get(&quot;Alice&quot;));  // 输出: Harvard
-        System.out.println(&quot;Bob's school: &quot; + peopleToSchool.get(&quot;Bob&quot;));      // 输出: MIT
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HashMapExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">        </span><span class="c1">// 创建一个HashMap用于存储人名到学校的映射（人名 -&gt; 学校）</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">peopleToSchool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">        </span><span class="c1">// 添加一些键值对</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">        </span><span class="n">peopleToSchool</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Harvard&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">        </span><span class="n">peopleToSchool</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MIT&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">        </span><span class="c1">// 打印映射</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Alice&#39;s school: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">peopleToSchool</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">));</span><span class="w">  </span><span class="c1">// 输出: Harvard</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Bob&#39;s school: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">peopleToSchool</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">));</span><span class="w">      </span><span class="c1">// 输出: MIT</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_8">一对多映射示例</h3>
-<pre><code class="language-java">import java.util.HashMap;
-import java.util.ArrayList;
-import java.util.List;
-
-public class HashMapOneToMany {
-    public static void main(String[] args) {
-        // 创建一个HashMap用于存储学校到学生列表的映射（学校 -&gt; 学生列表）
-        HashMap&lt;String, List&lt;String&gt;&gt; schoolToPeople = new HashMap&lt;&gt;();
-
-        // 向Harvard学校添加学生
-        List&lt;String&gt; harvardStudents = new ArrayList&lt;&gt;();
-        harvardStudents.add(&quot;Alice&quot;);
-        harvardStudents.add(&quot;Charlie&quot;);
-        schoolToPeople.put(&quot;Harvard&quot;, harvardStudents);
-
-        // 向MIT学校添加学生
-        List&lt;String&gt; mitStudents = new ArrayList&lt;&gt;();
-        mitStudents.add(&quot;Bob&quot;);
-        schoolToPeople.put(&quot;MIT&quot;, mitStudents);
-
-        // 打印学校对应的学生列表
-        System.out.println(&quot;Students at Harvard: &quot; + schoolToPeople.get(&quot;Harvard&quot;));  // 输出: [Alice, Charlie]
-        System.out.println(&quot;Students at MIT: &quot; + schoolToPeople.get(&quot;MIT&quot;));          // 输出: [Bob]
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span>
+<span class="normal"><a href="#__codelineno-11-24">24</a></span>
+<span class="normal"><a href="#__codelineno-11-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HashMapOneToMany</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">        </span><span class="c1">// 创建一个HashMap用于存储学校到学生列表的映射（学校 -&gt; 学生列表）</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">schoolToPeople</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">        </span><span class="c1">// 向Harvard学校添加学生</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">harvardStudents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">        </span><span class="n">harvardStudents</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">        </span><span class="n">harvardStudents</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Charlie&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">        </span><span class="n">schoolToPeople</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Harvard&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">harvardStudents</span><span class="p">);</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">        </span><span class="c1">// 向MIT学校添加学生</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mitStudents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">        </span><span class="n">mitStudents</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">        </span><span class="n">schoolToPeople</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;MIT&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mitStudents</span><span class="p">);</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="w">        </span><span class="c1">// 打印学校对应的学生列表</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Students at Harvard: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">schoolToPeople</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Harvard&quot;</span><span class="p">));</span><span class="w">  </span><span class="c1">// 输出: [Alice, Charlie]</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Students at MIT: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">schoolToPeople</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;MIT&quot;</span><span class="p">));</span><span class="w">          </span><span class="c1">// 输出: [Bob]</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_9">说明：</h3>
 <ol>
 <li><strong>一对一映射</strong>：<code>HashMap&lt;String, String&gt;</code> 存储人名（键）与学校名称（值）的映射关系，每个键只能映射到一个值。</li>
@@ -3084,30 +3236,52 @@ public class HashMapOneToMany {
 </li>
 </ol>
 <h4 id="_12">参考解答</h4>
-<pre><code class="language-java">import java.util.HashMap;
-
-class Solution {
-    public boolean isAnagram(String s, String t) {
-        // 如果两个字符串长度不相同，直接返回 false
-        if (s.length() != t.length()) {
-            return false;
-        }
-
-        // 创建两个 HashMap 用于存储字符出现的频率
-        HashMap&lt;Character, Integer&gt; countS = new HashMap&lt;&gt;();
-        HashMap&lt;Character, Integer&gt; countT = new HashMap&lt;&gt;();
-
-        // 遍历字符串 s 和 t，统计每个字符的出现次数
-        for (int i = 0; i &lt; s.length(); i++) {
-            countS.put(s.charAt(i), countS.getOrDefault(s.charAt(i), 0) + 1);
-            countT.put(t.charAt(i), countT.getOrDefault(t.charAt(i), 0) + 1);
-        }
-
-        // 比较两个 HashMap 是否相等
-        return countS.equals(countT);
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span>
+<span class="normal"><a href="#__codelineno-12-20">20</a></span>
+<span class="normal"><a href="#__codelineno-12-21">21</a></span>
+<span class="normal"><a href="#__codelineno-12-22">22</a></span>
+<span class="normal"><a href="#__codelineno-12-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isAnagram</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">        </span><span class="c1">// 如果两个字符串长度不相同，直接返回 false</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="na">length</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">        </span><span class="c1">// 创建两个 HashMap 用于存储字符出现的频率</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Character</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">countS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Character</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">countT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">        </span><span class="c1">// 遍历字符串 s 和 t，统计每个字符的出现次数</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">            </span><span class="n">countS</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="n">countS</span><span class="p">.</span><span class="na">getOrDefault</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">            </span><span class="n">countT</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="n">countT</span><span class="p">.</span><span class="na">getOrDefault</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a>
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="w">        </span><span class="c1">// 比较两个 HashMap 是否相等</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">countS</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">countT</span><span class="p">);</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="212-lc-387">2.1.2 举一反三：LC 387 字符串中的第一个唯一字符</h3>
 <h4 id="_13">问题描述</h4>
 <p>给定一个字符串 <code>s</code>，找到它的第一个不重复的字符，并返回它的索引。如果不存在这样的字符，则返回 <code>-1</code>。</p>
@@ -3124,29 +3298,50 @@ class Solution {
 </li>
 </ol>
 <h4 id="_15">参考解答</h4>
-<pre><code class="language-java">import java.util.HashMap;
-
-class Solution {
-    public int firstUniqChar(String s) {
-        HashMap&lt;Character, Integer&gt; count = new HashMap&lt;&gt;(); // 创建 HashMap 来存储字符计数
-
-        // 第一次遍历，统计每个字符的出现次数
-        for (int i = 0; i &lt; s.length(); i++) {
-            char currentChar = s.charAt(i);
-            count.put(currentChar, count.getOrDefault(currentChar, 0) + 1);
-        }
-
-        // 第二次遍历，找到第一个不重复的字符
-        for (int i = 0; i &lt; s.length(); i++) {
-            if (count.get(s.charAt(i)) == 1) { // 检查字符出现次数
-                return i; // 返回第一个不重复字符的索引
-            }
-        }
-
-        return -1; // 如果没有找到不重复字符，返回 -1
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">firstUniqChar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Character</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w"> </span><span class="c1">// 创建 HashMap 来存储字符计数</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">        </span><span class="c1">// 第一次遍历，统计每个字符的出现次数</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">            </span><span class="kt">char</span><span class="w"> </span><span class="n">currentChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">            </span><span class="n">count</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">currentChar</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="p">.</span><span class="na">getOrDefault</span><span class="p">(</span><span class="n">currentChar</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">        </span><span class="c1">// 第二次遍历，找到第一个不重复的字符</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 检查字符出现次数</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回第一个不重复字符的索引</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 如果没有找到不重复字符，返回 -1</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="22">2.2 快速查找专题</h3>
 <h3 id="221-lc1">2.2.1 例题讲解：LC1 两数之和</h3>
 <h4 id="_16">问题描述</h4>
@@ -3158,33 +3353,58 @@ class Solution {
 <li>如果不存在，则将当前数 <code>nums[i]</code> 和它的下标 <code>i</code> 存入 <code>HashMap</code> 中。</li>
 </ol>
 <h4 id="_18">参考解答：</h4>
-<pre><code class="language-java">import java.util.HashMap;
-
-class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        // 创建一个 HashMap 来存储数字及其对应的下标
-        HashMap&lt;Integer, Integer&gt; hashtable = new HashMap&lt;&gt;();
-
-        // 遍历数组
-        for (int i = 0; i &lt; nums.length; i++) {
-            // 计算当前数字所需的另一个数字
-            int complement = target - nums[i];
-
-            // 检查 HashMap 中是否存在所需的数字
-            if (hashtable.containsKey(complement)) {
-                // 返回所需数字的下标和当前数字的下标
-                return new int[] { hashtable.get(complement), i };
-            }
-
-            // 将当前数字和它的下标存入 HashMap
-            hashtable.put(nums[i], i);
-        }
-
-        // 如果没有找到，返回空数组（根据题意，应该永远找到答案）
-        return new int[0];
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span>
+<span class="normal"><a href="#__codelineno-14-19">19</a></span>
+<span class="normal"><a href="#__codelineno-14-20">20</a></span>
+<span class="normal"><a href="#__codelineno-14-21">21</a></span>
+<span class="normal"><a href="#__codelineno-14-22">22</a></span>
+<span class="normal"><a href="#__codelineno-14-23">23</a></span>
+<span class="normal"><a href="#__codelineno-14-24">24</a></span>
+<span class="normal"><a href="#__codelineno-14-25">25</a></span>
+<span class="normal"><a href="#__codelineno-14-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="nf">twoSum</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">        </span><span class="c1">// 创建一个 HashMap 来存储数字及其对应的下标</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">hashtable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">        </span><span class="c1">// 遍历数组</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">            </span><span class="c1">// 计算当前数字所需的另一个数字</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">complement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">            </span><span class="c1">// 检查 HashMap 中是否存在所需的数字</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hashtable</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">complement</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="w">                </span><span class="c1">// 返回所需数字的下标和当前数字的下标</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">hashtable</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">complement</span><span class="p">),</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">};</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">            </span><span class="c1">// 将当前数字和它的下标存入 HashMap</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20"></a><span class="w">            </span><span class="n">hashtable</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22"></a>
+<a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="w">        </span><span class="c1">// 如果没有找到，返回空数组（根据题意，应该永远找到答案）</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="222-lc217">2.2.2 举一反三：例题讲解：LC217 存在重复元素</h3>
 <h4 id="_19">问题描述</h4>
 <p>给你一个整数数组 <code>nums</code> 。如果任一值在数组中出现 <strong>至少两次</strong> ，返回 <code>true</code> ；如果数组中每个元素互不相同，返回 <code>false</code> 。</p>
@@ -3194,28 +3414,48 @@ class Solution {
 <h4 id="_21">提示</h4>
 <p><code>HashMap</code>可以用来快速存储和查找数字，这样可以避免重复的数字。</p>
 <h4 id="_22">参考解答</h4>
-<pre><code class="language-java">import java.util.HashMap;
-
-class Solution {
-    public boolean containsDuplicate(int[] nums) {
-        // 创建 HashMap 来存储数字
-        HashMap&lt;Integer, Boolean&gt; map = new HashMap&lt;&gt;();
-
-        // 遍历数组
-        for (int num : nums) {
-            // 如果 HashMap 已经包含当前数字，说明有重复，返回 true
-            if (map.containsKey(num)) {
-                return true;
-            }
-            // 否则，将当前数字添加到 HashMap 中，标记为已出现
-            map.put(num, true);
-        }
-
-        // 如果遍历结束没有发现重复元素，返回 false
-        return false;
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span>
+<span class="normal"><a href="#__codelineno-15-16">16</a></span>
+<span class="normal"><a href="#__codelineno-15-17">17</a></span>
+<span class="normal"><a href="#__codelineno-15-18">18</a></span>
+<span class="normal"><a href="#__codelineno-15-19">19</a></span>
+<span class="normal"><a href="#__codelineno-15-20">20</a></span>
+<span class="normal"><a href="#__codelineno-15-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">containsDuplicate</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">        </span><span class="c1">// 创建 HashMap 来存储数字</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">Boolean</span><span class="o">&gt;</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">        </span><span class="c1">// 遍历数组</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">            </span><span class="c1">// 如果 HashMap 已经包含当前数字，说明有重复，返回 true</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">map</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">num</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">            </span><span class="c1">// 否则，将当前数字添加到 HashMap 中，标记为已出现</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">            </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">        </span><span class="c1">// 如果遍历结束没有发现重复元素，返回 false</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="23">2.3 哈希映射专题</h3>
 <h3 id="231-lc-697">2.3.1 LC 697 数组的度</h3>
 <h4 id="_23">问题描述</h4>
@@ -3229,46 +3469,84 @@ class Solution {
 <li>找到数组的度和最短子数组的长度。</li>
 </ol>
 <h4 id="_26">参考解答</h4>
-<pre><code class="language-java">import java.util.HashMap;
-import java.util.Map;
-
-class Solution {
-    public int findShortestSubArray(int[] nums) {
-        // 使用哈希表存储每个数的出现次数和第一次、最后一次出现的位置
-        Map&lt;Integer, int[]&gt; map = new HashMap&lt;&gt;();
-
-        for (int i = 0; i &lt; nums.length; i++) {
-            if (map.containsKey(nums[i])) {
-                map.get(nums[i])[0]++; // 增加出现次数
-                map.get(nums[i])[2] = i; // 更新最后一次出现的位置
-            } else {
-                // 初始化：出现次数、第一次和最后一次出现的位置
-                map.put(nums[i], new int[]{1, i, i});
-            }
-        }
-
-        int maxNum = 0; // 记录出现次数最多的数的次数
-        int minLen = Integer.MAX_VALUE; // 记录最短子数组的长度
-
-        // 遍历哈希表
-        for (int[] value : map.values()) {
-            int count = value[0]; // 出现次数
-            int left = value[1]; // 第一次出现的位置
-            int right = value[2]; // 最后一次出现的位置
-
-            // 更新 maxNum 和 minLen
-            if (maxNum &lt; count) {
-                maxNum = count;
-                minLen = right - left + 1; // 更新最短子数组长度
-            } else if (maxNum == count) {
-                minLen = Math.min(minLen, right - left + 1); // 更新最短子数组长度
-            }
-        }
-
-        return minLen; // 返回最短子数组的长度
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span>
+<span class="normal"><a href="#__codelineno-16-14">14</a></span>
+<span class="normal"><a href="#__codelineno-16-15">15</a></span>
+<span class="normal"><a href="#__codelineno-16-16">16</a></span>
+<span class="normal"><a href="#__codelineno-16-17">17</a></span>
+<span class="normal"><a href="#__codelineno-16-18">18</a></span>
+<span class="normal"><a href="#__codelineno-16-19">19</a></span>
+<span class="normal"><a href="#__codelineno-16-20">20</a></span>
+<span class="normal"><a href="#__codelineno-16-21">21</a></span>
+<span class="normal"><a href="#__codelineno-16-22">22</a></span>
+<span class="normal"><a href="#__codelineno-16-23">23</a></span>
+<span class="normal"><a href="#__codelineno-16-24">24</a></span>
+<span class="normal"><a href="#__codelineno-16-25">25</a></span>
+<span class="normal"><a href="#__codelineno-16-26">26</a></span>
+<span class="normal"><a href="#__codelineno-16-27">27</a></span>
+<span class="normal"><a href="#__codelineno-16-28">28</a></span>
+<span class="normal"><a href="#__codelineno-16-29">29</a></span>
+<span class="normal"><a href="#__codelineno-16-30">30</a></span>
+<span class="normal"><a href="#__codelineno-16-31">31</a></span>
+<span class="normal"><a href="#__codelineno-16-32">32</a></span>
+<span class="normal"><a href="#__codelineno-16-33">33</a></span>
+<span class="normal"><a href="#__codelineno-16-34">34</a></span>
+<span class="normal"><a href="#__codelineno-16-35">35</a></span>
+<span class="normal"><a href="#__codelineno-16-36">36</a></span>
+<span class="normal"><a href="#__codelineno-16-37">37</a></span>
+<span class="normal"><a href="#__codelineno-16-38">38</a></span>
+<span class="normal"><a href="#__codelineno-16-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">findShortestSubArray</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">        </span><span class="c1">// 使用哈希表存储每个数的出现次数和第一次、最后一次出现的位置</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]&gt;</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">map</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="w">                </span><span class="n">map</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span><span class="o">[</span><span class="mi">0</span><span class="o">]++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 增加出现次数</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="w">                </span><span class="n">map</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="c1">// 更新最后一次出现的位置</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="w">                </span><span class="c1">// 初始化：出现次数、第一次和最后一次出现的位置</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="w">                </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">});</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18"></a>
+<a id="__codelineno-16-19" name="__codelineno-16-19"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">maxNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 记录出现次数最多的数的次数</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">minLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">;</span><span class="w"> </span><span class="c1">// 记录最短子数组的长度</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21"></a>
+<a id="__codelineno-16-22" name="__codelineno-16-22"></a><span class="w">        </span><span class="c1">// 遍历哈希表</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">values</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// 出现次数</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// 第一次出现的位置</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// 最后一次出现的位置</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27"></a>
+<a id="__codelineno-16-28" name="__codelineno-16-28"></a><span class="w">            </span><span class="c1">// 更新 maxNum 和 minLen</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">maxNum</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-30" name="__codelineno-16-30"></a><span class="w">                </span><span class="n">maxNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<a id="__codelineno-16-31" name="__codelineno-16-31"></a><span class="w">                </span><span class="n">minLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 更新最短子数组长度</span>
+<a id="__codelineno-16-32" name="__codelineno-16-32"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">maxNum</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-33" name="__codelineno-16-33"></a><span class="w">                </span><span class="n">minLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">minLen</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 更新最短子数组长度</span>
+<a id="__codelineno-16-34" name="__codelineno-16-34"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-16-35" name="__codelineno-16-35"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-36" name="__codelineno-16-36"></a>
+<a id="__codelineno-16-37" name="__codelineno-16-37"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">minLen</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回最短子数组的长度</span>
+<a id="__codelineno-16-38" name="__codelineno-16-38"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-39" name="__codelineno-16-39"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_27">解题过程：</h4>
 <ol>
 <li>初始化哈希表 <code>map</code>。</li>
@@ -3291,46 +3569,84 @@ class Solution {
 <h4 id="_30">提示</h4>
 <p>属于建立映射，通过创建字典建立字母和出现字母的映射关系。</p>
 <h4 id="_31">参考解答</h4>
-<pre><code class="language-java">import java.util.HashMap;
-
-class Solution {
-    public boolean isIsomorphic(String s, String t) {
-        // 创建两个哈希表来存储映射关系
-        HashMap&lt;Character, Character&gt; sToT = new HashMap&lt;&gt;();
-        HashMap&lt;Character, Character&gt; tToS = new HashMap&lt;&gt;();
-
-        // 遍历字符串 s 和 t
-        for (int i = 0; i &lt; s.length(); i++) {
-            char sChar = s.charAt(i);
-            char tChar = t.charAt(i);
-
-            // 检查 s 中的字符到 t 的映射
-            if (sToT.containsKey(sChar)) {
-                // 如果已经存在映射但与当前字符不一致，返回 false
-                if (sToT.get(sChar) != tChar) {
-                    return false;
-                }
-            } else {
-                // 添加映射
-                sToT.put(sChar, tChar);
-            }
-
-            // 检查 t 中的字符到 s 的映射
-            if (tToS.containsKey(tChar)) {
-                // 如果已经存在映射但与当前字符不一致，返回 false
-                if (tToS.get(tChar) != sChar) {
-                    return false;
-                }
-            } else {
-                // 添加映射
-                tToS.put(tChar, sChar);
-            }
-        }
-
-        return true; // 如果没有冲突，返回 true
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span>
+<span class="normal"><a href="#__codelineno-17-13">13</a></span>
+<span class="normal"><a href="#__codelineno-17-14">14</a></span>
+<span class="normal"><a href="#__codelineno-17-15">15</a></span>
+<span class="normal"><a href="#__codelineno-17-16">16</a></span>
+<span class="normal"><a href="#__codelineno-17-17">17</a></span>
+<span class="normal"><a href="#__codelineno-17-18">18</a></span>
+<span class="normal"><a href="#__codelineno-17-19">19</a></span>
+<span class="normal"><a href="#__codelineno-17-20">20</a></span>
+<span class="normal"><a href="#__codelineno-17-21">21</a></span>
+<span class="normal"><a href="#__codelineno-17-22">22</a></span>
+<span class="normal"><a href="#__codelineno-17-23">23</a></span>
+<span class="normal"><a href="#__codelineno-17-24">24</a></span>
+<span class="normal"><a href="#__codelineno-17-25">25</a></span>
+<span class="normal"><a href="#__codelineno-17-26">26</a></span>
+<span class="normal"><a href="#__codelineno-17-27">27</a></span>
+<span class="normal"><a href="#__codelineno-17-28">28</a></span>
+<span class="normal"><a href="#__codelineno-17-29">29</a></span>
+<span class="normal"><a href="#__codelineno-17-30">30</a></span>
+<span class="normal"><a href="#__codelineno-17-31">31</a></span>
+<span class="normal"><a href="#__codelineno-17-32">32</a></span>
+<span class="normal"><a href="#__codelineno-17-33">33</a></span>
+<span class="normal"><a href="#__codelineno-17-34">34</a></span>
+<span class="normal"><a href="#__codelineno-17-35">35</a></span>
+<span class="normal"><a href="#__codelineno-17-36">36</a></span>
+<span class="normal"><a href="#__codelineno-17-37">37</a></span>
+<span class="normal"><a href="#__codelineno-17-38">38</a></span>
+<span class="normal"><a href="#__codelineno-17-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isIsomorphic</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">        </span><span class="c1">// 创建两个哈希表来存储映射关系</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Character</span><span class="p">,</span><span class="w"> </span><span class="n">Character</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sToT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Character</span><span class="p">,</span><span class="w"> </span><span class="n">Character</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tToS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="w">        </span><span class="c1">// 遍历字符串 s 和 t</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="w">            </span><span class="kt">char</span><span class="w"> </span><span class="n">sChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="w">            </span><span class="kt">char</span><span class="w"> </span><span class="n">tChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="w">            </span><span class="c1">// 检查 s 中的字符到 t 的映射</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sToT</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">sChar</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16"></a><span class="w">                </span><span class="c1">// 如果已经存在映射但与当前字符不一致，返回 false</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sToT</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">sChar</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">tChar</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18"></a><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21"></a><span class="w">                </span><span class="c1">// 添加映射</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22"></a><span class="w">                </span><span class="n">sToT</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">sChar</span><span class="p">,</span><span class="w"> </span><span class="n">tChar</span><span class="p">);</span>
+<a id="__codelineno-17-23" name="__codelineno-17-23"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-17-24" name="__codelineno-17-24"></a>
+<a id="__codelineno-17-25" name="__codelineno-17-25"></a><span class="w">            </span><span class="c1">// 检查 t 中的字符到 s 的映射</span>
+<a id="__codelineno-17-26" name="__codelineno-17-26"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tToS</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">tChar</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-27" name="__codelineno-17-27"></a><span class="w">                </span><span class="c1">// 如果已经存在映射但与当前字符不一致，返回 false</span>
+<a id="__codelineno-17-28" name="__codelineno-17-28"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tToS</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">tChar</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">sChar</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-29" name="__codelineno-17-29"></a><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-17-30" name="__codelineno-17-30"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-17-31" name="__codelineno-17-31"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-32" name="__codelineno-17-32"></a><span class="w">                </span><span class="c1">// 添加映射</span>
+<a id="__codelineno-17-33" name="__codelineno-17-33"></a><span class="w">                </span><span class="n">tToS</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">tChar</span><span class="p">,</span><span class="w"> </span><span class="n">sChar</span><span class="p">);</span>
+<a id="__codelineno-17-34" name="__codelineno-17-34"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-17-35" name="__codelineno-17-35"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-17-36" name="__codelineno-17-36"></a>
+<a id="__codelineno-17-37" name="__codelineno-17-37"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// 如果没有冲突，返回 true</span>
+<a id="__codelineno-17-38" name="__codelineno-17-38"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-39" name="__codelineno-17-39"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_32">解题过程：</h4>
 <ol>
 <li>初始化两个哈希表 <code>sToT</code> 和 <code>tToS</code>，用于存储字符之间的映射关系。</li>
@@ -3370,22 +3686,36 @@ class Solution {
 <li>如果遍历完数组都没有找到满足条件的重复元素，返回 <code>false</code>。</li>
 </ol>
 <h4 id="_35">参考解答</h4>
-<pre><code class="language-java">import java.util.HashMap;
-
-class Solution {
-    public boolean containsNearbyDuplicate(int[] nums, int k) {
-        HashMap&lt;Integer, Integer&gt; pos = new HashMap&lt;&gt;(); // 创建一个 HashMap 存储数字及其最后出现的位置
-
-        for (int i = 0; i &lt; nums.length; i++) { // 遍历数组
-            if (pos.containsKey(nums[i]) &amp;&amp; i - pos.get(nums[i]) &lt;= k) { // 检查是否存在重复且满足索引差
-                return true; // 找到满足条件的重复元素
-            }
-            pos.put(nums[i], i); // 更新当前数字的位置
-        }
-        return false; // 没有找到符合条件的重复元素
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-18-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-18-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-18-10">10</a></span>
+<span class="normal"><a href="#__codelineno-18-11">11</a></span>
+<span class="normal"><a href="#__codelineno-18-12">12</a></span>
+<span class="normal"><a href="#__codelineno-18-13">13</a></span>
+<span class="normal"><a href="#__codelineno-18-14">14</a></span>
+<span class="normal"><a href="#__codelineno-18-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">containsNearbyDuplicate</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w"> </span><span class="c1">// 创建一个 HashMap 存储数字及其最后出现的位置</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 遍历数组</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pos</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 检查是否存在重复且满足索引差</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// 找到满足条件的重复元素</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11"></a><span class="w">            </span><span class="n">pos</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"> </span><span class="c1">// 更新当前数字的位置</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 没有找到符合条件的重复元素</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="3">3. 课后练习</h2>
 <h4 id="_36">频率统计</h4>
 <table>

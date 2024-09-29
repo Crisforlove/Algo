@@ -627,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2729,25 +2729,42 @@
 <li>最后返回匹配后的公共前缀，如果没有匹配到任何前缀，则返回空字符串。</li>
 </ol>
 <h3 id="_5">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    string longestCommonPrefix(vector&lt;string&gt;&amp; strs) {
-        if (strs.empty()) return &quot;&quot;;
-        string prefix = strs[0];  // 初始化最长公共前缀为第一个字符串
-
-        // 依次与其他字符串进行比较
-        for (int i = 1; i &lt; strs.size(); ++i) {
-            while (strs[i].find(prefix) != 0) {  // 当前前缀与下一个字符串进行比较
-                prefix = prefix.substr(0, prefix.length() - 1);  // 不断缩短前缀
-                if (prefix.empty()){
-                    return &quot;&quot;;  // 如果前缀为空，返回空字符串
-                }
-            }
-        }
-        return prefix;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">longestCommonPrefix</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">strs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">strs</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w">  </span><span class="c1">// 初始化最长公共前缀为第一个字符串</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="c1">// 依次与其他字符串进行比较</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">strs</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">strs</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">find</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 当前前缀与下一个字符串进行比较</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">                </span><span class="n">prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">prefix</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// 不断缩短前缀</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">prefix</span><span class="p">.</span><span class="n">empty</span><span class="p">()){</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 如果前缀为空，返回空字符串</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">prefix</span><span class="p">;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="lc125">LC125. 验证回文串</h3>
 <h3 id="_6">问题描述</h3>
 <p>如果在将所有大写字符转换为小写字符、并移除所有非字母数字字符之后，短语正着读和反着读都一样。则可以认为该短语是一个回文串。</p>
@@ -2766,27 +2783,46 @@ public:
 <li><strong>反转比较</strong>：将 <code>filteredString</code> 反转，比较反转后的字符串与原字符串是否相同。如果相同，则返回 <code>true</code>，否则返回 <code>false</code>。</li>
 </ol>
 <h3 id="_10">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    bool isPalindrome(string s) {
-        string filteredString = &quot;&quot;;
-
-        // 遍历字符串，保留字母和数字字符，并将字母转换为小写
-        for (char c : s) {
-            if (isalnum(c)) {
-                filteredString += tolower(c);  // 将字母转为小写
-            }
-        }
-
-        // 创建一个反转后的字符串
-        string reversedString = filteredString;
-        reverse(reversedString.begin(), reversedString.end());
-
-        // 判断原始过滤后的字符串与反转后的字符串是否相同
-        return filteredString == reversedString;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isPalindrome</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">filteredString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="c1">// 遍历字符串，保留字母和数字字符，并将字母转换为小写</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isalnum</span><span class="p">(</span><span class="n">c</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">                </span><span class="n">filteredString</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">tolower</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w">  </span><span class="c1">// 将字母转为小写</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="c1">// 创建一个反转后的字符串</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">reversedString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filteredString</span><span class="p">;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">        </span><span class="n">reverse</span><span class="p">(</span><span class="n">reversedString</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">reversedString</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">        </span><span class="c1">// 判断原始过滤后的字符串与反转后的字符串是否相同</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">filteredString</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">reversedString</span><span class="p">;</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_11">代码详解</h3>
 <ol>
 <li>
@@ -2809,66 +2845,94 @@ public:
 <h3 id="_14">解题思路</h3>
 <p>要判断字符串是否由重复的子串构成，可以逐步检查可能的子串，并进行如下操作：</p>
 <ol>
-<li><strong>检查子串是否能整除字符串的长度</strong>：</li>
 <li>
-<p>如果字符串长度 <code>n</code> 可以被某个子串长度 <code>i</code> 整除，说明这个子串有可能是组成整个字符串的重复单元，因此可以进一步检查。</p>
+<p><strong>检查子串是否能整除字符串的长度</strong>：</p>
+<ul>
+<li>如果字符串长度 <code>n</code> 可以被某个子串长度 <code>i</code> 整除，说明这个子串有可能是组成整个字符串的重复单元，因此可以进一步检查。</li>
+</ul>
 </li>
 <li>
 <p><strong>构造一个由子串重复构成的新字符串</strong>：</p>
-</li>
+<ul>
 <li>对于每种符合条件的子串，构造一个新字符串，这个新字符串由该子串重复多次得到，然后判断这个新字符串是否等于原始字符串。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_15">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    bool repeatedSubstringPattern(string s) {
-        int n = s.length();
-        for (int i = 1; i &lt;= n / 2; ++i) {
-            // 检查子串长度 i 是否能整除字符串长度 n
-            if (n % i == 0) {
-                string substring = s.substr(0, i);  // 提取长度为 i 的子串
-                string repeated = &quot;&quot;;  // 用来构造新字符串
-                for (int j = 0; j &lt; n / i; ++j) {
-                    repeated += substring;  // 将子串重复拼接
-                }
-                // 如果拼接后的字符串与原字符串相同，返回 true
-                if (repeated == s) {
-                    return true;
-                }
-            }
-        }
-        return false;  // 没有找到合适的子串，返回 false
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">repeatedSubstringPattern</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">            </span><span class="c1">// 检查子串长度 i 是否能整除字符串长度 n</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">                </span><span class="n">string</span><span class="w"> </span><span class="n">substring</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w">  </span><span class="c1">// 提取长度为 i 的子串</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">                </span><span class="n">string</span><span class="w"> </span><span class="n">repeated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 用来构造新字符串</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">                    </span><span class="n">repeated</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">substring</span><span class="p">;</span><span class="w">  </span><span class="c1">// 将子串重复拼接</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">                </span><span class="c1">// 如果拼接后的字符串与原字符串相同，返回 true</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">repeated</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w">  </span><span class="c1">// 没有找到合适的子串，返回 false</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_16">详细讲解</h3>
 <ol>
-<li><strong><code>s.substr(0, i)</code></strong>: </li>
 <li>
-<p><code>substr</code> 函数用于从索引 0 开始提取一个长度为 <code>i</code> 的子串。例如，对于字符串 <code>abcdef</code>，当 <code>i = 2</code> 时，<code>s.substr(0, 2)</code> 返回 <code>"ab"</code>。</p>
+<p><strong><code>s.substr(0, i)</code></strong>: </p>
+<ul>
+<li><code>substr</code> 函数用于从索引 0 开始提取一个长度为 <code>i</code> 的子串。例如，对于字符串 <code>abcdef</code>，当 <code>i = 2</code> 时，<code>s.substr(0, 2)</code> 返回 <code>"ab"</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong><code>if (n % i == 0)</code></strong>:</p>
-</li>
-<li>
-<p>这段代码检查当前子串的长度 <code>i</code> 是否能整除字符串 <code>s</code> 的总长度 <code>n</code>。如果不能整除，说明该子串不可能是构成字符串的重复单元，跳过检查。</p>
+<ul>
+<li>这段代码检查当前子串的长度 <code>i</code> 是否能整除字符串 <code>s</code> 的总长度 <code>n</code>。如果不能整除，说明该子串不可能是构成字符串的重复单元，跳过检查。</li>
+</ul>
 </li>
 <li>
 <p><strong><code>repeated += substring</code></strong>:</p>
-</li>
-<li>
-<p>该步骤通过将提取的子串不断拼接，构造一个与原字符串等长的新字符串。如果子串长度为 <code>i</code>，并且 <code>s</code> 的长度为 <code>n</code>，就会将子串重复 <code>n / i</code> 次，以生成长度等于 <code>n</code> 的字符串。</p>
+<ul>
+<li>该步骤通过将提取的子串不断拼接，构造一个与原字符串等长的新字符串。如果子串长度为 <code>i</code>，并且 <code>s</code> 的长度为 <code>n</code>，就会将子串重复 <code>n / i</code> 次，以生成长度等于 <code>n</code> 的字符串。</li>
+</ul>
 </li>
 <li>
 <p><strong>比较生成的字符串与原字符串</strong>:</p>
-</li>
-<li>
-<p>构造的字符串 <code>repeated</code> 和原字符串 <code>s</code> 进行比较，如果二者相等，说明字符串 <code>s</code> 是由该子串重复构成的，返回 <code>true</code>。</p>
+<ul>
+<li>构造的字符串 <code>repeated</code> 和原字符串 <code>s</code> 进行比较，如果二者相等，说明字符串 <code>s</code> 是由该子串重复构成的，返回 <code>true</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>循环结束后的返回</strong>:</p>
-</li>
+<ul>
 <li>如果遍历完所有可能的子串都没找到合适的子串，说明字符串 <code>s</code> 不能通过重复某个子串构成，返回 <code>false</code>。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_17">更高效的解法</h3>
 <p>可以利用字符串的特性来进一步优化：</p>
@@ -2878,15 +2942,22 @@ public:
 <li>如果出现，说明 <code>s</code> 可以由某个子串构成。</li>
 </ol>
 <h3 id="_18">优化示例代码</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    bool repeatedSubstringPattern(string s) {
-        string doubled = s + s; // 将字符串拼接
-        string subString = doubled.substr(1, doubled.size() - 2); // 去掉首尾字符
-        return subString.find(s) != string::npos; // 检查是否包含原字符串
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">repeatedSubstringPattern</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">doubled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="c1">// 将字符串拼接</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">subString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">doubled</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">doubled</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// 去掉首尾字符</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">subString</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">;</span><span class="w"> </span><span class="c1">// 检查是否包含原字符串</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_19">证明：字符串拼接后掐头去尾可以用于判断重复的子字符串</h3>
 <h4 id="_20">补充：什么是前缀和后缀？</h4>
 <ol>
@@ -2918,31 +2989,31 @@ public:
 <p><strong>假设</strong>：设字符串 <code>s</code> 是由一个较短的子串 <code>p</code> 重复多次构成的，即 <code>s = p + p + ... + p</code>（假设 <code>p</code> 重复 <code>k</code> 次）。</p>
 <p><strong>举例</strong>：比如 <code>s = "abab"</code>，这是由 <code>p = "ab"</code> 重复两次构成的。</p>
 <p><strong>拼接 <code>s + s</code></strong>：我们将 <code>s</code> 拼接得到 <code>s + s</code>，例如：</p>
-<pre><code>s + s = &quot;abababab&quot;
-</code></pre>
-<p>掐头去尾，去掉首尾字符，得到 <code>new_s = (s + s).substr(1, (s+s).length() - 1)</code>，对于上面的例子：</p>
-<pre><code>new_s = &quot;bababa&quot;
-</code></pre>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>s + s = &quot;abababab&quot;
+</code></pre></div></td></tr></table></div>
+掐头去尾，去掉首尾字符，得到 <code>new_s = (s + s).substr(1, (s+s).length() - 1)</code>，对于上面的例子：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>new_s = &quot;bababa&quot;
+</code></pre></div></td></tr></table></div>
 <p><strong>寻找 <code>s</code> 在 <code>new_s</code> 中的出现</strong>：由于 <code>s</code> 是由子串 <code>p</code> 多次重复（至少两次）构成的，<code>s + s</code> 就会重复至少 <strong>4</strong> 次 <code>p</code>，掐头去尾后，重复至少 <strong>2</strong> 次 <code>p</code>，前缀和后缀必然有重叠，一定能再次找到 <code>s</code>。</p>
-<pre><code>new_s = &quot;bababa&quot;
-          ^^^^ (这里找到 &quot;abab&quot;)
-</code></pre>
-<p>充分性证毕。</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>new_s = &quot;bababa&quot;
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>          ^^^^ (这里找到 &quot;abab&quot;)
+</code></pre></div></td></tr></table></div>
+充分性证毕。</p>
 <hr />
 <h4 id="2"><strong>2. 必要性</strong></h4>
 <p><strong>假设</strong>：我们已经在去掉首尾字符的 <code>s + s</code> 中再次找到了 <code>s</code>。现在我们需要证明，<code>s</code> 一定是由某个子串重复构成的。</p>
 <p><strong>构造 <code>new_s</code></strong>：首先，构造 <code>new_s</code>，其等价操作是 <code>new_s = (s + s).substr(1, (s+s).length() - 1)</code>。假设字符串 <code>s</code> 在 <code>new_s</code> 中匹配的位置从 <code>i</code> 开始，也就是说我们找到了一个偏移量 <code>i</code>，使得 <code>s.substr(i) + s.substr(0, i)</code> 和 <code>s</code> 完全相同。这意味着：</p>
-<pre><code class="language-cpp">s.substr(i) + s.substr(0, i) == s;
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
 <p>也就是说，<code>s</code> 的某个 <strong>后缀</strong> 与它的某个 <strong>前缀</strong> 重叠匹配。</p>
-<p><strong>举例说明</strong>：</p>
-<pre><code>s + s = &quot;abababab&quot;
-去掉首尾字符后得到：new_s = &quot;bababa&quot;
-</code></pre>
-<ul>
-<li><code>s</code> 的前缀有：<code>'a', 'ab', 'aba', 'abab'</code></li>
-<li><code>s</code> 的后缀有：<code>'b', 'ab', 'bab', 'abab'</code></li>
-</ul>
+<p><strong>举例说明</strong>：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>s + s = &quot;abababab&quot;
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>去掉首尾字符后得到：new_s = &quot;bababa&quot;
+</code></pre></div></td></tr></table></div>
+   - <code>s</code> 的前缀有：<code>'a', 'ab', 'aba', 'abab'</code>
+   - <code>s</code> 的后缀有：<code>'b', 'ab', 'bab', 'abab'</code></p>
 <p>可以发现，<code>s = "abab"</code> 在 <code>"bababa"</code> 中确实再次出现，且匹配发生在交界处（偏移量为1），这时 <code>s</code> 的前缀和后缀出现了重合。</p>
 <p>这种现象说明 <code>s</code> 的前缀和后缀存在交替重叠，表明 <code>s</code> 具有周期性，意味着 <code>s</code> 是由一个较短的子串重复构成的。<strong>换句话说，如果 <code>s</code> 的前缀和后缀有某种重叠，形成了周期性，那么 <code>s</code> 就可以通过重复某个子串构成。</strong></p>
 <p>必要性证毕。</p>
@@ -2967,40 +3038,58 @@ public:
 <p>旋转操作是将字符串的第一个字符移动到最后一位。例如，字符串 <code>"abcde"</code> 经过一次旋转变为 <code>"bcdea"</code>。</p>
 <h3 id="_25">解题思路</h3>
 <ol>
-<li><strong>理解旋转</strong>：</li>
-<li>旋转操作是将字符串的第一个字符移动到最后一位。</li>
 <li>
-<p>例如，字符串 <code>"abcde"</code> 经过一次旋转变为 <code>"bcdea"</code>，再经过一次旋转变为 <code>"cdeab"</code>，如此类推。</p>
+<p><strong>理解旋转</strong>：</p>
+<ul>
+<li>旋转操作是将字符串的第一个字符移动到最后一位。</li>
+<li>例如，字符串 <code>"abcde"</code> 经过一次旋转变为 <code>"bcdea"</code>，再经过一次旋转变为 <code>"cdeab"</code>，如此类推。</li>
+</ul>
 </li>
 <li>
 <p><strong>字符串旋转的特性</strong>：</p>
-</li>
+<ul>
 <li>如果将字符串 <code>s</code> 拼接成 <code>s + s</code>，这个新字符串将包含 <code>s</code> 所有可能的旋转形式。</li>
-<li>
-<p>例如，<code>s = "abcde"</code> 拼接后变为 <code>"abcdeabcde"</code>，它包含了所有旋转形式：<code>"abcde"</code>, <code>"bcdea"</code>, <code>"cdeab"</code>, <code>"deabc"</code>, <code>"eabcd"</code>。</p>
+<li>例如，<code>s = "abcde"</code> 拼接后变为 <code>"abcdeabcde"</code>，它包含了所有旋转形式：<code>"abcde"</code>, <code>"bcdea"</code>, <code>"cdeab"</code>, <code>"deabc"</code>, <code>"eabcd"</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>判断 <code>goal</code> 是否是 <code>s + s</code> 的子串</strong>：</p>
-</li>
+<ul>
 <li>我们可以遍历 <code>s + s</code>，截取与 <code>s</code> 相同长度的子串，并检查它是否等于 <code>goal</code>。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_26">示例代码</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    bool rotateString(string s, string goal) {
-        string double_s = s + s;
-
-        // 遍历 double_s 中的每个子串，检查是否等于 goal
-        for (int i = 0; i &lt; s.length(); i++) {
-            if (double_s.substr(i, s.length()) == goal) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">rotateString</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">goal</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">double_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">        </span><span class="c1">// 遍历 double_s 中的每个子串，检查是否等于 goal</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">double_s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">())</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">goal</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_27">代码讲解</h3>
 <ol>
 <li>
@@ -3008,78 +3097,115 @@ public:
 </li>
 <li>
 <p><strong>遍历 <code>double_s</code></strong>：</p>
-</li>
-<li>
-<p>在 <code>double_s</code> 中，逐个提取长度为 <code>s.length()</code> 的子串，使用 <code>substr(i, s.length())</code> 函数从索引 <code>i</code> 处开始截取与 <code>s</code> 相同长度的子串。</p>
+<ul>
+<li>在 <code>double_s</code> 中，逐个提取长度为 <code>s.length()</code> 的子串，使用 <code>substr(i, s.length())</code> 函数从索引 <code>i</code> 处开始截取与 <code>s</code> 相同长度的子串。</li>
+</ul>
 </li>
 <li>
 <p><strong>比较子串和 <code>goal</code></strong>：</p>
-</li>
-<li>
-<p>如果某个子串等于 <code>goal</code>，则返回 <code>true</code>，表示 <code>s</code> 通过旋转可以变为 <code>goal</code>。</p>
+<ul>
+<li>如果某个子串等于 <code>goal</code>，则返回 <code>true</code>，表示 <code>s</code> 通过旋转可以变为 <code>goal</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>返回 <code>false</code></strong>：</p>
-</li>
+<ul>
 <li>如果遍历完所有可能的子串都没有匹配，则返回 <code>false</code>。</li>
+</ul>
+</li>
 </ol>
 <h3 id="lc28">LC28 查找字符串中的第一个匹配项索引</h3>
 <h3 id="_28">问题描述</h3>
 <p>给定两个字符串 <code>haystack</code> 和 <code>needle</code>，你需要在 <code>haystack</code> 字符串中找出 <code>needle</code> 字符串出现的第一个位置（从 0 开始）。如果不存在，则返回 <code>-1</code>。</p>
 <h3 id="_29">思路分析</h3>
 <ol>
-<li><strong>如果 <code>needle</code> 为空字符串，直接返回 <code>0</code>。</strong></li>
-<li><strong>遍历 <code>haystack</code>，从每个索引位置检查是否与 <code>needle</code> 匹配。</strong></li>
-<li><strong>如果匹配成功，返回该索引，否则继续遍历。</strong></li>
-<li><strong>如果遍历结束后未找到，返回 <code>-1</code>。</strong></li>
+<li>
+<p><strong>如果 <code>needle</code> 为空字符串，直接返回 <code>0</code>。</strong></p>
+</li>
+<li>
+<p><strong>遍历 <code>haystack</code>，从每个索引位置检查是否与 <code>needle</code> 匹配。</strong></p>
+</li>
+<li>
+<p><strong>如果匹配成功，返回该索引，否则继续遍历。</strong></p>
+</li>
+<li>
+<p><strong>如果遍历结束后未找到，返回 <code>-1</code>。</strong></p>
+</li>
 </ol>
 <h3 id="_30">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    int strStr(string haystack, string needle) {
-        // 如果 needle 为空字符串，直接返回 0
-        if (needle.empty()) {
-            return 0;
-        }
-
-        // 获取两个字符串的长度
-        int n = haystack.length();
-        int m = needle.length();
-
-        // 遍历 haystack，直到剩余的部分长度小于 needle 长度
-        for (int i = 0; i &lt;= n - m; i++) {
-            // 比较从 i 开始的子串是否等于 needle
-            if (haystack.substr(i, m) == needle) {
-                return i;
-            }
-        }
-
-        // 如果遍历结束后没有找到，返回 -1
-        return -1;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span>
+<span class="normal"><a href="#__codelineno-10-20">20</a></span>
+<span class="normal"><a href="#__codelineno-10-21">21</a></span>
+<span class="normal"><a href="#__codelineno-10-22">22</a></span>
+<span class="normal"><a href="#__codelineno-10-23">23</a></span>
+<span class="normal"><a href="#__codelineno-10-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">strStr</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">haystack</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">needle</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">        </span><span class="c1">// 如果 needle 为空字符串，直接返回 0</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">needle</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">        </span><span class="c1">// 获取两个字符串的长度</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">haystack</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">needle</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">        </span><span class="c1">// 遍历 haystack，直到剩余的部分长度小于 needle 长度</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">            </span><span class="c1">// 比较从 i 开始的子串是否等于 needle</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">haystack</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">needle</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20"></a>
+<a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="w">        </span><span class="c1">// 如果遍历结束后没有找到，返回 -1</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="2_1">2. 字符串数学运算</h2>
 <p>字符串数学模拟的基本解题思路主要涉及如何通过逐步操作和简单的数学运算，处理字符串形式的数字计算。</p>
 <h3 id="_31">基本概念</h3>
 <ol>
-<li><strong>字符转数字</strong>：</li>
-<li>字符串中的数字是以字符的形式存在的，例如字符 <code>'0'</code> 到 <code>'9'</code>。</li>
 <li>
-<p>可以通过 <code>char - '0'</code> 将字符转为对应的数字。例如，<code>'5' - '0'</code> 的结果为 <code>5</code>。</p>
+<p><strong>字符转数字</strong>：</p>
+<ul>
+<li>字符串中的数字是以字符的形式存在的，例如字符 <code>'0'</code> 到 <code>'9'</code>。</li>
+<li>可以通过 <code>char - '0'</code> 将字符转为对应的数字。例如，<code>'5' - '0'</code> 的结果为 <code>5</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>进位处理</strong>：</p>
-</li>
+<ul>
 <li>在进行加法运算时，如果某一位的和大于或等于 <code>10</code>，则需要处理进位（carry），将 <code>1</code> 加到下一位的计算中。</li>
-<li>
-<p>进位的计算可以通过 <code>carry = sum / 10</code> 来实现，而当前位的结果则是 <code>sum % 10</code>。</p>
+<li>进位的计算可以通过 <code>carry = sum / 10</code> 来实现，而当前位的结果则是 <code>sum % 10</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>逆序计算</strong>：</p>
-</li>
+<ul>
 <li>由于加法从个位开始进行，因此我们通常从字符串的右边开始加法，逐位向左。</li>
 <li>为了处理进位以及构造结果，我们可以使用一个容器（如 <code>string</code> 或 <code>vector</code>）存储计算结果，最后将其逆序排列以得到正确的答案。</li>
+</ul>
+</li>
 </ol>
 <h2 id="_32">例题讲解</h2>
 <h3 id="lc415">LC415 字符串相加</h3>
@@ -3089,80 +3215,128 @@ public:
 <p>要计算两个字符串形式的非负整数 <code>num1</code> 和 <code>num2</code> 的和，并返回结果为字符串形式，我们需要手动模拟加法的过程，类似于在纸上进行加法计算。下面是详细的解题思路和步骤。</p>
 <h3 id="_35">解题思路</h3>
 <ol>
-<li><strong>从右向左遍历</strong>：</li>
 <li>
-<p>由于加法是从个位开始的，因此我们需要从两个字符串的最右端逐位进行加法。</p>
+<p><strong>从右向左遍历</strong>：</p>
+<ul>
+<li>由于加法是从个位开始的，因此我们需要从两个字符串的最右端逐位进行加法。</li>
+</ul>
 </li>
 <li>
 <p><strong>逐位相加</strong>：</p>
-</li>
-<li>
-<p>对于 <code>num1</code> 和 <code>num2</code> 中的每一位，先将字符转化为数字进行加法操作。每位加法操作还需要考虑进位（carry）的影响。</p>
+<ul>
+<li>对于 <code>num1</code> 和 <code>num2</code> 中的每一位，先将字符转化为数字进行加法操作。每位加法操作还需要考虑进位（carry）的影响。</li>
+</ul>
 </li>
 <li>
 <p><strong>处理不同长度的字符串</strong>：</p>
-</li>
-<li>
-<p>如果两个字符串的长度不同，在遍历时处理较短字符串时，将缺失位默认为 0。</p>
+<ul>
+<li>如果两个字符串的长度不同，在遍历时处理较短字符串时，将缺失位默认为 0。</li>
+</ul>
 </li>
 <li>
 <p><strong>处理最后的进位</strong>：</p>
-</li>
-<li>
-<p>如果遍历结束后进位不为 0，需要将进位加到最终结果中。</p>
+<ul>
+<li>如果遍历结束后进位不为 0，需要将进位加到最终结果中。</li>
+</ul>
 </li>
 <li>
 <p><strong>结果拼接与反转</strong>：</p>
-</li>
+<ul>
 <li>因为我们是从右向左进行计算，最后需要将结果反转后返回。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_36">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    string addStrings(string num1, string num2) {
-        int num1_index = num1.length() - 1;
-        int num2_index = num2.length() - 1;
-        string result = &quot;&quot;;
-        int carry = 0;
-
-        // 从右到左逐位相加
-        while (num1_index &gt;= 0 || num2_index &gt;= 0) {
-            int total = carry;
-            carry = 0;
-
-            // 加上 num1 的当前位
-            if (num1_index &gt;= 0) {
-                total += num1[num1_index] - '0';
-                num1_index--;
-            }
-
-            // 加上 num2 的当前位
-            if (num2_index &gt;= 0) {
-                total += num2[num2_index] - '0';
-                num2_index--;
-            }
-
-            // 判断是否有进位
-            if (total &gt;= 10) {
-                carry = 1;
-            }
-
-            // 当前位结果添加到字符串
-            result.push_back(total % 10 + '0');
-        }
-
-        // 如果最后还有进位，添加到结果中
-        if (carry == 1) {
-            result.push_back(carry + '0');
-        }
-
-        // 结果是反向拼接的，需要反转
-        reverse(result.begin(), result.end());
-
-        return result;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span>
+<span class="normal"><a href="#__codelineno-11-24">24</a></span>
+<span class="normal"><a href="#__codelineno-11-25">25</a></span>
+<span class="normal"><a href="#__codelineno-11-26">26</a></span>
+<span class="normal"><a href="#__codelineno-11-27">27</a></span>
+<span class="normal"><a href="#__codelineno-11-28">28</a></span>
+<span class="normal"><a href="#__codelineno-11-29">29</a></span>
+<span class="normal"><a href="#__codelineno-11-30">30</a></span>
+<span class="normal"><a href="#__codelineno-11-31">31</a></span>
+<span class="normal"><a href="#__codelineno-11-32">32</a></span>
+<span class="normal"><a href="#__codelineno-11-33">33</a></span>
+<span class="normal"><a href="#__codelineno-11-34">34</a></span>
+<span class="normal"><a href="#__codelineno-11-35">35</a></span>
+<span class="normal"><a href="#__codelineno-11-36">36</a></span>
+<span class="normal"><a href="#__codelineno-11-37">37</a></span>
+<span class="normal"><a href="#__codelineno-11-38">38</a></span>
+<span class="normal"><a href="#__codelineno-11-39">39</a></span>
+<span class="normal"><a href="#__codelineno-11-40">40</a></span>
+<span class="normal"><a href="#__codelineno-11-41">41</a></span>
+<span class="normal"><a href="#__codelineno-11-42">42</a></span>
+<span class="normal"><a href="#__codelineno-11-43">43</a></span>
+<span class="normal"><a href="#__codelineno-11-44">44</a></span>
+<span class="normal"><a href="#__codelineno-11-45">45</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">addStrings</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num1_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num2_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num2</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">carry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">        </span><span class="c1">// 从右到左逐位相加</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num1_index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">num2_index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">carry</span><span class="p">;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">            </span><span class="n">carry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">            </span><span class="c1">// 加上 num1 的当前位</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num1_index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">                </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">num1</span><span class="p">[</span><span class="n">num1_index</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">                </span><span class="n">num1_index</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="w">            </span><span class="c1">// 加上 num2 的当前位</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num2_index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="w">                </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">num2</span><span class="p">[</span><span class="n">num2_index</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="w">                </span><span class="n">num2_index</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25"></a>
+<a id="__codelineno-11-26" name="__codelineno-11-26"></a><span class="w">            </span><span class="c1">// 判断是否有进位</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">total</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28"></a><span class="w">                </span><span class="n">carry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30"></a>
+<a id="__codelineno-11-31" name="__codelineno-11-31"></a><span class="w">            </span><span class="c1">// 当前位结果添加到字符串</span>
+<a id="__codelineno-11-32" name="__codelineno-11-32"></a><span class="w">            </span><span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">total</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">);</span>
+<a id="__codelineno-11-33" name="__codelineno-11-33"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-11-34" name="__codelineno-11-34"></a>
+<a id="__codelineno-11-35" name="__codelineno-11-35"></a><span class="w">        </span><span class="c1">// 如果最后还有进位，添加到结果中</span>
+<a id="__codelineno-11-36" name="__codelineno-11-36"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">carry</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-37" name="__codelineno-11-37"></a><span class="w">            </span><span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">carry</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">);</span>
+<a id="__codelineno-11-38" name="__codelineno-11-38"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-11-39" name="__codelineno-11-39"></a>
+<a id="__codelineno-11-40" name="__codelineno-11-40"></a><span class="w">        </span><span class="c1">// 结果是反向拼接的，需要反转</span>
+<a id="__codelineno-11-41" name="__codelineno-11-41"></a><span class="w">        </span><span class="n">reverse</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<a id="__codelineno-11-42" name="__codelineno-11-42"></a>
+<a id="__codelineno-11-43" name="__codelineno-11-43"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<a id="__codelineno-11-44" name="__codelineno-11-44"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-45" name="__codelineno-11-45"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_37">代码讲解</h3>
 <ol>
 <li>
@@ -3186,60 +3360,91 @@ public:
 <p>给定一个 32 位有符号整数 <code>x</code>，返回其数字部分反转后的结果。如果反转后的整数溢出（超出 32 位整数范围 <code>[-2^31, 2^31 - 1]</code>），则返回 <code>0</code>。</p>
 <h3 id="_39">解题思路</h3>
 <ol>
-<li><strong>处理数字的每一位</strong>：</li>
 <li>
-<p>我们从整数 <code>x</code> 的最后一位开始逐位提取数字，并将其加入到反转后的结果中。通过 <code>x % 10</code> 获取当前的最后一位，并使用 <code>x / 10</code> 移除最后一位。</p>
+<p><strong>处理数字的每一位</strong>：</p>
+<ul>
+<li>我们从整数 <code>x</code> 的最后一位开始逐位提取数字，并将其加入到反转后的结果中。通过 <code>x % 10</code> 获取当前的最后一位，并使用 <code>x / 10</code> 移除最后一位。</li>
+</ul>
 </li>
 <li>
 <p><strong>反转构建</strong>：</p>
-</li>
-<li>
-<p>每次提取一位数字后，将其加到结果的末尾，即将当前的 <code>result</code> 乘以 10 并加上提取的数字，从而逐步构建反转后的结果。</p>
+<ul>
+<li>每次提取一位数字后，将其加到结果的末尾，即将当前的 <code>result</code> 乘以 10 并加上提取的数字，从而逐步构建反转后的结果。</li>
+</ul>
 </li>
 <li>
 <p><strong>溢出检查</strong>：</p>
-</li>
-<li>
-<p>在每次将数字加入 <code>result</code> 之前，需要检查 <code>result</code> 是否会超过 32 位整数的最大或最小范围。具体来说，如果 <code>result</code> 大于 <code>INT_MAX / 10</code> 或 <code>result</code> 等于 <code>INT_MAX / 10</code> 且当前数字大于 7，则结果会溢出，直接返回 0。同样的规则适用于最小值 <code>INT_MIN</code>。</p>
+<ul>
+<li>在每次将数字加入 <code>result</code> 之前，需要检查 <code>result</code> 是否会超过 32 位整数的最大或最小范围。具体来说，如果 <code>result</code> 大于 <code>INT_MAX / 10</code> 或 <code>result</code> 等于 <code>INT_MAX / 10</code> 且当前数字大于 7，则结果会溢出，直接返回 0。同样的规则适用于最小值 <code>INT_MIN</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>返回结果</strong>：</p>
-</li>
+<ul>
 <li>当所有的位都处理完毕后，返回反转后的 <code>result</code>。如果 <code>x</code> 原本是负数，反转后结果仍然是负数。如果有溢出，则返回 0。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_40">溢出条件说明</h3>
 <ul>
-<li><code>INT_MAX = 2147483647</code>，最后一位是 7。</li>
-<li><code>INT_MIN = -2147483648</code>，最后一位是 -8。</li>
+<li>
+<p><code>INT_MAX = 2147483647</code>，最后一位是 7。</p>
+</li>
+<li>
+<p><code>INT_MIN = -2147483648</code>，最后一位是 -8。</p>
+</li>
 </ul>
 <h3 id="_41">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    int reverse(int x) {
-        int result = 0;
-
-        while (x != 0) {
-            int digit = x % 10;
-
-            // 检查是否会溢出：如果 result 超过了边界，返回 0
-            if (result &gt; INT_MAX / 10 || (result == INT_MAX / 10 &amp;&amp; digit &gt; 7)) {
-                return 0;
-            }
-            if (result &lt; INT_MIN / 10 || (result == INT_MIN / 10 &amp;&amp; digit &lt; -8)) {
-                return 0;
-            }
-
-            // 构建反转后的结果
-            result = result * 10 + digit;
-            // 移除 x 的最后一位
-            x /= 10;
-        }
-
-        return result;
-    }
-};
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span>
+<span class="normal"><a href="#__codelineno-12-20">20</a></span>
+<span class="normal"><a href="#__codelineno-12-21">21</a></span>
+<span class="normal"><a href="#__codelineno-12-22">22</a></span>
+<span class="normal"><a href="#__codelineno-12-23">23</a></span>
+<span class="normal"><a href="#__codelineno-12-24">24</a></span>
+<span class="normal"><a href="#__codelineno-12-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">reverse</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">digit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">            </span><span class="c1">// 检查是否会溢出：如果 result 超过了边界，返回 0</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">INT_MAX</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">INT_MAX</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">digit</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">7</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">INT_MIN</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">INT_MIN</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">digit</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">-8</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">            </span><span class="c1">// 构建反转后的结果</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="w">            </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">digit</span><span class="p">;</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="w">            </span><span class="c1">// 移除 x 的最后一位</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22"></a>
+<a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_42">代码讲解</h3>
 <ol>
 <li>
@@ -3264,82 +3469,130 @@ public:
 <p>给定两个二进制字符串 <code>a</code> 和 <code>b</code>，返回它们的和（以二进制字符串的形式）。</p>
 <h3 id="_45">解题思路</h3>
 <ol>
-<li><strong>从右到左遍历</strong>：</li>
 <li>
-<p>由于二进制加法从最低位开始，因此我们需要从两个字符串的最右端逐位进行相加。</p>
+<p><strong>从右到左遍历</strong>：</p>
+<ul>
+<li>由于二进制加法从最低位开始，因此我们需要从两个字符串的最右端逐位进行相加。</li>
+</ul>
 </li>
 <li>
 <p><strong>逐位相加并处理进位</strong>：</p>
-</li>
-<li>
-<p>使用两个指针分别指向两个字符串的最后一位，每一位相加时还需要考虑进位（carry）。</p>
+<ul>
+<li>使用两个指针分别指向两个字符串的最后一位，每一位相加时还需要考虑进位（carry）。</li>
+</ul>
 </li>
 <li>
 <p><strong>处理不同长度的字符串</strong>：</p>
-</li>
-<li>
-<p>如果两个字符串长度不同，较短的字符串可能在某些位置缺失，需要在处理时将这些位置的值视为 <code>0</code>。</p>
+<ul>
+<li>如果两个字符串长度不同，较短的字符串可能在某些位置缺失，需要在处理时将这些位置的值视为 <code>0</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>处理最后的进位</strong>：</p>
-</li>
-<li>
-<p>如果遍历结束时仍有进位，则需要将进位添加到结果中。</p>
+<ul>
+<li>如果遍历结束时仍有进位，则需要将进位添加到结果中。</li>
+</ul>
 </li>
 <li>
 <p><strong>拼接和反转结果</strong>：</p>
-</li>
+<ul>
 <li>因为加法是从右向左进行的，因此最终结果需要反转。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_46">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    string addBinary(string a, string b) {
-        int a_index = a.length() - 1;
-        int b_index = b.length() - 1;
-        int sum = 0;
-        int carry = 0;
-        string result = &quot;&quot;;
-
-        // 从右向左逐位相加
-        while (a_index &gt;= 0 || b_index &gt;= 0) {
-            sum = carry;  // 初始化 sum 为 carry
-            carry = 0;  // 重置 carry
-
-            // 取 a 的当前位
-            if (a_index &gt;= 0) {
-                sum += a[a_index] - '0';
-                a_index--;
-            }
-
-            // 取 b 的当前位
-            if (b_index &gt;= 0) {
-                sum += b[b_index] - '0';
-                b_index--;
-            }
-
-            // 计算是否需要进位
-            if (sum &gt;= 2) {
-                carry = 1;
-            }
-
-            // 当前位的结果添加到字符串
-            result.push_back(sum % 2 + '0');
-        }
-
-        // 如果有剩余的进位，添加到结果中
-        if (carry == 1) {
-            result.push_back(carry + '0');
-        }
-
-        // 结果是从右到左构建的，最后需要反转
-        reverse(result.begin(), result.end());
-
-        return result;
-    }
-};
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span>
+<span class="normal"><a href="#__codelineno-13-24">24</a></span>
+<span class="normal"><a href="#__codelineno-13-25">25</a></span>
+<span class="normal"><a href="#__codelineno-13-26">26</a></span>
+<span class="normal"><a href="#__codelineno-13-27">27</a></span>
+<span class="normal"><a href="#__codelineno-13-28">28</a></span>
+<span class="normal"><a href="#__codelineno-13-29">29</a></span>
+<span class="normal"><a href="#__codelineno-13-30">30</a></span>
+<span class="normal"><a href="#__codelineno-13-31">31</a></span>
+<span class="normal"><a href="#__codelineno-13-32">32</a></span>
+<span class="normal"><a href="#__codelineno-13-33">33</a></span>
+<span class="normal"><a href="#__codelineno-13-34">34</a></span>
+<span class="normal"><a href="#__codelineno-13-35">35</a></span>
+<span class="normal"><a href="#__codelineno-13-36">36</a></span>
+<span class="normal"><a href="#__codelineno-13-37">37</a></span>
+<span class="normal"><a href="#__codelineno-13-38">38</a></span>
+<span class="normal"><a href="#__codelineno-13-39">39</a></span>
+<span class="normal"><a href="#__codelineno-13-40">40</a></span>
+<span class="normal"><a href="#__codelineno-13-41">41</a></span>
+<span class="normal"><a href="#__codelineno-13-42">42</a></span>
+<span class="normal"><a href="#__codelineno-13-43">43</a></span>
+<span class="normal"><a href="#__codelineno-13-44">44</a></span>
+<span class="normal"><a href="#__codelineno-13-45">45</a></span>
+<span class="normal"><a href="#__codelineno-13-46">46</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">addBinary</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">b_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">carry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">        </span><span class="c1">// 从右向左逐位相加</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">a_index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">b_index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">            </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">carry</span><span class="p">;</span><span class="w">  </span><span class="c1">// 初始化 sum 为 carry</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">            </span><span class="n">carry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 重置 carry</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">            </span><span class="c1">// 取 a 的当前位</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a_index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">                </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">a_index</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">                </span><span class="n">a_index</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="w">            </span><span class="c1">// 取 b 的当前位</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b_index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a><span class="w">                </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="n">b_index</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24"></a><span class="w">                </span><span class="n">b_index</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26"></a>
+<a id="__codelineno-13-27" name="__codelineno-13-27"></a><span class="w">            </span><span class="c1">// 计算是否需要进位</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sum</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29"></a><span class="w">                </span><span class="n">carry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31"></a>
+<a id="__codelineno-13-32" name="__codelineno-13-32"></a><span class="w">            </span><span class="c1">// 当前位的结果添加到字符串</span>
+<a id="__codelineno-13-33" name="__codelineno-13-33"></a><span class="w">            </span><span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">sum</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">);</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-35" name="__codelineno-13-35"></a>
+<a id="__codelineno-13-36" name="__codelineno-13-36"></a><span class="w">        </span><span class="c1">// 如果有剩余的进位，添加到结果中</span>
+<a id="__codelineno-13-37" name="__codelineno-13-37"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">carry</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-38" name="__codelineno-13-38"></a><span class="w">            </span><span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">carry</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">);</span>
+<a id="__codelineno-13-39" name="__codelineno-13-39"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-40" name="__codelineno-13-40"></a>
+<a id="__codelineno-13-41" name="__codelineno-13-41"></a><span class="w">        </span><span class="c1">// 结果是从右到左构建的，最后需要反转</span>
+<a id="__codelineno-13-42" name="__codelineno-13-42"></a><span class="w">        </span><span class="n">reverse</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<a id="__codelineno-13-43" name="__codelineno-13-43"></a>
+<a id="__codelineno-13-44" name="__codelineno-13-44"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<a id="__codelineno-13-45" name="__codelineno-13-45"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-46" name="__codelineno-13-46"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_47">代码讲解</h3>
 <ol>
 <li>
@@ -3347,104 +3600,157 @@ public:
 </li>
 <li>
 <p><strong>处理当前位的相加</strong>：</p>
-</li>
+<ul>
 <li>如果 <code>a</code> 还有未处理的位，就将该位的值加到 <code>sum</code> 中。同样的操作适用于 <code>b</code>。</li>
-<li>
-<p>处理每一位时，检查是否需要进位（<code>sum &gt;= 2</code>），如果需要，则将 <code>carry</code> 设置为 <code>1</code>。</p>
+<li>处理每一位时，检查是否需要进位（<code>sum &gt;= 2</code>），如果需要，则将 <code>carry</code> 设置为 <code>1</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>处理进位</strong>：</p>
-</li>
-<li>
-<p>在每次相加后，更新 <code>carry</code> 并将结果的当前位（<code>sum % 2</code>）添加到结果字符串中。</p>
+<ul>
+<li>在每次相加后，更新 <code>carry</code> 并将结果的当前位（<code>sum % 2</code>）添加到结果字符串中。</li>
+</ul>
 </li>
 <li>
 <p><strong>最后的进位处理</strong>：</p>
-</li>
-<li>
-<p>如果所有位处理完毕后仍有进位（<code>carry == 1</code>），则将 <code>1</code> 添加到结果字符串中。</p>
+<ul>
+<li>如果所有位处理完毕后仍有进位（<code>carry == 1</code>），则将 <code>1</code> 添加到结果字符串中。</li>
+</ul>
 </li>
 <li>
 <p><strong>反转结果</strong>：</p>
-</li>
+<ul>
 <li>因为加法是从右向左进行的，所以结果需要在最后进行反转。</li>
+</ul>
+</li>
 </ol>
 <h3 id="lc989">LC989 数组形式的整数加法</h3>
 <h3 id="_48">题目描述</h3>
 <p>给定一个整数的数组形式 <code>num</code> 和一个整数 <code>k</code>，将这两个数相加并返回它们的和，结果以数组形式返回。<code>num</code> 是从左到右按位排列的整数。</p>
 <h3 id="_49">解题思路</h3>
 <ol>
-<li><strong>从右到左进行加法</strong>：</li>
 <li>
-<p>从数组 <code>num</code> 的最后一位（最低位）开始，与 <code>k</code> 的对应位相加。</p>
+<p><strong>从右到左进行加法</strong>：</p>
+<ul>
+<li>从数组 <code>num</code> 的最后一位（最低位）开始，与 <code>k</code> 的对应位相加。</li>
+</ul>
 </li>
 <li>
 <p><strong>处理进位</strong>：</p>
-</li>
-<li>
-<p>每次相加可能产生进位，进位会影响下一次的计算。</p>
+<ul>
+<li>每次相加可能产生进位，进位会影响下一次的计算。</li>
+</ul>
 </li>
 <li>
 <p><strong>遍历结束后处理剩余进位</strong>：</p>
-</li>
-<li>
-<p>如果遍历 <code>num</code> 完毕，<code>k</code> 还有未处理的位，或者最后一次相加产生进位，需要将这些剩余位处理完。</p>
+<ul>
+<li>如果遍历 <code>num</code> 完毕，<code>k</code> 还有未处理的位，或者最后一次相加产生进位，需要将这些剩余位处理完。</li>
+</ul>
 </li>
 <li>
 <p><strong>结果构建</strong>：</p>
-</li>
+<ul>
 <li>因为加法从最低位开始，所以我们将计算结果存入一个向量 <code>output</code>，最后反转该向量得到正确的顺序。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_50">参考解答</h3>
-<pre><code class="language-cpp">#include &lt;vector&gt;
-#include &lt;algorithm&gt;
-using namespace std;
-
-class Solution {
-public:
-    vector&lt;int&gt; addToArrayForm(vector&lt;int&gt;&amp; num, int k) {
-        int num_index = num.size() - 1;
-        vector&lt;int&gt; output;
-        int carry = 0;
-
-        // 从数组最后一位和k的末位开始逐位相加
-        while (num_index &gt;= 0 || k &gt; 0) {
-            int total = carry;  // 初始化 total 为 carry
-            carry = 0;  // 重置 carry
-
-            // 处理 num 的当前位
-            if (num_index &gt;= 0) {
-                total += num[num_index];
-                num_index--;
-            }
-
-            // 处理 k 的当前位
-            if (k &gt; 0) {
-                total += k % 10;
-                k /= 10;
-            }
-
-            // 判断是否有进位
-            if (total &gt;= 10) {
-                carry = 1;
-            }
-
-            // 将当前位结果添加到输出
-            output.push_back(total % 10);
-        }
-
-        // 如果有剩余的进位
-        if (carry == 1) {
-            output.push_back(carry);
-        }
-
-        // 由于我们是从低位开始构建结果，最终需要反转
-        reverse(output.begin(), output.end());
-
-        return output;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span>
+<span class="normal"><a href="#__codelineno-14-19">19</a></span>
+<span class="normal"><a href="#__codelineno-14-20">20</a></span>
+<span class="normal"><a href="#__codelineno-14-21">21</a></span>
+<span class="normal"><a href="#__codelineno-14-22">22</a></span>
+<span class="normal"><a href="#__codelineno-14-23">23</a></span>
+<span class="normal"><a href="#__codelineno-14-24">24</a></span>
+<span class="normal"><a href="#__codelineno-14-25">25</a></span>
+<span class="normal"><a href="#__codelineno-14-26">26</a></span>
+<span class="normal"><a href="#__codelineno-14-27">27</a></span>
+<span class="normal"><a href="#__codelineno-14-28">28</a></span>
+<span class="normal"><a href="#__codelineno-14-29">29</a></span>
+<span class="normal"><a href="#__codelineno-14-30">30</a></span>
+<span class="normal"><a href="#__codelineno-14-31">31</a></span>
+<span class="normal"><a href="#__codelineno-14-32">32</a></span>
+<span class="normal"><a href="#__codelineno-14-33">33</a></span>
+<span class="normal"><a href="#__codelineno-14-34">34</a></span>
+<span class="normal"><a href="#__codelineno-14-35">35</a></span>
+<span class="normal"><a href="#__codelineno-14-36">36</a></span>
+<span class="normal"><a href="#__codelineno-14-37">37</a></span>
+<span class="normal"><a href="#__codelineno-14-38">38</a></span>
+<span class="normal"><a href="#__codelineno-14-39">39</a></span>
+<span class="normal"><a href="#__codelineno-14-40">40</a></span>
+<span class="normal"><a href="#__codelineno-14-41">41</a></span>
+<span class="normal"><a href="#__codelineno-14-42">42</a></span>
+<span class="normal"><a href="#__codelineno-14-43">43</a></span>
+<span class="normal"><a href="#__codelineno-14-44">44</a></span>
+<span class="normal"><a href="#__codelineno-14-45">45</a></span>
+<span class="normal"><a href="#__codelineno-14-46">46</a></span>
+<span class="normal"><a href="#__codelineno-14-47">47</a></span>
+<span class="normal"><a href="#__codelineno-14-48">48</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">addToArrayForm</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">output</span><span class="p">;</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">carry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">        </span><span class="c1">// 从数组最后一位和k的末位开始逐位相加</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num_index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">carry</span><span class="p">;</span><span class="w">  </span><span class="c1">// 初始化 total 为 carry</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="w">            </span><span class="n">carry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 重置 carry</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="w">            </span><span class="c1">// 处理 num 的当前位</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num_index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">                </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">num</span><span class="p">[</span><span class="n">num_index</span><span class="p">];</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20"></a><span class="w">                </span><span class="n">num_index</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22"></a>
+<a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="w">            </span><span class="c1">// 处理 k 的当前位</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25"></a><span class="w">                </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26"></a><span class="w">                </span><span class="n">k</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-14-28" name="__codelineno-14-28"></a>
+<a id="__codelineno-14-29" name="__codelineno-14-29"></a><span class="w">            </span><span class="c1">// 判断是否有进位</span>
+<a id="__codelineno-14-30" name="__codelineno-14-30"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">total</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-31" name="__codelineno-14-31"></a><span class="w">                </span><span class="n">carry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-14-32" name="__codelineno-14-32"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-14-33" name="__codelineno-14-33"></a>
+<a id="__codelineno-14-34" name="__codelineno-14-34"></a><span class="w">            </span><span class="c1">// 将当前位结果添加到输出</span>
+<a id="__codelineno-14-35" name="__codelineno-14-35"></a><span class="w">            </span><span class="n">output</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">total</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-14-36" name="__codelineno-14-36"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-37" name="__codelineno-14-37"></a>
+<a id="__codelineno-14-38" name="__codelineno-14-38"></a><span class="w">        </span><span class="c1">// 如果有剩余的进位</span>
+<a id="__codelineno-14-39" name="__codelineno-14-39"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">carry</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-40" name="__codelineno-14-40"></a><span class="w">            </span><span class="n">output</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">carry</span><span class="p">);</span>
+<a id="__codelineno-14-41" name="__codelineno-14-41"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-42" name="__codelineno-14-42"></a>
+<a id="__codelineno-14-43" name="__codelineno-14-43"></a><span class="w">        </span><span class="c1">// 由于我们是从低位开始构建结果，最终需要反转</span>
+<a id="__codelineno-14-44" name="__codelineno-14-44"></a><span class="w">        </span><span class="n">reverse</span><span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<a id="__codelineno-14-45" name="__codelineno-14-45"></a>
+<a id="__codelineno-14-46" name="__codelineno-14-46"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">output</span><span class="p">;</span>
+<a id="__codelineno-14-47" name="__codelineno-14-47"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-48" name="__codelineno-14-48"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_51">代码讲解</h3>
 <ol>
 <li>
@@ -3452,20 +3758,22 @@ public:
 </li>
 <li>
 <p><strong>处理 <code>num</code> 和 <code>k</code> 当前位</strong>：</p>
-</li>
-<li>
-<p>对于数组 <code>num</code> 的当前位，将其与 <code>k</code> 的当前位相加。如果 <code>num</code> 或 <code>k</code> 已经没有剩余位，则将其视为 0。</p>
+<ul>
+<li>对于数组 <code>num</code> 的当前位，将其与 <code>k</code> 的当前位相加。如果 <code>num</code> 或 <code>k</code> 已经没有剩余位，则将其视为 0。</li>
+</ul>
 </li>
 <li>
 <p><strong>进位处理</strong>：</p>
-</li>
-<li>
-<p>如果相加的总和 <code>total</code> 大于等于 10，则需要将 <code>carry</code> 置为 1，并且在下次循环中考虑进位。</p>
+<ul>
+<li>如果相加的总和 <code>total</code> 大于等于 10，则需要将 <code>carry</code> 置为 1，并且在下次循环中考虑进位。</li>
+</ul>
 </li>
 <li>
 <p><strong>将结果添加到 <code>output</code></strong>：</p>
-</li>
+<ul>
 <li>每次相加的结果存储在 <code>output</code> 中，由于我们从低位开始相加，因此结果需要在最后进行反转。</li>
+</ul>
+</li>
 </ol>
 <h2 id="_52">课后练习</h2>
 <h3 id="_53">字符串循环+切片</h3>

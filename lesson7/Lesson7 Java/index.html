@@ -1434,7 +1434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1455,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1476,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3005,90 +3005,130 @@
 <h4 id="121-0-0">1.2.1 使用 <code>+'0'</code> 和 <code>-'0'</code>进行转换</h4>
 <h5 id="-0"><code>-'0'</code>：字符到整数的转换</h5>
 <p>通过将字符减去 <code>'0'</code>，可以得到对应的整数值。比如 <code>'3'</code> - <code>'0'</code> 的结果是整数 <code>3</code>。</p>
-<p>示例：字符到整数的转换</p>
-<pre><code class="language-java">public class AsciiConversion {
-    public static void main(String[] args) {
-        char digit = '5';  // '5' 的 ASCII 值是 53
-        int num = digit - '0';  // '5' - '0' = 5
-        System.out.println(&quot;字符 &quot; + digit + &quot; 转换为整数是 &quot; + num);
-    }
-}
-</code></pre>
-<p>输出:</p>
-<pre><code>字符 5 转换为整数是 5
-</code></pre>
+<p>示例：字符到整数的转换
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AsciiConversion</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">digit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;5&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// &#39;5&#39; 的 ASCII 值是 53</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digit</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// &#39;5&#39; - &#39;0&#39; = 5</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;字符 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">digit</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 转换为整数是 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num</span><span class="p">);</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+输出:
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>字符 5 转换为整数是 5
+</code></pre></div></td></tr></table></div></p>
 <h5 id="0"><code>+'0'</code>：整数到字符的转换</h5>
 <p>通过将整数加上 <code>'0'</code>，可以得到对应的字符。比如 <code>5</code> + <code>'0'</code> 的结果是字符 <code>'5'</code>。</p>
-<p>示例：整数到字符的转换</p>
-<pre><code class="language-java">public class AsciiConversion {
-    public static void main(String[] args) {
-        int num = 7;
-        char digit = (char) (num + '0');  // 7 + '0' = '7'
-        System.out.println(&quot;整数 &quot; + num + &quot; 转换为字符是 &quot; + digit);
-    }
-}
-
-</code></pre>
-<p>输出：</p>
-<pre><code>整数 7 转换为字符是 7
-</code></pre>
+<p>示例：整数到字符的转换
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AsciiConversion</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">digit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">);</span><span class="w">  </span><span class="c1">// 7 + &#39;0&#39; = &#39;7&#39;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;整数 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 转换为字符是 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">digit</span><span class="p">);</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+输出：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>整数 7 转换为字符是 7
+</code></pre></div></td></tr></table></div></p>
 <h4 id="122-a-a">1.2.2 使用 <code>+'A'</code> 和 <code>-'A'</code>进行转换</h4>
 <p>通过在字符上加上或减去字符 <code>'A'</code>，我们可以将字符与字母表的位置关联起来。例如，将字符 <code>'C'</code> 减去 <code>'A'</code> 可以得到 <code>'C'</code> 在字母表中的位置（从0开始计数）。这样对于实现简单的字母编码或解码非常有用。</p>
 <h5 id="-a"><code>-'A'</code>：字符到字母表位置的转换</h5>
 <p>通过将字符减去 <code>'A'</code>，可以得到字符在字母表中的位置（从0开始）。比如 <code>'C'</code> - <code>'A'</code> 的结果是 <code>2</code>。</p>
-<p>示例：字符到字母表位置的转换</p>
-<pre><code class="language-java">public class AsciiConversion {
-    public static void main(String[] args) {
-        char letter = 'C';  // 'C' 的 ASCII 值是 67
-        int position = letter - 'A';  // 'C' - 'A' = 2
-        System.out.println(&quot;字符 &quot; + letter + &quot; 在字母表中的位置是 &quot; + position);
-    }
-}
-</code></pre>
-<p>输出:</p>
-<pre><code>字符 C 在字母表中的位置是 2
-</code></pre>
+<p>示例：字符到字母表位置的转换
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AsciiConversion</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;C&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// &#39;C&#39; 的 ASCII 值是 67</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// &#39;C&#39; - &#39;A&#39; = 2</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;字符 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 在字母表中的位置是 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">position</span><span class="p">);</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p>输出:
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>字符 C 在字母表中的位置是 2
+</code></pre></div></td></tr></table></div></p>
 <h4 id="a"><code>+'A'</code>：字母表位置到字符的转换</h4>
 <p>通过将字母表中的位置加上 <code>'A'</code>，可以得到对应的字符。比如 <code>2</code> + <code>'A'</code> 的结果是字符 <code>'C'</code>。</p>
-<p>示例：字母表位置到字符的转换</p>
-<pre><code class="language-java">public class AsciiConversion {
-    public static void main(String[] args) {
-        int position = 2;
-        char letter = (char) (position + 'A');  // 2 + 'A' = 'C'
-        System.out.println(&quot;字母表中位置 &quot; + position + &quot; 对应的字符是 &quot; + letter);
-    }
-}
-
-</code></pre>
-<p>输出：</p>
-<pre><code>字母表中位置 2 对应的字符是 C
-</code></pre>
+<p>示例：字母表位置到字符的转换
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span>
+<span class="normal"><a href="#__codelineno-6-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AsciiConversion</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">position</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">);</span><span class="w">  </span><span class="c1">// 2 + &#39;A&#39; = &#39;C&#39;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;字母表中位置 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 对应的字符是 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">letter</span><span class="p">);</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p>输出：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>字母表中位置 2 对应的字符是 C
+</code></pre></div></td></tr></table></div></p>
 <h3 id="0-0-a-a">综合运用 <code>+'0'</code> 和 <code>-'0'</code> 以及 <code>+'A'</code> 和 <code>-'A'</code></h3>
 <p>通过结合使用这些操作符，我们可以灵活地在字符、数字和字母表位置之间进行转换。例如，可以编写一个程序，将字符串中的每个数字字符转换为整数，然后进行简单的运算，再将结果转换回字符；或者将字母字符转换为在字母表中的位置，并进行一些加密操作。</p>
-<p><strong>示例：处理字符串中的数字和字母</strong></p>
-<pre><code class="language-java">public class AsciiConversion {
-    public static void main(String[] args) {
-        String str = &quot;A3C7&quot;;
-        int sum = 0;
-
-        for (char ch : str.toCharArray()) {  // 将字符串转换为字符数组
-            if (ch &gt;= '0' &amp;&amp; ch &lt;= '9') {
-                sum += (ch - '0');  // 将数字字符转换为整数并求和
-            } else if (ch &gt;= 'A' &amp;&amp; ch &lt;= 'Z') {
-                int pos = ch - 'A';  // 将字母字符转换为字母表位置
-                System.out.println(ch + &quot; 在字母表中的位置是: &quot; + pos);
-            }
-        }
-
-        System.out.println(&quot;字符串 &quot; + str + &quot; 中数字字符的和是: &quot; + sum);
-    }
-}
-</code></pre>
-<p>输出：</p>
-<pre><code>A 在字母表中的位置是: 0
-C 在字母表中的位置是: 2
-字符串 A3C7 中数字字符的和是: 10
-</code></pre>
+<p><strong>示例：处理字符串中的数字和字母</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AsciiConversion</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A3C7&quot;</span><span class="p">;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 将字符串转换为字符数组</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ch</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;9&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">                </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="n">ch</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">);</span><span class="w">  </span><span class="c1">// 将数字字符转换为整数并求和</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ch</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;Z&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 将字母字符转换为字母表位置</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ch</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 在字母表中的位置是: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;字符串 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 中数字字符的和是: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p>输出：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>A 在字母表中的位置是: 0
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>C 在字母表中的位置是: 2
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>字符串 A3C7 中数字字符的和是: 10
+</code></pre></div></td></tr></table></div></p>
 <h3 id="13-ascii">1.3 ASCII 例题讲解</h3>
 <h3 id="131-lc1309">1.3.1 LC1309: 解码字母到整数映射</h3>
 <h4 id="_2">题目描述：</h4>
@@ -3100,9 +3140,10 @@ C 在字母表中的位置是: 2
 - 输入只包含数字、字符 <code>'#'</code> 和小写字母。
 - 字符串的长度范围是 <code>[1, 1000]</code>。</p>
 <h4 id="_3">示例：</h4>
-<pre><code>输入：s = &quot;10#11#12&quot;
-输出：&quot;jkab&quot;
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>输入：s = &quot;10#11#12&quot;
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>输出：&quot;jkab&quot;
+</code></pre></div></td></tr></table></div>
 <h4 id="_4">思路</h4>
 <ol>
 <li><strong>遍历字符串</strong>：</li>
@@ -3117,31 +3158,54 @@ C 在字母表中的位置是: 2
 <li>将每次解码得到的字符拼接到结果字符串中。</li>
 </ol>
 <h4 id="_5">参考解答</h4>
-<pre><code class="language-java">class Solution {
-    public String freqAlphabets(String s) {
-        // 用 StringBuilder 来存储结果
-        StringBuilder result = new StringBuilder();
-        int n = s.length();
-
-        // 遍历字符串
-        for (int i = 0; i &lt; n; i++) {
-            // 检查当前字符后面是否有 '#'
-            if (i + 2 &lt; n &amp;&amp; s.charAt(i + 2) == '#') {
-                // 处理 '10#' 到 '26#'
-                int num = (s.charAt(i) - '0') * 10 + (s.charAt(i + 1) - '0'); // 计算两位数
-                result.append((char)('a' + num - 1)); // 映射到字母
-                i += 2; // 跳过数字和 '#'
-            } else {
-                // 处理单个数字 '1' 到 '9'
-                int num = s.charAt(i) - '0'; // 转换为数字
-                result.append((char)('a' + num - 1)); // 映射到字母
-            }
-        }
-
-        return result.toString(); // 返回解码后的字符串
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span>
+<span class="normal"><a href="#__codelineno-11-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">freqAlphabets</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">        </span><span class="c1">// 用 StringBuilder 来存储结果</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">        </span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">        </span><span class="c1">// 遍历字符串</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">            </span><span class="c1">// 检查当前字符后面是否有 &#39;#&#39;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;#&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">                </span><span class="c1">// 处理 &#39;10#&#39; 到 &#39;26#&#39;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 计算两位数</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">append</span><span class="p">((</span><span class="kt">char</span><span class="p">)(</span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span><span class="w"> </span><span class="c1">// 映射到字母</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">                </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 跳过数字和 &#39;#&#39;</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">                </span><span class="c1">// 处理单个数字 &#39;1&#39; 到 &#39;9&#39;</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 转换为数字</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">append</span><span class="p">((</span><span class="kt">char</span><span class="p">)(</span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span><span class="w"> </span><span class="c1">// 映射到字母</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span><span class="w"> </span><span class="c1">// 返回解码后的字符串</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="14-ascii">1.4 ASCII 举一反三</h3>
 <h3 id="141-lc387">1.4.1 LC387 字符串中的第一个唯一字符</h3>
 <h4 id="_6">问题描述</h4>
@@ -3159,39 +3223,66 @@ C 在字母表中的位置是: 2
 </li>
 </ol>
 <h3 id="java">Java 代码实现</h3>
-<pre><code class="language-java">class Solution {
-    public int firstUniqChar(String s) {
-        // 定义大小为26的数组，记录每个字符出现的次数
-        int[] count = new int[26];
-
-        // 第一次遍历：统计每个字符的频率
-        for (int i = 0; i &lt; s.length(); i++) {
-            count[s.charAt(i) - 'a']++;
-        }
-
-        // 第二次遍历：找到第一个出现次数为1的字符
-        for (int i = 0; i &lt; s.length(); i++) {
-            if (count[s.charAt(i) - 'a'] == 1) {
-                return i; // 返回第一个不重复字符的索引
-            }
-        }
-
-        return -1; // 没有找到不重复的字符，返回-1
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span>
+<span class="normal"><a href="#__codelineno-12-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">firstUniqChar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">        </span><span class="c1">// 定义大小为26的数组，记录每个字符出现的次数</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">26</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">        </span><span class="c1">// 第一次遍历：统计每个字符的频率</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">            </span><span class="n">count</span><span class="o">[</span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="o">]++</span><span class="p">;</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">        </span><span class="c1">// 第二次遍历：找到第一个出现次数为1的字符</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="o">[</span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回第一个不重复字符的索引</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 没有找到不重复的字符，返回-1</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="142-lc171-excel">1.4.2 LC171 Excel表列序号</h3>
 <h4 id="_8">问题描述</h4>
 <p>给定一个字符串 <code>columnTitle</code>，表示 Excel 表格中的列名。请将其转换为对应的列序号。</p>
 <p>例如：
- <code>A -&gt; 1
- B -&gt; 2
- C -&gt; 3
- ...
- Z -&gt; 26
- AA -&gt; 27
- AB -&gt; 28 
- ...</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span>
+<span class="normal"><a href="#__codelineno-13-6">6</a></span>
+<span class="normal"><a href="#__codelineno-13-7">7</a></span>
+<span class="normal"><a href="#__codelineno-13-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>A -&gt; 1
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>B -&gt; 2
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>C -&gt; 3
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>...
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>Z -&gt; 26
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>AA -&gt; 27
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>AB -&gt; 28 
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>...
+</code></pre></div></td></tr></table></div></p>
 <h4 id="_9">思路分析</h4>
 <ol>
 <li><strong>遍历每个字符</strong>：</li>
@@ -3212,28 +3303,43 @@ C 在字母表中的位置是: 2
 <li>当遍历结束后，结果变量 <code>result</code> 中存储的就是列名转换成的数字。</li>
 </ol>
 <h4 id="_10">参考解答：</h4>
-<pre><code class="language-java">class Solution {
-    public int titleToNumber(String columnTitle) {
-        int result = 0;
-
-        // 遍历每个字符，从左到右
-        for (int i = 0; i &lt; columnTitle.length(); i++) {
-            // 将字符转换为数字，并累加到结果中
-            int charValue = columnTitle.charAt(i) - 'A' + 1;
-            result = result * 26 + charValue;
-        }
-
-        return result;
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">titleToNumber</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">columnTitle</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">        </span><span class="c1">// 遍历每个字符，从左到右</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">columnTitle</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">            </span><span class="c1">// 将字符转换为数字，并累加到结果中</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">charValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">columnTitle</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">            </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">26</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">charValue</span><span class="p">;</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="143-lc804">1.4.3 LC804. 唯一摩斯密码词</h3>
 <h4 id="_11">问题描述</h4>
-<p>给定一个字符串数组 <code>words</code>，其中每个单词由小写字母组成。每个字母可以用摩斯密码表示，例如：
-- 'a' -&gt; ".-"
-- 'b' -&gt; "-..."
-- 'c' -&gt; "-.-."
-- ...</p>
+<p>给定一个字符串数组 <code>words</code>，其中每个单词由小写字母组成。每个字母可以用摩斯密码表示，例如：</p>
+<ul>
+<li>'a' -&gt; ".-"</li>
+<li>'b' -&gt; "-..."</li>
+<li>'c' -&gt; "-.-."</li>
+<li>...</li>
+</ul>
 <p>你需要将每个单词转换为摩斯密码表示，并返回唯一摩斯密码词的个数。</p>
 <h4 id="_12">思路分析</h4>
 <ol>
@@ -3261,40 +3367,72 @@ C 在字母表中的位置是: 2
 <li><code>ArrayList</code> 中只存储唯一的摩斯密码组合，最终返回 <code>ArrayList.size()</code> 即为唯一摩斯密码组合的数量。</li>
 </ol>
 <h3 id="_13">参考解答</h3>
-<pre><code class="language-java">import java.util.ArrayList;
-
-class Solution {
-    public int uniqueMorseRepresentations(String[] words) {
-        // 摩斯密码表，对应字母 'a' 到 'z'
-        String[] morseCode = {
-            &quot;.-&quot;, &quot;-...&quot;, &quot;-.-.&quot;, &quot;-..&quot;, &quot;.&quot;, &quot;..-.&quot;, &quot;--.&quot;, &quot;....&quot;, &quot;..&quot;, &quot;.---&quot;, &quot;-.-&quot;,
-            &quot;.-..&quot;, &quot;--&quot;, &quot;-.&quot;, &quot;---&quot;, &quot;.--.&quot;, &quot;--.-&quot;, &quot;.-.&quot;, &quot;...&quot;, &quot;-&quot;, &quot;..-&quot;, &quot;...-&quot;, 
-            &quot;.--&quot;, &quot;-..-&quot;, &quot;-.--&quot;, &quot;--..&quot;
-        };
-
-        // 使用 ArrayList 来保存唯一的摩斯密码组合
-        ArrayList&lt;String&gt; uniqueTransformations = new ArrayList&lt;&gt;();
-
-        // 遍历每个单词
-        for (String word : words) {
-            StringBuilder morseWord = new StringBuilder();
-
-            // 将单词的每个字母转换为摩斯密码
-            for (char c : word.toCharArray()) {
-                morseWord.append(morseCode[c - 'a']);  // 根据字母 'a' 的索引找到对应的摩斯密码
-            }
-
-            // 将转换后的摩斯密码组合加入到 List 中，检查是否已经存在
-            if (!uniqueTransformations.contains(morseWord.toString())) {
-                uniqueTransformations.add(morseWord.toString());
-            }
-        }
-
-        // 返回 List 中唯一摩斯密码组合的数量
-        return uniqueTransformations.size();
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span>
+<span class="normal"><a href="#__codelineno-15-16">16</a></span>
+<span class="normal"><a href="#__codelineno-15-17">17</a></span>
+<span class="normal"><a href="#__codelineno-15-18">18</a></span>
+<span class="normal"><a href="#__codelineno-15-19">19</a></span>
+<span class="normal"><a href="#__codelineno-15-20">20</a></span>
+<span class="normal"><a href="#__codelineno-15-21">21</a></span>
+<span class="normal"><a href="#__codelineno-15-22">22</a></span>
+<span class="normal"><a href="#__codelineno-15-23">23</a></span>
+<span class="normal"><a href="#__codelineno-15-24">24</a></span>
+<span class="normal"><a href="#__codelineno-15-25">25</a></span>
+<span class="normal"><a href="#__codelineno-15-26">26</a></span>
+<span class="normal"><a href="#__codelineno-15-27">27</a></span>
+<span class="normal"><a href="#__codelineno-15-28">28</a></span>
+<span class="normal"><a href="#__codelineno-15-29">29</a></span>
+<span class="normal"><a href="#__codelineno-15-30">30</a></span>
+<span class="normal"><a href="#__codelineno-15-31">31</a></span>
+<span class="normal"><a href="#__codelineno-15-32">32</a></span>
+<span class="normal"><a href="#__codelineno-15-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">uniqueMorseRepresentations</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">words</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">        </span><span class="c1">// 摩斯密码表，对应字母 &#39;a&#39; 到 &#39;z&#39;</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">morseCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">            </span><span class="s">&quot;.-&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;-...&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;-.-.&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;-..&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;..-.&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;--.&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;....&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;..&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;.---&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;-.-&quot;</span><span class="p">,</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">            </span><span class="s">&quot;.-..&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;--&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;-.&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;---&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;.--.&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;--.-&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;.-.&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;...&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;..-&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;...-&quot;</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">            </span><span class="s">&quot;.--&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;-..-&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;-.--&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;--..&quot;</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">        </span><span class="p">};</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">        </span><span class="c1">// 使用 ArrayList 来保存唯一的摩斯密码组合</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">uniqueTransformations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">        </span><span class="c1">// 遍历每个单词</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">words</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">            </span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">morseWord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">            </span><span class="c1">// 将单词的每个字母转换为摩斯密码</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">word</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="w">                </span><span class="n">morseWord</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">morseCode</span><span class="o">[</span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// 根据字母 &#39;a&#39; 的索引找到对应的摩斯密码</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23"></a>
+<a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="w">            </span><span class="c1">// 将转换后的摩斯密码组合加入到 List 中，检查是否已经存在</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">uniqueTransformations</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">morseWord</span><span class="p">.</span><span class="na">toString</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26"></a><span class="w">                </span><span class="n">uniqueTransformations</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">morseWord</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-15-28" name="__codelineno-15-28"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-29" name="__codelineno-15-29"></a>
+<a id="__codelineno-15-30" name="__codelineno-15-30"></a><span class="w">        </span><span class="c1">// 返回 List 中唯一摩斯密码组合的数量</span>
+<a id="__codelineno-15-31" name="__codelineno-15-31"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">uniqueTransformations</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+<a id="__codelineno-15-32" name="__codelineno-15-32"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-33" name="__codelineno-15-33"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="2">2. 进制转换</h2>
 <h3 id="21">2.1 数字进制概述</h3>
 <ul>
@@ -3386,36 +3524,60 @@ class Solution {
 <li><strong>步骤4</strong>：二进制数即为逆序读取的余数序列。</li>
 </ol>
 <h4 id="13">示例：将 13 转换为二进制</h4>
-<pre><code>13 / 2 = 6 余 1
-6 / 2 = 3 余 0
-3 / 2 = 1 余 1
-1 / 2 = 0 余 1
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>13 / 2 = 6 余 1
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>6 / 2 = 3 余 0
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>3 / 2 = 1 余 1
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>1 / 2 = 0 余 1
+</code></pre></div></td></tr></table></div>
 <p>结果：<code>13 (十进制) = 1101 (二进制)</code></p>
 <h3 id="java_1">用 Java 实现十进制到二进制的转换</h3>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class DecimalToBinary {
-    public static void main(String[] args) {
-        StringBuilder ans = new StringBuilder();  // 用于存储二进制结果的字符串
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print(&quot;Enter a number: &quot;);
-        int num = scanner.nextInt();
-
-        // 循环将数字转换为二进制
-        while (num &gt; 0) {
-            ans.append(num % 2);  // 计算当前位的二进制值并添加到结果中
-            num = num / 2;  // 更新 num 为商
-        }
-
-        ans.reverse();  // 将结果反转，因为计算的结果是逆序的
-        System.out.println(&quot;Binary: &quot; + ans);
-
-        scanner.close();  // 关闭 Scanner
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span>
+<span class="normal"><a href="#__codelineno-17-13">13</a></span>
+<span class="normal"><a href="#__codelineno-17-14">14</a></span>
+<span class="normal"><a href="#__codelineno-17-15">15</a></span>
+<span class="normal"><a href="#__codelineno-17-16">16</a></span>
+<span class="normal"><a href="#__codelineno-17-17">17</a></span>
+<span class="normal"><a href="#__codelineno-17-18">18</a></span>
+<span class="normal"><a href="#__codelineno-17-19">19</a></span>
+<span class="normal"><a href="#__codelineno-17-20">20</a></span>
+<span class="normal"><a href="#__codelineno-17-21">21</a></span>
+<span class="normal"><a href="#__codelineno-17-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DecimalToBinary</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">        </span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span><span class="w">  </span><span class="c1">// 用于存储二进制结果的字符串</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter a number: &quot;</span><span class="p">);</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="w">        </span><span class="c1">// 循环将数字转换为二进制</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a><span class="w">            </span><span class="n">ans</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w">  </span><span class="c1">// 计算当前位的二进制值并添加到结果中</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="w">            </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 更新 num 为商</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16"></a>
+<a id="__codelineno-17-17" name="__codelineno-17-17"></a><span class="w">        </span><span class="n">ans</span><span class="p">.</span><span class="na">reverse</span><span class="p">();</span><span class="w">  </span><span class="c1">// 将结果反转，因为计算的结果是逆序的</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Binary: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ans</span><span class="p">);</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19"></a>
+<a id="__codelineno-17-20" name="__codelineno-17-20"></a><span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">  </span><span class="c1">// 关闭 Scanner</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_15">代码解释：</h3>
 <ul>
 <li><code>ans.append(num % 2);</code>：<code>num % 2</code> 计算当前位的二进制值并将其添加到 <code>ans</code> 的末尾。</li>
@@ -3429,30 +3591,48 @@ public class DecimalToBinary {
 <li><strong>步骤2</strong>：将所有结果相加。</li>
 </ol>
 <h4 id="1101">示例：将 1101 转换为十进制</h4>
-<pre><code>1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 1 * 2^0 = 8 + 4 + 0 + 1 = 13
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 1 * 2^0 = 8 + 4 + 0 + 1 = 13
+</code></pre></div></td></tr></table></div>
 <p>结果：<code>1101 (二进制) = 13 (十进制)</code></p>
 <h3 id="java_2">用 Java 实现二进制到十进制的转换</h3>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class BinaryToDecimal {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print(&quot;Enter a number with base of 2: &quot;);
-        String num = scanner.nextLine();  // 读取用户输入的二进制数
-
-        int ans = 0;
-
-        // 循环遍历每个二进制位
-        for (char i : num.toCharArray()) {
-            ans = ans * 2 + (i - '0');  // 将二进制数逐位转换为十进制
-        }
-
-        System.out.println(&quot;Decimal: &quot; + ans);
-        scanner.close();  // 关闭 Scanner
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-19-10">10</a></span>
+<span class="normal"><a href="#__codelineno-19-11">11</a></span>
+<span class="normal"><a href="#__codelineno-19-12">12</a></span>
+<span class="normal"><a href="#__codelineno-19-13">13</a></span>
+<span class="normal"><a href="#__codelineno-19-14">14</a></span>
+<span class="normal"><a href="#__codelineno-19-15">15</a></span>
+<span class="normal"><a href="#__codelineno-19-16">16</a></span>
+<span class="normal"><a href="#__codelineno-19-17">17</a></span>
+<span class="normal"><a href="#__codelineno-19-18">18</a></span>
+<span class="normal"><a href="#__codelineno-19-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BinaryToDecimal</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter a number with base of 2: &quot;</span><span class="p">);</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w">  </span><span class="c1">// 读取用户输入的二进制数</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a>
+<a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10"></a>
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a><span class="w">        </span><span class="c1">// 循环遍历每个二进制位</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">num</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13"></a><span class="w">            </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">);</span><span class="w">  </span><span class="c1">// 将二进制数逐位转换为十进制</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15"></a>
+<a id="__codelineno-19-16" name="__codelineno-19-16"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Decimal: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ans</span><span class="p">);</span>
+<a id="__codelineno-19-17" name="__codelineno-19-17"></a><span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">  </span><span class="c1">// 关闭 Scanner</span>
+<a id="__codelineno-19-18" name="__codelineno-19-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-19-19" name="__codelineno-19-19"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_17">代码解释：</h3>
 <ul>
 <li><code>for (char i : num.toCharArray())</code>：将字符串转换为字符数组，逐个遍历每个二进制位。</li>
@@ -3467,40 +3647,68 @@ public class BinaryToDecimal {
 <li><strong>步骤4</strong>：十六进制数即为逆序读取的余数序列。</li>
 </ol>
 <h4 id="479">示例：将 479 转换为十六进制</h4>
-<pre><code>479 / 16 = 29 余 F
-29 / 16 = 1 余 D
-1 / 16 = 0 余 1
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>479 / 16 = 29 余 F
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>29 / 16 = 1 余 D
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>1 / 16 = 0 余 1
+</code></pre></div></td></tr></table></div>
 <p>结果：<code>479 (十进制) = 1DF (十六进制)</code></p>
 <h3 id="java_3">用 Java 实现十进制到十六进制的转换</h3>
-<pre><code class="language-java">public class DecimalToHexadecimal {
-    public static String decToHex(int num) {
-        StringBuilder result = new StringBuilder();  // 用于存储十六进制结果的字符串
-
-        // 循环将数字转换为十六进制
-        while (num != 0) {
-            int remainder = num % 16;  // 计算当前位的十六进制值
-
-            // 根据余数大小决定是数字还是字符
-            if (remainder &gt;= 10) {
-                result.append((char) (remainder - 10 + 'A'));  // 余数在 10-15 之间，转换为 'A'-'F'
-            } else {
-                result.append((char) (remainder + '0'));  // 余数在 0-9 之间，转换为字符 '0'-'9'
-            }
-
-            num = num / 16;  // 更新 num 为商
-        }
-
-        result.reverse();  // 将结果反转，因为计算的结果是逆序的
-        return result.toString();  // 返回结果字符串
-    }
-
-    public static void main(String[] args) {
-        int number = 479;
-        System.out.println(&quot;Decimal: &quot; + number + &quot; -&gt; Hexadecimal: &quot; + decToHex(number));
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span>
+<span class="normal"><a href="#__codelineno-21-13">13</a></span>
+<span class="normal"><a href="#__codelineno-21-14">14</a></span>
+<span class="normal"><a href="#__codelineno-21-15">15</a></span>
+<span class="normal"><a href="#__codelineno-21-16">16</a></span>
+<span class="normal"><a href="#__codelineno-21-17">17</a></span>
+<span class="normal"><a href="#__codelineno-21-18">18</a></span>
+<span class="normal"><a href="#__codelineno-21-19">19</a></span>
+<span class="normal"><a href="#__codelineno-21-20">20</a></span>
+<span class="normal"><a href="#__codelineno-21-21">21</a></span>
+<span class="normal"><a href="#__codelineno-21-22">22</a></span>
+<span class="normal"><a href="#__codelineno-21-23">23</a></span>
+<span class="normal"><a href="#__codelineno-21-24">24</a></span>
+<span class="normal"><a href="#__codelineno-21-25">25</a></span>
+<span class="normal"><a href="#__codelineno-21-26">26</a></span>
+<span class="normal"><a href="#__codelineno-21-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DecimalToHexadecimal</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">decToHex</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">        </span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span><span class="w">  </span><span class="c1">// 用于存储十六进制结果的字符串</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">        </span><span class="c1">// 循环将数字转换为十六进制</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">remainder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span><span class="w">  </span><span class="c1">// 计算当前位的十六进制值</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="w">            </span><span class="c1">// 根据余数大小决定是数字还是字符</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">remainder</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a><span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">append</span><span class="p">((</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">remainder</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">));</span><span class="w">  </span><span class="c1">// 余数在 10-15 之间，转换为 &#39;A&#39;-&#39;F&#39;</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a><span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">append</span><span class="p">((</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">remainder</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">));</span><span class="w">  </span><span class="c1">// 余数在 0-9 之间，转换为字符 &#39;0&#39;-&#39;9&#39;</span>
+<a id="__codelineno-21-14" name="__codelineno-21-14"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15"></a>
+<a id="__codelineno-21-16" name="__codelineno-21-16"></a><span class="w">            </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span><span class="w">  </span><span class="c1">// 更新 num 为商</span>
+<a id="__codelineno-21-17" name="__codelineno-21-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-21-18" name="__codelineno-21-18"></a>
+<a id="__codelineno-21-19" name="__codelineno-21-19"></a><span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="na">reverse</span><span class="p">();</span><span class="w">  </span><span class="c1">// 将结果反转，因为计算的结果是逆序的</span>
+<a id="__codelineno-21-20" name="__codelineno-21-20"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span><span class="w">  </span><span class="c1">// 返回结果字符串</span>
+<a id="__codelineno-21-21" name="__codelineno-21-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-21-22" name="__codelineno-21-22"></a>
+<a id="__codelineno-21-23" name="__codelineno-21-23"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-24" name="__codelineno-21-24"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">479</span><span class="p">;</span>
+<a id="__codelineno-21-25" name="__codelineno-21-25"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Decimal: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; -&gt; Hexadecimal: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">decToHex</span><span class="p">(</span><span class="n">number</span><span class="p">));</span>
+<a id="__codelineno-21-26" name="__codelineno-21-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-21-27" name="__codelineno-21-27"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_19">代码解释：</h3>
 <ul>
 <li><code>int remainder = num % 16;</code>：计算当前位的十六进制值。</li>
@@ -3556,50 +3764,86 @@ public class BinaryToDecimal {
 <li>因为我们从最低位开始计算，所以最终需要将字符串反转。</li>
 </ol>
 <h4 id="_24">参考解答</h4>
-<pre><code class="language-java">class Solution {
-    public String convertToBase7(int num) {
-        // 处理负数
-        boolean isNegative = num &lt; 0;
-        if (isNegative) {
-            num = -num; // 将负数转为正数
-        }
-
-        // 处理0的情况
-        if (num == 0) {
-            return &quot;0&quot;;
-        }
-
-        StringBuilder ans = new StringBuilder(); // 使用StringBuilder来构建结果字符串
-
-        // 取模法构建7进制
-        while (num &gt; 0) {
-            ans.append(num % 7); // 取模获取当前位的7进制数字
-            num /= 7; // 更新num为num / 7
-        }
-
-        // 如果初始值是负数，添加负号
-        if (isNegative) {
-            ans.append('-');
-        }
-
-        // 反转字符串并返回结果
-        return ans.reverse().toString();
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-22-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-22-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-22-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-22-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-22-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-22-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-22-10">10</a></span>
+<span class="normal"><a href="#__codelineno-22-11">11</a></span>
+<span class="normal"><a href="#__codelineno-22-12">12</a></span>
+<span class="normal"><a href="#__codelineno-22-13">13</a></span>
+<span class="normal"><a href="#__codelineno-22-14">14</a></span>
+<span class="normal"><a href="#__codelineno-22-15">15</a></span>
+<span class="normal"><a href="#__codelineno-22-16">16</a></span>
+<span class="normal"><a href="#__codelineno-22-17">17</a></span>
+<span class="normal"><a href="#__codelineno-22-18">18</a></span>
+<span class="normal"><a href="#__codelineno-22-19">19</a></span>
+<span class="normal"><a href="#__codelineno-22-20">20</a></span>
+<span class="normal"><a href="#__codelineno-22-21">21</a></span>
+<span class="normal"><a href="#__codelineno-22-22">22</a></span>
+<span class="normal"><a href="#__codelineno-22-23">23</a></span>
+<span class="normal"><a href="#__codelineno-22-24">24</a></span>
+<span class="normal"><a href="#__codelineno-22-25">25</a></span>
+<span class="normal"><a href="#__codelineno-22-26">26</a></span>
+<span class="normal"><a href="#__codelineno-22-27">27</a></span>
+<span class="normal"><a href="#__codelineno-22-28">28</a></span>
+<span class="normal"><a href="#__codelineno-22-29">29</a></span>
+<span class="normal"><a href="#__codelineno-22-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">convertToBase7</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">        </span><span class="c1">// 处理负数</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isNegative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isNegative</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">            </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">num</span><span class="p">;</span><span class="w"> </span><span class="c1">// 将负数转为正数</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a>
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="w">        </span><span class="c1">// 处理0的情况</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;0&quot;</span><span class="p">;</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13"></a>
+<a id="__codelineno-22-14" name="__codelineno-22-14"></a><span class="w">        </span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span><span class="w"> </span><span class="c1">// 使用StringBuilder来构建结果字符串</span>
+<a id="__codelineno-22-15" name="__codelineno-22-15"></a>
+<a id="__codelineno-22-16" name="__codelineno-22-16"></a><span class="w">        </span><span class="c1">// 取模法构建7进制</span>
+<a id="__codelineno-22-17" name="__codelineno-22-17"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-18" name="__codelineno-22-18"></a><span class="w">            </span><span class="n">ans</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w"> </span><span class="c1">// 取模获取当前位的7进制数字</span>
+<a id="__codelineno-22-19" name="__codelineno-22-19"></a><span class="w">            </span><span class="n">num</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 更新num为num / 7</span>
+<a id="__codelineno-22-20" name="__codelineno-22-20"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-22-21" name="__codelineno-22-21"></a>
+<a id="__codelineno-22-22" name="__codelineno-22-22"></a><span class="w">        </span><span class="c1">// 如果初始值是负数，添加负号</span>
+<a id="__codelineno-22-23" name="__codelineno-22-23"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isNegative</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-24" name="__codelineno-22-24"></a><span class="w">            </span><span class="n">ans</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="sc">&#39;-&#39;</span><span class="p">);</span>
+<a id="__codelineno-22-25" name="__codelineno-22-25"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-22-26" name="__codelineno-22-26"></a>
+<a id="__codelineno-22-27" name="__codelineno-22-27"></a><span class="w">        </span><span class="c1">// 反转字符串并返回结果</span>
+<a id="__codelineno-22-28" name="__codelineno-22-28"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ans</span><span class="p">.</span><span class="na">reverse</span><span class="p">().</span><span class="na">toString</span><span class="p">();</span>
+<a id="__codelineno-22-29" name="__codelineno-22-29"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-22-30" name="__codelineno-22-30"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="27">2.7 进制 举一反三</h3>
 <h3 id="271-lc168-excel">2.7.1 LC168. Excel表列名称</h3>
 <h4 id="_25">问题描述</h4>
 <p>给定一个正整数，返回它在 Excel 表中对应的列标题。Excel 列是以 <code>A-Z</code> 的方式排列的，例如：</p>
-<pre><code>1 -&gt; A
-2 -&gt; B
-3 -&gt; C
-...
-26 -&gt; Z
-27 -&gt; AA
-28 -&gt; AB
-...
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span>
+<span class="normal"><a href="#__codelineno-23-5">5</a></span>
+<span class="normal"><a href="#__codelineno-23-6">6</a></span>
+<span class="normal"><a href="#__codelineno-23-7">7</a></span>
+<span class="normal"><a href="#__codelineno-23-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>1 -&gt; A
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>2 -&gt; B
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>3 -&gt; C
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a>...
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a>26 -&gt; Z
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a>27 -&gt; AA
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a>28 -&gt; AB
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a>...
+</code></pre></div></td></tr></table></div>
 <h4 id="_26">思路分析</h4>
 <p>这是一个典型的进制转换问题。需要将数字转换成以 <code>A-Z</code> 为基础的26进制表示法，类似于十进制转换为二进制或十六进制。由于 Excel 列编号从 1 开始，而不是从 0 开始，所以在转换时需要一些额外的调整。</p>
 <ol>
@@ -3622,28 +3866,48 @@ public class BinaryToDecimal {
 <li>由于我们从最低位开始构造字符串，因此最后需要将结果字符串反转。</li>
 </ol>
 <h4 id="_27">参考解答</h4>
-<pre><code class="language-java">class Solution {
-   public String convertToTitle(int columnNumber) {
-      StringBuilder result = new StringBuilder();
-
-      // 处理进制转换
-      while (columnNumber &gt; 0) {
-         // 因为是从 1 开始的列，所以需要先减1
-         columnNumber--;
-
-         // 计算当前位对应的字母
-         char currentChar = (char) ('A' + (columnNumber % 26));
-         result.append(currentChar);  // 将字符添加到结果字符串中
-
-         // 减少列号
-         columnNumber /= 26;
-      }
-
-      // 由于我们是从低位开始计算，因此需要反转结果
-      return result.reverse().toString();  // 直接反转并转换为字符串
-   }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span>
+<span class="normal"><a href="#__codelineno-24-11">11</a></span>
+<span class="normal"><a href="#__codelineno-24-12">12</a></span>
+<span class="normal"><a href="#__codelineno-24-13">13</a></span>
+<span class="normal"><a href="#__codelineno-24-14">14</a></span>
+<span class="normal"><a href="#__codelineno-24-15">15</a></span>
+<span class="normal"><a href="#__codelineno-24-16">16</a></span>
+<span class="normal"><a href="#__codelineno-24-17">17</a></span>
+<span class="normal"><a href="#__codelineno-24-18">18</a></span>
+<span class="normal"><a href="#__codelineno-24-19">19</a></span>
+<span class="normal"><a href="#__codelineno-24-20">20</a></span>
+<span class="normal"><a href="#__codelineno-24-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">convertToTitle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">columnNumber</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="w">      </span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="w">      </span><span class="c1">// 处理进制转换</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">columnNumber</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="w">         </span><span class="c1">// 因为是从 1 开始的列，所以需要先减1</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="w">         </span><span class="n">columnNumber</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="w">         </span><span class="c1">// 计算当前位对应的字母</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11"></a><span class="w">         </span><span class="kt">char</span><span class="w"> </span><span class="n">currentChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="sc">&#39;A&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">columnNumber</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">26</span><span class="p">));</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12"></a><span class="w">         </span><span class="n">result</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">currentChar</span><span class="p">);</span><span class="w">  </span><span class="c1">// 将字符添加到结果字符串中</span>
+<a id="__codelineno-24-13" name="__codelineno-24-13"></a>
+<a id="__codelineno-24-14" name="__codelineno-24-14"></a><span class="w">         </span><span class="c1">// 减少列号</span>
+<a id="__codelineno-24-15" name="__codelineno-24-15"></a><span class="w">         </span><span class="n">columnNumber</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">26</span><span class="p">;</span>
+<a id="__codelineno-24-16" name="__codelineno-24-16"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-24-17" name="__codelineno-24-17"></a>
+<a id="__codelineno-24-18" name="__codelineno-24-18"></a><span class="w">      </span><span class="c1">// 由于我们是从低位开始计算，因此需要反转结果</span>
+<a id="__codelineno-24-19" name="__codelineno-24-19"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">reverse</span><span class="p">().</span><span class="na">toString</span><span class="p">();</span><span class="w">  </span><span class="c1">// 直接反转并转换为字符串</span>
+<a id="__codelineno-24-20" name="__codelineno-24-20"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-24-21" name="__codelineno-24-21"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="272-lc728">2.7.2 LC728 自除数</h3>
 <h4 id="_28">问题描述</h4>
 <p>自除数是指一个整数，它的每一位数字都能整除这个数本身。给定一个范围 <code>[left, right]</code>，返回该范围内所有的自除数。
@@ -3657,39 +3921,68 @@ public class BinaryToDecimal {
 <li><strong>返回结果</strong>：返回在 <code>[left, right]</code> 范围内所有自除数的列表。</li>
 </ol>
 <h4 id="_30">参考解答</h4>
-<pre><code class="language-java">import java.util.ArrayList;
-
-class Solution {
-    // 检查一个数字是否是自除数
-    public boolean isSelfDividing(int num) {
-        int originalNum = num;
-
-        while (num &gt; 0) {
-            int digit = num % 10;  // 提取数字的最后一位
-            if (digit == 0 || originalNum % digit != 0) {
-                return false;  // 任何一位为0或者不能整除原数字，则不是自除数
-            }
-            num /= 10;  // 去掉最后一位
-        }
-
-        return true;  // 所有位都能整除原数字，说明是自除数
-    }
-
-    public ArrayList&lt;Integer&gt; selfDividingNumbers(int left, int right) {
-        ArrayList&lt;Integer&gt; result = new ArrayList&lt;&gt;();
-
-        // 遍历范围 [left, right]，逐个检查是否为自除数
-        for (int i = left; i &lt;= right; i++) {
-            if (isSelfDividing(i)) {
-                result.add(i);  // 如果是自除数，加入结果列表
-            }
-        }
-
-        return result;
-    }
-}
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-25-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-25-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-25-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-25-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-25-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-25-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-25-10">10</a></span>
+<span class="normal"><a href="#__codelineno-25-11">11</a></span>
+<span class="normal"><a href="#__codelineno-25-12">12</a></span>
+<span class="normal"><a href="#__codelineno-25-13">13</a></span>
+<span class="normal"><a href="#__codelineno-25-14">14</a></span>
+<span class="normal"><a href="#__codelineno-25-15">15</a></span>
+<span class="normal"><a href="#__codelineno-25-16">16</a></span>
+<span class="normal"><a href="#__codelineno-25-17">17</a></span>
+<span class="normal"><a href="#__codelineno-25-18">18</a></span>
+<span class="normal"><a href="#__codelineno-25-19">19</a></span>
+<span class="normal"><a href="#__codelineno-25-20">20</a></span>
+<span class="normal"><a href="#__codelineno-25-21">21</a></span>
+<span class="normal"><a href="#__codelineno-25-22">22</a></span>
+<span class="normal"><a href="#__codelineno-25-23">23</a></span>
+<span class="normal"><a href="#__codelineno-25-24">24</a></span>
+<span class="normal"><a href="#__codelineno-25-25">25</a></span>
+<span class="normal"><a href="#__codelineno-25-26">26</a></span>
+<span class="normal"><a href="#__codelineno-25-27">27</a></span>
+<span class="normal"><a href="#__codelineno-25-28">28</a></span>
+<span class="normal"><a href="#__codelineno-25-29">29</a></span>
+<span class="normal"><a href="#__codelineno-25-30">30</a></span>
+<span class="normal"><a href="#__codelineno-25-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="w">    </span><span class="c1">// 检查一个数字是否是自除数</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isSelfDividing</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">originalNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a>
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">digit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">  </span><span class="c1">// 提取数字的最后一位</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">digit</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">originalNum</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">digit</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">  </span><span class="c1">// 任何一位为0或者不能整除原数字，则不是自除数</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13"></a><span class="w">            </span><span class="n">num</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">  </span><span class="c1">// 去掉最后一位</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15"></a>
+<a id="__codelineno-25-16" name="__codelineno-25-16"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// 所有位都能整除原数字，说明是自除数</span>
+<a id="__codelineno-25-17" name="__codelineno-25-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-25-18" name="__codelineno-25-18"></a>
+<a id="__codelineno-25-19" name="__codelineno-25-19"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">selfDividingNumbers</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-20" name="__codelineno-25-20"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-25-21" name="__codelineno-25-21"></a>
+<a id="__codelineno-25-22" name="__codelineno-25-22"></a><span class="w">        </span><span class="c1">// 遍历范围 [left, right]，逐个检查是否为自除数</span>
+<a id="__codelineno-25-23" name="__codelineno-25-23"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">left</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">right</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-24" name="__codelineno-25-24"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isSelfDividing</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-25" name="__codelineno-25-25"></a><span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">  </span><span class="c1">// 如果是自除数，加入结果列表</span>
+<a id="__codelineno-25-26" name="__codelineno-25-26"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-25-27" name="__codelineno-25-27"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-25-28" name="__codelineno-25-28"></a>
+<a id="__codelineno-25-29" name="__codelineno-25-29"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<a id="__codelineno-25-30" name="__codelineno-25-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-25-31" name="__codelineno-25-31"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="273-lc693">2.7.3 LC693 交替位二进制数</h3>
 <h4 id="_31">问题描述</h4>
 <p>给定一个正整数 <code>n</code>，检查其二进制表示是否为交替位二进制数，交替位二进制数的定义是其相邻的两个位始终不同，即二进制中 <code>0</code> 和 <code>1</code> 交替出现。</p>
@@ -3702,25 +3995,42 @@ class Solution {
 <li><strong>返回结果</strong>：如果遍历到最后都没有发现相邻位相同的情况，返回 <code>true</code>。</li>
 </ol>
 <h4 id="_33">参考解答</h4>
-<pre><code class="language-java">class Solution {
-    public boolean hasAlternatingBits(int n) {
-        // 提取最后一位数字
-        int currentBit = n % 2;
-        n /= 2;  // 除以 2，等同于右移一位
-
-        while (n &gt; 0) {
-            int nextBit = n % 2;  // 提取新的最后一位
-            if (nextBit == currentBit) {
-                return false;  // 如果相邻的两位相同，返回 false
-            }
-            currentBit = nextBit;  // 更新当前位
-            n /= 2;  // 再次除以 2
-        }
-
-        return true;  // 如果没有发现相邻相同的位，返回 true
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-26-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-26-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-26-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-26-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-26-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-26-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-26-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-26-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-26-10">10</a></span>
+<span class="normal"><a href="#__codelineno-26-11">11</a></span>
+<span class="normal"><a href="#__codelineno-26-12">12</a></span>
+<span class="normal"><a href="#__codelineno-26-13">13</a></span>
+<span class="normal"><a href="#__codelineno-26-14">14</a></span>
+<span class="normal"><a href="#__codelineno-26-15">15</a></span>
+<span class="normal"><a href="#__codelineno-26-16">16</a></span>
+<span class="normal"><a href="#__codelineno-26-17">17</a></span>
+<span class="normal"><a href="#__codelineno-26-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">hasAlternatingBits</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="w">        </span><span class="c1">// 提取最后一位数字</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">currentBit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 除以 2，等同于右移一位</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6"></a>
+<a id="__codelineno-26-7" name="__codelineno-26-7"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">nextBit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 提取新的最后一位</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nextBit</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">currentBit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-10" name="__codelineno-26-10"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">  </span><span class="c1">// 如果相邻的两位相同，返回 false</span>
+<a id="__codelineno-26-11" name="__codelineno-26-11"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-26-12" name="__codelineno-26-12"></a><span class="w">            </span><span class="n">currentBit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nextBit</span><span class="p">;</span><span class="w">  </span><span class="c1">// 更新当前位</span>
+<a id="__codelineno-26-13" name="__codelineno-26-13"></a><span class="w">            </span><span class="n">n</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 再次除以 2</span>
+<a id="__codelineno-26-14" name="__codelineno-26-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-26-15" name="__codelineno-26-15"></a>
+<a id="__codelineno-26-16" name="__codelineno-26-16"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// 如果没有发现相邻相同的位，返回 true</span>
+<a id="__codelineno-26-17" name="__codelineno-26-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-26-18" name="__codelineno-26-18"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="3">3. 课后练习</h2>
 <h3 id="ascii_1">ASCII 相关问题</h3>
 <table>

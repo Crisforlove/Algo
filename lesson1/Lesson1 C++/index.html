@@ -627,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Lesson1%20Python/" class="md-nav__link">
+      <a href="../Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2898,14 +2898,18 @@
 <li>Eclipse CDT 是 Eclipse 的 C/C++ 开发工具集成，提供了丰富的功能如代码编辑、调试、版本控制等。它是一个开源、跨平台的 IDE，适合需要灵活配置和丰富插件支持的开发者使用。</li>
 </ul>
 <p>这里以 VSCode为例展示如何使用IDE编写你的第一个Hello World 程序：</p>
-<p>打开终端（MacOS）/ Developer Command Prompt for VS（Windows）并输入以下命令：</p>
-<pre><code class="language-shell">mkdir projects
-cd projects
-mkdir helloworld
-cd helloworld
-code .
-</code></pre>
-<p>以上命令会依次在默认路径下创建 projects 文件夹、helloworld 子文件夹，并在 helloworld 文件夹中打开 VS Code。</p>
+<p>打开终端（MacOS）/ Developer Command Prompt for VS（Windows）并输入以下命令：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>mkdir<span class="w"> </span>projects
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>projects
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>mkdir<span class="w"> </span>helloworld
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="nb">cd</span><span class="w"> </span>helloworld
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>code<span class="w"> </span>.
+</code></pre></div></td></tr></table></div>
+以上命令会依次在默认路径下创建 projects 文件夹、helloworld 子文件夹，并在 helloworld 文件夹中打开 VS Code。</p>
 <h4 id="_1">常见问题：</h4>
 <p><strong>如果在 Windows 上<code>mkdir</code>后显示“拒绝访问”：</strong>
 - 可以尝试退出后右键单击 "Developer Command Prompt for VS"
@@ -2920,15 +2924,20 @@ code .
 <p>在 VS Code 的资源管理器标题栏中，选择“新文件”按钮，并命名为 <code>helloworld.cpp</code>。
 <img alt="" src="https://i.imgur.com/2IlBqfi.png" /></p>
 <h5 id="hello-world">添加 Hello World 源代码</h5>
-<p>将以下代码粘贴到 <code>helloworld.cpp</code> 文件中：</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-
-int main(){
-    cout &lt;&lt; &quot;Hello World! &quot; &lt;&lt; endl;
-}
-</code></pre>
-<p>按 <code>⌘S</code> (Mac) 或 <code>Ctrl+S</code> (Windows) 保存文件。保存后，文件资源管理器视图中会显示新添加的文件。
+<p>将以下代码粘贴到 <code>helloworld.cpp</code> 文件中：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello World! &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+按 <code>⌘S</code> (Mac) 或 <code>Ctrl+S</code> (Windows) 保存文件。保存后，文件资源管理器视图中会显示新添加的文件。
 <img alt="" src="https://i.imgur.com/Id8g35j.png" /></p>
 <h3 id="helloworldcpp">运行 <code>helloworld.cpp</code></h3>
 <ul>
@@ -2964,18 +2973,23 @@ int main(){
 <li>不能用C++关键字或保留字做标识符。</li>
 <li>C++标识符大小写敏感。</li>
 </ul>
-<p>合法的标识符，如：</p>
-<pre><code class="language-cpp">int a = 3;
-int _123 = 3;
-int myVar = 3;
-int 变量1 = 3; //虽然合法，但不推荐使用中文
-</code></pre>
-<p>不合法的标识符，如：</p>
-<pre><code class="language-cpp">int 1a = 3; //不能使用数字开头
-int a# = 3; //不能包含#这样的特殊字符
-int int = 3; //不能使用关键字
-</code></pre>
-<p>注意：虽然C++的语法允许使用下划线（_）作为标识符的开始，但是在很多企业的开发规范中约定，不能使用下划线作为标识符的开始，以达到统一标识符格式，减少歧义的效果。</p>
+<p>合法的标识符，如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">_123</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">myVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">变量1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">//虽然合法，但不推荐使用中文</span>
+</code></pre></div></td></tr></table></div>
+不合法的标识符，如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="mi">1</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">//不能使用数字开头</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="err">#</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">//不能包含#这样的特殊字符</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kt">int</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">//不能使用关键字</span>
+</code></pre></div></td></tr></table></div>
+注意：虽然C++的语法允许使用下划线（_）作为标识符的开始，但是在很多企业的开发规范中约定，不能使用下划线作为标识符的开始，以达到统一标识符格式，减少歧义的效果。</p>
 <h3 id="42">4.2 关键字和保留字</h3>
 <p>关键字和保留字是C++语言中具有特殊含义的单词或符号。关键字是C++语言本身定义的，用于表示特定的语法结构和操作，不能用作标识符，如变量名、类名等。</p>
 <p>C++语言关键字如下所示：
@@ -2991,71 +3005,97 @@ int int = 3; //不能使用关键字
 - 变量：顾名思义，会变的量。
 - 常量：自然界中规定好了的、不会变的值。</p>
 <h3 id="52">5.2 变量的声明</h3>
-<p>在C++中，需要先声明一个变量，才能使用这个变量。变量的声明包含两点：变量的数据类型和变量名，语法格式如下：</p>
-<pre><code class="language-shell">数据类型 变量名； 
-</code></pre>
-<p>数据类型可以是C++的任意数据类型之一；变量名即变量的名称，用于存储变量值：</p>
-<pre><code class="language-cpp">int a;
-char b;
-</code></pre>
-<p>可以同时声明多个同一数据类型的变量，变量之间用“,”隔开，例如：</p>
-<pre><code class="language-cpp">int c，d，e;
-
-等同于：
-
-int c;
-int d;
-int e;
-</code></pre>
+<p>在C++中，需要先声明一个变量，才能使用这个变量。变量的声明包含两点：变量的数据类型和变量名，语法格式如下：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>数据类型<span class="w"> </span>变量名；<span class="w"> </span>
+</code></pre></div></td></tr></table></div></p>
+<p>数据类型可以是C++的任意数据类型之一；变量名即变量的名称，用于存储变量值：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+可以同时声明多个同一数据类型的变量，变量之间用“,”隔开，例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span>
+<span class="normal"><a href="#__codelineno-6-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="err">，</span><span class="n">d</span><span class="err">，</span><span class="n">e</span><span class="p">;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">等同于</span><span class="err">：</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="kt">int</span><span class="w"> </span><span class="n">e</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="53">5.3 变量的初始化</h3>
 <p>C++语法规定：变量可以不进行初始化，只声明后在使用前进行赋值。虽然C++允许未初始化的变量，但使用未初始化的变量会导致不确定的行为。变量的第一次赋值即对变量的初始化。在C++中，使用等号(=)实现变量的赋值。</p>
 <p>变量的初始化有以下两种方式：</p>
-<p>1、在声明变量时，同时对变量进行初始化，语法如下：</p>
-<pre><code class="language-cpp">数据类型 变量名 = 初始值；
-
-例如：
-int f = 5;
-</code></pre>
-<p>2、第一次使用变量前，对变量进行初始化，语法如下：</p>
-<pre><code class="language-cpp">数据类型 变量名；
-    ……
-变量名 = 初始值；
-例如：
-
-int sum;                  // 声明变量sum
-cout &lt;&lt; sum &lt;&lt; endl;  // 报错，不能使用未赋值的变量
-sum = 100;                // 给变量sum赋值
-cout &lt;&lt; sum &lt;&lt; endl;      // 正确，输出100
-</code></pre>
+<p>1、在声明变量时，同时对变量进行初始化，语法如下：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">数据类型</span><span class="w"> </span><span class="n">变量名</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">初始值</span><span class="err">；</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">例如</span><span class="err">：</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+2、第一次使用变量前，对变量进行初始化，语法如下：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span>
+<span class="normal"><a href="#__codelineno-8-8">8</a></span>
+<span class="normal"><a href="#__codelineno-8-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">数据类型</span><span class="w"> </span><span class="n">变量名</span><span class="err">；</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="err">……</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">变量名</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">初始值</span><span class="err">；</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">例如</span><span class="err">：</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span><span class="w">                  </span><span class="c1">// 声明变量sum</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 报错，不能使用未赋值的变量</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">                </span><span class="c1">// 给变量sum赋值</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w">      </span><span class="c1">// 正确，输出100</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="54">5.4 变量的访问</h3>
 <p>变量在声明和初始化后，可以对变量进行访问，包括读取变量的值和修改变量的值。代码如下：</p>
-<pre><code class="language-cpp">int sum = 100;           // 声明变量sum并初始化
-cout &lt;&lt; sum &lt;&lt; endl;     // 输出变量的值 -&gt; 100
-sum = 200;               // 修改变量sum的值
-cout &lt;&lt; sum &lt;&lt; endl;     // 再次输出变量的值 -&gt; 200
-</code></pre>
-<p>变量的访问应注意以下几个方面：</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">           </span><span class="c1">// 声明变量sum并初始化</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w">     </span><span class="c1">// 输出变量的值 -&gt; 100</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w">               </span><span class="c1">// 修改变量sum的值</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w">     </span><span class="c1">// 再次输出变量的值 -&gt; 200</span>
+</code></pre></div></td></tr></table></div>
+变量的访问应注意以下几个方面：</p>
 <p>1、变量的操作必须与类型匹配。</p>
 <p>变量在声明时指定了类型，C++编译器会检测对该变量的操作是否与其他类型匹配，如果对变量的赋值或者操作与其类型不匹配，会产生编译错误，例如：</p>
-<pre><code class="language-cpp">//编译错误，变量a的类型为int整型，不能赋值为浮点类型的值
-int a = 3.14;  
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1">//编译错误，变量a的类型为int整型，不能赋值为浮点类型的值</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span><span class="w">  </span>
+</code></pre></div></td></tr></table></div>
 <p>2、变量的数据类型只写一次。</p>
-<p>变量在第一次声明的时候写数据类型，再次使用时不写数据类型，例如：</p>
-<pre><code class="language-cpp">int n;
-n = 5;   // 正确，再次使用变量n时不写数据类型
-int n = 10; // 错误，再次指定变量的数据类型会出现编译错误
-</code></pre>
+<p>变量在第一次声明的时候写数据类型，再次使用时不写数据类型，例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">   </span><span class="c1">// 正确，再次使用变量n时不写数据类型</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// 错误，再次指定变量的数据类型会出现编译错误</span>
+</code></pre></div></td></tr></table></div></p>
 <p>3、未经声明的变量不能使用。</p>
 <p>变量必须先声明，否则会出现编译错误，例如：</p>
-<pre><code class="language-cpp">k = 5;    
-cout &lt;&lt; k &lt;&lt; endl;  // 编译错误，变量k没有声明
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">    </span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 编译错误，变量k没有声明</span>
+</code></pre></div></td></tr></table></div>
 <p>4、变量初始化后才可以使用。</p>
-<p>C++允许声明变量而不初始化，但使用未初始化的变量会导致不可预测的结果，例如：</p>
-<pre><code class="language-cpp">int t;                             
-cout &lt;&lt; t &lt;&lt; endl;  // 变量t没有初始化，可能输出垃圾值
-</code></pre>
+<p>C++允许声明变量而不初始化，但使用未初始化的变量会导致不可预测的结果，例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w">                             </span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 变量t没有初始化，可能输出垃圾值</span>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="6-c">6. C++的数据类型</h2>
 <p>C++的数据类型分为：基本数据类型、复合数据类型和指针类型等，本文档针对初学者，仅对基本数据类型进行详细介绍。</p>
 <h3 id="61">6.1 基本数据类型</h3>
@@ -3091,22 +3131,26 @@ cout &lt;&lt; t &lt;&lt; endl;  // 变量t没有初始化，可能输出垃圾�
 <li>表示范围：约 ±3.402823466e+38F （14位有效数字）。</li>
 <li>精度：通常为6位有效数字。</li>
 </ul>
-<p>初始化：可以使用浮点数常量、整数常量或转换来初始化。</p>
-<pre><code class="language-cpp">float f1 = 3.14f; // 使用浮点数常量初始化
-float f2 = 10; // 使用整数初始化，会进行隐式类型转换
-float f3 = static_cast&lt;float&gt;(5); // 使用显式类型转换初始化
-</code></pre>
+<p>初始化：可以使用浮点数常量、整数常量或转换来初始化。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kt">float</span><span class="w"> </span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14f</span><span class="p">;</span><span class="w"> </span><span class="c1">// 使用浮点数常量初始化</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="kt">float</span><span class="w"> </span><span class="n">f2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// 使用整数初始化，会进行隐式类型转换</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">f3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 使用显式类型转换初始化</span>
+</code></pre></div></td></tr></table></div></p>
 <h5 id="double">double 类型：</h5>
 <ul>
 <li>字节数：通常为8字节（64位）。</li>
 <li>表示范围：约 ±1.7976931348623158e+308 （15位有效数字）。</li>
 <li>精度：通常为15位有效数字。</li>
 </ul>
-<p>初始化：可以使用浮点数常量、整数常量或转换来初始化。</p>
-<pre><code class="language-cpp">double d1 = 3.14; // 使用浮点数常量初始化
-double d2 = 10; // 使用整数初始化，会进行隐式类型转换
-double d3 = static_cast&lt;double&gt;(5); // 使用显式类型转换初始化
-</code></pre>
+<p>初始化：可以使用浮点数常量、整数常量或转换来初始化。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">d1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span><span class="w"> </span><span class="c1">// 使用浮点数常量初始化</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// 使用整数初始化，会进行隐式类型转换</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="kt">double</span><span class="w"> </span><span class="n">d3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 使用显式类型转换初始化</span>
+</code></pre></div></td></tr></table></div></p>
 <h5 id="_3">注意事项：</h5>
 <ul>
 <li>浮点数类型的精度是有限的，计算过程中可能会存在舍入误差。</li>
@@ -3117,64 +3161,83 @@ double d3 = static_cast&lt;double&gt;(5); // 使用显式类型转换初始化
 <h4 id="613">6.1.3 字符类型</h4>
 <p>在C++中，字符类型 char 用于表示单个字符，并使用ASCII编码。它是一种整数类型，通常占用1个字节（8位）。以下是关于 char 类型的一些说明：</p>
 <p>初始化：
-- char 类型可以通过单个字符来进行初始化。例如：</p>
-<pre><code class="language-cpp">char ch1 = 'A'; // 使用单引号初始化
-char ch2 = 65; // 使用整数值初始化，对应ASCII码中的字符 'A'
-char ch3 = '\n'; // 使用转义字符初始化，表示换行符
-</code></pre>
+- char 类型可以通过单个字符来进行初始化。例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">ch1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 使用单引号初始化</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">ch2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65</span><span class="p">;</span><span class="w"> </span><span class="c1">// 使用整数值初始化，对应ASCII码中的字符 &#39;A&#39;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="kt">char</span><span class="w"> </span><span class="n">ch3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 使用转义字符初始化，表示换行符</span>
+</code></pre></div></td></tr></table></div></p>
 <p>字符串：
-- 在C++中，char 类型也可以用于表示字符数组，即字符串。字符串是由多个字符组成的字符序列，以null终止。例如：</p>
-<pre><code class="language-cpp">char str1[] = &quot;Hello&quot;; // 声明并初始化一个字符串
-char str2[10]; // 声明一个字符数组（字符串）
-strcpy(str2, &quot;World&quot;); // 将字符串复制到字符数组中
-</code></pre>
+- 在C++中，char 类型也可以用于表示字符数组，即字符串。字符串是由多个字符组成的字符序列，以null终止。例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">str1</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 声明并初始化一个字符串</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">str2</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span><span class="w"> </span><span class="c1">// 声明一个字符数组（字符串）</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="n">strcpy</span><span class="p">(</span><span class="n">str2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;World&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 将字符串复制到字符数组中</span>
+</code></pre></div></td></tr></table></div></p>
 <h4 id="614">6.1.4 布尔类型</h4>
 <p>在C++中，布尔类型 bool 用于表示逻辑值，只有两个取值：true 和 false。bool 类型主要用于控制流程和条件判断。</p>
 <p>以下是布尔类型的一些说明：</p>
 <p>初始化：
-- bool 类型可以通过 true 或者 false 来进行初始化。例如：</p>
-<pre><code class="language-cpp">bool flag1 = true; // 初始化为true
-bool flag2 = false; // 初始化为false
-</code></pre>
+- bool 类型可以通过 true 或者 false 来进行初始化。例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">flag1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// 初始化为true</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="kt">bool</span><span class="w"> </span><span class="n">flag2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 初始化为false</span>
+</code></pre></div></td></tr></table></div></p>
 <p>条件判断：
-- 布尔类型常用于条件判断，例如 if 语句和循环语句中。只有当条件为 true 时，相应的代码块才会执行。例如：</p>
-<pre><code class="language-cpp">bool isTrue = true;
-if (isTrue) {
-// 条件为真，执行这里的代码
-cout &lt;&lt; &quot;Condition is true!&quot;;
-}
-</code></pre>
+- 布尔类型常用于条件判断，例如 if 语句和循环语句中。只有当条件为 true 时，相应的代码块才会执行。例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isTrue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isTrue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="c1">// 条件为真，执行这里的代码</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Condition is true!&quot;</span><span class="p">;</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <p>逻辑运算：
-- 布尔类型可以进行逻辑运算，包括逻辑与 &amp;&amp;、逻辑或 || 和逻辑非 !。逻辑运算的结果也是布尔类型。例如：</p>
-<pre><code class="language-cpp">bool condition1 = true;
-bool condition2 = false;
-bool result1 = condition1 &amp;&amp; condition2; // 逻辑与，结果为false
-bool result2 = condition1 || condition2; // 逻辑或，结果为true
-bool result3 = !condition1; // 逻辑非，结果为false
-</code></pre>
-<p>比较运算：
-- 布尔类型可以进行比较运算，如等于 == 和不等于 !=。比较运算的结果也是布尔类型。例如：</p>
-<pre><code class="language-cpp">bool result1 = (10 == 5); // 结果为false
-bool result2 = (10 != 5); // 结果为true
-</code></pre>
-<ul>
-<li>布尔类型在内存中通常占用1个字节的空间，但实际上其值只能是 true 或者 false。在进行值的赋值、计算或比较时，可以使用布尔类型来简洁地表达逻辑关系。</li>
-</ul>
+- 布尔类型可以进行逻辑运算，包括逻辑与 &amp;&amp;、逻辑或 || 和逻辑非 !。逻辑运算的结果也是布尔类型。例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">condition1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="kt">bool</span><span class="w"> </span><span class="n">condition2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="kt">bool</span><span class="w"> </span><span class="n">result1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">condition1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">condition2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 逻辑与，结果为false</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="kt">bool</span><span class="w"> </span><span class="n">result2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">condition1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">condition2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 逻辑或，结果为true</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="kt">bool</span><span class="w"> </span><span class="n">result3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="n">condition1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 逻辑非，结果为false</span>
+</code></pre></div></td></tr></table></div>
+比较运算：
+- 布尔类型可以进行比较运算，如等于 == 和不等于 !=。比较运算的结果也是布尔类型。例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">result1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 结果为false</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="kt">bool</span><span class="w"> </span><span class="n">result2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 结果为true</span>
+</code></pre></div></td></tr></table></div>
+- 布尔类型在内存中通常占用1个字节的空间，但实际上其值只能是 true 或者 false。在进行值的赋值、计算或比较时，可以使用布尔类型来简洁地表达逻辑关系。</p>
 <h3 id="62">6.2 字符串</h3>
 <p>在C++中，字符串有两种主要表示方式：C风格字符串（字符数组）和C++风格字符串（<code>std::string</code>）。</p>
 <h4 id="1-cstdstring">1. C++风格字符串（<code>std::string</code>）</h4>
 <p>C++标准库提供了<code>std::string</code>类，用于更方便和安全地处理字符串。使用<code>std::string</code>时，需要包含<code>&lt;string&gt;</code>头文件。</p>
-<p><strong>示例：</strong></p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;string&gt;
-
-int main() {
-    std::string str = &quot;abc&quot;;
-    std::cout &lt;&lt; str &lt;&lt; std::endl;
-    return 0;
-}
-</code></pre>
-<p><strong>优点：</strong>
+<p><strong>示例：</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span>
+<span class="normal"><a href="#__codelineno-22-6">6</a></span>
+<span class="normal"><a href="#__codelineno-22-7">7</a></span>
+<span class="normal"><a href="#__codelineno-22-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abc&quot;</span><span class="p">;</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<strong>优点：</strong>
 - 提供丰富的成员函数，支持字符串的各种操作（例如拼接、查找、替换等）。
 - 自动管理内存，避免手动管理字符数组带来的复杂性和潜在错误。
 - 支持使用<code>+</code>操作符进行字符串拼接。</p>
@@ -3184,16 +3247,22 @@ int main() {
 - 希望代码更简洁、易读且不易出错。</p>
 <h4 id="2-c">2. C风格字符串（字符数组）</h4>
 <p>C风格字符串是一个以<code>'\0'</code>（空字符）结尾的字符数组。字符数组使用<code>char</code>类型，并需要手动管理字符串的长度和内存。</p>
-<p><strong>示例：</strong></p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-
-int main() {
-    char str[] = &quot;abc&quot;;
-    std::cout &lt;&lt; str &lt;&lt; std::endl;
-    return 0;
-}
-</code></pre>
-<p><strong>优点：</strong>
+<p><strong>示例：</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span>
+<span class="normal"><a href="#__codelineno-23-5">5</a></span>
+<span class="normal"><a href="#__codelineno-23-6">6</a></span>
+<span class="normal"><a href="#__codelineno-23-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">str</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abc&quot;</span><span class="p">;</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<strong>优点：</strong>
 - 更接近底层，可以更高效地操作内存。
 - 在某些低级编程场景下（如嵌入式编程）更加常用。</p>
 <p><strong>适用场景：</strong>
@@ -3263,31 +3332,54 @@ int main() {
 <li>空类型：void，用于表示无类型或无返回值的函数</li>
 </ul>
 <h3 id="66">6.6 常用数据类型的使用实例</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;string&gt;
-using namespace std;
-
-int main() {
-    // 学生信息
-    int studentId = 12345;
-    string studentName = &quot;赵镇&quot;;
-    int age = 20;
-    double score = 92.5;
-    char gender = '男';
-    bool isMarried = false;
-
-    // 输出学生信息
-    cout &lt;&lt; &quot;学生信息：&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;学号：&quot; &lt;&lt; studentId &lt;&lt; endl;
-    cout &lt;&lt; &quot;姓名：&quot; &lt;&lt; studentName &lt;&lt; endl;
-    cout &lt;&lt; &quot;年龄：&quot; &lt;&lt; age &lt;&lt; endl;
-    cout &lt;&lt; &quot;成绩：&quot; &lt;&lt; score &lt;&lt; endl;
-    cout &lt;&lt; &quot;性别：&quot; &lt;&lt; gender &lt;&lt; endl;
-    cout &lt;&lt; &quot;婚否：&quot; &lt;&lt; boolalpha &lt;&lt; isMarried &lt;&lt; endl;
-
-    return 0;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span>
+<span class="normal"><a href="#__codelineno-24-11">11</a></span>
+<span class="normal"><a href="#__codelineno-24-12">12</a></span>
+<span class="normal"><a href="#__codelineno-24-13">13</a></span>
+<span class="normal"><a href="#__codelineno-24-14">14</a></span>
+<span class="normal"><a href="#__codelineno-24-15">15</a></span>
+<span class="normal"><a href="#__codelineno-24-16">16</a></span>
+<span class="normal"><a href="#__codelineno-24-17">17</a></span>
+<span class="normal"><a href="#__codelineno-24-18">18</a></span>
+<span class="normal"><a href="#__codelineno-24-19">19</a></span>
+<span class="normal"><a href="#__codelineno-24-20">20</a></span>
+<span class="normal"><a href="#__codelineno-24-21">21</a></span>
+<span class="normal"><a href="#__codelineno-24-22">22</a></span>
+<span class="normal"><a href="#__codelineno-24-23">23</a></span>
+<span class="normal"><a href="#__codelineno-24-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="w">    </span><span class="c1">// 学生信息</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">studentId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span><span class="p">;</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">studentName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;赵镇&quot;</span><span class="p">;</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">92.5</span><span class="p">;</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">gender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;男&#39;</span><span class="p">;</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isMarried</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-24-13" name="__codelineno-24-13"></a>
+<a id="__codelineno-24-14" name="__codelineno-24-14"></a><span class="w">    </span><span class="c1">// 输出学生信息</span>
+<a id="__codelineno-24-15" name="__codelineno-24-15"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;学生信息：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-24-16" name="__codelineno-24-16"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;学号：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">studentId</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-24-17" name="__codelineno-24-17"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;姓名：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">studentName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-24-18" name="__codelineno-24-18"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;年龄：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-24-19" name="__codelineno-24-19"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;成绩：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-24-20" name="__codelineno-24-20"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;性别：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">gender</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-24-21" name="__codelineno-24-21"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;婚否：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">boolalpha</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">isMarried</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-24-22" name="__codelineno-24-22"></a>
+<a id="__codelineno-24-23" name="__codelineno-24-23"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-24-24" name="__codelineno-24-24"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="7-c">7. C++中的运算符</h2>
 <p>C++中的运算符种类丰富，包括算术运算符、赋值运算符、比较运算符、逻辑运算符、条件（三目）运算符和位运算符</p>
 <ul>
@@ -3301,11 +3393,14 @@ int main() {
 <li><code>++</code>（自增）</li>
 <li><code>--</code>（自减）</li>
 <li><code>++</code> 和 <code>--</code>可以作为前缀或后缀形式出现，影响变量的值。
-<code>cpp
-int a = 10;
-int b = 20;
-int result = a + b; // 30
-a++; // 11</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// 30</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="n">a</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 11</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 </li>
 <li>赋值运算符：
@@ -3316,15 +3411,14 @@ a++; // 11</code></li>
 <li><code>*=</code>（自乘一次等于）</li>
 <li><code>/=</code>（自除一次等于）</li>
 <li><code>%=</code>（求模并赋值）
-<code>cpp
-int x = 10;
-x += 5; // 等同于 x = x + 5;</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// 等同于 x = x + 5;</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 </li>
-<li>
-<p>比较运算符：
-  比较运算符用于比较两个值的大小或相等性，包括：</p>
-<ul>
+<li>比较运算符：
+  比较运算符用于比较两个值的大小或相等性，包括：<ul>
 <li><code>&lt;</code>（小于）</li>
 <li><code>&gt;</code>（大于）</li>
 <li><code>&gt;=</code>（大于等于）</li>
@@ -3332,91 +3426,136 @@ x += 5; // 等同于 x = x + 5;</code></li>
 <li><code>==</code>（等于）</li>
 <li><code>!=</code>（不等于）</li>
 </ul>
-<p><code>cpp
-   int m = 10;
-int n = 20;
-bool result = (m &gt; n); // 比较 m 是否大于 n</code>
+</li>
+</ul>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="kt">bool</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="c1">// 比较 m 是否大于 n</span>
+</code></pre></div></td></tr></table></div>
 - 逻辑运算符：
   逻辑运算符用于组合布尔表达式，实现逻辑运算，包括：
   - <code>&amp;&amp;</code>（逻辑与）
   - <code>||</code>（逻辑或）
-  - <code>!</code>（逻辑非）
-<code>cpp
-bool condition1 = true;
-bool condition2 = false;
-bool result = condition1 &amp;&amp; condition2; // 使用逻辑与运算符</code>
+- <code>!</code>（逻辑非）
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<span class="normal"><a href="#__codelineno-28-2">2</a></span>
+<span class="normal"><a href="#__codelineno-28-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">condition1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="kt">bool</span><span class="w"> </span><span class="n">condition2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="kt">bool</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">condition1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">condition2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 使用逻辑与运算符</span>
+</code></pre></div></td></tr></table></div>
 - 条件（三目）运算符 <code>?:</code> ：
-条件运算符 ?: 是一个三元运算符，用于根据条件表达式的结果选择两个值中的一个。语法形式为 <code>result = (condition) ? value1 : value2;</code> 其中，<code>condition</code> 是要评估的布尔表达式，<code>value1</code> 是如果 <code>condition</code> 为 <code>true</code> 则返回的值，而 <code>value2</code> 是如果 <code>condition</code> 为 <code>false</code> 则返回的值。
-<code>cpp
-int age = 20;
-string message = (age &gt;= 18) ? "成年人" : "未成年人";  // 根据年龄判断成年人或未成年人</code>
+    条件运算符 ?: 是一个三元运算符，用于根据条件表达式的结果选择两个值中的一个。语法形式为 <code>result = (condition) ? value1 : value2;</code> 其中，<code>condition</code> 是要评估的布尔表达式，<code>value1</code> 是如果 <code>condition</code> 为 <code>true</code> 则返回的值，而 <code>value2</code> 是如果 <code>condition</code> 为 <code>false</code> 则返回的值。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="n">string</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;成年人&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">&quot;未成年人&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 根据年龄判断成年人或未成年人</span>
+</code></pre></div></td></tr></table></div>
 - 位运算符：
   位运算符用于对二进制位进行操作，包括：
-- <code>&amp;</code>（按位与）
-- <code>|</code>（按位或）
-- <code>^</code>（按位异或）
-- <code>~</code>（按位取反）
-- <code>&lt;&lt;</code>（左移）
-- <code>&gt;&gt;</code>（右移）
-<code>cpp
-int a = 5;  // 二进制为 101
-int b = 3;  // 二进制为 011
-int result = a &amp; b; // 按位与操作，结果为 001，即 1</code>
+    - <code>&amp;</code>（按位与）
+    - <code>|</code>（按位或）
+    - <code>^</code>（按位异或）
+    - <code>~</code>（按位取反）
+    - <code>&lt;&lt;</code>（左移）
+    - <code>&gt;&gt;</code>（右移）
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<span class="normal"><a href="#__codelineno-30-2">2</a></span>
+<span class="normal"><a href="#__codelineno-30-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">  </span><span class="c1">// 二进制为 101</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">  </span><span class="c1">// 二进制为 011</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// 按位与操作，结果为 001，即 1</span>
+</code></pre></div></td></tr></table></div>
 C++中的运算符不仅包括上述基本类型，还包括其他运算符例如<code>sizeof</code>, <code>typeid</code>等。此外，C++还支持字符串连接操作，其中 <code>+</code> 运算符可以用于连接 <code>std::string</code> 类型的字符串。</p>
-</li>
-</ul>
 <h2 id="8-c">8. C++的输入与输出</h2>
 <h3 id="81-cin">8.1 使用 cin 读取字符串/整数/浮点数</h3>
 <p><code>cin</code> 可以读取用户的键盘输入。例如：
-例如：</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-
-int main() {
-    string name;
-    int age;
-    float salary;
-
-    cout &lt;&lt; &quot;请输入你的姓名：&quot; &lt;&lt; endl;
-    getline(cin, name); // 读取整行字符串，包括空格
-    cout &lt;&lt; &quot;请输入你的年龄：&quot; &lt;&lt; endl;
-    cin &gt;&gt; age; // 读取整数
-    cout &lt;&lt; &quot;请输入你的工资：&quot; &lt;&lt; endl;
-    cin &gt;&gt; salary; // 读取浮点数
-
-    cout &lt;&lt; &quot;你的信息如下：&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;姓名: &quot; &lt;&lt; name &lt;&lt; &quot;\n&quot; &lt;&lt; &quot;年龄：&quot; &lt;&lt; age &lt;&lt; &quot;\n&quot; &lt;&lt; &quot;工资：&quot; &lt;&lt; salary &lt;&lt; endl;
-
-    return 0;
-}
-</code></pre>
+例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-31-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-31-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-31-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-31-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-31-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-31-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-31-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-31-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-31-10">10</a></span>
+<span class="normal"><a href="#__codelineno-31-11">11</a></span>
+<span class="normal"><a href="#__codelineno-31-12">12</a></span>
+<span class="normal"><a href="#__codelineno-31-13">13</a></span>
+<span class="normal"><a href="#__codelineno-31-14">14</a></span>
+<span class="normal"><a href="#__codelineno-31-15">15</a></span>
+<span class="normal"><a href="#__codelineno-31-16">16</a></span>
+<span class="normal"><a href="#__codelineno-31-17">17</a></span>
+<span class="normal"><a href="#__codelineno-31-18">18</a></span>
+<span class="normal"><a href="#__codelineno-31-19">19</a></span>
+<span class="normal"><a href="#__codelineno-31-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a>
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-31-6" name="__codelineno-31-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-31-7" name="__codelineno-31-7"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">salary</span><span class="p">;</span>
+<a id="__codelineno-31-8" name="__codelineno-31-8"></a>
+<a id="__codelineno-31-9" name="__codelineno-31-9"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;请输入你的姓名：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-31-10" name="__codelineno-31-10"></a><span class="w">    </span><span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span><span class="w"> </span><span class="c1">// 读取整行字符串，包括空格</span>
+<a id="__codelineno-31-11" name="__codelineno-31-11"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;请输入你的年龄：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-31-12" name="__codelineno-31-12"></a><span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"> </span><span class="c1">// 读取整数</span>
+<a id="__codelineno-31-13" name="__codelineno-31-13"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;请输入你的工资：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-31-14" name="__codelineno-31-14"></a><span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">salary</span><span class="p">;</span><span class="w"> </span><span class="c1">// 读取浮点数</span>
+<a id="__codelineno-31-15" name="__codelineno-31-15"></a>
+<a id="__codelineno-31-16" name="__codelineno-31-16"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;你的信息如下：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-31-17" name="__codelineno-31-17"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;姓名: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;年龄：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;工资：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-31-18" name="__codelineno-31-18"></a>
+<a id="__codelineno-31-19" name="__codelineno-31-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-31-20" name="__codelineno-31-20"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="82-cout">8.2 cout</h3>
-<p><code>cout</code> 可以打印一行内容，若加上<code>endl</code>打印完会自动换行，不加则不会换行</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-
-int main() {
-    cout &lt;&lt; &quot;hello, C++!&quot; &lt;&lt; endl;
-    int a = 9;
-    cout &lt;&lt; &quot;output: &quot; &lt;&lt; a &lt;&lt; endl;
-    return 0;
-}
-</code></pre>
+<p><code>cout</code> 可以打印一行内容，若加上<code>endl</code>打印完会自动换行，不加则不会换行
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span>
+<span class="normal"><a href="#__codelineno-32-4">4</a></span>
+<span class="normal"><a href="#__codelineno-32-5">5</a></span>
+<span class="normal"><a href="#__codelineno-32-6">6</a></span>
+<span class="normal"><a href="#__codelineno-32-7">7</a></span>
+<span class="normal"><a href="#__codelineno-32-8">8</a></span>
+<span class="normal"><a href="#__codelineno-32-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a>
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;hello, C++!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<a id="__codelineno-32-7" name="__codelineno-32-7"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;output: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-32-8" name="__codelineno-32-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-32-9" name="__codelineno-32-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="83-printf">8.3 printf</h3>
-<p><code>printf</code> 用于格式化输出，可以输出各种类型的数据，但不会自动换行。</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-
-int main() {
-    string a = &quot;wniuniu&quot;;
-    string b = &quot;brilliantgby&quot;;
-    printf(&quot;%s&quot;, a.c_str());
-    printf(&quot;%s&quot;, b.c_str());
-    printf(&quot;\n&quot;);
-    printf(&quot;OvO\n&quot;);
-    return 0;
-}
-</code></pre>
+<p><code>printf</code> 用于格式化输出，可以输出各种类型的数据，但不会自动换行。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-33-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-33-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-33-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-33-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-33-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-33-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-33-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-33-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-33-10">10</a></span>
+<span class="normal"><a href="#__codelineno-33-11">11</a></span>
+<span class="normal"><a href="#__codelineno-33-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;wniuniu&quot;</span><span class="p">;</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;brilliantgby&quot;</span><span class="p">;</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<a id="__codelineno-33-9" name="__codelineno-33-9"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<a id="__codelineno-33-10" name="__codelineno-33-10"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;OvO</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<a id="__codelineno-33-11" name="__codelineno-33-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-33-12" name="__codelineno-33-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="84-ifstreamofstream">8.4 输入输出流（<code>ifstream</code>/<code>ofstream</code>）</h3>
 <p>在 C++ 中，<code>ifstream</code> 和 <code>ofstream</code> 是两个基本的 I/O 类，用于处理文件流的输入和输出。它们分别是输入和输出操作的类，并且有多个子类，支持从各种数据源读取数据和将数据写入各种数据目标。</p>
 <p><code>ifstream</code> 和 <code>ofstream</code> 的关系
@@ -3426,73 +3565,125 @@ int main() {
 - <code>fstream</code>：继承自 <code>iostream</code>，结合了 <code>ifstream</code> 和 <code>ofstream</code> 的功能，既可以进行文件的输入操作也可以进行文件的输出操作。</p>
 <p>例如：</p>
 <h5 id="ifstream">使用 <code>ifstream</code> 读取文件</h5>
-<p><code>ifstream</code> 用于打开一个文件进行读取操作，并继承了 <code>istream</code> 的所有功能，可以使用各种输入操作符和方法读取文件内容。</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;fstream&gt;
-using namespace std;
-
-int main() {
-    ifstream inputFile(&quot;example.txt&quot;); // 打开文件进行读取
-    if (!inputFile) {
-        cerr &lt;&lt; &quot;无法打开文件&quot; &lt;&lt; endl;
-        return 1;
-    }
-
-    string line;
-    while (getline(inputFile, line)) { // 逐行读取文件内容
-        cout &lt;&lt; line &lt;&lt; endl;
-    }
-
-    inputFile.close(); // 关闭文件
-    return 0;
-}
-
-</code></pre>
+<p><code>ifstream</code> 用于打开一个文件进行读取操作，并继承了 <code>istream</code> 的所有功能，可以使用各种输入操作符和方法读取文件内容。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-34-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-34-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-34-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-34-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-34-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-34-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-34-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-34-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-34-10">10</a></span>
+<span class="normal"><a href="#__codelineno-34-11">11</a></span>
+<span class="normal"><a href="#__codelineno-34-12">12</a></span>
+<span class="normal"><a href="#__codelineno-34-13">13</a></span>
+<span class="normal"><a href="#__codelineno-34-14">14</a></span>
+<span class="normal"><a href="#__codelineno-34-15">15</a></span>
+<span class="normal"><a href="#__codelineno-34-16">16</a></span>
+<span class="normal"><a href="#__codelineno-34-17">17</a></span>
+<span class="normal"><a href="#__codelineno-34-18">18</a></span>
+<span class="normal"><a href="#__codelineno-34-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a>
+<a id="__codelineno-34-5" name="__codelineno-34-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6"></a><span class="w">    </span><span class="n">ifstream</span><span class="w"> </span><span class="n">inputFile</span><span class="p">(</span><span class="s">&quot;example.txt&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 打开文件进行读取</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">inputFile</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-34-8" name="__codelineno-34-8"></a><span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;无法打开文件&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-34-9" name="__codelineno-34-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-34-10" name="__codelineno-34-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-34-11" name="__codelineno-34-11"></a>
+<a id="__codelineno-34-12" name="__codelineno-34-12"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">line</span><span class="p">;</span>
+<a id="__codelineno-34-13" name="__codelineno-34-13"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">getline</span><span class="p">(</span><span class="n">inputFile</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 逐行读取文件内容</span>
+<a id="__codelineno-34-14" name="__codelineno-34-14"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-34-15" name="__codelineno-34-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-34-16" name="__codelineno-34-16"></a>
+<a id="__codelineno-34-17" name="__codelineno-34-17"></a><span class="w">    </span><span class="n">inputFile</span><span class="p">.</span><span class="n">close</span><span class="p">();</span><span class="w"> </span><span class="c1">// 关闭文件</span>
+<a id="__codelineno-34-18" name="__codelineno-34-18"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-34-19" name="__codelineno-34-19"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h5 id="ofstream">使用 <code>ofstream</code> 写入文件</h5>
-<p><code>ofstream</code> 用于打开一个文件进行写入操作，并继承了 <code>ostream</code> 的所有功能，可以使用各种输出操作符和方法写入文件内容。</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;fstream&gt;
-using namespace std;
-
-int main() {
-    ofstream outputFile(&quot;example.txt&quot;); // 打开文件进行写入
-    if (!outputFile) {
-        cerr &lt;&lt; &quot;无法打开文件&quot; &lt;&lt; endl;
-        return 1;
-    }
-
-    string data = &quot;Hello, World!&quot;;
-    outputFile &lt;&lt; data &lt;&lt; endl; // 写入数据到文件
-
-    outputFile.close(); // 关闭文件
-    return 0;
-}
-</code></pre>
+<p><code>ofstream</code> 用于打开一个文件进行写入操作，并继承了 <code>ostream</code> 的所有功能，可以使用各种输出操作符和方法写入文件内容。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-35-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-35-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-35-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-35-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-35-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-35-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-35-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-35-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-35-10">10</a></span>
+<span class="normal"><a href="#__codelineno-35-11">11</a></span>
+<span class="normal"><a href="#__codelineno-35-12">12</a></span>
+<span class="normal"><a href="#__codelineno-35-13">13</a></span>
+<span class="normal"><a href="#__codelineno-35-14">14</a></span>
+<span class="normal"><a href="#__codelineno-35-15">15</a></span>
+<span class="normal"><a href="#__codelineno-35-16">16</a></span>
+<span class="normal"><a href="#__codelineno-35-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-6" name="__codelineno-35-6"></a><span class="w">    </span><span class="n">ofstream</span><span class="w"> </span><span class="n">outputFile</span><span class="p">(</span><span class="s">&quot;example.txt&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 打开文件进行写入</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">outputFile</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8"></a><span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;无法打开文件&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-35-9" name="__codelineno-35-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-35-10" name="__codelineno-35-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-35-11" name="__codelineno-35-11"></a>
+<a id="__codelineno-35-12" name="__codelineno-35-12"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, World!&quot;</span><span class="p">;</span>
+<a id="__codelineno-35-13" name="__codelineno-35-13"></a><span class="w">    </span><span class="n">outputFile</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 写入数据到文件</span>
+<a id="__codelineno-35-14" name="__codelineno-35-14"></a>
+<a id="__codelineno-35-15" name="__codelineno-35-15"></a><span class="w">    </span><span class="n">outputFile</span><span class="p">.</span><span class="n">close</span><span class="p">();</span><span class="w"> </span><span class="c1">// 关闭文件</span>
+<a id="__codelineno-35-16" name="__codelineno-35-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-35-17" name="__codelineno-35-17"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h5 id="fstream">使用 <code>fstream</code> 进行同时读写操作</h5>
-<p><code>fstream</code> 结合了 <code>ifstream</code>和 <code>ofstream</code> 的功能，可以同时进行文件的读写操作。</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;fstream&gt;
-using namespace std;
-
-int main() {
-    fstream file(&quot;example.txt&quot;, ios::in | ios::out | ios::trunc); // 打开文件进行读写
-    if (!file) {
-        cerr &lt;&lt; &quot;无法打开文件&quot; &lt;&lt; endl;
-        return 1;
-    }
-
-    file &lt;&lt; &quot;Hello, World!&quot; &lt;&lt; endl; // 写入数据到文件
-    file.seekg(0); // 移动到文件开头
-    string line;
-    while (getline(file, line)) { // 读取文件内容
-        cout &lt;&lt; line &lt;&lt; endl;
-    }
-
-    file.close(); // 关闭文件
-    return 0;
-}
-
-</code></pre>
+<p><code>fstream</code> 结合了 <code>ifstream</code>和 <code>ofstream</code> 的功能，可以同时进行文件的读写操作。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-36-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-36-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-36-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-36-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-36-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-36-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-36-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-36-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-36-10">10</a></span>
+<span class="normal"><a href="#__codelineno-36-11">11</a></span>
+<span class="normal"><a href="#__codelineno-36-12">12</a></span>
+<span class="normal"><a href="#__codelineno-36-13">13</a></span>
+<span class="normal"><a href="#__codelineno-36-14">14</a></span>
+<span class="normal"><a href="#__codelineno-36-15">15</a></span>
+<span class="normal"><a href="#__codelineno-36-16">16</a></span>
+<span class="normal"><a href="#__codelineno-36-17">17</a></span>
+<span class="normal"><a href="#__codelineno-36-18">18</a></span>
+<span class="normal"><a href="#__codelineno-36-19">19</a></span>
+<span class="normal"><a href="#__codelineno-36-20">20</a></span>
+<span class="normal"><a href="#__codelineno-36-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4"></a>
+<a id="__codelineno-36-5" name="__codelineno-36-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6"></a><span class="w">    </span><span class="n">fstream</span><span class="w"> </span><span class="n">file</span><span class="p">(</span><span class="s">&quot;example.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ios</span><span class="o">::</span><span class="n">in</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ios</span><span class="o">::</span><span class="n">out</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ios</span><span class="o">::</span><span class="n">trunc</span><span class="p">);</span><span class="w"> </span><span class="c1">// 打开文件进行读写</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">file</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-8" name="__codelineno-36-8"></a><span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;无法打开文件&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-36-9" name="__codelineno-36-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-36-10" name="__codelineno-36-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-36-11" name="__codelineno-36-11"></a>
+<a id="__codelineno-36-12" name="__codelineno-36-12"></a><span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello, World!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 写入数据到文件</span>
+<a id="__codelineno-36-13" name="__codelineno-36-13"></a><span class="w">    </span><span class="n">file</span><span class="p">.</span><span class="n">seekg</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 移动到文件开头</span>
+<a id="__codelineno-36-14" name="__codelineno-36-14"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">line</span><span class="p">;</span>
+<a id="__codelineno-36-15" name="__codelineno-36-15"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">getline</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 读取文件内容</span>
+<a id="__codelineno-36-16" name="__codelineno-36-16"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-36-17" name="__codelineno-36-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-36-18" name="__codelineno-36-18"></a>
+<a id="__codelineno-36-19" name="__codelineno-36-19"></a><span class="w">    </span><span class="n">file</span><span class="p">.</span><span class="n">close</span><span class="p">();</span><span class="w"> </span><span class="c1">// 关闭文件</span>
+<a id="__codelineno-36-20" name="__codelineno-36-20"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-36-21" name="__codelineno-36-21"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="9">9. 课程总结</h2>
 <ul>
 <li>C++环境安装正常。</li>
@@ -3514,35 +3705,60 @@ int main() {
 <p>(C) 8577</p>
 <p>(D) 9233</p>
 <p>参考程序：</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-
-int main() {
-    // 获取用户输入的选项
-    cout &lt;&lt; &quot;请输入一个选项：&quot;;
-    int option;
-    cin &gt;&gt; option;
-
-    // 计算余数
-    int a = option % 12;
-    int b = option % 23;
-    int c = option % 31;
-
-    // 打印余数结果
-    cout &lt;&lt; &quot;For option &quot; &lt;&lt; option &lt;&lt; &quot;:&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;a = &quot; &lt;&lt; a &lt;&lt; &quot;, b = &quot; &lt;&lt; b &lt;&lt; &quot;, c = &quot; &lt;&lt; c &lt;&lt; endl;
-
-    // 判断是否满足条件
-    if (a == 1 &amp;&amp; b == 1 &amp;&amp; c == 1) {
-        cout &lt;&lt; &quot;Correct, That's what I find!! The number is: &quot; &lt;&lt; option &lt;&lt; endl;
-    } else {
-        cout &lt;&lt; &quot;Wrong, Please try another Answer!&quot; &lt;&lt; endl;
-    }
-
-    return 0;
-}
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-37-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-37-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-37-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-37-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-37-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-37-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-37-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-37-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-37-10">10</a></span>
+<span class="normal"><a href="#__codelineno-37-11">11</a></span>
+<span class="normal"><a href="#__codelineno-37-12">12</a></span>
+<span class="normal"><a href="#__codelineno-37-13">13</a></span>
+<span class="normal"><a href="#__codelineno-37-14">14</a></span>
+<span class="normal"><a href="#__codelineno-37-15">15</a></span>
+<span class="normal"><a href="#__codelineno-37-16">16</a></span>
+<span class="normal"><a href="#__codelineno-37-17">17</a></span>
+<span class="normal"><a href="#__codelineno-37-18">18</a></span>
+<span class="normal"><a href="#__codelineno-37-19">19</a></span>
+<span class="normal"><a href="#__codelineno-37-20">20</a></span>
+<span class="normal"><a href="#__codelineno-37-21">21</a></span>
+<span class="normal"><a href="#__codelineno-37-22">22</a></span>
+<span class="normal"><a href="#__codelineno-37-23">23</a></span>
+<span class="normal"><a href="#__codelineno-37-24">24</a></span>
+<span class="normal"><a href="#__codelineno-37-25">25</a></span>
+<span class="normal"><a href="#__codelineno-37-26">26</a></span>
+<span class="normal"><a href="#__codelineno-37-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a>
+<a id="__codelineno-37-4" name="__codelineno-37-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-37-5" name="__codelineno-37-5"></a><span class="w">    </span><span class="c1">// 获取用户输入的选项</span>
+<a id="__codelineno-37-6" name="__codelineno-37-6"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;请输入一个选项：&quot;</span><span class="p">;</span>
+<a id="__codelineno-37-7" name="__codelineno-37-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">option</span><span class="p">;</span>
+<a id="__codelineno-37-8" name="__codelineno-37-8"></a><span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">option</span><span class="p">;</span>
+<a id="__codelineno-37-9" name="__codelineno-37-9"></a>
+<a id="__codelineno-37-10" name="__codelineno-37-10"></a><span class="w">    </span><span class="c1">// 计算余数</span>
+<a id="__codelineno-37-11" name="__codelineno-37-11"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span>
+<a id="__codelineno-37-12" name="__codelineno-37-12"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">23</span><span class="p">;</span>
+<a id="__codelineno-37-13" name="__codelineno-37-13"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">31</span><span class="p">;</span>
+<a id="__codelineno-37-14" name="__codelineno-37-14"></a>
+<a id="__codelineno-37-15" name="__codelineno-37-15"></a><span class="w">    </span><span class="c1">// 打印余数结果</span>
+<a id="__codelineno-37-16" name="__codelineno-37-16"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;For option &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-37-17" name="__codelineno-37-17"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, b = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, c = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-37-18" name="__codelineno-37-18"></a>
+<a id="__codelineno-37-19" name="__codelineno-37-19"></a><span class="w">    </span><span class="c1">// 判断是否满足条件</span>
+<a id="__codelineno-37-20" name="__codelineno-37-20"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-37-21" name="__codelineno-37-21"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Correct, That&#39;s what I find!! The number is: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-37-22" name="__codelineno-37-22"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-37-23" name="__codelineno-37-23"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Wrong, Please try another Answer!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-37-24" name="__codelineno-37-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-37-25" name="__codelineno-37-25"></a>
+<a id="__codelineno-37-26" name="__codelineno-37-26"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-37-27" name="__codelineno-37-27"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>2.编写一个C++程序，用于模拟餐厅的点单过程。程序应提前告知用户汉堡、薯条和可乐的价格，并通过用户输入获得点单信息。最后，程序应分行输出客户点的内容，并打印出总价。</p>
 <p><strong>价格信息：</strong></p>
 <ul>
@@ -3559,21 +3775,34 @@ int main() {
 </ol>
 <p><strong>输入输出示例：</strong></p>
 <p>示例输出：</p>
-<pre><code>汉堡：$5
-薯条：$2
-可乐：$1
-
-请输入汉堡的数量：2
-请输入薯条的数量：1
-请输入可乐的数量：3
-
-您的点单如下：
-汉堡 X 2
-薯条 X 1
-可乐 X 3
-
-总价：$15
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-38-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-38-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-38-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-38-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-38-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-38-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-38-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-38-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-38-10">10</a></span>
+<span class="normal"><a href="#__codelineno-38-11">11</a></span>
+<span class="normal"><a href="#__codelineno-38-12">12</a></span>
+<span class="normal"><a href="#__codelineno-38-13">13</a></span>
+<span class="normal"><a href="#__codelineno-38-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a>汉堡：$5
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a>薯条：$2
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a>可乐：$1
+<a id="__codelineno-38-4" name="__codelineno-38-4"></a>
+<a id="__codelineno-38-5" name="__codelineno-38-5"></a>请输入汉堡的数量：2
+<a id="__codelineno-38-6" name="__codelineno-38-6"></a>请输入薯条的数量：1
+<a id="__codelineno-38-7" name="__codelineno-38-7"></a>请输入可乐的数量：3
+<a id="__codelineno-38-8" name="__codelineno-38-8"></a>
+<a id="__codelineno-38-9" name="__codelineno-38-9"></a>您的点单如下：
+<a id="__codelineno-38-10" name="__codelineno-38-10"></a>汉堡 X 2
+<a id="__codelineno-38-11" name="__codelineno-38-11"></a>薯条 X 1
+<a id="__codelineno-38-12" name="__codelineno-38-12"></a>可乐 X 3
+<a id="__codelineno-38-13" name="__codelineno-38-13"></a>
+<a id="__codelineno-38-14" name="__codelineno-38-14"></a>总价：$15
+</code></pre></div></td></tr></table></div>
 <p><strong>提示：</strong></p>
 <ul>
 <li>使用 <code>cin &gt;&gt;</code> 函数获取用户输入。</li>
@@ -3581,45 +3810,80 @@ int main() {
 <li>使用 <code>cout &lt;&lt;</code> 函数输出结果。</li>
 </ul>
 <p>示例代码：</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-
-int main() {
-    // 定义食物的价格
-    int burger_price = 5;
-    int fries_price = 2;
-    int cola_price = 1;
-
-    // 显示价格信息
-    cout &lt;&lt; &quot;汉堡：$&quot; &lt;&lt; burger_price &lt;&lt; endl;
-    cout &lt;&lt; &quot;薯条：$&quot; &lt;&lt; fries_price &lt;&lt; endl;
-    cout &lt;&lt; &quot;可乐：$&quot; &lt;&lt; cola_price &lt;&lt; endl &lt;&lt; endl;
-
-    // 获取用户输入的点单数量
-    int burger_count, fries_count, cola_count;
-    cout &lt;&lt; &quot;请输入汉堡的数量：&quot;;
-    cin &gt;&gt; burger_count;
-    cout &lt;&lt; &quot;请输入薯条的数量：&quot;;
-    cin &gt;&gt; fries_count;
-    cout &lt;&lt; &quot;请输入可乐的数量：&quot;;
-    cin &gt;&gt; cola_count;
-
-    // 计算总价
-    int total_price = burger_count * burger_price +
-                      fries_count * fries_price +
-                      cola_count * cola_price;
-
-    // 输出点单内容和总价
-    cout &lt;&lt; &quot;\n您的点单如下：&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;汉堡 X &quot; &lt;&lt; burger_count &lt;&lt; endl;
-    cout &lt;&lt; &quot;薯条 X &quot; &lt;&lt; fries_count &lt;&lt; endl;
-    cout &lt;&lt; &quot;可乐 X &quot; &lt;&lt; cola_count &lt;&lt; endl;
-    cout &lt;&lt; &quot;\n总价：$&quot; &lt;&lt; total_price &lt;&lt; endl;
-
-    return 0;
-}
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-39-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-39-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-39-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-39-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-39-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-39-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-39-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-39-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-39-10">10</a></span>
+<span class="normal"><a href="#__codelineno-39-11">11</a></span>
+<span class="normal"><a href="#__codelineno-39-12">12</a></span>
+<span class="normal"><a href="#__codelineno-39-13">13</a></span>
+<span class="normal"><a href="#__codelineno-39-14">14</a></span>
+<span class="normal"><a href="#__codelineno-39-15">15</a></span>
+<span class="normal"><a href="#__codelineno-39-16">16</a></span>
+<span class="normal"><a href="#__codelineno-39-17">17</a></span>
+<span class="normal"><a href="#__codelineno-39-18">18</a></span>
+<span class="normal"><a href="#__codelineno-39-19">19</a></span>
+<span class="normal"><a href="#__codelineno-39-20">20</a></span>
+<span class="normal"><a href="#__codelineno-39-21">21</a></span>
+<span class="normal"><a href="#__codelineno-39-22">22</a></span>
+<span class="normal"><a href="#__codelineno-39-23">23</a></span>
+<span class="normal"><a href="#__codelineno-39-24">24</a></span>
+<span class="normal"><a href="#__codelineno-39-25">25</a></span>
+<span class="normal"><a href="#__codelineno-39-26">26</a></span>
+<span class="normal"><a href="#__codelineno-39-27">27</a></span>
+<span class="normal"><a href="#__codelineno-39-28">28</a></span>
+<span class="normal"><a href="#__codelineno-39-29">29</a></span>
+<span class="normal"><a href="#__codelineno-39-30">30</a></span>
+<span class="normal"><a href="#__codelineno-39-31">31</a></span>
+<span class="normal"><a href="#__codelineno-39-32">32</a></span>
+<span class="normal"><a href="#__codelineno-39-33">33</a></span>
+<span class="normal"><a href="#__codelineno-39-34">34</a></span>
+<span class="normal"><a href="#__codelineno-39-35">35</a></span>
+<span class="normal"><a href="#__codelineno-39-36">36</a></span>
+<span class="normal"><a href="#__codelineno-39-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3"></a>
+<a id="__codelineno-39-4" name="__codelineno-39-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5"></a><span class="w">    </span><span class="c1">// 定义食物的价格</span>
+<a id="__codelineno-39-6" name="__codelineno-39-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">burger_price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-39-7" name="__codelineno-39-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">fries_price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-39-8" name="__codelineno-39-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">cola_price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-39-9" name="__codelineno-39-9"></a>
+<a id="__codelineno-39-10" name="__codelineno-39-10"></a><span class="w">    </span><span class="c1">// 显示价格信息</span>
+<a id="__codelineno-39-11" name="__codelineno-39-11"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;汉堡：$&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">burger_price</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-39-12" name="__codelineno-39-12"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;薯条：$&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">fries_price</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-39-13" name="__codelineno-39-13"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;可乐：$&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cola_price</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-39-14" name="__codelineno-39-14"></a>
+<a id="__codelineno-39-15" name="__codelineno-39-15"></a><span class="w">    </span><span class="c1">// 获取用户输入的点单数量</span>
+<a id="__codelineno-39-16" name="__codelineno-39-16"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">burger_count</span><span class="p">,</span><span class="w"> </span><span class="n">fries_count</span><span class="p">,</span><span class="w"> </span><span class="n">cola_count</span><span class="p">;</span>
+<a id="__codelineno-39-17" name="__codelineno-39-17"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;请输入汉堡的数量：&quot;</span><span class="p">;</span>
+<a id="__codelineno-39-18" name="__codelineno-39-18"></a><span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">burger_count</span><span class="p">;</span>
+<a id="__codelineno-39-19" name="__codelineno-39-19"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;请输入薯条的数量：&quot;</span><span class="p">;</span>
+<a id="__codelineno-39-20" name="__codelineno-39-20"></a><span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">fries_count</span><span class="p">;</span>
+<a id="__codelineno-39-21" name="__codelineno-39-21"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;请输入可乐的数量：&quot;</span><span class="p">;</span>
+<a id="__codelineno-39-22" name="__codelineno-39-22"></a><span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">cola_count</span><span class="p">;</span>
+<a id="__codelineno-39-23" name="__codelineno-39-23"></a>
+<a id="__codelineno-39-24" name="__codelineno-39-24"></a><span class="w">    </span><span class="c1">// 计算总价</span>
+<a id="__codelineno-39-25" name="__codelineno-39-25"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">total_price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">burger_count</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">burger_price</span><span class="w"> </span><span class="o">+</span>
+<a id="__codelineno-39-26" name="__codelineno-39-26"></a><span class="w">                      </span><span class="n">fries_count</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fries_price</span><span class="w"> </span><span class="o">+</span>
+<a id="__codelineno-39-27" name="__codelineno-39-27"></a><span class="w">                      </span><span class="n">cola_count</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cola_price</span><span class="p">;</span>
+<a id="__codelineno-39-28" name="__codelineno-39-28"></a>
+<a id="__codelineno-39-29" name="__codelineno-39-29"></a><span class="w">    </span><span class="c1">// 输出点单内容和总价</span>
+<a id="__codelineno-39-30" name="__codelineno-39-30"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">您的点单如下：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-39-31" name="__codelineno-39-31"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;汉堡 X &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">burger_count</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-39-32" name="__codelineno-39-32"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;薯条 X &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">fries_count</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-39-33" name="__codelineno-39-33"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;可乐 X &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cola_count</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-39-34" name="__codelineno-39-34"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">总价：$&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">total_price</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-39-35" name="__codelineno-39-35"></a>
+<a id="__codelineno-39-36" name="__codelineno-39-36"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-39-37" name="__codelineno-39-37"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 
 
 

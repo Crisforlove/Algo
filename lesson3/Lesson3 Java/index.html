@@ -888,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -909,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -930,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Lesson3%20Python/" class="md-nav__link">
+      <a href="../Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1846,12 +1846,16 @@
 <h2 id="1-java">1. Java方法的定义和使用</h2>
 <p>在Java中，方法（Methods）是用来执行特定任务的代码块，可以被重复调用。</p>
 <h3 id="11">1.1 方法的定义语法</h3>
-<p><code>java
- 修饰符 返回类型 方法名(参数列表) {
-     // 方法体
-     // 可以包含一系列的语句来实现特定功能
-     // 可以使用参数，并且可能会返回一个值
- }</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">修饰符</span><span class="w"> </span><span class="n">返回类型</span><span class="w"> </span><span class="nf">方法名</span><span class="p">(</span><span class="n">参数列表</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="c1">// 方法体</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="c1">// 可以包含一系列的语句来实现特定功能</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="c1">// 可以使用参数，并且可能会返回一个值</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <ul>
 <li><strong>修饰符（Modifiers）</strong>：可以是 <code>public</code>、<code>private</code>、<code>protected</code> 。</li>
 <li><strong>返回类型（Return Type）</strong>：方法可以返回一个值的类型，如果方法不返回任何值，则使用 <code>void</code>。</li>
@@ -1872,33 +1876,48 @@
 <li><strong>描述</strong>：<code>public</code> 修饰符表示方法可以被任何类访问。</li>
 <li><strong>示例</strong>：</li>
 </ul>
-<p>```java
-public class Main {
-    public static void greet(String name) {
-        System.out.println("Hello, " + name + "!");
-    }</p>
-<pre><code>public static void main(String[] args) {
-    greet("Alice"); // 输出：Hello, Alice!
-}
-</code></pre>
-<p>}
- ```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="n">greet</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：Hello, Alice!</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="13">1.3 返回类型</h3>
 <p>返回类型指定了方法返回的数据类型。如果方法不返回任何值，则使用 <code>void</code>。</p>
 <p><strong>示例1：返回类型为 <code>int</code></strong></p>
-<p><code>java
- public class MathUtils {
-     public int add(int a, int b) {
-         return a + b;
-     }
- }</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MathUtils</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>示例2：返回类型为 <code>void</code></strong></p>
-<p><code>java
- public class Printer {
-     public void printMessage(String message) {
-         System.out.println(message);
-     }
- }</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Printer</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printMessage</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="14">1.4 方法名命名规则</h3>
 <p>方法名必须是一个合法的标识符（identifier），遵循以下规则：</p>
 <ul>
@@ -1911,39 +1930,62 @@ public class Main {
 <p>在Java中，我们可以使用不同的方式来传递参数给方法或函数。下面将介绍Java传参的两种常见方式：按值传递和按引用传递。</p>
 <h3 id="21">2.1 按值传递</h3>
 <p>按值传递意味着将参数的值复制一份，然后将这份复制的值传递给方法。在方法内部对参数的修改不会影响到原始参数。这种方式适用于基本数据类型（如<code>int</code>、<code>double</code>等）。</p>
-<p><strong>示例</strong>：</p>
-<pre><code class="language-java">public void swap(int a, int b) {
-    int temp = a;
-    a = b;
-    b = temp;
-}
-
-public static void main(String[] args) {
-    int x = 10;
-    int y = 20;
-    swap(x, y);
-    System.out.println(&quot;x = &quot; + x); // 输出：x = 10
-    System.out.println(&quot;y = &quot; + y); // 输出：y = 20
-}
-</code></pre>
-<p>在这个例子中，虽然<code>swap</code>方法内部交换了<code>a</code>和<code>b</code>的值，但这并不会影响<code>main</code>方法中的<code>x</code>和<code>y</code>，因为传递的是值的副本。</p>
+<p><strong>示例</strong>：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">swap</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="n">swap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：x = 10</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;y = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：y = 20</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+在这个例子中，虽然<code>swap</code>方法内部交换了<code>a</code>和<code>b</code>的值，但这并不会影响<code>main</code>方法中的<code>x</code>和<code>y</code>，因为传递的是值的副本。</p>
 <h3 id="22">2.2 按引用传递</h3>
 <p>按引用传递意味着将参数的引用（内存地址）传递给方法。在方法内部对参数的修改会影响到原始参数。在Java中，除了基本数据类型，其他所有的数据类型（如数组和对象）都是按引用传递的。</p>
-<p><strong>示例</strong>：</p>
-<pre><code class="language-java">public void swap(int[] array) {
-    int temp = array[0];
-    array[0] = array[1];
-    array[1] = temp;
-}
-
-public static void main(String[] args) {
-    int[] nums = {10, 20};
-    swap(nums);
-    System.out.println(&quot;nums[0] = &quot; + nums[0]); // 输出：nums[0] = 20
-    System.out.println(&quot;nums[1] = &quot; + nums[1]); // 输出：nums[1] = 10
-}
-</code></pre>
-<p>在这个例子中，传递了一个数组<code>nums</code>给<code>swap</code>方法，方法内部对数组元素的交换操作会直接影响到原始数组。</p>
+<p><strong>示例</strong>：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">swap</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="n">array</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">}</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">};</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="n">swap</span><span class="p">(</span><span class="n">nums</span><span class="p">);</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;nums[0] = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：nums[0] = 20</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;nums[1] = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：nums[1] = 10</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+在这个例子中，传递了一个数组<code>nums</code>给<code>swap</code>方法，方法内部对数组元素的交换操作会直接影响到原始数组。</p>
 <h3 id="_2">总结</h3>
 <ul>
 <li><strong>按值传递</strong>：传递参数值的副本，不会影响原始参数。</li>
@@ -1954,33 +1996,51 @@ public static void main(String[] args) {
 <p>在Java中，函数的参数分为形式参数（形参）和实际参数（实参）。这两者在函数调用和定义中扮演不同的角色：</p>
 <h3 id="31-formal-parameters">3.1 形式参数（Formal Parameters）</h3>
 <p>形式参数是在函数定义时声明的参数，它们作为函数的一部分，用来接收调用函数时传递的实际参数的值。形式参数在函数定义的括号内部声明，并指定它们的类型和名称。例如，以下是一个简单的函数定义，它有两个形式参数：</p>
-<p><code>java
- public void calculateSum(int a, int b) {
-     // 函数体
-     int sum = a + b;
-     System.out.println("Sum: " + sum);
- }</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">calculateSum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">  </span><span class="c1">// 函数体</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sum: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>在这个例子中，<code>calculateSum</code> 是一个函数，它接受两个形式参数 <code>a</code> 和 <code>b</code>，它们的类型都是 <code>int</code>。这些形式参数在函数被调用时用于接收传递给函数的实际参数的值。</p>
 <h3 id="32-actual-arguments">3.2 实际参数（Actual Arguments）</h3>
 <p>实际参数是在调用函数时传递给函数的值或者表达式。它们是真正用来执行函数操作的数据。在函数调用时，实际参数被传递给函数的形式参数。例如，下面是如何调用上面定义的 <code>calculateSum</code> 函数，并传递实际参数：</p>
-<p>```java
- public class Main {
-     public static void main(String[] args) {
-         int num1 = 10;
-         int num2 = 20;</p>
-<pre><code>     // 调用函数并传递实际参数
-     calculateSum(num1, num2);
- }
-
- // 定义函数
- public static void calculateSum(int a, int b) {
-     // 函数体
-     int sum = a + b;
-     System.out.println("Sum: " + sum);
- }
-</code></pre>
-<p>}
- ```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">      </span><span class="c1">// 调用函数并传递实际参数</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">      </span><span class="n">calculateSum</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">);</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">  </span><span class="c1">// 定义函数</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">calculateSum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">      </span><span class="c1">// 函数体</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sum: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>在这个示例中，<code>num1</code> 和 <code>num2</code> 是 <code>main</code> 函数中的两个变量，它们作为实际参数传递给 <code>calculateSum</code> 函数。在函数调用 <code>calculateSum(num1, num2);</code> 中，<code>num1</code> 和 <code>num2</code> 分别传递给 <code>a</code> 和 <code>b</code> 形式参数，进而在函数内部计算它们的和。</p>
 <h3 id="33">3.3 总结</h3>
 <ul>
@@ -1990,186 +2050,350 @@ public static void main(String[] args) {
 <h2 id="4">4. 课后练习</h2>
 <h3 id="41">4.1 方法的定义</h3>
 <h3 id="1-mathutils-multiply-float">题目 1: 在MathUtils中定义 multiply 方法，它会接受两个 float 参数，并返回它们的乘积。</h3>
-<p>```java
- public class MathUtils {</p>
-<pre><code>// To be implemented
-
-public static void main(String[] args) {
-    MathUtils utils = new MathUtils();
-    float product = utils.multiply(5.5f, 3.2f);
-    System.out.println("The product is: " + product);  // 输出应该是 17.6
-}
-</code></pre>
-<p>}
- <code>解答</code>java
-public class MathUtils {
-    public float multiply(float a, float b) {
-        return a * b;
-    }</p>
-<pre><code>public static void main(String[] args) {
-    MathUtils utils = new MathUtils();
-    float product = utils.multiply(5.5f, 3.2f);
-    System.out.println("The product is: " + product);  // 输出应该是 17.6
-}
-</code></pre>
-<p>}
- ```</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MathUtils</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w"> </span><span class="c1">// To be implemented</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">  </span><span class="n">MathUtils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MathUtils</span><span class="p">();</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utils</span><span class="p">.</span><span class="na">multiply</span><span class="p">(</span><span class="mf">5.5f</span><span class="p">,</span><span class="w"> </span><span class="mf">3.2f</span><span class="p">);</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The product is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">product</span><span class="p">);</span><span class="w">  </span><span class="c1">// 输出应该是 17.6</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+解答
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MathUtils</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">     </span><span class="n">MathUtils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MathUtils</span><span class="p">();</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">     </span><span class="kt">float</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utils</span><span class="p">.</span><span class="na">multiply</span><span class="p">(</span><span class="mf">5.5f</span><span class="p">,</span><span class="w"> </span><span class="mf">3.2f</span><span class="p">);</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The product is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">product</span><span class="p">);</span><span class="w">  </span><span class="c1">// 输出应该是 17.6</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="2-lesson2">题目 2: 请将下列代码（Lesson2课后练习）的点单、打印客户点单内容、计算订单总价三个功能封装成独立的方法。</h3>
-<p>```java
- import java.util.Scanner;</p>
-<p>public class RestaurantOrder {
-     public static void main(String[] args) {
-         // 定义价格常量
-         final double BURGER_PRICE = 12.5;
-         final double FRIES_PRICE = 6.0;
-         final double COKE_PRICE = 4.5;</p>
-<pre><code>     // 创建Scanner对象以获取用户输入
-     Scanner scanner = new Scanner(System.in);
-
-     // 初始化总销售额
-     double totalSales = 0.0;
-
-     // 开始循环，直到顾客选择退出
-     while (true) {
-         // 初始化点单数量
-         int option = 0;
-         int burgers = 0;
-         int fries = 0;
-         int cokes = 0;
-
-         // 获取用户点单
-         System.out.print("\n请点单（输入-1退出，其他整数进入点单）：");
-         option = scanner.nextInt();
-
-         // 如果输入为0，则退出循环
-         if (option == -1) {
-             break;
-         }
-
-         System.out.print("请输入汉堡的数量：");
-         burgers = scanner.nextInt();
-
-         System.out.print("请输入薯条的数量：");
-         fries = scanner.nextInt();
-
-         System.out.print("请输入可乐的数量：");
-         cokes = scanner.nextInt();
-
-         // 打印客户点单内容
-         System.out.println("\n客户点单内容：");
-         if (burgers &gt; 0) {
-             System.out.println("汉堡 x " + burgers);
-         }
-         if (fries &gt; 0) {
-             System.out.println("薯条 x " + fries);
-         }
-         if (cokes &gt; 0) {
-             System.out.println("可乐 x " + cokes);
-         }
-
-         // 计算本次点单的总价
-         double orderTotal = burgers * BURGER_PRICE + fries * FRIES_PRICE + cokes * COKE_PRICE;
-         // 累加到总销售额
-         totalSales += orderTotal;
-
-         // 打印本次点单的总价
-         System.out.println("\n本次点单总价：" + orderTotal + " 元");
-     }
-
-     // 打印所有顾客的总销售额
-     System.out.println("\n所有顾客的总销售额：" + totalSales + " 元");
-
-     // 关闭Scanner
-     scanner.close();
- }
-</code></pre>
-<p>}
- ```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span>
+<span class="normal"><a href="#__codelineno-10-20">20</a></span>
+<span class="normal"><a href="#__codelineno-10-21">21</a></span>
+<span class="normal"><a href="#__codelineno-10-22">22</a></span>
+<span class="normal"><a href="#__codelineno-10-23">23</a></span>
+<span class="normal"><a href="#__codelineno-10-24">24</a></span>
+<span class="normal"><a href="#__codelineno-10-25">25</a></span>
+<span class="normal"><a href="#__codelineno-10-26">26</a></span>
+<span class="normal"><a href="#__codelineno-10-27">27</a></span>
+<span class="normal"><a href="#__codelineno-10-28">28</a></span>
+<span class="normal"><a href="#__codelineno-10-29">29</a></span>
+<span class="normal"><a href="#__codelineno-10-30">30</a></span>
+<span class="normal"><a href="#__codelineno-10-31">31</a></span>
+<span class="normal"><a href="#__codelineno-10-32">32</a></span>
+<span class="normal"><a href="#__codelineno-10-33">33</a></span>
+<span class="normal"><a href="#__codelineno-10-34">34</a></span>
+<span class="normal"><a href="#__codelineno-10-35">35</a></span>
+<span class="normal"><a href="#__codelineno-10-36">36</a></span>
+<span class="normal"><a href="#__codelineno-10-37">37</a></span>
+<span class="normal"><a href="#__codelineno-10-38">38</a></span>
+<span class="normal"><a href="#__codelineno-10-39">39</a></span>
+<span class="normal"><a href="#__codelineno-10-40">40</a></span>
+<span class="normal"><a href="#__codelineno-10-41">41</a></span>
+<span class="normal"><a href="#__codelineno-10-42">42</a></span>
+<span class="normal"><a href="#__codelineno-10-43">43</a></span>
+<span class="normal"><a href="#__codelineno-10-44">44</a></span>
+<span class="normal"><a href="#__codelineno-10-45">45</a></span>
+<span class="normal"><a href="#__codelineno-10-46">46</a></span>
+<span class="normal"><a href="#__codelineno-10-47">47</a></span>
+<span class="normal"><a href="#__codelineno-10-48">48</a></span>
+<span class="normal"><a href="#__codelineno-10-49">49</a></span>
+<span class="normal"><a href="#__codelineno-10-50">50</a></span>
+<span class="normal"><a href="#__codelineno-10-51">51</a></span>
+<span class="normal"><a href="#__codelineno-10-52">52</a></span>
+<span class="normal"><a href="#__codelineno-10-53">53</a></span>
+<span class="normal"><a href="#__codelineno-10-54">54</a></span>
+<span class="normal"><a href="#__codelineno-10-55">55</a></span>
+<span class="normal"><a href="#__codelineno-10-56">56</a></span>
+<span class="normal"><a href="#__codelineno-10-57">57</a></span>
+<span class="normal"><a href="#__codelineno-10-58">58</a></span>
+<span class="normal"><a href="#__codelineno-10-59">59</a></span>
+<span class="normal"><a href="#__codelineno-10-60">60</a></span>
+<span class="normal"><a href="#__codelineno-10-61">61</a></span>
+<span class="normal"><a href="#__codelineno-10-62">62</a></span>
+<span class="normal"><a href="#__codelineno-10-63">63</a></span>
+<span class="normal"><a href="#__codelineno-10-64">64</a></span>
+<span class="normal"><a href="#__codelineno-10-65">65</a></span>
+<span class="normal"><a href="#__codelineno-10-66">66</a></span>
+<span class="normal"><a href="#__codelineno-10-67">67</a></span>
+<span class="normal"><a href="#__codelineno-10-68">68</a></span>
+<span class="normal"><a href="#__codelineno-10-69">69</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RestaurantOrder</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">      </span><span class="c1">// 定义价格常量</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">BURGER_PRICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12.5</span><span class="p">;</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">FRIES_PRICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6.0</span><span class="p">;</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">COKE_PRICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.5</span><span class="p">;</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">      </span><span class="c1">// 创建Scanner对象以获取用户输入</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">      </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">      </span><span class="c1">// 初始化总销售额</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">totalSales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">      </span><span class="c1">// 开始循环，直到顾客选择退出</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">          </span><span class="c1">// 初始化点单数量</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">          </span><span class="kt">int</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="w">          </span><span class="kt">int</span><span class="w"> </span><span class="n">burgers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="w">          </span><span class="kt">int</span><span class="w"> </span><span class="n">fries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="w">          </span><span class="kt">int</span><span class="w"> </span><span class="n">cokes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23"></a>
+<a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="w">          </span><span class="c1">// 获取用户点单</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25"></a><span class="w">          </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\n请点单（输入-1退出，其他整数进入点单）：&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26"></a><span class="w">          </span><span class="n">option</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27"></a>
+<a id="__codelineno-10-28" name="__codelineno-10-28"></a><span class="w">          </span><span class="c1">// 如果输入为0，则退出循环</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29"></a><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">option</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30"></a><span class="w">              </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-10-31" name="__codelineno-10-31"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-10-32" name="__codelineno-10-32"></a>
+<a id="__codelineno-10-33" name="__codelineno-10-33"></a><span class="w">          </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;请输入汉堡的数量：&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-34" name="__codelineno-10-34"></a><span class="w">          </span><span class="n">burgers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-10-35" name="__codelineno-10-35"></a>
+<a id="__codelineno-10-36" name="__codelineno-10-36"></a><span class="w">          </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;请输入薯条的数量：&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-37" name="__codelineno-10-37"></a><span class="w">          </span><span class="n">fries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-10-38" name="__codelineno-10-38"></a>
+<a id="__codelineno-10-39" name="__codelineno-10-39"></a><span class="w">          </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;请输入可乐的数量：&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-40" name="__codelineno-10-40"></a><span class="w">          </span><span class="n">cokes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-10-41" name="__codelineno-10-41"></a>
+<a id="__codelineno-10-42" name="__codelineno-10-42"></a><span class="w">          </span><span class="c1">// 打印客户点单内容</span>
+<a id="__codelineno-10-43" name="__codelineno-10-43"></a><span class="w">          </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n客户点单内容：&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-44" name="__codelineno-10-44"></a><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">burgers</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-45" name="__codelineno-10-45"></a><span class="w">              </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;汉堡 x &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">burgers</span><span class="p">);</span>
+<a id="__codelineno-10-46" name="__codelineno-10-46"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-10-47" name="__codelineno-10-47"></a><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fries</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-48" name="__codelineno-10-48"></a><span class="w">              </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;薯条 x &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fries</span><span class="p">);</span>
+<a id="__codelineno-10-49" name="__codelineno-10-49"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-10-50" name="__codelineno-10-50"></a><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cokes</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-51" name="__codelineno-10-51"></a><span class="w">              </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;可乐 x &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cokes</span><span class="p">);</span>
+<a id="__codelineno-10-52" name="__codelineno-10-52"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-10-53" name="__codelineno-10-53"></a>
+<a id="__codelineno-10-54" name="__codelineno-10-54"></a><span class="w">          </span><span class="c1">// 计算本次点单的总价</span>
+<a id="__codelineno-10-55" name="__codelineno-10-55"></a><span class="w">          </span><span class="kt">double</span><span class="w"> </span><span class="n">orderTotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">burgers</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">BURGER_PRICE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fries</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">FRIES_PRICE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cokes</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">COKE_PRICE</span><span class="p">;</span>
+<a id="__codelineno-10-56" name="__codelineno-10-56"></a><span class="w">          </span><span class="c1">// 累加到总销售额</span>
+<a id="__codelineno-10-57" name="__codelineno-10-57"></a><span class="w">          </span><span class="n">totalSales</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">orderTotal</span><span class="p">;</span>
+<a id="__codelineno-10-58" name="__codelineno-10-58"></a>
+<a id="__codelineno-10-59" name="__codelineno-10-59"></a><span class="w">          </span><span class="c1">// 打印本次点单的总价</span>
+<a id="__codelineno-10-60" name="__codelineno-10-60"></a><span class="w">          </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n本次点单总价：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">orderTotal</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 元&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-61" name="__codelineno-10-61"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-10-62" name="__codelineno-10-62"></a>
+<a id="__codelineno-10-63" name="__codelineno-10-63"></a><span class="w">      </span><span class="c1">// 打印所有顾客的总销售额</span>
+<a id="__codelineno-10-64" name="__codelineno-10-64"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n所有顾客的总销售额：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">totalSales</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 元&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-65" name="__codelineno-10-65"></a>
+<a id="__codelineno-10-66" name="__codelineno-10-66"></a><span class="w">      </span><span class="c1">// 关闭Scanner</span>
+<a id="__codelineno-10-67" name="__codelineno-10-67"></a><span class="w">      </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-10-68" name="__codelineno-10-68"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-69" name="__codelineno-10-69"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>参考答案
- ```java
- import java.util.Scanner;</p>
-<p>public class RestaurantOrder {
- // 定义价格常量
- private static final double BURGER_PRICE = 12.5;
- private static final double FRIES_PRICE = 6.0;
- private static final double COKE_PRICE = 4.5;</p>
-<pre><code> public static void main(String[] args) {
-     Scanner scanner = new Scanner(System.in);
-     double totalSales = 0.0;
-
-     while (true) {
-         int option = getUserOption(scanner);
-
-         if (option == -1) {
-             break;
-         }
-
-         int burgers = getQuantity(scanner, "汉堡");
-         int fries = getQuantity(scanner, "薯条");
-         int cokes = getQuantity(scanner, "可乐");
-
-         printOrderDetails(burgers, fries, cokes);
-         double orderTotal = calculateOrderTotal(burgers, fries, cokes);
-         totalSales += orderTotal;
-
-         System.out.println("\n本次点单总价：" + orderTotal + " 元");
-     }
-
-     System.out.println("\n所有顾客的总销售额：" + totalSales + " 元");
-
-     scanner.close();
- }
-
- // 获取用户的点单选项
- private static int getUserOption(Scanner scanner) {
-     System.out.print("\n请点单（输入-1退出，其他整数进入点单）：");
-     return scanner.nextInt();
- }
-
- // 获取特定商品的数量
- private static int getQuantity(Scanner scanner, String itemName) {
-     System.out.print("请输入" + itemName + "的数量：");
-     return scanner.nextInt();
- }
-
- // 打印客户点单内容
- private static void printOrderDetails(int burgers, int fries, int cokes) {
-     System.out.println("\n客户点单内容：");
-     if (burgers &gt; 0) {
-         System.out.println("汉堡 x " + burgers);
-     }
-     if (fries &gt; 0) {
-         System.out.println("薯条 x " + fries);
-     }
-     if (cokes &gt; 0) {
-         System.out.println("可乐 x " + cokes);
-     }
- }
-
- // 计算订单总价
- private static double calculateOrderTotal(int burgers, int fries, int cokes) {
-     return burgers * BURGER_PRICE + fries * FRIES_PRICE + cokes * COKE_PRICE;
- }
-</code></pre>
-<p>}
- ```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span>
+<span class="normal"><a href="#__codelineno-11-24">24</a></span>
+<span class="normal"><a href="#__codelineno-11-25">25</a></span>
+<span class="normal"><a href="#__codelineno-11-26">26</a></span>
+<span class="normal"><a href="#__codelineno-11-27">27</a></span>
+<span class="normal"><a href="#__codelineno-11-28">28</a></span>
+<span class="normal"><a href="#__codelineno-11-29">29</a></span>
+<span class="normal"><a href="#__codelineno-11-30">30</a></span>
+<span class="normal"><a href="#__codelineno-11-31">31</a></span>
+<span class="normal"><a href="#__codelineno-11-32">32</a></span>
+<span class="normal"><a href="#__codelineno-11-33">33</a></span>
+<span class="normal"><a href="#__codelineno-11-34">34</a></span>
+<span class="normal"><a href="#__codelineno-11-35">35</a></span>
+<span class="normal"><a href="#__codelineno-11-36">36</a></span>
+<span class="normal"><a href="#__codelineno-11-37">37</a></span>
+<span class="normal"><a href="#__codelineno-11-38">38</a></span>
+<span class="normal"><a href="#__codelineno-11-39">39</a></span>
+<span class="normal"><a href="#__codelineno-11-40">40</a></span>
+<span class="normal"><a href="#__codelineno-11-41">41</a></span>
+<span class="normal"><a href="#__codelineno-11-42">42</a></span>
+<span class="normal"><a href="#__codelineno-11-43">43</a></span>
+<span class="normal"><a href="#__codelineno-11-44">44</a></span>
+<span class="normal"><a href="#__codelineno-11-45">45</a></span>
+<span class="normal"><a href="#__codelineno-11-46">46</a></span>
+<span class="normal"><a href="#__codelineno-11-47">47</a></span>
+<span class="normal"><a href="#__codelineno-11-48">48</a></span>
+<span class="normal"><a href="#__codelineno-11-49">49</a></span>
+<span class="normal"><a href="#__codelineno-11-50">50</a></span>
+<span class="normal"><a href="#__codelineno-11-51">51</a></span>
+<span class="normal"><a href="#__codelineno-11-52">52</a></span>
+<span class="normal"><a href="#__codelineno-11-53">53</a></span>
+<span class="normal"><a href="#__codelineno-11-54">54</a></span>
+<span class="normal"><a href="#__codelineno-11-55">55</a></span>
+<span class="normal"><a href="#__codelineno-11-56">56</a></span>
+<span class="normal"><a href="#__codelineno-11-57">57</a></span>
+<span class="normal"><a href="#__codelineno-11-58">58</a></span>
+<span class="normal"><a href="#__codelineno-11-59">59</a></span>
+<span class="normal"><a href="#__codelineno-11-60">60</a></span>
+<span class="normal"><a href="#__codelineno-11-61">61</a></span>
+<span class="normal"><a href="#__codelineno-11-62">62</a></span>
+<span class="normal"><a href="#__codelineno-11-63">63</a></span>
+<span class="normal"><a href="#__codelineno-11-64">64</a></span>
+<span class="normal"><a href="#__codelineno-11-65">65</a></span>
+<span class="normal"><a href="#__codelineno-11-66">66</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RestaurantOrder</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="c1">// 定义价格常量</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">BURGER_PRICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12.5</span><span class="p">;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">FRIES_PRICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6.0</span><span class="p">;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">COKE_PRICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.5</span><span class="p">;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">      </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">totalSales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">          </span><span class="kt">int</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getUserOption</span><span class="p">(</span><span class="n">scanner</span><span class="p">);</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">option</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">              </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="w">          </span><span class="kt">int</span><span class="w"> </span><span class="n">burgers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getQuantity</span><span class="p">(</span><span class="n">scanner</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;汉堡&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="w">          </span><span class="kt">int</span><span class="w"> </span><span class="n">fries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getQuantity</span><span class="p">(</span><span class="n">scanner</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;薯条&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="w">          </span><span class="kt">int</span><span class="w"> </span><span class="n">cokes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getQuantity</span><span class="p">(</span><span class="n">scanner</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;可乐&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="w">          </span><span class="n">printOrderDetails</span><span class="p">(</span><span class="n">burgers</span><span class="p">,</span><span class="w"> </span><span class="n">fries</span><span class="p">,</span><span class="w"> </span><span class="n">cokes</span><span class="p">);</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25"></a><span class="w">          </span><span class="kt">double</span><span class="w"> </span><span class="n">orderTotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateOrderTotal</span><span class="p">(</span><span class="n">burgers</span><span class="p">,</span><span class="w"> </span><span class="n">fries</span><span class="p">,</span><span class="w"> </span><span class="n">cokes</span><span class="p">);</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26"></a><span class="w">          </span><span class="n">totalSales</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">orderTotal</span><span class="p">;</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27"></a>
+<a id="__codelineno-11-28" name="__codelineno-11-28"></a><span class="w">          </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n本次点单总价：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">orderTotal</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 元&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30"></a>
+<a id="__codelineno-11-31" name="__codelineno-11-31"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n所有顾客的总销售额：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">totalSales</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 元&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-32" name="__codelineno-11-32"></a>
+<a id="__codelineno-11-33" name="__codelineno-11-33"></a><span class="w">      </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-11-34" name="__codelineno-11-34"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-11-35" name="__codelineno-11-35"></a>
+<a id="__codelineno-11-36" name="__codelineno-11-36"></a><span class="w">  </span><span class="c1">// 获取用户的点单选项</span>
+<a id="__codelineno-11-37" name="__codelineno-11-37"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getUserOption</span><span class="p">(</span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-38" name="__codelineno-11-38"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\n请点单（输入-1退出，其他整数进入点单）：&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-39" name="__codelineno-11-39"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-11-40" name="__codelineno-11-40"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-11-41" name="__codelineno-11-41"></a>
+<a id="__codelineno-11-42" name="__codelineno-11-42"></a><span class="w">  </span><span class="c1">// 获取特定商品的数量</span>
+<a id="__codelineno-11-43" name="__codelineno-11-43"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getQuantity</span><span class="p">(</span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">itemName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-44" name="__codelineno-11-44"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;请输入&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">itemName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;的数量：&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-45" name="__codelineno-11-45"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-11-46" name="__codelineno-11-46"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-11-47" name="__codelineno-11-47"></a>
+<a id="__codelineno-11-48" name="__codelineno-11-48"></a><span class="w">  </span><span class="c1">// 打印客户点单内容</span>
+<a id="__codelineno-11-49" name="__codelineno-11-49"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printOrderDetails</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">burgers</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">fries</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cokes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-50" name="__codelineno-11-50"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n客户点单内容：&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-51" name="__codelineno-11-51"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">burgers</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-52" name="__codelineno-11-52"></a><span class="w">          </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;汉堡 x &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">burgers</span><span class="p">);</span>
+<a id="__codelineno-11-53" name="__codelineno-11-53"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-11-54" name="__codelineno-11-54"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fries</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-55" name="__codelineno-11-55"></a><span class="w">          </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;薯条 x &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fries</span><span class="p">);</span>
+<a id="__codelineno-11-56" name="__codelineno-11-56"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-11-57" name="__codelineno-11-57"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cokes</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-58" name="__codelineno-11-58"></a><span class="w">          </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;可乐 x &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cokes</span><span class="p">);</span>
+<a id="__codelineno-11-59" name="__codelineno-11-59"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-11-60" name="__codelineno-11-60"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-11-61" name="__codelineno-11-61"></a>
+<a id="__codelineno-11-62" name="__codelineno-11-62"></a><span class="w">  </span><span class="c1">// 计算订单总价</span>
+<a id="__codelineno-11-63" name="__codelineno-11-63"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateOrderTotal</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">burgers</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">fries</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cokes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-64" name="__codelineno-11-64"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">burgers</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">BURGER_PRICE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fries</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">FRIES_PRICE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cokes</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">COKE_PRICE</span><span class="p">;</span>
+<a id="__codelineno-11-65" name="__codelineno-11-65"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-11-66" name="__codelineno-11-66"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="42">4.2 形式参数与实际参数</h3>
 <h3 id="_3">判断题</h3>
 <p><strong>题目：</strong> 观察以下代码，判断参数 <code>x</code> 和 <code>y</code> 是实际参数还是形式参数，它们是否会被修改，<code>modifyValues</code> 方法是否会对它们产生影响。选择正确的答案并解释原因。</p>
-<pre><code class="language-java">public class Test {
-    public static void main(String[] args) {
-        int x = 5;
-        int y = 10;
-        modifyValues(x, y);
-        System.out.println(&quot;x = &quot; + x + &quot;, y = &quot; + y);
-    }
-
-    public static void modifyValues(int a, int b) {
-        a = a * 2;
-        b = b + 3;
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Test</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">        </span><span class="n">modifyValues</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, y = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">modifyValues</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>A. 正确，<code>x</code> 和 <code>y</code> 的值会被修改</strong></p>
 <p><strong>B. 错误，<code>x</code> 和 <code>y</code> 的值不会被修改</strong></p>
 <p><strong>答案：</strong> B. 错误</p>
