@@ -629,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3027,65 +3027,85 @@
 <h5 id="-ord0"><code>-ord('0')</code>：字符到整数的转换</h5>
 <p>通过将字符减去<code>ord('0')</code>，可以得到对应的整数值。比如<code>ord('3')</code>-<code>ord('0')</code>的结果是<code>3</code>。</p>
 <p><strong>示例：字符到整数的转换</strong></p>
-<pre><code>digit = '5'  # '5' 的 ASCII 值是 53
-num = ord(digit) - ord('0')  # '5' - '0' = 5
-print(f&quot;字符 {digit} 转换为整数是 {num}&quot;)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>digit = &#39;5&#39;  # &#39;5&#39; 的 ASCII 值是 53
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>num = ord(digit) - ord(&#39;0&#39;)  # &#39;5&#39; - &#39;0&#39; = 5
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>print(f&quot;字符 {digit} 转换为整数是 {num}&quot;)
+</code></pre></div></td></tr></table></div>
 <p>输出：</p>
-<pre><code>字符 5 转换为整数是 5
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>字符 5 转换为整数是 5
+</code></pre></div></td></tr></table></div>
 <h5 id="ord0"><code>+ord('0')</code>：整数到字符的转换</h5>
 <p>通过将整数加上<code>ord('0')</code>，可以得到对应的字符。比如<code>5</code>+<code>ord('0')</code>的结果是字符<code>'5'</code>。</p>
 <p><strong>示例：整数到字符的转换</strong></p>
-<pre><code>num = 7
-digit = chr(num + ord('0'))  # 7 + '0' = '7'
-print(f&quot;整数 {num} 转换为字符是 {digit}&quot;)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>num = 7
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>digit = chr(num + ord(&#39;0&#39;))  # 7 + &#39;0&#39; = &#39;7&#39;
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>print(f&quot;整数 {num} 转换为字符是 {digit}&quot;)
+</code></pre></div></td></tr></table></div>
 <p>输出：</p>
-<pre><code>整数 7 转换为字符是 7
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>整数 7 转换为字符是 7
+</code></pre></div></td></tr></table></div>
 <h4 id="orda-orda">使用+ord(‘A’)和-ord(‘A’)进行转换</h4>
 <p>通过在字符上加上或减去字符<code>ord('A')</code>，我们可以将字符与字母表的位置关联起来。例如，将字符<code>'C'</code>减去<code>'A'</code>可以得到<code>'C'</code>在字母表中的位置（从0开始计数）。这对于实现简单的字母编码或解码非常有用。</p>
 <h5 id="-orda"><code>-ord('A')</code>：字符到字母表位置的转换</h5>
 <p>通过将字符减去<code>ord('A')</code>，可以得到字符在字母表中的位置（从0开始）。比如<code>ord('C')</code>-<code>ord('A')</code>的结果是<code>2</code>。</p>
 <p><strong>示例：字符到字母表位置的转换</strong></p>
-<pre><code>letter = 'C'  # 'C' 的 ASCII 值是 67
-position = ord(letter) - ord('A')  # 'C' - 'A' = 2
-print(f&quot;字符 {letter} 在字母表中的位置是 {position}&quot;)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>letter = &#39;C&#39;  # &#39;C&#39; 的 ASCII 值是 67
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>position = ord(letter) - ord(&#39;A&#39;)  # &#39;C&#39; - &#39;A&#39; = 2
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>print(f&quot;字符 {letter} 在字母表中的位置是 {position}&quot;)
+</code></pre></div></td></tr></table></div>
 <p>输出：</p>
-<pre><code>字符 C 在字母表中的位置是 2
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>字符 C 在字母表中的位置是 2
+</code></pre></div></td></tr></table></div>
 <h5 id="orda"><code>+ord('A')</code>：字母表位置到字符的转换</h5>
 <p>通过将字母表中的位置加上<code>ord('A')</code>，可以得到对应的字符。比如<code>2</code>+<code>ord('A')</code>的结果是字符<code>'C'</code>。</p>
 <p><strong>示例：字母表位置到字符的转换</strong></p>
-<pre><code>position = 2
-letter = chr(position + ord('A'))  # 2 + 'A' = 'C'
-print(f&quot;字母表中位置 {position} 对应的字符是 {letter}&quot;)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>position = 2
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>letter = chr(position + ord(&#39;A&#39;))  # 2 + &#39;A&#39; = &#39;C&#39;
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>print(f&quot;字母表中位置 {position} 对应的字符是 {letter}&quot;)
+</code></pre></div></td></tr></table></div>
 <p>输出：</p>
-<pre><code>字母表中位置 2 对应的字符是 C
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>字母表中位置 2 对应的字符是 C
+</code></pre></div></td></tr></table></div>
 <h3 id="ord0-ord0orda-orda">综合运用 +ord(‘0’)和 -ord(‘0’)以及+ord(‘A’)和-ord(‘A’)</h3>
 <p>通过结合使用这些操作符，我们可以灵活地在字符、数字和字母表位置之间进行转换。例如，可以编写一个程序，将字符串中的每个数字字符转换为整数，然后进行简单的运算，再将结果转换回字符；或者将字母字符转换为在字母表中的位置，并进行一些加密操作。</p>
 <p><strong>示例：处理字符串中的数字和字母</strong></p>
-<pre><code>str_input = &quot;A3C7&quot;
-sum_num = 0
-
-for ch in str_input:
-    if '0' &lt;= ch &lt;= '9':
-        sum_num += (ord(ch) - ord('0'))  # 将数字字符转换为整数并求和
-    elif 'A' &lt;= ch &lt;= 'Z':
-        pos = ord(ch) - ord('A')  # 将字母字符转换为字母表位置
-        print(f&quot;{ch} 在字母表中的位置是: {pos}&quot;)
-
-print(f&quot;字符串 {str_input} 中数字字符的和是: {sum_num}&quot;)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>str_input = &quot;A3C7&quot;
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>sum_num = 0
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>for ch in str_input:
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>    if &#39;0&#39; &lt;= ch &lt;= &#39;9&#39;:
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>        sum_num += (ord(ch) - ord(&#39;0&#39;))  # 将数字字符转换为整数并求和
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>    elif &#39;A&#39; &lt;= ch &lt;= &#39;Z&#39;:
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>        pos = ord(ch) - ord(&#39;A&#39;)  # 将字母字符转换为字母表位置
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>        print(f&quot;{ch} 在字母表中的位置是: {pos}&quot;)
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>print(f&quot;字符串 {str_input} 中数字字符的和是: {sum_num}&quot;)
+</code></pre></div></td></tr></table></div>
 <p>输出：</p>
-<pre><code>A 在字母表中的位置是: 0
-C 在字母表中的位置是: 2
-字符串 A3C7 中数字字符的和是: 10
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>A 在字母表中的位置是: 0
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>C 在字母表中的位置是: 2
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>字符串 A3C7 中数字字符的和是: 10
+</code></pre></div></td></tr></table></div>
 <h3 id="13-ascii">1.3 ASCII例题讲解</h3>
 <h3 id="131-lc1309">1.3.1 LC1309: 解码字母到整数映射</h3>
 <h4 id="_2">题目描述：</h4>
@@ -3103,9 +3123,10 @@ C 在字母表中的位置是: 2
 <li>字符串的长度范围是<code>[1, 1000]</code>。</li>
 </ol>
 <h4 id="_3">示例：</h4>
-<pre><code>输入：s = &quot;10#11#12&quot;
-输出：&quot;jkab&quot;
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>输入：s = &quot;10#11#12&quot;
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>输出：&quot;jkab&quot;
+</code></pre></div></td></tr></table></div>
 <h4 id="_4">提示</h4>
 <ol>
 <li>准备一个列表<code>mapping</code>来存储字母<code>a</code>到<code>z</code>的映射。</li>
@@ -3115,27 +3136,46 @@ C 在字母表中的位置是: 2
 <li>构建解密后的字符串。</li>
 </ol>
 <h4 id="_5">参考答案</h4>
-<pre><code>class Solution:
-    def freqAlphabets(self, s: str) -&gt; str:
-        # 用一个列表存储字母 a-z 的映射
-        mapping = [chr(i + ord('a')) for i in range(26)]
-
-        result = []
-        n = len(s)
-
-        i = 0
-        while i &lt; n:
-            if i + 2 &lt; n and s[i + 2] == '#':  # 检查是否是 '10#' 到 '26#'
-                num = int(s[i:i + 2])  # 计算两位数
-                result.append(mapping[num - 1])  # 将其映射为字母
-                i += 3  # 跳过数字和 '#'
-            else:  # 单个数字 '1' 到 '9'
-                num = int(s[i])  # 转换成数字
-                result.append(mapping[num - 1])  # 映射为字母
-                i += 1
-
-        return ''.join(result)  # 将列表转换为字符串
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>class Solution:
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>    def freqAlphabets(self, s: str) -&gt; str:
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>        # 用一个列表存储字母 a-z 的映射
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>        mapping = [chr(i + ord(&#39;a&#39;)) for i in range(26)]
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>        result = []
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>        n = len(s)
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>        i = 0
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>        while i &lt; n:
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>            if i + 2 &lt; n and s[i + 2] == &#39;#&#39;:  # 检查是否是 &#39;10#&#39; 到 &#39;26#&#39;
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a>                num = int(s[i:i + 2])  # 计算两位数
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a>                result.append(mapping[num - 1])  # 将其映射为字母
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a>                i += 3  # 跳过数字和 &#39;#&#39;
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a>            else:  # 单个数字 &#39;1&#39; 到 &#39;9&#39;
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a>                num = int(s[i])  # 转换成数字
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a>                result.append(mapping[num - 1])  # 映射为字母
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a>                i += 1
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a>        return &#39;&#39;.join(result)  # 将列表转换为字符串
+</code></pre></div></td></tr></table></div>
 <ol>
 <li><strong>构建映射表</strong>：mapping = [chr(i + ord('a')) for i in range(26)]创建一个名为<code>mapping</code>的列表，它包含了从<code>'a'</code>到<code>'z'</code>的所有小写英文字母。这是通过列表推导式和<code>chr</code>函数实现的，<code>ord('a')</code>返回字符<code>'a'</code>的ASCII值，然后<code>chr(i + ord('a'))</code>返回从<code>'a'</code>开始的第<code>i</code>个字母。</li>
 <li><strong>遍历字符串</strong>：循环遍历加密字符串<code>s</code>。</li>
@@ -3156,22 +3196,36 @@ C 在字母表中的位置是: 2
 <li><strong>找到第一个唯一字符</strong>：再次遍历字符串，根据统计结果找到第一个出现次数为 1 的字符。</li>
 </ol>
 <h4 id="_8">参考解答</h4>
-<pre><code>class Solution:
-    def firstUniqChar(self, s: str) -&gt; int:
-        # 定义大小为26的列表，记录每个字符出现的次数
-        count = [0] * 26
-
-        # 第一次遍历：统计每个字符的频率
-        for char in s:
-            count[ord(char) - ord('a')] += 1
-
-        # 第二次遍历：找到第一个出现次数为1的字符
-        for i, char in enumerate(s):
-            if count[ord(char) - ord('a')] == 1:
-                return i  # 返回第一个不重复字符的索引
-
-        return -1  # 没有找到不重复的字符，返回-1
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>class Solution:
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>    def firstUniqChar(self, s: str) -&gt; int:
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>        # 定义大小为26的列表，记录每个字符出现的次数
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>        count = [0] * 26
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>        # 第一次遍历：统计每个字符的频率
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>        for char in s:
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>            count[ord(char) - ord(&#39;a&#39;)] += 1
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>        # 第二次遍历：找到第一个出现次数为1的字符
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a>        for i, char in enumerate(s):
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a>            if count[ord(char) - ord(&#39;a&#39;)] == 1:
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a>                return i  # 返回第一个不重复字符的索引
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a>        return -1  # 没有找到不重复的字符，返回-1
+</code></pre></div></td></tr></table></div>
 <h4 id="_9">代码讲解</h4>
 <ol>
 <li><strong><code>count = [0] * 26</code></strong>：初始化一个长度为26的列表<code>count</code>，用于记录小写英文字母每个字符出现的次数。列表中的每个元素都初始化为0。</li>
@@ -3183,15 +3237,22 @@ C 在字母表中的位置是: 2
 <h4 id="_10">问题描述</h4>
 <p>给定一个字符串<code>columnTitle</code>，表示 Excel 表格中的列名。请将其转换为对应的列序号。</p>
 <p>例如：</p>
-<pre><code>A -&gt; 1
-B -&gt; 2
-C -&gt; 3
-...
-Z -&gt; 26
-AA -&gt; 27
-AB -&gt; 28 
-...
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span>
+<span class="normal"><a href="#__codelineno-13-6">6</a></span>
+<span class="normal"><a href="#__codelineno-13-7">7</a></span>
+<span class="normal"><a href="#__codelineno-13-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>A -&gt; 1
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>B -&gt; 2
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>C -&gt; 3
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>...
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>Z -&gt; 26
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>AA -&gt; 27
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>AB -&gt; 28 
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>...
+</code></pre></div></td></tr></table></div>
 <h4 id="_11">思路分析</h4>
 <p>通过 <strong>进制转换</strong> 的方法，将 Excel 列名看作一个以 26 为基数的数字系统，每个字母代表一个数字。<code>A</code> 到<code>Z</code> 分别代表 1 到 26，我们需要将列名转换成相应的数字。</p>
 <p>具体步骤如下：</p>
@@ -3200,22 +3261,36 @@ AB -&gt; 28
 <li><strong>进制转换</strong>：将列名看作是 26 进制数，从右到左遍历字符串，将每个字符转换成数字并乘以 26 的幂次累加到结果中。</li>
 <li><strong>返回结果</strong>：最终的累加结果即为 Excel 表格列名对应的列序号。</li>
 </ol>
-<pre><code>class Solution:
-    def titleToNumber(self, columnTitle: str) -&gt; int:
-        result = 0
-        pow_num = 0
-
-        # 从右到左遍历列名
-        for i in range(len(columnTitle) - 1, -1, -1):
-            # 将字符转换为对应的数值
-            extract_char = ord(columnTitle[i]) - ord('A') + 1
-
-            # 计算 26 的幂次，并累加到结果中
-            result += extract_char * (26 ** pow_num)
-            pow_num += 1
-
-        return result
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>class Solution:
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>    def titleToNumber(self, columnTitle: str) -&gt; int:
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>        result = 0
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>        pow_num = 0
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a>        # 从右到左遍历列名
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a>        for i in range(len(columnTitle) - 1, -1, -1):
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a>            # 将字符转换为对应的数值
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a>            extract_char = ord(columnTitle[i]) - ord(&#39;A&#39;) + 1
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a>            # 计算 26 的幂次，并累加到结果中
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a>            result += extract_char * (26 ** pow_num)
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a>            pow_num += 1
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a>        return result
+</code></pre></div></td></tr></table></div>
 <h4 id="_12">代码讲解</h4>
 <ol>
 <li><strong><code>extract_char = ord(columnTitle[i]) - ord('A') + 1</code></strong>：将字母<code>A-Z</code> 转换为对应的 1-26 数字。</li>
@@ -3241,30 +3316,52 @@ AB -&gt; 28
 <li><strong>返回结果</strong>：最终返回唯一摩斯密码的数量。</li>
 </ol>
 <h4 id="_15">参考解答</h4>
-<pre><code>class Solution:
-    def uniqueMorseRepresentations(self, words: list[str]) -&gt; int:
-        # 用数组来存储字母到摩斯密码的映射
-        morse_code = [&quot;.-&quot;, &quot;-...&quot;, &quot;-.-.&quot;, &quot;-..&quot;, &quot;.&quot;, &quot;..-.&quot;, &quot;--.&quot;, &quot;....&quot;, 
-                      &quot;..&quot;, &quot;.---&quot;, &quot;-.-&quot;, &quot;.-..&quot;, &quot;--&quot;, &quot;-.&quot;, &quot;---&quot;, &quot;.--.&quot;, 
-                      &quot;--.-&quot;, &quot;.-.&quot;, &quot;...&quot;, &quot;-&quot;, &quot;..-&quot;, &quot;...-&quot;, &quot;.--&quot;, &quot;-..-&quot;, 
-                      &quot;-.--&quot;, &quot;--..&quot;]
-
-        # 使用集合来存储唯一的摩斯密码表示
-        result = set()
-
-        # 遍历每个单词
-        for word in words:
-            combination = &quot;&quot;
-
-            # 将单词转换为摩斯密码表示
-            for char in word:
-                combination += morse_code[ord(char) - ord('a')]  # 通过 'a' 的 ASCII 值找到对应的摩斯密码
-
-            # 将唯一的摩斯密码表示加入集合
-            result.add(combination)
-
-        return len(result)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span>
+<span class="normal"><a href="#__codelineno-15-16">16</a></span>
+<span class="normal"><a href="#__codelineno-15-17">17</a></span>
+<span class="normal"><a href="#__codelineno-15-18">18</a></span>
+<span class="normal"><a href="#__codelineno-15-19">19</a></span>
+<span class="normal"><a href="#__codelineno-15-20">20</a></span>
+<span class="normal"><a href="#__codelineno-15-21">21</a></span>
+<span class="normal"><a href="#__codelineno-15-22">22</a></span>
+<span class="normal"><a href="#__codelineno-15-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>class Solution:
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>    def uniqueMorseRepresentations(self, words: list[str]) -&gt; int:
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>        # 用数组来存储字母到摩斯密码的映射
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>        morse_code = [&quot;.-&quot;, &quot;-...&quot;, &quot;-.-.&quot;, &quot;-..&quot;, &quot;.&quot;, &quot;..-.&quot;, &quot;--.&quot;, &quot;....&quot;, 
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>                      &quot;..&quot;, &quot;.---&quot;, &quot;-.-&quot;, &quot;.-..&quot;, &quot;--&quot;, &quot;-.&quot;, &quot;---&quot;, &quot;.--.&quot;, 
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a>                      &quot;--.-&quot;, &quot;.-.&quot;, &quot;...&quot;, &quot;-&quot;, &quot;..-&quot;, &quot;...-&quot;, &quot;.--&quot;, &quot;-..-&quot;, 
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>                      &quot;-.--&quot;, &quot;--..&quot;]
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a>        # 使用集合来存储唯一的摩斯密码表示
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a>        result = set()
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a>        # 遍历每个单词
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a>        for word in words:
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a>            combination = &quot;&quot;
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a>            # 将单词转换为摩斯密码表示
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a>            for char in word:
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a>                combination += morse_code[ord(char) - ord(&#39;a&#39;)]  # 通过 &#39;a&#39; 的 ASCII 值找到对应的摩斯密码
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a>            # 将唯一的摩斯密码表示加入集合
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a>            result.add(combination)
+<a id="__codelineno-15-22" name="__codelineno-15-22"></a>
+<a id="__codelineno-15-23" name="__codelineno-15-23"></a>        return len(result)
+</code></pre></div></td></tr></table></div>
 <h4 id="_16">代码讲解</h4>
 <ol>
 <li><strong>摩斯密码映射</strong>：用长度为 26 的数组<code>morse_code</code> 来存储字母 'a' 到 'z' 对应的摩斯密码表示。</li>
@@ -3370,24 +3467,36 @@ AB -&gt; 28
 <li>二进制数即为逆序读取的余数序列。</li>
 </ul>
 <h4 id="13">示例：将 13 转换为二进制</h4>
-<pre><code>13 / 2 = 6 余 1
-6 / 2 = 3 余 0
-3 / 2 = 1 余 1
-1 / 2 = 0 余 1
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>13 / 2 = 6 余 1
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>6 / 2 = 3 余 0
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>3 / 2 = 1 余 1
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>1 / 2 = 0 余 1
+</code></pre></div></td></tr></table></div>
 <p>结果：<code>13 (十进制) = 1101 (二进制)</code></p>
 <h3 id="python">用 Python实现十进制到二进制的转换</h3>
-<pre><code>def decimal_to_binary(num):
-    ans = &quot;&quot;
-    while num &gt; 0:
-        ans += str(num % 2)
-        num = num // 2
-    return ans[::-1]  # 逆序输出
-
-num = int(input(&quot;Enter a number: &quot;))
-binary_representation = decimal_to_binary(num)
-print(binary_representation)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>def decimal_to_binary(num):
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>    ans = &quot;&quot;
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>    while num &gt; 0:
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>        ans += str(num % 2)
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>        num = num // 2
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a>    return ans[::-1]  # 逆序输出
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a>num = int(input(&quot;Enter a number: &quot;))
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a>binary_representation = decimal_to_binary(num)
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a>print(binary_representation)
+</code></pre></div></td></tr></table></div>
 <p>代码解释：</p>
 <ul>
 <li>ans += str(num % 2)：使用<code>num % 2</code>计算当前位的二进制值（0 或 1），并将其转换为字符串，添加到<code>ans</code>字符串的末尾。</li>
@@ -3401,20 +3510,28 @@ print(binary_representation)
 <li>将所有结果相加。</li>
 </ul>
 <h4 id="1101">示例：将 1101 转换为十进制</h4>
-<pre><code>1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 1 * 2^0 = 8 + 4 + 0 + 1 = 13
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 1 * 2^0 = 8 + 4 + 0 + 1 = 13
+</code></pre></div></td></tr></table></div>
 <p>结果：<code>1101 (二进制) = 13 (十进制)</code></p>
 <h3 id="python_1">用 Python实现二进制到十进制的转换</h3>
-<pre><code class="language-cpp">def binary_to_decimal(binary_str):
-    ans = 0
-    for char in binary_str:
-        ans = ans * 2 + int(char)
-    return ans
-
-binary_str = input(&quot;Enter a number with base of 2: &quot;)
-decimal_value = binary_to_decimal(binary_str)
-print(decimal_value)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">5</a></span>
+<span class="normal"><a href="#__codelineno-19-6">6</a></span>
+<span class="normal"><a href="#__codelineno-19-7">7</a></span>
+<span class="normal"><a href="#__codelineno-19-8">8</a></span>
+<span class="normal"><a href="#__codelineno-19-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="n">def</span><span class="w"> </span><span class="n">binary_to_decimal</span><span class="p">(</span><span class="n">binary_str</span><span class="p">)</span><span class="o">:</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">    </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">binary_str</span><span class="o">:</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">        </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ans</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="n">binary_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">(</span><span class="s">&quot;Enter a number with base of 2: &quot;</span><span class="p">)</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="n">decimal_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">binary_to_decimal</span><span class="p">(</span><span class="n">binary_str</span><span class="p">)</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="n">print</span><span class="p">(</span><span class="n">decimal_value</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>ans = ans * 2 + int(char)：在每次迭代中，将当前结果<code>ans</code>乘以 2（二进制的基数），然后加上当前字符代表的数值（<code>int(char)</code>将字符 '0' 或 '1' 转换为整数 0 或 1）。这样，每次迭代都会正确地将二进制位转换为对应的十进制值。</li>
 <li>这个过程模拟了手动计算的过程，每次乘以 2 相当于在十进制中将位数进一位，然后加上当前的二进制位。</li>
@@ -3436,26 +3553,40 @@ print(decimal_value)
 </li>
 </ul>
 <h4 id="479">示例：将 479 转换为十六进制</h4>
-<pre><code>479 / 16 = 29 余 F
-29 / 16 = 1 余 D
-1 / 16 = 0 余 1
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>479 / 16 = 29 余 F
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>29 / 16 = 1 余 D
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>1 / 16 = 0 余 1
+</code></pre></div></td></tr></table></div>
 <p>结果：<code>479 (十进制) = 1DF (十六进制)</code></p>
 <h4 id="python_2">示例：用 Python 实现十进制到十六进制的转换</h4>
-<pre><code>def dec_to_hex(num):
-    result = &quot;&quot;
-    while num != 0:
-        remainder = num % 16
-        if remainder &gt;= 10:
-            result += chr(remainder - 10 + ord('a'))
-        else:
-            result += str(remainder)
-        num = num // 16
-    return result[::-1]  # 逆序输出
-
-# 主程序
-print(dec_to_hex(479))
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span>
+<span class="normal"><a href="#__codelineno-21-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>def dec_to_hex(num):
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>    result = &quot;&quot;
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a>    while num != 0:
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>        remainder = num % 16
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>        if remainder &gt;= 10:
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a>            result += chr(remainder - 10 + ord(&#39;a&#39;))
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a>        else:
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a>            result += str(remainder)
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a>        num = num // 16
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a>    return result[::-1]  # 逆序输出
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a>
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a># 主程序
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a>print(dec_to_hex(479))
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>remainder = num % 16：使用<code>num % 16</code>计算当前位的余数（0-15），这个余数就是当前位的十六进制值。</li>
 <li>result += chr(remainder - 10 + ord('a'))：如果余数大于等于10（即A-F），使用<code>chr(remainder - 10 + ord('a'))</code>将余数转换为对应的十六进制字符（'a' 到 'f'）。</li>
@@ -3500,31 +3631,54 @@ print(dec_to_hex(479))
 <li>因为我们从最低位开始计算，所以最终需要将字符串反转。</li>
 </ol>
 <h4 id="_24">参考解答</h4>
-<pre><code>class Solution:
-    def convertToBase7(self, num: int) -&gt; str:
-        initial_num = num  # 保存初始值
-
-        # 如果是负数，取绝对值进行计算
-        if num &lt; 0:
-            num = -num
-
-        # 特殊情况：num 为 0，直接返回 &quot;0&quot;
-        if num == 0:
-            return &quot;0&quot;
-
-        # 构建 7 进制
-        ans = []
-        while num &gt; 0:
-            ans.append(str(num % 7))  # 将每一位的 7 进制数字加入到列表
-            num //= 7  # 除以 7，进行下一位的计算
-
-        # 如果初始值是负数，添加负号
-        if initial_num &lt; 0:
-            ans.append('-')
-
-        # 最后反转并拼接列表为字符串
-        return ''.join(ans[::-1])
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-22-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-22-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-22-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-22-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-22-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-22-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-22-10">10</a></span>
+<span class="normal"><a href="#__codelineno-22-11">11</a></span>
+<span class="normal"><a href="#__codelineno-22-12">12</a></span>
+<span class="normal"><a href="#__codelineno-22-13">13</a></span>
+<span class="normal"><a href="#__codelineno-22-14">14</a></span>
+<span class="normal"><a href="#__codelineno-22-15">15</a></span>
+<span class="normal"><a href="#__codelineno-22-16">16</a></span>
+<span class="normal"><a href="#__codelineno-22-17">17</a></span>
+<span class="normal"><a href="#__codelineno-22-18">18</a></span>
+<span class="normal"><a href="#__codelineno-22-19">19</a></span>
+<span class="normal"><a href="#__codelineno-22-20">20</a></span>
+<span class="normal"><a href="#__codelineno-22-21">21</a></span>
+<span class="normal"><a href="#__codelineno-22-22">22</a></span>
+<span class="normal"><a href="#__codelineno-22-23">23</a></span>
+<span class="normal"><a href="#__codelineno-22-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>class Solution:
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>    def convertToBase7(self, num: int) -&gt; str:
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>        initial_num = num  # 保存初始值
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a>        # 如果是负数，取绝对值进行计算
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a>        if num &lt; 0:
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a>            num = -num
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a>
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a>        # 特殊情况：num 为 0，直接返回 &quot;0&quot;
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a>        if num == 0:
+<a id="__codelineno-22-11" name="__codelineno-22-11"></a>            return &quot;0&quot;
+<a id="__codelineno-22-12" name="__codelineno-22-12"></a>
+<a id="__codelineno-22-13" name="__codelineno-22-13"></a>        # 构建 7 进制
+<a id="__codelineno-22-14" name="__codelineno-22-14"></a>        ans = []
+<a id="__codelineno-22-15" name="__codelineno-22-15"></a>        while num &gt; 0:
+<a id="__codelineno-22-16" name="__codelineno-22-16"></a>            ans.append(str(num % 7))  # 将每一位的 7 进制数字加入到列表
+<a id="__codelineno-22-17" name="__codelineno-22-17"></a>            num //= 7  # 除以 7，进行下一位的计算
+<a id="__codelineno-22-18" name="__codelineno-22-18"></a>
+<a id="__codelineno-22-19" name="__codelineno-22-19"></a>        # 如果初始值是负数，添加负号
+<a id="__codelineno-22-20" name="__codelineno-22-20"></a>        if initial_num &lt; 0:
+<a id="__codelineno-22-21" name="__codelineno-22-21"></a>            ans.append(&#39;-&#39;)
+<a id="__codelineno-22-22" name="__codelineno-22-22"></a>
+<a id="__codelineno-22-23" name="__codelineno-22-23"></a>        # 最后反转并拼接列表为字符串
+<a id="__codelineno-22-24" name="__codelineno-22-24"></a>        return &#39;&#39;.join(ans[::-1])
+</code></pre></div></td></tr></table></div>
 <ol>
 <li><strong><code>initial_num = num</code></strong>：保留原始的<code>num</code>值，用于后续判断是否需要添加负号。</li>
 <li><strong>处理负数</strong>：如果<code>num</code>为负数，先取绝对值，计算完后再在结果前加上<code>'-'</code>。</li>
@@ -3537,15 +3691,22 @@ print(dec_to_hex(479))
 <h3 id="271-lc168-excel">2.7.1 LC168. excel表列名称</h3>
 <h4 id="_25">问题描述</h4>
 <p>给定一个正整数，返回它在 Excel 表中对应的列标题。Excel 列是以<code>A-Z</code>的方式排列的，例如：</p>
-<pre><code>1 -&gt; A
-2 -&gt; B
-3 -&gt; C
-...
-26 -&gt; Z
-27 -&gt; AA
-28 -&gt; AB
-...
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span>
+<span class="normal"><a href="#__codelineno-23-5">5</a></span>
+<span class="normal"><a href="#__codelineno-23-6">6</a></span>
+<span class="normal"><a href="#__codelineno-23-7">7</a></span>
+<span class="normal"><a href="#__codelineno-23-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>1 -&gt; A
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>2 -&gt; B
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>3 -&gt; C
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a>...
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a>26 -&gt; Z
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a>27 -&gt; AA
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a>28 -&gt; AB
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a>...
+</code></pre></div></td></tr></table></div>
 <h4 id="_26">思路分析</h4>
 <p>这是一个典型的进制转换问题。需要将数字转换成以<code>A-Z</code>为基础的26进制表示法，类似于十进制转换为二进制或十六进制。由于 Excel 列编号从 1 开始，而不是从 0 开始，所以在转换时需要一些额外的调整。</p>
 <ol>
@@ -3568,25 +3729,42 @@ print(dec_to_hex(479))
 <li>由于我们从最低位开始构造字符串，因此最后需要将结果字符串反转。</li>
 </ol>
 <h4 id="_27">参考解答</h4>
-<pre><code>class Solution:
-    def convertToTitle(self, columnNumber: int) -&gt; str:
-        result = []
-
-        # 处理进制转换
-        while columnNumber &gt; 0:
-            # 因为是从 1 开始的列，所以需要先减 1
-            columnNumber -= 1
-
-            # 计算当前位对应的字母
-            temp = columnNumber % 26
-            result.append(chr(temp + ord('A')))
-
-            # 减少列号
-            columnNumber //= 26
-
-        # 反转结果
-        return ''.join(result[::-1])
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span>
+<span class="normal"><a href="#__codelineno-24-11">11</a></span>
+<span class="normal"><a href="#__codelineno-24-12">12</a></span>
+<span class="normal"><a href="#__codelineno-24-13">13</a></span>
+<span class="normal"><a href="#__codelineno-24-14">14</a></span>
+<span class="normal"><a href="#__codelineno-24-15">15</a></span>
+<span class="normal"><a href="#__codelineno-24-16">16</a></span>
+<span class="normal"><a href="#__codelineno-24-17">17</a></span>
+<span class="normal"><a href="#__codelineno-24-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>class Solution:
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>    def convertToTitle(self, columnNumber: int) -&gt; str:
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a>        result = []
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a>        # 处理进制转换
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a>        while columnNumber &gt; 0:
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a>            # 因为是从 1 开始的列，所以需要先减 1
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a>            columnNumber -= 1
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a>            # 计算当前位对应的字母
+<a id="__codelineno-24-11" name="__codelineno-24-11"></a>            temp = columnNumber % 26
+<a id="__codelineno-24-12" name="__codelineno-24-12"></a>            result.append(chr(temp + ord(&#39;A&#39;)))
+<a id="__codelineno-24-13" name="__codelineno-24-13"></a>
+<a id="__codelineno-24-14" name="__codelineno-24-14"></a>            # 减少列号
+<a id="__codelineno-24-15" name="__codelineno-24-15"></a>            columnNumber //= 26
+<a id="__codelineno-24-16" name="__codelineno-24-16"></a>
+<a id="__codelineno-24-17" name="__codelineno-24-17"></a>        # 反转结果
+<a id="__codelineno-24-18" name="__codelineno-24-18"></a>        return &#39;&#39;.join(result[::-1])
+</code></pre></div></td></tr></table></div>
 <h4 id="_28">代码讲解</h4>
 <ol>
 <li><strong><code>columnNumber -= 1</code></strong>：先将列号减 1，以便将问题转换为以 0 为基准的 26 进制。</li>
@@ -3610,17 +3788,26 @@ print(dec_to_hex(479))
 <li><strong>返回结果</strong>：返回在<code>[left, right]</code> 范围内所有自除数的列表。</li>
 </ol>
 <h4 id="_31">参考解答</h4>
-<pre><code>class Solution:
-    def selfDividingNumbers(self, left: int, right: int) -&gt; List[int]:
-        def isSelfDividing(num: int) -&gt; bool:
-            x = num
-            while x:
-                x, d = divmod(x, 10)
-                if d == 0 or num % d:
-                    return False
-            return True
-        return [i for i in range(left, right + 1) if isSelfDividing(i)]
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-25-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-25-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-25-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-25-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-25-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-25-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-25-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>class Solution:
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>    def selfDividingNumbers(self, left: int, right: int) -&gt; List[int]:
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>        def isSelfDividing(num: int) -&gt; bool:
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a>            x = num
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a>            while x:
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a>                x, d = divmod(x, 10)
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a>                if d == 0 or num % d:
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a>                    return False
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a>            return True
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a>        return [i for i in range(left, right + 1) if isSelfDividing(i)]
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>
 <p><strong><code>divmod(x, 10)</code></strong>: 用于同时获得商和余数，比<code>x // 10</code> 和<code>x % 10</code> 更简洁。</p>
@@ -3642,21 +3829,34 @@ print(dec_to_hex(479))
 <li><strong>全部检查通过</strong>：如果所有相邻的位都不同，则返回<code>True</code>。</li>
 </ol>
 <h4 id="_34">参考解答</h4>
-<pre><code>class Solution:
-    def hasAlternatingBits(self, n: int) -&gt; bool:
-        now = n % 2  # 提取当前位
-
-        while n &gt; 0:
-            n //= 2  # 右移，去掉当前位
-            next_bit = n % 2  # 提取下一位
-
-            if next_bit == now:
-                return False  # 如果相邻的两位相同，返回 False
-
-            now = next_bit  # 更新当前位为下一位
-
-        return True  # 全部位都交替，返回 True
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-26-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-26-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-26-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-26-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-26-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-26-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-26-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-26-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-26-10">10</a></span>
+<span class="normal"><a href="#__codelineno-26-11">11</a></span>
+<span class="normal"><a href="#__codelineno-26-12">12</a></span>
+<span class="normal"><a href="#__codelineno-26-13">13</a></span>
+<span class="normal"><a href="#__codelineno-26-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>class Solution:
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a>    def hasAlternatingBits(self, n: int) -&gt; bool:
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>        now = n % 2  # 提取当前位
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a>        while n &gt; 0:
+<a id="__codelineno-26-6" name="__codelineno-26-6"></a>            n //= 2  # 右移，去掉当前位
+<a id="__codelineno-26-7" name="__codelineno-26-7"></a>            next_bit = n % 2  # 提取下一位
+<a id="__codelineno-26-8" name="__codelineno-26-8"></a>
+<a id="__codelineno-26-9" name="__codelineno-26-9"></a>            if next_bit == now:
+<a id="__codelineno-26-10" name="__codelineno-26-10"></a>                return False  # 如果相邻的两位相同，返回 False
+<a id="__codelineno-26-11" name="__codelineno-26-11"></a>
+<a id="__codelineno-26-12" name="__codelineno-26-12"></a>            now = next_bit  # 更新当前位为下一位
+<a id="__codelineno-26-13" name="__codelineno-26-13"></a>
+<a id="__codelineno-26-14" name="__codelineno-26-14"></a>        return True  # 全部位都交替，返回 True
+</code></pre></div></td></tr></table></div>
 <h4 id="_35">代码讲解</h4>
 <ol>
 <li><code>now = n % 2</code>：提取当前最低位。</li>

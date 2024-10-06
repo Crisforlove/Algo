@@ -8,13 +8,14 @@ LeetCode是一个在线编程竞技平台，旨在帮助‌程序员提升编程
 
 
 - **首先在菜单中点击‘题库’：**
-![image1](https://i.imgur.com/I0eHE3v.png)
+![image1](images/cpp1.png)
 
 - **搜索框中可以输入题号、标题等查找相应题目**
-![image2](https://i.imgur.com/5qJMJrm.png)
+![image2](images/cpp2.png)
 
 - **搜索时可以设置题目难度**
-![image3](https://i.imgur.com/Yfl0r08.png)
+![image3](images/cpp3.png)
+
 
 ### 1.2 Leetcode 题目
 
@@ -27,30 +28,24 @@ LeetCode是一个在线编程竞技平台，旨在帮助‌程序员提升编程
 3. 提示：给出一些变量在test case中的范围
 
 以下用LC35题作为例子
-
-![image4](https://i.imgur.com/NkSTdSO.png)
-
+![image4](images/cpp4.png)
 ### 1.3 Leetcode题解
 
 题解：点击题解后即可查看该题的几种解法
-
-![image5](https://i.imgur.com/EKdwRcE.png)
-
+![image5](images/cpp5.png)
 ### 1.4 Leetcode提交记录
 
 点击‘提交记录’可查看以往提交内容
-
-![image6](https://i.imgur.com/N0XQWaP.png)
+![image6](images/cpp6.png)
 
 点击其中一条，即出现该次提交的详情，包括性能与代码内容
 
-![image7](https://i.imgur.com/D6sjuea.png)
+![image7](images/cpp7.png)
 ### 1.5 Leetcode做题分析
 
 点击头像，查看做题分析、进度管理等，即可查看自己的做题内容
 
-![image8](https://i.imgur.com/MWrBxn9.png)
-
+![image8](images/cpp8.png)
 下面是一个常用的C++字符串方法的表格，展示了C++中常见的字符串操作及其描述：
 
 | 序号 | 方法及描述                                                   |

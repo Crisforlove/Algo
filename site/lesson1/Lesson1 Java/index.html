@@ -1191,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Lesson1%20Python/" class="md-nav__link">
+      <a href="../Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1212,7 +1212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1233,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2525,8 +2525,8 @@
 <p>对于 Windows 和 Mac 来说，Java 的安装步骤很简单，我们可以选择对应的安装程序（.exe/.dmg）然后根据步骤来进行安装：</p>
 <ul>
 <li>Mac 系统的默认安装路径为下述地址：
-    <code>shell
-    ~/Library/Java/JavaVirtualMachines/</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>~/Library/Java/JavaVirtualMachines/
+</code></pre></div></td></tr></table></div></li>
 <li>Windows 在安装时注意指定好安装路径即可</li>
 </ul>
 <h3 id="13-java">1.3 Java配置</h3>
@@ -2536,19 +2536,22 @@
 </ul>
 <p><img alt="" src="https://markdown.liuchengtu.com/work/uploads/upload_905b7be0d3ccae79fa56c627226b6897.png" />
 <img alt="" src="https://markdown.liuchengtu.com/work/uploads/upload_bda8492d28a8dadcfda4099f549da1a0.png" /></p>
-<p>注意，如果安装了多个版本的JDK，就需要手动配置Java的环境变量。要配置<code>$JAVA_HOME</code>环境变量，找到以下三个配置文件中的任意一个：</p>
-<pre><code class="language-shell">~/.bash_profile
-~/.bashrc
-~/.zshrc
-</code></pre>
-<ul>
-<li>添加下面这行代码：
-    <code>shell
-    # 以 Java8 举例，其中 "JAVA_HOME=" 后面是 你的Java JDK 的实际安装地址，需要根据实际情况修改
-    export JAVA_HOME=/Users/xxx/Library/Java/JavaVirtualMachines/corretto-1.8.0_332
-    export PATH=$JAVA_HOME/bin:$PATH:.
-    export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib</code> </li>
-</ul>
+<p>注意，如果安装了多个版本的JDK，就需要手动配置Java的环境变量。要配置<code>$JAVA_HOME</code>环境变量，找到以下三个配置文件中的任意一个：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>~/.bash_profile
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>~/.bashrc
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>~/.zshrc
+</code></pre></div></td></tr></table></div>
+- 添加下面这行代码：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 以 Java8 举例，其中 &quot;JAVA_HOME=&quot; 后面是 你的Java JDK 的实际安装地址，需要根据实际情况修改</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/Users/xxx/Library/Java/JavaVirtualMachines/corretto-1.8.0_332
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$JAVA_HOME</span>/bin:<span class="nv">$PATH</span>:.
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">CLASSPATH</span><span class="o">=</span><span class="nv">$CLASSPATH</span>:<span class="nv">$JAVA_HOME</span>/lib
+</code></pre></div></td></tr></table></div></p>
 <h4 id="132-windows">1.3.2 Windows 系统电脑</h4>
 <ul>
 <li>
@@ -2556,9 +2559,10 @@
 <p>打开系统设置，点击高级系统设置，打开环境变量以后点击系统变量的新建：新建 JAVA_HOME 变量（单词大写，符合是英文），如果是用默认安装路径可以直接复制使用：
 <img alt="" src="https://markdown.liuchengtu.com/work/uploads/upload_a9c6b983008cc1a9b9071be7a49fa940.png" /></p>
 <p>找到系统变量中的 Path 变量，选中然后点击编辑，然后点击新建，这里都一样，可以直接复制使用：
-<code>shell
-%JAVA_HOME%\bin
-%JAVA_HOME%\jre\bin</code> 
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>%JAVA_HOME%<span class="se">\b</span>in
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>%JAVA_HOME%<span class="se">\j</span>re<span class="se">\b</span>in
+</code></pre></div></td></tr></table></div>
 <img alt="" src="https://markdown.liuchengtu.com/work/uploads/upload_0c89d96c23b480ab24589992452f9134.png" /></p>
 </li>
 </ul>
@@ -2579,20 +2583,24 @@
 </li>
 </ul>
 <h2 id="2-hello-world">2. 第一个程序：Hello World！</h2>
-<pre><code class="language-java">public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println(&quot;Hello, World!&quot;);
-    }
-}
-</code></pre>
-<p>将以上代码保存为<code>HelloWorld.java</code>文件。</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloWorld</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+将以上代码保存为<code>HelloWorld.java</code>文件。</p>
 <p>然后，我们使用 Java 编译器<code>javac</code>对源文件进行编译：</p>
-<p>对于Mac系统，打开 <code>终端</code> 软件，对于Windows系统，打开 <code>命令行</code> 软件</p>
-<pre><code class="language-shell">javac HelloWorld.java
-</code></pre>
-<p>随后当前目录会新生成一个HelloWorld.class文件，要运行Java文件，使用：</p>
-<pre><code class="language-shell">java HelloWorld
-</code></pre>
+<p>对于Mac系统，打开 <code>终端</code> 软件，对于Windows系统，打开 <code>命令行</code> 软件
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>javac<span class="w"> </span>HelloWorld.java
+</code></pre></div></td></tr></table></div></p>
+<p>随后当前目录会新生成一个HelloWorld.class文件，要运行Java文件，使用：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>java<span class="w"> </span>HelloWorld
+</code></pre></div></td></tr></table></div></p>
 <p>运行成功后，控制台会输出 “Hello, World!”，这就是我们的程序运行结果。</p>
 <h2 id="3-javaide">3. Java常用的集成开发环境（IDE）</h2>
 <p>集成开发环境（Integrated Development Environment，简称IDE）是一种软件工具，提供了一套集成的功能和工具，用于开发、编写、测试和调试软件应用程序。</p>
@@ -2628,12 +2636,16 @@
 </li>
 <li>
 <p>复制以下代码：
-    <code>java
-    public class HelloWorld {
-        public static void main(String[] args) {
-            System.out.println("Hello, World!");
-        }
-    }</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloWorld</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>点击运行图标运行该段代码：
     <img alt="" src="https://markdown.liuchengtu.com/work/uploads/upload_112ea91497c6c91f4bc0ec48a1896c6a.png" /></li>
@@ -2655,22 +2667,36 @@
 <li>不能用Java关键字或保留字做标识符。</li>
 <li>Java标识符大小写敏感。</li>
 </ul>
-<p>合法的标识符，如：</p>
-<pre><code class="language-java">int a = 3;
-int _123 = 3;
-int $12aa = 3;
-int 变量1 = 3; //不建议使用中文
-</code></pre>
-<p>不合法的标识符，如：</p>
-<pre><code class="language-java">int 1a = 3; //不能使用数字开头
-int a# = 3; //不能包含#这样的特殊字符
-int int = 3; //不能使用关键字
-</code></pre>
-<p>注意：虽然Java的语法允许使用下划线（_）和美元符号（$）作为标识符的开始，但是在很多企业的开发规范中约定，不能使用这两者作为标识符的开始，以达到统一标识符格式，减少歧义的效果。</p>
+<p>合法的标识符，如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">_123</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">$12aa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">变量1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">//不建议使用中文</span>
+</code></pre></div></td></tr></table></div>
+不合法的标识符，如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="mi">1</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">//不能使用数字开头</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="err">#</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">//不能包含#这样的特殊字符</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kt">int</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">//不能使用关键字</span>
+</code></pre></div></td></tr></table></div>
+注意：虽然Java的语法允许使用下划线（_）和美元符号（$）作为标识符的开始，但是在很多企业的开发规范中约定，不能使用这两者作为标识符的开始，以达到统一标识符格式，减少歧义的效果。</p>
 <h3 id="42">4.2 关键字和保留字</h3>
 <p>关键字和保留字是Java语言中具有特殊含义的单词或符号。关键字是Java语言本身定义的，用于表示特定的语法结构和操作，不能用作标识符，如变量名、类名等。</p>
 <p>Java语言共有50个关键字，如下所示：</p>
-<pre><code>abstract    continue    for         new         switch
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>abstract    continue    for         new         switch
 assert      default     if          package     synchronized
 boolean     do          goto        private     this
 break       double      implements  protected   throw
@@ -2680,7 +2706,7 @@ catch       extends     int         short       try
 char        final       interface   static      void
 class       finally     long        strictfp    volatile
 const       float       native      super       while
-</code></pre>
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>这些关键字具有固定的语法含义，不能被用作变量名或其他标识符。</li>
 <li>保留字是指被保留但目前未被使用的关键字，它们在Java语言中没有特定的功能，但为了保留未来可能使用的关键字而被保留。</li>
@@ -2692,72 +2718,98 @@ const       float       native      super       while
 - 变量：顾名思义，会变的量。
 - 常量：自然界中规定好了的、不会变的值。</p>
 <h3 id="52">5.2 变量的声明</h3>
-<p>在Java中，需要先声明一个变量，才能使用这个变量。变量的声明包含两点：变量的数据类型和变量名，语法格式如下：</p>
-<pre><code class="language-shell">数据类型 变量名； 
-</code></pre>
-<p>数据类型可以是Java的任意数据类型之一；变量名即变量的名称，用于存储变量值：</p>
-<pre><code class="language-java">int a;
-char b;
-</code></pre>
-<p>可以同时声明多个同一数据类型的变量，变量之间用“,”隔开，例如：</p>
-<pre><code class="language-java">int c，d，e;
-
-等同于：
-
-int c;
-int d;
-int e;
-</code></pre>
+<p>在Java中，需要先声明一个变量，才能使用这个变量。变量的声明包含两点：变量的数据类型和变量名，语法格式如下：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>数据类型<span class="w"> </span>变量名；<span class="w"> </span>
+</code></pre></div></td></tr></table></div></p>
+<p>数据类型可以是Java的任意数据类型之一；变量名即变量的名称，用于存储变量值：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+可以同时声明多个同一数据类型的变量，变量之间用“,”隔开，例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span>
+<span class="normal"><a href="#__codelineno-12-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="err">，</span><span class="n">d</span><span class="err">，</span><span class="n">e</span><span class="p">;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="n">等同于</span><span class="err">：</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="kt">int</span><span class="w"> </span><span class="n">e</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="53">5.3 变量的初始化</h3>
 <p>Java语法规定：变量在使用之前必须初始化，即必须给该变量赋予特定的值。</p>
 <p>变量的第一次赋值即对变量的初始化。在Java中，使用等号(=)实现变量的赋值。</p>
 <p>变量的初始化有以下两种方式：</p>
-<p>1、在声明变量时，同时对变量进行初始化，语法如下：</p>
-<pre><code class="language-java">数据类型 变量名 = 初始值；
-
-例如：
-int f = 5;
-</code></pre>
-<p>2、第一次使用变量前，对变量进行初始化，语法如下：</p>
-<pre><code class="language-java">数据类型 变量名；
-    ……
-变量名 = 初始值；
-例如：
-
-int sum;                      // 声明变量sum
-System.out.println(sum);      // 报错，不能使用未赋值的变量
-sum = 100;                    // 给变量sum赋值
-System.out.println(sum);      // 正确，输出100
-</code></pre>
+<p>1、在声明变量时，同时对变量进行初始化，语法如下：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">数据类型</span><span class="w"> </span><span class="n">变量名</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">初始值</span><span class="err">；</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="n">例如</span><span class="err">：</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+2、第一次使用变量前，对变量进行初始化，语法如下：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span>
+<span class="normal"><a href="#__codelineno-14-6">6</a></span>
+<span class="normal"><a href="#__codelineno-14-7">7</a></span>
+<span class="normal"><a href="#__codelineno-14-8">8</a></span>
+<span class="normal"><a href="#__codelineno-14-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">数据类型</span><span class="w"> </span><span class="n">变量名</span><span class="err">；</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="err">……</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="n">变量名</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">初始值</span><span class="err">；</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="n">例如</span><span class="err">：</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span><span class="w">                      </span><span class="c1">// 声明变量sum</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span><span class="w">      </span><span class="c1">// 报错，不能使用未赋值的变量</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">                    </span><span class="c1">// 给变量sum赋值</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span><span class="w">      </span><span class="c1">// 正确，输出100</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="54">5.4 变量的访问</h3>
 <p>变量在声明和初始化后，可以对变量进行访问，包括读取变量的值和修改变量的值。代码如下：</p>
-<pre><code class="language-java">int sum = 100;               // 声明变量sum
-System.out.println(sum);     // 输出变量的值 -&gt; 100
-sum = 200;                   // 修改变量sum的值
-System.out.println(sum);     // 再次输出变量的值 -&gt; 200
-</code></pre>
-<p>变量的访问应注意以下几个方面：</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">               </span><span class="c1">// 声明变量sum</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span><span class="w">     </span><span class="c1">// 输出变量的值 -&gt; 100</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w">                   </span><span class="c1">// 修改变量sum的值</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span><span class="w">     </span><span class="c1">// 再次输出变量的值 -&gt; 200</span>
+</code></pre></div></td></tr></table></div>
+变量的访问应注意以下几个方面：</p>
 <p>1、变量的操作必须与类型匹配。</p>
 <p>变量在声明时指定了类型，Java编译器会检测对该变量的操作是否与其他类型匹配，如果对变量的赋值或者操作与其类型不匹配，会产生编译错误，例如：</p>
-<pre><code class="language-java">//编译错误，变量a的类型为int整型，不能赋值为浮点类型的值
-int a = 3.14;  
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="c1">//编译错误，变量a的类型为int整型，不能赋值为浮点类型的值</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span><span class="w">  </span>
+</code></pre></div></td></tr></table></div>
 <p>2、变量的数据类型只写一次。</p>
-<p>变量在第一次声明的时候写数据类型，再次使用时不写数据类型，例如：</p>
-<pre><code class="language-java">int n;
-n = 5;   // 正确，再次使用变量n时不写数据类型
-int n = 10; // 再次指定变量的数据类型会出现编译错误
-</code></pre>
+<p>变量在第一次声明的时候写数据类型，再次使用时不写数据类型，例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">   </span><span class="c1">// 正确，再次使用变量n时不写数据类型</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// 再次指定变量的数据类型会出现编译错误</span>
+</code></pre></div></td></tr></table></div></p>
 <p>3、未经声明的变量不能使用。</p>
 <p>变量必须先声明，否则会出现编译错误，例如：</p>
-<pre><code class="language-java">k=5;    
-System.out.println(p);  // 编译错误，变量没有声明
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span><span class="w">    </span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p</span><span class="p">);</span><span class="w">  </span><span class="c1">// 编译错误，变量没有声明</span>
+</code></pre></div></td></tr></table></div>
 <p>4、变量初始化后才可以使用。</p>
-<p>声明一个变量，必须初始化后才能使用，例如：</p>
-<pre><code class="language-java">int t;                             
-System.out.println(t);  // 变量t没有初始化，出现编译错误
-</code></pre>
+<p>声明一个变量，必须初始化后才能使用，例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w">                             </span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w">  </span><span class="c1">// 变量t没有初始化，出现编译错误</span>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="6-java">6. Java的数据类型</h2>
 <p>Java的数据类型分为两大类：基本数据类型和引用数据类型。</p>
 <h3 id="61">6.1 基本数据类型</h3>
@@ -2774,91 +2826,119 @@ Java中整数类型包括：byte、short、int 和long型，它们之间的区�
 <li>它分为单精度浮点数（float）和双精度浮点数（double）两种，双精度浮点数比单精度浮点数所使用的内存空间更大，可表示的数值范围与精确度也比较大。</li>
 </ul>
 <h4 id="613">6.1.3 字符类型</h4>
-<p>字符类型表示单个字符，Java中的字符类型变量使用char关键字进行声明，而字符型字面量必须用单引号括起来，例如：</p>
-<pre><code class="language-java">char c = 'A';
-</code></pre>
+<p>字符类型表示单个字符，Java中的字符类型变量使用char关键字进行声明，而字符型字面量必须用单引号括起来，例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
 <h4 id="614">6.1.4 布尔类型</h4>
 <ul>
 <li>布尔类型在Java语言中使用关键字boolean 声明，它只有两个字面量：true和false。</li>
 <li>与C语言不同，Java不允许使用0或非0的整数来代替true和false，也不能将其他基本数据类型的值直接转换为布尔类型。</li>
-<li>布尔类型用于判断逻辑条件的结果，通常在程序的分支和循环控制语句中使用，根据逻辑判断的结果来决定程序的执行流程。</li>
+<li>布尔类型用于判断逻辑条件的结果，通常在程序的分支和循环控制语句中使用，根据逻辑判断的结果来决定程序的执行流程。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">isBig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">isSmall</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
-<pre><code class="language-java">boolean isBig = true;
-boolean isSmall = false;
-</code></pre>
 <h3 id="62">6.2 引用数据类型</h3>
 <p>引用类型是指除基本数据类型以外的所有类型，包括类、接口、数组、枚举等，是高阶内容，不在本次教学范围内，这里只选取Java中常用的一种引用数据类型进行介绍。</p>
 <h4 id="621">6.2.1 字符串类型</h4>
-<p>字符串类型是Java中用于存储多个字符的数据类型，使用String关键字声明字符串变量。例如：</p>
-<pre><code class="language-java">String str = &quot;abc&quot;;
-</code></pre>
-<p>需要强调两点：</p>
+<p>字符串类型是Java中用于存储多个字符的数据类型，使用String关键字声明字符串变量。例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abc&quot;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+需要强调两点：</p>
 <ul>
 <li>Java中的字符串类型字面量是String类型的，而不是char类型的。</li>
 <li>String类型不是基本数据类型，而是引用类型。</li>
 </ul>
 <h3 id="63">6.3 常用数据类型的使用实例</h3>
-<pre><code class="language-java">public class StudentInformation {
-    public static void main(String[] args) {
-        // 学生信息
-        int studentId = 12345;
-        String studentName = &quot;赵镇&quot;;
-        int age = 20;
-        double score = 92.5;
-        char gender = '男';
-        boolean isMarried = false;
-
-        // 输出学生信息
-        System.out.println(&quot;学生信息：&quot;);
-        System.out.println(&quot;学号：&quot; + studentId);
-        System.out.println(&quot;姓名：&quot; + studentName);
-        System.out.println(&quot;年龄：&quot; + age);
-        System.out.println(&quot;成绩：&quot; + score);
-        System.out.println(&quot;性别：&quot; + gender);
-        System.out.println(&quot;婚否：&quot; + isMarried);
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span>
+<span class="normal"><a href="#__codelineno-23-12">12</a></span>
+<span class="normal"><a href="#__codelineno-23-13">13</a></span>
+<span class="normal"><a href="#__codelineno-23-14">14</a></span>
+<span class="normal"><a href="#__codelineno-23-15">15</a></span>
+<span class="normal"><a href="#__codelineno-23-16">16</a></span>
+<span class="normal"><a href="#__codelineno-23-17">17</a></span>
+<span class="normal"><a href="#__codelineno-23-18">18</a></span>
+<span class="normal"><a href="#__codelineno-23-19">19</a></span>
+<span class="normal"><a href="#__codelineno-23-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StudentInformation</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="w">        </span><span class="c1">// 学生信息</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">studentId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span><span class="p">;</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">studentName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;赵镇&quot;</span><span class="p">;</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">92.5</span><span class="p">;</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">gender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;男&#39;</span><span class="p">;</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isMarried</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a>
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="w">        </span><span class="c1">// 输出学生信息</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;学生信息：&quot;</span><span class="p">);</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;学号：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">studentId</span><span class="p">);</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;姓名：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">studentName</span><span class="p">);</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;年龄：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
+<a id="__codelineno-23-16" name="__codelineno-23-16"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;成绩：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">score</span><span class="p">);</span>
+<a id="__codelineno-23-17" name="__codelineno-23-17"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;性别：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">gender</span><span class="p">);</span>
+<a id="__codelineno-23-18" name="__codelineno-23-18"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;婚否：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">isMarried</span><span class="p">);</span>
+<a id="__codelineno-23-19" name="__codelineno-23-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-23-20" name="__codelineno-23-20"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="7-java">7. Java中的运算符</h2>
 <h3 id="71">7.1 算术运算符</h3>
 <ul>
 <li><strong>运算符</strong>：<code>+</code>（加）、<code>-</code>（减）、<code>*</code>（乘）、<code>/</code>（除）、<code>%</code>（求余）、<code>++</code>（自增）、<code>--</code>（自减）</li>
 <li><strong>用途</strong>：执行基本的数学运算</li>
 <li><strong>示例代码</strong>：
-    <code>java
-    int a = 10;
-    int b = 20;
-    int result = a + b; // 30
-    a++; // 11</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// 30</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="n">a</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 11</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="72">7.2 赋值运算符</h3>
 <ul>
 <li><strong>运算符</strong>：<code>=</code>（等于）、<code>+=</code>（自加一次等于）、<code>-=</code>（自减一次等于）、<code>*=</code>（自乘一次等于）、<code>/=</code>（自除一次等于）、<code>%=</code>（求模并赋值）</li>
 <li><strong>用途</strong>：将计算结果赋值给变量</li>
 <li><strong>示例代码</strong>：
-    <code>java
-    int x = 10;
-    x += 5; // 等同于 x = x + 5;</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// 等同于 x = x + 5;</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="73">7.3 比较运算符</h3>
 <ul>
 <li><strong>运算符</strong>：<code>&lt;</code>（小于）、<code>&gt;</code>（大于）、<code>&gt;=</code>（大于等于）、<code>&lt;=</code>（小于等于）、<code>==</code>（等于）、<code>!=</code>（不等于）</li>
 <li><strong>用途</strong>：比较两个值的大小或相等性</li>
 <li><strong>示例代码</strong>：
-    <code>java
-    int m = 10;
-    int n = 20;
-    boolean result = (m &gt; n); // 比较 m 是否大于 n</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="c1">// 比较 m 是否大于 n</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="74">7.4 逻辑运算符</h3>
 <ul>
 <li><strong>运算符</strong>：<code>&amp;&amp;</code>（短路与）、<code>||</code>（短路或）、<code>!</code>（非）</li>
 <li><strong>用途</strong>：组合布尔表达式，实现逻辑运算</li>
 <li><strong>示例代码</strong>：
-    <code>java
-    boolean condition1 = true;
-    boolean condition2 = false;
-    boolean result = condition1 &amp;&amp; condition2; // 使用短路与运算符</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">condition1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">condition2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">condition1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">condition2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 使用短路与运算符</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="75">7.5 条件（三目）运算符</h3>
 <ul>
@@ -2866,19 +2946,22 @@ boolean isSmall = false;
 <li><strong>用途</strong>：根据条件表达式的结果选择两个值中的一个</li>
 <li><strong>语法</strong>：<code>result = (condition) ? value1 : value2;</code></li>
 <li><strong>示例代码</strong>：
-    <code>java
-    int age = 20;
-    String message = (age &gt;= 18) ? "成年人" : "未成年人"; // 根据年龄判断成年人或未成年人</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<span class="normal"><a href="#__codelineno-28-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;成年人&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;未成年人&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 根据年龄判断成年人或未成年人</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="76">7.6 位运算符</h3>
 <ul>
 <li><strong>运算符</strong>：<code>&amp;</code>（按位与）、<code>|</code>（按位或）、<code>^</code>（异或）、<code>~</code>（非、取反）</li>
 <li><strong>用途</strong>：对二进制位进行操作</li>
 <li><strong>示例代码</strong>：
-    <code>java
-    int a = 5; // 二进制为 101
-    int b = 3; // 二进制为 011
-    int result = a &amp; b; // 按位与操作</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span>
+<span class="normal"><a href="#__codelineno-29-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// 二进制为 101</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 二进制为 011</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// 按位与操作</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="77">7.7 复合赋值运算符</h3>
 <ul>
@@ -2891,56 +2974,88 @@ boolean isSmall = false;
 <li><strong>运算符</strong>：<code>+</code></li>
 <li><strong>用途</strong>：用于连接字符串</li>
 <li><strong>示例代码</strong>：
-    <code>java
-    String str1 = "Hello, ";
-    String str2 = "World!";
-    String result = str1 + str2; // "Hello, World!"</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<span class="normal"><a href="#__codelineno-30-2">2</a></span>
+<span class="normal"><a href="#__codelineno-30-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, &quot;</span><span class="p">;</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="n">String</span><span class="w"> </span><span class="n">str2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;World!&quot;</span><span class="p">;</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">str2</span><span class="p">;</span><span class="w"> </span><span class="c1">// &quot;Hello, World!&quot;</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <p>Java中的运算符不仅包括上述基本类型，还包括复合赋值运算符，如 +=, -= 等，此外，Java还支持字符串连接操作，其中 + 运算符除了用于数值的加法运算外，还可以用于连接字符串。</p>
 <h2 id="8-java">8. Java的输入与输出</h2>
 <h3 id="81-scanner">8.1 使用 Scanner 读取字符串/整数/浮点数</h3>
 <p>Scanner 可以读取用户的键盘输入。
-例如：</p>
-<pre><code class="language-java">import java.util.Scanner; // 导入 util 包
-public class scannerReader {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println(&quot;请输入你的姓名：&quot;);
-        String name = sc.nextLine();
-        System.out.println(&quot;请输入你的年龄：&quot;);
-        int age = sc.nextInt();
-        System.out.println(&quot;请输入你的工资：&quot;);
-        float salary = sc.nextFloat();
-        System.out.println(&quot;你的信息如下：&quot;);
-        System.out.println(&quot;姓名: &quot; + name + &quot;\n&quot; + &quot;年龄：&quot; + age + &quot;\n&quot; + &quot;工资：&quot; + salary);
-        sc.close(); //调用关闭方法
-    }
-}
-</code></pre>
+例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-31-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-31-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-31-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-31-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-31-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-31-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-31-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-31-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-31-10">10</a></span>
+<span class="normal"><a href="#__codelineno-31-11">11</a></span>
+<span class="normal"><a href="#__codelineno-31-12">12</a></span>
+<span class="normal"><a href="#__codelineno-31-13">13</a></span>
+<span class="normal"><a href="#__codelineno-31-14">14</a></span>
+<span class="normal"><a href="#__codelineno-31-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w"> </span><span class="c1">// 导入 util 包</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">scannerReader</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;请输入你的姓名：&quot;</span><span class="p">);</span>
+<a id="__codelineno-31-6" name="__codelineno-31-6"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<a id="__codelineno-31-7" name="__codelineno-31-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;请输入你的年龄：&quot;</span><span class="p">);</span>
+<a id="__codelineno-31-8" name="__codelineno-31-8"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-31-9" name="__codelineno-31-9"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;请输入你的工资：&quot;</span><span class="p">);</span>
+<a id="__codelineno-31-10" name="__codelineno-31-10"></a><span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextFloat</span><span class="p">();</span>
+<a id="__codelineno-31-11" name="__codelineno-31-11"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;你的信息如下：&quot;</span><span class="p">);</span>
+<a id="__codelineno-31-12" name="__codelineno-31-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;姓名: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\n&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;年龄：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\n&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;工资：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">salary</span><span class="p">);</span>
+<a id="__codelineno-31-13" name="__codelineno-31-13"></a><span class="w">        </span><span class="n">sc</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"> </span><span class="c1">//调用关闭方法</span>
+<a id="__codelineno-31-14" name="__codelineno-31-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-31-15" name="__codelineno-31-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="82-systemoutprintln">8.2 System.out.println()</h3>
-<p><code>System.out.println()</code>可以打印一行内容，输出完自动换行。</p>
-<pre><code class="language-java">public class Inputoutput {
-    public static void main(String[] args){
-        System.out.println(&quot;hello,java!&quot;);
-        int a=9;
-        System.out.println(&quot;output:&quot;+a);
-    }
-}
-</code></pre>
+<p><code>System.out.println()</code>可以打印一行内容，输出完自动换行。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span>
+<span class="normal"><a href="#__codelineno-32-4">4</a></span>
+<span class="normal"><a href="#__codelineno-32-5">5</a></span>
+<span class="normal"><a href="#__codelineno-32-6">6</a></span>
+<span class="normal"><a href="#__codelineno-32-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Inputoutput</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;hello,java!&quot;</span><span class="p">);</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="o">=</span><span class="mi">9</span><span class="p">;</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;output:&quot;</span><span class="o">+</span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-32-7" name="__codelineno-32-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="83-systemoutprint">8.3 System.out.print()</h3>
-<p><code>System.out.print()</code>可以打印字符串以及其他的类型。</p>
-<pre><code class="language-java">public class Inputoutput {
-    public static void main(String[] args){
-        char c='我';//在Java中char有两字节，所以可以存中文
-        int a=2187;
-        byte b=127;
-        System.out.print(c);
-        System.out.print('\n');
-        System.out.print(a);
-        System.out.print(&quot;output:&quot;+b);
-    }
-}
-</code></pre>
+<p><code>System.out.print()</code>可以打印字符串以及其他的类型。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-33-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-33-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-33-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-33-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-33-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-33-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-33-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-33-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-33-10">10</a></span>
+<span class="normal"><a href="#__codelineno-33-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Inputoutput</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="o">=</span><span class="sc">&#39;我&#39;</span><span class="p">;</span><span class="c1">//在Java中char有两字节，所以可以存中文</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="o">=</span><span class="mi">2187</span><span class="p">;</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="w">        </span><span class="kt">byte</span><span class="w"> </span><span class="n">b</span><span class="o">=</span><span class="mi">127</span><span class="p">;</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-33-9" name="__codelineno-33-9"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;output:&quot;</span><span class="o">+</span><span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-33-10" name="__codelineno-33-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-33-11" name="__codelineno-33-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="84-inputstreamoutputstream">8.4 InputStream/OutputStream</h3>
 <p>在 Java 中，InputStream 和 OutputStream 是两个基本的 I/O 类，用于处理字节流的输入和输出。它们分别是输入和输出操作的基类，并且都有多个子类，支持从各种数据源读取数据和将数据写入各种数据目标。以下是它们的关系、基类、子类及其常见用途的详细介绍。</p>
 <p>InputStream 和 OutputStream 的关系：
@@ -2949,39 +3064,67 @@ public class scannerReader {
 - InputStream 和 OutputStream 并没有直接的继承关系，但它们是互补的，分别处理输入和输出操作。</p>
 <p>例如：</p>
 <h5 id="inputstream">使用 <code>InputStream</code> 读取文件</h5>
-<pre><code class="language-java">import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-
-public class InputStreamExample {
-    public static void main(String[] args) {
-        try (InputStream inputStream = new FileInputStream(&quot;example.txt&quot;)) {
-            int data;
-            while ((data = inputStream.read()) != -1) {
-                System.out.print((char) data);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-34-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-34-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-34-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-34-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-34-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-34-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-34-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-34-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-34-10">10</a></span>
+<span class="normal"><a href="#__codelineno-34-11">11</a></span>
+<span class="normal"><a href="#__codelineno-34-12">12</a></span>
+<span class="normal"><a href="#__codelineno-34-13">13</a></span>
+<span class="normal"><a href="#__codelineno-34-14">14</a></span>
+<span class="normal"><a href="#__codelineno-34-15">15</a></span>
+<span class="normal"><a href="#__codelineno-34-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileInputStream</span><span class="p">;</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.InputStream</span><span class="p">;</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a>
+<a id="__codelineno-34-5" name="__codelineno-34-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">InputStreamExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">InputStream</span><span class="w"> </span><span class="n">inputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="s">&quot;example.txt&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-34-8" name="__codelineno-34-8"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<a id="__codelineno-34-9" name="__codelineno-34-9"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputStream</span><span class="p">.</span><span class="na">read</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-34-10" name="__codelineno-34-10"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">((</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">);</span>
+<a id="__codelineno-34-11" name="__codelineno-34-11"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-34-12" name="__codelineno-34-12"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-34-13" name="__codelineno-34-13"></a><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<a id="__codelineno-34-14" name="__codelineno-34-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-34-15" name="__codelineno-34-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-34-16" name="__codelineno-34-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h5 id="outputstream">使用 <code>OutputStream</code> 写入文件</h5>
-<pre><code class="language-java">import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-
-public class OutputStreamExample {
-    public static void main(String[] args) {
-        String data = &quot;Hello, World!&quot;;
-        try (OutputStream outputStream = new FileOutputStream(&quot;example.txt&quot;)) {
-            outputStream.write(data.getBytes());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-35-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-35-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-35-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-35-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-35-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-35-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-35-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-35-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-35-10">10</a></span>
+<span class="normal"><a href="#__codelineno-35-11">11</a></span>
+<span class="normal"><a href="#__codelineno-35-12">12</a></span>
+<span class="normal"><a href="#__codelineno-35-13">13</a></span>
+<span class="normal"><a href="#__codelineno-35-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileOutputStream</span><span class="p">;</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.OutputStream</span><span class="p">;</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OutputStreamExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-6" name="__codelineno-35-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, World!&quot;</span><span class="p">;</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">OutputStream</span><span class="w"> </span><span class="n">outputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&quot;example.txt&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-9" name="__codelineno-35-9"></a><span class="w">            </span><span class="n">outputStream</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="na">getBytes</span><span class="p">());</span>
+<a id="__codelineno-35-10" name="__codelineno-35-10"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-11" name="__codelineno-35-11"></a><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<a id="__codelineno-35-12" name="__codelineno-35-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-35-13" name="__codelineno-35-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-35-14" name="__codelineno-35-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="9">9. 课程总结</h2>
 <ul>
 <li>Java环境安装正常。</li>
@@ -3002,36 +3145,64 @@ public class OutputStreamExample {
 <p>(C) 8577  </p>
 <p>(D) 9233  </p>
 <p>参考程序：  </p>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class FindNumber {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // 获取用户输入的选项
-        System.out.print(&quot;请输入一个选项：&quot;);
-        int option = scanner.nextInt();
-
-        // 计算余数
-        int a = option % 12;
-        int b = option % 23;
-        int c = option % 31;
-
-        // 打印余数结果
-        System.out.println(&quot;For option &quot; + option + &quot;:&quot;);
-        System.out.println(&quot;a = &quot; + a + &quot;, b = &quot; + b + &quot;, c = &quot; + c);
-
-        // 判断是否满足条件
-        if (a == 1 &amp;&amp; b == 1 &amp;&amp; c == 1) {
-            System.out.println(&quot;Correct, That's what I find!! The number is: &quot; + option);
-        } else {
-            System.out.println(&quot;Wrong, Please try another Answer!&quot;);
-        }
-
-        scanner.close();
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-36-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-36-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-36-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-36-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-36-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-36-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-36-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-36-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-36-10">10</a></span>
+<span class="normal"><a href="#__codelineno-36-11">11</a></span>
+<span class="normal"><a href="#__codelineno-36-12">12</a></span>
+<span class="normal"><a href="#__codelineno-36-13">13</a></span>
+<span class="normal"><a href="#__codelineno-36-14">14</a></span>
+<span class="normal"><a href="#__codelineno-36-15">15</a></span>
+<span class="normal"><a href="#__codelineno-36-16">16</a></span>
+<span class="normal"><a href="#__codelineno-36-17">17</a></span>
+<span class="normal"><a href="#__codelineno-36-18">18</a></span>
+<span class="normal"><a href="#__codelineno-36-19">19</a></span>
+<span class="normal"><a href="#__codelineno-36-20">20</a></span>
+<span class="normal"><a href="#__codelineno-36-21">21</a></span>
+<span class="normal"><a href="#__codelineno-36-22">22</a></span>
+<span class="normal"><a href="#__codelineno-36-23">23</a></span>
+<span class="normal"><a href="#__codelineno-36-24">24</a></span>
+<span class="normal"><a href="#__codelineno-36-25">25</a></span>
+<span class="normal"><a href="#__codelineno-36-26">26</a></span>
+<span class="normal"><a href="#__codelineno-36-27">27</a></span>
+<span class="normal"><a href="#__codelineno-36-28">28</a></span>
+<span class="normal"><a href="#__codelineno-36-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FindNumber</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6"></a>
+<a id="__codelineno-36-7" name="__codelineno-36-7"></a><span class="w">        </span><span class="c1">// 获取用户输入的选项</span>
+<a id="__codelineno-36-8" name="__codelineno-36-8"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;请输入一个选项：&quot;</span><span class="p">);</span>
+<a id="__codelineno-36-9" name="__codelineno-36-9"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-36-10" name="__codelineno-36-10"></a>
+<a id="__codelineno-36-11" name="__codelineno-36-11"></a><span class="w">        </span><span class="c1">// 计算余数</span>
+<a id="__codelineno-36-12" name="__codelineno-36-12"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span>
+<a id="__codelineno-36-13" name="__codelineno-36-13"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">23</span><span class="p">;</span>
+<a id="__codelineno-36-14" name="__codelineno-36-14"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">31</span><span class="p">;</span>
+<a id="__codelineno-36-15" name="__codelineno-36-15"></a>
+<a id="__codelineno-36-16" name="__codelineno-36-16"></a><span class="w">        </span><span class="c1">// 打印余数结果</span>
+<a id="__codelineno-36-17" name="__codelineno-36-17"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;For option &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="p">);</span>
+<a id="__codelineno-36-18" name="__codelineno-36-18"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, b = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, c = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<a id="__codelineno-36-19" name="__codelineno-36-19"></a>
+<a id="__codelineno-36-20" name="__codelineno-36-20"></a><span class="w">        </span><span class="c1">// 判断是否满足条件</span>
+<a id="__codelineno-36-21" name="__codelineno-36-21"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-22" name="__codelineno-36-22"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Correct, That&#39;s what I find!! The number is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">option</span><span class="p">);</span>
+<a id="__codelineno-36-23" name="__codelineno-36-23"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-24" name="__codelineno-36-24"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Wrong, Please try another Answer!&quot;</span><span class="p">);</span>
+<a id="__codelineno-36-25" name="__codelineno-36-25"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-36-26" name="__codelineno-36-26"></a>
+<a id="__codelineno-36-27" name="__codelineno-36-27"></a><span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-36-28" name="__codelineno-36-28"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-36-29" name="__codelineno-36-29"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>2.编写一个Java程序，用于模拟餐厅的点单过程。程序应提前告知用户汉堡、薯条和可乐的价格，并通过用户输入获得点单信息。最后，程序应分行输出客户点的内容，并打印出总价。  </p>
 <p><strong>价格信息：</strong>  </p>
 <p>-汉堡：$5 
@@ -3044,21 +3215,34 @@ public class FindNumber {
 4.计算并显示总价。 </p>
 <p><strong>输入输出示例：</strong> </p>
 <p>示例输出： </p>
-<pre><code>汉堡：$5  
-薯条：$2  
-可乐：$1  
-
-请输入汉堡的数量：2  
-请输入薯条的数量：1  
-请输入可乐的数量：3  
-
-您的点单如下：  
-汉堡X 2  
-薯条X 1  
-可乐X 3  
-
-总价：$15  
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-37-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-37-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-37-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-37-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-37-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-37-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-37-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-37-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-37-10">10</a></span>
+<span class="normal"><a href="#__codelineno-37-11">11</a></span>
+<span class="normal"><a href="#__codelineno-37-12">12</a></span>
+<span class="normal"><a href="#__codelineno-37-13">13</a></span>
+<span class="normal"><a href="#__codelineno-37-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a>汉堡：$5  
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a>薯条：$2  
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a>可乐：$1  
+<a id="__codelineno-37-4" name="__codelineno-37-4"></a>
+<a id="__codelineno-37-5" name="__codelineno-37-5"></a>请输入汉堡的数量：2  
+<a id="__codelineno-37-6" name="__codelineno-37-6"></a>请输入薯条的数量：1  
+<a id="__codelineno-37-7" name="__codelineno-37-7"></a>请输入可乐的数量：3  
+<a id="__codelineno-37-8" name="__codelineno-37-8"></a>
+<a id="__codelineno-37-9" name="__codelineno-37-9"></a>您的点单如下：  
+<a id="__codelineno-37-10" name="__codelineno-37-10"></a>汉堡X 2  
+<a id="__codelineno-37-11" name="__codelineno-37-11"></a>薯条X 1  
+<a id="__codelineno-37-12" name="__codelineno-37-12"></a>可乐X 3  
+<a id="__codelineno-37-13" name="__codelineno-37-13"></a>
+<a id="__codelineno-37-14" name="__codelineno-37-14"></a>总价：$15  
+</code></pre></div></td></tr></table></div>
 <p><strong>提示：</strong> </p>
 <ul>
 <li>使用<code>Scanner</code>函数获取用户输入。 </li>
@@ -3066,46 +3250,82 @@ public class FindNumber {
 <li>使用<code>System.out.println()</code>函数输出结果。 </li>
 </ul>
 <p>示例代码： </p>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class RestaurantOrder {
-    public static void main(String[] args) {
-        // 定义食物的价格
-        int burgerPrice = 5;
-        int friesPrice = 2;
-        int colaPrice = 1;
-
-        // 显示价格信息
-        System.out.println(&quot;汉堡：$&quot; + burgerPrice);
-        System.out.println(&quot;薯条：$&quot; + friesPrice);
-        System.out.println(&quot;可乐：$&quot; + colaPrice + &quot;\n&quot;);
-
-        // 获取用户输入的点单数量
-        Scanner scanner = new Scanner(System.in);
-        System.out.print(&quot;请输入汉堡的数量：&quot;);
-        int burgerCount = scanner.nextInt();
-        System.out.print(&quot;请输入薯条的数量：&quot;);
-        int friesCount = scanner.nextInt();
-        System.out.print(&quot;请输入可乐的数量：&quot;);
-        int colaCount = scanner.nextInt();
-
-        // 计算总价
-        int totalPrice = burgerCount * burgerPrice +
-                         friesCount * friesPrice +
-                         colaCount * colaPrice;
-
-        // 输出点单内容和总价
-        System.out.println(&quot;\n您的点单如下：&quot;);
-        System.out.println(&quot;汉堡 X &quot; + burgerCount);
-        System.out.println(&quot;薯条 X &quot; + friesCount);
-        System.out.println(&quot;可乐 X &quot; + colaCount);
-        System.out.println(&quot;\n总价：$&quot; + totalPrice);
-
-        scanner.close();
-    }
-}
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-38-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-38-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-38-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-38-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-38-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-38-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-38-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-38-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-38-10">10</a></span>
+<span class="normal"><a href="#__codelineno-38-11">11</a></span>
+<span class="normal"><a href="#__codelineno-38-12">12</a></span>
+<span class="normal"><a href="#__codelineno-38-13">13</a></span>
+<span class="normal"><a href="#__codelineno-38-14">14</a></span>
+<span class="normal"><a href="#__codelineno-38-15">15</a></span>
+<span class="normal"><a href="#__codelineno-38-16">16</a></span>
+<span class="normal"><a href="#__codelineno-38-17">17</a></span>
+<span class="normal"><a href="#__codelineno-38-18">18</a></span>
+<span class="normal"><a href="#__codelineno-38-19">19</a></span>
+<span class="normal"><a href="#__codelineno-38-20">20</a></span>
+<span class="normal"><a href="#__codelineno-38-21">21</a></span>
+<span class="normal"><a href="#__codelineno-38-22">22</a></span>
+<span class="normal"><a href="#__codelineno-38-23">23</a></span>
+<span class="normal"><a href="#__codelineno-38-24">24</a></span>
+<span class="normal"><a href="#__codelineno-38-25">25</a></span>
+<span class="normal"><a href="#__codelineno-38-26">26</a></span>
+<span class="normal"><a href="#__codelineno-38-27">27</a></span>
+<span class="normal"><a href="#__codelineno-38-28">28</a></span>
+<span class="normal"><a href="#__codelineno-38-29">29</a></span>
+<span class="normal"><a href="#__codelineno-38-30">30</a></span>
+<span class="normal"><a href="#__codelineno-38-31">31</a></span>
+<span class="normal"><a href="#__codelineno-38-32">32</a></span>
+<span class="normal"><a href="#__codelineno-38-33">33</a></span>
+<span class="normal"><a href="#__codelineno-38-34">34</a></span>
+<span class="normal"><a href="#__codelineno-38-35">35</a></span>
+<span class="normal"><a href="#__codelineno-38-36">36</a></span>
+<span class="normal"><a href="#__codelineno-38-37">37</a></span>
+<span class="normal"><a href="#__codelineno-38-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a>
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RestaurantOrder</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5"></a><span class="w">        </span><span class="c1">// 定义食物的价格</span>
+<a id="__codelineno-38-6" name="__codelineno-38-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">burgerPrice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-38-7" name="__codelineno-38-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">friesPrice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-38-8" name="__codelineno-38-8"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">colaPrice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-38-9" name="__codelineno-38-9"></a>
+<a id="__codelineno-38-10" name="__codelineno-38-10"></a><span class="w">        </span><span class="c1">// 显示价格信息</span>
+<a id="__codelineno-38-11" name="__codelineno-38-11"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;汉堡：$&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">burgerPrice</span><span class="p">);</span>
+<a id="__codelineno-38-12" name="__codelineno-38-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;薯条：$&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">friesPrice</span><span class="p">);</span>
+<a id="__codelineno-38-13" name="__codelineno-38-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;可乐：$&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">colaPrice</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
+<a id="__codelineno-38-14" name="__codelineno-38-14"></a>
+<a id="__codelineno-38-15" name="__codelineno-38-15"></a><span class="w">        </span><span class="c1">// 获取用户输入的点单数量</span>
+<a id="__codelineno-38-16" name="__codelineno-38-16"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-38-17" name="__codelineno-38-17"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;请输入汉堡的数量：&quot;</span><span class="p">);</span>
+<a id="__codelineno-38-18" name="__codelineno-38-18"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">burgerCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-38-19" name="__codelineno-38-19"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;请输入薯条的数量：&quot;</span><span class="p">);</span>
+<a id="__codelineno-38-20" name="__codelineno-38-20"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">friesCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-38-21" name="__codelineno-38-21"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;请输入可乐的数量：&quot;</span><span class="p">);</span>
+<a id="__codelineno-38-22" name="__codelineno-38-22"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">colaCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-38-23" name="__codelineno-38-23"></a>
+<a id="__codelineno-38-24" name="__codelineno-38-24"></a><span class="w">        </span><span class="c1">// 计算总价</span>
+<a id="__codelineno-38-25" name="__codelineno-38-25"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">totalPrice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">burgerCount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">burgerPrice</span><span class="w"> </span><span class="o">+</span>
+<a id="__codelineno-38-26" name="__codelineno-38-26"></a><span class="w">                         </span><span class="n">friesCount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">friesPrice</span><span class="w"> </span><span class="o">+</span>
+<a id="__codelineno-38-27" name="__codelineno-38-27"></a><span class="w">                         </span><span class="n">colaCount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">colaPrice</span><span class="p">;</span>
+<a id="__codelineno-38-28" name="__codelineno-38-28"></a>
+<a id="__codelineno-38-29" name="__codelineno-38-29"></a><span class="w">        </span><span class="c1">// 输出点单内容和总价</span>
+<a id="__codelineno-38-30" name="__codelineno-38-30"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n您的点单如下：&quot;</span><span class="p">);</span>
+<a id="__codelineno-38-31" name="__codelineno-38-31"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;汉堡 X &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">burgerCount</span><span class="p">);</span>
+<a id="__codelineno-38-32" name="__codelineno-38-32"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;薯条 X &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">friesCount</span><span class="p">);</span>
+<a id="__codelineno-38-33" name="__codelineno-38-33"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;可乐 X &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">colaCount</span><span class="p">);</span>
+<a id="__codelineno-38-34" name="__codelineno-38-34"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n总价：$&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">totalPrice</span><span class="p">);</span>
+<a id="__codelineno-38-35" name="__codelineno-38-35"></a>
+<a id="__codelineno-38-36" name="__codelineno-38-36"></a><span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-38-37" name="__codelineno-38-37"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-38-38" name="__codelineno-38-38"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 
 
 

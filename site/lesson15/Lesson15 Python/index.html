@@ -629,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3088,63 +3088,105 @@
 </ul>
 <h3 id="_3">构建前缀和数组</h3>
 <p>构建前缀和数组的时间复杂度是 <code>O(n)</code>，因为我们只需要遍历一遍数组即可计算出所有前缀和。按照这个思路，代码如下：</p>
-<pre><code class="language-python">def prefix_sum(arr):
-    n = len(arr)
-    prefix = [0] * n  # 创建前缀和数组，长度与原数组相同
-
-    # 初始化第一个元素
-    prefix[0] = arr[0]  # 第一个前缀和就是数组的第一个元素
-
-    # 构建前缀和数组
-    for i in range(1, n):
-        prefix[i] = prefix[i - 1] + arr[i]  # P[i] = P[i-1] + A[i]
-
-    return prefix
-
-# 计算区间和 [i, j]
-def range_sum(prefix, i, j):
-    if i == 0:
-        return prefix[j]  # 如果 i 为 0，直接返回 P[j]
-    return prefix[j] - prefix[i - 1]
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">prefix_sum</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="n">prefix</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>  <span class="c1"># 创建前缀和数组，长度与原数组相同</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="c1"># 初始化第一个元素</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="n">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 第一个前缀和就是数组的第一个元素</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="c1"># 构建前缀和数组</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>        <span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">prefix</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># P[i] = P[i-1] + A[i]</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>    <span class="k">return</span> <span class="n">prefix</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="c1"># 计算区间和 [i, j]</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="k">def</span> <span class="nf">range_sum</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>        <span class="k">return</span> <span class="n">prefix</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>  <span class="c1"># 如果 i 为 0，直接返回 P[j]</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>    <span class="k">return</span> <span class="n">prefix</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="n">prefix</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_4">思考：这段代码有没有什么问题</h3>
 <h4 id="_5">数组越界</h4>
-<p>对于：</p>
-<pre><code class="language-python">return prefix[j] - prefix[i - 1]
-</code></pre>
-<p>当计算区间和 [0, j]，即 i = 0 时，数组会越界。</p>
-<p>解决方式：添加条件判断</p>
-<pre><code class="language-python">def prefix_sum(arr):
-    n = len(arr)
-    prefix = [0] * n  # 前缀和数组与原数组同长度
-
-    # 初始化第一个元素
-    prefix[0] = arr[0]  # 第一个前缀和就是数组的第一个元素
-
-    # 构建前缀和数组
-    for i in range(1, n):
-        prefix[i] = prefix[i - 1] + arr[i]  # P[i] = P[i-1] + A[i]
-    return prefix
-
-def range_sum(prefix, i, j):
-    if i == 0:
-        return prefix[j]  # 当 i = 0 时，直接返回 prefix[j]
-    else:
-        return prefix[j] - prefix[i - 1]  # 否则，使用 prefix[j] - prefix[i-1]
-</code></pre>
+<p>对于：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">return</span> <span class="n">prefix</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="n">prefix</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+当计算区间和 [0, j]，即 i = 0 时，数组会越界。</p>
+<p>解决方式：添加条件判断
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">prefix_sum</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="n">prefix</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>  <span class="c1"># 前缀和数组与原数组同长度</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="c1"># 初始化第一个元素</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="n">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 第一个前缀和就是数组的第一个元素</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="c1"># 构建前缀和数组</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>        <span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">prefix</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># P[i] = P[i-1] + A[i]</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>    <span class="k">return</span> <span class="n">prefix</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="k">def</span> <span class="nf">range_sum</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>        <span class="k">return</span> <span class="n">prefix</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>  <span class="c1"># 当 i = 0 时，直接返回 prefix[j]</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>        <span class="k">return</span> <span class="n">prefix</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="n">prefix</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># 否则，使用 prefix[j] - prefix[i-1]</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="_6">思考：有没有更好的解决方式</h3>
 <h4 id="_7">构建前缀和数组时多开一格</h4>
-<pre><code class="language-python"># 构建前缀和数组，前缀和数组多一格，并使 P[0] = 0
-def prefix_sum(arr):
-    n = len(arr)
-    prefix = [0] * (n + 1)  # 前缀和数组比原数组多一位
-    prefix[0] = 0  # P[0] = 0
-
-    # 构建前缀和数组
-    for i in range(1, n + 1):
-        prefix[i] = prefix[i - 1] + arr[i - 1]  # P[i] = P[i-1] + A[i-1]
-    return prefix
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 构建前缀和数组，前缀和数组多一格，并使 P[0] = 0</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">def</span> <span class="nf">prefix_sum</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="n">prefix</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># 前缀和数组比原数组多一位</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="n">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># P[0] = 0</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>    <span class="c1"># 构建前缀和数组</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>        <span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">prefix</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># P[i] = P[i-1] + A[i-1]</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>    <span class="k">return</span> <span class="n">prefix</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="prefix_sum">总结：prefix_sum 多开一格的原因与好处</h3>
 <h4 id="_8">避免边界问题：</h4>
 <p>假设你不多开一格，并且前缀和数组 <code>prefix[i]</code> 表示 <code>arr[0]</code> 到 <code>arr[i]</code> 的和，那么对于区间 [i, j] 的和，你需要计算：</p>
@@ -3157,24 +3199,36 @@ def prefix_sum(arr):
 </ul>
 <p>这样，即使 <code>i = 0</code> 时，也不用特别判断，直接套用通用公式 <code>prefix[j + 1] - prefix[i]</code>，从而避免越界问题。</p>
 <h3 id="_9">代码实现</h3>
-<pre><code class="language-python">def prefix_sum(arr):
-    n = len(arr)
-    prefix = [0] * (n + 1)  # 前缀和数组比原数组多一位
-    prefix[0] = 0  # P[0] = 0，表示空前缀的和
-
-    # 构建前缀和数组
-    for i in range(1, n + 1):
-        prefix[i] = prefix[i - 1] + arr[i - 1]  # P[i] = P[i-1] + A[i-1]
-    return prefix
-
-def range_sum(prefix, i, j):
-    return prefix[j + 1] - prefix[i]
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">prefix_sum</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="n">prefix</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># 前缀和数组比原数组多一位</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="n">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># P[0] = 0，表示空前缀的和</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="c1"># 构建前缀和数组</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>        <span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">prefix</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># P[i] = P[i-1] + A[i-1]</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>    <span class="k">return</span> <span class="n">prefix</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="k">def</span> <span class="nf">range_sum</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>    <span class="k">return</span> <span class="n">prefix</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_10">示例解释</h3>
-<p>假设我们有一个数组 <code>arr = [1, 2, 3, 4]</code>，对应的前缀和数组 <code>prefix</code> 为：</p>
-<pre><code>arr:     1   2   3   4
-prefix:  0   1   3   6   10
-</code></pre>
+<p>假设我们有一个数组 <code>arr = [1, 2, 3, 4]</code>，对应的前缀和数组 <code>prefix</code> 为：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>arr:     1   2   3   4
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>prefix:  0   1   3   6   10
+</code></pre></div></td></tr></table></div></p>
 <ul>
 <li><code>prefix[1] = 1</code> 表示 <code>arr[0]</code> 的和为 1。</li>
 <li><code>prefix[2] = 3</code> 表示 <code>arr[0] + arr[1]</code> 的和为 3。</li>
@@ -3182,8 +3236,8 @@ prefix:  0   1   3   6   10
 <li><code>prefix[4] = 10</code> 表示 <code>arr[0] + arr[1] + arr[2] + arr[3]</code> 的和为 10。</li>
 </ul>
 <p>要计算区间 <code>[i, j]</code> 的和，比如 <code>[1, 3]</code>，我们直接用公式：</p>
-<pre><code>区间和 [1, 3] = prefix[4] - prefix[1] = 10 - 1 = 9
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>区间和 [1, 3] = prefix[4] - prefix[1] = 10 - 1 = 9
+</code></pre></div></td></tr></table></div>
 <p>这是因为 <code>arr[1] + arr[2] + arr[3] = 2 + 3 + 4 = 9</code>。</p>
 <h3 id="_11">优点</h3>
 <ul>
@@ -3205,16 +3259,24 @@ prefix:  0   1   3   6   10
 <p>也就是说，差分数组的每个元素表示原数组相邻元素之间的差。</p>
 <h3 id="_14">构建差分数组</h3>
 <p>构建差分数组的时间复杂度是 <code>O(n)</code>，因为我们只需要遍历一遍原数组即可计算差分数组。代码如下：</p>
-<pre><code class="language-python">def build_difference_array(arr):
-    n = len(arr)
-    diff = [0] * n
-    diff[0] = arr[0]  # 差分数组的第一个元素等于原数组的第一个元素
-
-    for i in range(1, n):
-        diff[i] = arr[i] - arr[i - 1]  # 计算差分
-
-    return diff
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span>
+<span class="normal"><a href="#__codelineno-7-8">8</a></span>
+<span class="normal"><a href="#__codelineno-7-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">def</span> <span class="nf">build_difference_array</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>    <span class="n">diff</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>    <span class="n">diff</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 差分数组的第一个元素等于原数组的第一个元素</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>        <span class="n">diff</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># 计算差分</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>    <span class="k">return</span> <span class="n">diff</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_15">更新区间</h3>
 <p>差分数组的一个强大之处在于，可以在常数时间内对原数组的一个区间 <code>[l, r]</code> 进行加 <code>x</code> 操作。具体方法如下：</p>
 <ul>
@@ -3223,16 +3285,24 @@ prefix:  0   1   3   6   10
 </ul>
 <h3 id="_16">恢复原数组</h3>
 <p>在完成所有区间操作后，可以通过前缀和的方式恢复原数组。恢复操作的时间复杂度为 <code>O(n)</code>，代码如下：</p>
-<pre><code class="language-python">def recover_array_from_difference(diff):
-    n = len(diff)
-    arr = [0] * n
-    arr[0] = diff[0]  # 原数组的第一个元素
-
-    for i in range(1, n):
-        arr[i] = arr[i - 1] + diff[i]  # 通过累加差分数组恢复原数组
-
-    return arr
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span>
+<span class="normal"><a href="#__codelineno-8-8">8</a></span>
+<span class="normal"><a href="#__codelineno-8-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">recover_array_from_difference</span><span class="p">(</span><span class="n">diff</span><span class="p">):</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>    <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">diff</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 原数组的第一个元素</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>        <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">diff</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># 通过累加差分数组恢复原数组</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>    <span class="k">return</span> <span class="n">arr</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_17">示例</h3>
 <p>假设有一个数组 <code>A = [2, 5, 7, 11, 15]</code>，构建它的差分数组 <code>D</code>：</p>
 <ul>
@@ -3250,46 +3320,82 @@ prefix:  0   1   3   6   10
 </ul>
 <p>最终通过前缀和可以恢复出修改后的数组。</p>
 <h3 id="_18">参考代码</h3>
-<pre><code class="language-python">def build_difference_array(arr):
-    n = len(arr)
-    diff = [0] * n
-    diff[0] = arr[0]  # 差分数组的第一个元素等于原数组的第一个元素
-
-    for i in range(1, n):
-        diff[i] = arr[i] - arr[i - 1]  # 计算差分
-
-    return diff
-
-# 对区间 [l, r] 加上 x
-def update_range(diff, l, r, x):
-    diff[l] += x  # 在 l 位置加 x
-    if r + 1 &lt; len(diff):
-        diff[r + 1] -= x  # 在 r+1 位置减 x，确保后续不受影响
-
-# 通过差分数组恢复原数组
-def recover_array_from_difference(diff):
-    n = len(diff)
-    arr = [0] * n
-    arr[0] = diff[0]  # 原数组的第一个元素
-
-    for i in range(1, n):
-        arr[i] = arr[i - 1] + diff[i]  # 通过累加差分数组恢复原数组
-
-    return arr
-
-A = [2, 5, 7, 11, 15]
-D = build_difference_array(A)
-
-# 对区间 [1, 3] 加上 2
-update_range(D, 1, 3, 2)
-
-# 恢复修改后的原数组
-updatedA = recover_array_from_difference(D)
-
-# 输出恢复后的数组
-print(&quot;修改后的数组为:&quot;, updatedA)  # 输出结果应为 [2, 7, 9, 13, 15]
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span>
+<span class="normal"><a href="#__codelineno-9-24">24</a></span>
+<span class="normal"><a href="#__codelineno-9-25">25</a></span>
+<span class="normal"><a href="#__codelineno-9-26">26</a></span>
+<span class="normal"><a href="#__codelineno-9-27">27</a></span>
+<span class="normal"><a href="#__codelineno-9-28">28</a></span>
+<span class="normal"><a href="#__codelineno-9-29">29</a></span>
+<span class="normal"><a href="#__codelineno-9-30">30</a></span>
+<span class="normal"><a href="#__codelineno-9-31">31</a></span>
+<span class="normal"><a href="#__codelineno-9-32">32</a></span>
+<span class="normal"><a href="#__codelineno-9-33">33</a></span>
+<span class="normal"><a href="#__codelineno-9-34">34</a></span>
+<span class="normal"><a href="#__codelineno-9-35">35</a></span>
+<span class="normal"><a href="#__codelineno-9-36">36</a></span>
+<span class="normal"><a href="#__codelineno-9-37">37</a></span>
+<span class="normal"><a href="#__codelineno-9-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">def</span> <span class="nf">build_difference_array</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>    <span class="n">diff</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>    <span class="n">diff</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 差分数组的第一个元素等于原数组的第一个元素</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>        <span class="n">diff</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># 计算差分</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>    <span class="k">return</span> <span class="n">diff</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="c1"># 对区间 [l, r] 加上 x</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="k">def</span> <span class="nf">update_range</span><span class="p">(</span><span class="n">diff</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a>    <span class="n">diff</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">+=</span> <span class="n">x</span>  <span class="c1"># 在 l 位置加 x</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a>    <span class="k">if</span> <span class="n">r</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">diff</span><span class="p">):</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>        <span class="n">diff</span><span class="p">[</span><span class="n">r</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-=</span> <span class="n">x</span>  <span class="c1"># 在 r+1 位置减 x，确保后续不受影响</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="c1"># 通过差分数组恢复原数组</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="k">def</span> <span class="nf">recover_array_from_difference</span><span class="p">(</span><span class="n">diff</span><span class="p">):</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a>    <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a>    <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">diff</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 原数组的第一个元素</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a>        <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">diff</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># 通过累加差分数组恢复原数组</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25"></a>
+<a id="__codelineno-9-26" name="__codelineno-9-26"></a>    <span class="k">return</span> <span class="n">arr</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a>
+<a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="n">D</span> <span class="o">=</span> <span class="n">build_difference_array</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<a id="__codelineno-9-30" name="__codelineno-9-30"></a>
+<a id="__codelineno-9-31" name="__codelineno-9-31"></a><span class="c1"># 对区间 [1, 3] 加上 2</span>
+<a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="n">update_range</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-9-33" name="__codelineno-9-33"></a>
+<a id="__codelineno-9-34" name="__codelineno-9-34"></a><span class="c1"># 恢复修改后的原数组</span>
+<a id="__codelineno-9-35" name="__codelineno-9-35"></a><span class="n">updatedA</span> <span class="o">=</span> <span class="n">recover_array_from_difference</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36"></a>
+<a id="__codelineno-9-37" name="__codelineno-9-37"></a><span class="c1"># 输出恢复后的数组</span>
+<a id="__codelineno-9-38" name="__codelineno-9-38"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;修改后的数组为:&quot;</span><span class="p">,</span> <span class="n">updatedA</span><span class="p">)</span>  <span class="c1"># 输出结果应为 [2, 7, 9, 13, 15]</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_19">优点</h3>
 <ul>
 <li><strong>高效更新</strong>：可以在 <code>O(1)</code> 的时间内对数组的区间进行加减操作，适用于需要频繁更新的场景。</li>
@@ -3331,18 +3437,28 @@ print(&quot;修改后的数组为:&quot;, updatedA)  # 输出结果应为 [2, 7,
 <li>对于每次查询，使用 <code>prefixSum</code> 数组计算出区间和。</li>
 </ol>
 <h3 id="_26">参考解答</h3>
-<pre><code class="language-python">class NumArray:
-
-    def __init__(self, nums: List[int]):
-        n = len(nums)
-        self.prefixSum = [0] * (n + 1)  # 创建前缀和数组，多开一格用于处理边界情况
-        for i in range(n):
-            self.prefixSum[i + 1] = self.prefixSum[i] + nums[i]  # 构建前缀和
-
-
-    def sumRange(self, left: int, right: int) -&gt; int:
-        return self.prefixSum[right + 1] - self.prefixSum[left]  # 区间和等于 prefixSum[right + 1] - prefixSum[left]
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">class</span> <span class="nc">NumArray</span><span class="p">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">prefixSum</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># 创建前缀和数组，多开一格用于处理边界情况</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">prefixSum</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">prefixSum</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># 构建前缀和</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>    <span class="k">def</span> <span class="nf">sumRange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">right</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">prefixSum</span><span class="p">[</span><span class="n">right</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">prefixSum</span><span class="p">[</span><span class="n">left</span><span class="p">]</span>  <span class="c1"># 区间和等于 prefixSum[right + 1] - prefixSum[left]</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_27">示例</h3>
 <p>以数组 <code>nums = [-2, 0, 3, -5, 2, -1]</code> 为例，前缀和数组 <code>prefixSum</code> 如下：</p>
 <ul>
@@ -3374,20 +3490,26 @@ print(&quot;修改后的数组为:&quot;, updatedA)  # 输出结果应为 [2, 7,
 <h3 id="_30">具体步骤：</h3>
 <ol>
 <li><strong>寻找数轴的最大端点</strong>： 找到所有区间中的最大终点 <code>C</code>，这样我们只需考虑 <code>1</code> 到 <code>C</code> 之间的点。</li>
-<li><strong>构建差分数组</strong>：</li>
+<li><strong>构建差分数组</strong>：<ul>
 <li>初始化一个长度为 <code>C + 2</code> 的差分数组 <code>diff</code>。</li>
 <li>对于每个区间 <code>[start_i, end_i]</code>，在 <code>diff[start_i]</code> 位置增加 <code>1</code>，在 <code>diff[end_i + 1]</code> 位置减去 <code>1</code>。</li>
-<li><strong>构建前缀和</strong>：</li>
+</ul>
+</li>
+<li><strong>构建前缀和</strong>：<ul>
 <li>遍历差分数组 <code>diff</code>，逐步累加，得到前缀和数组。前缀和数组中，每个位置的值表示该点被覆盖的次数。</li>
-<li><strong>统计被覆盖的点数</strong>：</li>
+</ul>
+</li>
+<li><strong>统计被覆盖的点数</strong>：<ul>
 <li>遍历前缀和数组，统计所有被覆盖的点，即前缀和大于 <code>0</code> 的点。</li>
+</ul>
+</li>
 </ol>
 <h3 id="c-2">特别注意：为什么需要 <code>C + 2</code> 的长度</h3>
 <p>当处理到某个区间 <code>[start, end]</code> 时，我们在 <code>end + 1</code> 位置进行减 <code>1</code> 操作，这就需要确保 <code>end + 1</code> 在差分数组的范围内，防止越界。因此，我们在初始化差分数组时，需要为 <code>C + 1</code> 和 <code>C + 2</code> 留出空间。</p>
 <h4 id="_31">案例分析</h4>
 <p>假设我们有如下区间输入：</p>
-<pre><code class="language-plaintext">nums = [[1, 3], [2, 5], [4, 6]]
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>nums = [[1, 3], [2, 5], [4, 6]]
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>
 <p><strong>寻找最大终点 <code>C</code></strong>：</p>
@@ -3424,36 +3546,64 @@ print(&quot;修改后的数组为:&quot;, updatedA)  # 输出结果应为 [2, 7,
 </ol>
 <p>可以发现，对于本题而言，需要 <code>C + 2</code> 大小的数组才不会发生越界的情况。</p>
 <h3 id="_32">参考解答</h3>
-<pre><code class="language-python">class Solution:
-    def numberOfPoints(self, nums: List[List[int]]) -&gt; int:
-        C = 0
-
-        # 找出最大终点 C
-        for interval in nums:
-            C = max(C, interval[1])
-
-        # 差分数组，长度为 C + 2，避免越界
-        diff = [0] * (C + 2)
-
-        # 构建差分数组
-        for interval in nums:
-            start = interval[0]
-            end = interval[1]
-
-            diff[start] += 1
-            diff[end + 1] -= 1
-
-        ans = 0
-        count = 0
-
-        # 计算前缀和，统计被覆盖的点数
-        for i in range(1, C + 1):
-            count += diff[i]
-            if count &gt; 0:
-                ans += 1
-
-        return ans
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span>
+<span class="normal"><a href="#__codelineno-12-20">20</a></span>
+<span class="normal"><a href="#__codelineno-12-21">21</a></span>
+<span class="normal"><a href="#__codelineno-12-22">22</a></span>
+<span class="normal"><a href="#__codelineno-12-23">23</a></span>
+<span class="normal"><a href="#__codelineno-12-24">24</a></span>
+<span class="normal"><a href="#__codelineno-12-25">25</a></span>
+<span class="normal"><a href="#__codelineno-12-26">26</a></span>
+<span class="normal"><a href="#__codelineno-12-27">27</a></span>
+<span class="normal"><a href="#__codelineno-12-28">28</a></span>
+<span class="normal"><a href="#__codelineno-12-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>    <span class="k">def</span> <span class="nf">numberOfPoints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>        <span class="n">C</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>        <span class="c1"># 找出最大终点 C</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>        <span class="k">for</span> <span class="n">interval</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>            <span class="n">C</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">interval</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>        <span class="c1"># 差分数组，长度为 C + 2，避免越界</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>        <span class="n">diff</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">C</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a>        <span class="c1"># 构建差分数组</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a>        <span class="k">for</span> <span class="n">interval</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a>            <span class="n">start</span> <span class="o">=</span> <span class="n">interval</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a>            <span class="n">end</span> <span class="o">=</span> <span class="n">interval</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a>            <span class="n">diff</span><span class="p">[</span><span class="n">start</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a>            <span class="n">diff</span><span class="p">[</span><span class="n">end</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a>
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a>        <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a>        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22"></a>
+<a id="__codelineno-12-23" name="__codelineno-12-23"></a>        <span class="c1"># 计算前缀和，统计被覆盖的点数</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">C</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25"></a>            <span class="n">count</span> <span class="o">+=</span> <span class="n">diff</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26"></a>            <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27"></a>                <span class="n">ans</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-12-28" name="__codelineno-12-28"></a>
+<a id="__codelineno-12-29" name="__codelineno-12-29"></a>        <span class="k">return</span> <span class="n">ans</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_33">解释</h3>
 <ol>
 <li><strong>寻找最大终点 <code>C</code></strong>：</li>
@@ -3479,16 +3629,24 @@ print(&quot;修改后的数组为:&quot;, updatedA)  # 输出结果应为 [2, 7,
 <p>我们可以通过<strong>前缀和</strong>的思想来解决这个问题。核心思想是，遍历数组的每个下标 <code>i</code>，检查它是否满足条件：左侧的前缀和等于右侧的前缀和。</p>
 <p>假设数组的总和为 <code>total</code>，那么对于任意下标 <code>i</code>，左侧的前缀和为 <code>leftSum</code>，右侧的前缀和为 <code>total - leftSum - nums[i]</code>。如果满足 <code>leftSum == total - leftSum - nums[i]</code>，那么 <code>i</code> 就是中心下标。</p>
 <h3 id="_36">参考解答</h3>
-<pre><code class="language-python">class Solution:
-    def pivotIndex(self, nums: List[int]) -&gt; int:
-        total = sum(nums)
-        leftSum = 0
-        for i, num in enumerate(nums):
-            if leftSum == total - leftSum - num:
-                return i
-            leftSum += num
-        return -1
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span>
+<span class="normal"><a href="#__codelineno-13-6">6</a></span>
+<span class="normal"><a href="#__codelineno-13-7">7</a></span>
+<span class="normal"><a href="#__codelineno-13-8">8</a></span>
+<span class="normal"><a href="#__codelineno-13-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>    <span class="k">def</span> <span class="nf">pivotIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>        <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>        <span class="n">leftSum</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>            <span class="k">if</span> <span class="n">leftSum</span> <span class="o">==</span> <span class="n">total</span> <span class="o">-</span> <span class="n">leftSum</span> <span class="o">-</span> <span class="n">num</span><span class="p">:</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>                <span class="k">return</span> <span class="n">i</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>            <span class="n">leftSum</span> <span class="o">+=</span> <span class="n">num</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_37">代码解释</h3>
 <ol>
 <li>
@@ -3520,25 +3678,42 @@ print(&quot;修改后的数组为:&quot;, updatedA)  # 输出结果应为 [2, 7,
 <li><strong>累加和</strong>：对于每一个奇数长度的子数组，计算其和并累加到最终结果中。</li>
 </ol>
 <h3 id="_41">参考解答</h3>
-<pre><code class="language-python">class Solution:
-    def sumOddLengthSubarrays(self, arr: List[int]) -&gt; int:
-        n = len(arr)
-        prefixSum = [0] * (n + 1)  # 前缀和数组
-
-        # 构建前缀和数组
-        for i in range(n):
-            prefixSum[i + 1] = prefixSum[i] + arr[i]
-
-        totalSum = 0
-
-        # 遍历所有可能的奇数长度子数组
-        for start in range(n):
-            for length in range(1, n - start + 1, 2):  # 只考虑奇数长度
-                end = start + length - 1
-                totalSum += prefixSum[end + 1] - prefixSum[start]  # 使用前缀和计算子数组和
-
-        return totalSum
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>    <span class="k">def</span> <span class="nf">sumOddLengthSubarrays</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>        <span class="n">prefixSum</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># 前缀和数组</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a>        <span class="c1"># 构建前缀和数组</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a>            <span class="n">prefixSum</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">prefixSum</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a>        <span class="n">totalSum</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a>        <span class="c1"># 遍历所有可能的奇数长度子数组</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a>        <span class="k">for</span> <span class="n">start</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a>            <span class="k">for</span> <span class="n">length</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>  <span class="c1"># 只考虑奇数长度</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a>                <span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="n">length</span> <span class="o">-</span> <span class="mi">1</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a>                <span class="n">totalSum</span> <span class="o">+=</span> <span class="n">prefixSum</span><span class="p">[</span><span class="n">end</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">prefixSum</span><span class="p">[</span><span class="n">start</span><span class="p">]</span>  <span class="c1"># 使用前缀和计算子数组和</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a>        <span class="k">return</span> <span class="n">totalSum</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_42">代码解释</h3>
 <ol>
 <li><strong>构建前缀和数组</strong>：</li>
@@ -3564,18 +3739,28 @@ print(&quot;修改后的数组为:&quot;, updatedA)  # 输出结果应为 [2, 7,
 <li><strong>返回结果</strong>：遍历完成后，<code>maxAltitude</code> 就是最高海拔。</li>
 </ol>
 <h3 id="_45">参考解答</h3>
-<pre><code class="language-python">class Solution:
-    def largestAltitude(self, gain: List[int]) -&gt; int:
-        currentAltitude = 0  # 当前海拔
-        maxAltitude = 0  # 最高海拔
-
-        for g in gain:
-            currentAltitude += g  # 更新当前海拔
-            if currentAltitude &gt; maxAltitude:
-                maxAltitude = currentAltitude  # 更新最高海拔
-
-        return maxAltitude  # 返回最高海拔
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>    <span class="k">def</span> <span class="nf">largestAltitude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gain</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>        <span class="n">currentAltitude</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 当前海拔</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>        <span class="n">maxAltitude</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 最高海拔</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a>        <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">gain</span><span class="p">:</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>            <span class="n">currentAltitude</span> <span class="o">+=</span> <span class="n">g</span>  <span class="c1"># 更新当前海拔</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a>            <span class="k">if</span> <span class="n">currentAltitude</span> <span class="o">&gt;</span> <span class="n">maxAltitude</span><span class="p">:</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a>                <span class="n">maxAltitude</span> <span class="o">=</span> <span class="n">currentAltitude</span>  <span class="c1"># 更新最高海拔</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a>        <span class="k">return</span> <span class="n">maxAltitude</span>  <span class="c1"># 返回最高海拔</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="42">4.2 差分数组举一反三</h2>
 <h2 id="421-lc1094">4.2.1 LC1094 拼车</h2>
 <h3 id="_46">题目描述</h3>
@@ -3592,32 +3777,56 @@ print(&quot;修改后的数组为:&quot;, updatedA)  # 输出结果应为 [2, 7,
 <li><strong>前缀和计算当前乘客数</strong>：通过计算差分数组的前缀和，得到每个位置实际的乘客数，并判断是否超出载客量。</li>
 </ol>
 <h3 id="_49">代码实现</h3>
-<pre><code class="language-python">class Solution:
-    def carPooling(self, trips: List[List[int]], capacity: int) -&gt; bool:
-
-        # 找出最远的目的地，用于确定差分数组的大小
-        maxDistance = 0
-        for trip in trips:
-            maxDistance = max(maxDistance, trip[2])
-
-        diff = [0] * (maxDistance + 1)
-
-        for trip in trips:
-            numPassengers = trip[0]
-            from_ = trip[1]
-            to = trip[2]
-
-            diff[from_] += numPassengers
-            diff[to] -= numPassengers
-
-        currentPassengers = 0
-        for i in range(len(diff)):
-            currentPassengers += diff[i]
-            if currentPassengers &gt; capacity:
-                return False
-
-        return True
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span>
+<span class="normal"><a href="#__codelineno-16-14">14</a></span>
+<span class="normal"><a href="#__codelineno-16-15">15</a></span>
+<span class="normal"><a href="#__codelineno-16-16">16</a></span>
+<span class="normal"><a href="#__codelineno-16-17">17</a></span>
+<span class="normal"><a href="#__codelineno-16-18">18</a></span>
+<span class="normal"><a href="#__codelineno-16-19">19</a></span>
+<span class="normal"><a href="#__codelineno-16-20">20</a></span>
+<span class="normal"><a href="#__codelineno-16-21">21</a></span>
+<span class="normal"><a href="#__codelineno-16-22">22</a></span>
+<span class="normal"><a href="#__codelineno-16-23">23</a></span>
+<span class="normal"><a href="#__codelineno-16-24">24</a></span>
+<span class="normal"><a href="#__codelineno-16-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>    <span class="k">def</span> <span class="nf">carPooling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trips</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">capacity</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>        <span class="c1"># 找出最远的目的地，用于确定差分数组的大小</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a>        <span class="n">maxDistance</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>        <span class="k">for</span> <span class="n">trip</span> <span class="ow">in</span> <span class="n">trips</span><span class="p">:</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a>            <span class="n">maxDistance</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">maxDistance</span><span class="p">,</span> <span class="n">trip</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a>        <span class="n">diff</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">maxDistance</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a>        <span class="k">for</span> <span class="n">trip</span> <span class="ow">in</span> <span class="n">trips</span><span class="p">:</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a>            <span class="n">numPassengers</span> <span class="o">=</span> <span class="n">trip</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a>            <span class="n">from_</span> <span class="o">=</span> <span class="n">trip</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a>            <span class="n">to</span> <span class="o">=</span> <span class="n">trip</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a>
+<a id="__codelineno-16-16" name="__codelineno-16-16"></a>            <span class="n">diff</span><span class="p">[</span><span class="n">from_</span><span class="p">]</span> <span class="o">+=</span> <span class="n">numPassengers</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17"></a>            <span class="n">diff</span><span class="p">[</span><span class="n">to</span><span class="p">]</span> <span class="o">-=</span> <span class="n">numPassengers</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18"></a>
+<a id="__codelineno-16-19" name="__codelineno-16-19"></a>        <span class="n">currentPassengers</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">diff</span><span class="p">)):</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21"></a>            <span class="n">currentPassengers</span> <span class="o">+=</span> <span class="n">diff</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22"></a>            <span class="k">if</span> <span class="n">currentPassengers</span> <span class="o">&gt;</span> <span class="n">capacity</span><span class="p">:</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23"></a>                <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24"></a>
+<a id="__codelineno-16-25" name="__codelineno-16-25"></a>        <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_50">代码解释</h3>
 <ol>
 <li><strong>找出最远的目的地</strong>：确定差分数组的大小。</li>
@@ -3642,32 +3851,56 @@ print(&quot;修改后的数组为:&quot;, updatedA)  # 输出结果应为 [2, 7,
 <li><strong>计算每年的实际人口</strong>：通过前缀和计算每年的实际人口数量，找到人口最多的年份。</li>
 </ol>
 <h3 id="_54">代码实现</h3>
-<pre><code class="language-python">class Solution:
-    def maximumPopulation(self, logs: List[List[int]]) -&gt; int:
-        # 假设年份范围从1950到2050
-        population_change = [0] * 101  # 存储人口变化的数组，范围为1950到2050
-
-        # 记录每个人的出生和死亡年份对人口的影响
-        for log in logs:
-            birth = log[0] - 1950
-            death = log[1] - 1950
-            population_change[birth] += 1  # 出生年份人口增加
-            population_change[death] -= 1  # 死亡年份人口减少
-
-        # 计算每一年的实际人口，并找出人口最多的年份
-        max_population = 0
-        max_year = 1950
-        current_population = 0
-
-        # 遍历每一年，计算人口数量
-        for year in range(101):
-            current_population += population_change[year]  # 通过前缀和计算当前年份的人口
-            if current_population &gt; max_population:
-                max_population = current_population
-                max_year = 1950 + year  # 记录人口最多的年份
-
-        return max_year
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span>
+<span class="normal"><a href="#__codelineno-17-13">13</a></span>
+<span class="normal"><a href="#__codelineno-17-14">14</a></span>
+<span class="normal"><a href="#__codelineno-17-15">15</a></span>
+<span class="normal"><a href="#__codelineno-17-16">16</a></span>
+<span class="normal"><a href="#__codelineno-17-17">17</a></span>
+<span class="normal"><a href="#__codelineno-17-18">18</a></span>
+<span class="normal"><a href="#__codelineno-17-19">19</a></span>
+<span class="normal"><a href="#__codelineno-17-20">20</a></span>
+<span class="normal"><a href="#__codelineno-17-21">21</a></span>
+<span class="normal"><a href="#__codelineno-17-22">22</a></span>
+<span class="normal"><a href="#__codelineno-17-23">23</a></span>
+<span class="normal"><a href="#__codelineno-17-24">24</a></span>
+<span class="normal"><a href="#__codelineno-17-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>    <span class="k">def</span> <span class="nf">maximumPopulation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">logs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>        <span class="c1"># 假设年份范围从1950到2050</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>        <span class="n">population_change</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">101</span>  <span class="c1"># 存储人口变化的数组，范围为1950到2050</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a>        <span class="c1"># 记录每个人的出生和死亡年份对人口的影响</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>        <span class="k">for</span> <span class="n">log</span> <span class="ow">in</span> <span class="n">logs</span><span class="p">:</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a>            <span class="n">birth</span> <span class="o">=</span> <span class="n">log</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1950</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a>            <span class="n">death</span> <span class="o">=</span> <span class="n">log</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1950</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a>            <span class="n">population_change</span><span class="p">[</span><span class="n">birth</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># 出生年份人口增加</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a>            <span class="n">population_change</span><span class="p">[</span><span class="n">death</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>  <span class="c1"># 死亡年份人口减少</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a>        <span class="c1"># 计算每一年的实际人口，并找出人口最多的年份</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a>        <span class="n">max_population</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a>        <span class="n">max_year</span> <span class="o">=</span> <span class="mi">1950</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16"></a>        <span class="n">current_population</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17"></a>
+<a id="__codelineno-17-18" name="__codelineno-17-18"></a>        <span class="c1"># 遍历每一年，计算人口数量</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19"></a>        <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">101</span><span class="p">):</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20"></a>            <span class="n">current_population</span> <span class="o">+=</span> <span class="n">population_change</span><span class="p">[</span><span class="n">year</span><span class="p">]</span>  <span class="c1"># 通过前缀和计算当前年份的人口</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21"></a>            <span class="k">if</span> <span class="n">current_population</span> <span class="o">&gt;</span> <span class="n">max_population</span><span class="p">:</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22"></a>                <span class="n">max_population</span> <span class="o">=</span> <span class="n">current_population</span>
+<a id="__codelineno-17-23" name="__codelineno-17-23"></a>                <span class="n">max_year</span> <span class="o">=</span> <span class="mi">1950</span> <span class="o">+</span> <span class="n">year</span>  <span class="c1"># 记录人口最多的年份</span>
+<a id="__codelineno-17-24" name="__codelineno-17-24"></a>
+<a id="__codelineno-17-25" name="__codelineno-17-25"></a>        <span class="k">return</span> <span class="n">max_year</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_55">代码解释</h3>
 <h4 id="_56">代码解释</h4>
 <ol>
@@ -3682,27 +3915,38 @@ print(&quot;修改后的数组为:&quot;, updatedA)  # 输出结果应为 [2, 7,
 </li>
 <li>
 <p>对于每个人的出生年份，增加 1 表示增加了一个人口：</p>
-<p><code>populationChange[birth] += 1</code></p>
 </li>
-<li>
-<p>对于死亡年份，减少 1，表示死亡当年不计入人口：</p>
-<p><code>if death &lt; 101:
-     populationChange[death] -= 1</code></p>
-</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>populationChange[birth] += 1
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>对于死亡年份，减少 1，表示死亡当年不计入人口：</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>if death &lt; 101:
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>   populationChange[death] -= 1
+</code></pre></div></td></tr></table></div>
+<ol>
 <li>
 <p><strong>前缀和计算</strong>：</p>
-</li>
+<ul>
 <li>
 <p>遍历 <code>populationChange</code> 数组，累加每年的变化值，得到该年的人口数量。</p>
 </li>
 <li>
 <p>在遍历过程中，记录最大的人口值及对应年份：</p>
-<p><code>currentPopulation += populationChange[year]
- if currentPopulation &gt; maxPopulation:
-     maxPopulation = currentPopulation
-     maxYear = 1950 + year</code></p>
+</li>
+</ul>
 </li>
 </ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>currentPopulation += populationChange[year]
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>if currentPopulation &gt; maxPopulation:
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>   maxPopulation = currentPopulation
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a>   maxYear = 1950 + year
+</code></pre></div></td></tr></table></div>
 <h2 id="423-lc1450">4.2.3 LC1450 在既定时间做作业的学生人数</h2>
 <h3 id="_57">题目描述</h3>
 <p>给你两个整数数组 <code>startTime</code>（开始时间）和 <code>endTime</code>（结束时间），并指定一个整数 <code>queryTime</code> 作为查询时间。</p>
@@ -3741,26 +3985,44 @@ print(&quot;修改后的数组为:&quot;, updatedA)  # 输出结果应为 [2, 7,
 </li>
 </ol>
 <h3 id="_59">代码实现</h3>
-<pre><code class="language-python">class Solution:
-    def busyStudent(self, startTime: List[int], endTime: List[int], queryTime: int) -&gt; int:
-        # 找到结束时间的最大值
-        maxTime = max(endTime)
-        diff = [0] * (maxTime + 2)  # 差分数组
-
-        # 构建差分数组
-        for i in range(len(startTime)):
-            diff[startTime[i]] += 1
-            diff[endTime[i] + 1] -= 1
-
-        # 计算前缀和
-        current_students = 0
-        for time in range(maxTime + 1):
-            current_students += diff[time]
-            if time == queryTime:
-                return current_students
-
-        return 0  # 如果没有匹配的时间
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span>
+<span class="normal"><a href="#__codelineno-21-13">13</a></span>
+<span class="normal"><a href="#__codelineno-21-14">14</a></span>
+<span class="normal"><a href="#__codelineno-21-15">15</a></span>
+<span class="normal"><a href="#__codelineno-21-16">16</a></span>
+<span class="normal"><a href="#__codelineno-21-17">17</a></span>
+<span class="normal"><a href="#__codelineno-21-18">18</a></span>
+<span class="normal"><a href="#__codelineno-21-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>    <span class="k">def</span> <span class="nf">busyStudent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">startTime</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">endTime</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">queryTime</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a>        <span class="c1"># 找到结束时间的最大值</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>        <span class="n">maxTime</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">endTime</span><span class="p">)</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>        <span class="n">diff</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">maxTime</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># 差分数组</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a>        <span class="c1"># 构建差分数组</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">startTime</span><span class="p">)):</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a>            <span class="n">diff</span><span class="p">[</span><span class="n">startTime</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a>            <span class="n">diff</span><span class="p">[</span><span class="n">endTime</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a>
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a>        <span class="c1"># 计算前缀和</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a>        <span class="n">current_students</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-21-14" name="__codelineno-21-14"></a>        <span class="k">for</span> <span class="n">time</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">maxTime</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15"></a>            <span class="n">current_students</span> <span class="o">+=</span> <span class="n">diff</span><span class="p">[</span><span class="n">time</span><span class="p">]</span>
+<a id="__codelineno-21-16" name="__codelineno-21-16"></a>            <span class="k">if</span> <span class="n">time</span> <span class="o">==</span> <span class="n">queryTime</span><span class="p">:</span>
+<a id="__codelineno-21-17" name="__codelineno-21-17"></a>                <span class="k">return</span> <span class="n">current_students</span>
+<a id="__codelineno-21-18" name="__codelineno-21-18"></a>
+<a id="__codelineno-21-19" name="__codelineno-21-19"></a>        <span class="k">return</span> <span class="mi">0</span>  <span class="c1"># 如果没有匹配的时间</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="5">5. 课后练习</h2>
 <h3 id="_60">前缀和</h3>
 <table>

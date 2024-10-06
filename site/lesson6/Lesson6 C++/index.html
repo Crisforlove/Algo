@@ -627,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2011,15 +2011,15 @@
 <ul>
 <li>
 <p><strong>首先在菜单中点击‘题库’：</strong>
-<img alt="image1" src="https://i.imgur.com/I0eHE3v.png" /></p>
+<img alt="image1" src="../images/cpp1.png" /></p>
 </li>
 <li>
 <p><strong>搜索框中可以输入题号、标题等查找相应题目</strong>
-<img alt="image2" src="https://i.imgur.com/5qJMJrm.png" /></p>
+<img alt="image2" src="../images/cpp2.png" /></p>
 </li>
 <li>
 <p><strong>搜索时可以设置题目难度</strong>
-<img alt="image3" src="https://i.imgur.com/Yfl0r08.png" /></p>
+<img alt="image3" src="../images/cpp3.png" /></p>
 </li>
 </ul>
 <h3 id="12-leetcode">1.2 Leetcode 题目</h3>
@@ -2035,20 +2035,20 @@
 <p>提示：给出一些变量在test case中的范围</p>
 </li>
 </ol>
-<p>以下用LC35题作为例子</p>
-<p><img alt="image4" src="https://i.imgur.com/NkSTdSO.png" /></p>
+<p>以下用LC35题作为例子
+<img alt="image4" src="../images/cpp4.png" /></p>
 <h3 id="13-leetcode">1.3 Leetcode题解</h3>
-<p>题解：点击题解后即可查看该题的几种解法</p>
-<p><img alt="image5" src="https://i.imgur.com/EKdwRcE.png" /></p>
+<p>题解：点击题解后即可查看该题的几种解法
+<img alt="image5" src="../images/cpp5.png" /></p>
 <h3 id="14-leetcode">1.4 Leetcode提交记录</h3>
-<p>点击‘提交记录’可查看以往提交内容</p>
-<p><img alt="image6" src="https://i.imgur.com/N0XQWaP.png" /></p>
+<p>点击‘提交记录’可查看以往提交内容
+<img alt="image6" src="../images/cpp6.png" /></p>
 <p>点击其中一条，即出现该次提交的详情，包括性能与代码内容</p>
-<p><img alt="image7" src="https://i.imgur.com/D6sjuea.png" /></p>
+<p><img alt="image7" src="../images/cpp7.png" /></p>
 <h3 id="15-leetcode">1.5 Leetcode做题分析</h3>
 <p>点击头像，查看做题分析、进度管理等，即可查看自己的做题内容</p>
-<p><img alt="image8" src="https://i.imgur.com/MWrBxn9.png" /></p>
-<p>下面是一个常用的C++字符串方法的表格，展示了C++中常见的字符串操作及其描述：</p>
+<p><img alt="image8" src="../images/cpp8.png" />
+下面是一个常用的C++字符串方法的表格，展示了C++中常见的字符串操作及其描述：</p>
 <table>
 <thead>
 <tr>
@@ -2129,24 +2129,40 @@
 <li>从这个字母开始反向遍历，直到遇到空格或者到达字符串的起始位置。遍历到的每个字母都是最后一个单词的一部分。</li>
 <li>遍历到的字母数量即为最后一个单词的长度。</li>
 </ol>
-<pre><code class="language-cpp">class Solution {
-public:
-    int lengthOfLastWord(string s) {
-        int index = s.length() - 1;
-        // 跳过尾部空格
-        while (index &gt;= 0 &amp;&amp; s[index] == ' ') {
-            index--;
-        }
-        int wordLength = 0;
-        // 计算最后一个单词的长度
-        while (index &gt;= 0 &amp;&amp; s[index] != ' ') {
-            wordLength++;
-            index--;
-        }
-        return wordLength;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">lengthOfLastWord</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="c1">// 跳过尾部空格</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">            </span><span class="n">index</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">wordLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="c1">// 计算最后一个单词的长度</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">            </span><span class="n">wordLength</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">            </span><span class="n">index</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">wordLength</span><span class="p">;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="lc434">LC434. 字符串中的单词数</h3>
 <h3 id="_4">问题描述</h3>
 <p>统计字符串中的单词个数，这里的单词指的是连续的不是空格的字符。</p>
@@ -2156,9 +2172,11 @@ public:
 <h3 id="_6">思路</h3>
 <p><strong>常规思路</strong>
 1. <strong>去除多余空格</strong>: 在处理字符串之前，我们可以先考虑如何处理字符串中可能存在的多余空格问题（如前后空格或多重空格）。但实际实现中，通常不需要专门去除空格，只需要正确地分割单词即可。 <br />
-   检测一个单词的开始：
-   - <code>s[i] != ' '</code>：当前字符不是空格。
-   - <code>(i == 0 || s[i - 1] == ' ')</code>：当前字符是第一个字符，或者前一个字符是空格。</p>
+   检测一个单词的开始：</p>
+<ul>
+<li><code>s[i] != ' '</code>：当前字符不是空格。</li>
+<li><code>(i == 0 || s[i - 1] == ' ')</code>：当前字符是第一个字符，或者前一个字符是空格。</li>
+</ul>
 <p>满足这两个条件时，意味着我们遇到一个新的单词，于是计数器 <code>count</code> 增加。</p>
 <ol>
 <li>
@@ -2168,37 +2186,59 @@ public:
 <p><strong>记录单词数量</strong>: 使用一个计数器，当检测到一个单词的开始时，计数器加1。</p>
 </li>
 </ol>
-<pre><code class="language-cpp">class Solution {
-public:
-    int countSegments(string s) {
-        int count = 0;
-        // 遍历字符串
-        for (int i = 0; i &lt; s.length(); i++) {
-            // 检查当前字符是否为非空格字符且前一个字符为空格字符
-            if (s[i] != ' ' &amp;&amp; (i == 0 || s[i - 1] == ' ')) {
-                count++;
-            }
-        }
-        return count;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">countSegments</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="c1">// 遍历字符串</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">            </span><span class="c1">// 检查当前字符是否为非空格字符且前一个字符为空格字符</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">                </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="_7">举一反三</h2>
 <h3 id="lc709">LC709. 转换成小写字母</h3>
 <h4 id="_8">问题描述</h4>
 <p>给你一个字符串 <code>s</code>，将该字符串中的大写字母转换成相同的小写字母，返回新的字符串，查找并使用合适的字符串函数解答即可。</p>
 <h4 id="_9">代码实现</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    string toLowerCase(string s) {
-        for (int i = 0; i &lt; s.length(); i++) {
-            // 使用tolower函数将字符转换为小写
-            s[i] = tolower(s[i]);
-        }
-        return s;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">toLowerCase</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">            </span><span class="c1">// 使用tolower函数将字符转换为小写</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">            </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tolower</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="lc520">LC520. 检测大写字母</h3>
 <h3 id="_10">问题描述</h3>
 <p>我们定义，在以下情况下，单词的大写用法是正确的：</p>
@@ -2233,24 +2273,40 @@ public:
 </ol>
 <h3 id="_13">代码实现</h3>
 <p><strong>常规解法</strong></p>
-<pre><code class="language-cpp">class Solution {
-public:
-    bool detectCapitalUse(string word) {
-        // 若第 1 个字母为小写，则需额外判断第 2 个字母是否为大写
-        if (word.length() &gt;= 2 &amp;&amp; islower(word[0]) &amp;&amp; isupper(word[1])) {
-            return false;
-        }
-
-        // 无论第 1 个字母是否大写，其他字母必须与第 2 个字母的大小写相同
-        for (int i = 2; i &lt; word.length(); ++i) {
-            if (islower(word[i]) ^ islower(word[1])) {
-                return false;
-            }
-        }
-        return true;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">detectCapitalUse</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">        </span><span class="c1">// 若第 1 个字母为小写，则需额外判断第 2 个字母是否为大写</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">word</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">islower</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">isupper</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">        </span><span class="c1">// 无论第 1 个字母是否大写，其他字母必须与第 2 个字母的大小写相同</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">word</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">islower</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">islower</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="lc521-i">LC521. 最长特殊序列 Ⅰ</h3>
 <h4 id="_14">问题描述</h4>
 <p>给你两个字符串 <code>a</code> 和 <code>b</code>，请返回这两个字符串中最长的特殊序列的长度。如果不存在，则返回 <code>-1</code>。</p>
@@ -2274,27 +2330,42 @@ public:
 <li>如果字符串 <code>a</code> 和 <code>b</code> 不相等，那么较长的字符串本身就是它的最长特殊序列，因为它不能完全出现在另一个字符串中。此时，我们可以直接返回两个字符串中较长的那个字符串的长度。</li>
 </ol>
 <h4 id="_18">代码实现</h4>
-<p><strong>直观版本</strong></p>
-<pre><code class="language-cpp">class Solution {
-public:
-    int findLUSlength(string a, string b) {
-        // 如果两个字符串不同，返回长度较长的字符串
-        if (a != b) {
-            return max(a.length(), b.length());
-        }
-        // 如果两个字符串相同，返回 -1
-        return -1;
-    }
-};
-</code></pre>
-<p><strong>简洁版本</strong></p>
-<pre><code class="language-cpp">class Solution {
-public:
-    int findLUSlength(string a, string b) {
-        return a != b ? max(a.length(), b.length()) : -1;
-    }
-};
-</code></pre>
+<p><strong>直观版本</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">findLUSlength</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">        </span><span class="c1">// 如果两个字符串不同，返回长度较长的字符串</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">length</span><span class="p">(),</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">length</span><span class="p">());</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="c1">// 如果两个字符串相同，返回 -1</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>简洁版本</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">findLUSlength</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">length</span><span class="p">(),</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">length</span><span class="p">())</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="_19">课后练习</h2>
 <table>
 <thead>

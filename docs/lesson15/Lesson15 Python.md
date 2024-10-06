@@ -390,12 +390,12 @@ class NumArray:
 
 1. **寻找数轴的最大端点**： 找到所有区间中的最大终点 `C`，这样我们只需考虑 `1` 到 `C` 之间的点。
 2. **构建差分数组**：
-   - 初始化一个长度为 `C + 2` 的差分数组 `diff`。
-   - 对于每个区间 `[start_i, end_i]`，在 `diff[start_i]` 位置增加 `1`，在 `diff[end_i + 1]` 位置减去 `1`。
+    - 初始化一个长度为 `C + 2` 的差分数组 `diff`。
+    - 对于每个区间 `[start_i, end_i]`，在 `diff[start_i]` 位置增加 `1`，在 `diff[end_i + 1]` 位置减去 `1`。
 3. **构建前缀和**：
-   - 遍历差分数组 `diff`，逐步累加，得到前缀和数组。前缀和数组中，每个位置的值表示该点被覆盖的次数。
+    - 遍历差分数组 `diff`，逐步累加，得到前缀和数组。前缀和数组中，每个位置的值表示该点被覆盖的次数。
 4. **统计被覆盖的点数**：
-   - 遍历前缀和数组，统计所有被覆盖的点，即前缀和大于 `0` 的点。
+    - 遍历前缀和数组，统计所有被覆盖的点，即前缀和大于 `0` 的点。
 
 ### 特别注意：为什么需要 `C + 2` 的长度
 
@@ -729,31 +729,31 @@ class Solution:
 
 2. **处理每个人的出生和死亡年份**：
 
-   - 对于每个人的出生年份，增加 1 表示增加了一个人口：
+- 对于每个人的出生年份，增加 1 表示增加了一个人口：
 
-     ```
-     populationChange[birth] += 1
-     ```
+```
+populationChange[birth] += 1
+```
 
-   - 对于死亡年份，减少 1，表示死亡当年不计入人口：
+- 对于死亡年份，减少 1，表示死亡当年不计入人口：
 
-     ```
-     if death < 101:
-         populationChange[death] -= 1
-     ```
+```
+if death < 101:
+   populationChange[death] -= 1
+```
 
 3. **前缀和计算**：
 
-   - 遍历 `populationChange` 数组，累加每年的变化值，得到该年的人口数量。
+    - 遍历 `populationChange` 数组，累加每年的变化值，得到该年的人口数量。
 
-   - 在遍历过程中，记录最大的人口值及对应年份：
+    - 在遍历过程中，记录最大的人口值及对应年份：
 
-     ```
-     currentPopulation += populationChange[year]
-     if currentPopulation > maxPopulation:
-         maxPopulation = currentPopulation
-         maxYear = 1950 + year
-     ```
+```
+currentPopulation += populationChange[year]
+if currentPopulation > maxPopulation:
+   maxPopulation = currentPopulation
+   maxYear = 1950 + year
+```
 
 ## 4.2.3 LC1450 在既定时间做作业的学生人数
 

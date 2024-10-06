@@ -629,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1988,17 +1988,23 @@
 <h1 id="lesson10">Lesson10 集合专题</h1>
 <h2 id="_1">目录</h2>
 <ol>
-<li><a href="#1-集合的基本概念">集合的基本概念</a></li>
+<li><a href="#1-集合的基本概念">集合的基本概念</a><ul>
 <li><a href="#11-集合的创建">1.1 集合的创建</a></li>
 <li><a href="#12-集合的特性">1.2 集合的特性</a></li>
 <li><a href="#13-set-的应用场景">1.3 set 的应用场景</a></li>
 <li><a href="#14-完整实例">1.4 完整实例</a></li>
-<li><a href="#2-例题讲解">例题讲解</a></li>
+</ul>
+</li>
+<li><a href="#2-例题讲解">例题讲解</a><ul>
 <li><a href="#21-lc349-两个数组的交集">2.1 LC349 两个数组的交集</a></li>
 <li><a href="#22-lc645-错误的集合">2.2 LC645 错误的集合</a></li>
-<li><a href="#3-举一反三">举一反三</a></li>
+</ul>
+</li>
+<li><a href="#3-举一反三">举一反三</a><ul>
 <li><a href="#31-lc575-分糖果">3.1 LC575 分糖果</a></li>
 <li><a href="#32-lc771-宝石与石头">3.2 LC771 宝石与石头</a></li>
+</ul>
+</li>
 <li><a href="#4-课后练习">课后练习</a></li>
 </ol>
 <h2 id="1">1. 集合的基本概念</h2>
@@ -2009,82 +2015,125 @@
 <p>集合中的元素不会重复，并且可以进行交集、并集、差集等常见的集合操作。</p>
 <p>可以使用大括号 <strong>{ }</strong> 创建集合，元素之间用逗号 <strong>,</strong> 分隔， 或者也可以使用 <strong>set()</strong> 函数创建集合。</p>
 <p><strong>创建格式：</strong></p>
-<pre><code>parame = {value01,value02,...}
-或者
-set(value)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>parame = {value01,value02,...}
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>或者
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>set(value)
+</code></pre></div></td></tr></table></div>
 <p>以下是一个简单实例：</p>
-<pre><code>set1 = {1, 2, 3, 4}            # 直接使用大括号创建集合
-set2 = set([4, 5, 6, 7])      # 使用 set() 函数从列表创建集合
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>set1 = {1, 2, 3, 4}            # 直接使用大括号创建集合
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>set2 = set([4, 5, 6, 7])      # 使用 set() 函数从列表创建集合
+</code></pre></div></td></tr></table></div>
 <p><strong>注意：</strong>创建一个空集合必须用 <strong>set()</strong> 而不是 <strong>{ }</strong>，因为 <strong>{ }</strong> 是用来创建一个空字典。</p>
 <h3 id="12">1.2 集合的特性</h3>
 <ol>
 <li><strong>元素唯一性</strong>：集合中的元素不能重复，每个元素在集合中只能出现一次。</li>
 <li><strong>无序</strong>：集合中的元素没有固定的存储顺序。</li>
-<li><strong>常用方法</strong>：</li>
+<li><strong>常用方法</strong>：<ul>
 <li><code>add()</code>：向集合中添加元素。如果元素已存在，则不会重复添加。</li>
 <li><code>remove()</code>：从集合中删除指定的元素。</li>
 <li><code>discard()</code>：删除元素，但如果元素不存在，则不会报错。</li>
 <li><code>clear()</code>：清空集合中的所有元素。</li>
 <li><code>len()</code>：返回集合中元素的数量。</li>
 <li><code>in</code>：判断某个元素是否在集合中。</li>
+</ul>
+</li>
 </ol>
-<pre><code># 创建集合
-languages = {&quot;Python&quot;, &quot;Java&quot;, &quot;JavaScript&quot;}
-
-# 向集合中添加元素
-languages.add(&quot;Ruby&quot;)
-print(languages)  # 输出: {'Python', 'Ruby', 'Java', 'JavaScript'}
-
-# 删除元素
-languages.remove(&quot;JavaScript&quot;)
-print(languages)  # 输出: {'Python', 'Ruby', 'Java'}
-
-# 获取集合的长度
-print(len(languages))  # 输出: 3
-
-# 检查元素是否存在
-print(&quot;Python&quot; in languages)  # 输出: True
-
-# 清空集合
-languages.clear()
-print(languages)  # 输出: set()
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a># 创建集合
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>languages = {&quot;Python&quot;, &quot;Java&quot;, &quot;JavaScript&quot;}
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a># 向集合中添加元素
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>languages.add(&quot;Ruby&quot;)
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>print(languages)  # 输出: {&#39;Python&#39;, &#39;Ruby&#39;, &#39;Java&#39;, &#39;JavaScript&#39;}
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a># 删除元素
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>languages.remove(&quot;JavaScript&quot;)
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>print(languages)  # 输出: {&#39;Python&#39;, &#39;Ruby&#39;, &#39;Java&#39;}
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a># 获取集合的长度
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>print(len(languages))  # 输出: 3
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a># 检查元素是否存在
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>print(&quot;Python&quot; in languages)  # 输出: True
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a># 清空集合
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a>languages.clear()
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a>print(languages)  # 输出: set()
+</code></pre></div></td></tr></table></div>
 <h3 id="13-set">1.3 <code>set</code> 的应用场景</h3>
 <p><strong>去重</strong>：当需要去除重复元素时，集合非常有用。例如，从列表中删除重复项。</p>
 <p><strong>集合操作</strong>：集合支持各种集合运算，如交集、并集和差集。</p>
 <p>交集：找到两个集合中共同的元素</p>
-<pre><code>set1 = {&quot;A&quot;, &quot;B&quot;, &quot;C&quot;}
-set2 = {&quot;B&quot;, &quot;C&quot;, &quot;D&quot;}
-intersection = set1 &amp; set2
-print(intersection)  # 输出: {'B', 'C'}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>set1 = {&quot;A&quot;, &quot;B&quot;, &quot;C&quot;}
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>set2 = {&quot;B&quot;, &quot;C&quot;, &quot;D&quot;}
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>intersection = set1 &amp; set2
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>print(intersection)  # 输出: {&#39;B&#39;, &#39;C&#39;}
+</code></pre></div></td></tr></table></div>
 <p>并集：合并两个集合的所有元素</p>
-<pre><code>union = set1 | set2
-print(union)  # 输出: {'A', 'B', 'C', 'D'}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>union = set1 | set2
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>print(union)  # 输出: {&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;}
+</code></pre></div></td></tr></table></div>
 <p>差集：找出只存在于第一个集合中的元素</p>
-<pre><code>difference = set1 - set2
-print(difference)  # 输出: {'A'}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>difference = set1 - set2
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>print(difference)  # 输出: {&#39;A&#39;}
+</code></pre></div></td></tr></table></div>
 <h3 id="14">1.4 完整实例</h3>
-<pre><code># 集合操作的示例
-set1 = {&quot;A&quot;, &quot;B&quot;, &quot;C&quot;}
-set2 = {&quot;B&quot;, &quot;C&quot;, &quot;D&quot;}
-
-# 交集
-intersection = set1 &amp; set2
-print(&quot;Intersection (交集):&quot;, intersection)  # 输出: {'B', 'C'}
-
-# 并集
-union = set1 | set2
-print(&quot;Union (并集):&quot;, union)  # 输出: {'A', 'B', 'C', 'D'}
-
-# 差集
-difference = set1 - set2
-print(&quot;Difference (差集):&quot;, difference)  # 输出: {'A'}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a># 集合操作的示例
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>set1 = {&quot;A&quot;, &quot;B&quot;, &quot;C&quot;}
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>set2 = {&quot;B&quot;, &quot;C&quot;, &quot;D&quot;}
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a># 交集
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>intersection = set1 &amp; set2
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>print(&quot;Intersection (交集):&quot;, intersection)  # 输出: {&#39;B&#39;, &#39;C&#39;}
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a># 并集
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>union = set1 | set2
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>print(&quot;Union (并集):&quot;, union)  # 输出: {&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;}
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a># 差集
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>difference = set1 - set2
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>print(&quot;Difference (差集):&quot;, difference)  # 输出: {&#39;A&#39;}
+</code></pre></div></td></tr></table></div>
 <h2 id="2">2. 例题讲解</h2>
 <h3 id="21-lc349">2.1 LC349 两个数组的交集</h3>
 <h3 id="_3">题目描述</h3>
@@ -2099,33 +2148,51 @@ print(&quot;Difference (差集):&quot;, difference)  # 输出: {'A'}
 <li><strong>转换为列表</strong>：最后，将结果集合转换为列表并返回。</li>
 </ol>
 <h3 id="_4">参考解答</h3>
-<pre><code>class Solution:
-    def intersection(self, nums1: List[int], nums2: List[int]) -&gt; List[int]:
-        # 将nums2转换为集合
-        set2 = set(nums2)
-        # 使用集合来存储交集结果
-        intersect_set = set()
-        # 遍历nums1，检查每个元素是否在set2中
-        for num in nums1:
-            if num in set2:
-                intersect_set.add(num)
-                # 从set2中移除该元素，确保结果中元素唯一
-                set2.remove(num)
-        # 返回结果集合转换为列表
-                            return list(intersect_set)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>class Solution:
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>    def intersection(self, nums1: List[int], nums2: List[int]) -&gt; List[int]:
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>        # 将nums2转换为集合
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>        set2 = set(nums2)
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>        # 使用集合来存储交集结果
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>        intersect_set = set()
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>        # 遍历nums1，检查每个元素是否在set2中
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>        for num in nums1:
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>            if num in set2:
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>                intersect_set.add(num)
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>                # 从set2中移除该元素，确保结果中元素唯一
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>                set2.remove(num)
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>        # 返回结果集合转换为列表
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>                            return list(intersect_set)
+</code></pre></div></td></tr></table></div>
 <h3 id="2_1">解法2 思路分析</h3>
 <p>1.将两个数组变为使用set()变为集合</p>
 <p>2.直接使用&amp;运算符来获得两个集合的交集</p>
 <p>3.返回list</p>
 <h3 id="_5">参考答案：</h3>
-<pre><code>class Solution:
-    def intersection(self, nums1: List[int], nums2: List[int]) -&gt; List[int]:
-        set1 = set(nums1)
-        set2 = set(nums2)
-        # 求交集并返回
-        return list(set1 &amp; set2)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>class Solution:
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>    def intersection(self, nums1: List[int], nums2: List[int]) -&gt; List[int]:
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>        set1 = set(nums1)
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>        set2 = set(nums2)
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>        # 求交集并返回
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>        return list(set1 &amp; set2)
+</code></pre></div></td></tr></table></div>
 <h3 id="22-lc645">2.2 LC645 错误的集合</h3>
 <h3 id="_6">问题描述</h3>
 <p>集合 <code>s</code> 包含从 <code>1</code> 到 <code>n</code> 的整数。不幸的是，因为数据错误，导致集合里面某一个数字复制了成了集合里面的另外一个数字的值，导致集合丢失了一个数字，并且有一个数字重复 。</p>
@@ -2144,26 +2211,44 @@ print(&quot;Difference (差集):&quot;, difference)  # 输出: {'A'}
 </li>
 </ol>
 <h3 id="_8">参考解答</h3>
-<pre><code>class Solution:
-    def findErrorNums(self, nums: List[int]) -&gt; List[int]:
-        num_set = set()
-        duplicate = 0
-        n = len(nums)
-
-        # 查找重复的数字
-        for num in nums:
-            if num in num_set:
-                duplicate = num
-            else:
-                num_set.add(num)
-
-        # 查找丢失的数字
-        for i in range(1, n+1):
-            if i not in num_set:
-                missing = i
-                break
-        return [duplicate, missing]
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>class Solution:
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>    def findErrorNums(self, nums: List[int]) -&gt; List[int]:
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>        num_set = set()
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>        duplicate = 0
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>        n = len(nums)
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>        # 查找重复的数字
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>        for num in nums:
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>            if num in num_set:
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>                duplicate = num
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>            else:
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>                num_set.add(num)
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a>        # 查找丢失的数字
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>        for i in range(1, n+1):
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>            if i not in num_set:
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a>                missing = i
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a>                break
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a>        return [duplicate, missing]
+</code></pre></div></td></tr></table></div>
 <h2 id="3">3. 举一反三</h2>
 <h3 id="31-lc575">3.1 LC575 分糖果</h3>
 <h4 id="_9">问题描述</h4>
@@ -2177,28 +2262,41 @@ print(&quot;Difference (差集):&quot;, difference)  # 输出: {'A'}
 <li>返回糖果种类数与可吃糖果数量中的较小值。</li>
 </ol>
 <h3 id="_11">参考解答</h3>
-<pre><code>class Solution:
-    def distributeCandies(self, candyType: List[int]) -&gt; int:
-        # 使用集合来去重
-        unique_candies = set(candyType)
-
-        # Alice 能吃的糖果数量
-        n = len(candyType) // 2
-
-        # 返回能吃的最多种类
-        return min(len(unique_candies), n)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>class Solution:
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>    def distributeCandies(self, candyType: List[int]) -&gt; int:
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>        # 使用集合来去重
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>        unique_candies = set(candyType)
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>        # Alice 能吃的糖果数量
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>        n = len(candyType) // 2
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>        # 返回能吃的最多种类
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>        return min(len(unique_candies), n)
+</code></pre></div></td></tr></table></div>
 <h3 id="_12">逻辑推理</h3>
 <ul>
-<li><strong>种类数 vs 可吃数量</strong>：</li>
+<li><strong>种类数 vs 可吃数量</strong>：<ul>
 <li><strong>种类数 (len(unique_candies))</strong>：这是 Alice 可以选择的不同糖的类型数量。如果 <code>种类数</code> 小于 <code>可吃数量</code>，这意味着 Alice 可以吃掉更多糖，但由于糖的种类不足，她的选择会受到限制。</li>
 <li><strong>可吃数量 (n)</strong>：这是 Alice 根据医生建议能吃的糖的数量。如果 <code>可吃数量</code> 小于 <code>种类数</code>，这意味着虽然 Alice 拥有足够多的糖种类，但她只能选择一部分，因为她不能吃超过她的配额。</li>
 </ul>
+</li>
+</ul>
 <h3 id="_13">为什么取最小值</h3>
 <ul>
-<li>使用 Python 内置的 <code>min()</code> 函数来计算最终结果，确保 Alice 在吃糖数量和糖种类之间做出合理的选择。具体来说：</li>
+<li>使用 Python 内置的 <code>min()</code> 函数来计算最终结果，确保 Alice 在吃糖数量和糖种类之间做出合理的选择。具体来说：<ul>
 <li>如果 种类数 大于 可吃数量n，则 Alice 只能吃 n 个糖，即使有更多种类，她也只能选择一部分。</li>
 <li>如果 种类数 小于 可吃数量n，则 Alice 可以选择所有不同种类的糖，不用担心数量限制。</li>
+</ul>
+</li>
 </ul>
 <h3 id="32-lc771">3.2 LC771 宝石与石头</h3>
 <h3 id="_14">问题描述</h3>
@@ -2215,18 +2313,28 @@ print(&quot;Difference (差集):&quot;, difference)  # 输出: {'A'}
 </li>
 </ol>
 <h3 id="_16">参考解答</h3>
-<pre><code>class Solution:
-    def numJewelsInStones(self, jewels: str, stones: str) -&gt; int:
-        jewel_set = set(jewels)
-
-        # 计数石头中宝石的数量
-        count = 0
-        for stone in stones:
-            if stone in jewel_set:
-                count += 1
-
-        return count
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>class Solution:
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>    def numJewelsInStones(self, jewels: str, stones: str) -&gt; int:
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>        jewel_set = set(jewels)
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>        # 计数石头中宝石的数量
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>        count = 0
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>        for stone in stones:
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>            if stone in jewel_set:
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>                count += 1
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>        return count
+</code></pre></div></td></tr></table></div>
 <h2 id="4">4. 课后练习</h2>
 <table>
 <thead>

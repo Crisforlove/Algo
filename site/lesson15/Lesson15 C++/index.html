@@ -625,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -667,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3104,80 +3104,137 @@
 </ul>
 <h3 id="_3">构建前缀和数组</h3>
 <p>构建前缀和数组的时间复杂度是 <code>O(n)</code>，因为我们只需要遍历一遍数组即可计算出所有前缀和。按照这个思路，代码如下：</p>
-<pre><code class="language-cpp">#include &lt;vector&gt;
-using namespace std;
-
-vector&lt;int&gt; prefixSum(vector&lt;int&gt;&amp; arr) {
-    int n = arr.size();
-    vector&lt;int&gt; prefix(n);  // 前缀和数组与原数组同长度
-
-    // 初始化第一个元素
-    prefix[0] = arr[0];  // 第一个前缀和就是数组的第一个元素
-
-    // 构建前缀和数组
-    for (int i = 1; i &lt; n; i++) {
-        prefix[i] = prefix[i - 1] + arr[i];
-    }
-    return prefix;
-}
-
-// 计算区间和 [i, j]
-int rangeSum(vector&lt;int&gt;&amp; prefix, int i, int j) {
-    return prefix[j] - prefix[i - 1];
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">prefixSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">prefix</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w">  </span><span class="c1">// 前缀和数组与原数组同长度</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="c1">// 初始化第一个元素</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="n">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w">  </span><span class="c1">// 第一个前缀和就是数组的第一个元素</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="c1">// 构建前缀和数组</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">prefix</span><span class="p">;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="p">}</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="c1">// 计算区间和 [i, j]</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="kt">int</span><span class="w"> </span><span class="n">rangeSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">prefix</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_4">思考：这段代码有没有什么问题</h3>
 <h4 id="_5">数组越界</h4>
-<p>对于：</p>
-<pre><code class="language-cpp">return prefix[j] - prefix[i - 1];
-</code></pre>
+<p>对于：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">return</span><span class="w"> </span><span class="n">prefix</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+</code></pre></div></td></tr></table></div></p>
 <p>当计算区间和 [0, j]，即i = 0 时，数组会越界。</p>
 <h4 id="_6">解决方式：添加条件判断</h4>
-<pre><code class="language-cpp">#include &lt;vector&gt;
-using namespace std;
-
-vector&lt;int&gt; prefixSum(vector&lt;int&gt;&amp; arr) {
-    int n = arr.size();
-    vector&lt;int&gt; prefix(n);  // 前缀和数组与原数组同长度
-
-    // 初始化第一个元素
-    prefix[0] = arr[0];  // 第一个前缀和就是数组的第一个元素
-
-    // 构建前缀和数组
-    for (int i = 1; i &lt; n; i++) {
-        prefix[i] = prefix[i - 1] + arr[i];
-    }
-    return prefix;
-}
-
-// 计算区间和 [i, j]
-int rangeSum(vector&lt;int&gt;&amp; prefix, int i, int j) {
-    if (i == 0) {
-        return prefix[j];  // 当 i = 0 时，直接返回 prefix[j]
-    } else {
-        return prefix[j] - prefix[i - 1];  // 否则，使用 prefix[j] - prefix[i-1]
-    }
-}
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">prefixSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">prefix</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w">  </span><span class="c1">// 前缀和数组与原数组同长度</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="c1">// 初始化第一个元素</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="n">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w">  </span><span class="c1">// 第一个前缀和就是数组的第一个元素</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="c1">// 构建前缀和数组</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">        </span><span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">prefix</span><span class="p">;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="p">}</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="c1">// 计算区间和 [i, j]</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="kt">int</span><span class="w"> </span><span class="n">rangeSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">prefix</span><span class="p">[</span><span class="n">j</span><span class="p">];</span><span class="w">  </span><span class="c1">// 当 i = 0 时，直接返回 prefix[j]</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">prefix</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span><span class="w">  </span><span class="c1">// 否则，使用 prefix[j] - prefix[i-1]</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_7">思考：有没有更好的解决方式</h3>
 <h4 id="_8">构建前缀和数组时多开一格</h4>
-<pre><code class="language-cpp">#include &lt;vector&gt;
-using namespace std;
-
-// 构建前缀和数组，前缀和数组多一格，并使 prefix[0] = 0
-vector&lt;int&gt; prefixSum(vector&lt;int&gt;&amp; arr) {
-    int n = arr.size();
-    vector&lt;int&gt; prefix(n + 1);  // 前缀和数组比原数组多一位
-    prefix[0] = 0; 
-
-    // 构建前缀和数组
-    for (int i = 1; i &lt;= n; i++) {
-        prefix[i] = prefix[i - 1] + arr[i - 1]; 
-    }
-    return prefix;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1">// 构建前缀和数组，前缀和数组多一格，并使 prefix[0] = 0</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">prefixSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">prefix</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// 前缀和数组比原数组多一位</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="n">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="c1">// 构建前缀和数组</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">        </span><span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span><span class="w"> </span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">prefix</span><span class="p">;</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="prefixsum">总结：<code>prefixSum</code> 多开一格的原因与好处</h3>
 <h4 id="_9">避免边界问题：</h4>
 <p>假设你不多开一格，并且前缀和数组 <code>prefix[i]</code> 表示 <code>arr[0]</code> 到 <code>arr[i]</code> 的和，那么对于区间 <code>[i, j]</code> 的和，你需要计算：</p>
@@ -3190,32 +3247,52 @@ vector&lt;int&gt; prefixSum(vector&lt;int&gt;&amp; arr) {
 </ul>
 <p>这样，即使 <code>i = 0</code> 时，也不用特别判断，直接套用通用公式 <code>prefix[j + 1] - prefix[i]</code>，从而避免越界问题。</p>
 <h3 id="_10">代码实现</h3>
-<pre><code class="language-cpp">#include &lt;vector&gt;
-using namespace std;
-
-// 构建前缀和数组，前缀和数组多开一格，prefix[0] = 0
-vector&lt;int&gt; prefixSum(vector&lt;int&gt;&amp; arr) {
-    int n = arr.size();
-    vector&lt;int&gt; prefix(n + 1);  // 前缀和数组比原数组多一位
-    prefix[0] = 0; 
-
-    // 构建前缀和数组
-    for (int i = 1; i &lt;= n; i++) {
-        prefix[i] = prefix[i - 1] + arr[i - 1];
-    }
-    return prefix;
-}
-
-// 计算区间和 [i, j]
-int rangeSum(vector&lt;int&gt;&amp; prefix, int i, int j) {
-    return prefix[j + 1] - prefix[i];
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1">// 构建前缀和数组，前缀和数组多开一格，prefix[0] = 0</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">prefixSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">prefix</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// 前缀和数组比原数组多一位</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="n">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="c1">// 构建前缀和数组</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">        </span><span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">prefix</span><span class="p">;</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="p">}</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="c1">// 计算区间和 [i, j]</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="kt">int</span><span class="w"> </span><span class="n">rangeSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">prefix</span><span class="p">[</span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_11">示例解释</h3>
 <p>假设我们有一个数组 <code>arr = {1, 2, 3, 4}</code>，对应的前缀和数组 <code>prefix</code> 为：</p>
-<pre><code>arr:     1   2   3   4
-prefix:  0   1   3   6   10
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>arr:     1   2   3   4
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>prefix:  0   1   3   6   10
+</code></pre></div></td></tr></table></div>
 <ul>
 <li><code>prefix[1] = 1</code> 表示 <code>arr[0]</code> 的和为 1。</li>
 <li><code>prefix[2] = 3</code> 表示 <code>arr[0] + arr[1]</code> 的和为 3。</li>
@@ -3223,8 +3300,8 @@ prefix:  0   1   3   6   10
 <li><code>prefix[4] = 10</code> 表示 <code>arr[0] + arr[1] + arr[2] + arr[3]</code> 的和为 10。</li>
 </ul>
 <p>要计算区间 <code>[i, j]</code> 的和，比如 <code>[1, 3]</code>，我们直接用公式：</p>
-<pre><code>区间和 [1, 3] = prefix[4] - prefix[1] = 10 - 1 = 9
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>区间和 [1, 3] = prefix[4] - prefix[1] = 10 - 1 = 9
+</code></pre></div></td></tr></table></div>
 <p>这是因为 <code>arr[1] + arr[2] + arr[3] = 2 + 3 + 4 = 9</code>。</p>
 <h3 id="_12">优点</h3>
 <ul>
@@ -3246,19 +3323,30 @@ prefix:  0   1   3   6   10
 <p>也就是说，差分数组的每个元素表示原数组相邻元素之间的差。</p>
 <h4 id="_15">构建差分数组</h4>
 <p>构建差分数组的时间复杂度是 <code>O(n)</code>，因为我们只需要遍历一遍原数组即可计算差分数组。代码如下：</p>
-<pre><code class="language-cpp">// 构建差分数组
-vector&lt;int&gt; buildDifferenceArray(const vector&lt;int&gt;&amp; arr) {
-    int n = arr.size();
-    vector&lt;int&gt; diff(n);  // 初始化差分数组
-    diff[0] = arr[0];     // 差分数组的第一个元素等于原数组的第一个元素
-
-    for (int i = 1; i &lt; n; i++) {
-        diff[i] = arr[i] - arr[i - 1];  // 计算差分
-    }
-
-    return diff;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1">// 构建差分数组</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">buildDifferenceArray</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">diff</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w">  </span><span class="c1">// 初始化差分数组</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="n">diff</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w">     </span><span class="c1">// 差分数组的第一个元素等于原数组的第一个元素</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">        </span><span class="n">diff</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span><span class="w">  </span><span class="c1">// 计算差分</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">diff</span><span class="p">;</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_16">更新区间</h4>
 <p>差分数组的一个强大之处在于，可以在常数时间内对原数组的一个区间 <code>[l, r]</code> 进行加 <code>x</code> 操作。具体方法如下：</p>
 <ul>
@@ -3267,19 +3355,30 @@ vector&lt;int&gt; buildDifferenceArray(const vector&lt;int&gt;&amp; arr) {
 </ul>
 <h4 id="_17">恢复原数组</h4>
 <p>在完成所有区间操作后，可以通过前缀和的方式恢复原数组。恢复操作的时间复杂度为 <code>O(n)</code>，代码如下：</p>
-<pre><code class="language-cpp">// 通过差分数组恢复原数组
-vector&lt;int&gt; recoverArrayFromDifference(const vector&lt;int&gt;&amp; diff) {
-    int n = diff.size();
-    vector&lt;int&gt; arr(n);  // 初始化恢复后的原数组
-    arr[0] = diff[0];    // 原数组的第一个元素等于差分数组的第一个元素
-
-    for (int i = 1; i &lt; n; i++) {
-        arr[i] = arr[i - 1] + diff[i];  // 通过累加差分数组恢复原数组
-    }
-
-    return arr;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1">// 通过差分数组恢复原数组</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">recoverArrayFromDifference</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">diff</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diff</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arr</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w">  </span><span class="c1">// 初始化恢复后的原数组</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diff</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w">    </span><span class="c1">// 原数组的第一个元素等于差分数组的第一个元素</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">        </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">diff</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w">  </span><span class="c1">// 通过累加差分数组恢复原数组</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">arr</span><span class="p">;</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_18">示例</h4>
 <p>假设有一个数组 <code>A = {2, 5, 7, 11, 15}</code>，构建它的差分数组 <code>D</code>：</p>
 <ul>
@@ -3297,59 +3396,110 @@ vector&lt;int&gt; recoverArrayFromDifference(const vector&lt;int&gt;&amp; diff) 
 </ul>
 <p>最终通过前缀和可以恢复出修改后的数组。</p>
 <h4 id="_19">参考代码</h4>
-<pre><code class="language-cpp">// 构建差分数组
-vector&lt;int&gt; buildDifferenceArray(const vector&lt;int&gt;&amp; arr) {
-    int n = arr.size();
-    vector&lt;int&gt; diff(n);
-    diff[0] = arr[0];  // 差分数组的第一个元素等于原数组的第一个元素
-
-    for (int i = 1; i &lt; n; i++) {
-        diff[i] = arr[i] - arr[i - 1];  // 计算差分
-    }
-
-    return diff;
-}
-
-// 对区间 [l, r] 加上 x
-void updateRange(vector&lt;int&gt;&amp; diff, int l, int r, int x) {
-    diff[l] += x;  // 在 l 位置加 x
-    if (r + 1 &lt; diff.size()) {
-        diff[r + 1] -= x;  // 在 r+1 位置减 x，确保后续不受影响
-    }
-}
-
-// 通过差分数组恢复原数组
-vector&lt;int&gt; recoverArrayFromDifference(const vector&lt;int&gt;&amp; diff) {
-    int n = diff.size();
-    vector&lt;int&gt; arr(n);
-    arr[0] = diff[0];  // 原数组的第一个元素
-
-    for (int i = 1; i &lt; n; i++) {
-        arr[i] = arr[i - 1] + diff[i];  // 通过累加差分数组恢复原数组
-    }
-
-    return arr;
-}
-
-int main() {
-    vector&lt;int&gt; A = {2, 5, 7, 11, 15};
-    vector&lt;int&gt; D = buildDifferenceArray(A);
-
-    // 对区间 [1, 3] 加上 2
-    updateRange(D, 1, 3, 2);
-
-    // 恢复修改后的原数组
-    vector&lt;int&gt; updatedA = recoverArrayFromDifference(D);
-
-    // 输出恢复后的数组
-    for (int num : updatedA) {
-        cout &lt;&lt; num &lt;&lt; &quot; &quot;;  // 输出结果应为 2 7 9 13 15
-    }
-    cout &lt;&lt; endl;
-
-    return 0;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span>
+<span class="normal"><a href="#__codelineno-9-24">24</a></span>
+<span class="normal"><a href="#__codelineno-9-25">25</a></span>
+<span class="normal"><a href="#__codelineno-9-26">26</a></span>
+<span class="normal"><a href="#__codelineno-9-27">27</a></span>
+<span class="normal"><a href="#__codelineno-9-28">28</a></span>
+<span class="normal"><a href="#__codelineno-9-29">29</a></span>
+<span class="normal"><a href="#__codelineno-9-30">30</a></span>
+<span class="normal"><a href="#__codelineno-9-31">31</a></span>
+<span class="normal"><a href="#__codelineno-9-32">32</a></span>
+<span class="normal"><a href="#__codelineno-9-33">33</a></span>
+<span class="normal"><a href="#__codelineno-9-34">34</a></span>
+<span class="normal"><a href="#__codelineno-9-35">35</a></span>
+<span class="normal"><a href="#__codelineno-9-36">36</a></span>
+<span class="normal"><a href="#__codelineno-9-37">37</a></span>
+<span class="normal"><a href="#__codelineno-9-38">38</a></span>
+<span class="normal"><a href="#__codelineno-9-39">39</a></span>
+<span class="normal"><a href="#__codelineno-9-40">40</a></span>
+<span class="normal"><a href="#__codelineno-9-41">41</a></span>
+<span class="normal"><a href="#__codelineno-9-42">42</a></span>
+<span class="normal"><a href="#__codelineno-9-43">43</a></span>
+<span class="normal"><a href="#__codelineno-9-44">44</a></span>
+<span class="normal"><a href="#__codelineno-9-45">45</a></span>
+<span class="normal"><a href="#__codelineno-9-46">46</a></span>
+<span class="normal"><a href="#__codelineno-9-47">47</a></span>
+<span class="normal"><a href="#__codelineno-9-48">48</a></span>
+<span class="normal"><a href="#__codelineno-9-49">49</a></span>
+<span class="normal"><a href="#__codelineno-9-50">50</a></span>
+<span class="normal"><a href="#__codelineno-9-51">51</a></span>
+<span class="normal"><a href="#__codelineno-9-52">52</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1">// 构建差分数组</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">buildDifferenceArray</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">diff</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="n">diff</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w">  </span><span class="c1">// 差分数组的第一个元素等于原数组的第一个元素</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="n">diff</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span><span class="w">  </span><span class="c1">// 计算差分</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">diff</span><span class="p">;</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="p">}</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="c1">// 对区间 [l, r] 加上 x</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="kt">void</span><span class="w"> </span><span class="n">updateRange</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">diff</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">    </span><span class="n">diff</span><span class="p">[</span><span class="n">l</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">  </span><span class="c1">// 在 l 位置加 x</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">diff</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">        </span><span class="n">diff</span><span class="p">[</span><span class="n">r</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">  </span><span class="c1">// 在 r+1 位置减 x，确保后续不受影响</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="p">}</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="c1">// 通过差分数组恢复原数组</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">recoverArrayFromDifference</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">diff</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diff</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arr</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="w">    </span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diff</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w">  </span><span class="c1">// 原数组的第一个元素</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a>
+<a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="w">        </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">diff</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w">  </span><span class="c1">// 通过累加差分数组恢复原数组</span>
+<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-31" name="__codelineno-9-31"></a>
+<a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">arr</span><span class="p">;</span>
+<a id="__codelineno-9-33" name="__codelineno-9-33"></a><span class="p">}</span>
+<a id="__codelineno-9-34" name="__codelineno-9-34"></a>
+<a id="__codelineno-9-35" name="__codelineno-9-35"></a><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">};</span>
+<a id="__codelineno-9-37" name="__codelineno-9-37"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buildDifferenceArray</span><span class="p">(</span><span class="n">A</span><span class="p">);</span>
+<a id="__codelineno-9-38" name="__codelineno-9-38"></a>
+<a id="__codelineno-9-39" name="__codelineno-9-39"></a><span class="w">    </span><span class="c1">// 对区间 [1, 3] 加上 2</span>
+<a id="__codelineno-9-40" name="__codelineno-9-40"></a><span class="w">    </span><span class="n">updateRange</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-9-41" name="__codelineno-9-41"></a>
+<a id="__codelineno-9-42" name="__codelineno-9-42"></a><span class="w">    </span><span class="c1">// 恢复修改后的原数组</span>
+<a id="__codelineno-9-43" name="__codelineno-9-43"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">updatedA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recoverArrayFromDifference</span><span class="p">(</span><span class="n">D</span><span class="p">);</span>
+<a id="__codelineno-9-44" name="__codelineno-9-44"></a>
+<a id="__codelineno-9-45" name="__codelineno-9-45"></a><span class="w">    </span><span class="c1">// 输出恢复后的数组</span>
+<a id="__codelineno-9-46" name="__codelineno-9-46"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">updatedA</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-47" name="__codelineno-9-47"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 输出结果应为 2 7 9 13 15</span>
+<a id="__codelineno-9-48" name="__codelineno-9-48"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-49" name="__codelineno-9-49"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-9-50" name="__codelineno-9-50"></a>
+<a id="__codelineno-9-51" name="__codelineno-9-51"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-9-52" name="__codelineno-9-52"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_20">优点</h4>
 <ul>
 <li><strong>高效更新</strong>：可以在 <code>O(1)</code> 的时间内对数组的区间进行加减操作，适用于需要频繁更新的场景。</li>
@@ -3385,26 +3535,44 @@ int main() {
 <li>查询区间和：通过前缀和数组计算任意区间 <code>[left, right]</code> 的和。</li>
 </ol>
 <h3 id="_27">参考解答</h3>
-<pre><code class="language-cpp">class NumArray {
-public:
-    // 前缀和数组
-    vector&lt;int&gt; prefixSum;
-
-    // 构造函数，初始化前缀和数组
-    NumArray(vector&lt;int&gt;&amp; nums) {
-        int n = nums.size();
-        prefixSum.resize(n + 1, 0);  // 前缀和数组大小为n+1，初始为0
-        for (int i = 0; i &lt; n; ++i) {
-            prefixSum[i + 1] = prefixSum[i] + nums[i];  // 构建前缀和数组
-        }
-    }
-
-    // 返回区间 [left, right] 的元素和
-    int sumRange(int left, int right) {
-        return prefixSum[right + 1] - prefixSum[left];  // 使用前缀和数组计算区间和
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">NumArray</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="c1">// 前缀和数组</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">prefixSum</span><span class="p">;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">    </span><span class="c1">// 构造函数，初始化前缀和数组</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">    </span><span class="n">NumArray</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">        </span><span class="n">prefixSum</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// 前缀和数组大小为n+1，初始为0</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">            </span><span class="n">prefixSum</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefixSum</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w">  </span><span class="c1">// 构建前缀和数组</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">    </span><span class="c1">// 返回区间 [left, right] 的元素和</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sumRange</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">prefixSum</span><span class="p">[</span><span class="n">right</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">prefixSum</span><span class="p">[</span><span class="n">left</span><span class="p">];</span><span class="w">  </span><span class="c1">// 使用前缀和数组计算区间和</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_28">示例</h3>
 <p>以数组 <code>nums = [-2, 0, 3, -5, 2, -1]</code> 为例，前缀和数组 <code>prefixSum</code> 如下：</p>
 <ul>
@@ -3462,8 +3630,8 @@ public:
 <p>当处理到某个区间 <code>[start, end]</code> 时，我们在 <code>end + 1</code> 位置进行减 <code>1</code> 操作，这就需要确保 <code>end + 1</code> 在差分数组的范围内，防止越界。因此，我们在初始化差分数组时，需要为 <code>C + 1</code> 和 <code>C + 2</code> 留出空间。</p>
 <h4 id="_32">案例分析</h4>
 <p>假设我们有如下区间输入：</p>
-<pre><code class="language-plaintext">nums = [[1, 3], [2, 5], [4, 6]]
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>nums = [[1, 3], [2, 5], [4, 6]]
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>
 <p><strong>寻找最大终点 <code>C</code></strong>：</p>
@@ -3500,45 +3668,82 @@ public:
 </ol>
 <p>可以发现，对于本题而言，需要 <code>C + 2</code> 大小的数组才不会发生越界的情况。</p>
 <h3 id="_33">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    int numberOfPoints(vector&lt;vector&lt;int&gt;&gt;&amp; nums) {
-        int C = 0;
-
-        // 找出最大终点 C
-        for (const auto&amp; interval : nums) {
-            C = max(C, interval[1]);
-        }
-
-        // 差分数组，长度为 C + 2，避免越界
-        vector&lt;int&gt; diff(C + 2, 0);
-
-        // 构建差分数组
-        for (const auto&amp; interval : nums) {
-            int start = interval[0];    // 区间起始点
-            int end = interval[1];      // 区间结束点
-
-            // 标记区间的开始：从 'start' 位置开始，覆盖的点加 1
-            diff[start] += 1;
-
-            // 标记区间的结束：'end + 1' 位置不再覆盖，因此减 1
-            diff[end + 1] -= 1;
-        }
-
-        int ans = 0, count = 0;
-
-        // 计算前缀和，统计被覆盖的点数
-        for (int i = 1; i &lt;= C; ++i) {
-            count += diff[i];  // 前缀和
-            if (count &gt; 0) {
-                ++ans;  // 如果被覆盖，计数加 1
-            }
-        }
-
-        return ans;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span>
+<span class="normal"><a href="#__codelineno-12-20">20</a></span>
+<span class="normal"><a href="#__codelineno-12-21">21</a></span>
+<span class="normal"><a href="#__codelineno-12-22">22</a></span>
+<span class="normal"><a href="#__codelineno-12-23">23</a></span>
+<span class="normal"><a href="#__codelineno-12-24">24</a></span>
+<span class="normal"><a href="#__codelineno-12-25">25</a></span>
+<span class="normal"><a href="#__codelineno-12-26">26</a></span>
+<span class="normal"><a href="#__codelineno-12-27">27</a></span>
+<span class="normal"><a href="#__codelineno-12-28">28</a></span>
+<span class="normal"><a href="#__codelineno-12-29">29</a></span>
+<span class="normal"><a href="#__codelineno-12-30">30</a></span>
+<span class="normal"><a href="#__codelineno-12-31">31</a></span>
+<span class="normal"><a href="#__codelineno-12-32">32</a></span>
+<span class="normal"><a href="#__codelineno-12-33">33</a></span>
+<span class="normal"><a href="#__codelineno-12-34">34</a></span>
+<span class="normal"><a href="#__codelineno-12-35">35</a></span>
+<span class="normal"><a href="#__codelineno-12-36">36</a></span>
+<span class="normal"><a href="#__codelineno-12-37">37</a></span>
+<span class="normal"><a href="#__codelineno-12-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numberOfPoints</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">        </span><span class="c1">// 找出最大终点 C</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">interval</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">            </span><span class="n">C</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="n">interval</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">        </span><span class="c1">// 差分数组，长度为 C + 2，避免越界</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">diff</span><span class="p">(</span><span class="n">C</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">        </span><span class="c1">// 构建差分数组</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">interval</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">interval</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w">    </span><span class="c1">// 区间起始点</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">interval</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w">      </span><span class="c1">// 区间结束点</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="w">            </span><span class="c1">// 标记区间的开始：从 &#39;start&#39; 位置开始，覆盖的点加 1</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="w">            </span><span class="n">diff</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a>
+<a id="__codelineno-12-22" name="__codelineno-12-22"></a><span class="w">            </span><span class="c1">// 标记区间的结束：&#39;end + 1&#39; 位置不再覆盖，因此减 1</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="w">            </span><span class="n">diff</span><span class="p">[</span><span class="n">end</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25"></a>
+<a id="__codelineno-12-26" name="__codelineno-12-26"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27"></a>
+<a id="__codelineno-12-28" name="__codelineno-12-28"></a><span class="w">        </span><span class="c1">// 计算前缀和，统计被覆盖的点数</span>
+<a id="__codelineno-12-29" name="__codelineno-12-29"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">C</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-30" name="__codelineno-12-30"></a><span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">diff</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w">  </span><span class="c1">// 前缀和</span>
+<a id="__codelineno-12-31" name="__codelineno-12-31"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-32" name="__codelineno-12-32"></a><span class="w">                </span><span class="o">++</span><span class="n">ans</span><span class="p">;</span><span class="w">  </span><span class="c1">// 如果被覆盖，计数加 1</span>
+<a id="__codelineno-12-33" name="__codelineno-12-33"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-12-34" name="__codelineno-12-34"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-35" name="__codelineno-12-35"></a>
+<a id="__codelineno-12-36" name="__codelineno-12-36"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<a id="__codelineno-12-37" name="__codelineno-12-37"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-38" name="__codelineno-12-38"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_34">解释</h3>
 <ol>
 <li>
@@ -3586,31 +3791,54 @@ public:
 <p>我们可以通过<strong>前缀和</strong>的思想来解决这个问题。核心思想是，遍历数组的每个下标 <code>i</code>，检查它是否满足条件：左侧的前缀和等于右侧的前缀和。</p>
 <p>假设数组的总和为 <code>total</code>，那么对于任意下标 <code>i</code>，左侧的前缀和为 <code>leftSum</code>，右侧的前缀和为 <code>total - leftSum - nums[i]</code>。如果满足 <code>leftSum == total - leftSum - nums[i]</code>，那么 <code>i</code> 就是中心下标。</p>
 <h3 id="_37">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    int pivotIndex(vector&lt;int&gt;&amp; nums) {
-        // 计算数组的总和
-        int total = 0;
-        for (int num : nums) {
-            total += num;
-        }
-
-        // 遍历数组，计算每个下标的左侧和，并检查是否满足条件
-        int leftSum = 0;
-        for (int i = 0; i &lt; nums.size(); i++) {
-            // 如果左侧和等于右侧和（右侧和 = 总和 - 左侧和 - 当前元素）
-            if (leftSum == total - leftSum - nums[i]) {
-                return i;
-            }
-            // 更新左侧和
-            leftSum += nums[i];
-        }
-
-        // 如果没有找到中心下标，返回 -1
-        return -1;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span>
+<span class="normal"><a href="#__codelineno-13-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">pivotIndex</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">        </span><span class="c1">// 计算数组的总和</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">            </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">        </span><span class="c1">// 遍历数组，计算每个下标的左侧和，并检查是否满足条件</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">leftSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">            </span><span class="c1">// 如果左侧和等于右侧和（右侧和 = 总和 - 左侧和 - 当前元素）</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">leftSum</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">leftSum</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">            </span><span class="c1">// 更新左侧和</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">            </span><span class="n">leftSum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="w">        </span><span class="c1">// 如果没有找到中心下标，返回 -1</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_38">代码解释</h3>
 <ol>
 <li><strong>计算数组的总和</strong>：首先，遍历整个数组，计算所有元素的总和 <code>total</code>。</li>
@@ -3644,31 +3872,54 @@ public:
 </li>
 </ol>
 <h3 id="_42">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    int sumOddLengthSubarrays(vector&lt;int&gt;&amp; arr) {
-        int n = arr.size();
-        vector&lt;int&gt; prefixSum(n + 1, 0);  // 前缀和数组
-
-        // 构建前缀和数组
-        for (int i = 0; i &lt; n; i++) {
-            prefixSum[i + 1] = prefixSum[i] + arr[i];
-        }
-
-        int totalSum = 0;
-
-        // 遍历所有可能的奇数长度子数组
-        for (int start = 0; start &lt; n; start++) {
-            for (int length = 1; start + length &lt;= n; length += 2) {  // 只考虑奇数长度
-                int end = start + length - 1;
-                totalSum += prefixSum[end + 1] - prefixSum[start];  // 使用前缀和计算子数组和
-            }
-        }
-
-        return totalSum;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span>
+<span class="normal"><a href="#__codelineno-14-19">19</a></span>
+<span class="normal"><a href="#__codelineno-14-20">20</a></span>
+<span class="normal"><a href="#__codelineno-14-21">21</a></span>
+<span class="normal"><a href="#__codelineno-14-22">22</a></span>
+<span class="normal"><a href="#__codelineno-14-23">23</a></span>
+<span class="normal"><a href="#__codelineno-14-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sumOddLengthSubarrays</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">prefixSum</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// 前缀和数组</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">        </span><span class="c1">// 构建前缀和数组</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">            </span><span class="n">prefixSum</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefixSum</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">totalSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">        </span><span class="c1">// 遍历所有可能的奇数长度子数组</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">start</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 只考虑奇数长度</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="w">                </span><span class="n">totalSum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">prefixSum</span><span class="p">[</span><span class="n">end</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">prefixSum</span><span class="p">[</span><span class="n">start</span><span class="p">];</span><span class="w">  </span><span class="c1">// 使用前缀和计算子数组和</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21"></a>
+<a id="__codelineno-14-22" name="__codelineno-14-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">totalSum</span><span class="p">;</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_43">代码解释</h3>
 <ol>
 <li>
@@ -3715,22 +3966,36 @@ public:
 </li>
 </ol>
 <h3 id="_46">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    int largestAltitude(vector&lt;int&gt;&amp; gain) {
-        int currentAltitude = 0; // 当前海拔
-        int maxAltitude = 0;     // 最高海拔
-
-        // 遍历 gain 数组
-        for (int i = 0; i &lt; gain.size(); ++i) {
-            currentAltitude += gain[i]; // 更新当前海拔
-            maxAltitude = max(maxAltitude, currentAltitude); // 更新最高海拔
-        }
-
-        return maxAltitude; // 返回最高海拔
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">largestAltitude</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">gain</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">currentAltitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 当前海拔</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">maxAltitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">     </span><span class="c1">// 最高海拔</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">        </span><span class="c1">// 遍历 gain 数组</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">gain</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">            </span><span class="n">currentAltitude</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">gain</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="c1">// 更新当前海拔</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">            </span><span class="n">maxAltitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">maxAltitude</span><span class="p">,</span><span class="w"> </span><span class="n">currentAltitude</span><span class="p">);</span><span class="w"> </span><span class="c1">// 更新最高海拔</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">maxAltitude</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回最高海拔</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="42">4.2 差分数组举一反三</h2>
 <h2 id="421-lc1094">4.2.1 LC1094 拼车</h2>
 <h3 id="_47">题目描述</h3>
@@ -3754,43 +4019,78 @@ public:
 <li><strong>前缀和计算当前乘客数</strong>：通过计算差分数组的前缀和，得到每个位置实际的乘客数，并判断是否超出载客量。</li>
 </ol>
 <h3 id="_51">代码实现</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    bool carPooling(vector&lt;vector&lt;int&gt;&gt;&amp; trips, int capacity) {
-        // 找出最远的目的地，用于确定差分数组的大小
-        int maxDistance = 0;
-        for (const auto&amp; trip : trips) {
-            maxDistance = max(maxDistance, trip[2]);
-        }
-
-        // 差分数组，用于记录每个位置乘客数的变化
-        vector&lt;int&gt; diff(maxDistance + 1, 0);
-
-        // 处理每个行程，更新差分数组
-        for (const auto&amp; trip : trips) {
-            int numPassengers = trip[0];  // 乘客数量
-            int from = trip[1];           // 上车位置
-            int to = trip[2];             // 下车位置
-
-            // 上车位置增加乘客
-            diff[from] += numPassengers;
-            // 下车位置减少乘客
-            diff[to] -= numPassengers;
-        }
-
-        // 前缀和计算当前车上的乘客数量，判断是否超出容量
-        int currentPassengers = 0;
-        for (int i = 0; i &lt;= maxDistance; i++) {
-            currentPassengers += diff[i];
-            if (currentPassengers &gt; capacity) {
-                return false;  // 超出容量
-            }
-        }
-
-        return true;  // 所有位置都未超出容量
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span>
+<span class="normal"><a href="#__codelineno-16-14">14</a></span>
+<span class="normal"><a href="#__codelineno-16-15">15</a></span>
+<span class="normal"><a href="#__codelineno-16-16">16</a></span>
+<span class="normal"><a href="#__codelineno-16-17">17</a></span>
+<span class="normal"><a href="#__codelineno-16-18">18</a></span>
+<span class="normal"><a href="#__codelineno-16-19">19</a></span>
+<span class="normal"><a href="#__codelineno-16-20">20</a></span>
+<span class="normal"><a href="#__codelineno-16-21">21</a></span>
+<span class="normal"><a href="#__codelineno-16-22">22</a></span>
+<span class="normal"><a href="#__codelineno-16-23">23</a></span>
+<span class="normal"><a href="#__codelineno-16-24">24</a></span>
+<span class="normal"><a href="#__codelineno-16-25">25</a></span>
+<span class="normal"><a href="#__codelineno-16-26">26</a></span>
+<span class="normal"><a href="#__codelineno-16-27">27</a></span>
+<span class="normal"><a href="#__codelineno-16-28">28</a></span>
+<span class="normal"><a href="#__codelineno-16-29">29</a></span>
+<span class="normal"><a href="#__codelineno-16-30">30</a></span>
+<span class="normal"><a href="#__codelineno-16-31">31</a></span>
+<span class="normal"><a href="#__codelineno-16-32">32</a></span>
+<span class="normal"><a href="#__codelineno-16-33">33</a></span>
+<span class="normal"><a href="#__codelineno-16-34">34</a></span>
+<span class="normal"><a href="#__codelineno-16-35">35</a></span>
+<span class="normal"><a href="#__codelineno-16-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">carPooling</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span><span class="w"> </span><span class="n">trips</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">capacity</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">        </span><span class="c1">// 找出最远的目的地，用于确定差分数组的大小</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">maxDistance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">trip</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">trips</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">            </span><span class="n">maxDistance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">maxDistance</span><span class="p">,</span><span class="w"> </span><span class="n">trip</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">        </span><span class="c1">// 差分数组，用于记录每个位置乘客数的变化</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">diff</span><span class="p">(</span><span class="n">maxDistance</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="w">        </span><span class="c1">// 处理每个行程，更新差分数组</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">trip</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">trips</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">numPassengers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trip</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w">  </span><span class="c1">// 乘客数量</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trip</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w">           </span><span class="c1">// 上车位置</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trip</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w">             </span><span class="c1">// 下车位置</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18"></a>
+<a id="__codelineno-16-19" name="__codelineno-16-19"></a><span class="w">            </span><span class="c1">// 上车位置增加乘客</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20"></a><span class="w">            </span><span class="n">diff</span><span class="p">[</span><span class="n">from</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">numPassengers</span><span class="p">;</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21"></a><span class="w">            </span><span class="c1">// 下车位置减少乘客</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22"></a><span class="w">            </span><span class="n">diff</span><span class="p">[</span><span class="n">to</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">numPassengers</span><span class="p">;</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24"></a>
+<a id="__codelineno-16-25" name="__codelineno-16-25"></a><span class="w">        </span><span class="c1">// 前缀和计算当前车上的乘客数量，判断是否超出容量</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">currentPassengers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">maxDistance</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28"></a><span class="w">            </span><span class="n">currentPassengers</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">diff</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">currentPassengers</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">capacity</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-30" name="__codelineno-16-30"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w">  </span><span class="c1">// 超出容量</span>
+<a id="__codelineno-16-31" name="__codelineno-16-31"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-16-32" name="__codelineno-16-32"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-33" name="__codelineno-16-33"></a>
+<a id="__codelineno-16-34" name="__codelineno-16-34"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// 所有位置都未超出容量</span>
+<a id="__codelineno-16-35" name="__codelineno-16-35"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-36" name="__codelineno-16-36"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_52">代码解释</h3>
 <ol>
 <li><strong>找出最远的目的地</strong>：我们通过遍历每个行程，找到最远的终点 <code>to</code>，从而确定差分数组的大小。</li>
@@ -3831,38 +4131,68 @@ public:
 </li>
 </ol>
 <h3 id="_55">代码实现</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    int maximumPopulation(vector&lt;vector&lt;int&gt;&gt;&amp; logs) {
-        // 假设年份范围从1950到2050
-        vector&lt;int&gt; populationChange(101, 0); // 存储人口变化的数组，范围为1950到2050
-
-        // 记录每个人的出生和死亡年份对人口的影响
-        for (const auto&amp; log : logs) {
-            int birth = log[0] - 1950;
-            int death = log[1] - 1950;
-            populationChange[birth] += 1;  // 出生年份人口增加
-            populationChange[death] -= 1;  // 死亡年份人口减少
-        }
-
-        // 计算每一年的实际人口，并找出人口最多的年份
-        int maxPopulation = 0;
-        int maxYear = 1950;
-        int currentPopulation = 0;
-
-        // 遍历每一年，计算人口数量
-        for (int year = 0; year &lt; 101; year++) {
-            currentPopulation += populationChange[year]; // 通过前缀和计算当前年份的人口
-            if (currentPopulation &gt; maxPopulation) {
-                maxPopulation = currentPopulation;
-                maxYear = 1950 + year; // 记录人口最多的年份
-            }
-        }
-
-        return maxYear;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span>
+<span class="normal"><a href="#__codelineno-17-13">13</a></span>
+<span class="normal"><a href="#__codelineno-17-14">14</a></span>
+<span class="normal"><a href="#__codelineno-17-15">15</a></span>
+<span class="normal"><a href="#__codelineno-17-16">16</a></span>
+<span class="normal"><a href="#__codelineno-17-17">17</a></span>
+<span class="normal"><a href="#__codelineno-17-18">18</a></span>
+<span class="normal"><a href="#__codelineno-17-19">19</a></span>
+<span class="normal"><a href="#__codelineno-17-20">20</a></span>
+<span class="normal"><a href="#__codelineno-17-21">21</a></span>
+<span class="normal"><a href="#__codelineno-17-22">22</a></span>
+<span class="normal"><a href="#__codelineno-17-23">23</a></span>
+<span class="normal"><a href="#__codelineno-17-24">24</a></span>
+<span class="normal"><a href="#__codelineno-17-25">25</a></span>
+<span class="normal"><a href="#__codelineno-17-26">26</a></span>
+<span class="normal"><a href="#__codelineno-17-27">27</a></span>
+<span class="normal"><a href="#__codelineno-17-28">28</a></span>
+<span class="normal"><a href="#__codelineno-17-29">29</a></span>
+<span class="normal"><a href="#__codelineno-17-30">30</a></span>
+<span class="normal"><a href="#__codelineno-17-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">maximumPopulation</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span><span class="w"> </span><span class="n">logs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">        </span><span class="c1">// 假设年份范围从1950到2050</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">populationChange</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 存储人口变化的数组，范围为1950到2050</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="w">        </span><span class="c1">// 记录每个人的出生和死亡年份对人口的影响</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">logs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">birth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1950</span><span class="p">;</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">death</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1950</span><span class="p">;</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="w">            </span><span class="n">populationChange</span><span class="p">[</span><span class="n">birth</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="c1">// 出生年份人口增加</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="w">            </span><span class="n">populationChange</span><span class="p">[</span><span class="n">death</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="c1">// 死亡年份人口减少</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="w">        </span><span class="c1">// 计算每一年的实际人口，并找出人口最多的年份</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">maxPopulation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">maxYear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1950</span><span class="p">;</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">currentPopulation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19"></a>
+<a id="__codelineno-17-20" name="__codelineno-17-20"></a><span class="w">        </span><span class="c1">// 遍历每一年，计算人口数量</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">101</span><span class="p">;</span><span class="w"> </span><span class="n">year</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22"></a><span class="w">            </span><span class="n">currentPopulation</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">populationChange</span><span class="p">[</span><span class="n">year</span><span class="p">];</span><span class="w"> </span><span class="c1">// 通过前缀和计算当前年份的人口</span>
+<a id="__codelineno-17-23" name="__codelineno-17-23"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">currentPopulation</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">maxPopulation</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-24" name="__codelineno-17-24"></a><span class="w">                </span><span class="n">maxPopulation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentPopulation</span><span class="p">;</span>
+<a id="__codelineno-17-25" name="__codelineno-17-25"></a><span class="w">                </span><span class="n">maxYear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1950</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">year</span><span class="p">;</span><span class="w"> </span><span class="c1">// 记录人口最多的年份</span>
+<a id="__codelineno-17-26" name="__codelineno-17-26"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-17-27" name="__codelineno-17-27"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-17-28" name="__codelineno-17-28"></a>
+<a id="__codelineno-17-29" name="__codelineno-17-29"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">maxYear</span><span class="p">;</span>
+<a id="__codelineno-17-30" name="__codelineno-17-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-31" name="__codelineno-17-31"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_56">代码解释</h3>
 <ol>
 <li>
@@ -3924,38 +4254,68 @@ public:
 </li>
 </ol>
 <h3 id="_59">代码实现</h3>
-<pre><code class="language-cpp">#include &lt;vector&gt;
-#include &lt;algorithm&gt;
-using namespace std;
-
-class Solution {
-public:
-    int busyStudent(vector&lt;int&gt;&amp; startTime, vector&lt;int&gt;&amp; endTime, int queryTime) {
-        // 找到结束时间的最大值
-        int maxTime = 0;
-        for (int end : endTime) {
-            maxTime = max(maxTime, end);
-        }
-
-        // 初始化差分数组，长度为 maxTime + 2，避免越界
-        vector&lt;int&gt; diff(maxTime + 2, 0);
-
-        // 更新差分数组
-        for (int i = 0; i &lt; startTime.size(); i++) {
-            diff[startTime[i]] += 1;          // 开始写作业
-            diff[endTime[i] + 1] -= 1;        // 停止写作业
-        }
-
-        // 计算前缀和，得到每个时间点的在做作业的学生人数
-        int currentCount = 0;
-        for (int i = 0; i &lt;= queryTime; i++) {
-            currentCount += diff[i];
-        }
-
-        return currentCount;  // 返回在 queryTime 时正在做作业的学生人数
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-18-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-18-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-18-10">10</a></span>
+<span class="normal"><a href="#__codelineno-18-11">11</a></span>
+<span class="normal"><a href="#__codelineno-18-12">12</a></span>
+<span class="normal"><a href="#__codelineno-18-13">13</a></span>
+<span class="normal"><a href="#__codelineno-18-14">14</a></span>
+<span class="normal"><a href="#__codelineno-18-15">15</a></span>
+<span class="normal"><a href="#__codelineno-18-16">16</a></span>
+<span class="normal"><a href="#__codelineno-18-17">17</a></span>
+<span class="normal"><a href="#__codelineno-18-18">18</a></span>
+<span class="normal"><a href="#__codelineno-18-19">19</a></span>
+<span class="normal"><a href="#__codelineno-18-20">20</a></span>
+<span class="normal"><a href="#__codelineno-18-21">21</a></span>
+<span class="normal"><a href="#__codelineno-18-22">22</a></span>
+<span class="normal"><a href="#__codelineno-18-23">23</a></span>
+<span class="normal"><a href="#__codelineno-18-24">24</a></span>
+<span class="normal"><a href="#__codelineno-18-25">25</a></span>
+<span class="normal"><a href="#__codelineno-18-26">26</a></span>
+<span class="normal"><a href="#__codelineno-18-27">27</a></span>
+<span class="normal"><a href="#__codelineno-18-28">28</a></span>
+<span class="normal"><a href="#__codelineno-18-29">29</a></span>
+<span class="normal"><a href="#__codelineno-18-30">30</a></span>
+<span class="normal"><a href="#__codelineno-18-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">busyStudent</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">startTime</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">endTime</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">queryTime</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="w">        </span><span class="c1">// 找到结束时间的最大值</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">maxTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">endTime</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11"></a><span class="w">            </span><span class="n">maxTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">maxTime</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">);</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13"></a>
+<a id="__codelineno-18-14" name="__codelineno-18-14"></a><span class="w">        </span><span class="c1">// 初始化差分数组，长度为 maxTime + 2，避免越界</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15"></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">diff</span><span class="p">(</span><span class="n">maxTime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-18-16" name="__codelineno-18-16"></a>
+<a id="__codelineno-18-17" name="__codelineno-18-17"></a><span class="w">        </span><span class="c1">// 更新差分数组</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">startTime</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-19" name="__codelineno-18-19"></a><span class="w">            </span><span class="n">diff</span><span class="p">[</span><span class="n">startTime</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">          </span><span class="c1">// 开始写作业</span>
+<a id="__codelineno-18-20" name="__codelineno-18-20"></a><span class="w">            </span><span class="n">diff</span><span class="p">[</span><span class="n">endTime</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">        </span><span class="c1">// 停止写作业</span>
+<a id="__codelineno-18-21" name="__codelineno-18-21"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-18-22" name="__codelineno-18-22"></a>
+<a id="__codelineno-18-23" name="__codelineno-18-23"></a><span class="w">        </span><span class="c1">// 计算前缀和，得到每个时间点的在做作业的学生人数</span>
+<a id="__codelineno-18-24" name="__codelineno-18-24"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">currentCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-18-25" name="__codelineno-18-25"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">queryTime</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-26" name="__codelineno-18-26"></a><span class="w">            </span><span class="n">currentCount</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">diff</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-18-27" name="__codelineno-18-27"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-18-28" name="__codelineno-18-28"></a>
+<a id="__codelineno-18-29" name="__codelineno-18-29"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">currentCount</span><span class="p">;</span><span class="w">  </span><span class="c1">// 返回在 queryTime 时正在做作业的学生人数</span>
+<a id="__codelineno-18-30" name="__codelineno-18-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-31" name="__codelineno-18-31"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="5">5. 课后练习</h2>
 <h3 id="_60">前缀和</h3>
 <table>

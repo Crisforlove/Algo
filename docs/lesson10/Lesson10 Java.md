@@ -77,19 +77,23 @@ public class HashSetExample {
 - **去重功能**：当需要存储不重复的元素时，`Set` 是理想的选择。例如，在一个系统中去除重复的用户名。
 - **集合操作**：`Set` 具有很强的集合操作能力，如求交集、并集和差集，可以通过 `retainAll()`、`addAll()`、`removeAll()` 等方法来实现。
    - **交集**（两个集合共有的元素）：
-     ```java
-     Set<String> set1 = new HashSet<>(Arrays.asList("A", "B", "C"));
-     Set<String> set2 = new HashSet<>(Arrays.asList("B", "C", "D"));
-     set1.retainAll(set2);  // set1 现在是 ["B", "C"]
-     ```
+```java
+Set<String> set1 = new HashSet<>(Arrays.asList("A", "B", "C"));
+Set<String> set2 = new HashSet<>(Arrays.asList("B", "C", "D"));
+set1.retainAll(set2);  // set1 现在是 ["B", "C"]
+```
+
    - **并集**（两个集合的所有元素）：
-     ```java
-     set1.addAll(set2);  // set1 现在是 ["A", "B", "C", "D"]
-     ```
+
+```java
+set1.addAll(set2);  // set1 现在是 ["A", "B", "C", "D"]
+```
+
    - **差集**（仅存在于第一个集合的元素）：
-     ```java
-     set1.removeAll(set2);  // set1 现在是 ["A"]
-     ```
+
+```java
+set1.removeAll(set2);  // set1 现在是 ["A"]
+```
      
 ### 1.4 完整实例
 ```java

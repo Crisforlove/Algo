@@ -69,7 +69,7 @@ Anaconda 安装包下载地址：https://www.anaconda.com/download。
 
 Anaconda 可在 Windows、macOS 和 Linux 等操作系统上运行，你可以根据不同平台下载安装包：
 
-![img](Image/image-20240717144439136.png)
+![img](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson1/lesson1/Image/image-20240717144439136.png?raw=true)
 
 ![img](https://www.runoob.com/wp-content/uploads/2023/12/anaconda-1.png)
 
@@ -120,24 +120,26 @@ Win 平台安装可以参考官网：https://docs.anaconda.com/free/anaconda/ins
 我们直接打开pycharm官网进行下载安装：https://www.jetbrains.com/pycharm/download/
 
 
-页面往下滑到底，下载这个免费的社区版，![img](Image/image-20240717145751131.png)
+页面往下滑到底，下载这个免费的社区版，![img](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson1/lesson1/Image/image-20240717145751131.png)
 
 mac用户只需下载后进行拖拽安装就可以打开了。
 
-如果是win用户，安装时需要注意自己的安装位置（如果C盘太小不建议放C盘，一般选择64位安装，根据自己电脑实际需求），其他选项一般默认即可。![img](Image/image-20240717150933513.png)
+如果是win用户，安装时需要注意自己的安装位置（如果C盘太小不建议放C盘，一般选择64位安装，根据自己电脑实际需求），其他选项一般默认即可。![img](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson1/lesson1/Image/image-20240717150933513.png)
 
-直接打开Pycharm，或者在Anaconda中打开Pycharm社区版![img](Image/image-20240717151250376.png)
+直接打开Pycharm，或者在Anaconda中打开Pycharm社区版![img](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson1/lesson1/Image/image-20240717151250376.png)
 
 一般第一次打开我们新建一个项目就可以，一个项目是一个文件夹，我们可以在里面创建多个文件
 
-![img](Image/image-20240717151930322.png)
+![img](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson1/lesson1/Image/image-20240717151930322.png)
 
 在Anaconda安装好的情况下，选择基于conda的环境，其他所有选项默认即可，点击右下角创建第一个项目。
-![img](Image/2311727437719.jpg)
+<img width="801" alt="image" src="https://github.com/user-attachments/assets/f33b31f7-e12b-4e93-bc96-2621e42ba8d0">
+
+
 然后点击创建，我们在:文件夹的位置右击创建一个新的python文件，开始我们的第一段代码。
 
-![img](Image/image-20240717152234428.png)
-![img](Image/image-20240717152455125.png)
+![img](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson1/lesson1/Image/image-20240717152234428.png)
+![img](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson1/lesson1/Image/image-20240717152455125.png)
 
 ### 2. 第一个程序：Hello World！
 
@@ -149,7 +151,7 @@ print("Hello World")
 
 我们在输入这一行代码后，只需点击右上角的运行，即可在控制台看到我们的输出。
 
-![img](Image/image-20240717153542850.png)
+![img](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson1/lesson1/Image/image-20240717153542850.png)
 
 ### 3. Python常用的开发环境（IDE）
 

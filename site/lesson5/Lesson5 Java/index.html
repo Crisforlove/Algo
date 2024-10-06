@@ -963,7 +963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -984,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1005,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2001,45 +2001,54 @@
 <p>在Java中，数组的声明和初始化可以分为以下几种方式：</p>
 <ul>
 <li><strong>声明数组变量：</strong> 声明数组需要指定数组的类型和变量名，但不分配内存空间。
-  <code>java
-  int[] myArray;</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">myArray</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
 <li>
 <p><strong>创建数组并分配内存空间：</strong> 使用<code>new</code>关键字创建数组并指定数组的大小（即元素个数）。
-  <code>java
-  myArray = new int[5]; // 创建了一个包含5个整数元素的数组</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// 创建了一个包含5个整数元素的数组</span>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong>同时声明和初始化：</strong> 也可以在声明数组变量时直接初始化数组。
-  <code>java
-  int[] myArray = new int[5]; // 声明并初始化一个包含5个整数元素的数组</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// 声明并初始化一个包含5个整数元素的数组</span>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong>使用数组初始化列表（Array Initializer）：</strong> 在声明数组时直接指定初始元素的值，Java会根据提供的元素个数自动确定数组大小。
-  <code>java
-  int[] myArray = {1, 2, 3, 4, 5}; // 声明并初始化包含5个整数元素的数组</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span><span class="w"> </span><span class="c1">// 声明并初始化包含5个整数元素的数组</span>
+</code></pre></div></td></tr></table></div></p>
 </li>
 </ul>
 <h3 id="12">1.2 访问数组元素</h3>
 <p>Java数组的元素通过索引访问，索引从0开始到数组长度减1。</p>
-<pre><code class="language-java">int[] myArray = {10, 20, 30, 40, 50};
-int firstElement = myArray[0]; // 访问第一个元素，值为10
-int thirdElement = myArray[2]; // 访问第三个元素，值为30
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">firstElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myArray</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// 访问第一个元素，值为10</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">thirdElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myArray</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// 访问第三个元素，值为30</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="13">1.3 数组的长度</h3>
 <p>可以使用数组的<code>length</code>属性获取数组的长度，即数组中元素的个数。</p>
-<pre><code class="language-java">int[] myArray = {10, 20, 30, 40, 50};
-int length = myArray.length; // 获取数组的长度，值为5
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="c1">// 获取数组的长度，值为5</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="14">1.4 多维数组</h3>
 <p>Java支持多维数组，即数组的元素可以是数组。例如，二维数组的声明和初始化如下所示：</p>
-<pre><code class="language-java">int[][] twoDArray = new int[3][4]; // 声明一个3行4列的二维整数数组
-
-int[][] twoDArray = {
-    {1, 2, 3},
-    {4, 5, 6},
-    {7, 8, 9}
-}; // 声明并初始化一个3行3列的二维整数数组
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span>
+<span class="normal"><a href="#__codelineno-6-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">twoDArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="mi">4</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// 声明一个3行4列的二维整数数组</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">twoDArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">},</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">}</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">};</span><span class="w"> </span><span class="c1">// 声明并初始化一个3行3列的二维整数数组</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="15">1.5 数组的特点和注意事项</h3>
 <ul>
 <li>
@@ -2057,165 +2066,286 @@ int[][] twoDArray = {
 </ul>
 <h3 id="_2">示例</h3>
 <p>以下是一个简单的示例，展示了如何声明、初始化和使用一个一维整数数组：</p>
-<pre><code class="language-java">public class ArrayExample {
-    public static void main(String[] args) {
-        // 声明并初始化一个整数数组
-        int[] myArray = {10, 20, 30, 40, 50};
-
-        // 计算数组元素的总和
-        int sum = 0;
-        for (int i = 0; i &lt; myArray.length; i++) {
-            sum += myArray[i];
-        }
-
-        // 打印数组元素的总和
-        System.out.println(&quot;数组元素的总和为：&quot; + sum);
-    }
-}
-</code></pre>
-<p>在这个示例中，<code>myArray</code>数组包含5个整数元素，通过循环计算了这些元素的总和，并输出到控制台。</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">        </span><span class="c1">// 声明并初始化一个整数数组</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">        </span><span class="c1">// 计算数组元素的总和</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">myArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">            </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">myArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">        </span><span class="c1">// 打印数组元素的总和</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;数组元素的总和为：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+在这个示例中，<code>myArray</code>数组包含5个整数元素，通过循环计算了这些元素的总和，并输出到控制台。</p>
 <h2 id="2-arraylist">2. 列表（ArrayList）</h2>
 <h3 id="21">2.1 创建和初始化列表</h3>
 <p>在Java中，可以使用<code>ArrayList</code>类来创建和初始化列表：</p>
 <h4 id="arraylist">使用 ArrayList 创建列表</h4>
-<pre><code class="language-java">import java.util.ArrayList;
-
-public class ArrayListExample {
-    public static void main(String[] args) {
-        // 创建一个ArrayList实例
-        ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();
-
-        // 添加元素到列表
-        arrayList.add(&quot;Apple&quot;);
-        arrayList.add(&quot;Banana&quot;);
-        arrayList.add(&quot;Cherry&quot;);
-
-        // 打印列表元素
-        System.out.println(&quot;ArrayList elements: &quot; + arrayList);
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayListExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">        </span><span class="c1">// 创建一个ArrayList实例</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arrayList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">        </span><span class="c1">// 添加元素到列表</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">        </span><span class="n">arrayList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">        </span><span class="n">arrayList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="n">arrayList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Cherry&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">        </span><span class="c1">// 打印列表元素</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ArrayList elements: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">arrayList</span><span class="p">);</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="22">2.2 基本操作</h3>
 <h4 id="_3">添加和访问元素</h4>
 <p>可以使用<code>add()</code>方法添加元素到列表中，并使用索引访问元素。</p>
-<pre><code class="language-java">import java.util.ArrayList;
-
-public class Main {
-   public static void main(String[] args) {
-      // 创建一个 ArrayList 并添加元素
-      ArrayList&lt;String&gt; fruits = new ArrayList&lt;&gt;();
-      fruits.add(&quot;Apple&quot;);
-      fruits.add(&quot;Banana&quot;);
-      fruits.add(&quot;Cherry&quot;);
-
-      // 获取第一个元素
-      String firstFruit = fruits.get(0); // 获取第一个元素，值为&quot;Apple&quot;
-
-      // 输出第一个元素
-      System.out.println(&quot;The first fruit is: &quot; + firstFruit);
-   }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">      </span><span class="c1">// 创建一个 ArrayList 并添加元素</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">      </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">      </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">);</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">      </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">      </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Cherry&quot;</span><span class="p">);</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">      </span><span class="c1">// 获取第一个元素</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">firstFruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 获取第一个元素，值为&quot;Apple&quot;</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">      </span><span class="c1">// 输出第一个元素</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The first fruit is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">firstFruit</span><span class="p">);</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_4">删除元素</h4>
 <p>使用<code>remove()</code>方法删除指定位置或指定元素。</p>
-<pre><code class="language-java">import java.util.ArrayList;
-
-public class Main {
-   public static void main(String[] args) {
-      // 创建一个 ArrayList 并添加元素
-      ArrayList&lt;String&gt; fruits = new ArrayList&lt;&gt;();
-      fruits.add(&quot;Apple&quot;);
-      fruits.add(&quot;Banana&quot;);
-      fruits.add(&quot;Cherry&quot;);
-
-      // 删除索引为1的元素，即&quot;Banana&quot;
-      fruits.remove(1);
-
-      // 打印删除后的列表
-      System.out.println(&quot;Fruits list after removal: &quot; + fruits);
-   }
-}
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">      </span><span class="c1">// 创建一个 ArrayList 并添加元素</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">      </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">      </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">      </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">      </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Cherry&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">      </span><span class="c1">// 删除索引为1的元素，即&quot;Banana&quot;</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">      </span><span class="n">fruits</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">      </span><span class="c1">// 打印删除后的列表</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Fruits list after removal: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fruits</span><span class="p">);</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_5">获取列表大小</h4>
 <p>使用<code>size()</code>方法获取列表中元素的个数。</p>
-<pre><code class="language-java">import java.util.ArrayList;
-
-public class Main {
-   public static void main(String[] args) {
-      // 创建一个 ArrayList 并添加元素
-      ArrayList&lt;String&gt; fruits = new ArrayList&lt;&gt;();
-      fruits.add(&quot;Apple&quot;);
-      fruits.add(&quot;Banana&quot;);
-      fruits.add(&quot;Cherry&quot;);
-
-      // 获取列表大小
-      int size = fruits.size(); // 获取当前列表的大小，值为3
-
-      // 删除索引为1的元素，即&quot;Banana&quot;
-      fruits.remove(1);
-
-      // 获取列表大小
-      int size = fruits.size(); // 获取当前列表的大小，值为2
-      System.out.println(&quot;The size of the fruits list is: &quot; + size);
-
-      // 打印删除后的列表
-      System.out.println(&quot;Fruits list after removal: &quot; + fruits);
-   }
-}
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span>
+<span class="normal"><a href="#__codelineno-11-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">      </span><span class="c1">// 创建一个 ArrayList 并添加元素</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">      </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">      </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">      </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">      </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Cherry&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">      </span><span class="c1">// 获取列表大小</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="c1">// 获取当前列表的大小，值为3</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">      </span><span class="c1">// 删除索引为1的元素，即&quot;Banana&quot;</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">      </span><span class="n">fruits</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">      </span><span class="c1">// 获取列表大小</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="c1">// 获取当前列表的大小，值为2</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The size of the fruits list is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="w">      </span><span class="c1">// 打印删除后的列表</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Fruits list after removal: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fruits</span><span class="p">);</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_6">迭代列表元素</h4>
 <p>可以使用增强<code>for</code>循环或迭代器遍历<code>ArrayList</code>中的元素。</p>
 <h5 id="for">增强<code>for</code>循环</h5>
-<pre><code class="language-java">import java.util.ArrayList;
-
-public class Main {
-   public static void main(String[] args) {
-      // 创建一个 ArrayList 并添加元素
-      ArrayList&lt;String&gt; fruits = new ArrayList&lt;&gt;();
-      fruits.add(&quot;Apple&quot;);
-      fruits.add(&quot;Banana&quot;);
-      fruits.add(&quot;Cherry&quot;);
-
-      // 使用增强的 for 循环遍历并打印列表中的每个元素
-      System.out.println(&quot;Fruits in the list:&quot;);
-      for (String fruit : fruits) {
-         System.out.println(fruit);
-      }
-
-   }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">      </span><span class="c1">// 创建一个 ArrayList 并添加元素</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">      </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">      </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">);</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">      </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">      </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Cherry&quot;</span><span class="p">);</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">      </span><span class="c1">// 使用增强的 for 循环遍历并打印列表中的每个元素</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Fruits in the list:&quot;</span><span class="p">);</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">fruit</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">fruits</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">fruit</span><span class="p">);</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h5 id="_7">迭代器</h5>
 <p>迭代器（Iterator）是 Java 集合框架中一个重要的设计模式，允许程序员在不暴露集合内部结构的情况下，逐个访问集合中的元素。它提供了一种统一的方式来遍历集合，包括 <code>List</code>、<code>Set</code> 和 <code>Map</code> 等。</p>
-<p>主要的方法包括：
-   - <code>boolean hasNext()</code>: 如果迭代器有更多元素可供遍历，则返回 <code>true</code>。
-   - <code>E next()</code>: 返回迭代器的下一个元素。</p>
+<p>主要的方法包括：</p>
+<ul>
+<li><code>boolean hasNext()</code>: 如果迭代器有更多元素可供遍历，则返回 <code>true</code>。</li>
+<li><code>E next()</code>: 返回迭代器的下一个元素。</li>
+</ul>
 <h5 id="_8">使用迭代器的示例</h5>
 <p>下面是一个使用迭代器遍历 <code>ArrayList</code> 的示例：</p>
-<pre><code class="language-java">import java.util.ArrayList;
-import java.util.Iterator;
-
-public class IteratorExample {
-    public static void main(String[] args) {
-        // 创建一个 ArrayList 并添加元素
-        ArrayList&lt;String&gt; fruits = new ArrayList&lt;&gt;();
-        fruits.add(&quot;Apple&quot;);
-        fruits.add(&quot;Banana&quot;);
-        fruits.add(&quot;Cherry&quot;);
-
-        // 创建迭代器
-        Iterator&lt;String&gt; iterator = fruits.iterator();
-
-        // 使用迭代器遍历集合
-        while (iterator.hasNext()) {
-            String fruit = iterator.next();
-            System.out.println(fruit);
-        }
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Iterator</span><span class="p">;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IteratorExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">        </span><span class="c1">// 创建一个 ArrayList 并添加元素</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">        </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">        </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">        </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Cherry&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">        </span><span class="c1">// 创建迭代器</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">        </span><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">iterator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">        </span><span class="c1">// 使用迭代器遍历集合</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">iterator</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">fruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iterator</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">fruit</span><span class="p">);</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_9">代码解析</h3>
 <ol>
 <li><strong><code>while (iterator.hasNext())</code></strong>:</li>
@@ -2244,234 +2374,421 @@ public class IteratorExample {
 </ul>
 <h3 id="_10">示例</h3>
 <p>以下是一个使用<code>ArrayList</code>的简单示例：</p>
-<pre><code class="language-java">import java.util.ArrayList;
-
-public class ListExample {
-    public static void main(String[] args) {
-        // 使用 ArrayList 创建列表
-        ArrayList&lt;String&gt; arrayList = new ArrayList&lt;&gt;();
-        arrayList.add(&quot;Apple&quot;);
-        arrayList.add(&quot;Banana&quot;);
-        arrayList.add(&quot;Cherry&quot;);
-        System.out.println(&quot;ArrayList elements: &quot; + arrayList);
-    }
-}
-</code></pre>
-<p>在这个示例中，展示了如何使用<code>ArrayList</code>创建、添加和访问列表元素。</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ListExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">        </span><span class="c1">// 使用 ArrayList 创建列表</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arrayList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">        </span><span class="n">arrayList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">);</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">        </span><span class="n">arrayList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">        </span><span class="n">arrayList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Cherry&quot;</span><span class="p">);</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ArrayList elements: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">arrayList</span><span class="p">);</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+在这个示例中，展示了如何使用<code>ArrayList</code>创建、添加和访问列表元素。</p>
 <h2 id="3">3. 初级搜索</h2>
 <h3 id="31-linear-search">3.1 数组的线性搜索（Linear Search）</h3>
 <p>线性搜索是最简单的数组搜索方法，它从数组的第一个元素开始逐个检查，直到找到目标元素或遍历完整个数组。</p>
-<pre><code class="language-java">public class ArraySearchExample {
-    public static void main(String[] args) {
-        int[] numbers = {5, 8, 2, 10, 3};
-        int target = 10;
-
-        int index = linearSearch(numbers, target);
-
-        if (index != -1) {
-            System.out.println(&quot;元素 &quot; + target + &quot; 在数组中的索引为：&quot; + index);
-        } else {
-            System.out.println(&quot;元素 &quot; + target + &quot; 不在数组中。&quot;);
-        }
-    }
-
-    // 线性搜索方法
-    public static int linearSearch(int[] arr, int target) {
-        for (int i = 0; i &lt; arr.length; i++) {
-            if (arr[i] == target) {
-                return i; // 返回目标元素的索引
-            }
-        }
-        return -1; // 没有找到目标元素
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span>
+<span class="normal"><a href="#__codelineno-15-16">16</a></span>
+<span class="normal"><a href="#__codelineno-15-17">17</a></span>
+<span class="normal"><a href="#__codelineno-15-18">18</a></span>
+<span class="normal"><a href="#__codelineno-15-19">19</a></span>
+<span class="normal"><a href="#__codelineno-15-20">20</a></span>
+<span class="normal"><a href="#__codelineno-15-21">21</a></span>
+<span class="normal"><a href="#__codelineno-15-22">22</a></span>
+<span class="normal"><a href="#__codelineno-15-23">23</a></span>
+<span class="normal"><a href="#__codelineno-15-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArraySearchExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linearSearch</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">);</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;元素 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 在数组中的索引为：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">index</span><span class="p">);</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;元素 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 不在数组中。&quot;</span><span class="p">);</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">    </span><span class="c1">// 线性搜索方法</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">linearSearch</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回目标元素的索引</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 没有找到目标元素</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>在上面的示例中，<code>linearSearch</code>方法接受一个整型数组和目标整数作为参数，然后使用for循环逐个检查数组中的元素，直到找到目标元素或者遍历完整个数组。</p>
 <h3 id="32-list">3.2 列表（List）的初级搜索</h3>
 <p>列表的线性搜索与数组类似，可以使用迭代器或增强for循环来遍历列表中的元素，查找目标元素。</p>
-<pre><code class="language-java">import java.util.ArrayList;
-
-public class ArrayListSearchExample {
-    public static void main(String[] args) {
-        ArrayList&lt;String&gt; fruits = new ArrayList&lt;&gt;();
-        fruits.add(&quot;Apple&quot;);
-        fruits.add(&quot;Banana&quot;);
-        fruits.add(&quot;Cherry&quot;);
-        String target = &quot;Banana&quot;;
-
-        int index = linearSearch(fruits, target);
-
-        if (index != -1) {
-            System.out.println(&quot;元素 &quot; + target + &quot; 在列表中的索引为：&quot; + index);
-        } else {
-            System.out.println(&quot;元素 &quot; + target + &quot; 不在列表中。&quot;);
-        }
-    }
-
-    // 线性搜索方法
-    public static int linearSearch(List&lt;String&gt; list, String target) {
-        for (int i = 0; i &lt; list.size(); i++) {
-            if (list.get(i).equals(target)) {
-                return i; // 返回目标元素的索引
-            }
-        }
-        return -1; // 没有找到目标元素
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span>
+<span class="normal"><a href="#__codelineno-16-14">14</a></span>
+<span class="normal"><a href="#__codelineno-16-15">15</a></span>
+<span class="normal"><a href="#__codelineno-16-16">16</a></span>
+<span class="normal"><a href="#__codelineno-16-17">17</a></span>
+<span class="normal"><a href="#__codelineno-16-18">18</a></span>
+<span class="normal"><a href="#__codelineno-16-19">19</a></span>
+<span class="normal"><a href="#__codelineno-16-20">20</a></span>
+<span class="normal"><a href="#__codelineno-16-21">21</a></span>
+<span class="normal"><a href="#__codelineno-16-22">22</a></span>
+<span class="normal"><a href="#__codelineno-16-23">23</a></span>
+<span class="normal"><a href="#__codelineno-16-24">24</a></span>
+<span class="normal"><a href="#__codelineno-16-25">25</a></span>
+<span class="normal"><a href="#__codelineno-16-26">26</a></span>
+<span class="normal"><a href="#__codelineno-16-27">27</a></span>
+<span class="normal"><a href="#__codelineno-16-28">28</a></span>
+<span class="normal"><a href="#__codelineno-16-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayListSearchExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">        </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">);</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">        </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="w">        </span><span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Cherry&quot;</span><span class="p">);</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Banana&quot;</span><span class="p">;</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linearSearch</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">);</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;元素 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 在列表中的索引为：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">index</span><span class="p">);</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;元素 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 不在列表中。&quot;</span><span class="p">);</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19"></a>
+<a id="__codelineno-16-20" name="__codelineno-16-20"></a><span class="w">    </span><span class="c1">// 线性搜索方法</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">linearSearch</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">list</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="n">target</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回目标元素的索引</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 没有找到目标元素</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>在上面的示例中，<code>linearSearch</code>方法接受一个<code>List</code>和目标元素作为参数，然后使用for循环遍历列表中的元素，使用<code>equals</code>方法比较每个元素和目标元素是否相等。</p>
 <h2 id="4">4. 课后练习</h2>
 <h3 id="arraylist_1"><code>ArrayList</code></h3>
 <ol>
 <li><strong>题目：</strong> 创建一个包含1-5整数的<code>ArrayList</code>，并打印这些整数。
-   ```java
-   import java.util.ArrayList;</li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span>
+<span class="normal"><a href="#__codelineno-17-5">5</a></span>
+<span class="normal"><a href="#__codelineno-17-6">6</a></span>
+<span class="normal"><a href="#__codelineno-17-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayListExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">     </span><span class="c1">// To be implemented</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
 </ol>
-<p>public class ArrayListExample {
-       public static void main(String[] args) {
-        // To be implemented
-       }
-   }
-   ```</p>
 <p><strong>解答：</strong>
-   ```java
-   import java.util.ArrayList;</p>
-<p>public class ArrayListExample {
-       public static void main(String[] args) {
-           ArrayList<Integer> list = new ArrayList&lt;&gt;();
-           list.add(1);
-           list.add(2);
-           list.add(3);
-           list.add(4);
-           list.add(5);
-           System.out.println(list);
-       }
-   }
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-18-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-18-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-18-10">10</a></span>
+<span class="normal"><a href="#__codelineno-18-11">11</a></span>
+<span class="normal"><a href="#__codelineno-18-12">12</a></span>
+<span class="normal"><a href="#__codelineno-18-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayListExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <ol>
-<li><strong>题目：</strong> 从一个<code>ArrayList</code>中移除特定的元素，比如数字3。
-   ```java
-   import java.util.ArrayList;</li>
+<li>
+<p><strong>题目：</strong> 从一个<code>ArrayList</code>中移除特定的元素，比如数字3。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-19-10">10</a></span>
+<span class="normal"><a href="#__codelineno-19-11">11</a></span>
+<span class="normal"><a href="#__codelineno-19-12">12</a></span>
+<span class="normal"><a href="#__codelineno-19-13">13</a></span>
+<span class="normal"><a href="#__codelineno-19-14">14</a></span>
+<span class="normal"><a href="#__codelineno-19-15">15</a></span>
+<span class="normal"><a href="#__codelineno-19-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayListExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a>
+<a id="__codelineno-19-12" name="__codelineno-19-12"></a><span class="w">         </span><span class="c1">// To be implemented</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13"></a>
+<a id="__codelineno-19-14" name="__codelineno-19-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+   <strong>解答：</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-20-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-20-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-20-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-20-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-20-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-20-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-20-10">10</a></span>
+<span class="normal"><a href="#__codelineno-20-11">11</a></span>
+<span class="normal"><a href="#__codelineno-20-12">12</a></span>
+<span class="normal"><a href="#__codelineno-20-13">13</a></span>
+<span class="normal"><a href="#__codelineno-20-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayListExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span><span class="w">  </span><span class="c1">// 使用包装类来移除特定元素</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-20-14" name="__codelineno-20-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>题目：</strong> 访问<code>ArrayList</code>中的第三个元素并打印出来。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayListExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">);</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a><span class="w">        </span><span class="c1">// To be implemented</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+   <strong>解答：</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-22-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-22-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-22-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-22-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-22-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-22-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-22-10">10</a></span>
+<span class="normal"><a href="#__codelineno-22-11">11</a></span>
+<span class="normal"><a href="#__codelineno-22-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayListExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">);</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">list</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span><span class="w">  </span><span class="c1">// 索引从0开始，所以第三个元素是索引2</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
 </ol>
-<p>public class ArrayListExample {
-       public static void main(String[] args) {
-           ArrayList<Integer> list = new ArrayList&lt;&gt;();
-           list.add(1);
-           list.add(2);
-           list.add(3);
-           list.add(4);
-           list.add(5);</p>
-<pre><code>        // To be implemented
-
-       System.out.println(list);
-   }
-</code></pre>
-<p>}
-   <code>**解答：**</code>java
-   import java.util.ArrayList;</p>
-<p>public class ArrayListExample {
-       public static void main(String[] args) {
-           ArrayList<Integer> list = new ArrayList&lt;&gt;();
-           list.add(1);
-           list.add(2);
-           list.add(3);
-           list.add(4);
-           list.add(5);
-           list.remove(Integer.valueOf(3));  // 使用包装类来移除特定元素
-           System.out.println(list);
-       }
-   }
-   ```</p>
-<ol>
-<li><strong>题目：</strong> 访问<code>ArrayList</code>中的第三个元素并打印出来。
-   ```java
-   import java.util.ArrayList;</li>
-</ol>
-<p>public class ArrayListExample {
-       public static void main(String[] args) {
-           ArrayList<String> list = new ArrayList&lt;&gt;();
-           list.add("A");
-           list.add("B");
-           list.add("C");
-           list.add("D");
-           // To be implemented
-       }
-   }
-   <code>**解答：**</code>java
-   import java.util.ArrayList;</p>
-<p>public class ArrayListExample {
-       public static void main(String[] args) {
-           ArrayList<String> list = new ArrayList&lt;&gt;();
-           list.add("A");
-           list.add("B");
-           list.add("C");
-           list.add("D");
-           System.out.println(list.get(2));  // 索引从0开始，所以第三个元素是索引2
-       }
-   }
-   ```</p>
 <h3 id="_11"><code>线性搜索</code></h3>
 <p><strong>题目：</strong> 编写一个Java程序，该程序创建一个<code>ArrayList</code>，其中包含<code>10, 20, 30, 40, 50</code>。编写一个方法，该方法使用线性搜索来查找一个指定的整数，并返回它在<code>ArrayList</code>中的索引。如果该整数不在列表中，则返回-1。最后，调用该方法并打印出结果。</p>
-<pre><code class="language-java">import java.util.ArrayList;
-
-public class LinearSearchExample {
-  public static void main(String[] args) {
-    // 创建一个包含一些整数的 ArrayList
-    // To be implemented
-
-
-    // 要查找的目标元素
-    int target = 30;
-
-
-    // 线性搜索方法
-    // To be implemented
-
-    // 打印结果
-    if (index != -1) {
-      System.out.println(&quot;元素 &quot; + target + &quot; 在列表中的索引是: &quot; + index);
-    } else {
-      System.out.println(&quot;元素 &quot; + target + &quot; 不在列表中。&quot;);
-    }
-  }
-}
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span>
+<span class="normal"><a href="#__codelineno-23-12">12</a></span>
+<span class="normal"><a href="#__codelineno-23-13">13</a></span>
+<span class="normal"><a href="#__codelineno-23-14">14</a></span>
+<span class="normal"><a href="#__codelineno-23-15">15</a></span>
+<span class="normal"><a href="#__codelineno-23-16">16</a></span>
+<span class="normal"><a href="#__codelineno-23-17">17</a></span>
+<span class="normal"><a href="#__codelineno-23-18">18</a></span>
+<span class="normal"><a href="#__codelineno-23-19">19</a></span>
+<span class="normal"><a href="#__codelineno-23-20">20</a></span>
+<span class="normal"><a href="#__codelineno-23-21">21</a></span>
+<span class="normal"><a href="#__codelineno-23-22">22</a></span>
+<span class="normal"><a href="#__codelineno-23-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LinearSearchExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">    </span><span class="c1">// 创建一个包含一些整数的 ArrayList</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">    </span><span class="c1">// To be implemented</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a>
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">    </span><span class="c1">// 要查找的目标元素</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a>
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a>
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="w">    </span><span class="c1">// 线性搜索方法</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="w">    </span><span class="c1">// To be implemented</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15"></a>
+<a id="__codelineno-23-16" name="__codelineno-23-16"></a><span class="w">    </span><span class="c1">// 打印结果</span>
+<a id="__codelineno-23-17" name="__codelineno-23-17"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-18" name="__codelineno-23-18"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;元素 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 在列表中的索引是: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">index</span><span class="p">);</span>
+<a id="__codelineno-23-19" name="__codelineno-23-19"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-20" name="__codelineno-23-20"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;元素 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 不在列表中。&quot;</span><span class="p">);</span>
+<a id="__codelineno-23-21" name="__codelineno-23-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-23-22" name="__codelineno-23-22"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-23-23" name="__codelineno-23-23"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>解答：</strong></p>
-<pre><code class="language-java">import java.util.ArrayList;
-
-public class LinearSearchExample {
-  public static void main(String[] args) {
-    // 创建一个包含一些整数的 ArrayList
-     ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();
-     list.add(10);
-     list.add(20);
-     list.add(30);
-     list.add(40);
-     list.add(50);
-
-    // 要查找的目标元素
-    int target = 30;
-
-    // 线性搜索方法
-    int index = -1;
-    for (int i = 0; i &lt; list.size(); i++) {
-      if (list.get(i) == target) {
-        index = i;  // 找到目标元素，记录索引
-        break;  // 一旦找到就可以退出循环
-      }
-    }
-
-    // 打印结果
-    if (index != -1) {
-      System.out.println(&quot;元素 &quot; + target + &quot; 在列表中的索引是: &quot; + index);
-    } else {
-      System.out.println(&quot;元素 &quot; + target + &quot; 不在列表中。&quot;);
-    }
-  }
-}
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span>
+<span class="normal"><a href="#__codelineno-24-11">11</a></span>
+<span class="normal"><a href="#__codelineno-24-12">12</a></span>
+<span class="normal"><a href="#__codelineno-24-13">13</a></span>
+<span class="normal"><a href="#__codelineno-24-14">14</a></span>
+<span class="normal"><a href="#__codelineno-24-15">15</a></span>
+<span class="normal"><a href="#__codelineno-24-16">16</a></span>
+<span class="normal"><a href="#__codelineno-24-17">17</a></span>
+<span class="normal"><a href="#__codelineno-24-18">18</a></span>
+<span class="normal"><a href="#__codelineno-24-19">19</a></span>
+<span class="normal"><a href="#__codelineno-24-20">20</a></span>
+<span class="normal"><a href="#__codelineno-24-21">21</a></span>
+<span class="normal"><a href="#__codelineno-24-22">22</a></span>
+<span class="normal"><a href="#__codelineno-24-23">23</a></span>
+<span class="normal"><a href="#__codelineno-24-24">24</a></span>
+<span class="normal"><a href="#__codelineno-24-25">25</a></span>
+<span class="normal"><a href="#__codelineno-24-26">26</a></span>
+<span class="normal"><a href="#__codelineno-24-27">27</a></span>
+<span class="normal"><a href="#__codelineno-24-28">28</a></span>
+<span class="normal"><a href="#__codelineno-24-29">29</a></span>
+<span class="normal"><a href="#__codelineno-24-30">30</a></span>
+<span class="normal"><a href="#__codelineno-24-31">31</a></span>
+<span class="normal"><a href="#__codelineno-24-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LinearSearchExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="w">    </span><span class="c1">// 创建一个包含一些整数的 ArrayList</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="w">     </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="w">     </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="w">     </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="w">     </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="w">     </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">40</span><span class="p">);</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11"></a><span class="w">     </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12"></a>
+<a id="__codelineno-24-13" name="__codelineno-24-13"></a><span class="w">    </span><span class="c1">// 要查找的目标元素</span>
+<a id="__codelineno-24-14" name="__codelineno-24-14"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+<a id="__codelineno-24-15" name="__codelineno-24-15"></a>
+<a id="__codelineno-24-16" name="__codelineno-24-16"></a><span class="w">    </span><span class="c1">// 线性搜索方法</span>
+<a id="__codelineno-24-17" name="__codelineno-24-17"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-24-18" name="__codelineno-24-18"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-19" name="__codelineno-24-19"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">list</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-20" name="__codelineno-24-20"></a><span class="w">        </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">  </span><span class="c1">// 找到目标元素，记录索引</span>
+<a id="__codelineno-24-21" name="__codelineno-24-21"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w">  </span><span class="c1">// 一旦找到就可以退出循环</span>
+<a id="__codelineno-24-22" name="__codelineno-24-22"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-24-23" name="__codelineno-24-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-24-24" name="__codelineno-24-24"></a>
+<a id="__codelineno-24-25" name="__codelineno-24-25"></a><span class="w">    </span><span class="c1">// 打印结果</span>
+<a id="__codelineno-24-26" name="__codelineno-24-26"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-27" name="__codelineno-24-27"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;元素 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 在列表中的索引是: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">index</span><span class="p">);</span>
+<a id="__codelineno-24-28" name="__codelineno-24-28"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-29" name="__codelineno-24-29"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;元素 &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 不在列表中。&quot;</span><span class="p">);</span>
+<a id="__codelineno-24-30" name="__codelineno-24-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-24-31" name="__codelineno-24-31"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-24-32" name="__codelineno-24-32"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 
 
 

@@ -46,7 +46,6 @@ String var2 = "CodeRaft";
 Java中访问字符串中的字符可以使用索引，索引从0开始。
 
 ```java
-String var1 = "Hello World!";
 char firstChar = var1.charAt(0); // 获取索引为0的字符 'H'
 String substr = var2.substring(1, 5); // 截取字符串 var2 的第2到第5个字符（"odeR"）
 ```

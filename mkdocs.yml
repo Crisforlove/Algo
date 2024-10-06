@@ -53,3 +53,14 @@ nav:
       - Lesson 13: lesson13/Lesson13 C++.md
       - Lesson 14: lesson14/Lesson14 C++.md
       - Lesson 15: lesson15/Lesson15 C++.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true      # 确保使用 Pygments 进行语法高亮
+      linenums: true          # 启用行号
+      auto_title: true        # 自动为代码块添加标题
+      anchor_linenums: true   # 行号带有锚点，便于链接
+  - pymdownx.superfences       # 支持嵌套代码块和内容块
+  - pymdownx.inlinehilite      # 支持内联代码块高亮
+  - pymdownx.tilde             # 支持 ~~~ 格式的代码块
+  - pymdownx.betterem          # 提升 Markdown 中的文本强调效果

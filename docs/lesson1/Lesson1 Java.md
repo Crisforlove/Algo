@@ -74,9 +74,9 @@ Java 官方下载地址：[https://www.oracle.com/java/technologies/downloads/](
 对于 Windows 和 Mac 来说，Java 的安装步骤很简单，我们可以选择对应的安装程序（.exe/.dmg）然后根据步骤来进行安装：
 
 - Mac 系统的默认安装路径为下述地址：
-    ```shell
-    ~/Library/Java/JavaVirtualMachines/
-    ```
+```shell
+~/Library/Java/JavaVirtualMachines/
+```
 - Windows 在安装时注意指定好安装路径即可
 
     
@@ -96,12 +96,12 @@ Java 官方下载地址：[https://www.oracle.com/java/technologies/downloads/](
 ~/.zshrc
 ```
 - 添加下面这行代码：
-    ```shell
-    # 以 Java8 举例，其中 "JAVA_HOME=" 后面是 你的Java JDK 的实际安装地址，需要根据实际情况修改
-    export JAVA_HOME=/Users/xxx/Library/Java/JavaVirtualMachines/corretto-1.8.0_332
-    export PATH=$JAVA_HOME/bin:$PATH:.
-    export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib
-    ``` 
+```shell
+# 以 Java8 举例，其中 "JAVA_HOME=" 后面是 你的Java JDK 的实际安装地址，需要根据实际情况修改
+export JAVA_HOME=/Users/xxx/Library/Java/JavaVirtualMachines/corretto-1.8.0_332
+export PATH=$JAVA_HOME/bin:$PATH:.
+export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib
+``` 
 
 #### 1.3.2 Windows 系统电脑
 - 对于 windows 系统：
@@ -110,10 +110,10 @@ Java 官方下载地址：[https://www.oracle.com/java/technologies/downloads/](
     ![](https://markdown.liuchengtu.com/work/uploads/upload_a9c6b983008cc1a9b9071be7a49fa940.png)
 
     找到系统变量中的 Path 变量，选中然后点击编辑，然后点击新建，这里都一样，可以直接复制使用：
-    ```shell
-    %JAVA_HOME%\bin
-    %JAVA_HOME%\jre\bin
-    ``` 
+```shell
+%JAVA_HOME%\bin
+%JAVA_HOME%\jre\bin
+``` 
     ![](https://markdown.liuchengtu.com/work/uploads/upload_0c89d96c23b480ab24589992452f9134.png)
 
     
@@ -201,13 +201,13 @@ IDE通常包括以下核心组件：代码编辑器、编译器/解释器、调�
     ![](https://markdown.liuchengtu.com/work/uploads/upload_cfb70ead436fd2d04f3d92dab7a55d94.png)
 
 - 复制以下代码：
-    ```java
-    public class HelloWorld {
-        public static void main(String[] args) {
-            System.out.println("Hello, World!");
-        }
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
     }
-    ```
+}
+```
 - 点击运行图标运行该段代码：
     ![](https://markdown.liuchengtu.com/work/uploads/upload_112ea91497c6c91f4bc0ec48a1896c6a.png)
 - 当点击运行图标后，IDE实际上帮助我们完成了编译和运行两个步骤，即上文中提到的`javac` 和 `java` 命令。
@@ -270,9 +270,7 @@ Java语言共有50个关键字，如下所示：
 ## 5. Java中的变量
 
 ### 5.1 什么是变量
-
 变量是Java程序中的基本存储单元，它的作用是用来存储数据。变量本质上代表了内存中的一个存储的区域，这个区域里的数据在同一数据类型中可以不断的变化。通过变量可以方便的读取和操作该区域中的数据。
-
 - 变量：顾名思义，会变的量。
 - 常量：自然界中规定好了的、不会变的值。
 
@@ -447,61 +445,61 @@ public class StudentInformation {
 - **运算符**：`+`（加）、`-`（减）、`*`（乘）、`/`（除）、`%`（求余）、`++`（自增）、`--`（自减）
 - **用途**：执行基本的数学运算
 - **示例代码**：
-    ```java
-    int a = 10;
-    int b = 20;
-    int result = a + b; // 30
-    a++; // 11
-    ```
+```java
+int a = 10;
+int b = 20;
+int result = a + b; // 30
+a++; // 11
+```
 
 ### 7.2 赋值运算符
 - **运算符**：`=`（等于）、`+=`（自加一次等于）、`-=`（自减一次等于）、`*=`（自乘一次等于）、`/=`（自除一次等于）、`%=`（求模并赋值）
 - **用途**：将计算结果赋值给变量
 - **示例代码**：
-    ```java
-    int x = 10;
-    x += 5; // 等同于 x = x + 5;
-    ```
+```java
+int x = 10;
+x += 5; // 等同于 x = x + 5;
+```
 
 ### 7.3 比较运算符
 - **运算符**：`<`（小于）、`>`（大于）、`>=`（大于等于）、`<=`（小于等于）、`==`（等于）、`!=`（不等于）
 - **用途**：比较两个值的大小或相等性
 - **示例代码**：
-    ```java
-    int m = 10;
-    int n = 20;
-    boolean result = (m > n); // 比较 m 是否大于 n
-    ```
+```java
+int m = 10;
+int n = 20;
+boolean result = (m > n); // 比较 m 是否大于 n
+```
 
 ### 7.4 逻辑运算符
 - **运算符**：`&&`（短路与）、`||`（短路或）、`!`（非）
 - **用途**：组合布尔表达式，实现逻辑运算
 - **示例代码**：
-    ```java
-    boolean condition1 = true;
-    boolean condition2 = false;
-    boolean result = condition1 && condition2; // 使用短路与运算符
-    ```
+```java
+boolean condition1 = true;
+boolean condition2 = false;
+boolean result = condition1 && condition2; // 使用短路与运算符
+```
 
 ### 7.5 条件（三目）运算符
 - **运算符**：`?:`
 - **用途**：根据条件表达式的结果选择两个值中的一个
 - **语法**：`result = (condition) ? value1 : value2;`
 - **示例代码**：
-    ```java
-    int age = 20;
-    String message = (age >= 18) ? "成年人" : "未成年人"; // 根据年龄判断成年人或未成年人
-    ```
+```java
+int age = 20;
+String message = (age >= 18) ? "成年人" : "未成年人"; // 根据年龄判断成年人或未成年人
+```
 
 ### 7.6 位运算符
 - **运算符**：`&`（按位与）、`|`（按位或）、`^`（异或）、`~`（非、取反）
 - **用途**：对二进制位进行操作
 - **示例代码**：
-    ```java
-    int a = 5; // 二进制为 101
-    int b = 3; // 二进制为 011
-    int result = a & b; // 按位与操作
-    ```
+```java
+int a = 5; // 二进制为 101
+int b = 3; // 二进制为 011
+int result = a & b; // 按位与操作
+```
 
 ### 7.7 复合赋值运算符
 - **运算符**：`+=`, `-=`, 等
@@ -512,11 +510,11 @@ public class StudentInformation {
 - **运算符**：`+`
 - **用途**：用于连接字符串
 - **示例代码**：
-    ```java
-    String str1 = "Hello, ";
-    String str2 = "World!";
-    String result = str1 + str2; // "Hello, World!"
-    ```
+```java
+String str1 = "Hello, ";
+String str2 = "World!";
+String result = str1 + str2; // "Hello, World!"
+```
 
 Java中的运算符不仅包括上述基本类型，还包括复合赋值运算符，如 +=, -= 等，此外，Java还支持字符串连接操作，其中 + 运算符除了用于数值的加法运算外，还可以用于连接字符串。
 
@@ -573,7 +571,6 @@ public class Inputoutput {
 在 Java 中，InputStream 和 OutputStream 是两个基本的 I/O 类，用于处理字节流的输入和输出。它们分别是输入和输出操作的基类，并且都有多个子类，支持从各种数据源读取数据和将数据写入各种数据目标。以下是它们的关系、基类、子类及其常见用途的详细介绍。
 
 InputStream 和 OutputStream 的关系：
-
 - InputStream：是一个抽象类，表示字节输入流的所有类的超类。它定义了从不同输入源（如文件、内存缓冲区、网络连接）读取字节数据的基本方法。
 - OutputStream：是一个抽象类，表示字节输出流的所有类的超类。它定义了向不同输出目标（如文件、内存缓冲区、网络连接）写入字节数据的基本方法。
 - InputStream 和 OutputStream 并没有直接的继承关系，但它们是互补的，分别处理输入和输出操作。
@@ -628,10 +625,8 @@ public class OutputStreamExample {
 
 
 # 课后练习
-
-#课后练习  
   
-1.编写一个Python程序来找出满足以下条件的最小正整数：  
+1.编写一个Java程序来找出满足以下条件的最小正整数：  
   
 -该数除以12余1  
 -该数除以23也余1  

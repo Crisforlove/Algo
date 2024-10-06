@@ -236,11 +236,11 @@ for (initialization; condition; update) {
    - `update`：循环变量更新，通常是增加或减少循环变量的值。
    
    示例：
-   ```java
-   for (int i = 1; i <= 5; i++) {
-       System.out.println("Count is: " + i);
-   }
-   ```
+```java
+for (int i = 1; i <= 5; i++) {
+    System.out.println("Count is: " + i);
+}
+```
 ### 2.2 **倒序遍历**
 
 倒序遍历是指从大到小或从后向前遍历数据集合中的元素。在Java中，倒序遍历通常用于数组、列表或需要逆序输出的情况。以下是一个示例和详细解释：
@@ -419,12 +419,12 @@ public class BreakWithLabelExample {
 - `innerLoop` 是内层循环。
 - 在内层循环中，当 `i` 等于 2 且 `j` 等于 2 时，执行 `break outerLoop;`，这会立即跳出外层循环 `outerLoop`，继续执行外层循环后面的代码。
 - 控制台输出如下：
-  ```
-  Outer loop iteration 1
-      Inner loop iteration 1
-      Inner loop iteration 2
-  Loop ends
-  ```
+```
+Outer loop iteration 1
+   Inner loop iteration 1
+   Inner loop iteration 2
+Loop ends
+```
 
 ### 注意事项：
 - 使用带标签的 `break` 语句时，标签必须位于你想要跳出的循环之前，并且紧跟在 `break` 关键字之后。

@@ -627,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3063,20 +3063,30 @@
 <li>直到两指针相撞（即 <code>left</code> == <code>right</code> ），或者满足其他要求的特殊条件时，跳出循环体。</li>
 </ol>
 <h3 id="12">1.2 对撞指针伪代码模板</h3>
-<pre><code class="language-cpp">int left = 0, right = nums.size() - 1;
-
-while (left &lt; right) {
-    if (满足要求的特殊条件) {
-        return 符合条件的值;
-    } else if (一定条件1) {
-        left++;  // 移动左指针
-    } else if (一定条件2) {
-        right--;  // 移动右指针
-    }
-}
-return 没找到 或 找到对应值;
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">满足要求的特殊条件</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">符合条件的值</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">一定条件1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="n">left</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 移动左指针</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">一定条件2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="n">right</span><span class="o">--</span><span class="p">;</span><span class="w">  </span><span class="c1">// 移动右指针</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="p">}</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="k">return</span><span class="w"> </span><span class="n">没找到</span><span class="w"> </span><span class="n">或</span><span class="w"> </span><span class="n">找到对应值</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="13">1.3 对撞指针适用范围</h3>
 <p>对撞指针一般用来解决有序数组或者字符串问题：</p>
 <ul>
@@ -3102,31 +3112,54 @@ return 没找到 或 找到对应值;
 <li>如果最终没有找到符合条件的两个数，则返回 <code>[-1, -1]</code>。</li>
 </ol>
 <h4 id="_4">参考解答</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; numbers, int target) {
-        int left = 0;
-        int right = numbers.size() - 1;
-
-        while (left &lt; right) {
-            int total = numbers[left] + numbers[right];
-
-            if (total == target) {
-                // 返回的是下标从1开始，所以需要+1
-                return {left + 1, right + 1};
-            } 
-            else if (total &lt; target) {
-                left++;  // 总和小于目标值，左指针右移
-            } 
-            else {
-                right--;  // 总和大于目标值，右指针左移
-            }
-        }
-
-        return {-1, -1};  // 没有找到结果
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">twoSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">numbers</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">[</span><span class="n">left</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numbers</span><span class="p">[</span><span class="n">right</span><span class="p">];</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">total</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">                </span><span class="c1">// 返回的是下标从1开始，所以需要+1</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">};</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">total</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">                </span><span class="n">left</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 总和小于目标值，左指针右移</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">                </span><span class="n">right</span><span class="o">--</span><span class="p">;</span><span class="w">  </span><span class="c1">// 总和大于目标值，右指针左移</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">};</span><span class="w">  </span><span class="c1">// 没有找到结果</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="15">1.5 举一反三</h3>
 <h3 id="151-lc11">1.5.1 LC11 盛水最多的容器</h3>
 <h4 id="_5">问题描述</h4>
@@ -3136,10 +3169,12 @@ public:
 <p><strong>说明：</strong> 你不能倾斜容器。</p>
 <p><strong>示例</strong>：</p>
 <p><img alt="" src="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/25/question_11.jpg" /></p>
-<pre><code class="language-cpp">输入：[1,8,6,2,5,4,8,3,7]
-输出：49 
-解释：图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">输入</span><span class="err">：</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">输出</span><span class="err">：</span><span class="mi">49</span><span class="w"> </span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">解释</span><span class="err">：</span><span class="n">图中垂直线代表输入数组</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span><span class="err">。</span><span class="n">在此情况下</span><span class="err">，</span><span class="n">容器能够容纳水</span><span class="err">（</span><span class="n">表示为蓝色部分</span><span class="err">）</span><span class="n">的最大值为</span><span class="w"> </span><span class="mi">49</span><span class="err">。</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_6">思路分析</h4>
 <p>从示例中可以看出，如果确定好左右两端的直线，容纳的水量是由「左右两端直线中较低直线的高度 * 两端直线之间的距离」所决定的。所以我们应该使得「<strong>左右两端的直线尽量高且距离尽可能远</strong>」，这样才能使盛水面积尽可能的大。</p>
 <p>可以使用对撞指针求解。移动较低直线所在的指针位置，从而得到不同的高度和面积，最终获取其中最大的面积。具体做法如下：</p>
@@ -3162,31 +3197,54 @@ public:
 <p>那既然移动长的得到容积一定更小，那想要得到容积变大的可能只能是移动更短的那一边，才有可能实现。</p>
 <p>而通过对撞指针，刚好可以通过收窄两边的指针来寻找最优解，且从左右两边开始，过程中记录最值，可以保证没有漏掉最优解。</p>
 <h4 id="_7">参考解答</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    int maxArea(vector&lt;int&gt;&amp; height) {
-        int left = 0;
-        int right = height.size() - 1;
-        int maxArea = 0;
-
-        while (left &lt; right) {
-            // 计算当前容器的面积
-            int area = min(height[left], height[right]) * (right - left);
-            // 更新最大面积
-            maxArea = max(maxArea, area);
-
-            // 移动指针，选择较小高度的那一边
-            if (height[left] &lt; height[right]) {
-                left++;  // 左边较低，左指针右移
-            } else {
-                right--;  // 右边较低，右指针左移
-            }
-        }
-
-        return maxArea;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">maxArea</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">maxArea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">            </span><span class="c1">// 计算当前容器的面积</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">left</span><span class="p">],</span><span class="w"> </span><span class="n">height</span><span class="p">[</span><span class="n">right</span><span class="p">])</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="p">);</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">            </span><span class="c1">// 更新最大面积</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">            </span><span class="n">maxArea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">maxArea</span><span class="p">,</span><span class="w"> </span><span class="n">area</span><span class="p">);</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">            </span><span class="c1">// 移动指针，选择较小高度的那一边</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">left</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">height</span><span class="p">[</span><span class="n">right</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">                </span><span class="n">left</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 左边较低，左指针右移</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">                </span><span class="n">right</span><span class="o">--</span><span class="p">;</span><span class="w">  </span><span class="c1">// 右边较低，右指针左移</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">maxArea</span><span class="p">;</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="152-lc881">1.5.2 LC881 救生艇</h3>
 <h4 id="_8">问题描述</h4>
 <p>给定数组 <code>people</code> 。<code>people[i]</code>表示第 <code>i</code> 个人的体重 ，<strong>船的数量不限</strong>，每艘船可以承载的最大重量为 <code>limit</code>。</p>
@@ -3218,29 +3276,50 @@ public:
 </li>
 </ol>
 <h4 id="_10">参考解答</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    int numRescueBoats(vector&lt;int&gt;&amp; people, int limit) {
-        // 先对数组进行升序排序
-        sort(people.begin(), people.end());
-        int left = 0, right = people.size() - 1;
-        int ans = 0;
-
-        // 使用双指针进行贪心操作
-        while (left &lt;= right) {
-            if (people[left] + people[right] &lt;= limit) {
-                // 如果最轻和最重的人能一起上船，则一起上
-                left++;
-            }
-            // 不管能不能一起上，最重的人都要上船
-            right--;
-            ans++;
-        }
-
-        return ans;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numRescueBoats</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">people</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">limit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">        </span><span class="c1">// 先对数组进行升序排序</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="n">sort</span><span class="p">(</span><span class="n">people</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">people</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">people</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">        </span><span class="c1">// 使用双指针进行贪心操作</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="n">left</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">people</span><span class="p">[</span><span class="n">right</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">limit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">                </span><span class="c1">// 如果最轻和最重的人能一起上船，则一起上</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">                </span><span class="n">left</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">            </span><span class="c1">// 不管能不能一起上，最重的人都要上船</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">            </span><span class="n">right</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">            </span><span class="n">ans</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="153-lc658-k">1.5.3 LC658 找到K个最接近的元素</h3>
 <h4 id="_11">问题描述</h4>
 <p>给定一个 <strong>排序好</strong> 的数组<code>arr</code>，两个整数<code>k</code>和<code>x</code>，从数组中找到最靠近<code>x</code>（两数之差最小）的<code>k</code>个数。返回的结果必须要是按升序排好的。</p>
@@ -3264,34 +3343,60 @@ public:
 <p>3.<strong>停止条件</strong></p>
 <p>当窗口中剩下的元素数量刚好为<code>k</code>时，停止移动指针，此时窗口中的元素就是我们要找的<code>k</code>个最接近<code>x</code>的元素。</p>
 <h4 id="_13">参考解答</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    vector&lt;int&gt; findClosestElements(vector&lt;int&gt;&amp; arr, int k, int x) {
-        int left = 0, right = arr.size() - 1;
-
-        // 当区间长度大于 k 时，不断移动指针
-        while (right - left &gt;= k) {
-            // 比较两端的距离，移动较远的一端
-            if (abs(arr[left] - x) &gt; abs(arr[right] - x)) {
-                left++;
-            } else {
-                right--;
-            }
-        }
-
-        // 创建一个新的 vector 来存储结果
-        vector&lt;int&gt; result;
-
-        // 将从 arr[left] 到 arr[left + k] 的元素添加到 result 中
-        for (int i = left; i &lt; left + k; ++i) {
-            result.push_back(arr[i]);
-        }
-
-        // 返回结果
-        return result;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">findClosestElements</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">        </span><span class="c1">// 当区间长度大于 k 时，不断移动指针</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">            </span><span class="c1">// 比较两端的距离，移动较远的一端</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">left</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">right</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">                </span><span class="n">left</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">                </span><span class="n">right</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">        </span><span class="c1">// 创建一个新的 vector 来存储结果</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">        </span><span class="c1">// 将从 arr[left] 到 arr[left + k] 的元素添加到 result 中</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">left</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">            </span><span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">        </span><span class="c1">// 返回结果</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="2">2 滑动窗口</h2>
 <p>在计算机网络中，滑动窗口协议（Sliding Window Protocol）是传输层进行流控的一种措施，接收方通过通告发送方自己的窗口大小，从而控制发送方的发送速度，从而达到防止发送方发送速度过快而导致自己被淹没的目的。我们所要讲解的滑动窗口算法也是利用了同样的特性。</p>
 <blockquote>
@@ -3331,22 +3436,36 @@ public:
 <li>重复第 2 步到第 4 步，直到 <code>right</code> 到达数组末尾。</li>
 </ol>
 <h4 id="_16">固定长度滑动窗口代码模板</h4>
-<pre><code class="language-cpp">int left = 0;
-int right = 0;
-
-while (right &lt; nums.size()) {
-    window.push_back(nums[right]);
-
-    // 超过窗口大小时，缩小窗口，维护窗口中始终为 window_size 的长度
-    if ((right - left + 1) &gt;= window_size) {
-        // ... 维护答案
-        window.erase(window.begin());
-        left += 1;
-    }
-    // 向右侧增大窗口
-    right += 1;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="n">window</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">right</span><span class="p">]);</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="c1">// 超过窗口大小时，缩小窗口，维护窗口中始终为 window_size 的长度</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">window_size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">        </span><span class="c1">// ... 维护答案</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">        </span><span class="n">window</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">window</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">        </span><span class="n">left</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="c1">// 向右侧增大窗口</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">    </span><span class="n">right</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="22">2.2 例题讲解</h3>
 <h3 id="221-lc1343-k">2.2.1 LC1343 大小为 K 且平均值大于等于阈值的子数组数目</h3>
 <h4 id="_17">问题描述</h4>
@@ -3365,37 +3484,66 @@ while (right &lt; nums.size()) {
 <li>最后输出答案数目。</li>
 </ol>
 <h4 id="_19">参考解答</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    int numOfSubarrays(std::vector&lt;int&gt;&amp; arr, int k, int threshold) {
-        int left = 0;
-        int right = 0;
-        int window_sum = 0;
-        int ans = 0;
-        int n = arr.size();
-
-        // 滑动窗口遍历数组
-        while (right &lt; n) {
-            window_sum += arr[right];  // 加入右侧元素
-
-            // 当窗口大小达到 k 时，进行判断
-            if (right - left + 1 &gt;= k) {
-                // 如果窗口内的平均值大于等于 threshold
-                if (window_sum &gt;= k * threshold) {
-                    ans++;  // 满足条件，答案加 1
-                }
-                // 缩小窗口，移除左侧元素
-                window_sum -= arr[left];
-                left++;
-            }
-
-            right++;  // 右指针移动，扩大窗口
-        }
-
-        return ans;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span>
+<span class="normal"><a href="#__codelineno-7-28">28</a></span>
+<span class="normal"><a href="#__codelineno-7-29">29</a></span>
+<span class="normal"><a href="#__codelineno-7-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numOfSubarrays</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">threshold</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">window_sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">        </span><span class="c1">// 滑动窗口遍历数组</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">            </span><span class="n">window_sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">right</span><span class="p">];</span><span class="w">  </span><span class="c1">// 加入右侧元素</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">            </span><span class="c1">// 当窗口大小达到 k 时，进行判断</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">                </span><span class="c1">// 如果窗口内的平均值大于等于 threshold</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">window_sum</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">threshold</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">                    </span><span class="n">ans</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 满足条件，答案加 1</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">                </span><span class="c1">// 缩小窗口，移除左侧元素</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">                </span><span class="n">window_sum</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">left</span><span class="p">];</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">                </span><span class="n">left</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a>
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="w">            </span><span class="n">right</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 右指针移动，扩大窗口</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a>
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-30" name="__codelineno-7-30"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="23">2.3 举一反三</h3>
 <h3 id="231-lc1052">2.3.1 LC1052 爱生气的书店老板</h3>
 <h4 id="_20">问题描述</h4>
@@ -3427,59 +3575,103 @@ public:
 </li>
 </ol>
 <h4 id="_22">参考解答</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    int maxSatisfied(std::vector&lt;int&gt;&amp; customers, vector&lt;int&gt;&amp; grumpy, int minutes) {
-        int left = 0, right = 0;
-        int window_count = 0, ans = 0;
-        int n = customers.size();
-
-        // 滑动窗口求解不满意情况下能够改善的顾客人数
-        while (right &lt; n) {
-            if (grumpy[right] == 1) {
-                window_count += customers[right];  // 老板生气时，把顾客加入窗口
-            }
-
-            // 当窗口大小超过 minutes，缩小窗口
-            if (right - left + 1 &gt; minutes) {
-                if (grumpy[left] == 1) {
-                    window_count -= customers[left];  // 移除窗口左端的顾客
-                }
-                left++;
-            }
-
-            ans = max(ans, window_count);  // 记录最大窗口内的顾客数量
-            right++;
-        }
-
-        // 计算老板不生气时的顾客人数
-        for (int i = 0; i &lt; n; ++i) {
-            if (grumpy[i] == 0) {
-                ans += customers[i];  // 老板不生气时，这些顾客一直是满意的
-            }
-        }
-
-        return ans;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span>
+<span class="normal"><a href="#__codelineno-8-28">28</a></span>
+<span class="normal"><a href="#__codelineno-8-29">29</a></span>
+<span class="normal"><a href="#__codelineno-8-30">30</a></span>
+<span class="normal"><a href="#__codelineno-8-31">31</a></span>
+<span class="normal"><a href="#__codelineno-8-32">32</a></span>
+<span class="normal"><a href="#__codelineno-8-33">33</a></span>
+<span class="normal"><a href="#__codelineno-8-34">34</a></span>
+<span class="normal"><a href="#__codelineno-8-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">maxSatisfied</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">customers</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">grumpy</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">minutes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">window_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">        </span><span class="c1">// 滑动窗口求解不满意情况下能够改善的顾客人数</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">grumpy</span><span class="p">[</span><span class="n">right</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">                </span><span class="n">window_count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">customers</span><span class="p">[</span><span class="n">right</span><span class="p">];</span><span class="w">  </span><span class="c1">// 老板生气时，把顾客加入窗口</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">            </span><span class="c1">// 当窗口大小超过 minutes，缩小窗口</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">minutes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">grumpy</span><span class="p">[</span><span class="n">left</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">                    </span><span class="n">window_count</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">customers</span><span class="p">[</span><span class="n">left</span><span class="p">];</span><span class="w">  </span><span class="c1">// 移除窗口左端的顾客</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">                </span><span class="n">left</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">            </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="w"> </span><span class="n">window_count</span><span class="p">);</span><span class="w">  </span><span class="c1">// 记录最大窗口内的顾客数量</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">            </span><span class="n">right</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">        </span><span class="c1">// 计算老板不生气时的顾客人数</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">grumpy</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">                </span><span class="n">ans</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">customers</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w">  </span><span class="c1">// 老板不生气时，这些顾客一直是满意的</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a>
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-35" name="__codelineno-8-35"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="232-lc239">2.3.2 LC239 滑动窗口的最大值</h3>
 <h4 id="_23">问题描述</h4>
 <p>给你一个整数数组<code>nums</code>，有一个大小为<code>k</code>的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的<code>k</code>个数字。滑动窗口每次只向右移动一位。</p>
 <p>返回 <em>滑动窗口中的最大值</em> 。</p>
 <p><strong>示例 ：</strong></p>
-<pre><code>输入：nums = [1,3,-1,-3,5,3,6,7], k = 3
-输出：[3,3,5,5,6,7]
-解释：
-滑动窗口的位置                最大值
----------------               -----
-[1  3  -1] -3  5  3  6  7       3
- 1 [3  -1  -3] 5  3  6  7       3
- 1  3 [-1  -3  5] 3  6  7       5
- 1  3  -1 [-3  5  3] 6  7       5
- 1  3  -1  -3 [5  3  6] 7       6
- 1  3  -1  -3  5 [3  6  7]      7
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>输入：nums = [1,3,-1,-3,5,3,6,7], k = 3
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>输出：[3,3,5,5,6,7]
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>解释：
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>滑动窗口的位置                最大值
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>---------------               -----
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>[1  3  -1] -3  5  3  6  7       3
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a> 1 [3  -1  -3] 5  3  6  7       3
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a> 1  3 [-1  -3  5] 3  6  7       5
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a> 1  3  -1 [-3  5  3] 6  7       5
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a> 1  3  -1  -3 [5  3  6] 7       6
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a> 1  3  -1  -3  5 [3  6  7]      7
+</code></pre></div></td></tr></table></div>
 <h4 id="_24">思路分析</h4>
 <p><strong>使用索引而不是值：</strong> 我们使用 <code>window</code> 列表来存储数组中元素的<strong>索引</strong>，而不是直接存储元素值。通过这些索引，我们可以快速访问到数组中的元素值。</p>
 <p><strong>保持 <code>window</code> 中的元素递减顺序：</strong> 为了确保每次窗口滑动时都能快速得到最大值，我们在 <code>window</code> 中保存的索引对应的元素值是<strong>递减的</strong>。也就是说，<code>window</code> 中第一个元素（<code>window[0]</code>）对应的数组值总是当前窗口的最大值。</p>
@@ -3491,12 +3683,18 @@ public:
 <h4 id="_25">举例分析</h4>
 <p>假设 <code>nums = [1, 3, -1, -3, 5, 3, 6, 7]</code>，<code>k = 3</code>，即窗口大小为 3。</p>
 <ol>
-<li><strong>开始时</strong>，我们遍历数组，遇到 <code>1</code>，把它的索引 <code>0</code> 放入 <code>window</code>。</li>
+<li><strong>开始时</strong>，我们遍历数组，遇到 <code>1</code>，把它的索引 <code>0</code> 放入 <code>window</code>。<ul>
 <li><code>window = [0]</code>，最大值是 <code>1</code>。</li>
-<li><strong>遇到 <code>3</code></strong> 时，<code>3</code> 比 <code>1</code> 大，所以我们移除 <code>1</code> 的索引 <code>0</code>，然后把 <code>3</code> 的索引 <code>1</code> 放入 <code>window</code>。</li>
+</ul>
+</li>
+<li><strong>遇到 <code>3</code></strong> 时，<code>3</code> 比 <code>1</code> 大，所以我们移除 <code>1</code> 的索引 <code>0</code>，然后把 <code>3</code> 的索引 <code>1</code> 放入 <code>window</code>。<ul>
 <li><code>window = [1]</code>，最大值是 <code>3</code>。</li>
-<li><strong>遇到 <code>-1</code></strong> 时，<code>-1</code> 小于 <code>3</code>，我们直接把 <code>-1</code> 的索引 <code>2</code> 放入 <code>window</code>，此时最大值仍然是 <code>3</code>。</li>
+</ul>
+</li>
+<li><strong>遇到 <code>-1</code></strong> 时，<code>-1</code> 小于 <code>3</code>，我们直接把 <code>-1</code> 的索引 <code>2</code> 放入 <code>window</code>，此时最大值仍然是 <code>3</code>。<ul>
 <li><code>window = [1, 2]</code>，最大值是 <code>3</code>。</li>
+</ul>
+</li>
 <li><strong>窗口向右滑动</strong>，当我们进入下一个元素时，如果 <code>window</code> 里的第一个索引已经超出了窗口的范围（即索引小于 <code>i - k</code>），我们就把它移除，确保 <code>window[0]</code> 总是当前窗口内的索引。</li>
 </ol>
 <p>可能会有迷惑的地方是：<strong><code>window</code> 里面的元素数量</strong> <strong>不一定等于 <code>k</code></strong>；<code>window</code> 中存储的是滑动窗口内的<strong>元素索引</strong>，而且我们通过两个关键操作来确保它的正确性：</p>
@@ -3506,37 +3704,66 @@ public:
 </ol>
 <p>最后因为我们<code>window[0]</code>永远是当前滑动区间的最大索引值，每次滑动添加<code>nums[window[0]]</code>到<code>result</code>当中。</p>
 <h4 id="_26">参考解答</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    vector&lt;int&gt; maxSlidingWindow(vector&lt;int&gt;&amp; nums, int k) {
-        int n = nums.size();
-        vector&lt;int&gt; window; // 用来存储当前窗口中的元素索引
-        vector&lt;int&gt; result; // 用于存储结果的数组
-
-        for (int i = 0; i &lt; n; i++) {
-            // 移除窗口中不在范围内的元素（超出窗口大小k的）
-            if (!window.empty() &amp;&amp; window[0] &lt;= i - k) {
-                window.erase(window.begin());
-            }
-
-            // 移除窗口中所有小于当前元素的元素
-            while (!window.empty() &amp;&amp; nums[window.back()] &lt;= nums[i]) {
-                window.pop_back();
-            }
-
-            // 将当前元素索引添加到窗口
-            window.push_back(i);
-
-            // 当窗口的大小达到k时，记录窗口的最大值
-            if (i &gt;= k - 1) {
-                result.push_back(nums[window[0]]);  // 窗口的第一个元素是最大值的索引
-            }
-        }
-
-        return result;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span>
+<span class="normal"><a href="#__codelineno-10-20">20</a></span>
+<span class="normal"><a href="#__codelineno-10-21">21</a></span>
+<span class="normal"><a href="#__codelineno-10-22">22</a></span>
+<span class="normal"><a href="#__codelineno-10-23">23</a></span>
+<span class="normal"><a href="#__codelineno-10-24">24</a></span>
+<span class="normal"><a href="#__codelineno-10-25">25</a></span>
+<span class="normal"><a href="#__codelineno-10-26">26</a></span>
+<span class="normal"><a href="#__codelineno-10-27">27</a></span>
+<span class="normal"><a href="#__codelineno-10-28">28</a></span>
+<span class="normal"><a href="#__codelineno-10-29">29</a></span>
+<span class="normal"><a href="#__codelineno-10-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">maxSlidingWindow</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">window</span><span class="p">;</span><span class="w"> </span><span class="c1">// 用来存储当前窗口中的元素索引</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"> </span><span class="c1">// 用于存储结果的数组</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">            </span><span class="c1">// 移除窗口中不在范围内的元素（超出窗口大小k的）</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">window</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">window</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">                </span><span class="n">window</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">window</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">            </span><span class="c1">// 移除窗口中所有小于当前元素的元素</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">window</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">window</span><span class="p">.</span><span class="n">back</span><span class="p">()]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">                </span><span class="n">window</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">            </span><span class="c1">// 将当前元素索引添加到窗口</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="w">            </span><span class="n">window</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21"></a>
+<a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="w">            </span><span class="c1">// 当窗口的大小达到k时，记录窗口的最大值</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">window</span><span class="p">[</span><span class="mi">0</span><span class="p">]]);</span><span class="w">  </span><span class="c1">// 窗口的第一个元素是最大值的索引</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27"></a>
+<a id="__codelineno-10-28" name="__codelineno-10-28"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_27">关键解释</h4>
 <p><code>window</code> 的长度不同于 <code>k</code>，但仍然属于<strong>固定滑动窗口</strong>。</p>
 <h5 id="1_1">1. <strong>窗口的大小是固定的：</strong></h5>
@@ -3560,71 +3787,97 @@ public:
 <p>任何误差小于<code>10^-5</code>的答案都将被视为正确答案。</p>
 <h4 id="_30">思路分析</h4>
 <ol>
-<li><strong>初始变量定义</strong>：</li>
-<li>用<code>ans</code>变量维护子数组的最大平均数，初始值为负无穷，即<code>-DBL_MAX</code>（C++ 中的负无穷）。</li>
 <li>
-<p>用<code>window_total</code>来维持窗口中元素的和。</p>
+<p><strong>初始变量定义</strong>：</p>
+<ul>
+<li>用<code>ans</code>变量维护子数组的最大平均数，初始值为负无穷，即<code>-DBL_MAX</code>（C++ 中的负无穷）。</li>
+<li>用<code>window_total</code>来维持窗口中元素的和。</li>
+</ul>
 </li>
 <li>
 <p><strong>初始化指针</strong>：</p>
-</li>
-<li>
-<p><code>left</code>和<code>right</code>都指向数组的第一个元素，即：<code>left = 0</code>，<code>right = 0</code>。</p>
+<ul>
+<li><code>left</code>和<code>right</code>都指向数组的第一个元素，即：<code>left = 0</code>，<code>right = 0</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>向右移动<code>right</code>指针</strong>：</p>
-</li>
-<li>
-<p>将<code>k</code>个元素填入窗口中。</p>
+<ul>
+<li>将<code>k</code>个元素填入窗口中。</li>
+</ul>
 </li>
 <li>
 <p><strong>窗口元素数量为<code>k</code>时</strong>：</p>
-</li>
-<li>
-<p>当<code>right - left + 1 &gt;= k</code>时，计算窗口内的元素和，并维护子数组的最大平均数。</p>
+<ul>
+<li>当<code>right - left + 1 &gt;= k</code>时，计算窗口内的元素和，并维护子数组的最大平均数。</li>
+</ul>
 </li>
 <li>
 <p><strong>向右移动<code>left</code>指针</strong>：</p>
-</li>
-<li>
-<p>从而缩小窗口长度，即<code>left++</code>，使得窗口大小始终保持为<code>k</code>。</p>
+<ul>
+<li>从而缩小窗口长度，即<code>left++</code>，使得窗口大小始终保持为<code>k</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>重复步骤 4 到 5</strong>：</p>
-</li>
-<li>
-<p>直到<code>right</code>到达数组末尾。</p>
+<ul>
+<li>直到<code>right</code>到达数组末尾。</li>
+</ul>
 </li>
 <li>
 <p><strong>输出结果</strong>：</p>
-</li>
+<ul>
 <li>最后输出答案<code>ans</code>。</li>
+</ul>
+</li>
 </ol>
 <h4 id="_31">参考解答</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    double findMaxAverage(vector&lt;int&gt;&amp; nums, int k) {
-        int left = 0, right = 0;
-        double window_total = 0, ans = -DBL_MAX;
-
-        while (right &lt; nums.size()) {
-            window_total += nums[right];
-
-            // 窗口内元素数量达到 k 时，计算窗口平均值并更新最大平均值
-            if (right - left + 1 &gt;= k) {
-                ans = max(window_total / k, ans);
-                window_total -= nums[left]; // 移动左指针，缩小窗口
-                left++;
-            }
-
-            // 向右侧增大窗口
-            right++;
-        }
-
-        return ans;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">findMaxAverage</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">window_total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">DBL_MAX</span><span class="p">;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">            </span><span class="n">window_total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">right</span><span class="p">];</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">            </span><span class="c1">// 窗口内元素数量达到 k 时，计算窗口平均值并更新最大平均值</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">                </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">window_total</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">ans</span><span class="p">);</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">                </span><span class="n">window_total</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">left</span><span class="p">];</span><span class="w"> </span><span class="c1">// 移动左指针，缩小窗口</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">                </span><span class="n">left</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">            </span><span class="c1">// 向右侧增大窗口</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">            </span><span class="n">right</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="24">2.4 不定长度滑动窗口</h3>
 <blockquote>
 <p><strong>不定长度滑动窗口算法（Sliding Window）</strong>：在给定数组 / 字符串上维护一个不定长度的窗口。可以对窗口进行滑动操作、缩放操作，以及维护最优解操作。</p>
@@ -3640,22 +3893,36 @@ public:
 <li>重复第 2 步到第 5 步，直到 <code>right</code> 到达序列末尾。</li>
 </ol>
 <h4 id="_33">不定长度滑动窗口代码模板</h4>
-<pre><code class="language-cpp">int left = 0;
-int right = 0;
-
-while(right &lt; nums.size()) {
-    window.push_back(nums[right]);
-
-    while (窗口需要缩小) {
-        // 可维护答案
-        window.erase(window.begin()); 
-        left += 1;
-    }
-
-    // 向右侧增大窗口
-    right += 1;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="k">while</span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="n">window</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">right</span><span class="p">]);</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">窗口需要缩小</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">        </span><span class="c1">// 可维护答案</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">        </span><span class="n">window</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">window</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span><span class="w"> </span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">        </span><span class="n">left</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">    </span><span class="c1">// 向右侧增大窗口</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">    </span><span class="n">right</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="25">2.5 例题讲解</h3>
 <h3 id="251-lc209">2.5.1 LC209 长度最小的子数组</h3>
 <h4 id="_34">问题描述</h4>
@@ -3673,34 +3940,60 @@ while(right &lt; nums.size()) {
 <li>输出窗口和的最小值作为答案。</li>
 </ol>
 <h4 id="_36">参考解答</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    int minSubArrayLen(int target, vector&lt;int&gt;&amp; nums) {
-        int size = nums.size();
-        int ans = size + 1;  // 初始化一个较大的值，用来记录最小子数组长度
-        int left = 0;        // 左指针
-        int right = 0;       // 右指针
-        int window_sum = 0;  // 滑动窗口的当前和
-
-        // 移动右指针，扩大窗口
-        while (right &lt; size) {
-            window_sum += nums[right];  // 加入右指针指向的元素
-
-            // 当窗口和大于等于目标值时，开始缩小窗口
-            while (window_sum &gt;= target) {
-                ans = min(ans, right - left + 1);  // 更新最小子数组长度
-                window_sum -= nums[left];          // 移除左指针指向的元素
-                left++;                            // 左指针右移，缩小窗口
-            }
-
-            right++;  // 右指针右移，继续扩大窗口
-        }
-
-        // 如果没有找到符合条件的子数组，返回 0；否则返回最小长度
-        return ans == size + 1 ? 0 : ans;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span>
+<span class="normal"><a href="#__codelineno-13-24">24</a></span>
+<span class="normal"><a href="#__codelineno-13-25">25</a></span>
+<span class="normal"><a href="#__codelineno-13-26">26</a></span>
+<span class="normal"><a href="#__codelineno-13-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">minSubArrayLen</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="c1">// 初始化一个较大的值，用来记录最小子数组长度</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">        </span><span class="c1">// 左指针</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">       </span><span class="c1">// 右指针</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">window_sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 滑动窗口的当前和</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">        </span><span class="c1">// 移动右指针，扩大窗口</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">            </span><span class="n">window_sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">right</span><span class="p">];</span><span class="w">  </span><span class="c1">// 加入右指针指向的元素</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">            </span><span class="c1">// 当窗口和大于等于目标值时，开始缩小窗口</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">window_sum</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">                </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// 更新最小子数组长度</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">                </span><span class="n">window_sum</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">left</span><span class="p">];</span><span class="w">          </span><span class="c1">// 移除左指针指向的元素</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">                </span><span class="n">left</span><span class="o">++</span><span class="p">;</span><span class="w">                            </span><span class="c1">// 左指针右移，缩小窗口</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="w">            </span><span class="n">right</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 右指针右移，继续扩大窗口</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a>
+<a id="__codelineno-13-24" name="__codelineno-13-24"></a><span class="w">        </span><span class="c1">// 如果没有找到符合条件的子数组，返回 0；否则返回最小长度</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="26">2.6 举一反三</h3>
 <h3 id="261-lc713-k">2.6.1 LC713 乘积小于K的子数组</h3>
 <h4 id="_37">问题描述</h4>
@@ -3716,36 +4009,64 @@ public:
 <li>输出累积的答案个数。</li>
 </ol>
 <h4 id="_39">参考解答</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    int numSubarrayProductLessThanK(vector&lt;int&gt;&amp; nums, int k) {
-        if (k &lt;= 1) return 0; // 如果 k &lt;= 1，无法找到乘积小于 k 的子数组，直接返回 0
-
-        int size = nums.size();
-        int left = 0;        // 左指针
-        int right = 0;       // 右指针
-        int window_product = 1; // 滑动窗口的当前乘积
-        int count = 0;       // 记录符合要求的子数组数量
-
-        // 移动右指针，扩大窗口
-        while (right &lt; size) {
-            window_product *= nums[right];  // 更新当前窗口的乘积
-
-            // 如果窗口的乘积大于等于 k，则缩小窗口
-            while (window_product &gt;= k &amp;&amp; left &lt;= right) {
-                window_product /= nums[left]; // 从乘积中移除左指针指向的元素
-                left++;                       // 左指针右移，缩小窗口
-            }
-
-            // 右指针 - 左指针 + 1 表示以 right 结尾的、乘积小于 k 的子数组个数
-            count += (right - left + 1);
-            right++; // 右指针右移，继续扩大窗口
-        }
-
-        return count;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span>
+<span class="normal"><a href="#__codelineno-14-19">19</a></span>
+<span class="normal"><a href="#__codelineno-14-20">20</a></span>
+<span class="normal"><a href="#__codelineno-14-21">21</a></span>
+<span class="normal"><a href="#__codelineno-14-22">22</a></span>
+<span class="normal"><a href="#__codelineno-14-23">23</a></span>
+<span class="normal"><a href="#__codelineno-14-24">24</a></span>
+<span class="normal"><a href="#__codelineno-14-25">25</a></span>
+<span class="normal"><a href="#__codelineno-14-26">26</a></span>
+<span class="normal"><a href="#__codelineno-14-27">27</a></span>
+<span class="normal"><a href="#__codelineno-14-28">28</a></span>
+<span class="normal"><a href="#__codelineno-14-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numSubarrayProductLessThanK</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 如果 k &lt;= 1，无法找到乘积小于 k 的子数组，直接返回 0</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">        </span><span class="c1">// 左指针</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">       </span><span class="c1">// 右指针</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">window_product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 滑动窗口的当前乘积</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">       </span><span class="c1">// 记录符合要求的子数组数量</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">        </span><span class="c1">// 移动右指针，扩大窗口</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">            </span><span class="n">window_product</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">right</span><span class="p">];</span><span class="w">  </span><span class="c1">// 更新当前窗口的乘积</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="w">            </span><span class="c1">// 如果窗口的乘积大于等于 k，则缩小窗口</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">window_product</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="w">                </span><span class="n">window_product</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">left</span><span class="p">];</span><span class="w"> </span><span class="c1">// 从乘积中移除左指针指向的元素</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">                </span><span class="n">left</span><span class="o">++</span><span class="p">;</span><span class="w">                       </span><span class="c1">// 左指针右移，缩小窗口</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21"></a>
+<a id="__codelineno-14-22" name="__codelineno-14-22"></a><span class="w">            </span><span class="c1">// 右指针 - 左指针 + 1 表示以 right 结尾的、乘积小于 k 的子数组个数</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24"></a><span class="w">            </span><span class="n">right</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 右指针右移，继续扩大窗口</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26"></a>
+<a id="__codelineno-14-27" name="__codelineno-14-27"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<a id="__codelineno-14-28" name="__codelineno-14-28"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-29" name="__codelineno-14-29"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="262-lc424">2.6.2 LC424 替换后的最长重复字符</h3>
 <h4 id="_40">问题描述</h4>
 <p>给你一个字符串 <code>s</code> 和一个整数 <code>k</code> 。你可以选择字符串中的任一字符，并将其更改为任何其他大写英文字符。该操作最多可执行 <code>k</code> 次。
@@ -3759,47 +4080,76 @@ public:
 <h4 id="_42">具体案例</h4>
 <p>假设 <code>s = "AABABBA"</code>, <code>k = 1</code>。</p>
 <ol>
-<li><strong>初始情况</strong>：</li>
+<li><strong>初始情况</strong>：<ul>
 <li>我们从左边界 <code>left = 0</code> 和右边界 <code>right = 0</code> 开始。</li>
 <li><code>max_count = 1</code>，即当前窗口 <code>A</code> 中出现次数最多的字符 <code>A</code> 出现了 1 次。</li>
-<li><strong>逐渐扩展窗口</strong>：</li>
+</ul>
+</li>
+<li><strong>逐渐扩展窗口</strong>：<ul>
 <li>扩展到 <code>right = 1</code> 时，窗口 <code>AA</code> 中出现最多的字符 <code>A</code> 出现了 2 次，<code>max_count = 2</code>。窗口大小减去 <code>max_count</code> 为 <code>2 - 2 = 0</code>，小于等于 <code>k</code>，所以我们不缩小窗口。</li>
 <li>扩展到 <code>right = 2</code> 时，窗口 <code>AAB</code> 中出现最多的字符 <code>A</code> 出现了 2 次，<code>max_count = 2</code>。窗口大小减去 <code>max_count</code> 为 <code>3 - 2 = 1</code>，等于 <code>k</code>，仍然不缩小窗口。</li>
-<li><strong>窗口不再满足条件，缩小窗口</strong>：</li>
+</ul>
+</li>
+<li><strong>窗口不再满足条件，缩小窗口</strong>：<ul>
 <li>扩展到 <code>right = 4</code> 时，窗口变成 <code>AABAB</code>。此时 <code>A</code> 仍然是出现次数最多的字符，<code>max_count = 2</code>，但窗口大小是 5。<code>5 - 2 = 3</code>，超过了 <code>k = 1</code>。</li>
 <li>这时我们必须缩小窗口，将 <code>left</code> 向右移动，移除最左边的 <code>A</code>，这样窗口变成了 <code>ABAB</code>。虽然我们移除了一个 <code>A</code>，<code>max_count</code> 暂时没有变，因为还会有其他字符出现。</li>
-<li><strong>继续扩展</strong>：</li>
+</ul>
+</li>
 <li>
-<p>在右边界继续扩展时，<code>max_count</code> 会根据新窗口的字符动态更新，不用担心移除最大频次字符会影响结果。因为此时最大值就是窗口大小值！直到有更多的重复元素出现，也就是更大的窗口值。</p>
+<p><strong>继续扩展</strong>：</p>
+<ul>
+<li>在右边界继续扩展时，<code>max_count</code> 会根据新窗口的字符动态更新，不用担心移除最大频次字符会影响结果。因为此时最大值就是窗口大小值！直到有更多的重复元素出现，也就是更大的窗口值。</li>
+</ul>
 </li>
 <li>
 <p>返回最大窗口值<code>return s.size() - left</code>，也就是符合条件的最多次重复字符。</p>
 </li>
 </ol>
 <h4 id="_43">参考解答</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    int characterReplacement(string s, int k) {
-        int max_count = 0;  // 当前窗口中出现次数最多的字符的次数
-        int left = 0;  // 窗口的左边界
-        vector&lt;int&gt; counts(26, 0);  // 用于统计窗口中各字符的出现次数，大小为26对应'A'-'Z'
-
-        for (int right = 0; right &lt; s.size(); ++right) {
-            int index = s[right] - 'A';  // 将字符转换为0-25的索引
-            counts[index]++;  // 增加当前字符的计数
-            max_count = max(max_count, counts[index]);  // 更新最大出现次数
-
-            // 如果当前窗口大小减去出现最多的字符次数大于k，说明需要缩小窗口
-            if ((right - left + 1) - max_count &gt; k) {
-                counts[s[left] - 'A']--;  // 移除左边字符的计数
-                left++;  // 左边界右移，缩小窗口
-            }
-        }
-
-        return s.size() - left;  // 返回最大窗口长度
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span>
+<span class="normal"><a href="#__codelineno-15-16">16</a></span>
+<span class="normal"><a href="#__codelineno-15-17">17</a></span>
+<span class="normal"><a href="#__codelineno-15-18">18</a></span>
+<span class="normal"><a href="#__codelineno-15-19">19</a></span>
+<span class="normal"><a href="#__codelineno-15-20">20</a></span>
+<span class="normal"><a href="#__codelineno-15-21">21</a></span>
+<span class="normal"><a href="#__codelineno-15-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">characterReplacement</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">max_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 当前窗口中出现次数最多的字符的次数</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 窗口的左边界</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">counts</span><span class="p">(</span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// 用于统计窗口中各字符的出现次数，大小为26对应&#39;A&#39;-&#39;Z&#39;</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">right</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 将字符转换为0-25的索引</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">            </span><span class="n">counts</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 增加当前字符的计数</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">            </span><span class="n">max_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">max_count</span><span class="p">,</span><span class="w"> </span><span class="n">counts</span><span class="p">[</span><span class="n">index</span><span class="p">]);</span><span class="w">  </span><span class="c1">// 更新最大出现次数</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">            </span><span class="c1">// 如果当前窗口大小减去出现最多的字符次数大于k，说明需要缩小窗口</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">max_count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">                </span><span class="n">counts</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">left</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">]</span><span class="o">--</span><span class="p">;</span><span class="w">  </span><span class="c1">// 移除左边字符的计数</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">                </span><span class="n">left</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 左边界右移，缩小窗口</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="p">;</span><span class="w">  </span><span class="c1">// 返回最大窗口长度</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="263-lc1658-x0">2.6.3 LC1658 将x减到0的最小操作数</h3>
 <h4 id="_44">问题描述</h4>
 <p>给你一个整数数组<code>nums</code>和一个整数<code>x</code>。每一次操作时，你应当移除数组<code>nums</code>最左边或最右边的元素，然后从<code>x</code>中减去该元素的值。请注意，需要 <strong>修改</strong> 数组以供接下来的操作使用。</p>
@@ -3823,40 +4173,72 @@ public:
 <p>4.<strong>计算结果</strong></p>
 <p>输出 <code>nums.size() - max_len</code>，代表需要移除的最少元素数量以达到除了最长和为 <code>target</code> 子数组外的元素。</p>
 <h4 id="_46">参考代码</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    int minOperations(vector&lt;int&gt;&amp; nums, int x) {
-        int target = accumulate(nums.begin(), nums.end(), 0) - x;
-        int size = nums.size();
-
-        if (target &lt; 0) return -1; // target 不可能为负数
-        if (target == 0) return size; // 如果刚好移除所有元素即可
-
-        int left = 0, right = 0;
-        int window_sum = 0, max_len = INT_MIN;
-
-        while (right &lt; size) {
-            window_sum += nums[right];
-
-            // 窗口总和大于 target 时缩小窗口
-            while (window_sum &gt; target) {
-                window_sum -= nums[left];
-                left++;
-            }
-
-            // 找到窗口总和等于 target 时更新最大子数组长度
-            if (window_sum == target) {
-                max_len = max(max_len, right - left + 1);
-            }
-
-            right++;
-        }
-
-        // 如果没找到符合条件的子数组，返回 -1
-        return max_len == INT_MIN ? -1 : size - max_len;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span>
+<span class="normal"><a href="#__codelineno-16-14">14</a></span>
+<span class="normal"><a href="#__codelineno-16-15">15</a></span>
+<span class="normal"><a href="#__codelineno-16-16">16</a></span>
+<span class="normal"><a href="#__codelineno-16-17">17</a></span>
+<span class="normal"><a href="#__codelineno-16-18">18</a></span>
+<span class="normal"><a href="#__codelineno-16-19">19</a></span>
+<span class="normal"><a href="#__codelineno-16-20">20</a></span>
+<span class="normal"><a href="#__codelineno-16-21">21</a></span>
+<span class="normal"><a href="#__codelineno-16-22">22</a></span>
+<span class="normal"><a href="#__codelineno-16-23">23</a></span>
+<span class="normal"><a href="#__codelineno-16-24">24</a></span>
+<span class="normal"><a href="#__codelineno-16-25">25</a></span>
+<span class="normal"><a href="#__codelineno-16-26">26</a></span>
+<span class="normal"><a href="#__codelineno-16-27">27</a></span>
+<span class="normal"><a href="#__codelineno-16-28">28</a></span>
+<span class="normal"><a href="#__codelineno-16-29">29</a></span>
+<span class="normal"><a href="#__codelineno-16-30">30</a></span>
+<span class="normal"><a href="#__codelineno-16-31">31</a></span>
+<span class="normal"><a href="#__codelineno-16-32">32</a></span>
+<span class="normal"><a href="#__codelineno-16-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">minOperations</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accumulate</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">target</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="c1">// target 不可能为负数</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">target</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">size</span><span class="p">;</span><span class="w"> </span><span class="c1">// 如果刚好移除所有元素即可</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">window_sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">max_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">INT_MIN</span><span class="p">;</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="w">            </span><span class="n">window_sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">right</span><span class="p">];</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a>
+<a id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="w">            </span><span class="c1">// 窗口总和大于 target 时缩小窗口</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">window_sum</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18"></a><span class="w">                </span><span class="n">window_sum</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">left</span><span class="p">];</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19"></a><span class="w">                </span><span class="n">left</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21"></a>
+<a id="__codelineno-16-22" name="__codelineno-16-22"></a><span class="w">            </span><span class="c1">// 找到窗口总和等于 target 时更新最大子数组长度</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">window_sum</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24"></a><span class="w">                </span><span class="n">max_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">max_len</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26"></a>
+<a id="__codelineno-16-27" name="__codelineno-16-27"></a><span class="w">            </span><span class="n">right</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29"></a>
+<a id="__codelineno-16-30" name="__codelineno-16-30"></a><span class="w">        </span><span class="c1">// 如果没找到符合条件的子数组，返回 -1</span>
+<a id="__codelineno-16-31" name="__codelineno-16-31"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">max_len</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">INT_MIN</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">max_len</span><span class="p">;</span>
+<a id="__codelineno-16-32" name="__codelineno-16-32"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-33" name="__codelineno-16-33"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="3">3 课后练习</h2>
 <h4 id="_47">对撞指针</h4>
 <table>

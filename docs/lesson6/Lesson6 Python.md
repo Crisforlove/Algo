@@ -201,12 +201,12 @@ class Solution(object):
 - `split()` 方法会自动去除字符串中的多余空格，并将字符串按空格分割为单词列表。
 - 然后，通过 `len()` 函数计算单词列表的长度，即单词的数量。
 
- ```python
+```python
 class Solution(object):
     def countSegments(self, s):
         s = s.split()
         return len(s)
- ```
+```
 
 ## 举一反三
 

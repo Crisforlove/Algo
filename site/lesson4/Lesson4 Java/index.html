@@ -1017,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1038,7 +1038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1059,7 +1059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2121,20 +2121,22 @@
 </ol>
 <h2 id="1">1. 创建字符串</h2>
 <p>Java中使用 <code>String</code> 类来表示字符串，可以使用双引号 <code>" "</code> 来创建字符串变量。</p>
-<pre><code class="language-java">String var1 = &quot;Hello World!&quot;;
-String var2 = &quot;CodeRaft&quot;;
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">String</span><span class="w"> </span><span class="n">var1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World!&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">String</span><span class="w"> </span><span class="n">var2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;CodeRaft&quot;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="2">2. 访问字符串中的值</h2>
 <p>Java中访问字符串中的字符可以使用索引，索引从0开始。</p>
-<pre><code class="language-java">String var1 = &quot;Hello World!&quot;;
-char firstChar = var1.charAt(0); // 获取索引为0的字符 'H'
-String substr = var2.substring(1, 5); // 截取字符串 var2 的第2到第5个字符（&quot;odeR&quot;）
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">firstChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">var1</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 获取索引为0的字符 &#39;H&#39;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">String</span><span class="w"> </span><span class="n">substr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">var2</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 截取字符串 var2 的第2到第5个字符（&quot;odeR&quot;）</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="3">3. 字符串连接与更新</h2>
 <p>Java中字符串是不可变的，每次连接字符串都会创建一个新的字符串对象。</p>
-<pre><code class="language-java">String var1 = &quot;Hello&quot;;
-var1 = var1 + &quot; CodeRaft!&quot;; // 连接字符串并更新 var1
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">String</span><span class="w"> </span><span class="n">var1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">var1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">var1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; CodeRaft!&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 连接字符串并更新 var1</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="4-java">4. Java字符串格式化</h2>
 <p>字符串格式化是将数据（如变量的值）插入到字符串中的一种技术。这使得构建动态字符串变得更加方便和可读。</p>
 <h3 id="41-stringformat">4.1 使用 <code>String.format</code></h3>
@@ -2142,66 +2144,99 @@ var1 = var1 + &quot; CodeRaft!&quot;; // 连接字符串并更新 var1
 <p><strong>%s：格式化字符串</strong></p>
 <p><code>%s</code> 用于格式化字符串。</p>
 <p><strong>示例：</strong>
-   <code>java
-   String name = "小明";
-   int age = 10;
-   String formattedString = String.format("我叫 %s 今年 %d 岁!", name, age);
-   System.out.println(formattedString); // 输出：我叫 小明 今年 10 岁!</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;小明&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">String</span><span class="w"> </span><span class="n">formattedString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;我叫 %s 今年 %d 岁!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">formattedString</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：我叫 小明 今年 10 岁!</span>
+</code></pre></div></td></tr></table></div></p>
 <p><strong>%d：格式化整数</strong></p>
 <p><code>%d</code> 用于格式化整数。</p>
 <p><strong>示例：</strong>
-   <code>java
-   int number = 12345;
-   String formattedNumber = String.format("数字：%d", number);
-   System.out.println(formattedNumber); // 输出：数字：12345</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span><span class="p">;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">String</span><span class="w"> </span><span class="n">formattedNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;数字：%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="p">);</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">formattedNumber</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：数字：12345</span>
+</code></pre></div></td></tr></table></div></p>
 <p><strong>%f：格式化浮点数</strong></p>
 <p><code>%f</code> 用于格式化浮点数，默认保留六位小数。</p>
 <p><strong>示例：</strong>
-   <code>java
-   double pi = 3.14159;
-   String formattedPi = String.format("π 的近似值为：%.2f", pi);
-   System.out.println(formattedPi); // 输出：π 的近似值为：3.14</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">String</span><span class="w"> </span><span class="n">formattedPi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;π 的近似值为：%.2f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pi</span><span class="p">);</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">formattedPi</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：π 的近似值为：3.14</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="_2">使用示例</h3>
-<pre><code class="language-java">String name = &quot;小明&quot;;
-int age = 10;
-double height = 1.75;
-
-String formattedString = String.format(&quot;我叫 %s，今年 %d 岁，身高 %.2f 米&quot;, name, age, height);
-System.out.println(formattedString); // 输出：我叫 小明，今年 10 岁，身高 1.75 米
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;小明&quot;</span><span class="p">;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.75</span><span class="p">;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">String</span><span class="w"> </span><span class="n">formattedString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;我叫 %s，今年 %d 岁，身高 %.2f 米&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">);</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">formattedString</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：我叫 小明，今年 10 岁，身高 1.75 米</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="42-text-blocks">4.2 文本块（Text Blocks）</h3>
 <p>文本块允许你编写多行字符串而无需使用换行符或转义字符。例如：</p>
-<pre><code class="language-java">String textBlock = &quot;&quot;&quot;
-    This is a text block.
-    It can span multiple lines.
-    &quot;&quot;&quot;;
-System.out.println(textBlock);
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">String</span><span class="w"> </span><span class="n">textBlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="s">    This is a text block.</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="s">    It can span multiple lines.</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="s">    &quot;&quot;&quot;</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">textBlock</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="43-stringformat">4.3 使用 <code>String.format()</code> 和文本块结合</h3>
 <p>虽然文本块本身不支持内嵌变量，但你可以使用 <code>String.format()</code> 将变量插入文本块中：</p>
-<pre><code class="language-java">String name = &quot;Alice&quot;;
-int age = 30;
-
-String formattedString = String.format(&quot;&quot;&quot;
-    My name is %s.
-    I am %d years old.
-    &quot;&quot;&quot;, name, age);
-
-System.out.println(formattedString);
-// 输出：
-// My name is Alice.
-// I am 30 years old.
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">String</span><span class="w"> </span><span class="n">formattedString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;&quot;&quot;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="s">    My name is %s.</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="s">    I am %d years old.</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="s">    &quot;&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">formattedString</span><span class="p">);</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="c1">// 输出：</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="c1">// My name is Alice.</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="c1">// I am 30 years old.</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="44-stringbuilder">4.4 使用 <code>StringBuilder</code> 进行格式化</h3>
 <p>Java中建议使用 <code>StringBuilder</code> 类来动态构建字符串，特别是在需要频繁连接和修改字符串时，因此对于复杂的字符串构建，你可以结合使用 <code>StringBuilder</code> 和字符串格式化：</p>
-<pre><code class="language-java">String name = &quot;Bob&quot;;
-double score = 95.5;
-
-StringBuilder sb = new StringBuilder();
-sb.append(String.format(&quot;Student %s scored %.2f marks.%n&quot;, name, score));
-System.out.println(sb.toString());
-// 输出：Student Bob scored 95.50 marks.
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span>
+<span class="normal"><a href="#__codelineno-9-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Bob&quot;</span><span class="p">;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">95.5</span><span class="p">;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Student %s scored %.2f marks.%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">score</span><span class="p">));</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sb</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="c1">// 输出：Student Bob scored 95.50 marks.</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="5-java">5. Java 转义字符</h2>
 <p>在Java中，转义字符用于表示特殊字符和控制字符。以下是一些常见的转义字符示例：</p>
 <table>
@@ -2261,31 +2296,54 @@ System.out.println(sb.toString());
 </tbody>
 </table>
 <p>使用了不同的转义字符来演示单引号、换行符、制表符、退格符、换页符的效果：</p>
-<pre><code class="language-java">public class EscapeCharacters {
-    public static void main(String[] args) {
-        // 单引号
-        System.out.println('\''); // 输出：'
-
-        // 换行符
-        System.out.println(&quot;Hello, world!\nHow are you?&quot;);
-        // 输出：
-        // Hello, world!
-        // How are you?
-
-        // 制表符
-        System.out.println(&quot;Hello, world!\tHow are you?&quot;); // 输出：Hello, world!    How are you?
-
-        // 退格符
-        System.out.println(&quot;Hello,\b world!&quot;); // 输出：Hello world!
-
-        // 换页符
-        System.out.println(&quot;Hello,\f world!&quot;);
-        // 输出：
-        // Hello,
-        //  world!
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span>
+<span class="normal"><a href="#__codelineno-10-20">20</a></span>
+<span class="normal"><a href="#__codelineno-10-21">21</a></span>
+<span class="normal"><a href="#__codelineno-10-22">22</a></span>
+<span class="normal"><a href="#__codelineno-10-23">23</a></span>
+<span class="normal"><a href="#__codelineno-10-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EscapeCharacters</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">        </span><span class="c1">// 单引号</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="sc">&#39;\&#39;&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：&#39;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">        </span><span class="c1">// 换行符</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello, world!\nHow are you?&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">        </span><span class="c1">// 输出：</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">        </span><span class="c1">// Hello, world!</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">        </span><span class="c1">// How are you?</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">        </span><span class="c1">// 制表符</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello, world!\tHow are you?&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：Hello, world!    How are you?</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">        </span><span class="c1">// 退格符</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello,\b world!&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：Hello world!</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">        </span><span class="c1">// 换页符</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello,\f world!&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="w">        </span><span class="c1">// 输出：</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="w">        </span><span class="c1">// Hello,</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="w">        </span><span class="c1">//  world!</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="6-java">6. Java 字符串运算符</h2>
 <p>在Java中，字符串是一种常见的数据类型，提供了多种操作符来对字符串进行操作和处理。下面我们将介绍Java中常用的字符串运算符及其用法。</p>
 <p>在 Java 中，常用的字符串函数包括：</p>
@@ -2293,132 +2351,162 @@ System.out.println(sb.toString());
 <ul>
 <li><strong>功能：</strong> 返回字符串的长度。</li>
 <li><strong>示例：</strong>
-  <code>java
-  String str = "Hello, World!";
-  int length = str.length();  // 13</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, World!&quot;</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w">  </span><span class="c1">// 13</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="62-charatint-index">6.2 <code>charAt(int index)</code></h3>
 <ul>
 <li><strong>功能：</strong> 返回指定位置的字符。</li>
 <li><strong>示例：</strong>
-  <code>java
-  String str = "Hello";
-  char ch = str.charAt(1);  // 'e'</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// &#39;e&#39;</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="63-substringint-beginindex-int-endindex">6.3 <code>substring(int beginIndex, int endIndex)</code></h3>
 <ul>
 <li><strong>功能：</strong> 返回从 <code>beginIndex</code> 到 <code>endIndex</code> 之间的子字符串。</li>
 <li><strong>示例：</strong>
-  <code>java
-  String str = "Hello, World!";
-  String substr = str.substring(7, 12);  // "World"</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, World!&quot;</span><span class="p">;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">String</span><span class="w"> </span><span class="n">substr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;World&quot;</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="64-tolowercase">6.4 <code>toLowerCase()</code></h3>
 <ul>
 <li><strong>功能：</strong> 将字符串转换为小写。</li>
 <li><strong>示例：</strong>
-  <code>java
-  String str = "HELLO";
-  String lower = str.toLowerCase();  // "hello"</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;HELLO&quot;</span><span class="p">;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">String</span><span class="w"> </span><span class="n">lower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">();</span><span class="w">  </span><span class="c1">// &quot;hello&quot;</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="65-touppercase">6.5 <code>toUpperCase()</code></h3>
 <ul>
 <li><strong>功能：</strong> 将字符串转换为大写。</li>
 <li><strong>示例：</strong>
-  <code>java
-  String str = "hello";
-  String upper = str.toUpperCase();  // "HELLO"</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="n">String</span><span class="w"> </span><span class="n">upper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">();</span><span class="w">  </span><span class="c1">// &quot;HELLO&quot;</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="66-trim">6.6 <code>trim()</code></h3>
 <ul>
 <li><strong>功能：</strong> 去除字符串前后的空白字符。</li>
 <li><strong>示例：</strong>
-  <code>java
-  String str = "   Hello, World!   ";
-  String trimmed = str.trim();  // "Hello, World!"</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;   Hello, World!   &quot;</span><span class="p">;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="n">String</span><span class="w"> </span><span class="n">trimmed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">trim</span><span class="p">();</span><span class="w">  </span><span class="c1">// &quot;Hello, World!&quot;</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="67-replacecharsequence-target-charsequence-replacement">6.7 <code>replace(CharSequence target, CharSequence replacement)</code></h3>
 <ul>
 <li><strong>功能：</strong> 替换字符串中的指定子字符串。</li>
 <li><strong>示例：</strong>
-  <code>java
-  String str = "Hello, World!";
-  String replaced = str.replace("World", "Java");  // "Hello, Java!"</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, World!&quot;</span><span class="p">;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="n">String</span><span class="w"> </span><span class="n">replaced</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">replace</span><span class="p">(</span><span class="s">&quot;World&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Java&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;Hello, Java!&quot;</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="68-splitstring-regex">6.8 <code>split(String regex)</code></h3>
 <ul>
 <li><strong>功能：</strong> 根据正则表达式分割字符串。</li>
 <li><strong>示例：</strong>
-  <code>java
-  String str = "apple,banana,cherry";
-  String[] fruits = str.split(",");  // ["apple", "banana", "cherry"]</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;apple,banana,cherry&quot;</span><span class="p">;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="69-concatstring-str">6.9 <code>concat(String str)</code></h3>
 <ul>
 <li><strong>功能：</strong> 将指定的字符串连接到当前字符串的末尾。</li>
 <li><strong>示例：</strong>
-  <code>java
-  String str = "Hello";
-  String concatenated = str.concat(", World!");  // "Hello, World!"</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="n">String</span><span class="w"> </span><span class="n">concatenated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot;, World!&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;Hello, World!&quot;</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="610">6.10 <strong>字符串连接运算符 <code>+</code></strong></h3>
 <p>字符串连接运算符 <code>+</code> 用于将两个字符串连接起来。</p>
 <p><strong>示例：</strong>
-   <code>java
-   String str1 = "Hello";
-   String str2 = "World";
-   String result = str1 + str2;
-   System.out.println(result); // 输出：HelloWorld</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="n">String</span><span class="w"> </span><span class="n">str2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;World&quot;</span><span class="p">;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">str2</span><span class="p">;</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：HelloWorld</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="611-repeat">6.11 <strong>重复输出字符串运算符 <code>repeat()</code></strong></h3>
 <p>Java 11 引入了 <code>repeat()</code> 方法来重复字符串。</p>
 <p><strong>示例：</strong>
-   <code>java
-   String str = "Hello";
-   String repeatedStr = str.repeat(3);
-   System.out.println(repeatedStr); // 输出：HelloHelloHello</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="n">String</span><span class="w"> </span><span class="n">repeatedStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">repeatedStr</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：HelloHelloHello</span>
+</code></pre></div></td></tr></table></div></p>
 <p>注意：<code>repeat()</code> 方法在 Java 11 及以上版本可用。</p>
 <h3 id="612-charat">6.12 <strong>通过索引获取字符 <code>charAt()</code></strong></h3>
 <p><code>charAt()</code> 方法用于获取字符串中指定位置的字符。</p>
 <p><strong>示例：</strong>
-   <code>java
-   String str = "Hello";
-   char ch = str.charAt(1); // 获取索引为1的字符，即第2个字符 'e'
-   System.out.println(ch); // 输出：e</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 获取索引为1的字符，即第2个字符 &#39;e&#39;</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ch</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：e</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="613-substring">6.13 <strong>截取子字符串 <code>substring()</code></strong></h3>
 <p><code>substring()</code> 方法用于截取字符串的一部分。</p>
 <p><strong>示例：</strong>
-   <code>java
-   String str = "HelloWorld";
-   String subStr = str.substring(3, 7); // 从索引3开始到索引6（不包括7）的子字符串，即 "loWo"
-   System.out.println(subStr); // 输出：loWo</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;HelloWorld&quot;</span><span class="p">;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="n">String</span><span class="w"> </span><span class="n">subStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w"> </span><span class="c1">// 从索引3开始到索引6（不包括7）的子字符串，即 &quot;loWo&quot;</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">subStr</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：loWo</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="614-contains">6.14 <strong>成员运算符 <code>contains()</code></strong></h3>
 <p><code>contains()</code> 方法用于检查字符串是否包含指定的字符序列。</p>
 <p><strong>示例：</strong>
-   <code>java
-   String str = "HelloWorld";
-   boolean contains = str.contains("Wo"); // 检查是否包含 "Wo"
-   System.out.println(contains); // 输出：true</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;HelloWorld&quot;</span><span class="p">;</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">contains</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;Wo&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 检查是否包含 &quot;Wo&quot;</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">contains</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：true</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="615-indexof-lastindexof">6.15 <strong>成员运算符 <code>indexOf()</code> 和 <code>lastIndexOf()</code></strong></h3>
 <p><code>indexOf()</code> 和 <code>lastIndexOf()</code> 方法用于获取字符或字符串在目标字符串中第一次出现的位置索引和最后一次出现的位置索引。</p>
 <p><strong>示例：</strong>
-   <code>java
-   String str = "HelloWorld";
-   int firstIndex = str.indexOf('o'); // 第一次出现 'o' 的位置索引，索引从0开始
-   int lastIndex = str.lastIndexOf('o'); // 最后一次出现 'o' 的位置索引
-   System.out.println("第一次出现 'o' 的位置索引：" + firstIndex); // 输出：4
-   System.out.println("最后一次出现 'o' 的位置索引：" + lastIndex); // 输出：7</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span>
+<span class="normal"><a href="#__codelineno-25-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;HelloWorld&quot;</span><span class="p">;</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">firstIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="sc">&#39;o&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 第一次出现 &#39;o&#39; 的位置索引，索引从0开始</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">lastIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">lastIndexOf</span><span class="p">(</span><span class="sc">&#39;o&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 最后一次出现 &#39;o&#39; 的位置索引</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;第一次出现 &#39;o&#39; 的位置索引：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">firstIndex</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：4</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最后一次出现 &#39;o&#39; 的位置索引：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lastIndex</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：7</span>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="7">7. 课后练习</h2>
 <h3 id="71">7.1 选择题</h3>
 <h4 id="1_1">题目 1: 字符串索引与切片</h4>
 <p>观察以下代码，输出结果是什么？</p>
-<pre><code class="language-java">public class StringTest {
-    public static void main(String[] args) {
-        String str = &quot;Hello, World!&quot;;
-        String slice = str.substring(7, 12);
-        System.out.println(slice);
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span>
+<span class="normal"><a href="#__codelineno-26-5">5</a></span>
+<span class="normal"><a href="#__codelineno-26-6">6</a></span>
+<span class="normal"><a href="#__codelineno-26-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, World!&quot;</span><span class="p">;</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">slice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">slice</span><span class="p">);</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>A. Hello</strong></p>
 <p><strong>B. World</strong></p>
 <p><strong>C. World!</strong></p>
@@ -2428,17 +2516,26 @@ System.out.println(sb.toString());
 <hr />
 <h4 id="2_1">题目 2: 字符串常用函数</h4>
 <p>观察以下代码，输出结果是什么？</p>
-<pre><code class="language-java">public class StringFunctions {
-    public static void main(String[] args) {
-        String str = &quot; Java Programming &quot;;
-        int length = str.trim().length();
-        String lower = str.toLowerCase();
-        String concatenated = lower.concat(&quot; is fun!&quot;);
-        System.out.println(&quot;Length: &quot; + length);
-        System.out.println(&quot;Concatenated: &quot; + concatenated);
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-27-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-27-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-27-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-27-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-27-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-27-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-27-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-27-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-27-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringFunctions</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot; Java Programming &quot;</span><span class="p">;</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">trim</span><span class="p">().</span><span class="na">length</span><span class="p">();</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">lower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">();</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">concatenated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lower</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot; is fun!&quot;</span><span class="p">);</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Length: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">length</span><span class="p">);</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Concatenated: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">concatenated</span><span class="p">);</span>
+<a id="__codelineno-27-9" name="__codelineno-27-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-27-10" name="__codelineno-27-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>A. Length: 16; Concatenated: java programming is fun!</strong></p>
 <p><strong>B. Length: 18; Concatenated: java programming is fun!</strong></p>
 <p><strong>C. Length: 17; Concatenated: java programming is fun!</strong></p>
@@ -2448,15 +2545,22 @@ System.out.println(sb.toString());
 <hr />
 <h4 id="3_1">题目 3: 字符串格式化</h4>
 <p>观察以下代码，输出结果是什么？</p>
-<pre><code class="language-java">public class StringFormat {
-    public static void main(String[] args) {
-        int age = 25;
-        String name = &quot;Alice&quot;;
-        String formatted = String.format(&quot;Name: %s, Age: %d&quot;, name, age);
-        System.out.println(formatted);
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<span class="normal"><a href="#__codelineno-28-2">2</a></span>
+<span class="normal"><a href="#__codelineno-28-3">3</a></span>
+<span class="normal"><a href="#__codelineno-28-4">4</a></span>
+<span class="normal"><a href="#__codelineno-28-5">5</a></span>
+<span class="normal"><a href="#__codelineno-28-6">6</a></span>
+<span class="normal"><a href="#__codelineno-28-7">7</a></span>
+<span class="normal"><a href="#__codelineno-28-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringFormat</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">;</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">formatted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Name: %s, Age: %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">formatted</span><span class="p">);</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>A. Name: Alice, Age: 25</strong></p>
 <p><strong>B. Name: %s, Age: %d</strong></p>
 <p><strong>C. Name: Alice, Age: 25</strong></p>
@@ -2466,67 +2570,104 @@ System.out.println(sb.toString());
 <h3 id="72">7.2 代码题</h3>
 <h3 id="1_2">题目 1: 字符串索引与切片</h3>
 <p><strong>题目：</strong> 编写一个 Java 程序，创建一个字符串 <code>"Programming in Java"</code>。使用 <code>substring</code> 方法提取并输出从索引 0 到索引 11 的子字符串。</p>
-<p><strong>示例代码：</strong></p>
-<pre><code class="language-java">public class StringTest {
-    public static void main(String[] args) {
-        String str = &quot;Programming in Java&quot;;
-        // 请在这里编写代码
-    }
-}
-</code></pre>
-<p><strong>答案：</strong></p>
-<pre><code class="language-java">public class StringTest {
-    public static void main(String[] args) {
-        String str = &quot;Programming in Java&quot;;
-        String substring = str.substring(0, 11);
-        System.out.println(substring);  // 输出 &quot;Programming&quot;
-    }
-}
-</code></pre>
+<p><strong>示例代码：</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span>
+<span class="normal"><a href="#__codelineno-29-3">3</a></span>
+<span class="normal"><a href="#__codelineno-29-4">4</a></span>
+<span class="normal"><a href="#__codelineno-29-5">5</a></span>
+<span class="normal"><a href="#__codelineno-29-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Programming in Java&quot;</span><span class="p">;</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="w">        </span><span class="c1">// 请在这里编写代码</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>答案：</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<span class="normal"><a href="#__codelineno-30-2">2</a></span>
+<span class="normal"><a href="#__codelineno-30-3">3</a></span>
+<span class="normal"><a href="#__codelineno-30-4">4</a></span>
+<span class="normal"><a href="#__codelineno-30-5">5</a></span>
+<span class="normal"><a href="#__codelineno-30-6">6</a></span>
+<span class="normal"><a href="#__codelineno-30-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Programming in Java&quot;</span><span class="p">;</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">substring</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">substring</span><span class="p">);</span><span class="w">  </span><span class="c1">// 输出 &quot;Programming&quot;</span>
+<a id="__codelineno-30-6" name="__codelineno-30-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-30-7" name="__codelineno-30-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <hr />
 <h3 id="2_2">题目 2: 字符串常用函数</h3>
 <p><strong>题目：</strong> 编写一个 Java 程序，创建一个字符串 <code>"   Java Programming   "</code>。去除字符串前后的空白字符，转换为大写，并拼接 <code>" is fun!"</code>。输出最终结果。</p>
-<p><strong>示例代码：</strong></p>
-<pre><code class="language-java">public class StringFunctions {
-    public static void main(String[] args) {
-        String str = &quot;   Java Programming   &quot;;
-        // 请在这里编写代码
-    }
-}
-</code></pre>
-<p><strong>答案：</strong></p>
-<pre><code class="language-java">public class StringFunctions {
-    public static void main(String[] args) {
-        String str = &quot;   Java Programming   &quot;;
-        String trimmed = str.trim();
-        String upper = trimmed.toUpperCase();
-        String result = upper.concat(&quot; is fun!&quot;);
-        System.out.println(result);  // 输出 &quot;JAVA PROGRAMMING is fun!&quot;
-    }
-}
-</code></pre>
+<p><strong>示例代码：</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<span class="normal"><a href="#__codelineno-31-2">2</a></span>
+<span class="normal"><a href="#__codelineno-31-3">3</a></span>
+<span class="normal"><a href="#__codelineno-31-4">4</a></span>
+<span class="normal"><a href="#__codelineno-31-5">5</a></span>
+<span class="normal"><a href="#__codelineno-31-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringFunctions</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;   Java Programming   &quot;</span><span class="p">;</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="w">        </span><span class="c1">// 请在这里编写代码</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-31-6" name="__codelineno-31-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>答案：</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span>
+<span class="normal"><a href="#__codelineno-32-4">4</a></span>
+<span class="normal"><a href="#__codelineno-32-5">5</a></span>
+<span class="normal"><a href="#__codelineno-32-6">6</a></span>
+<span class="normal"><a href="#__codelineno-32-7">7</a></span>
+<span class="normal"><a href="#__codelineno-32-8">8</a></span>
+<span class="normal"><a href="#__codelineno-32-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringFunctions</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;   Java Programming   &quot;</span><span class="p">;</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">trimmed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">trim</span><span class="p">();</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">upper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trimmed</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">();</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">upper</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot; is fun!&quot;</span><span class="p">);</span>
+<a id="__codelineno-32-7" name="__codelineno-32-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span><span class="w">  </span><span class="c1">// 输出 &quot;JAVA PROGRAMMING is fun!&quot;</span>
+<a id="__codelineno-32-8" name="__codelineno-32-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-32-9" name="__codelineno-32-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <hr />
 <h3 id="3_2">题目 3: 字符串格式化</h3>
 <p><strong>题目：</strong> 编写一个 Java 程序，创建一个整数变量 <code>score</code> 赋值为 85，创建一个字符串变量 <code>student</code> 赋值为 <code>"John"</code>。使用 <code>String.format</code> 方法格式化字符串，输出 <code>"Student John scored 85 points"</code>。</p>
-<p><strong>示例代码：</strong></p>
-<pre><code class="language-java">public class StringFormat {
-    public static void main(String[] args) {
-        int score = 85;
-        String student = &quot;John&quot;;
-        // 请在这里编写代码
-    }
-}
-</code></pre>
-<p><strong>答案：</strong></p>
-<pre><code class="language-java">public class StringFormat {
-    public static void main(String[] args) {
-        int score = 85;
-        String student = &quot;John&quot;;
-        String formatted = String.format(&quot;Student %s scored %d points&quot;, student, score);
-        System.out.println(formatted);  // 输出 &quot;Student John scored 85 points&quot;
-    }
-}
-</code></pre>
+<p><strong>示例代码：</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<span class="normal"><a href="#__codelineno-33-2">2</a></span>
+<span class="normal"><a href="#__codelineno-33-3">3</a></span>
+<span class="normal"><a href="#__codelineno-33-4">4</a></span>
+<span class="normal"><a href="#__codelineno-33-5">5</a></span>
+<span class="normal"><a href="#__codelineno-33-6">6</a></span>
+<span class="normal"><a href="#__codelineno-33-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringFormat</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">85</span><span class="p">;</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">;</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="w">        </span><span class="c1">// 请在这里编写代码</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>答案：</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
+<span class="normal"><a href="#__codelineno-34-2">2</a></span>
+<span class="normal"><a href="#__codelineno-34-3">3</a></span>
+<span class="normal"><a href="#__codelineno-34-4">4</a></span>
+<span class="normal"><a href="#__codelineno-34-5">5</a></span>
+<span class="normal"><a href="#__codelineno-34-6">6</a></span>
+<span class="normal"><a href="#__codelineno-34-7">7</a></span>
+<span class="normal"><a href="#__codelineno-34-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringFormat</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">85</span><span class="p">;</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">;</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">formatted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Student %s scored %d points&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">student</span><span class="p">,</span><span class="w"> </span><span class="n">score</span><span class="p">);</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">formatted</span><span class="p">);</span><span class="w">  </span><span class="c1">// 输出 &quot;Student John scored 85 points&quot;</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-34-8" name="__codelineno-34-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 
 
 

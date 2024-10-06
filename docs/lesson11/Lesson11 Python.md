@@ -158,9 +158,9 @@ for value in hmap.values():
 
 2. 将哈希值对桶数量（数组长度）`capacity` 取模，从而获取该 `key` 对应的数组索引 `index`。
 
-   ```
-   index = hash(key) % capacity
-   ```
+```
+index = hash(key) % capacity
+```
 
    随后，我们就可以利用 `index` 在哈希表中访问对应的桶，从而获取 `value` 。
 

@@ -1035,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1056,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Lesson2%20Python/" class="md-nav__link">
+      <a href="../Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1077,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2177,183 +2177,300 @@
 </ol>
 <p>条件语句使得程序在运行时可以根据不同的情况采取不同的行动，从而增强了程序的灵活性和逻辑性。以下是常见的组合：</p>
 <h3 id="11-if">1.1 <strong>if 条件语句</strong></h3>
-<p>语法如下：</p>
-<pre><code class="language-java">if(布尔表达式)
-{
-   //如果布尔表达式为true将执行的语句
-}
-</code></pre>
-<p>如果布尔表达式成立（true），则执行 if 语句中的代码块，如果不成立（false）则执行 if 语句块后面的代码。</p>
+<p>语法如下：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">if</span><span class="p">(</span><span class="n">布尔表达式</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">   </span><span class="c1">//如果布尔表达式为true将执行的语句</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+如果布尔表达式成立（true），则执行 if 语句中的代码块，如果不成立（false）则执行 if 语句块后面的代码。</p>
 <p>简单案例：</p>
 <p>键盘录入一个数，如果这个数大于10并且小于100，则控制台输出合格</p>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class IfTest01 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println(&quot;请输入一个数字&quot;);
-        int num = sc.nextInt();
-
-        if (num &gt; 10 &amp;&amp; num &lt; 100){
-            System.out.println(&quot;合格&quot;);
-        }
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IfTest01</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;请输入一个数字&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">){</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;合格&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="12-ifelse">1.2 <strong>if...else 条件语句</strong></h3>
-<p>语法如下：</p>
-<pre><code class="language-java">if(布尔表达式){
-   //如果布尔表达式的值为true
-} else {
-   //如果布尔表达式的值为false
-}
-</code></pre>
-<p>如果布尔表达式成立（true），则执行 if 语句中的代码块，如果不成立（false），则执行else语句中的代码块。</p>
+<p>语法如下：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">if</span><span class="p">(</span><span class="n">布尔表达式</span><span class="p">){</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">   </span><span class="c1">//如果布尔表达式的值为true</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">   </span><span class="c1">//如果布尔表达式的值为false</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+如果布尔表达式成立（true），则执行 if 语句中的代码块，如果不成立（false），则执行else语句中的代码块。</p>
 <p>简单案例：</p>
-<p>定义一个布尔类型，将true赋值给incident。如果事件（incident）为真则输出正确，否则输出错误。</p>
-<pre><code class="language-java">public class IfTest02 {
-    public static void main(String[] args) {
-
-        //定义事件为真
-        boolean incident = true;
-        if (incident){
-            System.out.println(&quot;正确&quot;);
-        } else {
-            System.out.println(&quot;错误&quot;);
-        }
-    }
-}
-</code></pre>
+<p>定义一个布尔类型，将true赋值给incident。如果事件（incident）为真则输出正确，否则输出错误。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IfTest02</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">        </span><span class="c1">//定义事件为真</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">incident</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">incident</span><span class="p">){</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;正确&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;错误&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="13-ifelse-ifelse">1.3 <strong>if...else if...else</strong></h3>
 <p>语法如下：</p>
-<pre><code class="language-java">if(布尔表达式 1){
-   //如果布尔表达式 1的值为true执行代码
-} else if(布尔表达式 2){
-   //如果布尔表达式 2的值为true执行代码
-} else if(布尔表达式 3){
-   //如果布尔表达式 3的值为true执行代码
-} else {
-   //如果以上布尔表达式都不为true执行代码
-}
-</code></pre>
-<p>如果布尔表达式1为真，则执行布尔表达式2；如果布尔表达式2为真，则执行布尔表达式3；依次执行后面的布尔表示，直到布尔表示为假，则执行else语句中的代码块。</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span>
+<span class="normal"><a href="#__codelineno-4-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">if</span><span class="p">(</span><span class="n">布尔表达式</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">   </span><span class="c1">//如果布尔表达式 1的值为true执行代码</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">布尔表达式</span><span class="w"> </span><span class="mi">2</span><span class="p">){</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">   </span><span class="c1">//如果布尔表达式 2的值为true执行代码</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">布尔表达式</span><span class="w"> </span><span class="mi">3</span><span class="p">){</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">   </span><span class="c1">//如果布尔表达式 3的值为true执行代码</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">   </span><span class="c1">//如果以上布尔表达式都不为true执行代码</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+如果布尔表达式1为真，则执行布尔表达式2；如果布尔表达式2为真，则执行布尔表达式3；依次执行后面的布尔表示，直到布尔表示为假，则执行else语句中的代码块。</p>
 <p>简单案例：</p>
 <p>某超市会员制度分为vip1，vip2，vip3三个等级，每个等级对应的折扣不同：vip1客户购买商品打9折，vip2客户购买商品打8折，vip3客户购买商品打7折。现要求定义一个商品价格，在控制台输入客户等级，计算出该客户对应的vip等级购买商品后应该付多少钱。</p>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class IfTest05f {
-    public static void main(String[] args) {
-        int price = 1000;
-
-        Scanner sc = new Scanner(System.in);
-        System.out.println(&quot;请输入会员的级别&quot;);
-        int vip = sc.nextInt();
-
-        if (vip == 1){
-            System.out.println(&quot;实际支付的钱为&quot; + (price * 0.9));
-        } else if (vip == 2) {
-            System.out.println(&quot;实际支付的钱为&quot; + (price * 0.8));
-        } else if (vip == 3) {
-            System.out.println(&quot;实际支付的钱为&quot; + (price * 0.7));
-        } else {
-            System.out.println(&quot;实际支付的钱为&quot; + price);
-        }
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IfTest05f</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;请输入会员的级别&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">vip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vip</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;实际支付的钱为&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">price</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.9</span><span class="p">));</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vip</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;实际支付的钱为&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">price</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.8</span><span class="p">));</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vip</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;实际支付的钱为&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">price</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.7</span><span class="p">));</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;实际支付的钱为&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">price</span><span class="p">);</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="14-ifelse">1.4 <strong>嵌套的if...else 语句</strong></h3>
-<p>语法如下：</p>
-<pre><code class="language-java">if(布尔表达式 1){
-   如果布尔表达式 1的值为true执行代码
-   if(布尔表达式 2){
-      如果布尔表达式 2的值为true执行代码
-   }
-}
-</code></pre>
-<p>简单案例：</p>
-<p>键盘录入一个整数代表学生的成绩，规定范围在（0-100）。当输入的成绩大于等于90时，控制台输出优秀；大于等于80小于90时，控制台输出良好；大于等于60小于80时，控制台输出合格；小于60时，控制台输出不合格。其他情况则提示输入不合法。</p>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class IfTest04 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println(&quot;请输入一个整数&quot;);
-        int num = sc.nextInt();
-
-        if (num &gt; 0 &amp;&amp; num &lt;= 100) {
-
-            if (num &gt;= 90) {
-                System.out.println(&quot;优秀&quot;);
-            } else if (num &gt;= 80 &amp;&amp; num &lt; 90) {
-                System.out.println(&quot;良好&quot;);
-            } else if (num &gt;= 60 &amp;&amp; num &lt; 80) {
-                System.out.println(&quot;合格&quot;);
-            } else {
-                System.out.println(&quot;不合格&quot;);
-            }
-        } else {
-            System.out.println(&quot;输入不合法&quot;);
-        }
-    }
-}
-</code></pre>
+<p>语法如下：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">if</span><span class="p">(</span><span class="n">布尔表达式</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">   </span><span class="n">如果布尔表达式</span><span class="w"> </span><span class="mi">1</span><span class="n">的值为true执行代码</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">   </span><span class="nf">if</span><span class="p">(</span><span class="n">布尔表达式</span><span class="w"> </span><span class="mi">2</span><span class="p">){</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">      </span><span class="n">如果布尔表达式</span><span class="w"> </span><span class="mi">2</span><span class="n">的值为true执行代码</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+简单案例：</p>
+<p>键盘录入一个整数代表学生的成绩，规定范围在（0-100）。当输入的成绩大于等于90时，控制台输出优秀；大于等于80小于90时，控制台输出良好；大于等于60小于80时，控制台输出合格；小于60时，控制台输出不合格。其他情况则提示输入不合法。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IfTest04</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;请输入一个整数&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;优秀&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">80</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;良好&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;合格&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;不合格&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;输入不合法&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="15-switch">1.5 <strong>switch 语句</strong></h3>
-<p>语法如下：</p>
-<pre><code class="language-java">switch (expression) {
-    case value1:
-        // 当表达式的值等于value1时执行的代码块
-        break;
-    case value2:
-        // 当表达式的值等于value2时执行的代码块
-        break;
-    ...
-    default:
-        break;
-        // 当表达式的值与所有case不匹配时执行的代码块（可选）
-}
-</code></pre>
+<p>语法如下：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">expression</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">value1</span><span class="p">:</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">        </span><span class="c1">// 当表达式的值等于value1时执行的代码块</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">value2</span><span class="p">:</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">        </span><span class="c1">// 当表达式的值等于value2时执行的代码块</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="c1">// 当表达式的值与所有case不匹配时执行的代码块（可选）</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <p>简单案例：根据阿拉伯数字输出文字信息的星期几。</p>
-<pre><code class="language-java">int dayOfWeek = 1;
-switch (dayOfWeek) {
-    case 1:
-        System.out.println(&quot;Monday&quot;);
-        break;
-    case 2:
-        System.out.println(&quot;Tuesday&quot;);
-        break;
-    // 省略其余case
-    default:
-        System.out.println(&quot;Invalid day&quot;);
-        break;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">dayOfWeek</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">dayOfWeek</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Monday&quot;</span><span class="p">);</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tuesday&quot;</span><span class="p">);</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="c1">// 省略其余case</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Invalid day&quot;</span><span class="p">);</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="2-java">2. Java的循环语句</h2>
 <p>在Java中，循环语句用于重复执行一段代码，直到满足某个条件为止或达到指定的次数。主要的循环语句有以下几种：</p>
 <h3 id="21-for">2.1 <strong>for循环</strong>：</h3>
-<p><code>java
-   for (initialization; condition; update) {
-       // 循环体
-   }</code>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">initialization</span><span class="p">;</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span><span class="w"> </span><span class="n">update</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="c1">// 循环体</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
    - <code>initialization</code>：循环变量的初始化。
    - <code>condition</code>：循环条件，每次循环开始前都会检查。
    - <code>update</code>：循环变量更新，通常是增加或减少循环变量的值。</p>
 <p>示例：
-   <code>java
-   for (int i = 1; i &lt;= 5; i++) {
-       System.out.println("Count is: " + i);
-   }</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Count is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="22">2.2 <strong>倒序遍历</strong></h3>
 <p>倒序遍历是指从大到小或从后向前遍历数据集合中的元素。在Java中，倒序遍历通常用于数组、列表或需要逆序输出的情况。以下是一个示例和详细解释：</p>
-<pre><code class="language-java">for (int i = 5; i &gt; 0; i--) {
-    System.out.println(&quot;Count is: &quot; + i);
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Count is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="23-intstreamrange">2.3 <strong>IntStream.range()函数</strong></h3>
-<p>在Java中，并没有像一些其他编程语言（如Python）中直接提供的内置的 <code>range</code> 函数，不过Java 8 引入了 <code>IntStream</code> 类来支持函数式编程风格的操作。可以使用 <code>IntStream.range()</code> 方法来生成一个整数范围。</p>
-<pre><code class="language-java">IntStream.range(start, end).forEach(i -&gt; {
-    // 这里执行循环体内的操作，i 是当前的整数值
-});
-</code></pre>
+<p>在Java中，并没有像一些其他编程语言（如Python）中直接提供的内置的 <code>range</code> 函数，不过Java 8 引入了 <code>IntStream</code> 类来支持函数式编程风格的操作。可以使用 <code>IntStream.range()</code> 方法来生成一个整数范围。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">IntStream</span><span class="p">.</span><span class="na">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">).</span><span class="na">forEach</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">    </span><span class="c1">// 这里执行循环体内的操作，i 是当前的整数值</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="p">});</span>
+</code></pre></div></td></tr></table></div></p>
 <p>这里的 <code>start</code> 是范围的起始值（包含），<code>end</code> 是范围的结束值（不包含）。</p>
 <h3 id="_2">参数说明</h3>
 <ul>
@@ -2362,81 +2479,123 @@ switch (dayOfWeek) {
 </ul>
 <h3 id="_3">示例</h3>
 <p>下面是一个使用 <code>IntStream.range()</code> 方法来遍历数值范围的示例：</p>
-<pre><code class="language-java">// 使用 IntStream.range() 遍历范围 [1, 5)
-System.out.println(&quot;\nUsing IntStream.range():&quot;);
-IntStream.range(1, 6).forEach(i -&gt; System.out.println(&quot;Count is: &quot; + i));
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="c1">// 使用 IntStream.range() 遍历范围 [1, 5)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nUsing IntStream.range():&quot;</span><span class="p">);</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="n">IntStream</span><span class="p">.</span><span class="na">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">).</span><span class="na">forEach</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Count is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_4">输出结果</h3>
-<pre><code>Count is: 1
-Count is: 2
-Count is: 3
-Count is: 4
-Count is: 5
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>Count is: 1
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>Count is: 2
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>Count is: 3
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>Count is: 4
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>Count is: 5
+</code></pre></div></td></tr></table></div>
 <h3 id="24-while">2.4 <strong>while循环</strong>：</h3>
-<p><code>java
-   while (condition) {
-       // 循环体
-   }</code>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">    </span><span class="c1">// 循环体</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
    - <code>condition</code>：循环条件，在每次循环迭代开始之前评估。</p>
 <p>示例：
-   <code>java
-   int i = 1;
-   while (i &lt;= 5) {
-       System.out.println("Count is: " + i);
-       i++;
-   }</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span>
+<span class="normal"><a href="#__codelineno-17-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Count is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="25-forforeach">2.5 <strong>增强for循环（foreach循环）</strong>：</h3>
 <p>用于遍历数组或集合中的元素，不需要显式地控制循环变量。
-   <code>java
-   for (type element : array/collection) {
-       // 循环体
-   }</code>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">array</span><span class="o">/</span><span class="n">collection</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="w">    </span><span class="c1">// 循环体</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
    示例：
-   <code>java
-   int[] numbers = {1, 2, 3, 4, 5};
-   for (int number : numbers) {
-       System.out.println("Number is: " + number);
-   }</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">numbers</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Number is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">number</span><span class="p">);</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="3-break">3. break 语句</h2>
 <p>在Java中，<code>break</code> 是一种控制流语句，通常用于在循环或 switch 语句中提前结束代码块的执行。具体来说，<code>break</code> 语句可以用于以下两种情况：</p>
 <h3 id="31-break">3.1 <strong>在循环中使用 <code>break</code></strong>：</h3>
 <p>当在循环中执行 <code>break</code> 语句时，程序将立即退出当前的循环，继续执行循环后面的代码。这对于在满足某个条件后不再继续执行循环体内的代码非常有用。</p>
 <p>示例：
-   <code>java
-   for (int i = 1; i &lt;= 10; i++) {
-       System.out.println(i);
-       if (i == 5) {
-           break; // 当 i 等于 5 时退出循环
-       }
-   }</code>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span>
+<span class="normal"><a href="#__codelineno-20-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"> </span><span class="c1">// 当 i 等于 5 时退出循环</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
    输出：
-   <code>1
-   2
-   3
-   4
-   5</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span>
+<span class="normal"><a href="#__codelineno-21-4">4</a></span>
+<span class="normal"><a href="#__codelineno-21-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>1
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>2
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a>3
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>4
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>5
+</code></pre></div></td></tr></table></div></p>
 <h3 id="32-switch-break">3.2 <strong>在 switch 语句中使用 <code>break</code></strong>：</h3>
 <p>在 switch 语句中，每个 <code>case</code> 分支通常会在执行完毕后继续执行下一个 <code>case</code> 分支，除非在某个 <code>case</code> 分支中使用了 <code>break</code> 语句。这时程序将跳出 switch 语句，不再继续执行后续的 <code>case</code> 分支。</p>
 <p>示例：
-   <code>java
-   int dayOfWeek = 3;
-   switch (dayOfWeek) {
-       case 1:
-           System.out.println("Monday");
-           break;
-       case 2:
-           System.out.println("Tuesday");
-           break;
-       case 3:
-           System.out.println("Wednesday");
-           break;
-       default:
-           System.out.println("Invalid day");
-           break;
-   }</code>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-22-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-22-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-22-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-22-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-22-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-22-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-22-10">10</a></span>
+<span class="normal"><a href="#__codelineno-22-11">11</a></span>
+<span class="normal"><a href="#__codelineno-22-12">12</a></span>
+<span class="normal"><a href="#__codelineno-22-13">13</a></span>
+<span class="normal"><a href="#__codelineno-22-14">14</a></span>
+<span class="normal"><a href="#__codelineno-22-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">dayOfWeek</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">dayOfWeek</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Monday&quot;</span><span class="p">);</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tuesday&quot;</span><span class="p">);</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Wednesday&quot;</span><span class="p">);</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12"></a><span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Invalid day&quot;</span><span class="p">);</span>
+<a id="__codelineno-22-14" name="__codelineno-22-14"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-22-15" name="__codelineno-22-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
    输出：
-   <code>Wednesday</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>Wednesday
+</code></pre></div></td></tr></table></div></p>
 <h3 id="_5">注意事项：</h3>
 <ul>
 <li><code>break</code> 语句只能用在循环 (<code>for</code>, <code>while</code>, <code>do-while</code>) 或 switch 语句的内部。</li>
@@ -2444,51 +2603,82 @@ Count is: 5
 </ul>
 <h3 id="33-break">3.3 嵌套循环的break</h3>
 <h3 id="_6">语法：</h3>
-<p>带标签的 <code>break</code> 语法如下：</p>
-<pre><code class="language-java">labelName: 
-outerLoop {
-    // 循环体
-    innerLoop {
-        // 循环体
-        if (condition) {
-            break labelName; // 跳出标签为 labelName 的外层循环
-        }
-    }
-}
-</code></pre>
-<p>其中 <code>labelName</code> 是用户定义的标签名，通常遵循标识符命名规则。</p>
+<p>带标签的 <code>break</code> 语法如下：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="nl">labelName</span><span class="p">:</span><span class="w"> </span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="n">outerLoop</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="w">    </span><span class="c1">// 循环体</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="w">    </span><span class="n">innerLoop</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="w">        </span><span class="c1">// 循环体</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="w">            </span><span class="k">break</span><span class="w"> </span><span class="n">labelName</span><span class="p">;</span><span class="w"> </span><span class="c1">// 跳出标签为 labelName 的外层循环</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+其中 <code>labelName</code> 是用户定义的标签名，通常遵循标识符命名规则。</p>
 <h3 id="_7">示例：</h3>
 <p>假设我们有一个嵌套的循环结构，我们想在内层循环中找到某个条件满足时退出外层循环。</p>
-<pre><code class="language-java">public class BreakWithLabelExample {
-    public static void main(String[] args) {
-        outerLoop: // 标签名 outerLoop
-        for (int i = 1; i &lt;= 3; i++) {
-            System.out.println(&quot;Outer loop iteration &quot; + i);
-
-            innerLoop:
-            for (int j = 1; j &lt;= 3; j++) {
-                System.out.println(&quot;    Inner loop iteration &quot; + j);
-
-                if (i == 2 &amp;&amp; j == 2) {
-                    break outerLoop; // 当 i 等于 2 且 j 等于 2 时跳出外层循环
-                }
-            }
-        }
-
-        System.out.println(&quot;Loop ends&quot;);
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-25-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-25-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-25-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-25-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-25-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-25-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-25-10">10</a></span>
+<span class="normal"><a href="#__codelineno-25-11">11</a></span>
+<span class="normal"><a href="#__codelineno-25-12">12</a></span>
+<span class="normal"><a href="#__codelineno-25-13">13</a></span>
+<span class="normal"><a href="#__codelineno-25-14">14</a></span>
+<span class="normal"><a href="#__codelineno-25-15">15</a></span>
+<span class="normal"><a href="#__codelineno-25-16">16</a></span>
+<span class="normal"><a href="#__codelineno-25-17">17</a></span>
+<span class="normal"><a href="#__codelineno-25-18">18</a></span>
+<span class="normal"><a href="#__codelineno-25-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BreakWithLabelExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="w">        </span><span class="n">outerLoop</span><span class="p">:</span><span class="w"> </span><span class="c1">// 标签名 outerLoop</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Outer loop iteration &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a>
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="w">            </span><span class="nl">innerLoop</span><span class="p">:</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;    Inner loop iteration &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">);</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a>
+<a id="__codelineno-25-11" name="__codelineno-25-11"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12"></a><span class="w">                    </span><span class="k">break</span><span class="w"> </span><span class="n">outerLoop</span><span class="p">;</span><span class="w"> </span><span class="c1">// 当 i 等于 2 且 j 等于 2 时跳出外层循环</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-25-16" name="__codelineno-25-16"></a>
+<a id="__codelineno-25-17" name="__codelineno-25-17"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Loop ends&quot;</span><span class="p">);</span>
+<a id="__codelineno-25-18" name="__codelineno-25-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-25-19" name="__codelineno-25-19"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_8">示例解释：</h3>
 <ul>
 <li><code>outerLoop</code> 是外层循环的标签名。</li>
 <li><code>innerLoop</code> 是内层循环。</li>
 <li>在内层循环中，当 <code>i</code> 等于 2 且 <code>j</code> 等于 2 时，执行 <code>break outerLoop;</code>，这会立即跳出外层循环 <code>outerLoop</code>，继续执行外层循环后面的代码。</li>
 <li>控制台输出如下：
-  <code>Outer loop iteration 1
-      Inner loop iteration 1
-      Inner loop iteration 2
-  Loop ends</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>Outer loop iteration 1
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a>   Inner loop iteration 1
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>   Inner loop iteration 2
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a>Loop ends
+</code></pre></div></td></tr></table></div></li>
 </ul>
 <h3 id="_9">注意事项：</h3>
 <ul>
@@ -2500,41 +2690,64 @@ outerLoop {
 <p>在Java中，<code>continue</code> 是一种控制流语句，用于跳过当前循环的剩余代码，直接进入下一次循环的迭代。它通常用于循环结构中，可以帮助程序跳过某些特定条件下不必要的代码执行。</p>
 <h3 id="_10">使用方法和语法：</h3>
 <p>在循环中使用 <code>continue</code> 的一般语法如下：</p>
-<pre><code class="language-java">for (initialization; condition; update) {
-    // 代码块
-    if (conditionToSkip) {
-        continue; // 跳过本次循环的剩余代码，进行下一次循环
-    }
-    // 其他代码
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span>
+<span class="normal"><a href="#__codelineno-27-4">4</a></span>
+<span class="normal"><a href="#__codelineno-27-5">5</a></span>
+<span class="normal"><a href="#__codelineno-27-6">6</a></span>
+<span class="normal"><a href="#__codelineno-27-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">initialization</span><span class="p">;</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span><span class="w"> </span><span class="n">update</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="w">    </span><span class="c1">// 代码块</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">conditionToSkip</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="w">        </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// 跳过本次循环的剩余代码，进行下一次循环</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="w">    </span><span class="c1">// 其他代码</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>或者在 <code>while</code> 循环中使用：</p>
-<pre><code class="language-java">while (condition) {
-    // 代码块
-    if (conditionToSkip) {
-        continue; // 跳过本次循环的剩余代码，进行下一次循环
-    }
-    // 其他代码
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<span class="normal"><a href="#__codelineno-28-2">2</a></span>
+<span class="normal"><a href="#__codelineno-28-3">3</a></span>
+<span class="normal"><a href="#__codelineno-28-4">4</a></span>
+<span class="normal"><a href="#__codelineno-28-5">5</a></span>
+<span class="normal"><a href="#__codelineno-28-6">6</a></span>
+<span class="normal"><a href="#__codelineno-28-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="w">    </span><span class="c1">// 代码块</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">conditionToSkip</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="w">        </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// 跳过本次循环的剩余代码，进行下一次循环</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6"></a><span class="w">    </span><span class="c1">// 其他代码</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_11">示例：</h3>
 <p>以下是一个使用 <code>continue</code> 的示例，演示了如何在循环中跳过偶数的打印：</p>
-<pre><code class="language-java">public class ContinueExample {
-    public static void main(String[] args) {
-        for (int i = 1; i &lt;= 5; i++) {
-            if (i % 2 == 0) {
-                continue; // 跳过偶数
-            }
-            System.out.println(i);
-        }
-    }
-}
-</code></pre>
-<p>输出：</p>
-<pre><code>1
-3
-5
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-29-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-29-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-29-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-29-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-29-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-29-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-29-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-29-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-29-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ContinueExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5"></a><span class="w">                </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// 跳过偶数</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-29-7" name="__codelineno-29-7"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-29-10" name="__codelineno-29-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>输出：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<span class="normal"><a href="#__codelineno-30-2">2</a></span>
+<span class="normal"><a href="#__codelineno-30-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>1
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a>3
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a>5
+</code></pre></div></td></tr></table></div></p>
 <h3 id="_12">解释和注意事项：</h3>
 <ul>
 <li>当程序执行到 <code>continue;</code> 语句时，会立即结束当前循环的本次迭代，并开始下一次迭代。</li>
@@ -2562,108 +2775,205 @@ outerLoop {
 <li>选择退出程序。</li>
 </ol>
 <p>程序的输出应如下所示：</p>
-<pre><code>请点单（输入-1退出）：
-0
-请输入汉堡的数量：1
-请输入薯条的数量：2
-请输入可乐的数量：3
-
-客户点单内容：
-汉堡 x 2
-薯条 x 1
-可乐 x 3
-
-本次点单总价：48.5 元
-
-请点单（输入-1退出）：
-0
-请输入汉堡的数量：1
-请输入薯条的数量：2
-请输入可乐的数量：2
-
-客户点单内容：
-汉堡 x 1
-薯条 x 2
-可乐 x 2
-
-本次点单总价：35.0 元
-
-请点单（输入-1退出）：
--1
-
-所有顾客的总销售额：83.5 元
-</code></pre>
-<p>参考解答：</p>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class RestaurantOrder {
-    public static void main(String[] args) {
-        // 定义价格常量
-        final double BURGER_PRICE = 12.5;
-        final double FRIES_PRICE = 6.0;
-        final double COKE_PRICE = 4.5;
-
-        // 创建Scanner对象以获取用户输入
-        Scanner scanner = new Scanner(System.in);
-
-        // 初始化总销售额
-        double totalSales = 0.0;
-
-        // 开始循环，直到顾客选择退出
-        while (true) {
-            // 初始化点单数量
-            int option = 0;
-            int burgers = 0;
-            int fries = 0;
-            int cokes = 0;
-
-            // 获取用户点单
-            System.out.print(&quot;\n请点单（输入-1退出，其他整数进入点单）：&quot;);
-            option = scanner.nextInt();
-
-            // 如果输入为0，则退出循环
-            if (option == -1) {
-                break;
-            }
-
-            System.out.print(&quot;请输入汉堡的数量：&quot;);
-            burgers = scanner.nextInt();
-
-            System.out.print(&quot;请输入薯条的数量：&quot;);
-            fries = scanner.nextInt();
-
-            System.out.print(&quot;请输入可乐的数量：&quot;);
-            cokes = scanner.nextInt();
-
-            // 打印客户点单内容
-            System.out.println(&quot;\n客户点单内容：&quot;);
-            if (burgers &gt; 0) {
-                System.out.println(&quot;汉堡 x &quot; + burgers);
-            }
-            if (fries &gt; 0) {
-                System.out.println(&quot;薯条 x &quot; + fries);
-            }
-            if (cokes &gt; 0) {
-                System.out.println(&quot;可乐 x &quot; + cokes);
-            }
-
-            // 计算本次点单的总价
-            double orderTotal = burgers * BURGER_PRICE + fries * FRIES_PRICE + cokes * COKE_PRICE;
-            // 累加到总销售额
-            totalSales += orderTotal;
-
-            // 打印本次点单的总价
-            System.out.println(&quot;\n本次点单总价：&quot; + orderTotal + &quot; 元&quot;);
-        }
-
-        // 打印所有顾客的总销售额
-        System.out.println(&quot;\n所有顾客的总销售额：&quot; + totalSales + &quot; 元&quot;);
-
-        // 关闭Scanner
-        scanner.close();
-    }
-}
-</code></pre>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-31-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-31-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-31-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-31-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-31-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-31-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-31-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-31-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-31-10">10</a></span>
+<span class="normal"><a href="#__codelineno-31-11">11</a></span>
+<span class="normal"><a href="#__codelineno-31-12">12</a></span>
+<span class="normal"><a href="#__codelineno-31-13">13</a></span>
+<span class="normal"><a href="#__codelineno-31-14">14</a></span>
+<span class="normal"><a href="#__codelineno-31-15">15</a></span>
+<span class="normal"><a href="#__codelineno-31-16">16</a></span>
+<span class="normal"><a href="#__codelineno-31-17">17</a></span>
+<span class="normal"><a href="#__codelineno-31-18">18</a></span>
+<span class="normal"><a href="#__codelineno-31-19">19</a></span>
+<span class="normal"><a href="#__codelineno-31-20">20</a></span>
+<span class="normal"><a href="#__codelineno-31-21">21</a></span>
+<span class="normal"><a href="#__codelineno-31-22">22</a></span>
+<span class="normal"><a href="#__codelineno-31-23">23</a></span>
+<span class="normal"><a href="#__codelineno-31-24">24</a></span>
+<span class="normal"><a href="#__codelineno-31-25">25</a></span>
+<span class="normal"><a href="#__codelineno-31-26">26</a></span>
+<span class="normal"><a href="#__codelineno-31-27">27</a></span>
+<span class="normal"><a href="#__codelineno-31-28">28</a></span>
+<span class="normal"><a href="#__codelineno-31-29">29</a></span>
+<span class="normal"><a href="#__codelineno-31-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a>请点单（输入-1退出）：
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a>0
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a>请输入汉堡的数量：1
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a>请输入薯条的数量：2
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a>请输入可乐的数量：3
+<a id="__codelineno-31-6" name="__codelineno-31-6"></a>
+<a id="__codelineno-31-7" name="__codelineno-31-7"></a>客户点单内容：
+<a id="__codelineno-31-8" name="__codelineno-31-8"></a>汉堡 x 2
+<a id="__codelineno-31-9" name="__codelineno-31-9"></a>薯条 x 1
+<a id="__codelineno-31-10" name="__codelineno-31-10"></a>可乐 x 3
+<a id="__codelineno-31-11" name="__codelineno-31-11"></a>
+<a id="__codelineno-31-12" name="__codelineno-31-12"></a>本次点单总价：48.5 元
+<a id="__codelineno-31-13" name="__codelineno-31-13"></a>
+<a id="__codelineno-31-14" name="__codelineno-31-14"></a>请点单（输入-1退出）：
+<a id="__codelineno-31-15" name="__codelineno-31-15"></a>0
+<a id="__codelineno-31-16" name="__codelineno-31-16"></a>请输入汉堡的数量：1
+<a id="__codelineno-31-17" name="__codelineno-31-17"></a>请输入薯条的数量：2
+<a id="__codelineno-31-18" name="__codelineno-31-18"></a>请输入可乐的数量：2
+<a id="__codelineno-31-19" name="__codelineno-31-19"></a>
+<a id="__codelineno-31-20" name="__codelineno-31-20"></a>客户点单内容：
+<a id="__codelineno-31-21" name="__codelineno-31-21"></a>汉堡 x 1
+<a id="__codelineno-31-22" name="__codelineno-31-22"></a>薯条 x 2
+<a id="__codelineno-31-23" name="__codelineno-31-23"></a>可乐 x 2
+<a id="__codelineno-31-24" name="__codelineno-31-24"></a>
+<a id="__codelineno-31-25" name="__codelineno-31-25"></a>本次点单总价：35.0 元
+<a id="__codelineno-31-26" name="__codelineno-31-26"></a>
+<a id="__codelineno-31-27" name="__codelineno-31-27"></a>请点单（输入-1退出）：
+<a id="__codelineno-31-28" name="__codelineno-31-28"></a>-1
+<a id="__codelineno-31-29" name="__codelineno-31-29"></a>
+<a id="__codelineno-31-30" name="__codelineno-31-30"></a>所有顾客的总销售额：83.5 元
+</code></pre></div></td></tr></table></div>
+参考解答：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-32-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-32-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-32-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-32-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-32-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-32-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-32-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-32-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-32-10">10</a></span>
+<span class="normal"><a href="#__codelineno-32-11">11</a></span>
+<span class="normal"><a href="#__codelineno-32-12">12</a></span>
+<span class="normal"><a href="#__codelineno-32-13">13</a></span>
+<span class="normal"><a href="#__codelineno-32-14">14</a></span>
+<span class="normal"><a href="#__codelineno-32-15">15</a></span>
+<span class="normal"><a href="#__codelineno-32-16">16</a></span>
+<span class="normal"><a href="#__codelineno-32-17">17</a></span>
+<span class="normal"><a href="#__codelineno-32-18">18</a></span>
+<span class="normal"><a href="#__codelineno-32-19">19</a></span>
+<span class="normal"><a href="#__codelineno-32-20">20</a></span>
+<span class="normal"><a href="#__codelineno-32-21">21</a></span>
+<span class="normal"><a href="#__codelineno-32-22">22</a></span>
+<span class="normal"><a href="#__codelineno-32-23">23</a></span>
+<span class="normal"><a href="#__codelineno-32-24">24</a></span>
+<span class="normal"><a href="#__codelineno-32-25">25</a></span>
+<span class="normal"><a href="#__codelineno-32-26">26</a></span>
+<span class="normal"><a href="#__codelineno-32-27">27</a></span>
+<span class="normal"><a href="#__codelineno-32-28">28</a></span>
+<span class="normal"><a href="#__codelineno-32-29">29</a></span>
+<span class="normal"><a href="#__codelineno-32-30">30</a></span>
+<span class="normal"><a href="#__codelineno-32-31">31</a></span>
+<span class="normal"><a href="#__codelineno-32-32">32</a></span>
+<span class="normal"><a href="#__codelineno-32-33">33</a></span>
+<span class="normal"><a href="#__codelineno-32-34">34</a></span>
+<span class="normal"><a href="#__codelineno-32-35">35</a></span>
+<span class="normal"><a href="#__codelineno-32-36">36</a></span>
+<span class="normal"><a href="#__codelineno-32-37">37</a></span>
+<span class="normal"><a href="#__codelineno-32-38">38</a></span>
+<span class="normal"><a href="#__codelineno-32-39">39</a></span>
+<span class="normal"><a href="#__codelineno-32-40">40</a></span>
+<span class="normal"><a href="#__codelineno-32-41">41</a></span>
+<span class="normal"><a href="#__codelineno-32-42">42</a></span>
+<span class="normal"><a href="#__codelineno-32-43">43</a></span>
+<span class="normal"><a href="#__codelineno-32-44">44</a></span>
+<span class="normal"><a href="#__codelineno-32-45">45</a></span>
+<span class="normal"><a href="#__codelineno-32-46">46</a></span>
+<span class="normal"><a href="#__codelineno-32-47">47</a></span>
+<span class="normal"><a href="#__codelineno-32-48">48</a></span>
+<span class="normal"><a href="#__codelineno-32-49">49</a></span>
+<span class="normal"><a href="#__codelineno-32-50">50</a></span>
+<span class="normal"><a href="#__codelineno-32-51">51</a></span>
+<span class="normal"><a href="#__codelineno-32-52">52</a></span>
+<span class="normal"><a href="#__codelineno-32-53">53</a></span>
+<span class="normal"><a href="#__codelineno-32-54">54</a></span>
+<span class="normal"><a href="#__codelineno-32-55">55</a></span>
+<span class="normal"><a href="#__codelineno-32-56">56</a></span>
+<span class="normal"><a href="#__codelineno-32-57">57</a></span>
+<span class="normal"><a href="#__codelineno-32-58">58</a></span>
+<span class="normal"><a href="#__codelineno-32-59">59</a></span>
+<span class="normal"><a href="#__codelineno-32-60">60</a></span>
+<span class="normal"><a href="#__codelineno-32-61">61</a></span>
+<span class="normal"><a href="#__codelineno-32-62">62</a></span>
+<span class="normal"><a href="#__codelineno-32-63">63</a></span>
+<span class="normal"><a href="#__codelineno-32-64">64</a></span>
+<span class="normal"><a href="#__codelineno-32-65">65</a></span>
+<span class="normal"><a href="#__codelineno-32-66">66</a></span>
+<span class="normal"><a href="#__codelineno-32-67">67</a></span>
+<span class="normal"><a href="#__codelineno-32-68">68</a></span>
+<span class="normal"><a href="#__codelineno-32-69">69</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RestaurantOrder</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5"></a><span class="w">        </span><span class="c1">// 定义价格常量</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">BURGER_PRICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12.5</span><span class="p">;</span>
+<a id="__codelineno-32-7" name="__codelineno-32-7"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">FRIES_PRICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6.0</span><span class="p">;</span>
+<a id="__codelineno-32-8" name="__codelineno-32-8"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">COKE_PRICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.5</span><span class="p">;</span>
+<a id="__codelineno-32-9" name="__codelineno-32-9"></a>
+<a id="__codelineno-32-10" name="__codelineno-32-10"></a><span class="w">        </span><span class="c1">// 创建Scanner对象以获取用户输入</span>
+<a id="__codelineno-32-11" name="__codelineno-32-11"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-32-12" name="__codelineno-32-12"></a>
+<a id="__codelineno-32-13" name="__codelineno-32-13"></a><span class="w">        </span><span class="c1">// 初始化总销售额</span>
+<a id="__codelineno-32-14" name="__codelineno-32-14"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">totalSales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<a id="__codelineno-32-15" name="__codelineno-32-15"></a>
+<a id="__codelineno-32-16" name="__codelineno-32-16"></a><span class="w">        </span><span class="c1">// 开始循环，直到顾客选择退出</span>
+<a id="__codelineno-32-17" name="__codelineno-32-17"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-18" name="__codelineno-32-18"></a><span class="w">            </span><span class="c1">// 初始化点单数量</span>
+<a id="__codelineno-32-19" name="__codelineno-32-19"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-32-20" name="__codelineno-32-20"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">burgers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-32-21" name="__codelineno-32-21"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">fries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-32-22" name="__codelineno-32-22"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">cokes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-32-23" name="__codelineno-32-23"></a>
+<a id="__codelineno-32-24" name="__codelineno-32-24"></a><span class="w">            </span><span class="c1">// 获取用户点单</span>
+<a id="__codelineno-32-25" name="__codelineno-32-25"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\n请点单（输入-1退出，其他整数进入点单）：&quot;</span><span class="p">);</span>
+<a id="__codelineno-32-26" name="__codelineno-32-26"></a><span class="w">            </span><span class="n">option</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-32-27" name="__codelineno-32-27"></a>
+<a id="__codelineno-32-28" name="__codelineno-32-28"></a><span class="w">            </span><span class="c1">// 如果输入为0，则退出循环</span>
+<a id="__codelineno-32-29" name="__codelineno-32-29"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">option</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-30" name="__codelineno-32-30"></a><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-32-31" name="__codelineno-32-31"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-32-32" name="__codelineno-32-32"></a>
+<a id="__codelineno-32-33" name="__codelineno-32-33"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;请输入汉堡的数量：&quot;</span><span class="p">);</span>
+<a id="__codelineno-32-34" name="__codelineno-32-34"></a><span class="w">            </span><span class="n">burgers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-32-35" name="__codelineno-32-35"></a>
+<a id="__codelineno-32-36" name="__codelineno-32-36"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;请输入薯条的数量：&quot;</span><span class="p">);</span>
+<a id="__codelineno-32-37" name="__codelineno-32-37"></a><span class="w">            </span><span class="n">fries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-32-38" name="__codelineno-32-38"></a>
+<a id="__codelineno-32-39" name="__codelineno-32-39"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;请输入可乐的数量：&quot;</span><span class="p">);</span>
+<a id="__codelineno-32-40" name="__codelineno-32-40"></a><span class="w">            </span><span class="n">cokes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-32-41" name="__codelineno-32-41"></a>
+<a id="__codelineno-32-42" name="__codelineno-32-42"></a><span class="w">            </span><span class="c1">// 打印客户点单内容</span>
+<a id="__codelineno-32-43" name="__codelineno-32-43"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n客户点单内容：&quot;</span><span class="p">);</span>
+<a id="__codelineno-32-44" name="__codelineno-32-44"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">burgers</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-45" name="__codelineno-32-45"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;汉堡 x &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">burgers</span><span class="p">);</span>
+<a id="__codelineno-32-46" name="__codelineno-32-46"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-32-47" name="__codelineno-32-47"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fries</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-48" name="__codelineno-32-48"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;薯条 x &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fries</span><span class="p">);</span>
+<a id="__codelineno-32-49" name="__codelineno-32-49"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-32-50" name="__codelineno-32-50"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cokes</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-51" name="__codelineno-32-51"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;可乐 x &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cokes</span><span class="p">);</span>
+<a id="__codelineno-32-52" name="__codelineno-32-52"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-32-53" name="__codelineno-32-53"></a>
+<a id="__codelineno-32-54" name="__codelineno-32-54"></a><span class="w">            </span><span class="c1">// 计算本次点单的总价</span>
+<a id="__codelineno-32-55" name="__codelineno-32-55"></a><span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">orderTotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">burgers</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">BURGER_PRICE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fries</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">FRIES_PRICE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cokes</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">COKE_PRICE</span><span class="p">;</span>
+<a id="__codelineno-32-56" name="__codelineno-32-56"></a><span class="w">            </span><span class="c1">// 累加到总销售额</span>
+<a id="__codelineno-32-57" name="__codelineno-32-57"></a><span class="w">            </span><span class="n">totalSales</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">orderTotal</span><span class="p">;</span>
+<a id="__codelineno-32-58" name="__codelineno-32-58"></a>
+<a id="__codelineno-32-59" name="__codelineno-32-59"></a><span class="w">            </span><span class="c1">// 打印本次点单的总价</span>
+<a id="__codelineno-32-60" name="__codelineno-32-60"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n本次点单总价：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">orderTotal</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 元&quot;</span><span class="p">);</span>
+<a id="__codelineno-32-61" name="__codelineno-32-61"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-32-62" name="__codelineno-32-62"></a>
+<a id="__codelineno-32-63" name="__codelineno-32-63"></a><span class="w">        </span><span class="c1">// 打印所有顾客的总销售额</span>
+<a id="__codelineno-32-64" name="__codelineno-32-64"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n所有顾客的总销售额：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">totalSales</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 元&quot;</span><span class="p">);</span>
+<a id="__codelineno-32-65" name="__codelineno-32-65"></a>
+<a id="__codelineno-32-66" name="__codelineno-32-66"></a><span class="w">        </span><span class="c1">// 关闭Scanner</span>
+<a id="__codelineno-32-67" name="__codelineno-32-67"></a><span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-32-68" name="__codelineno-32-68"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-32-69" name="__codelineno-32-69"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="52-1-100-3">5.2 计算并输出 1 到 100 之间所有不能被 3 整除的数的平方和</h3>
 <p>题目描述：</p>
 <p>编写一个程序，计算并输出 1 到 100 之间所有不能被 3 整除的数的平方和。在计算过程中，如果平方和超过 1000，则停止计算并输出当前的平方和值。</p>
@@ -2682,37 +2992,61 @@ public class RestaurantOrder {
 <li>最终输出停止时的平方和值。</li>
 </ol>
 <h4 id="_15">示例代码：</h4>
-<pre><code class="language-java">public class SumOfSquares {
-    public static void main(String[] args) {
-        int sum = 0;
-
-        for (int i = 1; i &lt;= 100; i++) {
-            if (i % 3 == 0) {
-                continue; // 跳过能被 3 整除的数
-            }
-
-            int square = i * i;
-            sum += square;
-
-            if (sum &gt; 1000) {
-                System.out.println(&quot;当前平方和超过 1000，停止计算。&quot;);
-                System.out.println(&quot;当前平方和为: &quot; + sum);
-                break;
-            }
-        }
-
-        if (sum &lt;= 1000) {
-            System.out.println(&quot;最终平方和为: &quot; + sum);
-        }
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-33-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-33-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-33-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-33-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-33-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-33-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-33-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-33-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-33-10">10</a></span>
+<span class="normal"><a href="#__codelineno-33-11">11</a></span>
+<span class="normal"><a href="#__codelineno-33-12">12</a></span>
+<span class="normal"><a href="#__codelineno-33-13">13</a></span>
+<span class="normal"><a href="#__codelineno-33-14">14</a></span>
+<span class="normal"><a href="#__codelineno-33-15">15</a></span>
+<span class="normal"><a href="#__codelineno-33-16">16</a></span>
+<span class="normal"><a href="#__codelineno-33-17">17</a></span>
+<span class="normal"><a href="#__codelineno-33-18">18</a></span>
+<span class="normal"><a href="#__codelineno-33-19">19</a></span>
+<span class="normal"><a href="#__codelineno-33-20">20</a></span>
+<span class="normal"><a href="#__codelineno-33-21">21</a></span>
+<span class="normal"><a href="#__codelineno-33-22">22</a></span>
+<span class="normal"><a href="#__codelineno-33-23">23</a></span>
+<span class="normal"><a href="#__codelineno-33-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SumOfSquares</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a><span class="w">                </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// 跳过能被 3 整除的数</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-33-9" name="__codelineno-33-9"></a>
+<a id="__codelineno-33-10" name="__codelineno-33-10"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">square</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-33-11" name="__codelineno-33-11"></a><span class="w">            </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">square</span><span class="p">;</span>
+<a id="__codelineno-33-12" name="__codelineno-33-12"></a>
+<a id="__codelineno-33-13" name="__codelineno-33-13"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sum</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-14" name="__codelineno-33-14"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;当前平方和超过 1000，停止计算。&quot;</span><span class="p">);</span>
+<a id="__codelineno-33-15" name="__codelineno-33-15"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;当前平方和为: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span>
+<a id="__codelineno-33-16" name="__codelineno-33-16"></a><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-33-17" name="__codelineno-33-17"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-33-18" name="__codelineno-33-18"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-33-19" name="__codelineno-33-19"></a>
+<a id="__codelineno-33-20" name="__codelineno-33-20"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sum</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-21" name="__codelineno-33-21"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最终平方和为: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span>
+<a id="__codelineno-33-22" name="__codelineno-33-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-33-23" name="__codelineno-33-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-33-24" name="__codelineno-33-24"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_16">示例运行和输出：</h4>
 <p>在运行上述代码时，会依次计算 1 到 100 之间所有不能被 3 整除的数的平方，并累加到平方和变量 <code>sum</code> 中。如果累加过程中发现平方和超过 1000，则停止计算，并输出当前的平方和值。</p>
-<p>输出示例：</p>
-<pre><code>当前平方和超过 1000，停止计算。
-当前平方和为: 1025
-</code></pre>
+<p>输出示例：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
+<span class="normal"><a href="#__codelineno-34-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a>当前平方和超过 1000，停止计算。
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a>当前平方和为: 1025
+</code></pre></div></td></tr></table></div></p>
 
 
 

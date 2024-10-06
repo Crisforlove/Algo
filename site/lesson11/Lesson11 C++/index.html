@@ -627,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2654,30 +2654,80 @@
 <h1 id="lesson-11-unordered_map">Lesson 11: <code>unordered_map</code> 专题</h1>
 <h2 id="_1">目录</h2>
 <h2 id="_2">目录</h2>
-<p><a href="#1-知识介绍">1. 知识介绍</a><br />
-   - <a href="#11-哈希表常用操作">1.1 哈希表常用操作</a><br />
-   - <a href="#12-哈希表简单实现">1.2 哈希表简单实现</a><br />
-   - <a href="#13-哈希冲突与扩容">1.3 哈希冲突与扩容</a>
-   - <a href="#14-unordered_map-和-map-的区别">1.4 <code>unordered_map</code> 和 <code>map</code> 的区别</a></p>
-<p><a href="#2-频率统计与计数">2. 频率统计与计数</a><br />
-   - <a href="#21-词频统计介绍">2.1 词频统计介绍</a><br />
-   - <a href="#22-例题讲解">2.2 例题讲解</a><br />
-      - <a href="#221-lc-242-有效的字母异位词">2.2.1 LC 242 有效的字母异位词</a><br />
-   - <a href="#23-举一反三">2.3 举一反三</a><br />
-      - <a href="#231-lc-387-字符串中的第一个唯一数字">2.3.1 LC 387 字符串中的第一个唯一字符</a></p>
-<p><a href="#3-快速查找">3. 快速查找</a><br />
-   - <a href="#31-快速查找介绍">3.1 快速查找介绍</a><br />
-   - <a href="#32例题讲解">3.2 例题讲解</a><br />
-      - <a href="#321-lc-1-两数之和">3.2.1 LC 1 两数之和</a><br />
-   - <a href="#33-举一反三">3.3 举一反三</a><br />
-      - <a href="#331-lc-217-存在重复元素">3.3.1 LC 217 存在重复元素</a></p>
-<p><a href="#4-哈希映射">4. 哈希映射</a><br />
-   - <a href="#41-哈希映射介绍">4.1 哈希映射介绍</a><br />
-   - <a href="#42-例题讲解">4.2 例题讲解</a><br />
-      - <a href="#421-lc-697-数组的度">4.2.1 LC 697 数组的度</a><br />
-   - <a href="#43-举一反三">4.3 举一反三</a><br />
-      - <a href="#431-lc-205-同构字符串">4.3.1 LC 205 同构字符串</a><br />
-      - <a href="#432-lc-219-存在重复元素ii">4.3.2 LC 219 存在重复元素II</a></p>
+<p><a href="#1-知识介绍">1. 知识介绍</a>  </p>
+<ul>
+<li>
+<p><a href="#11-哈希表常用操作">1.1 哈希表常用操作</a>  </p>
+</li>
+<li>
+<p><a href="#12-哈希表简单实现">1.2 哈希表简单实现</a>  </p>
+</li>
+<li>
+<p><a href="#13-哈希冲突与扩容">1.3 哈希冲突与扩容</a></p>
+</li>
+<li>
+<p><a href="#14-unordered_map-和-map-的区别">1.4 <code>unordered_map</code> 和 <code>map</code> 的区别</a></p>
+</li>
+</ul>
+<p><a href="#2-频率统计与计数">2. 频率统计与计数</a></p>
+<ul>
+<li>
+<p><a href="#21-词频统计介绍">2.1 词频统计介绍</a>  </p>
+</li>
+<li>
+<p><a href="#22-例题讲解">2.2 例题讲解</a>  </p>
+<ul>
+<li><a href="#221-lc-242-有效的字母异位词">2.2.1 LC 242 有效的字母异位词</a>  </li>
+</ul>
+</li>
+<li>
+<p><a href="#23-举一反三">2.3 举一反三</a>  </p>
+<ul>
+<li><a href="#231-lc-387-字符串中的第一个唯一数字">2.3.1 LC 387 字符串中的第一个唯一字符</a></li>
+</ul>
+</li>
+</ul>
+<p><a href="#3-快速查找">3. 快速查找</a></p>
+<ul>
+<li>
+<p><a href="#31-快速查找介绍">3.1 快速查找介绍</a>  </p>
+</li>
+<li>
+<p><a href="#32例题讲解">3.2 例题讲解</a>  </p>
+<ul>
+<li><a href="#321-lc-1-两数之和">3.2.1 LC 1 两数之和</a>  </li>
+</ul>
+</li>
+<li>
+<p><a href="#33-举一反三">3.3 举一反三</a>  </p>
+<ul>
+<li><a href="#331-lc-217-存在重复元素">3.3.1 LC 217 存在重复元素</a></li>
+</ul>
+</li>
+</ul>
+<p><a href="#4-哈希映射">4. 哈希映射</a>  </p>
+<ul>
+<li>
+<p><a href="#41-哈希映射介绍">4.1 哈希映射介绍</a>  </p>
+</li>
+<li>
+<p><a href="#42-例题讲解">4.2 例题讲解</a>  </p>
+<ul>
+<li><a href="#421-lc-697-数组的度">4.2.1 LC 697 数组的度</a>  </li>
+</ul>
+</li>
+<li>
+<p><a href="#43-举一反三">4.3 举一反三</a>  </p>
+<ul>
+<li>
+<p><a href="#431-lc-205-同构字符串">4.3.1 LC 205 同构字符串</a>  </p>
+</li>
+<li>
+<p><a href="#432-lc-219-存在重复元素ii">4.3.2 LC 219 存在重复元素II</a></p>
+</li>
+</ul>
+</li>
+</ul>
 <p><a href="#5-课后练习">5. 课后练习</a></p>
 <h2 id="1">1 知识介绍</h2>
 <p>在 C++ 中，<code>unordered_map</code> 和 <code>map</code> 都是用于存储键值对的容器。<code>unordered_map</code> 是一种高效的哈希表实现，提供了非常快速的查找、插入和删除操作（本章重点讲解 <code>unordered_map</code>）。 <code>map</code>是基于红黑树实现的有序键值对容器。哈希表（hash table）通过建立键 <code>key</code> 与值 <code>value</code> 之间的映射，实现高效的元素查询。具体而言，我们向哈希表中输入一个键 <code>key</code>，则可以快速获取对应的值 <code>value</code>。</p>
@@ -2685,100 +2735,183 @@
 <p><img alt="哈希表的抽象表示" src="https://www.hello-algo.com/chapter_hashing/hash_map.assets/hash_table_lookup.png" /></p>
 <h3 id="11">1.1 哈希表常用操作</h3>
 <p>哈希表的常见操作包括：初始化、查询操作、添加键值对和删除键值对等。</p>
-<pre><code class="language-cpp">#include &lt;unordered_map&gt;
-#include &lt;iostream&gt;
-using namespace std;
-
-int main() {
-    // 初始化哈希表
-    unordered_map&lt;int, string&gt; hmap;
-
-    // 添加操作：在哈希表中添加键值对 (key, value)
-    hmap[12836] = &quot;小哈&quot;;
-    hmap[15937] = &quot;小啰&quot;;
-    hmap[16750] = &quot;小算&quot;;
-    hmap[13276] = &quot;小法&quot;;
-    hmap[10583] = &quot;小鸭&quot;;
-
-    // 查询操作：向哈希表中输入键 key，得到值 value
-    string name = hmap[15937];
-    cout &lt;&lt; name &lt;&lt; endl; // 输出: 小啰
-
-    // 删除操作：在哈希表中删除键值对 (key, value)
-    hmap.erase(10583);
-    for (const auto&amp; pair : hmap) {
-        cout &lt;&lt; pair.first &lt;&lt; &quot; -&gt; &quot; &lt;&lt; pair.second &lt;&lt; endl;
-    }
-
-    // 修改操作
-    hmap[10583] = &quot;小鹅&quot;;
-    for (const auto&amp; pair : hmap) {
-        cout &lt;&lt; pair.first &lt;&lt; &quot; -&gt; &quot; &lt;&lt; pair.second &lt;&lt; endl;
-    }
-
-    return 0;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unordered_map&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="c1">// 初始化哈希表</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">hmap</span><span class="p">;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="c1">// 添加操作：在哈希表中添加键值对 (key, value)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="n">hmap</span><span class="p">[</span><span class="mi">12836</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;小哈&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="n">hmap</span><span class="p">[</span><span class="mi">15937</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;小啰&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="n">hmap</span><span class="p">[</span><span class="mi">16750</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;小算&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="n">hmap</span><span class="p">[</span><span class="mi">13276</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;小法&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="n">hmap</span><span class="p">[</span><span class="mi">10583</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;小鸭&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="c1">// 查询操作：向哈希表中输入键 key，得到值 value</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hmap</span><span class="p">[</span><span class="mi">15937</span><span class="p">];</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// 输出: 小啰</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="c1">// 删除操作：在哈希表中删除键值对 (key, value)</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="n">hmap</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="mi">10583</span><span class="p">);</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">hmap</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pair</span><span class="p">.</span><span class="n">first</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; -&gt; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pair</span><span class="p">.</span><span class="n">second</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="c1">// 修改操作</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="n">hmap</span><span class="p">[</span><span class="mi">10583</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;小鹅&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">hmap</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pair</span><span class="p">.</span><span class="n">first</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; -&gt; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pair</span><span class="p">.</span><span class="n">second</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>输出：</p>
-<pre><code>小啰
-12836 -&gt; 小哈
-15937 -&gt; 小啰
-16750 -&gt; 小算
-13276 -&gt; 小法
-12836 -&gt; 小哈
-15937 -&gt; 小啰
-16750 -&gt; 小算
-13276 -&gt; 小法
-10583 -&gt; 小鹅
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>小啰
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>12836 -&gt; 小哈
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>15937 -&gt; 小啰
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>16750 -&gt; 小算
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>13276 -&gt; 小法
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>12836 -&gt; 小哈
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>15937 -&gt; 小啰
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>16750 -&gt; 小算
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>13276 -&gt; 小法
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>10583 -&gt; 小鹅
+</code></pre></div></td></tr></table></div>
 <p>哈希表的遍历有三种常用方式：遍历键值对、遍历键和遍历值。示例代码如下：</p>
-<pre><code class="language-cpp">#include &lt;unordered_map&gt;
-#include &lt;iostream&gt;
-using namespace std;
-
-int main() {
-    unordered_map&lt;int, string&gt; hmap;
-    hmap[12836] = &quot;小哈&quot;;
-    hmap[15937] = &quot;小啰&quot;;
-    hmap[16750] = &quot;小算&quot;;
-    hmap[13276] = &quot;小法&quot;;
-    hmap[10583] = &quot;小鸭&quot;;
-
-    // 遍历哈希表：遍历键值对 key-&gt;value
-    for (const auto&amp; pair : hmap) {
-        cout &lt;&lt; pair.first &lt;&lt; &quot; -&gt; &quot; &lt;&lt; pair.second &lt;&lt; endl;
-    }
-
-    // 遍历键 key
-    for (const auto&amp; pair : hmap) {
-        cout &lt;&lt; pair.first &lt;&lt; endl;
-    }
-
-    // 遍历值 value
-    for (const auto&amp; pair : hmap) {
-        cout &lt;&lt; pair.second &lt;&lt; endl;
-    }
-
-    return 0;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span>
+<span class="normal"><a href="#__codelineno-2-28">28</a></span>
+<span class="normal"><a href="#__codelineno-2-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unordered_map&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">hmap</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="n">hmap</span><span class="p">[</span><span class="mi">12836</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;小哈&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="n">hmap</span><span class="p">[</span><span class="mi">15937</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;小啰&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="n">hmap</span><span class="p">[</span><span class="mi">16750</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;小算&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="n">hmap</span><span class="p">[</span><span class="mi">13276</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;小法&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="n">hmap</span><span class="p">[</span><span class="mi">10583</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;小鸭&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="c1">// 遍历哈希表：遍历键值对 key-&gt;value</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">hmap</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pair</span><span class="p">.</span><span class="n">first</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; -&gt; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pair</span><span class="p">.</span><span class="n">second</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">    </span><span class="c1">// 遍历键 key</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">hmap</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pair</span><span class="p">.</span><span class="n">first</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="c1">// 遍历值 value</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">hmap</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pair</span><span class="p">.</span><span class="n">second</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a>
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>输出：</p>
-<pre><code>12836 -&gt; 小哈
-15937 -&gt; 小啰
-16750 -&gt; 小算
-13276 -&gt; 小法
-10583 -&gt; 小鸭
-12836
-15937
-16750
-13276
-10583
-小哈
-小啰
-小算
-小法
-小鸭
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>12836 -&gt; 小哈
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>15937 -&gt; 小啰
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>16750 -&gt; 小算
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>13276 -&gt; 小法
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>10583 -&gt; 小鸭
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>12836
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>15937
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>16750
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>13276
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>10583
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>小哈
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>小啰
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>小算
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>小法
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>小鸭
+</code></pre></div></td></tr></table></div>
 <h3 id="12">1.2 哈希表简单实现</h3>
 <p>我们先考虑最简单的情况，<strong>仅用一个数组来实现哈希表</strong>。在哈希表中，我们将数组中的每个空位称为桶（bucket），每个桶可存储一个键值对。因此，查询操作就是找到 <code>key</code> 对应的桶，并在桶中获取 <code>value</code> 。</p>
 <p>那么，如何基于 <code>key</code> 定位对应的桶呢？这是通过哈希函数（hash function）实现的。哈希函数的作用是将一个较大的输入空间映射到一个较小的输出空间。在哈希表中，输入空间是所有 <code>key</code> ，输出空间是所有桶（数组索引）。换句话说，输入一个 <code>key</code> ，<strong>我们可以通过哈希函数得到该 <code>key</code> 对应的键值对在数组中的存储位置</strong>。</p>
@@ -2791,7 +2924,8 @@ int main() {
 <p>将哈希值对桶数量（数组长度）<code>capacity</code> 取模，从而获取该 <code>key</code> 对应的数组索引 <code>index</code>。</p>
 </li>
 </ol>
-<p><code>index = hash(key) % capacity</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>index = hash(key) % capacity
+</code></pre></div></td></tr></table></div>
 <p>随后，我们就可以利用 <code>index</code> 在哈希表中访问对应的桶，从而获取 <code>value</code> 。</p>
 <p>设数组长度 <code>capacity = 100</code>、哈希算法 <code>hash(key) = key</code> ，易得哈希函数为 <code>key % 100</code> 。下图以 <code>key</code> 学号和 <code>value</code> 姓名为例，展示了哈希函数的工作原理。
 下图展示了哈希函数的工作原理：</p>
@@ -2799,9 +2933,10 @@ int main() {
 <h3 id="13">1.3 哈希冲突与扩容</h3>
 <p>从本质上看，哈希函数的作用是将所有 <code>key</code> 构成的输入空间映射到数组所有索引构成的输出空间，而输入空间往往远大于输出空间。因此，<strong>理论上一定存在“多个输入对应相同输出”的情况</strong>。</p>
 <p>对于上述示例中的哈希函数，当输入的 <code>key</code> 后两位相同时，哈希函数的输出结果也相同。例如，查询学号为 12836 和 20336 的两个学生时，我们得到：</p>
-<pre><code>12836 % 100 = 36
-20336 % 100 = 36
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>12836 % 100 = 36
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>20336 % 100 = 36
+</code></pre></div></td></tr></table></div>
 <p>如下图所示，两个学号指向了同一个姓名，这显然是不对的。我们将这种多个输入对应同一输出的情况称为哈希冲突（hash collision）。</p>
 <p><img alt="哈希冲突示例" src="https://www.hello-algo.com/chapter_hashing/hash_map.assets/hash_collision.png" /></p>
 <p><strong>如果出现哈希冲突了，只是会降低查找的性能，因为同一个哈希值对应的桶当中，还会以链表的形式存储多个值，如果发现哈希冲突，就会沿着链表查找，因为是遍历，所以性能会降低。</strong></p>
@@ -2846,22 +2981,30 @@ int main() {
 <ul>
 <li>
 <p><strong><code>unordered_map</code> 使用哈希表实现</strong>：<code>unordered_map</code> 通过哈希函数来处理每个键。你可以把哈希函数想象成一个智能快递员，负责把每个键（类似于包裹）送到一个特定的地址（也就是存储位置）。这个“地址”不是随意的，而是通过一个固定的计算方式（哈希函数）来确定的。</p>
-<p><strong>举个例子</strong>：
-- 你有一个键值对，键是 "apple"，值是 "fruit"。
-- 哈希函数会拿到 "apple" 这个键，进行某种计算（就像快递员根据地址去分类包裹一样），然后直接把它送到指定的位置，比如内存的某个“桶”（bucket）里。
-- 当你之后想查找 "apple" 对应的值时，哈希函数会再次根据 "apple" 进行同样的计算，告诉你它被放在内存的哪个“桶”里。由于这个计算非常直接，速度非常快。</p>
-<p><strong>为什么这样快？</strong>
-- 因为哈希函数是直接计算出结果，而不是像 <code>map</code> 那样按顺序逐个比对键。<code>unordered_map</code> 不需要排序或者对比，只要通过哈希函数找到正确的“桶”，就能快速定位数据，类似于快递员把包裹放到准确的位置。</p>
-<p><strong>无序存储的原因</strong>：
-- 因为哈希表中的键值对是根据哈希函数的结果来放置的，顺序取决于哈希函数的计算结果。因此，插入和查找时不需要关心顺序，只要计算出“桶”的位置，就能立刻访问数据。</p>
+<p><strong>举个例子</strong>：</p>
+<ul>
+<li>你有一个键值对，键是 "apple"，值是 "fruit"。</li>
+<li>哈希函数会拿到 "apple" 这个键，进行某种计算（就像快递员根据地址去分类包裹一样），然后直接把它送到指定的位置，比如内存的某个“桶”（bucket）里。</li>
+<li>当你之后想查找 "apple" 对应的值时，哈希函数会再次根据 "apple" 进行同样的计算，告诉你它被放在内存的哪个“桶”里。由于这个计算非常直接，速度非常快。</li>
+</ul>
+<p><strong>为什么这样快？</strong></p>
+<ul>
+<li>因为哈希函数是直接计算出结果，而不是像 <code>map</code> 那样按顺序逐个比对键。<code>unordered_map</code> 不需要排序或者对比，只要通过哈希函数找到正确的“桶”，就能快速定位数据，类似于快递员把包裹放到准确的位置。</li>
+</ul>
+<p><strong>无序存储的原因</strong>：</p>
+<ul>
+<li>因为哈希表中的键值对是根据哈希函数的结果来放置的，顺序取决于哈希函数的计算结果。因此，插入和查找时不需要关心顺序，只要计算出“桶”的位置，就能立刻访问数据。</li>
+</ul>
 </li>
 <li>
 <p><strong><code>map</code> 使用红黑树实现</strong>：<code>map</code> 会自动保持键值对的顺序，因此每次插入、删除和查找时都需要进行键的比对和排序操作。由于这些操作的存在，<code>map</code> 的速度比 <code>unordered_map</code> 稍慢，但它能保证数据有序。</p>
 </li>
 </ul>
-<p>总结：
-- 如果你不需要数据有序，且需要快速查找、插入或删除，<code>unordered_map</code> 更适合。
-- 如果你需要按顺序存储键值对，那么 <code>map</code> 更合适，即便查找速度稍慢一些。</p>
+<p>总结：</p>
+<ul>
+<li>如果你不需要数据有序，且需要快速查找、插入或删除，<code>unordered_map</code> 更适合。</li>
+<li>如果你需要按顺序存储键值对，那么 <code>map</code> 更合适，即便查找速度稍慢一些。</li>
+</ul>
 <h2 id="2">2 频率统计与计数</h2>
 <h3 id="21">2.1 词频统计介绍</h3>
 <p>哈希表（<code>unordered_map</code>）最常见的用途之一是<strong>频率统计</strong>，即用来统计数据出现的次数或频率。在需要处理大量数据时，哈希表可以通过键值对快速记录每个元素的出现次数。这样的操作时间复杂度为 <code>O(1)</code>，因此相比于使用数组或列表的 <code>O(n)</code> 查找，性能大幅提升。</p>
@@ -2874,23 +3017,38 @@ int main() {
 <li>判断数据集中是否存在重复元素</li>
 <li>统计每个字符/数字/元素的频率</li>
 </ul>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;unordered_map&gt;
-#include &lt;string&gt;
-using namespace std;
-
-unordered_map&lt;char, int&gt; count_frequency(const string&amp; s) {
-    std::unordered_map&lt;char, int&gt; freq_dict;
-    for (char c : s) {
-        if (freq_dict.find(c) != freq_dict.end()) {
-            freq_dict[c] += 1;
-        } else {
-            freq_dict[c] = 1;
-        }
-    }
-    return freq_dict;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unordered_map&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">char</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">count_frequency</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">char</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">freq_dict</span><span class="p">;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">freq_dict</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">freq_dict</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">            </span><span class="n">freq_dict</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">            </span><span class="n">freq_dict</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">freq_dict</span><span class="p">;</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="22">2.2 例题讲解</h3>
 <h3 id="221-lc-242">2.2.1 LC 242 有效的字母异位词</h3>
 <h4 id="_4">问题描述</h4>
@@ -2908,28 +3066,48 @@ unordered_map&lt;char, int&gt; count_frequency(const string&amp; s) {
 <h4 id="_6">提示</h4>
 <p>创建两个 <code>unordered_map</code> 储存频率次数，进行比较。</p>
 <h4 id="_7">参考解答：</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    bool isAnagram(string s, string t) {
-        // 如果两个字符串长度不同，直接返回 false
-        if (s.length() != t.length()) {
-            return false;
-        }
-
-        // 使用两个 unordered_map 来统计两个字符串中每个字符的频率
-        unordered_map&lt;char, int&gt; count_s, count_t;
-
-        // 遍历两个字符串，统计每个字符的频率
-        for (int i = 0; i &lt; s.length(); ++i) {
-            count_s[s[i]]++;
-            count_t[t[i]]++;
-        }
-
-        // 比较两个频率表是否相等
-        return count_s == count_t;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isAnagram</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">        </span><span class="c1">// 如果两个字符串长度不同，直接返回 false</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">length</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">        </span><span class="c1">// 使用两个 unordered_map 来统计两个字符串中每个字符的频率</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">        </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">char</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">count_s</span><span class="p">,</span><span class="w"> </span><span class="n">count_t</span><span class="p">;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">        </span><span class="c1">// 遍历两个字符串，统计每个字符的频率</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">            </span><span class="n">count_s</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">            </span><span class="n">count_t</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">        </span><span class="c1">// 比较两个频率表是否相等</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count_s</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">count_t</span><span class="p">;</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="23">2.3 举一反三</h3>
 <h3 id="231-lc-387">2.3.1 LC 387 字符串中的第一个唯一数字</h3>
 <h4 id="_8">问题描述</h4>
@@ -2947,53 +3125,91 @@ public:
 <li>我们通过两次遍历来完成这个任务，第一次遍历统计频率，第二次遍历查找第一个不重复的字符。</li>
 </ul>
 <h4 id="_11">参考示例</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    int firstUniqChar(string s) {
-        // 使用 unordered_map 统计每个字符的出现次数
-        unordered_map&lt;char, int&gt; count;
-
-        // 第一次遍历字符串，记录每个字符的出现次数
-        for (int i = 0; i &lt; s.length(); ++i) {
-            count[s[i]]++;
-        }
-
-        // 第二次遍历字符串，找到第一个出现次数为 1 的字符
-        for (int i = 0; i &lt; s.length(); ++i) {
-            if (count[s[i]] == 1) {
-                return i;  // 返回第一个不重复字符的索引
-            }
-        }
-
-        // 如果没有找到不重复的字符，返回 -1
-        return -1;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">firstUniqChar</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">        </span><span class="c1">// 使用 unordered_map 统计每个字符的出现次数</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">        </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">char</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">        </span><span class="c1">// 第一次遍历字符串，记录每个字符的出现次数</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">            </span><span class="n">count</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">        </span><span class="c1">// 第二次遍历字符串，找到第一个出现次数为 1 的字符</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">  </span><span class="c1">// 返回第一个不重复字符的索引</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">        </span><span class="c1">// 如果没有找到不重复的字符，返回 -1</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="3">3 快速查找</h2>
 <h3 id="31">3.1 快速查找介绍</h3>
 <p>快速查找是通过哈希表（unordered_map）实现的，它利用哈希函数的性质在常数时间内完成查找任务。其核心在于高效性——相比于列表遍历的 O(n) 时间复杂度，哈希表通过哈希查找可以在 O(1) 时间内找到对应的值。快速查找并不关心具体的映射关系，而是着重强调查找速度的提升。</p>
 <p><strong>简单来说，快速查找是哈希表利用哈希函数实现的高效查找操作，强调时间复杂度为 O(1)，适用于在数据集中快速定位特定元素。</strong></p>
 <p>例如，通过给定学生学号，查找对应的学生姓名时，哈希表可以快速返回查询结果。</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;unordered_map&gt;
-using namespace std;
-
-int main() {
-    // 创建哈希表，存储学号和姓名
-    unordered_map&lt;int, string&gt; students = {
-        {1001, &quot;Alice&quot;},
-        {1002, &quot;Bob&quot;},
-        {1003, &quot;Charlie&quot;}
-    };
-
-    // 根据学号快速查找对应的学生姓名
-    int student_id = 1002;
-    cout &lt;&lt; students[student_id] &lt;&lt; endl;  // 输出：Bob
-
-    return 0;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unordered_map&gt;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="c1">// 创建哈希表，存储学号和姓名</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="p">{</span><span class="mi">1001</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">},</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">        </span><span class="p">{</span><span class="mi">1002</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bob&quot;</span><span class="p">},</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">        </span><span class="p">{</span><span class="mi">1003</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Charlie&quot;</span><span class="p">}</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">    </span><span class="p">};</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">    </span><span class="c1">// 根据学号快速查找对应的学生姓名</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">student_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1002</span><span class="p">;</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">students</span><span class="p">[</span><span class="n">student_id</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 输出：Bob</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="32">3.2例题讲解</h3>
 <h3 id="321-lc-1">3.2.1 LC 1 两数之和</h3>
 <h4 id="_12">问题描述</h4>
@@ -3009,21 +3225,34 @@ int main() {
 <h4 id="_14">提示</h4>
 <p>属于 <code>unordered_map</code> 中的快速查找。</p>
 <h4 id="_15">参考解答：</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {
-        unordered_map&lt;int, int&gt; hashtable;  // 用于存储数值和其对应的下标
-        for (int i = 0; i &lt; nums.size(); i++) {
-            int complement = target - nums[i];  // 计算差值
-            if (hashtable.find(complement) != hashtable.end()) {  // 如果差值在哈希表中
-                return {hashtable[complement], i};  // 返回差值对应的下标和当前下标
-            }
-            hashtable[nums[i]] = i;  // 将当前值和下标存入哈希表
-        }
-        return {};  // 如果没有找到，返回空数组
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">twoSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">        </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">hashtable</span><span class="p">;</span><span class="w">  </span><span class="c1">// 用于存储数值和其对应的下标</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">complement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w">  </span><span class="c1">// 计算差值</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hashtable</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">complement</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">hashtable</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 如果差值在哈希表中</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="n">hashtable</span><span class="p">[</span><span class="n">complement</span><span class="p">],</span><span class="w"> </span><span class="n">i</span><span class="p">};</span><span class="w">  </span><span class="c1">// 返回差值对应的下标和当前下标</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">            </span><span class="n">hashtable</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">  </span><span class="c1">// 将当前值和下标存入哈希表</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">{};</span><span class="w">  </span><span class="c1">// 如果没有找到，返回空数组</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="33">3.3 举一反三</h3>
 <h3 id="331-lc-217">3.3.1 LC 217 存在重复元素</h3>
 <h4 id="_16">问题描述</h4>
@@ -3034,45 +3263,75 @@ public:
 <h4 id="_18">提示</h4>
 <p><code>unordered_map</code>可以用来快速存储和查找数字，这样可以避免重复的数字，属于频率统计与计数。</p>
 <h4 id="_19">参考解答：</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    bool containsDuplicate(vector&lt;int&gt;&amp; nums) {
-        unordered_map&lt;int, bool&gt; seen;  // 创建一个 unordered_map 用于存储数字
-        for (int num : nums) {
-            if (seen.find(num) != seen.end()) {
-                return true;  // 如果数字已经存在于 map 中，说明重复
-            }
-            seen[num] = true;  // 否则将该数字存储到 map 中
-        }
-        return false;  // 遍历结束后没有找到重复的数字
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">containsDuplicate</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">        </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">seen</span><span class="p">;</span><span class="w">  </span><span class="c1">// 创建一个 unordered_map 用于存储数字</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">seen</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">seen</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// 如果数字已经存在于 map 中，说明重复</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">            </span><span class="n">seen</span><span class="p">[</span><span class="n">num</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// 否则将该数字存储到 map 中</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w">  </span><span class="c1">// 遍历结束后没有找到重复的数字</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="4">4 哈希映射</h2>
 <h3 id="41">4.1 哈希映射介绍</h3>
 <p>哈希映射是一个更广泛的概念，表示通过哈希函数将一个键（key）映射到一个值（value），这种键值对可以用于构建各种关系，不仅限于频率统计或快速查找。例如，将人名映射到学校，或者将学校映射到一个包含所有学生的人名列表，都是哈希映射的应用。哈希映射可以支持一对一、一对多等复杂的关系结构。</p>
 <p><strong>简单来说，哈希映射是广泛使用的映射机制，能够灵活实现键值对关系，应用于更多复杂场景，如一对一、一对多的映射。</strong></p>
 <p>例如，将人名与学校关联，或将学校与其所有学生关联，都可以通过哈希映射来实现。</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;unordered_map&gt;
-#include &lt;vector&gt;
-#include &lt;string&gt;
-using namespace std;
-
-int main() {
-    // 人名到学校的一对一映射
-    unordered_map&lt;string, string&gt; people_to_school = {
-        {&quot;Alice&quot;, &quot;Harvard&quot;},
-        {&quot;Bob&quot;, &quot;MIT&quot;}
-    };
-
-    // 学校到人名列表的一对多映射
-    unordered_map&lt;string, vector&lt;string&gt;&gt; school_to_people = {
-        {&quot;Harvard&quot;, {&quot;Alice&quot;, &quot;Charlie&quot;}},
-        {&quot;MIT&quot;, {&quot;Bob&quot;}}
-    };
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unordered_map&gt;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">    </span><span class="c1">// 人名到学校的一对一映射</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">    </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">people_to_school</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">        </span><span class="p">{</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Harvard&quot;</span><span class="p">},</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">        </span><span class="p">{</span><span class="s">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MIT&quot;</span><span class="p">}</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">    </span><span class="p">};</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">    </span><span class="c1">// 学校到人名列表的一对多映射</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">    </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">school_to_people</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">        </span><span class="p">{</span><span class="s">&quot;Harvard&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Charlie&quot;</span><span class="p">}},</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">        </span><span class="p">{</span><span class="s">&quot;MIT&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Bob&quot;</span><span class="p">}}</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="w">    </span><span class="p">};</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="42">4.2 例题讲解</h3>
 <h3 id="421-lc-697">4.2.1 LC 697 数组的度</h3>
 <h4 id="_20">问题描述</h4>
@@ -3092,35 +3351,62 @@ int main() {
 </li>
 </ol>
 <h4 id="_23">参考解答</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    int findShortestSubArray(vector&lt;int&gt;&amp; nums) {
-        unordered_map&lt;int, vector&lt;int&gt;&gt; mp; // 存储每个数字的出现次数、第一次出现位置、最后一次出现位置
-
-        for (int i = 0; i &lt; nums.size(); ++i) {
-            if (mp.count(nums[i])) {
-                mp[nums[i]][0] += 1;   // 统计出现次数
-                mp[nums[i]][2] = i;    // 更新最后一次出现的位置
-            } else {
-                mp[nums[i]] = {1, i, i}; // 初始化：出现次数为1，第一次和最后一次出现位置相同
-            }
-        }
-
-        int maxNum = 0, minLen = nums.size();
-        for (const auto&amp; [num, data] : mp) {
-            int count = data[0], left = data[1], right = data[2];
-            if (count &gt; maxNum) {
-                maxNum = count; 
-                minLen = right - left + 1; // 更新最短长度
-            } else if (count == maxNum) {
-                minLen = min(minLen, right - left + 1); // 如果出现次数相同，更新最短长度
-            }
-        }
-
-        return minLen;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span>
+<span class="normal"><a href="#__codelineno-13-24">24</a></span>
+<span class="normal"><a href="#__codelineno-13-25">25</a></span>
+<span class="normal"><a href="#__codelineno-13-26">26</a></span>
+<span class="normal"><a href="#__codelineno-13-27">27</a></span>
+<span class="normal"><a href="#__codelineno-13-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">findShortestSubArray</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">        </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mp</span><span class="p">;</span><span class="w"> </span><span class="c1">// 存储每个数字的出现次数、第一次出现位置、最后一次出现位置</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mp</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">                </span><span class="n">mp</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">   </span><span class="c1">// 统计出现次数</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">                </span><span class="n">mp</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]][</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">    </span><span class="c1">// 更新最后一次出现的位置</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">                </span><span class="n">mp</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">};</span><span class="w"> </span><span class="c1">// 初始化：出现次数为1，第一次和最后一次出现位置相同</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">maxNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">minLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="p">[</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">maxNum</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">                </span><span class="n">maxNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="w">                </span><span class="n">minLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 更新最短长度</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">maxNum</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="w">                </span><span class="n">minLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">minLen</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 如果出现次数相同，更新最短长度</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25"></a>
+<a id="__codelineno-13-26" name="__codelineno-13-26"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">minLen</span><span class="p">;</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_24">解题过程：</h4>
 <ol>
 <li>
@@ -3158,35 +3444,62 @@ public:
 <h4 id="_27">提示</h4>
 <p>属于建立映射，通过创建 <code>unordered_map</code> 建立字母和出现字母的映射关系。</p>
 <h4 id="_28">参考解答</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    bool isIsomorphic(string s, string t) {
-        unordered_map&lt;char, char&gt; s_to_t; // s -&gt; t 的映射
-        unordered_map&lt;char, char&gt; t_to_s; // t -&gt; s 的映射
-
-        for (int i = 0; i &lt; s.size(); i++) {
-            char s_char = s[i];
-            char t_char = t[i];
-
-            // 检查 s -&gt; t 映射是否一致
-            if (s_to_t.count(s_char) &amp;&amp; s_to_t[s_char] != t_char) {
-                return false;
-            }
-
-            // 检查 t -&gt; s 映射是否一致
-            if (t_to_s.count(t_char) &amp;&amp; t_to_s[t_char] != s_char) {
-                return false;
-            }
-
-            // 建立 s -&gt; t 和 t -&gt; s 的映射
-            s_to_t[s_char] = t_char;
-            t_to_s[t_char] = s_char;
-        }
-
-        return true; // 如果遍历完所有字符都没有冲突，则是同构的
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span>
+<span class="normal"><a href="#__codelineno-14-19">19</a></span>
+<span class="normal"><a href="#__codelineno-14-20">20</a></span>
+<span class="normal"><a href="#__codelineno-14-21">21</a></span>
+<span class="normal"><a href="#__codelineno-14-22">22</a></span>
+<span class="normal"><a href="#__codelineno-14-23">23</a></span>
+<span class="normal"><a href="#__codelineno-14-24">24</a></span>
+<span class="normal"><a href="#__codelineno-14-25">25</a></span>
+<span class="normal"><a href="#__codelineno-14-26">26</a></span>
+<span class="normal"><a href="#__codelineno-14-27">27</a></span>
+<span class="normal"><a href="#__codelineno-14-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isIsomorphic</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">        </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">char</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">s_to_t</span><span class="p">;</span><span class="w"> </span><span class="c1">// s -&gt; t 的映射</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">        </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">char</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">t_to_s</span><span class="p">;</span><span class="w"> </span><span class="c1">// t -&gt; s 的映射</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">            </span><span class="kt">char</span><span class="w"> </span><span class="n">s_char</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">            </span><span class="kt">char</span><span class="w"> </span><span class="n">t_char</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">            </span><span class="c1">// 检查 s -&gt; t 映射是否一致</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s_to_t</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">s_char</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">s_to_t</span><span class="p">[</span><span class="n">s_char</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">t_char</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="w">            </span><span class="c1">// 检查 t -&gt; s 映射是否一致</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t_to_s</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">t_char</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">t_to_s</span><span class="p">[</span><span class="n">t_char</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">s_char</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20"></a>
+<a id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="w">            </span><span class="c1">// 建立 s -&gt; t 和 t -&gt; s 的映射</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22"></a><span class="w">            </span><span class="n">s_to_t</span><span class="p">[</span><span class="n">s_char</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_char</span><span class="p">;</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="w">            </span><span class="n">t_to_s</span><span class="p">[</span><span class="n">t_char</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s_char</span><span class="p">;</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25"></a>
+<a id="__codelineno-14-26" name="__codelineno-14-26"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// 如果遍历完所有字符都没有冲突，则是同构的</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-28" name="__codelineno-14-28"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="432-lc-219-ii">4.3.2 LC 219 存在重复元素II</h3>
 <h4 id="_29">问题描述</h4>
 <p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code>，判断数组中是否存在两个 <strong>不同的索引</strong> <code>i</code> 和 <code>j</code>，满足 <code>nums[i] == nums[j]</code> 且 <code>abs(i - j) &lt;= k</code>。如果存在，返回 <code>true</code>；否则，返回 <code>false</code>。</p>
@@ -3203,22 +3516,36 @@ public:
 <li>确保在检查时两个相同数字的索引差小于等于 <code>k</code>。</li>
 </ul>
 <h4 id="_32">参考解答</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    bool containsNearbyDuplicate(vector&lt;int&gt;&amp; nums, int k) {
-        unordered_map&lt;int, int&gt; pos;  // 记录每个数字最后一次出现的位置
-
-        for (int i = 0; i &lt; nums.size(); ++i) {
-            if (pos.count(nums[i]) &amp;&amp; i - pos[nums[i]] &lt;= k) {
-                return true;  // 如果找到满足条件的重复元素
-            }
-            pos[nums[i]] = i;  // 更新该数字的最新位置
-        }
-
-        return false;  // 如果没有找到符合条件的重复元素
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">containsNearbyDuplicate</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">        </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w">  </span><span class="c1">// 记录每个数字最后一次出现的位置</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pos</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// 如果找到满足条件的重复元素</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">            </span><span class="n">pos</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">  </span><span class="c1">// 更新该数字的最新位置</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w">  </span><span class="c1">// 如果没有找到符合条件的重复元素</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="5">5 课后练习</h2>
 <h4 id="_33">频率统计</h4>
 <table>

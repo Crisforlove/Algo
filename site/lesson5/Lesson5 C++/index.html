@@ -627,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2034,38 +2034,41 @@
 <p>在C++中，数组的声明和初始化可以分为以下几种方式：</p>
 <ul>
 <li><strong>声明数组变量：</strong> 声明数组需要指定数组的类型和大小，但不初始化数组元素。
-  <code>cpp
-  int myArray[5];</code></li>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">myArray</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+</code></pre></div></td></tr></table></div></li>
 <li>
 <p><strong>声明并初始化数组：</strong>  在声明数组的同时进行初始化，未显式初始化的元素将被设置为默认值（通常为0）。
-  <code>cpp
-  int myArray[5] = {1, 2, 3}; // 前三个元素初始化为1, 2, 3，后两个元素为0</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">myArray</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span><span class="w"> </span><span class="c1">// 前三个元素初始化为1, 2, 3，后两个元素为0</span>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong>使用数组初始化列表：</strong> 可以在声明时直接指定所有初始元素的值。
-  <code>cpp
-  int myArray[] = {1, 2, 3, 4, 5}; // 编译器自动确定数组大小为5</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">myArray</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span><span class="w"> </span><span class="c1">// 编译器自动确定数组大小为5</span>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong>动态分配数组：</strong> 使用<code>new</code>关键字在运行时动态分配数组并指定数组的大小。
-  <code>cpp
-  int* myArray = new int[5]; // 动态分配一个包含5个整数元素的数组</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span><span class="w"> </span><span class="c1">// 动态分配一个包含5个整数元素的数组</span>
+</code></pre></div></td></tr></table></div></p>
 </li>
 </ul>
 <h3 id="12">1.2 访问数组元素</h3>
 <p>C++数组的元素通过索引访问，索引从0开始到数组长度减1。</p>
-<pre><code class="language-cpp">int myArray[] = {10, 20, 30, 40, 50};
-int firstElement = myArray[0]; // 访问第一个元素，值为10
-int thirdElement = myArray[2]; // 访问第三个元素，值为30
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">myArray</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">firstElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myArray</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"> </span><span class="c1">// 访问第一个元素，值为10</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">thirdElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myArray</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="c1">// 访问第三个元素，值为30</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="13">1.3 数组的长度</h3>
 <p>在 C++ 中，数组的长度指数组中元素的数量。计算数组长度时，需要区分静态分配数组和动态分配数组，因为它们的处理方式是不同的。</p>
 <h4 id="_2">静态分配数组</h4>
 <p>静态分配数组的大小在编译时已经确定，不能在运行时修改。在 C++ 中，可以使用 <code>sizeof</code> 运算符计算静态数组的大小。</p>
 <p><strong>示例代码：</strong></p>
-<pre><code class="language-cpp">int myArray[] = {10, 20, 30, 40, 50};
-int length = sizeof(myArray) / sizeof(myArray[0]); // 获取数组的长度，值为 5
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">myArray</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">myArray</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">myArray</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"> </span><span class="c1">// 获取数组的长度，值为 5</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>解释：</strong></p>
 <ul>
 <li>
@@ -2081,9 +2084,10 @@ int length = sizeof(myArray) / sizeof(myArray[0]); // 获取数组的长度，�
 <h4 id="_3">动态分配数组</h4>
 <p>动态分配数组的大小在运行时确定，并且可以在运行时通过 <code>new</code> 运算符分配内存。对于动态分配的数组，<code>sizeof</code> 运算符无法用于计算数组的长度，因此需要在分配内存时手动保存数组的长度。</p>
 <p><strong>示例代码：</strong></p>
-<pre><code class="language-cpp">int* myArray = new int[5];
-int length = 5; // 手动记录数组长度
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// 手动记录数组长度</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>解释：</strong></p>
 <ul>
 <li><strong>动态分配数组的特点</strong>：动态分配的数组无法通过 <code>sizeof</code> 运算符获取长度，因为 <code>sizeof(myArray)</code> 只返回指针的大小，而不是数组的实际大小。因此，我们通常需要在分配内存时手动保存数组的长度。</li>
@@ -2099,15 +2103,20 @@ int length = 5; // 手动记录数组长度
 </ul>
 <h3 id="14">1.4 多维数组</h3>
 <p>C++支持多维数组，即数组的元素可以是数组。例如，二维数组的声明和初始化如下所示：</p>
-<pre><code class="language-cpp">int twoDArray[3][4]; // 声明一个3行4列的二维整数数组
-
-int twoDArray[3][3] = {
-    {1, 2, 3},
-    {4, 5, 6},
-    {7, 8, 9}
-}; // 声明并初始化一个3行3列的二维整数数组
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">twoDArray</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">];</span><span class="w"> </span><span class="c1">// 声明一个3行4列的二维整数数组</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">twoDArray</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">},</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">}</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="p">};</span><span class="w"> </span><span class="c1">// 声明并初始化一个3行3列的二维整数数组</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="15">1.5 数组的特点和注意事项</h3>
 <ul>
 <li>
@@ -2125,89 +2134,145 @@ int twoDArray[3][3] = {
 </ul>
 <h3 id="_4">示例</h3>
 <p>以下是一个简单的示例，展示了如何声明、初始化和使用一个一维整数数组：</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-
-int main() {
-    // 声明并初始化一个整数数组
-    int myArray[] = {10, 20, 30, 40, 50};
-
-    // 计算数组元素的总和
-    int sum = 0;
-    for (int i = 0; i &lt; sizeof(myArray) / sizeof(myArray[0]); i++) {
-        sum += myArray[i];
-    }
-
-    // 打印数组元素的总和
-    cout &lt;&lt; &quot;数组元素的总和为：&quot; &lt;&lt; sum &lt;&lt; endl;
-
-    return 0;
-}
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="c1">// 声明并初始化一个整数数组</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">myArray</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="c1">// 计算数组元素的总和</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">myArray</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">myArray</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">myArray</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">    </span><span class="c1">// 打印数组元素的总和</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;数组元素的总和为：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>在这个示例中，<code>myArray</code>数组包含5个整数元素，通过循环计算了这些元素的总和，并输出到控制台。</p>
 <h2 id="2-stdvector">2. 动态数组和列表（std::vector）</h2>
 <h3 id="21">2.1 创建和初始化动态数组</h3>
-<p>在C++中，可以使用std::vector类来创建和初始化动态数组：</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;vector&gt;
-using namespace std;
-
-int main() {
-    // 创建一个vector实例
-    vector&lt;int&gt; myVector = {10, 20, 30, 40, 50};
-
-    // 打印vector元素
-    for (int i = 0; i &lt; myVector.size(); i++) {
-        cout &lt;&lt; &quot;Element at index &quot; &lt;&lt; i &lt;&lt; &quot;: &quot; &lt;&lt; myVector[i] &lt;&lt; endl;
-    }
-
-    // 添加新元素
-    myVector.push_back(60);
-
-    // 打印添加后的元素
-    cout &lt;&lt; &quot;After adding an element, vector elements: &quot;;
-    for (int i = 0; i &lt; myVector.size(); i++) {
-        cout &lt;&lt; myVector[i] &lt;&lt; &quot; &quot;;
-    }
-    cout &lt;&lt; endl;
-
-    return 0;
-}
-</code></pre>
+<p>在C++中，可以使用std::vector类来创建和初始化动态数组：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span>
+<span class="normal"><a href="#__codelineno-9-24">24</a></span>
+<span class="normal"><a href="#__codelineno-9-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="c1">// 创建一个vector实例</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">myVector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="c1">// 打印vector元素</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">myVector</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Element at index &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">myVector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">    </span><span class="c1">// 添加新元素</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">    </span><span class="n">myVector</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">    </span><span class="c1">// 打印添加后的元素</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;After adding an element, vector elements: &quot;</span><span class="p">;</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">myVector</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">myVector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a>
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="22">2.2 基本操作</h3>
 <h4 id="_5">添加和访问元素</h4>
 <p>可以使用<code>push_back()</code>方法添加元素到<code>vector</code>中，并使用索引访问元素</p>
-<pre><code class="language-cpp">vector&lt;int&gt; myVector;
-myVector.push_back(10);
-myVector.push_back(20);
-myVector.push_back(30);
-
-int firstElement = myVector[0]; // 获取第一个元素，值为10
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">myVector</span><span class="p">;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">myVector</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">myVector</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="n">myVector</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">firstElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myVector</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"> </span><span class="c1">// 获取第一个元素，值为10</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_6">删除元素</h4>
 <p>使用<code>erase()</code>方法删除指定位置的元素，或使用<code>pop_back()</code>删除最后一个元素。</p>
-<pre><code class="language-cpp">myVector.erase(myVector.begin() + 1); // 删除索引为1的元素，即20。如果想删除索引为2的元素则+2， 以此类推
-myVector.pop_back(); // 删除最后一个元素
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">myVector</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">myVector</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 删除索引为1的元素，即20。如果想删除索引为2的元素则+2， 以此类推</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">myVector</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span><span class="w"> </span><span class="c1">// 删除最后一个元素</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="vector">获取<code>vector</code>大小</h4>
 <p>使用<code>size()</code>方法获取<code>vector</code>中元素的个数。</p>
-<pre><code class="language-cpp">int size = myVector.size(); // 获取vector大小。
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myVector</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="c1">// 获取vector大小。</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="vector_1">迭代<code>vector</code>元素</h4>
 <p>可以使用范围for循环或迭代器遍历<code>vector</code>中的元素。</p>
-<pre><code class="language-cpp">//使用for循环
-for (int element : myVector) {
-    cout &lt;&lt; element &lt;&lt; &quot; &quot;;
-}
-cout &lt;&lt; endl;
-
-// 或者使用迭代器
-for (auto it = myVector.begin(); it != myVector.end(); ++it) {
-    cout &lt;&lt; *it &lt;&lt; &quot; &quot;;
-}
-cout &lt;&lt; endl;
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="c1">//使用for循环</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">myVector</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="p">}</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="c1">// 或者使用迭代器</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myVector</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">myVector</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">it</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">it</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="p">}</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="23">2.3 特性和注意事项</h3>
 <ul>
 <li><strong>动态调整大小：</strong> <code>std::vector</code> 可以根据需要自动调整其大小，不需要手动管理内存。</li>
@@ -2216,97 +2281,175 @@ cout &lt;&lt; endl;
 </ul>
 <h3 id="_7">示例</h3>
 <p>以下是一个使用<code>std::vector</code>的简单示例：</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;vector&gt;
-using namespace std;
-
-int main() {
-    // 创建一个vector实例
-    vector&lt;int&gt; myVector = {10, 20, 30, 40, 50};
-
-    // 打印vector元素
-    cout &lt;&lt; &quot;Vector elements: &quot;;
-    for (int element : myVector) {
-        cout &lt;&lt; element &lt;&lt; &quot; &quot;;
-    }
-    cout &lt;&lt; endl;
-
-    // 添加新元素
-    myVector.push_back(60);
-
-    // 打印添加后的元素
-    cout &lt;&lt; &quot;After adding an element, vector elements: &quot;;
-    for (int element : myVector) {
-        cout &lt;&lt; element &lt;&lt; &quot; &quot;;
-    }
-    cout &lt;&lt; endl;
-
-    return 0;
-}
-</code></pre>
-<p>在这个示例中，展示了如何使用<code>std::vector创建</code>、添加和访问元素，以及打印<code>vector</code>的内容。</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span>
+<span class="normal"><a href="#__codelineno-14-19">19</a></span>
+<span class="normal"><a href="#__codelineno-14-20">20</a></span>
+<span class="normal"><a href="#__codelineno-14-21">21</a></span>
+<span class="normal"><a href="#__codelineno-14-22">22</a></span>
+<span class="normal"><a href="#__codelineno-14-23">23</a></span>
+<span class="normal"><a href="#__codelineno-14-24">24</a></span>
+<span class="normal"><a href="#__codelineno-14-25">25</a></span>
+<span class="normal"><a href="#__codelineno-14-26">26</a></span>
+<span class="normal"><a href="#__codelineno-14-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">    </span><span class="c1">// 创建一个vector实例</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">myVector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">    </span><span class="c1">// 打印vector元素</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Vector elements: &quot;</span><span class="p">;</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">myVector</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="w">    </span><span class="c1">// 添加新元素</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="w">    </span><span class="n">myVector</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">    </span><span class="c1">// 打印添加后的元素</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;After adding an element, vector elements: &quot;</span><span class="p">;</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">myVector</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25"></a>
+<a id="__codelineno-14-26" name="__codelineno-14-26"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+在这个示例中，展示了如何使用<code>std::vector创建</code>、添加和访问元素，以及打印<code>vector</code>的内容。</p>
 <h2 id="3">3. 初级搜索</h2>
 <h3 id="31-linear-search">3.1 数组的线性搜索（Linear Search）</h3>
 <p>线性搜索是最简单的数组搜索方法，它从数组的第一个元素开始逐个检查，直到找到目标元素或遍历完整个数组。</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-
-int linearSearch(int arr[], int size, int target) {
-    for (int i = 0; i &lt; size; i++) {
-        if (arr[i] == target) {
-            return i; // 返回目标元素的索引
-        }
-    }
-    return -1; // 没有找到目标元素
-}
-
-int main() {
-    int numbers[] = {5, 8, 2, 10, 3};
-    int target = 10;
-    int size = sizeof(numbers) / sizeof(numbers[0]);
-
-    int index = linearSearch(numbers, size, target);
-
-    if (index != -1) {
-        cout &lt;&lt; &quot;元素 &quot; &lt;&lt; target &lt;&lt; &quot; 在数组中的索引为：&quot; &lt;&lt; index &lt;&lt; endl;
-    } else {
-        cout &lt;&lt; &quot;元素 &quot; &lt;&lt; target &lt;&lt; &quot; 不在数组中。&quot; &lt;&lt; endl;
-    }
-
-    return 0;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span>
+<span class="normal"><a href="#__codelineno-15-16">16</a></span>
+<span class="normal"><a href="#__codelineno-15-17">17</a></span>
+<span class="normal"><a href="#__codelineno-15-18">18</a></span>
+<span class="normal"><a href="#__codelineno-15-19">19</a></span>
+<span class="normal"><a href="#__codelineno-15-20">20</a></span>
+<span class="normal"><a href="#__codelineno-15-21">21</a></span>
+<span class="normal"><a href="#__codelineno-15-22">22</a></span>
+<span class="normal"><a href="#__codelineno-15-23">23</a></span>
+<span class="normal"><a href="#__codelineno-15-24">24</a></span>
+<span class="normal"><a href="#__codelineno-15-25">25</a></span>
+<span class="normal"><a href="#__codelineno-15-26">26</a></span>
+<span class="normal"><a href="#__codelineno-15-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">linearSearch</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回目标元素的索引</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 没有找到目标元素</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="p">}</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numbers</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linearSearch</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">);</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;元素 &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; 在数组中的索引为：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;元素 &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; 不在数组中。&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25"></a>
+<a id="__codelineno-15-26" name="__codelineno-15-26"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>在上面的示例中，<code>linearSearch</code>函数接受一个整型数组、数组大小和目标整数作为参数，然后使用for循环逐个检查数组中的元素，直到找到目标元素或者遍历完整个数组。</p>
 <h3 id="32-stdvector">3.2 <code>std::vector</code>的线性搜索</h3>
-<p><code>std::vector</code>的线性搜索与数组类似，可以使用范围for循环或迭代器遍历<code>vector</code>中的元素，查找目标元素。</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;vector&gt;
-using namespace std;
-
-int linearSearch(vector&lt;string&gt; vec, string target) {
-    for (int i = 0; i &lt; vec.size(); i++) {
-        if (vec[i] == target) {
-            return i; // 返回目标元素的索引
-        }
-    }
-    return -1; // 没有找到目标元素
-}
-
-int main() {
-    vector&lt;string&gt; fruits = {&quot;Apple&quot;, &quot;Banana&quot;, &quot;Cherry&quot;};
-    string target = &quot;Banana&quot;;
-
-    int index = linearSearch(fruits, target);
-
-    if (index != -1) {
-        cout &lt;&lt; &quot;元素 &quot; &lt;&lt; target &lt;&lt; &quot; 在vector中的索引为：&quot; &lt;&lt; index &lt;&lt; endl;
-    } else {
-        cout &lt;&lt; &quot;元素 &quot; &lt;&lt; target &lt;&lt; &quot; 不在vector中。&quot; &lt;&lt; endl;
-    }
-
-    return 0;
-}
-</code></pre>
+<p><code>std::vector</code>的线性搜索与数组类似，可以使用范围for循环或迭代器遍历<code>vector</code>中的元素，查找目标元素。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span>
+<span class="normal"><a href="#__codelineno-16-14">14</a></span>
+<span class="normal"><a href="#__codelineno-16-15">15</a></span>
+<span class="normal"><a href="#__codelineno-16-16">16</a></span>
+<span class="normal"><a href="#__codelineno-16-17">17</a></span>
+<span class="normal"><a href="#__codelineno-16-18">18</a></span>
+<span class="normal"><a href="#__codelineno-16-19">19</a></span>
+<span class="normal"><a href="#__codelineno-16-20">20</a></span>
+<span class="normal"><a href="#__codelineno-16-21">21</a></span>
+<span class="normal"><a href="#__codelineno-16-22">22</a></span>
+<span class="normal"><a href="#__codelineno-16-23">23</a></span>
+<span class="normal"><a href="#__codelineno-16-24">24</a></span>
+<span class="normal"><a href="#__codelineno-16-25">25</a></span>
+<span class="normal"><a href="#__codelineno-16-26">26</a></span>
+<span class="normal"><a href="#__codelineno-16-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">linearSearch</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回目标元素的索引</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 没有找到目标元素</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="p">}</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Cherry&quot;</span><span class="p">};</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Banana&quot;</span><span class="p">;</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17"></a>
+<a id="__codelineno-16-18" name="__codelineno-16-18"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linearSearch</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">);</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19"></a>
+<a id="__codelineno-16-20" name="__codelineno-16-20"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;元素 &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; 在vector中的索引为：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;元素 &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; 不在vector中。&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25"></a>
+<a id="__codelineno-16-26" name="__codelineno-16-26"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <p>在上面的示例中，<code>linearSearch</code>函数接受一个<code>vector</code>和目标元素作为参数，然后使用for循环遍历<code>vector</code>中的元素，查找目标元素是否存在。</p>
 <h3 id="_8">总结</h3>
 <ul>
@@ -2327,144 +2470,281 @@ int main() {
 <h2 id="4">4. 课后练习</h2>
 <h3 id="41">4.1 学生成绩管理系统</h3>
 <h4 id="_9">描述：</h4>
-<p>设计并实现一个简单的学生成绩管理系统。系统要求能够存储多个学生的姓名和对应的成绩，并提供以下功能：
-1. 添加学生及其成绩。
-2. 计算并输出所有学生的平均成绩。
-3. 查找并输出某个学生的成绩。
-4. 输出成绩最高的学生及其成绩。</p>
+<p>设计并实现一个简单的学生成绩管理系统。系统要求能够存储多个学生的姓名和对应的成绩，并提供以下功能：</p>
+<ol>
+<li>
+<p>添加学生及其成绩。</p>
+</li>
+<li>
+<p>计算并输出所有学生的平均成绩。</p>
+</li>
+<li>
+<p>查找并输出某个学生的成绩。</p>
+</li>
+<li>
+<p>输出成绩最高的学生及其成绩。</p>
+</li>
+</ol>
 <h4 id="_10">模板</h4>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;string&gt;
-using namespace std;
-
-// 添加学生信息到students和grades列表中
-void addStudent(vector&lt;string&gt;&amp; students, vector&lt;int&gt;&amp; grades, const string&amp; name, int grade) {
-    // 填写代码
-}
-
-// 计算所有学生的平均成绩
-double calculateAverage(const vector&lt;int&gt;&amp; grades) {
-    // 填写代码
-}
-
-// 查找指定学生的成绩
-int findGrade(const vector&lt;string&gt;&amp; students, const vector&lt;int&gt;&amp; grades, const string&amp; name) {
-    // 填写代码
-}
-
-// 找出成绩最高的学生及其成绩
-void findTopStudent(const vector&lt;string&gt;&amp; students, const vector&lt;int&gt;&amp; grades, string&amp; topStudent, int&amp; topGrade) {
-    // 填写代码
-}
-
-int main() {
-    vector&lt;string&gt; students;
-    vector&lt;int&gt; grades;
-
-    // 添加学生信息
-    addStudent(students, grades, &quot;Alice&quot;, 85);
-    addStudent(students, grades, &quot;Bob&quot;, 90);
-    addStudent(students, grades, &quot;Charlie&quot;, 78);
-    addStudent(students, grades, &quot;David&quot;, 92);
-
-    // 输出所有学生的平均成绩
-    double average = calculateAverage(grades);
-    cout &lt;&lt; &quot;所有学生的平均成绩为：&quot; &lt;&lt; average &lt;&lt; endl;
-
-    // 查找某个学生的成绩
-    string targetName = &quot;Bob&quot;;
-    int grade = findGrade(students, grades, targetName);
-    if (grade != -1) {
-        cout &lt;&lt; targetName &lt;&lt; &quot; 的成绩为：&quot; &lt;&lt; grade &lt;&lt; endl;
-    } else {
-        cout &lt;&lt; targetName &lt;&lt; &quot; 不存在。&quot; &lt;&lt; endl;
-    }
-
-    // 找出成绩最高的学生
-    string topStudent;
-    int topGrade;
-    findTopStudent(students, grades, topStudent, topGrade);
-    cout &lt;&lt; &quot;成绩最高的学生是 &quot; &lt;&lt; topStudent &lt;&lt; &quot;，成绩为：&quot; &lt;&lt; topGrade &lt;&lt; endl;
-
-    return 0;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span>
+<span class="normal"><a href="#__codelineno-17-13">13</a></span>
+<span class="normal"><a href="#__codelineno-17-14">14</a></span>
+<span class="normal"><a href="#__codelineno-17-15">15</a></span>
+<span class="normal"><a href="#__codelineno-17-16">16</a></span>
+<span class="normal"><a href="#__codelineno-17-17">17</a></span>
+<span class="normal"><a href="#__codelineno-17-18">18</a></span>
+<span class="normal"><a href="#__codelineno-17-19">19</a></span>
+<span class="normal"><a href="#__codelineno-17-20">20</a></span>
+<span class="normal"><a href="#__codelineno-17-21">21</a></span>
+<span class="normal"><a href="#__codelineno-17-22">22</a></span>
+<span class="normal"><a href="#__codelineno-17-23">23</a></span>
+<span class="normal"><a href="#__codelineno-17-24">24</a></span>
+<span class="normal"><a href="#__codelineno-17-25">25</a></span>
+<span class="normal"><a href="#__codelineno-17-26">26</a></span>
+<span class="normal"><a href="#__codelineno-17-27">27</a></span>
+<span class="normal"><a href="#__codelineno-17-28">28</a></span>
+<span class="normal"><a href="#__codelineno-17-29">29</a></span>
+<span class="normal"><a href="#__codelineno-17-30">30</a></span>
+<span class="normal"><a href="#__codelineno-17-31">31</a></span>
+<span class="normal"><a href="#__codelineno-17-32">32</a></span>
+<span class="normal"><a href="#__codelineno-17-33">33</a></span>
+<span class="normal"><a href="#__codelineno-17-34">34</a></span>
+<span class="normal"><a href="#__codelineno-17-35">35</a></span>
+<span class="normal"><a href="#__codelineno-17-36">36</a></span>
+<span class="normal"><a href="#__codelineno-17-37">37</a></span>
+<span class="normal"><a href="#__codelineno-17-38">38</a></span>
+<span class="normal"><a href="#__codelineno-17-39">39</a></span>
+<span class="normal"><a href="#__codelineno-17-40">40</a></span>
+<span class="normal"><a href="#__codelineno-17-41">41</a></span>
+<span class="normal"><a href="#__codelineno-17-42">42</a></span>
+<span class="normal"><a href="#__codelineno-17-43">43</a></span>
+<span class="normal"><a href="#__codelineno-17-44">44</a></span>
+<span class="normal"><a href="#__codelineno-17-45">45</a></span>
+<span class="normal"><a href="#__codelineno-17-46">46</a></span>
+<span class="normal"><a href="#__codelineno-17-47">47</a></span>
+<span class="normal"><a href="#__codelineno-17-48">48</a></span>
+<span class="normal"><a href="#__codelineno-17-49">49</a></span>
+<span class="normal"><a href="#__codelineno-17-50">50</a></span>
+<span class="normal"><a href="#__codelineno-17-51">51</a></span>
+<span class="normal"><a href="#__codelineno-17-52">52</a></span>
+<span class="normal"><a href="#__codelineno-17-53">53</a></span>
+<span class="normal"><a href="#__codelineno-17-54">54</a></span>
+<span class="normal"><a href="#__codelineno-17-55">55</a></span>
+<span class="normal"><a href="#__codelineno-17-56">56</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="c1">// 添加学生信息到students和grades列表中</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">addStudent</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="w">    </span><span class="c1">// 填写代码</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="p">}</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="c1">// 计算所有学生的平均成绩</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="kt">double</span><span class="w"> </span><span class="nf">calculateAverage</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">grades</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a><span class="w">    </span><span class="c1">// 填写代码</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="p">}</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a>
+<a id="__codelineno-17-16" name="__codelineno-17-16"></a><span class="c1">// 查找指定学生的成绩</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17"></a><span class="kt">int</span><span class="w"> </span><span class="nf">findGrade</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18"></a><span class="w">    </span><span class="c1">// 填写代码</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19"></a><span class="p">}</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20"></a>
+<a id="__codelineno-17-21" name="__codelineno-17-21"></a><span class="c1">// 找出成绩最高的学生及其成绩</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22"></a><span class="kt">void</span><span class="w"> </span><span class="nf">findTopStudent</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">topStudent</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">topGrade</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-23" name="__codelineno-17-23"></a><span class="w">    </span><span class="c1">// 填写代码</span>
+<a id="__codelineno-17-24" name="__codelineno-17-24"></a><span class="p">}</span>
+<a id="__codelineno-17-25" name="__codelineno-17-25"></a>
+<a id="__codelineno-17-26" name="__codelineno-17-26"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-27" name="__codelineno-17-27"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">students</span><span class="p">;</span>
+<a id="__codelineno-17-28" name="__codelineno-17-28"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">grades</span><span class="p">;</span>
+<a id="__codelineno-17-29" name="__codelineno-17-29"></a>
+<a id="__codelineno-17-30" name="__codelineno-17-30"></a><span class="w">    </span><span class="c1">// 添加学生信息</span>
+<a id="__codelineno-17-31" name="__codelineno-17-31"></a><span class="w">    </span><span class="n">addStudent</span><span class="p">(</span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">);</span>
+<a id="__codelineno-17-32" name="__codelineno-17-32"></a><span class="w">    </span><span class="n">addStudent</span><span class="p">(</span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">);</span>
+<a id="__codelineno-17-33" name="__codelineno-17-33"></a><span class="w">    </span><span class="n">addStudent</span><span class="p">(</span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Charlie&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">78</span><span class="p">);</span>
+<a id="__codelineno-17-34" name="__codelineno-17-34"></a><span class="w">    </span><span class="n">addStudent</span><span class="p">(</span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;David&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">92</span><span class="p">);</span>
+<a id="__codelineno-17-35" name="__codelineno-17-35"></a>
+<a id="__codelineno-17-36" name="__codelineno-17-36"></a><span class="w">    </span><span class="c1">// 输出所有学生的平均成绩</span>
+<a id="__codelineno-17-37" name="__codelineno-17-37"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">average</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateAverage</span><span class="p">(</span><span class="n">grades</span><span class="p">);</span>
+<a id="__codelineno-17-38" name="__codelineno-17-38"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;所有学生的平均成绩为：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">average</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-17-39" name="__codelineno-17-39"></a>
+<a id="__codelineno-17-40" name="__codelineno-17-40"></a><span class="w">    </span><span class="c1">// 查找某个学生的成绩</span>
+<a id="__codelineno-17-41" name="__codelineno-17-41"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">targetName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Bob&quot;</span><span class="p">;</span>
+<a id="__codelineno-17-42" name="__codelineno-17-42"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findGrade</span><span class="p">(</span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="n">targetName</span><span class="p">);</span>
+<a id="__codelineno-17-43" name="__codelineno-17-43"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">grade</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-44" name="__codelineno-17-44"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">targetName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; 的成绩为：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-17-45" name="__codelineno-17-45"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-46" name="__codelineno-17-46"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">targetName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; 不存在。&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-17-47" name="__codelineno-17-47"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-48" name="__codelineno-17-48"></a>
+<a id="__codelineno-17-49" name="__codelineno-17-49"></a><span class="w">    </span><span class="c1">// 找出成绩最高的学生</span>
+<a id="__codelineno-17-50" name="__codelineno-17-50"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">topStudent</span><span class="p">;</span>
+<a id="__codelineno-17-51" name="__codelineno-17-51"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">topGrade</span><span class="p">;</span>
+<a id="__codelineno-17-52" name="__codelineno-17-52"></a><span class="w">    </span><span class="n">findTopStudent</span><span class="p">(</span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="n">topStudent</span><span class="p">,</span><span class="w"> </span><span class="n">topGrade</span><span class="p">);</span>
+<a id="__codelineno-17-53" name="__codelineno-17-53"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;成绩最高的学生是 &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">topStudent</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;，成绩为：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">topGrade</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-17-54" name="__codelineno-17-54"></a>
+<a id="__codelineno-17-55" name="__codelineno-17-55"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-17-56" name="__codelineno-17-56"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_11">参考答案</h4>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;string&gt;
-using namespace std;
-
-// 添加学生信息到students和grades列表中
-void addStudent(vector&lt;string&gt;&amp; students, vector&lt;int&gt;&amp; grades, const string&amp; name, int grade) {
-    students.push_back(name);
-    grades.push_back(grade);
-}
-
-// 计算所有学生的平均成绩
-double calculateAverage(const vector&lt;int&gt;&amp; grades) {
-    int total = 0;
-    for (int i = 0; i &lt; grades.size(); i++) {
-        total += grades[i];
-    }
-    return static_cast&lt;double&gt;(total) / grades.size();
-}
-
-// 查找指定学生的成绩
-int findGrade(const vector&lt;string&gt;&amp; students, const vector&lt;int&gt;&amp; grades, const string&amp; name) {
-    for (int i = 0; i &lt; students.size(); i++) {
-        if (students[i] == name) {
-            return grades[i];
-        }
-    }
-    return -1; // 如果没有找到，返回-1
-}
-
-// 找出成绩最高的学生及其成绩
-void findTopStudent(const vector&lt;string&gt;&amp; students, const vector&lt;int&gt;&amp; grades, string&amp; topStudent, int&amp; topGrade) {
-    topGrade = grades[0];
-    topStudent = students[0];
-    for (int i = 1; i &lt; grades.size(); i++) {
-        if (grades[i] &gt; topGrade) {
-            topGrade = grades[i];
-            topStudent = students[i];
-        }
-    }
-}
-
-int main() {
-    vector&lt;string&gt; students;
-    vector&lt;int&gt; grades;
-
-    // 添加学生信息
-    addStudent(students, grades, &quot;Alice&quot;, 85);
-    addStudent(students, grades, &quot;Bob&quot;, 90);
-    addStudent(students, grades, &quot;Charlie&quot;, 78);
-    addStudent(students, grades, &quot;David&quot;, 92);
-
-    // 输出所有学生的平均成绩
-    double average = calculateAverage(grades);
-    cout &lt;&lt; &quot;所有学生的平均成绩为：&quot; &lt;&lt; average &lt;&lt; endl;
-
-    // 查找某个学生的成绩
-    string targetName = &quot;Bob&quot;;
-    int grade = findGrade(students, grades, targetName);
-    if (grade != -1) {
-        cout &lt;&lt; targetName &lt;&lt; &quot; 的成绩为：&quot; &lt;&lt; grade &lt;&lt; endl;
-    } else {
-        cout &lt;&lt; targetName &lt;&lt; &quot; 不存在。&quot; &lt;&lt; endl;
-    }
-
-    // 找出成绩最高的学生
-    string topStudent;
-    int topGrade;
-    findTopStudent(students, grades, topStudent, topGrade);
-    cout &lt;&lt; &quot;成绩最高的学生是 &quot; &lt;&lt; topStudent &lt;&lt; &quot;，成绩为：&quot; &lt;&lt; topGrade &lt;&lt; endl;
-
-    return 0;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-18-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-18-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-18-10">10</a></span>
+<span class="normal"><a href="#__codelineno-18-11">11</a></span>
+<span class="normal"><a href="#__codelineno-18-12">12</a></span>
+<span class="normal"><a href="#__codelineno-18-13">13</a></span>
+<span class="normal"><a href="#__codelineno-18-14">14</a></span>
+<span class="normal"><a href="#__codelineno-18-15">15</a></span>
+<span class="normal"><a href="#__codelineno-18-16">16</a></span>
+<span class="normal"><a href="#__codelineno-18-17">17</a></span>
+<span class="normal"><a href="#__codelineno-18-18">18</a></span>
+<span class="normal"><a href="#__codelineno-18-19">19</a></span>
+<span class="normal"><a href="#__codelineno-18-20">20</a></span>
+<span class="normal"><a href="#__codelineno-18-21">21</a></span>
+<span class="normal"><a href="#__codelineno-18-22">22</a></span>
+<span class="normal"><a href="#__codelineno-18-23">23</a></span>
+<span class="normal"><a href="#__codelineno-18-24">24</a></span>
+<span class="normal"><a href="#__codelineno-18-25">25</a></span>
+<span class="normal"><a href="#__codelineno-18-26">26</a></span>
+<span class="normal"><a href="#__codelineno-18-27">27</a></span>
+<span class="normal"><a href="#__codelineno-18-28">28</a></span>
+<span class="normal"><a href="#__codelineno-18-29">29</a></span>
+<span class="normal"><a href="#__codelineno-18-30">30</a></span>
+<span class="normal"><a href="#__codelineno-18-31">31</a></span>
+<span class="normal"><a href="#__codelineno-18-32">32</a></span>
+<span class="normal"><a href="#__codelineno-18-33">33</a></span>
+<span class="normal"><a href="#__codelineno-18-34">34</a></span>
+<span class="normal"><a href="#__codelineno-18-35">35</a></span>
+<span class="normal"><a href="#__codelineno-18-36">36</a></span>
+<span class="normal"><a href="#__codelineno-18-37">37</a></span>
+<span class="normal"><a href="#__codelineno-18-38">38</a></span>
+<span class="normal"><a href="#__codelineno-18-39">39</a></span>
+<span class="normal"><a href="#__codelineno-18-40">40</a></span>
+<span class="normal"><a href="#__codelineno-18-41">41</a></span>
+<span class="normal"><a href="#__codelineno-18-42">42</a></span>
+<span class="normal"><a href="#__codelineno-18-43">43</a></span>
+<span class="normal"><a href="#__codelineno-18-44">44</a></span>
+<span class="normal"><a href="#__codelineno-18-45">45</a></span>
+<span class="normal"><a href="#__codelineno-18-46">46</a></span>
+<span class="normal"><a href="#__codelineno-18-47">47</a></span>
+<span class="normal"><a href="#__codelineno-18-48">48</a></span>
+<span class="normal"><a href="#__codelineno-18-49">49</a></span>
+<span class="normal"><a href="#__codelineno-18-50">50</a></span>
+<span class="normal"><a href="#__codelineno-18-51">51</a></span>
+<span class="normal"><a href="#__codelineno-18-52">52</a></span>
+<span class="normal"><a href="#__codelineno-18-53">53</a></span>
+<span class="normal"><a href="#__codelineno-18-54">54</a></span>
+<span class="normal"><a href="#__codelineno-18-55">55</a></span>
+<span class="normal"><a href="#__codelineno-18-56">56</a></span>
+<span class="normal"><a href="#__codelineno-18-57">57</a></span>
+<span class="normal"><a href="#__codelineno-18-58">58</a></span>
+<span class="normal"><a href="#__codelineno-18-59">59</a></span>
+<span class="normal"><a href="#__codelineno-18-60">60</a></span>
+<span class="normal"><a href="#__codelineno-18-61">61</a></span>
+<span class="normal"><a href="#__codelineno-18-62">62</a></span>
+<span class="normal"><a href="#__codelineno-18-63">63</a></span>
+<span class="normal"><a href="#__codelineno-18-64">64</a></span>
+<span class="normal"><a href="#__codelineno-18-65">65</a></span>
+<span class="normal"><a href="#__codelineno-18-66">66</a></span>
+<span class="normal"><a href="#__codelineno-18-67">67</a></span>
+<span class="normal"><a href="#__codelineno-18-68">68</a></span>
+<span class="normal"><a href="#__codelineno-18-69">69</a></span>
+<span class="normal"><a href="#__codelineno-18-70">70</a></span>
+<span class="normal"><a href="#__codelineno-18-71">71</a></span>
+<span class="normal"><a href="#__codelineno-18-72">72</a></span>
+<span class="normal"><a href="#__codelineno-18-73">73</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="c1">// 添加学生信息到students和grades列表中</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">addStudent</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="w">    </span><span class="n">students</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="w">    </span><span class="n">grades</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">grade</span><span class="p">);</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="p">}</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11"></a>
+<a id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="c1">// 计算所有学生的平均成绩</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13"></a><span class="kt">double</span><span class="w"> </span><span class="nf">calculateAverage</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">grades</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">grades</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-16" name="__codelineno-18-16"></a><span class="w">        </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">grades</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-18-17" name="__codelineno-18-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">total</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">grades</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-18-19" name="__codelineno-18-19"></a><span class="p">}</span>
+<a id="__codelineno-18-20" name="__codelineno-18-20"></a>
+<a id="__codelineno-18-21" name="__codelineno-18-21"></a><span class="c1">// 查找指定学生的成绩</span>
+<a id="__codelineno-18-22" name="__codelineno-18-22"></a><span class="kt">int</span><span class="w"> </span><span class="nf">findGrade</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-23" name="__codelineno-18-23"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">students</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-24" name="__codelineno-18-24"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">students</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-25" name="__codelineno-18-25"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">grades</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-18-26" name="__codelineno-18-26"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-18-27" name="__codelineno-18-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-28" name="__codelineno-18-28"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 如果没有找到，返回-1</span>
+<a id="__codelineno-18-29" name="__codelineno-18-29"></a><span class="p">}</span>
+<a id="__codelineno-18-30" name="__codelineno-18-30"></a>
+<a id="__codelineno-18-31" name="__codelineno-18-31"></a><span class="c1">// 找出成绩最高的学生及其成绩</span>
+<a id="__codelineno-18-32" name="__codelineno-18-32"></a><span class="kt">void</span><span class="w"> </span><span class="nf">findTopStudent</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">topStudent</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">topGrade</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-33" name="__codelineno-18-33"></a><span class="w">    </span><span class="n">topGrade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grades</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<a id="__codelineno-18-34" name="__codelineno-18-34"></a><span class="w">    </span><span class="n">topStudent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">students</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<a id="__codelineno-18-35" name="__codelineno-18-35"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">grades</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-36" name="__codelineno-18-36"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">grades</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">topGrade</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-37" name="__codelineno-18-37"></a><span class="w">            </span><span class="n">topGrade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grades</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-18-38" name="__codelineno-18-38"></a><span class="w">            </span><span class="n">topStudent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">students</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-18-39" name="__codelineno-18-39"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-18-40" name="__codelineno-18-40"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-41" name="__codelineno-18-41"></a><span class="p">}</span>
+<a id="__codelineno-18-42" name="__codelineno-18-42"></a>
+<a id="__codelineno-18-43" name="__codelineno-18-43"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-44" name="__codelineno-18-44"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">students</span><span class="p">;</span>
+<a id="__codelineno-18-45" name="__codelineno-18-45"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">grades</span><span class="p">;</span>
+<a id="__codelineno-18-46" name="__codelineno-18-46"></a>
+<a id="__codelineno-18-47" name="__codelineno-18-47"></a><span class="w">    </span><span class="c1">// 添加学生信息</span>
+<a id="__codelineno-18-48" name="__codelineno-18-48"></a><span class="w">    </span><span class="n">addStudent</span><span class="p">(</span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">);</span>
+<a id="__codelineno-18-49" name="__codelineno-18-49"></a><span class="w">    </span><span class="n">addStudent</span><span class="p">(</span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">);</span>
+<a id="__codelineno-18-50" name="__codelineno-18-50"></a><span class="w">    </span><span class="n">addStudent</span><span class="p">(</span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Charlie&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">78</span><span class="p">);</span>
+<a id="__codelineno-18-51" name="__codelineno-18-51"></a><span class="w">    </span><span class="n">addStudent</span><span class="p">(</span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;David&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">92</span><span class="p">);</span>
+<a id="__codelineno-18-52" name="__codelineno-18-52"></a>
+<a id="__codelineno-18-53" name="__codelineno-18-53"></a><span class="w">    </span><span class="c1">// 输出所有学生的平均成绩</span>
+<a id="__codelineno-18-54" name="__codelineno-18-54"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">average</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateAverage</span><span class="p">(</span><span class="n">grades</span><span class="p">);</span>
+<a id="__codelineno-18-55" name="__codelineno-18-55"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;所有学生的平均成绩为：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">average</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-18-56" name="__codelineno-18-56"></a>
+<a id="__codelineno-18-57" name="__codelineno-18-57"></a><span class="w">    </span><span class="c1">// 查找某个学生的成绩</span>
+<a id="__codelineno-18-58" name="__codelineno-18-58"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">targetName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Bob&quot;</span><span class="p">;</span>
+<a id="__codelineno-18-59" name="__codelineno-18-59"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findGrade</span><span class="p">(</span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="n">targetName</span><span class="p">);</span>
+<a id="__codelineno-18-60" name="__codelineno-18-60"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">grade</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-61" name="__codelineno-18-61"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">targetName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; 的成绩为：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-18-62" name="__codelineno-18-62"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-63" name="__codelineno-18-63"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">targetName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; 不存在。&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-18-64" name="__codelineno-18-64"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-65" name="__codelineno-18-65"></a>
+<a id="__codelineno-18-66" name="__codelineno-18-66"></a><span class="w">    </span><span class="c1">// 找出成绩最高的学生</span>
+<a id="__codelineno-18-67" name="__codelineno-18-67"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">topStudent</span><span class="p">;</span>
+<a id="__codelineno-18-68" name="__codelineno-18-68"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">topGrade</span><span class="p">;</span>
+<a id="__codelineno-18-69" name="__codelineno-18-69"></a><span class="w">    </span><span class="n">findTopStudent</span><span class="p">(</span><span class="n">students</span><span class="p">,</span><span class="w"> </span><span class="n">grades</span><span class="p">,</span><span class="w"> </span><span class="n">topStudent</span><span class="p">,</span><span class="w"> </span><span class="n">topGrade</span><span class="p">);</span>
+<a id="__codelineno-18-70" name="__codelineno-18-70"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;成绩最高的学生是 &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">topStudent</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;，成绩为：&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">topGrade</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-18-71" name="__codelineno-18-71"></a>
+<a id="__codelineno-18-72" name="__codelineno-18-72"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-18-73" name="__codelineno-18-73"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_12">说明</h3>
 <ul>
 <li><strong>addStudent</strong>: 通过 <code>push_back</code> 方法将学生姓名和成绩添加到 <code>students</code> 和 <code>grades</code> 两个 <code>vector</code> 中。</li>

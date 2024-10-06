@@ -981,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1002,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1023,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2047,87 +2047,152 @@
 <li>元素无序，不保证插入顺序。</li>
 <li>允许存储 <code>null</code> 元素。</li>
 </ul>
-<p><strong>使用示例：</strong></p>
-<pre><code class="language-java">import java.util.HashSet;
-import java.util.Set;
-
-public class HashSetExample {
-   public static void main(String[] args) {
-      Set&lt;String&gt; set = new HashSet&lt;&gt;();
-      set.add(&quot;Java&quot;);
-      set.add(&quot;Python&quot;);
-      set.add(&quot;Java&quot;); // 重复元素不会被添加
-
-      // 遍历并输出集合中的元素
-      for (String lang : set) {
-         System.out.println(lang);
-      }
-
-      // 判断集合中是否包含某个元素
-      if (set.contains(&quot;Java&quot;)) {
-         System.out.println(&quot;Set contains Java&quot;);
-      }
-
-      // 移除元素
-      set.remove(&quot;Python&quot;);
-      System.out.println(&quot;After removing Python: &quot; + set);
-
-      // 输出集合大小
-      System.out.println(&quot;Set size: &quot; + set.size());
-   }
-}
-
-</code></pre>
+<p><strong>使用示例：</strong>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashSet</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HashSetExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">      </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">      </span><span class="n">set</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">      </span><span class="n">set</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Python&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">      </span><span class="n">set</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 重复元素不会被添加</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">      </span><span class="c1">// 遍历并输出集合中的元素</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">lang</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">set</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">lang</span><span class="p">);</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">      </span><span class="c1">// 判断集合中是否包含某个元素</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">set</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Set contains Java&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">      </span><span class="c1">// 移除元素</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">      </span><span class="n">set</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;Python&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;After removing Python: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">set</span><span class="p">);</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">      </span><span class="c1">// 输出集合大小</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Set size: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">set</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="13-set">1.3 Set 的应用场景</h3>
 <ul>
 <li><strong>去重功能</strong>：当需要存储不重复的元素时，<code>Set</code> 是理想的选择。例如，在一个系统中去除重复的用户名。</li>
 <li><strong>集合操作</strong>：<code>Set</code> 具有很强的集合操作能力，如求交集、并集和差集，可以通过 <code>retainAll()</code>、<code>addAll()</code>、<code>removeAll()</code> 等方法来实现。</li>
-<li><strong>交集</strong>（两个集合共有的元素）：
-     <code>java
-     Set&lt;String&gt; set1 = new HashSet&lt;&gt;(Arrays.asList("A", "B", "C"));
-     Set&lt;String&gt; set2 = new HashSet&lt;&gt;(Arrays.asList("B", "C", "D"));
-     set1.retainAll(set2);  // set1 现在是 ["B", "C"]</code></li>
-<li><strong>并集</strong>（两个集合的所有元素）：
-     <code>java
-     set1.addAll(set2);  // set1 现在是 ["A", "B", "C", "D"]</code></li>
-<li><strong>差集</strong>（仅存在于第一个集合的元素）：
-     <code>java
-     set1.removeAll(set2);  // set1 现在是 ["A"]</code></li>
+<li>
+<p><strong>交集</strong>（两个集合共有的元素）：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">set1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">));</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">set2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D&quot;</span><span class="p">));</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">set1</span><span class="p">.</span><span class="na">retainAll</span><span class="p">(</span><span class="n">set2</span><span class="p">);</span><span class="w">  </span><span class="c1">// set1 现在是 [&quot;B&quot;, &quot;C&quot;]</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>并集</strong>（两个集合的所有元素）：</p>
+</li>
 </ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">set1</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">set2</span><span class="p">);</span><span class="w">  </span><span class="c1">// set1 现在是 [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;]</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>差集</strong>（仅存在于第一个集合的元素）：</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">set1</span><span class="p">.</span><span class="na">removeAll</span><span class="p">(</span><span class="n">set2</span><span class="p">);</span><span class="w">  </span><span class="c1">// set1 现在是 [&quot;A&quot;]</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="14">1.4 完整实例</h3>
-<pre><code class="language-java">import java.util.HashSet;
-import java.util.Set;
-
-public class SetOperationsExample {
-    public static void main(String[] args) {
-        // 创建两个集合
-        Set&lt;String&gt; set1 = new HashSet&lt;&gt;();
-        set1.add(&quot;A&quot;);
-        set1.add(&quot;B&quot;);
-        set1.add(&quot;C&quot;);
-
-        Set&lt;String&gt; set2 = new HashSet&lt;&gt;();
-        set2.add(&quot;B&quot;);
-        set2.add(&quot;C&quot;);
-        set2.add(&quot;D&quot;);
-
-        // 交集（保留两个集合共有的元素）
-        Set&lt;String&gt; intersection = new HashSet&lt;&gt;(set1);
-        intersection.retainAll(set2);
-        System.out.println(&quot;Intersection (交集): &quot; + intersection);  // 输出：[B, C]
-
-        // 并集（两个集合所有元素的组合）
-        Set&lt;String&gt; union = new HashSet&lt;&gt;(set1);
-        union.addAll(set2);
-        System.out.println(&quot;Union (并集): &quot; + union);  // 输出：[A, B, C, D]
-
-        // 差集（只存在于 set1 中的元素）
-        Set&lt;String&gt; difference = new HashSet&lt;&gt;(set1);
-        difference.removeAll(set2);
-        System.out.println(&quot;Difference (差集): &quot; + difference);  // 输出：[A]
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span>
+<span class="normal"><a href="#__codelineno-4-29">29</a></span>
+<span class="normal"><a href="#__codelineno-4-30">30</a></span>
+<span class="normal"><a href="#__codelineno-4-31">31</a></span>
+<span class="normal"><a href="#__codelineno-4-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashSet</span><span class="p">;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SetOperationsExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">        </span><span class="c1">// 创建两个集合</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">set1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="n">set1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">        </span><span class="n">set1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">        </span><span class="n">set1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">set2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">        </span><span class="n">set2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">        </span><span class="n">set2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">        </span><span class="n">set2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">        </span><span class="c1">// 交集（保留两个集合共有的元素）</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">intersection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">set1</span><span class="p">);</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">        </span><span class="n">intersection</span><span class="p">.</span><span class="na">retainAll</span><span class="p">(</span><span class="n">set2</span><span class="p">);</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Intersection (交集): &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">intersection</span><span class="p">);</span><span class="w">  </span><span class="c1">// 输出：[B, C]</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">        </span><span class="c1">// 并集（两个集合所有元素的组合）</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">union</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">set1</span><span class="p">);</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">        </span><span class="n">union</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">set2</span><span class="p">);</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Union (并集): &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">union</span><span class="p">);</span><span class="w">  </span><span class="c1">// 输出：[A, B, C, D]</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">        </span><span class="c1">// 差集（只存在于 set1 中的元素）</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">difference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">set1</span><span class="p">);</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="w">        </span><span class="n">difference</span><span class="p">.</span><span class="na">removeAll</span><span class="p">(</span><span class="n">set2</span><span class="p">);</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Difference (差集): &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">difference</span><span class="p">);</span><span class="w">  </span><span class="c1">// 输出：[A]</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="2">2. 例题讲解</h2>
 <h3 id="21-lc349">2.1 LC349 两个数组的交集</h3>
 <h3 id="_2">题目描述</h3>
@@ -2158,50 +2223,92 @@ public class SetOperationsExample {
 <li>将 <code>intersectionSet</code> 中的交集元素存入数组，最终返回这个数组。</li>
 </ol>
 <h3 id="_4">参考解答</h3>
-<pre><code class="language-java">import java.util.HashSet;
-import java.util.Set;
-
-public class ArrayIntersection {
-    public int[] intersection(int[] nums1, int[] nums2) {
-        // 将第一个数组的元素放入 Set 中
-        Set&lt;Integer&gt; set1 = new HashSet&lt;&gt;();
-        for (int num : nums1) {
-            set1.add(num);
-        }
-
-        // 将第二个数组的元素放入 Set 中
-        Set&lt;Integer&gt; set2 = new HashSet&lt;&gt;();
-        for (int num : nums2) {
-            set2.add(num);
-        }
-
-        // 直接根据大小判断，遍历较小的集合
-        if (set1.size() &gt; set2.size()) {
-            return getIntersection(set2, set1);
-        } else {
-            return getIntersection(set1, set2);
-        }
-    }
-
-    public int[] getIntersection(Set&lt;Integer&gt; smallerSet, Set&lt;Integer&gt; largerSet) {
-        // 创建一个 Set 用于存储交集
-        Set&lt;Integer&gt; intersectionSet = new HashSet&lt;&gt;();
-        for (int num : smallerSet) {
-            if (largerSet.contains(num)) {
-                intersectionSet.add(num);
-            }
-        }
-
-        // 将交集集合转换为数组并返回
-        int[] intersection = new int[intersectionSet.size()];
-        int index = 0;
-        for (int num : intersectionSet) {
-            intersection[index++] = num;
-        }
-        return intersection;
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span>
+<span class="normal"><a href="#__codelineno-5-28">28</a></span>
+<span class="normal"><a href="#__codelineno-5-29">29</a></span>
+<span class="normal"><a href="#__codelineno-5-30">30</a></span>
+<span class="normal"><a href="#__codelineno-5-31">31</a></span>
+<span class="normal"><a href="#__codelineno-5-32">32</a></span>
+<span class="normal"><a href="#__codelineno-5-33">33</a></span>
+<span class="normal"><a href="#__codelineno-5-34">34</a></span>
+<span class="normal"><a href="#__codelineno-5-35">35</a></span>
+<span class="normal"><a href="#__codelineno-5-36">36</a></span>
+<span class="normal"><a href="#__codelineno-5-37">37</a></span>
+<span class="normal"><a href="#__codelineno-5-38">38</a></span>
+<span class="normal"><a href="#__codelineno-5-39">39</a></span>
+<span class="normal"><a href="#__codelineno-5-40">40</a></span>
+<span class="normal"><a href="#__codelineno-5-41">41</a></span>
+<span class="normal"><a href="#__codelineno-5-42">42</a></span>
+<span class="normal"><a href="#__codelineno-5-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashSet</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayIntersection</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="nf">intersection</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">        </span><span class="c1">// 将第一个数组的元素放入 Set 中</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">set1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nums1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">            </span><span class="n">set1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">        </span><span class="c1">// 将第二个数组的元素放入 Set 中</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">set2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nums2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">            </span><span class="n">set2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">        </span><span class="c1">// 直接根据大小判断，遍历较小的集合</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">set1</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">set2</span><span class="p">.</span><span class="na">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">getIntersection</span><span class="p">(</span><span class="n">set2</span><span class="p">,</span><span class="w"> </span><span class="n">set1</span><span class="p">);</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">getIntersection</span><span class="p">(</span><span class="n">set1</span><span class="p">,</span><span class="w"> </span><span class="n">set2</span><span class="p">);</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="nf">getIntersection</span><span class="p">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">smallerSet</span><span class="p">,</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">largerSet</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="w">        </span><span class="c1">// 创建一个 Set 用于存储交集</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">intersectionSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">smallerSet</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">largerSet</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">num</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="w">                </span><span class="n">intersectionSet</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34"></a>
+<a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="w">        </span><span class="c1">// 将交集集合转换为数组并返回</span>
+<a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">intersection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">intersectionSet</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-5-38" name="__codelineno-5-38"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">intersectionSet</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-39" name="__codelineno-5-39"></a><span class="w">            </span><span class="n">intersection</span><span class="o">[</span><span class="n">index</span><span class="o">++]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<a id="__codelineno-5-40" name="__codelineno-5-40"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-41" name="__codelineno-5-41"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">intersection</span><span class="p">;</span>
+<a id="__codelineno-5-42" name="__codelineno-5-42"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-43" name="__codelineno-5-43"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="2_1">解法2</h3>
 <h3 id="_5">解题思路：</h3>
 <ol>
@@ -2210,35 +2317,62 @@ public class ArrayIntersection {
 <li>将交集结果转换为数组并返回。</li>
 </ol>
 <h3 id="_6">参考解答</h3>
-<pre><code class="language-java">import java.util.HashSet;
-import java.util.Set;
-
-public class ArrayIntersection {
-    public int[] intersection(int[] nums1, int[] nums2) {
-        // 将两个数组转换为 Set
-        Set&lt;Integer&gt; set1 = new HashSet&lt;&gt;();
-        for (int num : nums1) {
-            set1.add(num);
-        }
-
-        Set&lt;Integer&gt; set2 = new HashSet&lt;&gt;();
-        for (int num : nums2) {
-            set2.add(num);
-        }
-
-        // 使用 retainAll() 保留交集
-        set1.retainAll(set2);
-
-        // 将交集转换为数组并返回
-        int[] result = new int[set1.size()];
-        int index = 0;
-        for (int num : set1) {
-            result[index++] = num;
-        }
-        return result;
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span>
+<span class="normal"><a href="#__codelineno-6-27">27</a></span>
+<span class="normal"><a href="#__codelineno-6-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashSet</span><span class="p">;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayIntersection</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="nf">intersection</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">        </span><span class="c1">// 将两个数组转换为 Set</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">set1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nums1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">            </span><span class="n">set1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">set2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nums2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">            </span><span class="n">set2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">        </span><span class="c1">// 使用 retainAll() 保留交集</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">        </span><span class="n">set1</span><span class="p">.</span><span class="na">retainAll</span><span class="p">(</span><span class="n">set2</span><span class="p">);</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">        </span><span class="c1">// 将交集转换为数组并返回</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">set1</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">set1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="w">            </span><span class="n">result</span><span class="o">[</span><span class="n">index</span><span class="o">++]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="22-lc645">2.2 LC645 错误的集合</h3>
 <h3 id="_7">问题描述</h3>
 <p>集合 <code>s</code> 包含从 <code>1</code> 到 <code>n</code> 的整数。不幸的是，因为数据错误，导致集合里面某一个数字复制了成了集合里面的另外一个数字的值，导致集合丢失了一个数字，并且有一个数字重复 。</p>
@@ -2262,35 +2396,62 @@ public class ArrayIntersection {
 <li>将找到的重复数字和丢失数字以数组的形式返回。</li>
 </ol>
 <h3 id="_9">参考解答</h3>
-<pre><code class="language-java">import java.util.HashSet;
-
-public class Solution {
-    public int[] findErrorNums(int[] nums) {
-        HashSet&lt;Integer&gt; set = new HashSet&lt;&gt;();
-        int duplicate = -1;
-        int n = nums.length;
-
-        // 查找重复的数字并将所有数字添加到 HashSet
-        for (int num : nums) {
-            if (!set.add(num)) {  // add() 返回 false 表示已经存在
-                duplicate = num;  // 找到重复的数字
-            }
-        }
-
-        int missing = -1;
-
-        // 查找丢失的数字
-        for (int i = 1; i &lt;= n; i++) {
-            if (!set.contains(i)) { // 如果 HashSet 中不包含数字 i
-                missing = i;        // 记录丢失的数字
-                break;              // 找到后直接退出循环
-            }
-        }
-
-        return new int[] {duplicate, missing};
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span>
+<span class="normal"><a href="#__codelineno-7-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashSet</span><span class="p">;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="nf">findErrorNums</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">        </span><span class="n">HashSet</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">        </span><span class="c1">// 查找重复的数字并将所有数字添加到 HashSet</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">set</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">num</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// add() 返回 false 表示已经存在</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">                </span><span class="n">duplicate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w">  </span><span class="c1">// 找到重复的数字</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">missing</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">        </span><span class="c1">// 查找丢失的数字</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">set</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 如果 HashSet 中不包含数字 i</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">                </span><span class="n">missing</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">        </span><span class="c1">// 记录丢失的数字</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w">              </span><span class="c1">// 找到后直接退出循环</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a>
+<a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="n">duplicate</span><span class="p">,</span><span class="w"> </span><span class="n">missing</span><span class="p">};</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="3">3. 举一反三</h2>
 <h3 id="31-lc575">3.1 LC575 分糖果</h3>
 <h4 id="_10">问题描述</h4>
@@ -2305,28 +2466,48 @@ public class Solution {
 <li><strong>返回结果</strong>：返回能吃到的最多种类的糖。</li>
 </ol>
 <h3 id="_12">参考解答</h3>
-<pre><code class="language-java">import java.util.HashSet;
-
-public class Solution {
-    public int distributeCandies(int[] candyType) {
-        // 使用 HashSet 来存储不同的糖的种类
-        HashSet&lt;Integer&gt; uniqueCandyTypes = new HashSet&lt;&gt;();
-
-        // 将所有糖的类型添加到 HashSet
-        for (int candy : candyType) {
-            uniqueCandyTypes.add(candy);
-        }
-
-        // 计算 Alice 能吃的糖的数量
-        int n = candyType.length;
-        int maxTypes = uniqueCandyTypes.size(); // 不同糖的种类数
-        int canEatCount = n / 2; // Alice 能吃的糖的数量
-
-        // 返回最多可以吃到的种类数
-        return Math.min(maxTypes, canEatCount);
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashSet</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">distributeCandies</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">candyType</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">        </span><span class="c1">// 使用 HashSet 来存储不同的糖的种类</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">        </span><span class="n">HashSet</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">uniqueCandyTypes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">        </span><span class="c1">// 将所有糖的类型添加到 HashSet</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">candy</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">candyType</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">            </span><span class="n">uniqueCandyTypes</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">candy</span><span class="p">);</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">        </span><span class="c1">// 计算 Alice 能吃的糖的数量</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">candyType</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">maxTypes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uniqueCandyTypes</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="c1">// 不同糖的种类数</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">canEatCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Alice 能吃的糖的数量</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">        </span><span class="c1">// 返回最多可以吃到的种类数</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">maxTypes</span><span class="p">,</span><span class="w"> </span><span class="n">canEatCount</span><span class="p">);</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_13">逻辑推理</h3>
 <ul>
 <li><strong>种类数 vs 可吃数量</strong>：</li>
@@ -2357,32 +2538,56 @@ public class Solution {
 <li>如果存在，将计数器加一。</li>
 </ol>
 <h3 id="_17">参考解答</h3>
-<pre><code class="language-java">import java.util.HashSet;
-
-public class Solution {
-    public int numJewelsInStones(String jewels, String stones) {
-        // 创建一个 HashSet 来存储宝石的类型
-        HashSet&lt;Character&gt; jewelSet = new HashSet&lt;&gt;();
-
-        // 将 jewels 中的每个字符添加到 HashSet 中
-        for (char jewel : jewels.toCharArray()) {
-            jewelSet.add(jewel);
-        }
-
-        // 初始化计数器
-        int count = 0;
-
-        // 遍历 stones，计算宝石的数量
-        for (char stone : stones.toCharArray()) {
-            if (jewelSet.contains(stone)) {
-                count++; // 如果 stone 是宝石，计数加一
-            }
-        }
-
-        return count; // 返回宝石的数量
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span>
+<span class="normal"><a href="#__codelineno-9-24">24</a></span>
+<span class="normal"><a href="#__codelineno-9-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashSet</span><span class="p">;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">numJewelsInStones</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">jewels</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">stones</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">        </span><span class="c1">// 创建一个 HashSet 来存储宝石的类型</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">        </span><span class="n">HashSet</span><span class="o">&lt;</span><span class="n">Character</span><span class="o">&gt;</span><span class="w"> </span><span class="n">jewelSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="c1">// 将 jewels 中的每个字符添加到 HashSet 中</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">jewel</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">jewels</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">            </span><span class="n">jewelSet</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">jewel</span><span class="p">);</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">        </span><span class="c1">// 初始化计数器</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">        </span><span class="c1">// 遍历 stones，计算宝石的数量</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">stone</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">stones</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">jewelSet</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">stone</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">                </span><span class="n">count</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 如果 stone 是宝石，计数加一</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回宝石的数量</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="4">4. 课后练习</h2>
 <table>
 <thead>

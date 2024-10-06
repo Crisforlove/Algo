@@ -1482,7 +1482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1503,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1524,7 +1524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3015,32 +3015,54 @@
 <h2 id="_1">目录</h2>
 <ol>
 <li><a href="#1-时间复杂度简介">时间复杂度简介</a></li>
-<li><a href="#2-排序算法与应用">排序算法与应用</a></li>
-<li><a href="#21-排序算法例题讲解">2.1 排序算法例题讲解</a><ul>
+<li>
+<p><a href="#2-排序算法与应用">排序算法与应用</a></p>
+<ul>
+<li>
+<p><a href="#21-排序算法例题讲解">2.1 排序算法例题讲解</a></p>
+<ul>
 <li><a href="#211-lc215找出数组中的第-k-大元素">2.1.1 LC215：找出数组中的第 <code>K</code> 大元素</a></li>
 </ul>
 </li>
 <li>
 <p><a href="#22-排序算法举一反三">2.2 排序算法举一反三</a></p>
 <ul>
-<li><a href="#221-lc56合并区间">2.2.1 LC56：合并区间</a></li>
-<li><a href="#222-lc252会议室">2.2.2 LC252：会议室</a></li>
-<li><a href="#223-lc347前-k-个高频元素">2.2.3 LC347：前 K 个高频元素</a></li>
+<li>
+<p><a href="#221-lc56合并区间">2.2.1 LC56：合并区间</a></p>
+</li>
+<li>
+<p><a href="#222-lc252会议室">2.2.2 LC252：会议室</a></p>
+</li>
+<li>
+<p><a href="#223-lc347前-k-个高频元素">2.2.3 LC347：前 K 个高频元素</a></p>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <p><a href="#3-贪心算法">贪心算法</a></p>
-</li>
-<li><a href="#31-贪心算法例题讲解">3.1 贪心算法例题讲解</a><ul>
+<ul>
+<li>
+<p><a href="#31-贪心算法例题讲解">3.1 贪心算法例题讲解</a></p>
+<ul>
 <li><a href="#311-lc455-分发饼干">3.1.1 LC455: 分发饼干</a></li>
 </ul>
 </li>
 <li>
 <p><a href="#32-贪心算法举一反三">3.2 贪心算法举一反三</a></p>
 <ul>
-<li><a href="#321-lc-435-无重叠区间">3.2.1 LC435: 无重叠区间</a></li>
-<li><a href="#322-lc-605-种花问题">3.2.2 LC605: 种花问题</a></li>
-<li><a href="#323-lc-1029-两地调度">3.2.3 LC1029: 两地调度</a></li>
+<li>
+<p><a href="#321-lc-435-无重叠区间">3.2.1 LC435: 无重叠区间</a></p>
+</li>
+<li>
+<p><a href="#322-lc-605-种花问题">3.2.2 LC605: 种花问题</a></p>
+</li>
+<li>
+<p><a href="#323-lc-1029-两地调度">3.2.3 LC1029: 两地调度</a></p>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -3051,145 +3073,251 @@
 <p><strong>时间复杂度</strong> 是衡量算法执行效率的重要指标，它描述了随着输入数据量的增大，算法执行时间的增长速度。时间复杂度通常表示为 <strong>O(某个函数)</strong>，其中 "O" 表示增长的上限。以下介绍四种常见的时间复杂度：<strong>O(1)</strong>、<strong>O(n)</strong>、<strong>O(n^2)</strong> 和 <strong>O(n log n)</strong>。</p>
 <h3 id="_2">常见的时间复杂度</h3>
 <ol>
-<li><strong>O(1)</strong>：常数时间复杂度</li>
+<li><strong>O(1)</strong>：常数时间复杂度<ul>
 <li>操作的执行时间不随输入数据的大小而变化。</li>
 <li><strong>例子</strong>：从数组中获取第 <code>k</code> 个元素。</li>
+</ul>
+</li>
 </ol>
-<p><code>java
-   public class Main {
-       public static void main(String[] args) {
-           int[] arr = {1, 2, 3, 4, 5};
-           int k = 2;  // 获取第三个元素（索引从0开始）
-           int element = arr[k];  // O(1)
-           System.out.println("Element at index " + k + ": " + element);
-       }
-   }</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">       </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">       </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 获取第三个元素（索引从0开始）</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">       </span><span class="kt">int</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// O(1)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Element at index &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">element</span><span class="p">);</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>时间复杂度</strong>：无论数组大小是多少，获取第 <code>k</code> 个元素所需时间是固定的，属于 <strong>O(1)</strong>。</p>
 <ol>
-<li><strong>O(n)</strong>：线性时间复杂度</li>
+<li><strong>O(n)</strong>：线性时间复杂度<ul>
 <li>操作的执行时间随着输入数据量线性增长。</li>
 <li><strong>例子</strong>：遍历一个数组。</li>
+</ul>
+</li>
 </ol>
-<p><code>java
-   public class Main {
-       public static void main(String[] args) {
-           int[] arr = {1, 2, 3, 4, 5};
-           int n = arr.length;  // 获取数组的长度
-           for (int i = 0; i &lt; n; i++) {  // O(n)
-               System.out.println("Element at index " + i + ": " + arr[i]);
-           }
-       }
-   }</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">       </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">       </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w">  </span><span class="c1">// 获取数组的长度</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">       </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// O(n)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">           </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Element at index &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">       </span><span class="p">}</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>时间复杂度</strong>：遍历整个数组需要的时间与数组的长度 <code>n</code> 成正比，属于 <strong>O(n)</strong>。</p>
 <ol>
-<li><strong>O(n^2)</strong>：平方时间复杂度</li>
+<li><strong>O(n^2)</strong>：平方时间复杂度<ul>
 <li>操作的执行时间与输入数据量的平方成正比，常见于双重循环。</li>
 <li><strong>例子</strong>：打印二维数组中每个元素。</li>
+</ul>
+</li>
 </ol>
-<p>```java
-   public class Main {
-       public static void main(String[] args) {
-           int[][] arr = {
-               {1, 2, 3},
-               {4, 5, 6},
-               {7, 8, 9}
-           };</p>
-<pre><code>       for (int i = 0; i &lt; 3; i++) {  // O(n)
-           for (int j = 0; j &lt; 3; j++) {  // O(n)
-               System.out.println("Element at [" + i + "][" + j + "]: " + arr[i][j]);
-           }
-       }
-   }
-</code></pre>
-<p>}
-   <code>``
-   **时间复杂度**：双重循环嵌套遍历每个元素，总的执行时间是</code>n` 的平方，属于 <strong>O(n^2)</strong>。</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">       </span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">           </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">           </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">},</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">           </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">       </span><span class="p">};</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">       </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// O(n)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">           </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// O(n)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">               </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Element at [&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;][&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;]: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">           </span><span class="p">}</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">       </span><span class="p">}</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+   <strong>时间复杂度</strong>：双重循环嵌套遍历每个元素，总的执行时间是 <code>n</code> 的平方，属于 <strong>O(n^2)</strong>。</p>
 <ol>
-<li><strong>O(n log n)</strong>：常见于排序算法（此章节后半部分会详细讲解）</li>
+<li><strong>O(n log n)</strong>：常见于排序算法（此章节后半部分会详细讲解）<ul>
 <li><strong>例子</strong>：归并排序、快速排序。</li>
+</ul>
+</li>
 </ol>
-<p>```java
-   import java.util.Arrays;</p>
-<p>public class Main {</p>
-<pre><code>   // 合并两个子数组
-   public static void merge(int[] arr, int l, int m, int r) {
-       int n1 = m - l + 1;
-       int n2 = r - m;
-
-       int[] L = new int[n1];
-       int[] R = new int[n2];
-
-       // 将数据复制到临时数组 L 和 R
-       for (int i = 0; i &lt; n1; i++)
-           L[i] = arr[l + i];
-       for (int i = 0; i &lt; n2; i++)
-           R[i] = arr[m + 1 + i];
-
-       // 合并临时数组到 arr
-       int i = 0, j = 0, k = l;
-       while (i &lt; n1 &amp;&amp; j &lt; n2) {
-           if (L[i] &lt;= R[j]) {
-               arr[k] = L[i];
-               i++;
-           } else {
-               arr[k] = R[j];
-               j++;
-           }
-           k++;
-       }
-
-       // 复制剩余的 L 中的元素（如果有）
-       while (i &lt; n1) {
-           arr[k] = L[i];
-           i++;
-           k++;
-       }
-
-       // 复制剩余的 R 中的元素（如果有）
-       while (j &lt; n2) {
-           arr[k] = R[j];
-           j++;
-           k++;
-       }
-   }
-
-   // 递归拆分数组
-   public static void mergeSort(int[] arr, int l, int r) {
-       if (l &lt; r) {
-           int m = l + (r - l) / 2;
-
-           // 递归排序两半
-           mergeSort(arr, l, m);
-           mergeSort(arr, m + 1, r);
-
-           // 合并两个排序好的子数组
-           merge(arr, l, m, r);
-       }
-   }
-
-   public static void main(String[] args) {
-       int[] arr = {12, 11, 13, 5, 6, 7};
-       int arr_size = arr.length;
-
-       mergeSort(arr, 0, arr_size - 1);
-
-       System.out.println("Sorted array is: " + Arrays.toString(arr));
-   }
-</code></pre>
-<p>}
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span>
+<span class="normal"><a href="#__codelineno-3-34">34</a></span>
+<span class="normal"><a href="#__codelineno-3-35">35</a></span>
+<span class="normal"><a href="#__codelineno-3-36">36</a></span>
+<span class="normal"><a href="#__codelineno-3-37">37</a></span>
+<span class="normal"><a href="#__codelineno-3-38">38</a></span>
+<span class="normal"><a href="#__codelineno-3-39">39</a></span>
+<span class="normal"><a href="#__codelineno-3-40">40</a></span>
+<span class="normal"><a href="#__codelineno-3-41">41</a></span>
+<span class="normal"><a href="#__codelineno-3-42">42</a></span>
+<span class="normal"><a href="#__codelineno-3-43">43</a></span>
+<span class="normal"><a href="#__codelineno-3-44">44</a></span>
+<span class="normal"><a href="#__codelineno-3-45">45</a></span>
+<span class="normal"><a href="#__codelineno-3-46">46</a></span>
+<span class="normal"><a href="#__codelineno-3-47">47</a></span>
+<span class="normal"><a href="#__codelineno-3-48">48</a></span>
+<span class="normal"><a href="#__codelineno-3-49">49</a></span>
+<span class="normal"><a href="#__codelineno-3-50">50</a></span>
+<span class="normal"><a href="#__codelineno-3-51">51</a></span>
+<span class="normal"><a href="#__codelineno-3-52">52</a></span>
+<span class="normal"><a href="#__codelineno-3-53">53</a></span>
+<span class="normal"><a href="#__codelineno-3-54">54</a></span>
+<span class="normal"><a href="#__codelineno-3-55">55</a></span>
+<span class="normal"><a href="#__codelineno-3-56">56</a></span>
+<span class="normal"><a href="#__codelineno-3-57">57</a></span>
+<span class="normal"><a href="#__codelineno-3-58">58</a></span>
+<span class="normal"><a href="#__codelineno-3-59">59</a></span>
+<span class="normal"><a href="#__codelineno-3-60">60</a></span>
+<span class="normal"><a href="#__codelineno-3-61">61</a></span>
+<span class="normal"><a href="#__codelineno-3-62">62</a></span>
+<span class="normal"><a href="#__codelineno-3-63">63</a></span>
+<span class="normal"><a href="#__codelineno-3-64">64</a></span>
+<span class="normal"><a href="#__codelineno-3-65">65</a></span>
+<span class="normal"><a href="#__codelineno-3-66">66</a></span>
+<span class="normal"><a href="#__codelineno-3-67">67</a></span>
+<span class="normal"><a href="#__codelineno-3-68">68</a></span>
+<span class="normal"><a href="#__codelineno-3-69">69</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">   </span><span class="c1">// 合并两个子数组</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">merge</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">       </span><span class="kt">int</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">       </span><span class="kt">int</span><span class="w"> </span><span class="n">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">       </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">n1</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">       </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">n2</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">       </span><span class="c1">// 将数据复制到临时数组 L 和 R</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">       </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">           </span><span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">       </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">           </span><span class="n">R</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">m</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">       </span><span class="c1">// 合并临时数组到 arr</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">       </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">       </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">           </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">               </span><span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">               </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">           </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">               </span><span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">               </span><span class="n">j</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">           </span><span class="p">}</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">           </span><span class="n">k</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">       </span><span class="p">}</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31"></a>
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">       </span><span class="c1">// 复制剩余的 L 中的元素（如果有）</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="w">       </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">           </span><span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">           </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">           </span><span class="n">k</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">       </span><span class="p">}</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38"></a>
+<a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="w">       </span><span class="c1">// 复制剩余的 R 中的元素（如果有）</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="w">       </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41"></a><span class="w">           </span><span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42"></a><span class="w">           </span><span class="n">j</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="w">           </span><span class="n">k</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="w">       </span><span class="p">}</span>
+<a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-3-46" name="__codelineno-3-46"></a>
+<a id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="w">   </span><span class="c1">// 递归拆分数组</span>
+<a id="__codelineno-3-48" name="__codelineno-3-48"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mergeSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-49" name="__codelineno-3-49"></a><span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="w">           </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-3-51" name="__codelineno-3-51"></a>
+<a id="__codelineno-3-52" name="__codelineno-3-52"></a><span class="w">           </span><span class="c1">// 递归排序两半</span>
+<a id="__codelineno-3-53" name="__codelineno-3-53"></a><span class="w">           </span><span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">);</span>
+<a id="__codelineno-3-54" name="__codelineno-3-54"></a><span class="w">           </span><span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<a id="__codelineno-3-55" name="__codelineno-3-55"></a>
+<a id="__codelineno-3-56" name="__codelineno-3-56"></a><span class="w">           </span><span class="c1">// 合并两个排序好的子数组</span>
+<a id="__codelineno-3-57" name="__codelineno-3-57"></a><span class="w">           </span><span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<a id="__codelineno-3-58" name="__codelineno-3-58"></a><span class="w">       </span><span class="p">}</span>
+<a id="__codelineno-3-59" name="__codelineno-3-59"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-3-60" name="__codelineno-3-60"></a>
+<a id="__codelineno-3-61" name="__codelineno-3-61"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-62" name="__codelineno-3-62"></a><span class="w">       </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">};</span>
+<a id="__codelineno-3-63" name="__codelineno-3-63"></a><span class="w">       </span><span class="kt">int</span><span class="w"> </span><span class="n">arr_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+<a id="__codelineno-3-64" name="__codelineno-3-64"></a>
+<a id="__codelineno-3-65" name="__codelineno-3-65"></a><span class="w">       </span><span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">arr_size</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-3-66" name="__codelineno-3-66"></a>
+<a id="__codelineno-3-67" name="__codelineno-3-67"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sorted array is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">arr</span><span class="p">));</span>
+<a id="__codelineno-3-68" name="__codelineno-3-68"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-3-69" name="__codelineno-3-69"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>时间复杂度</strong>：归并排序通过递归将数组分成更小的部分进行排序，时间复杂度为 <strong>O(n log n)</strong>。</p>
 <h4 id="on-log-n">为什么是 <code>O(n log n)</code>?</h4>
 <p>归并排序是一种 <strong>分治算法</strong>，我们可以把归并排序的步骤分为两部分：<strong>拆分</strong> 和 <strong>合并</strong>。</p>
 <p><strong>1. 拆分过程：递归分解数组</strong></p>
 <p>归并排序首先将数组递归地对半拆分，直到每个子数组只剩下一个元素。这个过程类似于构建一棵二叉树，每次将问题的规模减半。</p>
 <ul>
-<li>对一个长度为 <code>n</code> 的数组：</li>
+<li>对一个长度为 <code>n</code> 的数组：<ul>
 <li>第一层：1 个长度为 <code>n</code> 的数组</li>
 <li>第二层：2 个长度为 <code>n/2</code> 的数组</li>
 <li>第三层：4 个长度为 <code>n/4</code> 的数组</li>
 <li>...</li>
 <li>第 <code>log n</code> 层：每个数组的长度是 1，共有 <code>n</code> 个数组</li>
+</ul>
+</li>
 </ul>
 <p>因为每次都对数组进行二分，所以整个递归树的深度是 <code>log n</code>。</p>
 <p><strong>2. 合并过程：线性合并</strong></p>
@@ -3221,78 +3349,116 @@
 </ul>
 <h3 id="_4">具体实例</h3>
 <p>考虑一个简单的算法：计算数组中所有元素的和。</p>
-<pre><code class="language-java">public class Main {
-
-    public static int sumArray(int[] arr, int n) {
-        int total = 0;
-        for (int i = 0; i &lt; n; i++) {
-            total += arr[i]; 
-        }
-        return total;
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5};
-        int n = arr.length;
-        System.out.println(&quot;Sum of array: &quot; + sumArray(arr, n));
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sumArray</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">            </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">total</span><span class="p">;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sum of array: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sumArray</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">));</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_5">步骤分析</h3>
 <ol>
-<li><strong>确定基本操作</strong>：</li>
 <li>
-<p>基本操作是 <code>total += arr[i]</code>，这是一种数组元素的加法。</p>
+<p><strong>确定基本操作</strong>：</p>
+<ul>
+<li>基本操作是 <code>total += arr[i]</code>，这是一种数组元素的加法。</li>
+</ul>
 </li>
 <li>
 <p><strong>计算基本操作的次数</strong>：</p>
-</li>
+<ul>
 <li>在最坏情况下，<code>for</code> 循环将执行 <code>n</code> 次（其中 <code>n</code> 是数组 <code>arr</code> 的长度）。</li>
-<li>
-<p>因此，基本操作的次数为 <code>n</code>。</p>
+<li>因此，基本操作的次数为 <code>n</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>使用大 O 表示法</strong>：</p>
-</li>
-<li>
-<p>由于循环执行了 <code>n</code> 次，时间复杂度为 <code>O(n)</code>。</p>
+<ul>
+<li>由于循环执行了 <code>n</code> 次，时间复杂度为 <code>O(n)</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>考虑最坏情况</strong>：</p>
-</li>
-<li>
-<p>无论输入的具体内容如何，只要数组长度为 <code>n</code>，基本操作都会执行 <code>n</code> 次，最坏情况仍为 <code>O(n)</code>。</p>
+<ul>
+<li>无论输入的具体内容如何，只要数组长度为 <code>n</code>，基本操作都会执行 <code>n</code> 次，最坏情况仍为 <code>O(n)</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>特殊情况</strong>：</p>
-</li>
+<ul>
 <li>如果数组为空（长度为 0），<code>for</code> 循环不会执行，但算法的时间复杂度依然为 <code>O(n)</code>，因为我们考虑的是输入的规模。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_6">随堂练习</h3>
 <h4 id="_7">判断以下代码的时间复杂度</h4>
-<pre><code class="language-java">public class Main {
-
-    public static int findMax(int[] arr, int n) {
-        int maxNum = arr[0];
-        for (int i = 0; i &lt; n; i++) {  // 基本操作
-            if (arr[i] &gt; maxNum) {
-                maxNum = arr[i];
-            }
-        }
-        return maxNum;
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {1, 5, 3, 9, 2};
-        int n = arr.length;
-        System.out.println(&quot;Max number: &quot; + findMax(arr, n));
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">findMax</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">maxNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 基本操作</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">maxNum</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">                </span><span class="n">maxNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">maxNum</span><span class="p">;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">};</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Max number: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">findMax</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">));</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_8">解答</h4>
-<p><strong>第一段代码（<code>findMax</code> 方法）</strong>：
-- <strong>基本操作</strong>是 <code>if (arr[i] &gt; maxNum)</code>，即在每次循环中进行一次比较操作。</p>
+<p><strong>第一段代码（<code>findMax</code> 方法）</strong>：</p>
 <ul>
+<li>
+<p><strong>基本操作</strong>是 <code>if (arr[i] &gt; maxNum)</code>，即在每次循环中进行一次比较操作。</p>
+</li>
 <li>
 <p><strong>循环执行次数</strong>：<code>for</code> 循环从 <code>i = 0</code> 到 <code>i = n - 1</code>，因此在最坏情况下，循环执行 <code>n</code> 次（即数组的长度为 <code>n</code>）。</p>
 </li>
@@ -3320,153 +3486,283 @@
 <h4 id="1_1">1. 内置排序函数</h4>
 <p>Java 提供了非常方便的排序函数 <code>Arrays.sort()</code>，用于对数组进行排序。这个方法使用了经过优化的快速排序、归并排序等高效的排序算法。</p>
 <p><strong>示例代码</strong>：</p>
-<pre><code class="language-java">import java.util.Arrays;
-
-public class Main {
-    public static void main(String[] args) {
-        int[] nums = {3, 1, 4, 1, 5, 9};  // 定义一个整数数组
-
-        // 使用内置的排序函数对数组进行升序排序
-        Arrays.sort(nums);
-
-        // 输出排序后的数组
-        System.out.print(&quot;Sorted array: &quot;);
-        for (int num : nums) {
-            System.out.print(num + &quot; &quot;);
-        }
-    }
-}
-</code></pre>
-<p><strong>说明</strong>：
-- 在 Java 中，我们使用 <code>Arrays.sort()</code> 来对数组 <code>nums</code> 进行升序排序。
-- 内置的 <code>Arrays.sort()</code> 非常快捷且高效，适用于大多数情况。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">};</span><span class="w">  </span><span class="c1">// 定义一个整数数组</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">        </span><span class="c1">// 使用内置的排序函数对数组进行升序排序</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">nums</span><span class="p">);</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">        </span><span class="c1">// 输出排序后的数组</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Sorted array: &quot;</span><span class="p">);</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>说明</strong>：</p>
+<ul>
+<li>在 Java 中，我们使用 <code>Arrays.sort()</code> 来对数组 <code>nums</code> 进行升序排序。</li>
+<li>内置的 <code>Arrays.sort()</code> 非常快捷且高效，适用于大多数情况。</li>
+</ul>
 <h4 id="2_1">2. 自定义排序</h4>
 <p>在 Java 中，<code>Comparator</code> 是一个接口，用于定义自定义的排序逻辑。通过实现这个接口，我们可以为集合（如数组、列表等）提供特定的排序规则。</p>
 <h4 id="comparator">自定义 Comparator</h4>
 <p>要创建自定义的 <code>Comparator</code>，你可以采用以下两种方法：</p>
 <h4 id="comparator_1">方法一：实现 <code>Comparator</code> 接口</h4>
 <p>你可以通过创建一个实现 <code>Comparator</code> 接口的类来定义排序逻辑。</p>
-<p>```java
-   import java.util.Comparator;</p>
-<p>class Person {
-       String name;
-       int age;</p>
-<pre><code>   Person(String name, int age) {
-       this.name = name;
-       this.age = age;
-   }
-
-   public String getName() {
-       return name;
-   }
-
-   public int getAge() {
-       return age;
-   }
-</code></pre>
-<p>}</p>
-<p>// 自定义比较器，根据年龄排序
-   class AgeComparator implements Comparator<Person> {
-       @Override
-       public int compare(Person p1, Person p2) {
-           return Integer.compare(p1.getAge(), p2.getAge());
-       }
-   }
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Comparator</span><span class="p">;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kd">class</span> <span class="nc">Person</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">   </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">   </span><span class="n">Person</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">       </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">       </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getAge</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="p">}</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="c1">// 自定义比较器，根据年龄排序</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="kd">class</span> <span class="nc">AgeComparator</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Comparator</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">   </span><span class="nd">@Override</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="n">Person</span><span class="w"> </span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">Person</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="na">getAge</span><span class="p">(),</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="na">getAge</span><span class="p">());</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="lambda-java-8">方法二：使用 Lambda 表达式（Java 8 及以上）</h4>
 <p>在 Java 8 及以上版本中，你可以使用 Lambda 表达式来简化 <code>Comparator</code> 的实现：</p>
-<p>```java
-   import java.util.Arrays;
-   import java.util.Comparator;</p>
-<p>class Person {
-       String name;
-       int age;</p>
-<pre><code>   Person(String name, int age) {
-       this.name = name;
-       this.name = name;
-       this.age = age;
-   }
-
-   public String getName() {
-       return name;
-   }
-
-   public int getAge() {
-       return age;
-   }
-</code></pre>
-<p>}</p>
-<p>public class Main {
-       public static void main(String[] args) {
-           Person[] people = {
-               new Person("Alice", 30),
-               new Person("Bob", 25),
-               new Person("Charlie", 35)
-           };</p>
-<pre><code>       // 使用 Lambda 表达式按年龄排序
-       Arrays.sort(people, (p1, p2) -&gt; Integer.compare(p1.getAge(), p2.getAge()));
-
-       // 打印排序后的结果
-       for (Person p : people) {
-           System.out.println(p.getName() + ": " + p.getAge());
-       }
-   }
-</code></pre>
-<p>}
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span>
+<span class="normal"><a href="#__codelineno-8-28">28</a></span>
+<span class="normal"><a href="#__codelineno-8-29">29</a></span>
+<span class="normal"><a href="#__codelineno-8-30">30</a></span>
+<span class="normal"><a href="#__codelineno-8-31">31</a></span>
+<span class="normal"><a href="#__codelineno-8-32">32</a></span>
+<span class="normal"><a href="#__codelineno-8-33">33</a></span>
+<span class="normal"><a href="#__codelineno-8-34">34</a></span>
+<span class="normal"><a href="#__codelineno-8-35">35</a></span>
+<span class="normal"><a href="#__codelineno-8-36">36</a></span>
+<span class="normal"><a href="#__codelineno-8-37">37</a></span>
+<span class="normal"><a href="#__codelineno-8-38">38</a></span>
+<span class="normal"><a href="#__codelineno-8-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Comparator</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="kd">class</span> <span class="nc">Person</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">   </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">   </span><span class="n">Person</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">       </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">       </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">       </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getAge</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="p">}</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">       </span><span class="n">Person</span><span class="o">[]</span><span class="w"> </span><span class="n">people</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">),</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">),</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Charlie&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">)</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">       </span><span class="p">};</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a><span class="w">       </span><span class="c1">// 使用 Lambda 表达式按年龄排序</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a><span class="w">       </span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">people</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="na">getAge</span><span class="p">(),</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="na">getAge</span><span class="p">()));</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a>
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a><span class="w">       </span><span class="c1">// 打印排序后的结果</span>
+<a id="__codelineno-8-35" name="__codelineno-8-35"></a><span class="w">       </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Person</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">people</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-36" name="__codelineno-8-36"></a><span class="w">           </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getAge</span><span class="p">());</span>
+<a id="__codelineno-8-37" name="__codelineno-8-37"></a><span class="w">       </span><span class="p">}</span>
+<a id="__codelineno-8-38" name="__codelineno-8-38"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-8-39" name="__codelineno-8-39"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_11">多重排序</h4>
 <p>如果你想要根据多个条件进行排序，可以在 <code>compare</code> 方法中添加额外的逻辑。例如，首先按年龄排序，如果年龄相同，则按名字排序：</p>
-<p><code>java
-   Arrays.sort(people, (p1, p2) -&gt; {
-       int ageComparison = Integer.compare(p1.getAge(), p2.getAge());
-       if (ageComparison != 0) {
-           return ageComparison; // 如果年龄不同，返回比较结果
-       } else {
-           return p1.getName().compareTo(p2.getName()); // 年龄相同则按名字排序
-       }
-   });</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span>
+<span class="normal"><a href="#__codelineno-9-7">7</a></span>
+<span class="normal"><a href="#__codelineno-9-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">people</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">ageComparison</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="na">getAge</span><span class="p">(),</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="na">getAge</span><span class="p">());</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ageComparison</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">ageComparison</span><span class="p">;</span><span class="w"> </span><span class="c1">// 如果年龄不同，返回比较结果</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">   </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">p1</span><span class="p">.</span><span class="na">getName</span><span class="p">().</span><span class="na">compareTo</span><span class="p">(</span><span class="n">p2</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span><span class="w"> </span><span class="c1">// 年龄相同则按名字排序</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="p">});</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_12">示例代码</h4>
 <p>以下是一个完整的示例，包括自定义 <code>Comparator</code> 和使用 Lambda 表达式进行排序：</p>
-<p>```java
-   import java.util.Arrays;
-   import java.util.Comparator;</p>
-<p>class Person {
-       String name;
-       int age;</p>
-<pre><code>   Person(String name, int age) {
-       this.name = name;
-       this.age = age;
-   }
-
-   public String getName() {
-       return name;
-   }
-
-   public int getAge() {
-       return age;
-   }
-</code></pre>
-<p>}</p>
-<p>public class Main {
-       public static void main(String[] args) {
-           Person[] people = {
-               new Person("Alice", 30),
-               new Person("Bob", 25),
-               new Person("Charlie", 35),
-               new Person("David", 25)
-           };</p>
-<pre><code>       // 按年龄排序
-       Arrays.sort(people, Comparator.comparingInt(Person::getAge)
-           .thenComparing(Person::getName)); // 若年龄相同则按名字排序
-
-       // 打印排序后的结果
-       for (Person p : people) {
-           System.out.println(p.getName() + ": " + p.getAge());
-       }
-   }
-</code></pre>
-<p>}
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span>
+<span class="normal"><a href="#__codelineno-10-20">20</a></span>
+<span class="normal"><a href="#__codelineno-10-21">21</a></span>
+<span class="normal"><a href="#__codelineno-10-22">22</a></span>
+<span class="normal"><a href="#__codelineno-10-23">23</a></span>
+<span class="normal"><a href="#__codelineno-10-24">24</a></span>
+<span class="normal"><a href="#__codelineno-10-25">25</a></span>
+<span class="normal"><a href="#__codelineno-10-26">26</a></span>
+<span class="normal"><a href="#__codelineno-10-27">27</a></span>
+<span class="normal"><a href="#__codelineno-10-28">28</a></span>
+<span class="normal"><a href="#__codelineno-10-29">29</a></span>
+<span class="normal"><a href="#__codelineno-10-30">30</a></span>
+<span class="normal"><a href="#__codelineno-10-31">31</a></span>
+<span class="normal"><a href="#__codelineno-10-32">32</a></span>
+<span class="normal"><a href="#__codelineno-10-33">33</a></span>
+<span class="normal"><a href="#__codelineno-10-34">34</a></span>
+<span class="normal"><a href="#__codelineno-10-35">35</a></span>
+<span class="normal"><a href="#__codelineno-10-36">36</a></span>
+<span class="normal"><a href="#__codelineno-10-37">37</a></span>
+<span class="normal"><a href="#__codelineno-10-38">38</a></span>
+<span class="normal"><a href="#__codelineno-10-39">39</a></span>
+<span class="normal"><a href="#__codelineno-10-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Comparator</span><span class="p">;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="kd">class</span> <span class="nc">Person</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">   </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">   </span><span class="n">Person</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">       </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">       </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getAge</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="p">}</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21"></a>
+<a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="w">       </span><span class="n">Person</span><span class="o">[]</span><span class="w"> </span><span class="n">people</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25"></a><span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">),</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26"></a><span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">),</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27"></a><span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Charlie&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">),</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28"></a><span class="w">           </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;David&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29"></a><span class="w">       </span><span class="p">};</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30"></a>
+<a id="__codelineno-10-31" name="__codelineno-10-31"></a><span class="w">       </span><span class="c1">// 按年龄排序</span>
+<a id="__codelineno-10-32" name="__codelineno-10-32"></a><span class="w">       </span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">people</span><span class="p">,</span><span class="w"> </span><span class="n">Comparator</span><span class="p">.</span><span class="na">comparingInt</span><span class="p">(</span><span class="n">Person</span><span class="p">::</span><span class="n">getAge</span><span class="p">)</span>
+<a id="__codelineno-10-33" name="__codelineno-10-33"></a><span class="w">           </span><span class="p">.</span><span class="na">thenComparing</span><span class="p">(</span><span class="n">Person</span><span class="p">::</span><span class="n">getName</span><span class="p">));</span><span class="w"> </span><span class="c1">// 若年龄相同则按名字排序</span>
+<a id="__codelineno-10-34" name="__codelineno-10-34"></a>
+<a id="__codelineno-10-35" name="__codelineno-10-35"></a><span class="w">       </span><span class="c1">// 打印排序后的结果</span>
+<a id="__codelineno-10-36" name="__codelineno-10-36"></a><span class="w">       </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Person</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">people</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-37" name="__codelineno-10-37"></a><span class="w">           </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getAge</span><span class="p">());</span>
+<a id="__codelineno-10-38" name="__codelineno-10-38"></a><span class="w">       </span><span class="p">}</span>
+<a id="__codelineno-10-39" name="__codelineno-10-39"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-10-40" name="__codelineno-10-40"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_13">注意事项</h4>
 <ul>
 <li>在 <code>compare</code> 方法中，确保传入的对象不为 <code>null</code>，以避免抛出 <code>NullPointerException</code>。</li>
@@ -3519,36 +3815,64 @@ public class Main {
 <h4 id="_15">解题思路：</h4>
 <p>可以先对数组进行降序排序，然后直接返回排好序后的数组中的第 <code>K</code> 个元素。</p>
 <h4 id="_16">代码实现：</h4>
-<pre><code class="language-java">import java.util.Arrays;
-import java.util.Comparator;
-
-class Solution {
-
-    // 自定义比较器，进行降序排序
-    public int findKthLargest(int[] nums, int k) {
-        // 将 int[] 数组转换为 Integer[]，因为 Arrays.sort 不支持原生类型的自定义 Comparator
-        Integer[] numsArray = Arrays.stream(nums).boxed().toArray(Integer[]::new);
-
-        // 使用自定义的 Comparator 进行降序排序
-        Arrays.sort(numsArray, new Comparator&lt;Integer&gt;() {
-            @Override
-            public int compare(Integer a, Integer b) {
-                return b - a;  // 降序排序
-            }
-        });
-
-        // 返回排序后的第 K 大元素
-        return numsArray[k - 1];
-    }
-
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-        int[] nums = {3, 2, 1, 5, 6, 4};
-        int k = 2;
-        System.out.println(&quot;The &quot; + k + &quot;th largest element is &quot; + sol.findKthLargest(nums, k));
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span>
+<span class="normal"><a href="#__codelineno-11-24">24</a></span>
+<span class="normal"><a href="#__codelineno-11-25">25</a></span>
+<span class="normal"><a href="#__codelineno-11-26">26</a></span>
+<span class="normal"><a href="#__codelineno-11-27">27</a></span>
+<span class="normal"><a href="#__codelineno-11-28">28</a></span>
+<span class="normal"><a href="#__codelineno-11-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Comparator</span><span class="p">;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="c1">// 自定义比较器，进行降序排序</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">findKthLargest</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">        </span><span class="c1">// 将 int[] 数组转换为 Integer[]，因为 Arrays.sort 不支持原生类型的自定义 Comparator</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">        </span><span class="n">Integer</span><span class="o">[]</span><span class="w"> </span><span class="n">numsArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">stream</span><span class="p">(</span><span class="n">nums</span><span class="p">).</span><span class="na">boxed</span><span class="p">().</span><span class="na">toArray</span><span class="p">(</span><span class="n">Integer</span><span class="o">[]</span><span class="p">::</span><span class="k">new</span><span class="p">);</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">        </span><span class="c1">// 使用自定义的 Comparator 进行降序排序</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">numsArray</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Comparator</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">            </span><span class="nd">@Override</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">            </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">  </span><span class="c1">// 降序排序</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">        </span><span class="p">});</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">        </span><span class="c1">// 返回排序后的第 K 大元素</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">numsArray</span><span class="o">[</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="w">        </span><span class="n">Solution</span><span class="w"> </span><span class="n">sol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Solution</span><span class="p">();</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25"></a><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">};</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;th largest element is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sol</span><span class="p">.</span><span class="na">findKthLargest</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">));</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_17">说明：</h4>
 <ol>
 <li><strong>转换数组类型</strong>：Java 中，<code>Arrays.sort()</code> 不支持对原生类型（如 <code>int[]</code>）的自定义比较器。因此，需要将 <code>int[]</code> 转换为 <code>Integer[]</code>，这可以通过 <code>Arrays.stream(nums).boxed().toArray(Integer[]::new)</code> 实现。</li>
@@ -3565,36 +3889,64 @@ class Solution {
 <li><strong>遍历</strong>：然后遍历每个区间，若当前区间与前一个区间重叠，则合并它们；否则将当前区间直接加入结果列表。</li>
 </ol>
 <h4 id="_20">代码实现</h4>
-<pre><code class="language-java">import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-class Solution {
-    public int[][] merge(int[][] intervals) {
-        // 如果输入为空，直接返回
-        if (intervals.length == 0) return new int[0][0];
-
-        // 按照区间的起始值进行排序
-        Arrays.sort(intervals, (a, b) -&gt; Integer.compare(a[0], b[0]));
-
-        List&lt;int[]&gt; merged = new ArrayList&lt;&gt;();
-
-        // 遍历每一个区间
-        for (int[] interval : intervals) {
-            // 如果 merged 为空或者当前区间与上一个区间不重叠，直接加入
-            if (merged.isEmpty() || merged.get(merged.size() - 1)[1] &lt; interval[0]) {
-                merged.add(interval);
-            } else {
-                // 如果重叠，更新上一个区间的结束位置
-                merged.get(merged.size() - 1)[1] = Math.max(merged.get(merged.size() - 1)[1], interval[1]);
-            }
-        }
-
-        // 将 List&lt;int[]&gt; 转换为 int[][] 返回
-        return merged.toArray(new int[merged.size()][]);
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span>
+<span class="normal"><a href="#__codelineno-12-20">20</a></span>
+<span class="normal"><a href="#__codelineno-12-21">21</a></span>
+<span class="normal"><a href="#__codelineno-12-22">22</a></span>
+<span class="normal"><a href="#__codelineno-12-23">23</a></span>
+<span class="normal"><a href="#__codelineno-12-24">24</a></span>
+<span class="normal"><a href="#__codelineno-12-25">25</a></span>
+<span class="normal"><a href="#__codelineno-12-26">26</a></span>
+<span class="normal"><a href="#__codelineno-12-27">27</a></span>
+<span class="normal"><a href="#__codelineno-12-28">28</a></span>
+<span class="normal"><a href="#__codelineno-12-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="nf">merge</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">intervals</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">        </span><span class="c1">// 如果输入为空，直接返回</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">intervals</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">        </span><span class="c1">// 按照区间的起始值进行排序</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">intervals</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">));</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">[]&gt;</span><span class="w"> </span><span class="n">merged</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">        </span><span class="c1">// 遍历每一个区间</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">interval</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">intervals</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">            </span><span class="c1">// 如果 merged 为空或者当前区间与上一个区间不重叠，直接加入</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">merged</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">merged</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">merged</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">interval</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="w">                </span><span class="n">merged</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">interval</span><span class="p">);</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="w">                </span><span class="c1">// 如果重叠，更新上一个区间的结束位置</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22"></a><span class="w">                </span><span class="n">merged</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">merged</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">merged</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">merged</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">interval</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25"></a>
+<a id="__codelineno-12-26" name="__codelineno-12-26"></a><span class="w">        </span><span class="c1">// 将 List&lt;int[]&gt; 转换为 int[][] 返回</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">merged</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">merged</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">][]</span><span class="p">);</span>
+<a id="__codelineno-12-28" name="__codelineno-12-28"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-29" name="__codelineno-12-29"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_21">讲解</h4>
 <ul>
 <li>
@@ -3602,10 +3954,10 @@ class Solution {
 </li>
 <li>
 <p><strong>遍历区间</strong>：使用增强的 for 循环遍历每个区间。通过比较每个区间的起始值与已合并区间的结束值来判断它们是否重叠：</p>
-</li>
+<ul>
 <li>如果没有重叠，则将当前区间直接加入 <code>merged</code> 列表。</li>
-<li>
-<p>如果重叠，则更新已合并区间的结束值，确保它可以涵盖当前区间。</p>
+<li>如果重叠，则更新已合并区间的结束值，确保它可以涵盖当前区间。</li>
+</ul>
 </li>
 <li>
 <p><strong>结果转换</strong>：由于 <code>merged</code> 是一个 <code>List&lt;int[]&gt;</code>，最后使用 <code>toArray()</code> 方法将其转换为 <code>int[][]</code> 类型以返回结果。</p>
@@ -3620,28 +3972,48 @@ class Solution {
 <li><strong>遍历检查</strong>：遍历每个会议，检查是否有重叠区间。</li>
 </ol>
 <h4 id="_24">代码实现</h4>
-<pre><code class="language-java">import java.util.Arrays;
-
-class Solution {
-    public boolean canAttendMeetings(int[][] intervals) {
-        // 如果没有会议，直接返回 true
-        if (intervals.length == 0) return true;
-
-        // 按照会议的开始时间进行排序
-        Arrays.sort(intervals, (a, b) -&gt; Integer.compare(a[0], b[0]));
-
-        // 检查会议是否重叠
-        for (int i = 1; i &lt; intervals.length; i++) {
-            // 如果当前会议的开始时间小于上一个会议的结束时间，则有重叠
-            if (intervals[i][0] &lt; intervals[i - 1][1]) {
-                return false;
-            }
-        }
-
-        return true;  // 如果没有重叠，返回 true
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">canAttendMeetings</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">intervals</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">        </span><span class="c1">// 如果没有会议，直接返回 true</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">intervals</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">        </span><span class="c1">// 按照会议的开始时间进行排序</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">intervals</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">));</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">        </span><span class="c1">// 检查会议是否重叠</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">intervals</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">            </span><span class="c1">// 如果当前会议的开始时间小于上一个会议的结束时间，则有重叠</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">intervals</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">intervals</span><span class="o">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// 如果没有重叠，返回 true</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_25">讲解</h4>
 <ol>
 <li>
@@ -3660,50 +4032,85 @@ class Solution {
 <li>将哈希表中的元素放入一个数组中，按出现次数从高到低排序。</li>
 <li>返回排序后前 K 个元素。</li>
 </ol>
-<pre><code class="language-java">import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Map;
-
-class Solution {
-    public int[] topKFrequent(int[] nums, int k) {
-        // 使用哈希表统计每个元素的出现次数
-        HashMap&lt;Integer, Integer&gt; frequencyMap = new HashMap&lt;&gt;();
-        for (int num : nums) {
-            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
-        }
-
-        // 将哈希表中的元素转换为列表
-        List&lt;Map.Entry&lt;Integer, Integer&gt;&gt; frequencyList = new ArrayList&lt;&gt;(frequencyMap.entrySet());
-
-        // 使用默认的排序函数按频率降序排列
-        frequencyList.sort((a, b) -&gt; b.getValue() - a.getValue());
-
-        // 取出前 K 个频率最高的元素
-        int[] result = new int[k];
-        for (int i = 0; i &lt; k; i++) {
-            result[i] = frequencyList.get(i).getKey();
-        }
-
-        return result;
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span>
+<span class="normal"><a href="#__codelineno-14-19">19</a></span>
+<span class="normal"><a href="#__codelineno-14-20">20</a></span>
+<span class="normal"><a href="#__codelineno-14-21">21</a></span>
+<span class="normal"><a href="#__codelineno-14-22">22</a></span>
+<span class="normal"><a href="#__codelineno-14-23">23</a></span>
+<span class="normal"><a href="#__codelineno-14-24">24</a></span>
+<span class="normal"><a href="#__codelineno-14-25">25</a></span>
+<span class="normal"><a href="#__codelineno-14-26">26</a></span>
+<span class="normal"><a href="#__codelineno-14-27">27</a></span>
+<span class="normal"><a href="#__codelineno-14-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="nf">topKFrequent</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">        </span><span class="c1">// 使用哈希表统计每个元素的出现次数</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">frequencyMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">            </span><span class="n">frequencyMap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">frequencyMap</span><span class="p">.</span><span class="na">getOrDefault</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">        </span><span class="c1">// 将哈希表中的元素转换为列表</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">frequencyList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">frequencyMap</span><span class="p">.</span><span class="na">entrySet</span><span class="p">());</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="w">        </span><span class="c1">// 使用默认的排序函数按频率降序排列</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="w">        </span><span class="n">frequencyList</span><span class="p">.</span><span class="na">sort</span><span class="p">((</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">getValue</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a>
+<a id="__codelineno-14-20" name="__codelineno-14-20"></a><span class="w">        </span><span class="c1">// 取出前 K 个频率最高的元素</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">k</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="w">            </span><span class="n">result</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frequencyList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getKey</span><span class="p">();</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25"></a>
+<a id="__codelineno-14-26" name="__codelineno-14-26"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-28" name="__codelineno-14-28"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="3_1">3. 贪心算法</h3>
 <p>贪心算法是一种解决问题的<strong>策略</strong>，其核心思想是：在解决问题的每一步中，总是选择当前看起来<strong>最优的选择</strong>，通过一系列这样的局部最优选择，最终希望获得全局最优解。</p>
 <p>需要注意的是，<strong>贪心算法并不总是能得到全局最优解</strong>。它只有在某些特定问题中有效，特别是当问题满足贪心选择性质时。</p>
 <h4 id="_28">贪心算法的特点</h4>
 <ol>
-<li><strong>局部最优选择</strong>：<br />
-   贪心算法在每一步中只做出当前看起来最优的选择，而<strong>不关心之后可能发生的情况</strong>。它不会考虑这次选择是否会影响后续决策，只看当下哪个选项是最有利的。例如，在分数背包问题中，贪心策略是每次优先选择单位重量价值最高的物品，因为它在当前的选择中带来的收益最大。</li>
+<li>
+<p><strong>局部最优选择</strong>：<br />
+   贪心算法在每一步中只做出当前看起来最优的选择，而<strong>不关心之后可能发生的情况</strong>。它不会考虑这次选择是否会影响后续决策，只看当下哪个选项是最有利的。例如，在分数背包问题中，贪心策略是每次优先选择单位重量价值最高的物品，因为它在当前的选择中带来的收益最大。</p>
+<ul>
 <li><strong>优点</strong>：通过每一步的最优选择，可以快速找到一个可行解。贪心算法的规则简单、直观，易于实现，通常可以通过一次扫描或排序解决问题，时间复杂度较低。例如在分数背包问题中，贪心算法只需要按单位价值排序，时间复杂度为 <code>(O(n log n))</code>。</li>
 <li><strong>缺点</strong>：局部最优解不一定能保证全局最优，因为在一些问题中，最佳的整体方案依赖于多步决策的综合效果，而不是单纯的每一步最优。贪心算法无法通过局部最优解找到全局最优解，尤其在复杂问题（如 0-1 背包问题）中，它可能会陷入次优解。</li>
-<li><strong>不可回溯</strong>：<br />
-   贪心算法的一个重要特点是<strong>决策不可回头修改</strong>。一旦做出某个选择，算法就不会再考虑改变它，即使后续发现这个选择可能不是最优的。因为贪心算法依赖的是当前最优选择的策略，所以它不会为未来的选择留下回旋余地。</li>
-<li><strong>优点</strong>：由于不需要回溯，贪心算法执行速度非常快，时间复杂度通常比需要回溯的算法（如动态规划、回溯法等）更低。贪心算法的高效性体现在其快速、直接的解决思路上，适用于处理大规模问题时的高效求解。</li>
+<li>
+<p><strong>不可回溯</strong>：<br />
+   贪心算法的一个重要特点是<strong>决策不可回头修改</strong>。一旦做出某个选择，算法就不会再考虑改变它，即使后续发现这个选择可能不是最优的。因为贪心算法依赖的是当前最优选择的策略，所以它不会为未来的选择留下回旋余地。</p>
+</li>
+<li>
+<p><strong>优点</strong>：由于不需要回溯，贪心算法执行速度非常快，时间复杂度通常比需要回溯的算法（如动态规划、回溯法等）更低。贪心算法的高效性体现在其快速、直接的解决思路上，适用于处理大规模问题时的高效求解。</p>
+</li>
 <li><strong>缺点</strong>：由于贪心算法不具备回溯能力，它只能在符合贪心选择性质的问题中有效。如果问题不满足这种性质，算法可能会在后续步骤中陷入次优解或死胡同，无法达到全局最优解。</li>
-</ol>
+</ul>
 <h4 id="_29">具体步骤</h4>
+</li>
+</ol>
 <p>贪心算法通常遵循以下基本步骤：</p>
 <ol>
 <li><strong>明确贪心策略</strong>：确定每一步的局部最优解选择策略。</li>
@@ -3726,16 +4133,20 @@ class Solution {
 <h4 id="vs">贪心算法 vs 动态规划的判定标准</h4>
 <p>在区分一个问题是否适合使用贪心算法或动态规划时，<strong>最优子结构</strong>和<strong>子问题重叠</strong>是关键的判定标准：</p>
 <ol>
-<li><strong>贪心选择的适用条件</strong>：</li>
-<li><strong>局部最优选择性质</strong>：贪心算法每一步做出的选择都是局部最优解，且这些局部最优解构成了全局最优解。这种性质一般存在于可以通过逐步选择解决的<strong>简单优化问题</strong>。</li>
 <li>
-<p><strong>无后效性</strong>：未来的决策不依赖于之前的选择，因此一旦做出了选择，不需要回溯检查。例如，<strong>分数背包问题</strong>，每次选择单位价值最高的物品不会影响之后的选择。</p>
+<p><strong>贪心选择的适用条件</strong>：</p>
+<ul>
+<li><strong>局部最优选择性质</strong>：贪心算法每一步做出的选择都是局部最优解，且这些局部最优解构成了全局最优解。这种性质一般存在于可以通过逐步选择解决的<strong>简单优化问题</strong>。</li>
+<li><strong>无后效性</strong>：未来的决策不依赖于之前的选择，因此一旦做出了选择，不需要回溯检查。例如，<strong>分数背包问题</strong>，每次选择单位价值最高的物品不会影响之后的选择。</li>
+</ul>
 </li>
 <li>
 <p><strong>动态规划的适用条件</strong>：</p>
-</li>
+<ul>
 <li><strong>最优子结构</strong>：全局最优解依赖于子问题的最优解。如果每个子问题的解都影响到全局最优解，那么这种问题通常需要使用动态规划来解决。背包问题中的<strong>0-1 背包问题</strong>就属于此类问题，当前物品是否选入背包会影响未来的选择，因此无法简单通过贪心策略得到最优解。</li>
 <li><strong>子问题重叠</strong>：如果问题可以被拆分为多个子问题，且这些子问题之间存在重叠（即某个子问题的解会多次被使用），那么动态规划是更有效的选择。</li>
+</ul>
+</li>
 </ol>
 <p>总结来看，如果问题可以通过单纯的<strong>局部最优选择</strong>解决，并且未来的选择不依赖于过去的选择，通常可以使用贪心算法；否则需要通过动态规划来解决问题。</p>
 <h4 id="_31">简单例子</h4>
@@ -3754,34 +4165,28 @@ class Solution {
 <p><strong>问题描述</strong>：你有一个容量为 50 的背包和一堆物品，每件物品都有一个确定的重量和价值。你只能选择<strong>将某件物品完全放入背包</strong>或者<strong>不放入</strong>，不能只装一部分。目标是选择一些物品放入背包，使得背包中的物品总价值最大化。</p>
 <p><strong>动态规划思路</strong>：对于每件物品，你需要决定是否放入背包。每次的选择都依赖于背包当前的容量以及之前的选择。因为选择一次物品会影响到后续能装多少东西，所以我们不能使用贪心算法，而需要通过动态规划来考虑所有可能的组合。</p>
 <h5 id="_33">用简单的话来理解动态规划的思路：</h5>
-<ol>
-<li>
-<p><strong>状态</strong>：我们用 <code>dp[i][w]</code> 表示<strong>前 i 个物品</strong>在<strong>容量为 w 的背包</strong>中所能装的最大总价值。换句话说，<code>dp[i][w]</code> 是一个中间结果，告诉我们如果只考虑前 i 个物品，并且背包容量为 w，我们能装的最高价值是多少。</p>
-</li>
-<li>
-<p><strong>状态转移方程</strong>：这个就是动态规划中的“规则”，用来指导我们如何根据前面的计算结果推导出当前的最优解。</p>
-</li>
-</ol>
-<p>对于每件物品 <code>i</code>，你有两种选择：
-   - <strong>不选这件物品</strong>：那么最大价值就是 <code>dp[i-1][w]</code>，即背包容量保持不变，前面 i-1 个物品的最优解。
-   - <strong>选这件物品</strong>：如果选择物品 <code>i</code>，则当前的背包容量减少 <code>weight[i]</code>，而我们还获得了 <code>value[i]</code> 这个物品的价值。所以最大价值变成了 <code>dp[i-1][w - weight[i]] + value[i]</code>。</p>
+<p>1.<strong>状态</strong>：我们用 <code>dp[i][w]</code> 表示<strong>前 i 个物品</strong>在<strong>容量为 w 的背包</strong>中所能装的最大总价值。换句话说，<code>dp[i][w]</code> 是一个中间结果，告诉我们如果只考虑前 i 个物品，并且背包容量为 w，我们能装的最高价值是多少。</p>
+<p>2.<strong>状态转移方程</strong>：这个就是动态规划中的“规则”，用来指导我们如何根据前面的计算结果推导出当前的最优解。</p>
+<p>对于每件物品 <code>i</code>，你有两种选择：</p>
+<ul>
+<li><strong>不选这件物品</strong>：那么最大价值就是 <code>dp[i-1][w]</code>，即背包容量保持不变，前面 i-1 个物品的最优解。</li>
+<li><strong>选这件物品</strong>：如果选择物品 <code>i</code>，则当前的背包容量减少 <code>weight[i]</code>，而我们还获得了 <code>value[i]</code> 这个物品的价值。所以最大价值变成了 <code>dp[i-1][w - weight[i]] + value[i]</code>。</li>
+</ul>
 <p>两者取较大值：</p>
 <p><code>dp[i][w] = max(dp[i-1][w], dp[i-1][w - weight[i]] + value[i])</code></p>
-<ol>
-<li><strong>理解这段公式</strong>：</li>
+<p>3.<strong>理解这段公式</strong>：</p>
+<ul>
 <li>如果你不选物品 <code>i</code>，那么你只能依赖前面 <code>i-1</code> 个物品在容量为 <code>w</code> 时的最优解，即 <code>dp[i-1][w]</code>。</li>
-<li>
-<p>如果你选了物品 <code>i</code>，那你需要腾出足够的空间来放它，也就是说背包容量会减少 <code>weight[i]</code>，然后你能获得这件物品的价值 <code>value[i]</code>，再加上前 <code>i-1</code> 个物品在减少了的容量 <code>w - weight[i]</code> 时的最优解，即 <code>dp[i-1][w - weight[i]]</code>。</p>
-</li>
-<li>
-<p><strong>如何求解</strong>：我们从空背包开始，逐步增加物品和容量，每次用上面这个公式去更新当前背包容量的最优解。通过这个递推过程，最后就能得到整个背包的最大价值。</p>
-</li>
-</ol>
+<li>如果你选了物品 <code>i</code>，那你需要腾出足够的空间来放它，也就是说背包容量会减少 <code>weight[i]</code>，然后你能获得这件物品的价值 <code>value[i]</code>，再加上前 <code>i-1</code> 个物品在减少了的容量 <code>w - weight[i]</code> 时的最优解，即 <code>dp[i-1][w - weight[i]]</code>。</li>
+</ul>
+<p>4.<strong>如何求解</strong>：我们从空背包开始，逐步增加物品和容量，每次用上面这个公式去更新当前背包容量的最优解。通过这个递推过程，最后就能得到整个背包的最大价值。</p>
 <h5 id="_34">举个简单例子：</h5>
-<p>假设我们有一个背包容量为 5，物品如下：
-- 物品 1：重量 2，价值 3
-- 物品 2：重量 3，价值 4
-- 物品 3：重量 4，价值 5</p>
+<p>假设我们有一个背包容量为 5，物品如下：</p>
+<ul>
+<li>物品 1：重量 2，价值 3</li>
+<li>物品 2：重量 3，价值 4</li>
+<li>物品 3：重量 4，价值 5</li>
+</ul>
 <p><strong>动态规划表的构建过程</strong>：</p>
 <table>
 <thead>
@@ -3862,40 +4267,64 @@ class Solution {
 <h4 id="_37">题目描述</h4>
 <p>给定两个数组，<code>g</code> 表示孩子的需求大小，<code>s</code> 表示饼干的大小。请你尽可能地用饼干满足孩子的需求，每个孩子最多只能获得一块饼干。如果一个孩子的需求得到满足，那么这个孩子就可以快乐地吃到饼干。请你返回能够使多少个孩子满足。</p>
 <h4 id="_38">代码实现</h4>
-<pre><code class="language-java">class Solution {
-    public int findContentChildren(int[] g, int[] s) {
-        // 将孩子的需求和饼干的大小排序
-        Arrays.sort(g);
-        Arrays.sort(s);
-
-        int i = 0; // 指向孩子的指针
-        int j = 0; // 指向饼干的指针
-
-        // 遍历孩子和饼干数组
-        while (i &lt; g.length &amp;&amp; j &lt; s.length) {
-            // 如果当前饼干能满足当前孩子
-            if (s[j] &gt;= g[i]) {
-                i++; // 满足了孩子 i，处理下一个孩子
-            }
-            j++; // 尝试下一个饼干
-        }
-
-        return i; // 返回满足的孩子数量
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span>
+<span class="normal"><a href="#__codelineno-15-16">16</a></span>
+<span class="normal"><a href="#__codelineno-15-17">17</a></span>
+<span class="normal"><a href="#__codelineno-15-18">18</a></span>
+<span class="normal"><a href="#__codelineno-15-19">19</a></span>
+<span class="normal"><a href="#__codelineno-15-20">20</a></span>
+<span class="normal"><a href="#__codelineno-15-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">findContentChildren</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">        </span><span class="c1">// 将孩子的需求和饼干的大小排序</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">g</span><span class="p">);</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 指向孩子的指针</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 指向饼干的指针</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">        </span><span class="c1">// 遍历孩子和饼干数组</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">            </span><span class="c1">// 如果当前饼干能满足当前孩子</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">g</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">                </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 满足了孩子 i，处理下一个孩子</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">            </span><span class="n">j</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 尝试下一个饼干</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回满足的孩子数量</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_39">代码讲解</h4>
 <ol>
-<li><strong>排序步骤</strong>：</li>
 <li>
-<p>使用 <code>Arrays.sort()</code> 方法对孩子的需求数组 <code>g</code> 和饼干大小数组 <code>s</code> 进行排序。这样可以确保较小的需求与较小的饼干配对，从而尽量使用最小的饼干满足最小需求的孩子。</p>
+<p><strong>排序步骤</strong>：</p>
+<ul>
+<li>使用 <code>Arrays.sort()</code> 方法对孩子的需求数组 <code>g</code> 和饼干大小数组 <code>s</code> 进行排序。这样可以确保较小的需求与较小的饼干配对，从而尽量使用最小的饼干满足最小需求的孩子。</li>
+</ul>
 </li>
 <li>
 <p><strong>匹配过程</strong>：</p>
-</li>
+<ul>
 <li>使用两个指针 <code>i</code> 和 <code>j</code>，分别指向孩子和饼干数组的开始位置。</li>
 <li>在 <code>while</code> 循环中，检查当前饼干是否能满足当前孩子的需求。如果 <code>s[j]</code>（当前饼干）大于等于 <code>g[i]</code>（当前孩子的需求），则认为该孩子得到了满足，移动 <code>i</code> 指针，准备处理下一个孩子。</li>
 <li>不论饼干是否满足孩子，<code>j</code> 指针都会向前移动，尝试下一个饼干。</li>
+</ul>
+</li>
 </ol>
 <h3 id="32">3.2 贪心算法举一反三</h3>
 <h3 id="321-lc-435">3.2.1 LC 435: 无重叠区间</h3>
@@ -3907,55 +4336,90 @@ class Solution {
 <li><strong>选择区间</strong>：每次选择结束时间最早且不与前一个选择的区间重叠的区间。如果当前区间的开始时间小于前一个区间的结束时间，说明发生了重叠，我们就需要移除当前区间。否则，我们更新当前区间为新的结束时间，并继续处理下一个区间。</li>
 </ol>
 <h4 id="_41">代码实现</h4>
-<pre><code class="language-java">import java.util.Arrays;
-
-class Solution {
-    // 自定义比较函数，按结束时间排序
-    private static class IntervalComparator implements java.util.Comparator&lt;int[]&gt; {
-        @Override
-        public int compare(int[] a, int[] b) {
-            return Integer.compare(a[1], b[1]); // 按照区间的结束时间升序排列
-        }
-    }
-
-    public int eraseOverlapIntervals(int[][] intervals) {
-        if (intervals.length == 0) return 0;
-
-        // 按区间的结束时间进行排序
-        Arrays.sort(intervals, new IntervalComparator());
-
-        int count = 0;
-        int end = intervals[0][1]; // 当前选定区间的结束时间
-
-        // 遍历剩余区间
-        for (int i = 1; i &lt; intervals.length; i++) {
-            if (intervals[i][0] &lt; end) {
-                count++; // 发生重叠，增加移除的区间数
-            } else {
-                end = intervals[i][1]; // 更新当前选定区间的结束时间
-            }
-        }
-
-        return count; // 返回被移除的区间数
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span>
+<span class="normal"><a href="#__codelineno-16-14">14</a></span>
+<span class="normal"><a href="#__codelineno-16-15">15</a></span>
+<span class="normal"><a href="#__codelineno-16-16">16</a></span>
+<span class="normal"><a href="#__codelineno-16-17">17</a></span>
+<span class="normal"><a href="#__codelineno-16-18">18</a></span>
+<span class="normal"><a href="#__codelineno-16-19">19</a></span>
+<span class="normal"><a href="#__codelineno-16-20">20</a></span>
+<span class="normal"><a href="#__codelineno-16-21">21</a></span>
+<span class="normal"><a href="#__codelineno-16-22">22</a></span>
+<span class="normal"><a href="#__codelineno-16-23">23</a></span>
+<span class="normal"><a href="#__codelineno-16-24">24</a></span>
+<span class="normal"><a href="#__codelineno-16-25">25</a></span>
+<span class="normal"><a href="#__codelineno-16-26">26</a></span>
+<span class="normal"><a href="#__codelineno-16-27">27</a></span>
+<span class="normal"><a href="#__codelineno-16-28">28</a></span>
+<span class="normal"><a href="#__codelineno-16-29">29</a></span>
+<span class="normal"><a href="#__codelineno-16-30">30</a></span>
+<span class="normal"><a href="#__codelineno-16-31">31</a></span>
+<span class="normal"><a href="#__codelineno-16-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">    </span><span class="c1">// 自定义比较函数，按结束时间排序</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IntervalComparator</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">Comparator</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">[]&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">        </span><span class="nd">@Override</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span><span class="w"> </span><span class="c1">// 按照区间的结束时间升序排列</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">eraseOverlapIntervals</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">intervals</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">intervals</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="w">        </span><span class="c1">// 按区间的结束时间进行排序</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">intervals</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IntervalComparator</span><span class="p">());</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17"></a>
+<a id="__codelineno-16-18" name="__codelineno-16-18"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intervals</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// 当前选定区间的结束时间</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20"></a>
+<a id="__codelineno-16-21" name="__codelineno-16-21"></a><span class="w">        </span><span class="c1">// 遍历剩余区间</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">intervals</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">intervals</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24"></a><span class="w">                </span><span class="n">count</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 发生重叠，增加移除的区间数</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26"></a><span class="w">                </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intervals</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// 更新当前选定区间的结束时间</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29"></a>
+<a id="__codelineno-16-30" name="__codelineno-16-30"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回被移除的区间数</span>
+<a id="__codelineno-16-31" name="__codelineno-16-31"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-32" name="__codelineno-16-32"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_42">代码讲解</h4>
 <ol>
-<li><strong>自定义比较函数</strong>：</li>
 <li>
-<p>使用 <code>IntervalComparator</code> 类实现 <code>Comparator</code> 接口，按区间的结束时间进行排序。</p>
+<p><strong>自定义比较函数</strong>：</p>
+<ul>
+<li>使用 <code>IntervalComparator</code> 类实现 <code>Comparator</code> 接口，按区间的结束时间进行排序。</li>
+</ul>
 </li>
 <li>
 <p><strong>排序步骤</strong>：</p>
-</li>
-<li>
-<p>使用 <code>Arrays.sort()</code> 方法将区间按结束时间升序排序。这样可以确保我们每次选择的区间结束得最早，能为后续的区间留出更多空间，减少重叠的可能性。</p>
+<ul>
+<li>使用 <code>Arrays.sort()</code> 方法将区间按结束时间升序排序。这样可以确保我们每次选择的区间结束得最早，能为后续的区间留出更多空间，减少重叠的可能性。</li>
+</ul>
 </li>
 <li>
 <p><strong>遍历选择区间</strong>：</p>
-</li>
+<ul>
 <li>初始化一个 <code>end</code> 变量，表示当前选定区间的结束时间。遍历剩余的区间，检查每个区间的开始时间是否与当前选定的结束时间发生重叠。如果当前区间的开始时间小于 <code>end</code>，则说明发生了重叠，必须移除该区间。如果没有重叠，则更新 <code>end</code> 为当前区间的结束时间。</li>
+</ul>
+</li>
 </ol>
 <h3 id="322-lc-605">3.2.2 LC 605: 种花问题</h3>
 <h4 id="_43">题目描述</h4>
@@ -3966,43 +4430,66 @@ class Solution {
 <li><strong>计数并跳过相邻位置</strong>：每次成功种花后，增加计数，并跳过下一个位置，因为相邻位置不能种花。</li>
 </ol>
 <h4 id="_44">代码实现</h4>
-<pre><code class="language-java">class Solution {
-    public boolean canPlaceFlowers(int[] flowerbed, int n) {
-        int count = 0;  // 记录可以种花的数量
-
-        // 遍历整个花坛
-        for (int i = 0; i &lt; flowerbed.length; i++) {
-            // 判断当前位置是否可以种花（检查前后位置，注意边界条件）
-            if (flowerbed[i] == 0 &amp;&amp; 
-                (i == 0 || flowerbed[i - 1] == 0) &amp;&amp; 
-                (i == flowerbed.length - 1 || flowerbed[i + 1] == 0)) {
-
-                flowerbed[i] = 1;  // 种花
-                count++;  // 计数增加
-                i++;  // 跳过下一个位置，避免相邻种花
-            }
-            if (count &gt;= n) return true;  // 如果种够 n 朵花，返回 true
-        }
-        return count &gt;= n;  // 遍历结束，检查是否种够 n 朵花
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span>
+<span class="normal"><a href="#__codelineno-17-13">13</a></span>
+<span class="normal"><a href="#__codelineno-17-14">14</a></span>
+<span class="normal"><a href="#__codelineno-17-15">15</a></span>
+<span class="normal"><a href="#__codelineno-17-16">16</a></span>
+<span class="normal"><a href="#__codelineno-17-17">17</a></span>
+<span class="normal"><a href="#__codelineno-17-18">18</a></span>
+<span class="normal"><a href="#__codelineno-17-19">19</a></span>
+<span class="normal"><a href="#__codelineno-17-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">canPlaceFlowers</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">flowerbed</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 记录可以种花的数量</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">        </span><span class="c1">// 遍历整个花坛</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">flowerbed</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="w">            </span><span class="c1">// 判断当前位置是否可以种花（检查前后位置，注意边界条件）</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">flowerbed</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="w">                </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">flowerbed</span><span class="o">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="w">                </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">flowerbed</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">flowerbed</span><span class="o">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="w">                </span><span class="n">flowerbed</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="c1">// 种花</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a><span class="w">                </span><span class="n">count</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 计数增加</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="w">                </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 跳过下一个位置，避免相邻种花</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// 如果种够 n 朵花，返回 true</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">  </span><span class="c1">// 遍历结束，检查是否种够 n 朵花</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_45">代码讲解</h4>
 <ol>
-<li><strong>遍历判断能否种花</strong>：</li>
 <li>
-<p>遍历整个 <code>flowerbed</code> 数组，检查每个位置是否可以种花。当前的位置必须满足三个条件才能种花：当前位置为 <code>0</code>，前一个位置（如果存在）为 <code>0</code>，后一个位置（如果存在）也为 <code>0</code>。在检查边界时（第一个和最后一个位置），可以用条件语句避免访问不存在的前后位置。</p>
+<p><strong>遍历判断能否种花</strong>：</p>
+<ul>
+<li>遍历整个 <code>flowerbed</code> 数组，检查每个位置是否可以种花。当前的位置必须满足三个条件才能种花：当前位置为 <code>0</code>，前一个位置（如果存在）为 <code>0</code>，后一个位置（如果存在）也为 <code>0</code>。在检查边界时（第一个和最后一个位置），可以用条件语句避免访问不存在的前后位置。</li>
+</ul>
 </li>
 <li>
 <p><strong>种花后跳过相邻位置</strong>：</p>
-</li>
-<li>
-<p>每次成功种花后，更新 <code>flowerbed</code> 数组，将当前的位置设置为 <code>1</code>，并增加 <code>count</code> 计数。同时，跳过下一个位置（<code>i++</code>），因为相邻的位置不能再种花。</p>
+<ul>
+<li>每次成功种花后，更新 <code>flowerbed</code> 数组，将当前的位置设置为 <code>1</code>，并增加 <code>count</code> 计数。同时，跳过下一个位置（<code>i++</code>），因为相邻的位置不能再种花。</li>
+</ul>
 </li>
 <li>
 <p><strong>提前终止</strong>：</p>
-</li>
+<ul>
 <li>如果在遍历过程中已经种够了 <code>n</code> 朵花，则可以提前返回 <code>true</code>。如果遍历结束后还没有种够，则返回 <code>false</code>。</li>
+</ul>
+</li>
 </ol>
 <h3 id="323-lc-1029">3.2.3 LC 1029: 两地调度</h3>
 <h4 id="_46">题目描述：</h4>
@@ -4018,50 +4505,74 @@ class Solution {
 </li>
 </ol>
 <h4 id="_47">代码实现</h4>
-<pre><code class="language-java">import java.util.Arrays;
-
-class Solution {
-    public int twoCitySchedCost(int[][] costs) {
-        // 自定义比较函数，按去 A 市和 B 市的费用差进行排序
-        Arrays.sort(costs, (a, b) -&gt; (a[0] - a[1]) - (b[0] - b[1]));
-
-        int totalCost = 0;
-        int n = costs.length / 2;
-
-        // 前 N 个人去 A 市，后 N 个人去 B 市
-        for (int i = 0; i &lt; n; i++) {
-            totalCost += costs[i][0];  // 去 A 市的费用
-        }
-        for (int i = n; i &lt; 2 * n; i++) {
-            totalCost += costs[i][1];  // 去 B 市的费用
-        }
-
-        return totalCost;
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-18-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-18-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-18-10">10</a></span>
+<span class="normal"><a href="#__codelineno-18-11">11</a></span>
+<span class="normal"><a href="#__codelineno-18-12">12</a></span>
+<span class="normal"><a href="#__codelineno-18-13">13</a></span>
+<span class="normal"><a href="#__codelineno-18-14">14</a></span>
+<span class="normal"><a href="#__codelineno-18-15">15</a></span>
+<span class="normal"><a href="#__codelineno-18-16">16</a></span>
+<span class="normal"><a href="#__codelineno-18-17">17</a></span>
+<span class="normal"><a href="#__codelineno-18-18">18</a></span>
+<span class="normal"><a href="#__codelineno-18-19">19</a></span>
+<span class="normal"><a href="#__codelineno-18-20">20</a></span>
+<span class="normal"><a href="#__codelineno-18-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">twoCitySchedCost</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">costs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="w">        </span><span class="c1">// 自定义比较函数，按去 A 市和 B 市的费用差进行排序</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">costs</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">));</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">totalCost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">costs</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a>
+<a id="__codelineno-18-11" name="__codelineno-18-11"></a><span class="w">        </span><span class="c1">// 前 N 个人去 A 市，后 N 个人去 B 市</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13"></a><span class="w">            </span><span class="n">totalCost</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">costs</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// 去 A 市的费用</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-16" name="__codelineno-18-16"></a><span class="w">            </span><span class="n">totalCost</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">costs</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// 去 B 市的费用</span>
+<a id="__codelineno-18-17" name="__codelineno-18-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18"></a>
+<a id="__codelineno-18-19" name="__codelineno-18-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">totalCost</span><span class="p">;</span>
+<a id="__codelineno-18-20" name="__codelineno-18-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-21" name="__codelineno-18-21"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_48">代码讲解</h4>
 <ol>
-<li><strong>计算成本差异</strong>：</li>
 <li>
-<p>每个人有去 A 市和 B 市的两种选择，我们可以通过 <code>aCost - bCost</code> 来衡量每个人去 A 市的额外成本。如果 <code>aCost &lt; bCost</code>，说明让这个人去 A 市更划算，反之则去 B 市更划算。</p>
+<p><strong>计算成本差异</strong>：</p>
+<ul>
+<li>每个人有去 A 市和 B 市的两种选择，我们可以通过 <code>aCost - bCost</code> 来衡量每个人去 A 市的额外成本。如果 <code>aCost &lt; bCost</code>，说明让这个人去 A 市更划算，反之则去 B 市更划算。</li>
+</ul>
 </li>
 <li>
 <p><strong>排序步骤</strong>：</p>
-</li>
-<li>
-<p>使用 Java 的 <code>Arrays.sort()</code> 方法对 <code>costs</code> 数组进行排序，排序依据为 <code>aCost - bCost</code>。这确保了那些去 A 市更便宜的人会被优先安排去 A 市，而去 B 市更便宜的人会被安排去 B 市。</p>
+<ul>
+<li>使用 Java 的 <code>Arrays.sort()</code> 方法对 <code>costs</code> 数组进行排序，排序依据为 <code>aCost - bCost</code>。这确保了那些去 A 市更便宜的人会被优先安排去 A 市，而去 B 市更便宜的人会被安排去 B 市。</li>
+</ul>
 </li>
 <li>
 <p><strong>分配城市</strong>：</p>
-</li>
-<li>
-<p>排序后，前一半的人去 A 市，后一半的人去 B 市。这样可以确保在总费用最小的情况下，平衡去两座城市的人数。</p>
+<ul>
+<li>排序后，前一半的人去 A 市，后一半的人去 B 市。这样可以确保在总费用最小的情况下，平衡去两座城市的人数。</li>
+</ul>
 </li>
 <li>
 <p><strong>返回结果</strong>：</p>
-</li>
+<ul>
 <li>最终返回总的费用，即前 N 个人的 A 市费用和后 N 个人的 B 市费用之和。</li>
+</ul>
+</li>
 </ol>
 <h3 id="4">4. 课后练习</h3>
 <h4 id="_49">排序问题</h4>

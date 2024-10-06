@@ -25,12 +25,12 @@
 在Java中，方法（Methods）是用来执行特定任务的代码块，可以被重复调用。
 
 ### 1.1 方法的定义语法
- 
+
 ```java
- 修饰符 返回类型 方法名(参数列表) {
-     // 方法体
-     // 可以包含一系列的语句来实现特定功能
-     // 可以使用参数，并且可能会返回一个值
+修饰符 返回类型 方法名(参数列表) {
+  // 方法体
+  // 可以包含一系列的语句来实现特定功能
+  // 可以使用参数，并且可能会返回一个值
  }
 ```
 
@@ -73,21 +73,21 @@ public class Main {
 **示例1：返回类型为 `int`**
 
 ```java
- public class MathUtils {
-     public int add(int a, int b) {
-         return a + b;
-     }
- }
+public class MathUtils {
+   public int add(int a, int b) {
+      return a + b;
+  }
+}
 ```
 
 **示例2：返回类型为 `void`**
 
 ```java
- public class Printer {
-     public void printMessage(String message) {
-         System.out.println(message);
-     }
- }
+public class Printer {
+  public void printMessage(String message) {
+      System.out.println(message);
+  }
+}
 ```
 
 ### 1.4 方法名命名规则
@@ -164,11 +164,11 @@ public static void main(String[] args) {
 形式参数是在函数定义时声明的参数，它们作为函数的一部分，用来接收调用函数时传递的实际参数的值。形式参数在函数定义的括号内部声明，并指定它们的类型和名称。例如，以下是一个简单的函数定义，它有两个形式参数：
 
 ```java
- public void calculateSum(int a, int b) {
-     // 函数体
-     int sum = a + b;
-     System.out.println("Sum: " + sum);
- }
+public void calculateSum(int a, int b) {
+  // 函数体
+  int sum = a + b;
+  System.out.println("Sum: " + sum);
+}
 ```
 
 在这个例子中，`calculateSum` 是一个函数，它接受两个形式参数 `a` 和 `b`，它们的类型都是 `int`。这些形式参数在函数被调用时用于接收传递给函数的实际参数的值。
@@ -178,22 +178,22 @@ public static void main(String[] args) {
 实际参数是在调用函数时传递给函数的值或者表达式。它们是真正用来执行函数操作的数据。在函数调用时，实际参数被传递给函数的形式参数。例如，下面是如何调用上面定义的 `calculateSum` 函数，并传递实际参数：
 
 ```java
- public class Main {
-     public static void main(String[] args) {
-         int num1 = 10;
-         int num2 = 20;
+public class Main {
+  public static void main(String[] args) {
+      int num1 = 10;
+      int num2 = 20;
 
-         // 调用函数并传递实际参数
-         calculateSum(num1, num2);
-     }
+      // 调用函数并传递实际参数
+      calculateSum(num1, num2);
+  }
 
-     // 定义函数
-     public static void calculateSum(int a, int b) {
-         // 函数体
-         int sum = a + b;
-         System.out.println("Sum: " + sum);
-     }
- }
+  // 定义函数
+  public static void calculateSum(int a, int b) {
+      // 函数体
+      int sum = a + b;
+      System.out.println("Sum: " + sum);
+  }
+}
 ```
 
 在这个示例中，`num1` 和 `num2` 是 `main` 函数中的两个变量，它们作为实际参数传递给 `calculateSum` 函数。在函数调用 `calculateSum(num1, num2);` 中，`num1` 和 `num2` 分别传递给 `a` 和 `b` 形式参数，进而在函数内部计算它们的和。
@@ -208,174 +208,174 @@ public static void main(String[] args) {
 ### 4.1 方法的定义
 ### 题目 1: 在MathUtils中定义 multiply 方法，它会接受两个 float 参数，并返回它们的乘积。
 ```java
- public class MathUtils {
+public class MathUtils {
 
-    // To be implemented
+ // To be implemented
 
-    public static void main(String[] args) {
-        MathUtils utils = new MathUtils();
-        float product = utils.multiply(5.5f, 3.2f);
-        System.out.println("The product is: " + product);  // 输出应该是 17.6
-    }
+public static void main(String[] args) {
+  MathUtils utils = new MathUtils();
+  float product = utils.multiply(5.5f, 3.2f);
+  System.out.println("The product is: " + product);  // 输出应该是 17.6
+ }
 }
 ```
 解答
 ```java
 public class MathUtils {
-    public float multiply(float a, float b) {
-        return a * b;
-    }
+ public float multiply(float a, float b) {
+     return a * b;
+ }
 
-    public static void main(String[] args) {
-        MathUtils utils = new MathUtils();
-        float product = utils.multiply(5.5f, 3.2f);
-        System.out.println("The product is: " + product);  // 输出应该是 17.6
-    }
+ public static void main(String[] args) {
+     MathUtils utils = new MathUtils();
+     float product = utils.multiply(5.5f, 3.2f);
+     System.out.println("The product is: " + product);  // 输出应该是 17.6
+ }
 }
 ```
 
 ### 题目 2: 请将下列代码（Lesson2课后练习）的点单、打印客户点单内容、计算订单总价三个功能封装成独立的方法。
 
 ```java
- import java.util.Scanner;
+import java.util.Scanner;
 
- public class RestaurantOrder {
-     public static void main(String[] args) {
-         // 定义价格常量
-         final double BURGER_PRICE = 12.5;
-         final double FRIES_PRICE = 6.0;
-         final double COKE_PRICE = 4.5;
+public class RestaurantOrder {
+  public static void main(String[] args) {
+      // 定义价格常量
+      final double BURGER_PRICE = 12.5;
+      final double FRIES_PRICE = 6.0;
+      final double COKE_PRICE = 4.5;
 
-         // 创建Scanner对象以获取用户输入
-         Scanner scanner = new Scanner(System.in);
+      // 创建Scanner对象以获取用户输入
+      Scanner scanner = new Scanner(System.in);
 
-         // 初始化总销售额
-         double totalSales = 0.0;
+      // 初始化总销售额
+      double totalSales = 0.0;
 
-         // 开始循环，直到顾客选择退出
-         while (true) {
-             // 初始化点单数量
-             int option = 0;
-             int burgers = 0;
-             int fries = 0;
-             int cokes = 0;
+      // 开始循环，直到顾客选择退出
+      while (true) {
+          // 初始化点单数量
+          int option = 0;
+          int burgers = 0;
+          int fries = 0;
+          int cokes = 0;
 
-             // 获取用户点单
-             System.out.print("\n请点单（输入-1退出，其他整数进入点单）：");
-             option = scanner.nextInt();
+          // 获取用户点单
+          System.out.print("\n请点单（输入-1退出，其他整数进入点单）：");
+          option = scanner.nextInt();
 
-             // 如果输入为0，则退出循环
-             if (option == -1) {
-                 break;
-             }
+          // 如果输入为0，则退出循环
+          if (option == -1) {
+              break;
+          }
 
-             System.out.print("请输入汉堡的数量：");
-             burgers = scanner.nextInt();
+          System.out.print("请输入汉堡的数量：");
+          burgers = scanner.nextInt();
 
-             System.out.print("请输入薯条的数量：");
-             fries = scanner.nextInt();
+          System.out.print("请输入薯条的数量：");
+          fries = scanner.nextInt();
 
-             System.out.print("请输入可乐的数量：");
-             cokes = scanner.nextInt();
+          System.out.print("请输入可乐的数量：");
+          cokes = scanner.nextInt();
 
-             // 打印客户点单内容
-             System.out.println("\n客户点单内容：");
-             if (burgers > 0) {
-                 System.out.println("汉堡 x " + burgers);
-             }
-             if (fries > 0) {
-                 System.out.println("薯条 x " + fries);
-             }
-             if (cokes > 0) {
-                 System.out.println("可乐 x " + cokes);
-             }
+          // 打印客户点单内容
+          System.out.println("\n客户点单内容：");
+          if (burgers > 0) {
+              System.out.println("汉堡 x " + burgers);
+          }
+          if (fries > 0) {
+              System.out.println("薯条 x " + fries);
+          }
+          if (cokes > 0) {
+              System.out.println("可乐 x " + cokes);
+          }
 
-             // 计算本次点单的总价
-             double orderTotal = burgers * BURGER_PRICE + fries * FRIES_PRICE + cokes * COKE_PRICE;
-             // 累加到总销售额
-             totalSales += orderTotal;
+          // 计算本次点单的总价
+          double orderTotal = burgers * BURGER_PRICE + fries * FRIES_PRICE + cokes * COKE_PRICE;
+          // 累加到总销售额
+          totalSales += orderTotal;
 
-             // 打印本次点单的总价
-             System.out.println("\n本次点单总价：" + orderTotal + " 元");
-         }
+          // 打印本次点单的总价
+          System.out.println("\n本次点单总价：" + orderTotal + " 元");
+      }
 
-         // 打印所有顾客的总销售额
-         System.out.println("\n所有顾客的总销售额：" + totalSales + " 元");
+      // 打印所有顾客的总销售额
+      System.out.println("\n所有顾客的总销售额：" + totalSales + " 元");
 
-         // 关闭Scanner
-         scanner.close();
-     }
- }
+      // 关闭Scanner
+      scanner.close();
+  }
+}
 ```
 
 参考答案
 ```java
- import java.util.Scanner;
+import java.util.Scanner;
 
- public class RestaurantOrder {
- // 定义价格常量
- private static final double BURGER_PRICE = 12.5;
- private static final double FRIES_PRICE = 6.0;
- private static final double COKE_PRICE = 4.5;
+public class RestaurantOrder {
+// 定义价格常量
+private static final double BURGER_PRICE = 12.5;
+private static final double FRIES_PRICE = 6.0;
+private static final double COKE_PRICE = 4.5;
 
-     public static void main(String[] args) {
-         Scanner scanner = new Scanner(System.in);
-         double totalSales = 0.0;
+  public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      double totalSales = 0.0;
 
-         while (true) {
-             int option = getUserOption(scanner);
+      while (true) {
+          int option = getUserOption(scanner);
 
-             if (option == -1) {
-                 break;
-             }
+          if (option == -1) {
+              break;
+          }
 
-             int burgers = getQuantity(scanner, "汉堡");
-             int fries = getQuantity(scanner, "薯条");
-             int cokes = getQuantity(scanner, "可乐");
+          int burgers = getQuantity(scanner, "汉堡");
+          int fries = getQuantity(scanner, "薯条");
+          int cokes = getQuantity(scanner, "可乐");
 
-             printOrderDetails(burgers, fries, cokes);
-             double orderTotal = calculateOrderTotal(burgers, fries, cokes);
-             totalSales += orderTotal;
+          printOrderDetails(burgers, fries, cokes);
+          double orderTotal = calculateOrderTotal(burgers, fries, cokes);
+          totalSales += orderTotal;
 
-             System.out.println("\n本次点单总价：" + orderTotal + " 元");
-         }
+          System.out.println("\n本次点单总价：" + orderTotal + " 元");
+      }
 
-         System.out.println("\n所有顾客的总销售额：" + totalSales + " 元");
+      System.out.println("\n所有顾客的总销售额：" + totalSales + " 元");
 
-         scanner.close();
-     }
+      scanner.close();
+  }
 
-     // 获取用户的点单选项
-     private static int getUserOption(Scanner scanner) {
-         System.out.print("\n请点单（输入-1退出，其他整数进入点单）：");
-         return scanner.nextInt();
-     }
+  // 获取用户的点单选项
+  private static int getUserOption(Scanner scanner) {
+      System.out.print("\n请点单（输入-1退出，其他整数进入点单）：");
+      return scanner.nextInt();
+  }
 
-     // 获取特定商品的数量
-     private static int getQuantity(Scanner scanner, String itemName) {
-         System.out.print("请输入" + itemName + "的数量：");
-         return scanner.nextInt();
-     }
+  // 获取特定商品的数量
+  private static int getQuantity(Scanner scanner, String itemName) {
+      System.out.print("请输入" + itemName + "的数量：");
+      return scanner.nextInt();
+  }
 
-     // 打印客户点单内容
-     private static void printOrderDetails(int burgers, int fries, int cokes) {
-         System.out.println("\n客户点单内容：");
-         if (burgers > 0) {
-             System.out.println("汉堡 x " + burgers);
-         }
-         if (fries > 0) {
-             System.out.println("薯条 x " + fries);
-         }
-         if (cokes > 0) {
-             System.out.println("可乐 x " + cokes);
-         }
-     }
+  // 打印客户点单内容
+  private static void printOrderDetails(int burgers, int fries, int cokes) {
+      System.out.println("\n客户点单内容：");
+      if (burgers > 0) {
+          System.out.println("汉堡 x " + burgers);
+      }
+      if (fries > 0) {
+          System.out.println("薯条 x " + fries);
+      }
+      if (cokes > 0) {
+          System.out.println("可乐 x " + cokes);
+      }
+  }
 
-     // 计算订单总价
-     private static double calculateOrderTotal(int burgers, int fries, int cokes) {
-         return burgers * BURGER_PRICE + fries * FRIES_PRICE + cokes * COKE_PRICE;
-     }
- }
+  // 计算订单总价
+  private static double calculateOrderTotal(int burgers, int fries, int cokes) {
+      return burgers * BURGER_PRICE + fries * FRIES_PRICE + cokes * COKE_PRICE;
+  }
+}
 ```
 
 

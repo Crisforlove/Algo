@@ -629,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2582,22 +2582,24 @@
 <h1 id="lesson8">Lesson8 字符串循环+切片/字符串数学运算专题</h1>
 <h2 id="_1">目录</h2>
 <ol>
-<li><a href="#1-字符串循环切片">字符串循环+切片</a></li>
+<li>
+<p><a href="#1-字符串循环切片">字符串循环+切片</a></p>
+<ul>
 <li><a href="#lc14-最长公共前缀">LC14 最长公共前缀</a></li>
 <li><a href="#lc125-验证回文串">LC125 验证回文串</a></li>
 <li><a href="#lc459-重复的子字符串">LC459 重复的子字符串</a></li>
 <li><a href="#lc796-旋转字符串">LC796 旋转字符串</a></li>
-<li>
-<p><a href="#lc28-查找字符串中的第一个匹配项索引">LC28 查找字符串中的第一个匹配项索引</a>  </p>
+<li><a href="#lc28-查找字符串中的第一个匹配项索引">LC28 查找字符串中的第一个匹配项索引</a>  </li>
+</ul>
 </li>
 <li>
 <p><a href="#2-字符串数学运算">字符串数学运算</a></p>
-</li>
+<ul>
 <li><a href="#lc415-字符串相加">LC415 字符串相加</a></li>
 <li><a href="#lc7-整数反转">LC7 整数反转</a></li>
 <li><a href="#lc67-二进制求和">LC67 二进制求和</a></li>
-<li>
-<p><a href="#lc989-数组形式的整数加法">LC989 数组形式的整数加法</a></p>
+<li><a href="#lc989-数组形式的整数加法">LC989 数组形式的整数加法</a></li>
+</ul>
 </li>
 <li>
 <p><a href="#课后练习">课后练习</a></p>
@@ -2613,37 +2615,61 @@
 <p>要找到字符串数组中的最长公共前缀，我们可以依次比较每个字符串的字符，直到找到不匹配的位置为止。这个问题可以通过多种方法解决，比如纵向扫描、横向扫描、分治法、二分查找等。我们这里采用一种较为直观的横向扫描法。</p>
 <h3 id="_5">解题思路</h3>
 <ol>
-<li><strong>边界情况</strong>: </li>
+<li><strong>边界情况</strong>: <ul>
 <li>如果字符串数组为空，直接返回空字符串。</li>
 <li>如果字符串数组只有一个字符串，那么最长公共前缀就是这个字符串本身。</li>
-<li><strong>从第一个字符串开始</strong>:</li>
+</ul>
+</li>
+<li><strong>从第一个字符串开始</strong>:<ul>
 <li>假设第一个字符串是最长公共前缀，接下来逐一与数组中的其他字符串进行比较。</li>
 <li>每次比较时，逐字符地进行比较，直到找到不匹配的字符或比较完成一个字符串的所有字符。</li>
 <li>更新当前的最长公共前缀为匹配的部分。</li>
-<li><strong>返回结果</strong>:</li>
+</ul>
+</li>
+<li><strong>返回结果</strong>:<ul>
 <li>最后返回匹配后的公共前缀，如果没有匹配到任何前缀，则返回空字符串。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_6">示例代码</h3>
-<pre><code class="language-python">class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -&gt; str:
-        # 边界情况处理
-        if not strs:
-            return &quot;&quot;
-        # 初始化最长公共前缀为第一个字符串
-        prefix = strs[0]
-
-        # 依次与其他字符串比较
-        for i in range(1, len(strs)):
-            # 当前前缀与下一个字符串比较
-            while strs[i].find(prefix) != 0:
-                # 缩短前缀长度
-                prefix = prefix[:len(prefix) - 1]
-                # 如果前缀为空，返回空字符串
-                if not prefix:
-                    return &quot;&quot;
-
-        return prefix
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">def</span> <span class="nf">longestCommonPrefix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="c1"># 边界情况处理</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">strs</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>            <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>        <span class="c1"># 初始化最长公共前缀为第一个字符串</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>        <span class="n">prefix</span> <span class="o">=</span> <span class="n">strs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>        <span class="c1"># 依次与其他字符串比较</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">strs</span><span class="p">)):</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>            <span class="c1"># 当前前缀与下一个字符串比较</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>            <span class="k">while</span> <span class="n">strs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>                <span class="c1"># 缩短前缀长度</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>                <span class="n">prefix</span> <span class="o">=</span> <span class="n">prefix</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>                <span class="c1"># 如果前缀为空，返回空字符串</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>                <span class="k">if</span> <span class="ow">not</span> <span class="n">prefix</span><span class="p">:</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>                    <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>        <span class="k">return</span> <span class="n">prefix</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="lc125">LC125. 验证回文串</h3>
 <h3 id="_7">问题描述</h3>
 <p>如果在将所有大写字符转换为小写字符、并移除所有非字母数字字符之后，短语正着读和反着读都一样。则可以认为该短语是一个回文串。</p>
@@ -2655,65 +2681,94 @@
 <p>对字符串 s 进行一次遍历，并将其中的字母和数字字符进行保留，放在另一个字符串 sgood 中。这样我们只需要判断 sgood 是否是一个普通的回文串即可。</p>
 <p>可以使用语言中的字符串翻转 API 得到 sgood 的逆序字符串 sgood_rev，只要这两个字符串相同，那么 sgood 就是回文串。</p>
 <h3 id="_10">示例代码</h3>
-<pre><code class="language-python">class Solution:
-    def isPalindrome(self, s: str) -&gt; bool:
-        sgood = []  # 用于存储有效字符
-        for ch in s:
-            if ch.isalnum():  # 判断是否为字母或数字
-                sgood.append(ch.lower())  # 转为小写并添加到有效字符中
-
-        # 创建反转后的有效字符字符串
-        sgood_rev = sgood[::-1]  # 反转列表
-
-        # 比较有效字符和反转字符是否相同
-        return sgood == sgood_rev
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="k">def</span> <span class="nf">isPalindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>        <span class="n">sgood</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 用于存储有效字符</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>        <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>            <span class="k">if</span> <span class="n">ch</span><span class="o">.</span><span class="n">isalnum</span><span class="p">():</span>  <span class="c1"># 判断是否为字母或数字</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>                <span class="n">sgood</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>  <span class="c1"># 转为小写并添加到有效字符中</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>        <span class="c1"># 创建反转后的有效字符字符串</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>        <span class="n">sgood_rev</span> <span class="o">=</span> <span class="n">sgood</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 反转列表</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>        <span class="c1"># 比较有效字符和反转字符是否相同</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>        <span class="k">return</span> <span class="n">sgood</span> <span class="o">==</span> <span class="n">sgood_rev</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="_11">举一反三</h2>
 <h3 id="lc459">LC459. 重复的子字符串</h3>
 <h3 id="_12">问题描述</h3>
 <p>给定一个非空的字符串 <code>s</code> ，检查是否可以通过由它的一个子串重复多次构成。</p>
 <h3 id="_13">解题思路</h3>
 <ol>
-<li><strong>理解重复构成：</strong></li>
-<li>如果字符串 <code>s</code> 可以通过重复某个子串多次构成，说明 <code>s</code> 的长度应该是这个子串的长度的整数倍。</li>
 <li>
-<p>例如，字符串 "abab" 可以视为子串 "ab" 重复两次，长度为 4 的字符串可由长度为 2 的子串构成。</p>
+<p><strong>理解重复构成：</strong></p>
+<ul>
+<li>如果字符串 <code>s</code> 可以通过重复某个子串多次构成，说明 <code>s</code> 的长度应该是这个子串的长度的整数倍。</li>
+<li>例如，字符串 "abab" 可以视为子串 "ab" 重复两次，长度为 4 的字符串可由长度为 2 的子串构成。</li>
+</ul>
 </li>
 <li>
 <p><strong>找到可能的子串长度：</strong></p>
-</li>
-<li>
-<p>假设子串的长度为 <code>n</code>，则可能的长度可以是 1 到 <code>len(s) // 2</code>。因为一个子串重复后，整体字符串的长度不可能超过 <code>len(s)</code>。</p>
+<ul>
+<li>假设子串的长度为 <code>n</code>，则可能的长度可以是 1 到 <code>len(s) // 2</code>。因为一个子串重复后，整体字符串的长度不可能超过 <code>len(s)</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>检查重复：</strong></p>
-</li>
+<ul>
 <li>对于每一个可能的子串长度 <code>i</code>，检查 <code>len(s)</code> 是否能够被 <code>i</code> 整除（即 <code>len(s) % i == 0</code>）。</li>
-<li>
-<p>如果能整除，那么取出子串 <code>s[0:i]</code>，并通过将其重复 <code>len(s) // i</code> 次来构造一个新的字符串，然后与原字符串 <code>s</code> 进行比较。</p>
+<li>如果能整除，那么取出子串 <code>s[0:i]</code>，并通过将其重复 <code>len(s) // i</code> 次来构造一个新的字符串，然后与原字符串 <code>s</code> 进行比较。</li>
+</ul>
 </li>
 <li>
 <p><strong>复杂度分析：</strong></p>
-</li>
+<ul>
 <li>在最坏的情况下，外层循环需要检查 <code>len(s) // 2</code> 次，每次比较的复杂度为 <code>O(n)</code>。所以总体的时间复杂度为 <code>O(n^2)</code>，对于 <code>n</code> 较大时可能会有性能问题。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_14">示例代码</h3>
-<pre><code class="language-python">class Solution:
-    def repeatedSubstringPattern(self, s: str) -&gt; bool:
-        n = len(s)   
-        # 遍历可能的子串长度
-        for i in range(1, n // 2 + 1):
-            # 检查是否可以整除
-            if n % i == 0:
-                substring = s[:i]
-                # 构造由子串重复的字符串
-                repeated = substring * (n // i)
-                # 比较构造的字符串与原字符串
-                if repeated == s:
-                    return True
-
-        return False
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">def</span> <span class="nf">repeatedSubstringPattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>   
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>        <span class="c1"># 遍历可能的子串长度</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>            <span class="c1"># 检查是否可以整除</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>            <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>                <span class="n">substring</span> <span class="o">=</span> <span class="n">s</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>                <span class="c1"># 构造由子串重复的字符串</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>                <span class="n">repeated</span> <span class="o">=</span> <span class="n">substring</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">//</span> <span class="n">i</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>                <span class="c1"># 比较构造的字符串与原字符串</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>                <span class="k">if</span> <span class="n">repeated</span> <span class="o">==</span> <span class="n">s</span><span class="p">:</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>                    <span class="k">return</span> <span class="kc">True</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>        <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_15">更高效的解法</h3>
 <p>可以利用字符串的特性来进一步优化：</p>
 <ol>
@@ -2722,37 +2777,39 @@
 <li>如果出现，说明 <code>s</code> 可以由某个子串构成。</li>
 </ol>
 <h3 id="_16">优化示例代码</h3>
-<pre><code class="language-python">class Solution:
-    def repeatedSubstringPattern(self, s: str) -&gt; bool:
-        doubled = s + s  # 将字符串拼接
-        sub_string = doubled[1:-1]  # 去掉首尾字符
-        return s in sub_string  # 检查是否包含原字符串
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="k">def</span> <span class="nf">repeatedSubstringPattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>        <span class="n">doubled</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="n">s</span>  <span class="c1"># 将字符串拼接</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>        <span class="n">sub_string</span> <span class="o">=</span> <span class="n">doubled</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 去掉首尾字符</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>        <span class="k">return</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sub_string</span>  <span class="c1"># 检查是否包含原字符串</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_17">证明：字符串拼接后掐头去尾可以用于判断重复的子字符串</h3>
 <h4 id="_18">补充：什么是前缀和后缀？</h4>
 <ol>
 <li>
 <p><strong>前缀（Prefix）</strong>：从字符串的<strong>开头</strong>开始的连续字符子串。例如，字符串 <code>"abcde"</code> 的前缀有：</p>
-</li>
-<li>
-<p>前缀 1：<code>"a"</code></p>
-</li>
+<ul>
+<li>前缀 1：<code>"a"</code></li>
 <li>前缀 2：<code>"ab"</code></li>
 <li>前缀 3：<code>"abc"</code></li>
 <li>前缀 4：<code>"abcd"</code></li>
-<li>
-<p>前缀 5：<code>"abcde"</code>（整个字符串本身也是一个前缀）</p>
+<li>前缀 5：<code>"abcde"</code>（整个字符串本身也是一个前缀）</li>
+</ul>
 </li>
 <li>
 <p><strong>后缀（Suffix）</strong>：从字符串的<strong>结尾</strong>开始的连续字符子串。例如，字符串 <code>"abcde"</code> 的后缀有：</p>
-</li>
-<li>
-<p>后缀 1：<code>"e"</code></p>
-</li>
+<ul>
+<li>后缀 1：<code>"e"</code></li>
 <li>后缀 2：<code>"de"</code></li>
 <li>后缀 3：<code>"cde"</code></li>
 <li>后缀 4：<code>"bcde"</code></li>
 <li>后缀 5：<code>"abcde"</code>（整个字符串本身也是一个后缀）</li>
+</ul>
+</li>
 </ol>
 <h4 id="_19">充分必要性证明</h4>
 <p>为了证明给定字符串 <code>s</code> 是由某个子串重复构成的充分必要性，我们需要从两个方向来进行证明：</p>
@@ -2765,55 +2822,62 @@
 <p><strong>假设</strong>：设字符串 <code>s</code> 是由一个较短的子串 <code>p</code> 重复多次构成的，即 <code>s = p + p + ... + p</code>（假设 <code>p</code> 重复 <code>k</code> 次）。</p>
 <p><strong>举例</strong>：比如 <code>s = "abab"</code>，这是由 <code>p = "ab"</code> 重复两次构成的。</p>
 <p><strong>拼接 <code>s + s</code></strong>：我们将 <code>s</code> 拼接得到 <code>s + s</code>，例如：</p>
-<pre><code>s = &quot;abab&quot;
-s_plus = s + s  # &quot;abab&quot; + &quot;abab&quot; = &quot;abababab&quot;
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>s = &quot;abab&quot;
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>s_plus = s + s  # &quot;abab&quot; + &quot;abab&quot; = &quot;abababab&quot;
+</code></pre></div></td></tr></table></div>
 <p>接着，掐头去尾，去掉首尾字符，得到 <code>new_s = (s + s)[1:-1]</code>，对于上面的例子：</p>
-<pre><code>new_s = s_plus[1:-1]  # 去掉首尾字符
-# new_s = &quot;abababab&quot;[1:-1] = &quot;bababa&quot;
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>new_s = s_plus[1:-1]  # 去掉首尾字符
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a># new_s = &quot;abababab&quot;[1:-1] = &quot;bababa&quot;
+</code></pre></div></td></tr></table></div>
 <p><strong>寻找 <code>s</code> 在 <code>new_s</code> 中的出现</strong>：由于 <code>s</code> 是由子串 <code>p</code> 多次重复（至少两次）构成的，<code>s + s</code> 就会重复至少 <strong>4</strong> 次 <code>p</code>，掐头去尾后，重复至少 <strong>2</strong> 次 <code>p</code>，前缀和后缀必然有重叠，一定能再次找到 <code>s</code>。</p>
-<pre><code>new_s = &quot;bababa&quot;
-          ↓↓↓↓
-         &quot;abab&quot;  # 这里再次出现了 s
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>new_s = &quot;bababa&quot;
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>          ↓↓↓↓
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>         &quot;abab&quot;  # 这里再次出现了 s
+</code></pre></div></td></tr></table></div>
 <p>充分性证毕。</p>
 <hr />
 <h4 id="2"><strong>2. 必要性</strong></h4>
 <p><strong>假设</strong>：我们已经在去掉首尾字符的 <code>s + s</code> 中再次找到了 <code>s</code>。现在我们需要证明，<code>s</code> 一定是由某个子串重复构成的。</p>
 <p><strong>构造 <code>new_s</code></strong>：首先，构造</p>
-<pre><code>s_plus = s + s
-new_s = s_plus[1:-1]  # 去掉首尾字符
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>s_plus = s + s
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>new_s = s_plus[1:-1]  # 去掉首尾字符
+</code></pre></div></td></tr></table></div>
 <p>假设 <code>s</code> 在 <code>new_s</code> 中匹配的位置是从索引 <code>i</code> 开始，这意味着：</p>
-<pre><code>new_s[i:i+len(s)] == s
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>new_s[i:i+len(s)] == s
+</code></pre></div></td></tr></table></div>
 <p>由于 <code>new_s</code> 是 <code>s + s</code> 去掉首尾字符得到的，即：</p>
-<pre><code>new_s = s_plus[1:-1] = (s + s)[1:-1]
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>new_s = s_plus[1:-1] = (s + s)[1:-1]
+</code></pre></div></td></tr></table></div>
 <p>所以：</p>
-<pre><code>new_s = s[1:] + s[:-1]
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>new_s = s[1:] + s[:-1]
+</code></pre></div></td></tr></table></div>
 <p>因此，<code>new_s</code> 是由 <code>s</code> 的后缀和前缀拼接而成。</p>
 <p><strong>根据匹配条件</strong>：</p>
-<pre><code>s == new_s[i:i+len(s)]
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>s == new_s[i:i+len(s)]
+</code></pre></div></td></tr></table></div>
 <p>即：</p>
-<pre><code>s == (s[1:] + s[:-1])[i:i+len(s)]
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>s == (s[1:] + s[:-1])[i:i+len(s)]
+</code></pre></div></td></tr></table></div>
 <p>这表明 <code>s</code> 可以通过自身的一个后缀和前缀拼接得到，说明 <code>s</code> 存在周期性，也就是说，<code>s</code> 是由某个子串重复构成的。</p>
 <p><strong>举例说明</strong>：</p>
-<pre><code>s = &quot;abab&quot;
-s_plus = s + s  # &quot;abababab&quot;
-new_s = s_plus[1:-1]  # &quot;bababa&quot;
-</code></pre>
-<ul>
-<li><code>s</code> 的前缀有：<code>'a', 'ab', 'aba', 'abab'</code></li>
-<li><code>s</code> 的后缀有：<code>'b', 'ab', 'bab', 'abab'</code></li>
-</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>s = &quot;abab&quot;
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>s_plus = s + s  # &quot;abababab&quot;
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>new_s = s_plus[1:-1]  # &quot;bababa&quot;
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>- `s` 的前缀有：`&#39;a&#39;, &#39;ab&#39;, &#39;aba&#39;, &#39;abab&#39;`
+- `s` 的后缀有：`&#39;b&#39;, &#39;ab&#39;, &#39;bab&#39;, &#39;abab&#39;`
+</code></pre></div></td></tr></table></div>
 <p>可以发现，在 <code>new_s</code> 中，<code>s</code> 再次出现：</p>
-<pre><code>new_s[1:1+4] == &quot;abab&quot;  # &quot;bababa&quot;[1:5] == &quot;abab&quot;
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>new_s[1:1+4] == &quot;abab&quot;  # &quot;bababa&quot;[1:5] == &quot;abab&quot;
+</code></pre></div></td></tr></table></div>
 <p>这说明：</p>
 <ul>
 <li><code>s</code> 的后缀 <code>"bab"</code> 与前缀 <code>"ab"</code> 重叠拼接，形成了周期性。</li>
@@ -2844,45 +2908,59 @@ new_s = s_plus[1:-1]  # &quot;bababa&quot;
 <p>要判断字符串 <code>s</code> 是否可以通过若干次旋转操作变成字符串 <code>goal</code>，我们可以采用以下思路进行解决：</p>
 <h3 id="_23">解题思路</h3>
 <ol>
-<li><strong>理解旋转</strong>：</li>
-<li>旋转操作是将字符串的第一个字符移动到最后一位。</li>
 <li>
-<p>例如，字符串 <code>"abcde"</code> 经过一次旋转变为 <code>"bcdea"</code>，再经过一次旋转变为 <code>"cdeab"</code>，如此类推。</p>
+<p><strong>理解旋转</strong>：</p>
+<ul>
+<li>旋转操作是将字符串的第一个字符移动到最后一位。</li>
+<li>例如，字符串 <code>"abcde"</code> 经过一次旋转变为 <code>"bcdea"</code>，再经过一次旋转变为 <code>"cdeab"</code>，如此类推。</li>
+</ul>
 </li>
 <li>
 <p><strong>字符串旋转的特性</strong>：</p>
-</li>
-<li>如果我们将字符串 <code>s</code> 进行两次拼接，得到 <code>s + s</code>，这个新字符串包含了所有可能的旋转形式。</li>
-<li>
-<p>例如：</p>
 <ul>
+<li>如果我们将字符串 <code>s</code> 进行两次拼接，得到 <code>s + s</code>，这个新字符串包含了所有可能的旋转形式。</li>
+<li>例如：</li>
 <li>对于 <code>s = "abcde"</code>，拼接后 <code>s + s = "abcdeabcde"</code>，其中包含了 <code>"abcde"</code> 的所有旋转形式，如 <code>"abcde"</code>、<code>"bcdea"</code>、<code>"cdeab"</code>、<code>"deabc"</code> 和 <code>"eabcd"</code>。</li>
 </ul>
 </li>
 <li>
 <p><strong>判断 <code>goal</code> 是否在 <code>s + s</code> 中</strong>：</p>
-</li>
+<ul>
 <li>只需检查 <code>goal</code> 是否是 <code>s + s</code> 的子串。</li>
 <li>如果 <code>goal</code> 是 <code>s + s</code> 的子串，则返回 <code>True</code>，否则返回 <code>False</code>。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_24">示例代码</h3>
-<pre><code class="language-python">class Solution:
-    def rotateString(self, s: str, goal: str) -&gt; bool:
-        # 检查长度是否相等
-        if len(s) != len(goal):
-            return False
-
-        # 拼接字符串
-        doubled = s + s
-
-        # 检查 goal 是否为 doubled 的子串
-        return goal in doubled
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>    <span class="k">def</span> <span class="nf">rotateString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">goal</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>        <span class="c1"># 检查长度是否相等</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">goal</span><span class="p">):</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>            <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>        <span class="c1"># 拼接字符串</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a>        <span class="n">doubled</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="n">s</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a>        <span class="c1"># 检查 goal 是否为 doubled 的子串</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a>        <span class="k">return</span> <span class="n">goal</span> <span class="ow">in</span> <span class="n">doubled</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_25">简洁写法</h3>
-<pre><code class="language-python">class Solution:
-    def rotateString(self, s: str, goal: str) -&gt; bool:
-        return len(s) == len(goal) and goal in (s + s)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>    <span class="k">def</span> <span class="nf">rotateString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">goal</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">goal</span><span class="p">)</span> <span class="ow">and</span> <span class="n">goal</span> <span class="ow">in</span> <span class="p">(</span><span class="n">s</span> <span class="o">+</span> <span class="n">s</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="lc28">LC28 查找字符串中的第一个匹配项索引</h3>
 <h3 id="_26">问题描述</h3>
 <p>给定两个字符串 <code>haystack</code> 和 <code>needle</code>，你需要在 <code>haystack</code> 字符串中找出 <code>needle</code> 字符串出现的第一个位置（从 0 开始）。如果不存在，则返回 <code>-1</code>。</p>
@@ -2894,46 +2972,67 @@ new_s = s_plus[1:-1]  # &quot;bababa&quot;
 <li><strong>如果遍历结束后未找到，返回 <code>-1</code>。</strong></li>
 </ol>
 <h3 id="_28">参考解答</h3>
-<pre><code class="language-python">class Solution:
-    def strStr(self, haystack: str, needle: str) -&gt; int:
-        # 如果needle为空字符串，直接返回0
-        if not needle:
-            return 0
-
-        # 获取两个字符串的长度
-        n = len(haystack)
-        m = len(needle)
-
-        # 遍历haystack，直到剩余的部分长度小于needle长度
-        for i in range(n - m + 1):
-            # 比较从i开始的子串是否等于needle
-            if haystack[i:i + m] == needle:
-                return i
-
-        # 如果遍历结束后没有找到，返回-1
-        return -1
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span>
+<span class="normal"><a href="#__codelineno-17-13">13</a></span>
+<span class="normal"><a href="#__codelineno-17-14">14</a></span>
+<span class="normal"><a href="#__codelineno-17-15">15</a></span>
+<span class="normal"><a href="#__codelineno-17-16">16</a></span>
+<span class="normal"><a href="#__codelineno-17-17">17</a></span>
+<span class="normal"><a href="#__codelineno-17-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>    <span class="k">def</span> <span class="nf">strStr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">haystack</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">needle</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>        <span class="c1"># 如果needle为空字符串，直接返回0</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">needle</span><span class="p">:</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>            <span class="k">return</span> <span class="mi">0</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>        <span class="c1"># 获取两个字符串的长度</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a>        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">haystack</span><span class="p">)</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a>        <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">needle</span><span class="p">)</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a>        <span class="c1"># 遍历haystack，直到剩余的部分长度小于needle长度</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a>            <span class="c1"># 比较从i开始的子串是否等于needle</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a>            <span class="k">if</span> <span class="n">haystack</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="n">m</span><span class="p">]</span> <span class="o">==</span> <span class="n">needle</span><span class="p">:</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a>                <span class="k">return</span> <span class="n">i</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16"></a>
+<a id="__codelineno-17-17" name="__codelineno-17-17"></a>        <span class="c1"># 如果遍历结束后没有找到，返回-1</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18"></a>        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="2_1">2 字符串数学运算</h2>
 <p>字符串数学模拟的基本解题思路主要涉及如何通过逐步操作和简单的数学运算，处理字符串形式的数字计算。</p>
 <h3 id="_29">基本概念</h3>
 <ol>
-<li><strong>字符转数字</strong>：</li>
-<li>字符串中的数字是以字符的形式存在的，例如字符 <code>'0'</code> 到 <code>'9'</code>。</li>
 <li>
-<p>可以通过 <code>ord(char) - ord('0')</code> 将字符转为对应的数字。例如，<code>ord('5') - ord('0')</code> 的结果为 <code>5</code>。</p>
+<p><strong>字符转数字</strong>：</p>
+<ul>
+<li>字符串中的数字是以字符的形式存在的，例如字符 <code>'0'</code> 到 <code>'9'</code>。</li>
+<li>可以通过 <code>ord(char) - ord('0')</code> 将字符转为对应的数字。例如，<code>ord('5') - ord('0')</code> 的结果为 <code>5</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>进位处理</strong>：</p>
-</li>
+<ul>
 <li>在进行加法运算时，如果某一位的和大于或等于 <code>10</code>，则需要处理进位（carry），将 <code>1</code> 加到下一位的计算中。</li>
-<li>
-<p>进位的计算可以通过 <code>carry = sum // 10</code> 来实现，而当前位的结果则是 <code>sum % 10</code>。</p>
+<li>进位的计算可以通过 <code>carry = sum // 10</code> 来实现，而当前位的结果则是 <code>sum % 10</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>逆序计算</strong>：</p>
-</li>
+<ul>
 <li>字符串通常从右到左进行加法，因为我们从个位开始。处理完最后一位后，继续处理十位、百位等。</li>
 <li>为了方便存储结果，通常会使用列表逐位添加，最后通过 <code>''.join(list)</code> 以获得正确的顺序的字符串。</li>
+</ul>
+</li>
 </ol>
 <h2 id="_30">例题讲解</h2>
 <h3 id="lc415">LC415 字符串相加</h3>
@@ -2944,57 +3043,80 @@ new_s = s_plus[1:-1]  # &quot;bababa&quot;
 <p>要计算两个字符串形式的非负整数 <code>num1</code> 和 <code>num2</code> 的和，并返回结果为字符串形式，我们需要手动模拟加法的过程，类似于在纸上进行加法计算。下面是详细的解题思路和步骤。</p>
 <h3 id="_33">解题思路</h3>
 <ol>
-<li><strong>从右到左遍历</strong>：</li>
 <li>
-<p>加法通常是从个位开始计算，因此我们需要从两个字符串的末尾开始遍历。</p>
+<p><strong>从右到左遍历</strong>：</p>
+<ul>
+<li>加法通常是从个位开始计算，因此我们需要从两个字符串的末尾开始遍历。</li>
+</ul>
 </li>
 <li>
 <p><strong>逐位相加</strong>：</p>
-</li>
+<ul>
 <li>对于 <code>num1</code> 和 <code>num2</code> 中的每一位，分别将它们转化为数字，进行加法操作。</li>
-<li>
-<p>需要考虑进位（carry）的影响，即如果某一位的和大于或等于 10，则需要将 1 进位到下一位。</p>
+<li>需要考虑进位（carry）的影响，即如果某一位的和大于或等于 10，则需要将 1 进位到下一位。</li>
+</ul>
 </li>
 <li>
 <p><strong>处理不同长度的字符串</strong>：</p>
-</li>
+<ul>
 <li>在进行加法时，如果两个字符串的长度不同，我们需要确保从最右边开始添加上短字符串的缺失部分。</li>
-<li>
-<p>例如，对于 <code>num1</code> 长度为 5 和 <code>num2</code> 长度为 3 的情况，我们只需要在计算时考虑 <code>num2</code> 的前三位。</p>
+<li>例如，对于 <code>num1</code> 长度为 5 和 <code>num2</code> 长度为 3 的情况，我们只需要在计算时考虑 <code>num2</code> 的前三位。</li>
+</ul>
 </li>
 <li>
 <p><strong>处理最后的进位</strong>：</p>
-</li>
-<li>
-<p>如果遍历结束后还有进位（carry）未处理，需要将其添加到结果中。</p>
+<ul>
+<li>如果遍历结束后还有进位（carry）未处理，需要将其添加到结果中。</li>
+</ul>
 </li>
 <li>
 <p><strong>结果拼接</strong>：</p>
-</li>
+<ul>
 <li>由于我们是从后向前计算的，因此最终的结果需要反转一下。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_34">示例代码</h3>
-<pre><code class="language-python">class Solution:
-    def addStrings(self, num1: str, num2: str) -&gt; str:
-        result = []  # 使用列表存储结果
-        carry = 0  # 进位
-        i, j = len(num1) - 1, len(num2) - 1  # num1 和 num2 的最后一位索引
-
-        # 循环直到 num1 和 num2 都遍历完
-        while i &gt;= 0 or j &gt;= 0 or carry &gt; 0:
-            sum = carry  # 从进位开始
-            if i &gt;= 0:
-                sum += int(num1[i])
-                i -= 1  # 移动到上一位
-            if j &gt;= 0:
-                sum += int(num2[j])
-                j -= 1  # 移动到上一位
-
-            result.append(str(sum % 10))  # 当前位的结果
-            carry = sum // 10  # 更新进位
-
-        return ''.join(result[::-1])  # 反转结果并返回
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-18-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-18-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-18-10">10</a></span>
+<span class="normal"><a href="#__codelineno-18-11">11</a></span>
+<span class="normal"><a href="#__codelineno-18-12">12</a></span>
+<span class="normal"><a href="#__codelineno-18-13">13</a></span>
+<span class="normal"><a href="#__codelineno-18-14">14</a></span>
+<span class="normal"><a href="#__codelineno-18-15">15</a></span>
+<span class="normal"><a href="#__codelineno-18-16">16</a></span>
+<span class="normal"><a href="#__codelineno-18-17">17</a></span>
+<span class="normal"><a href="#__codelineno-18-18">18</a></span>
+<span class="normal"><a href="#__codelineno-18-19">19</a></span>
+<span class="normal"><a href="#__codelineno-18-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>    <span class="k">def</span> <span class="nf">addStrings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">num2</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a>        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 使用列表存储结果</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a>        <span class="n">carry</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 进位</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a>        <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">num1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">num2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># num1 和 num2 的最后一位索引</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a>        <span class="c1"># 循环直到 num1 和 num2 都遍历完</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a>        <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">carry</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a>            <span class="nb">sum</span> <span class="o">=</span> <span class="n">carry</span>  <span class="c1"># 从进位开始</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a>            <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11"></a>                <span class="nb">sum</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12"></a>                <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>  <span class="c1"># 移动到上一位</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13"></a>            <span class="k">if</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14"></a>                <span class="nb">sum</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num2</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15"></a>                <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>  <span class="c1"># 移动到上一位</span>
+<a id="__codelineno-18-16" name="__codelineno-18-16"></a>
+<a id="__codelineno-18-17" name="__codelineno-18-17"></a>            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">sum</span> <span class="o">%</span> <span class="mi">10</span><span class="p">))</span>  <span class="c1"># 当前位的结果</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18"></a>            <span class="n">carry</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">//</span> <span class="mi">10</span>  <span class="c1"># 更新进位</span>
+<a id="__codelineno-18-19" name="__codelineno-18-19"></a>
+<a id="__codelineno-18-20" name="__codelineno-18-20"></a>        <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">result</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># 反转结果并返回</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="lc7">LC7 整数反转</h3>
 <h3 id="_35">问题描述</h3>
 <p>给你一个 32 位的有符号整数 <code>x</code>，返回将 <code>x</code> 中的数字部分反转后的结果。</p>
@@ -3003,13 +3125,17 @@ new_s = s_plus[1:-1]  # &quot;bababa&quot;
 <h3 id="_36">解题思路</h3>
 <p>我们需要逐位反转整数 <code>x</code>，并在过程中检查是否会发生溢出。以下是具体步骤：</p>
 <ol>
-<li><strong>初始化变量</strong>：</li>
+<li><strong>初始化变量</strong>：<ul>
 <li><code>result = 0</code>：用于存储反转后的结果。</li>
 <li><code>sign = -1 if x &lt; 0 else 1</code>：记录 <code>x</code> 的符号，负数为 <code>-1</code>，非负数为 <code>1</code>。</li>
 <li><code>x = abs(x)</code>：对 <code>x</code> 取绝对值，方便后续处理。</li>
-<li><strong>定义整数范围</strong>：</li>
+</ul>
+</li>
+<li><strong>定义整数范围</strong>：<ul>
 <li><code>INT_MAX = 2**31 - 1</code>：32 位有符号整数的最大值，即 <code>2147483647</code>。</li>
 <li><code>INT_MIN = -2**31</code>：32 位有符号整数的最小值，即 <code>-2147483648</code>。</li>
+</ul>
+</li>
 <li><strong>循环反转数字</strong>：</li>
 </ol>
 <p>当 <code>x</code> 不等于 <code>0</code> 时，重复以下步骤：</p>
@@ -3033,28 +3159,46 @@ new_s = s_plus[1:-1]  # &quot;bababa&quot;
 <li>返回最终结果：<code>return result * sign</code>。</li>
 </ul>
 <h3 id="_37">示例代码</h3>
-<pre><code class="language-python">class Solution:
-    def reverse(self, x: int) -&gt; int:
-        INT_MAX = 2**31 - 1  # 2147483647
-        INT_MIN = -2**31     # -2147483648
-
-        sign = -1 if x &lt; 0 else 1  # 记录符号
-        x = abs(x)
-        result = 0
-
-        while x != 0:
-            digit = x % 10
-            x = x // 10
-
-            # 溢出检查
-            if result &gt; INT_MAX // 10 or (result == INT_MAX // 10 and digit &gt; INT_MAX % 10):
-                return 0
-
-            result = result * 10 + digit
-
-        return sign * result
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-19-10">10</a></span>
+<span class="normal"><a href="#__codelineno-19-11">11</a></span>
+<span class="normal"><a href="#__codelineno-19-12">12</a></span>
+<span class="normal"><a href="#__codelineno-19-13">13</a></span>
+<span class="normal"><a href="#__codelineno-19-14">14</a></span>
+<span class="normal"><a href="#__codelineno-19-15">15</a></span>
+<span class="normal"><a href="#__codelineno-19-16">16</a></span>
+<span class="normal"><a href="#__codelineno-19-17">17</a></span>
+<span class="normal"><a href="#__codelineno-19-18">18</a></span>
+<span class="normal"><a href="#__codelineno-19-19">19</a></span>
+<span class="normal"><a href="#__codelineno-19-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>    <span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>        <span class="n">INT_MAX</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">31</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># 2147483647</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>        <span class="n">INT_MIN</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="o">**</span><span class="mi">31</span>     <span class="c1"># -2147483648</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a>        <span class="n">sign</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">1</span>  <span class="c1"># 记录符号</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a>        <span class="n">x</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a>        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9"></a>
+<a id="__codelineno-19-10" name="__codelineno-19-10"></a>        <span class="k">while</span> <span class="n">x</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a>            <span class="n">digit</span> <span class="o">=</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">10</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12"></a>            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">//</span> <span class="mi">10</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13"></a>
+<a id="__codelineno-19-14" name="__codelineno-19-14"></a>            <span class="c1"># 溢出检查</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15"></a>            <span class="k">if</span> <span class="n">result</span> <span class="o">&gt;</span> <span class="n">INT_MAX</span> <span class="o">//</span> <span class="mi">10</span> <span class="ow">or</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">INT_MAX</span> <span class="o">//</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">digit</span> <span class="o">&gt;</span> <span class="n">INT_MAX</span> <span class="o">%</span> <span class="mi">10</span><span class="p">):</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16"></a>                <span class="k">return</span> <span class="mi">0</span>
+<a id="__codelineno-19-17" name="__codelineno-19-17"></a>
+<a id="__codelineno-19-18" name="__codelineno-19-18"></a>            <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">digit</span>
+<a id="__codelineno-19-19" name="__codelineno-19-19"></a>
+<a id="__codelineno-19-20" name="__codelineno-19-20"></a>        <span class="k">return</span> <span class="n">sign</span> <span class="o">*</span> <span class="n">result</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_38">溢出检查条件说明</h4>
 <p><strong>条件一</strong>：<code>result &gt; INT_MAX // 10</code></p>
 <ul>
@@ -3071,57 +3215,81 @@ new_s = s_plus[1:-1]  # &quot;bababa&quot;
 <p>给你两个二进制字符串 <code>a</code> 和 <code>b</code> ，以二进制字符串的形式返回它们的和。</p>
 <h3 id="_41">解题思路</h3>
 <ol>
-<li><strong>从右到左遍历</strong>：</li>
 <li>
-<p>由于二进制加法是从最右侧的位（最低位）开始的，我们需要从字符串的末尾开始处理。</p>
+<p><strong>从右到左遍历</strong>：</p>
+<ul>
+<li>由于二进制加法是从最右侧的位（最低位）开始的，我们需要从字符串的末尾开始处理。</li>
+</ul>
 </li>
 <li>
 <p><strong>逐位相加</strong>：</p>
-</li>
+<ul>
 <li>使用两个指针分别指向两个字符串的末尾（即最后一位）。</li>
-<li>
-<p>逐位相加并处理进位（carry）。</p>
+<li>逐位相加并处理进位（carry）。</li>
+</ul>
 </li>
 <li>
 <p><strong>处理不同长度的字符串</strong>：</p>
-</li>
-<li>
-<p>如果两个字符串的长度不同，短的字符串在计算时会缺失部分位。需要在处理过程中检查是否已经超出某个字符串的长度。</p>
+<ul>
+<li>如果两个字符串的长度不同，短的字符串在计算时会缺失部分位。需要在处理过程中检查是否已经超出某个字符串的长度。</li>
+</ul>
 </li>
 <li>
 <p><strong>处理最后的进位</strong>：</p>
-</li>
-<li>
-<p>如果遍历结束后仍然有进位（carry），需要将其添加到结果中。</p>
+<ul>
+<li>如果遍历结束后仍然有进位（carry），需要将其添加到结果中。</li>
+</ul>
 </li>
 <li>
 <p><strong>拼接和反转结果</strong>：</p>
-</li>
+<ul>
 <li>由于我们是从后向前计算的，因此需要在最后反转结果字符串。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_42">示例代码</h3>
-<pre><code class="language-python">class Solution:
-    def addBinary(self, a: str, b: str) -&gt; str:
-        result = []  # 使用列表存储结果
-        carry = 0  # 进位
-        i, j = len(a) - 1, len(b) - 1  # a 和 b 的最后一位索引
-
-        # 循环直到 a 和 b 都遍历完
-        while i &gt;= 0 or j &gt;= 0 or carry &gt; 0:
-            # 计算当前位的和
-            if i &gt;= 0:
-                carry += int(a[i])  # 取 a 的当前位并转为数字
-                i -= 1
-            if j &gt;= 0:
-                carry += int(b[j])  # 取 b 的当前位并转为数字
-                j -= 1
-
-            # 将当前位的结果添加到结果中
-            result.append(str(carry % 2))  # 当前位结果
-            carry //= 2  # 更新进位
-
-        return ''.join(result[::-1])  # 反转结果并返回
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-20-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-20-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-20-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-20-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-20-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-20-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-20-10">10</a></span>
+<span class="normal"><a href="#__codelineno-20-11">11</a></span>
+<span class="normal"><a href="#__codelineno-20-12">12</a></span>
+<span class="normal"><a href="#__codelineno-20-13">13</a></span>
+<span class="normal"><a href="#__codelineno-20-14">14</a></span>
+<span class="normal"><a href="#__codelineno-20-15">15</a></span>
+<span class="normal"><a href="#__codelineno-20-16">16</a></span>
+<span class="normal"><a href="#__codelineno-20-17">17</a></span>
+<span class="normal"><a href="#__codelineno-20-18">18</a></span>
+<span class="normal"><a href="#__codelineno-20-19">19</a></span>
+<span class="normal"><a href="#__codelineno-20-20">20</a></span>
+<span class="normal"><a href="#__codelineno-20-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>    <span class="k">def</span> <span class="nf">addBinary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 使用列表存储结果</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a>        <span class="n">carry</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 进位</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a>        <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># a 和 b 的最后一位索引</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a>        <span class="c1"># 循环直到 a 和 b 都遍历完</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a>        <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">carry</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9"></a>            <span class="c1"># 计算当前位的和</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10"></a>            <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11"></a>                <span class="n">carry</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>  <span class="c1"># 取 a 的当前位并转为数字</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12"></a>                <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13"></a>            <span class="k">if</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-20-14" name="__codelineno-20-14"></a>                <span class="n">carry</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>  <span class="c1"># 取 b 的当前位并转为数字</span>
+<a id="__codelineno-20-15" name="__codelineno-20-15"></a>                <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+<a id="__codelineno-20-16" name="__codelineno-20-16"></a>
+<a id="__codelineno-20-17" name="__codelineno-20-17"></a>            <span class="c1"># 将当前位的结果添加到结果中</span>
+<a id="__codelineno-20-18" name="__codelineno-20-18"></a>            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">carry</span> <span class="o">%</span> <span class="mi">2</span><span class="p">))</span>  <span class="c1"># 当前位结果</span>
+<a id="__codelineno-20-19" name="__codelineno-20-19"></a>            <span class="n">carry</span> <span class="o">//=</span> <span class="mi">2</span>  <span class="c1"># 更新进位</span>
+<a id="__codelineno-20-20" name="__codelineno-20-20"></a>
+<a id="__codelineno-20-21" name="__codelineno-20-21"></a>        <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">result</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># 反转结果并返回</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="lc989">LC989 数组形式的整数加法</h3>
 <h3 id="_43">问题描述</h3>
 <p>整数的数组形式 <code>num</code> 是按照从左到右的顺序表示其数字的数组。</p>
@@ -3129,51 +3297,76 @@ new_s = s_plus[1:-1]  # &quot;bababa&quot;
 给定 <code>num</code> ，整数的数组形式，和整数 <code>k</code> ，返回 整数 <code>num + k</code> 的数组形式。</p>
 <h3 id="_44">解题思路</h3>
 <ol>
-<li><strong>从右到左进行加法</strong>：</li>
 <li>
-<p>从数组 <code>num</code> 的最后一位（最低位）开始加，逐位处理。</p>
+<p><strong>从右到左进行加法</strong>：</p>
+<ul>
+<li>从数组 <code>num</code> 的最后一位（最低位）开始加，逐位处理。</li>
+</ul>
 </li>
 <li>
 <p><strong>处理进位</strong>：</p>
-</li>
-<li>
-<p>每一位的和可能会产生一个进位，我们需要记录这个进位并在下一位的加法中使用。</p>
+<ul>
+<li>每一位的和可能会产生一个进位，我们需要记录这个进位并在下一位的加法中使用。</li>
+</ul>
 </li>
 <li>
 <p><strong>遍历结束后的处理</strong>：</p>
-</li>
-<li>
-<p>如果在遍历结束时仍有进位，需要将进位添加到结果中。</p>
+<ul>
+<li>如果在遍历结束时仍有进位，需要将进位添加到结果中。</li>
+</ul>
 </li>
 <li>
 <p><strong>结果构建</strong>：</p>
-</li>
+<ul>
 <li>将计算的结果存储在一个列表中，最后需要反转这个列表，因为我们是从最低位开始计算的。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_45">示例代码</h3>
-<pre><code class="language-python">class Solution:
-    def addToArrayForm(self, num: List[int], k: int) -&gt; List[int]:
-        result = []  # 用于存放结果的列表
-        carry = 0  # 初始化进位
-        n = len(num)  # 数组长度
-
-        # 从数组的最后一位开始处理
-        for i in range(n - 1, -1, -1):
-            sum = num[i] + (k % 10) + carry  # 当前位的和
-            result.append(sum % 10)  # 当前位结果
-            carry = sum // 10  # 更新进位
-            k //= 10  # 移动到 k 的下一位
-
-        # 处理 k 可能还有的剩余位
-        while k &gt; 0 or carry &gt; 0:
-            sum = (k % 10) + carry  # 当前位的和
-            result.append(sum % 10)  # 当前位结果
-            carry = sum // 10  # 更新进位
-            k //= 10  # 移动到 k 的下一位
-
-        # 由于我们是从后向前构建的结果，需要反转
-        return result[::-1]  # 反转结果并返回
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span>
+<span class="normal"><a href="#__codelineno-21-13">13</a></span>
+<span class="normal"><a href="#__codelineno-21-14">14</a></span>
+<span class="normal"><a href="#__codelineno-21-15">15</a></span>
+<span class="normal"><a href="#__codelineno-21-16">16</a></span>
+<span class="normal"><a href="#__codelineno-21-17">17</a></span>
+<span class="normal"><a href="#__codelineno-21-18">18</a></span>
+<span class="normal"><a href="#__codelineno-21-19">19</a></span>
+<span class="normal"><a href="#__codelineno-21-20">20</a></span>
+<span class="normal"><a href="#__codelineno-21-21">21</a></span>
+<span class="normal"><a href="#__codelineno-21-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>    <span class="k">def</span> <span class="nf">addToArrayForm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a>        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 用于存放结果的列表</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>        <span class="n">carry</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 初始化进位</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>  <span class="c1"># 数组长度</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a>        <span class="c1"># 从数组的最后一位开始处理</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a>            <span class="nb">sum</span> <span class="o">=</span> <span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">k</span> <span class="o">%</span> <span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="n">carry</span>  <span class="c1"># 当前位的和</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a>            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sum</span> <span class="o">%</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># 当前位结果</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a>            <span class="n">carry</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">//</span> <span class="mi">10</span>  <span class="c1"># 更新进位</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a>            <span class="n">k</span> <span class="o">//=</span> <span class="mi">10</span>  <span class="c1"># 移动到 k 的下一位</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a>
+<a id="__codelineno-21-14" name="__codelineno-21-14"></a>        <span class="c1"># 处理 k 可能还有的剩余位</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15"></a>        <span class="k">while</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">carry</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-21-16" name="__codelineno-21-16"></a>            <span class="nb">sum</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span> <span class="o">%</span> <span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="n">carry</span>  <span class="c1"># 当前位的和</span>
+<a id="__codelineno-21-17" name="__codelineno-21-17"></a>            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sum</span> <span class="o">%</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># 当前位结果</span>
+<a id="__codelineno-21-18" name="__codelineno-21-18"></a>            <span class="n">carry</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">//</span> <span class="mi">10</span>  <span class="c1"># 更新进位</span>
+<a id="__codelineno-21-19" name="__codelineno-21-19"></a>            <span class="n">k</span> <span class="o">//=</span> <span class="mi">10</span>  <span class="c1"># 移动到 k 的下一位</span>
+<a id="__codelineno-21-20" name="__codelineno-21-20"></a>
+<a id="__codelineno-21-21" name="__codelineno-21-21"></a>        <span class="c1"># 由于我们是从后向前构建的结果，需要反转</span>
+<a id="__codelineno-21-22" name="__codelineno-21-22"></a>        <span class="k">return</span> <span class="n">result</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 反转结果并返回</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="_46">课后练习</h2>
 <h3 id="_47">字符串循环+切片</h3>
 <table>

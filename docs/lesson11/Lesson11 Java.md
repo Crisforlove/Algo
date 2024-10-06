@@ -204,9 +204,9 @@ public class HashMapTraversalExample {
 1. 通过某种哈希算法计算得到哈希值。
 2. 将哈希值对桶数量（数组长度）`capacity` 取模，从而获取该 `key` 对应的数组索引 `index`。
 
-   ```java
-   index = hash(key) % capacity;
-   ```
+```java
+index = hash(key) % capacity;
+```
 
    随后，我们可以利用 `index` 在哈希表中访问对应的桶，从而获取 `value`。
 

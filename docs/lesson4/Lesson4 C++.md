@@ -227,47 +227,47 @@ int main() {
    字符串连接运算符 `+` 用于将两个字符串连接起来。
 
    **示例：**
-   ```cpp
-   string str1 = "Hello";
-   string str2 = "World";
-   string result = str1 + str2;
-   cout << result << endl; // 输出：HelloWorld
-   ```
+```cpp
+string str1 = "Hello";
+string str2 = "World";
+string result = str1 + str2;
+cout << result << endl; // 输出：HelloWorld
+```
 
 2.**通过索引获取字符 `operator[]`**
 
    `operator[]` 用于获取字符串中指定位置的字符。
 
    **示例：**
-   ```cpp
-   string str = "Hello";
-   char ch = str[1]; // 获取索引为1的字符，即第2个字符 'e'
-   cout << ch << endl; // 输出：e
-   ```
+```cpp
+string str = "Hello";
+char ch = str[1]; // 获取索引为1的字符，即第2个字符 'e'
+cout << ch << endl; // 输出：e
+```
 
 3.**截取子字符串 `substr()`**
 
    `substr()` 方法用于截取字符串的一部分。
 
    **示例：**
-   ```cpp
-   string str = "HelloWorld";
-   string subStr = str.substr(3, 4); // 从索引3开始截取4个字符，即 "loWo"
-   cout << subStr << endl; // 输出：loWo
-   ```
+```cpp
+string str = "HelloWorld";
+string subStr = str.substr(3, 4); // 从索引3开始截取4个字符，即 "loWo"
+cout << subStr << endl; // 输出：loWo
+```
 
 4.**成员运算符 `find()` 和 `rfind()`**
 
    `find()` 和 `rfind()` 方法用于获取字符或字符串在目标字符串中第一次出现的位置索引和最后一次出现的位置索引。
 
    **示例 ：**
-   ```cpp
-   string str = "HelloWorld";
-   size_t firstIndex = str.find('o'); // 第一次出现 'o' 的位置索引，索引从0开始
-   size_t lastIndex = str.rfind('o'); // 最后一次出现 'o' 的位置索引
-   cout << "第一次出现 'o' 的位置索引：" << firstIndex << endl; // 输出：4
-   cout << "最后一次出现 'o' 的位置索引：" << lastIndex << endl; // 输出：7
-   ```
+```cpp
+string str = "HelloWorld";
+size_t firstIndex = str.find('o'); // 第一次出现 'o' 的位置索引，索引从0开始
+size_t lastIndex = str.rfind('o'); // 最后一次出现 'o' 的位置索引
+cout << "第一次出现 'o' 的位置索引：" << firstIndex << endl; // 输出：4
+cout << "最后一次出现 'o' 的位置索引：" << lastIndex << endl; // 输出：7
+```
 
 ## 4.7 课后练习
 

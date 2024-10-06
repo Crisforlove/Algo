@@ -25,9 +25,9 @@ Python 条件语句是通过一条或多条语句的执行结果（True 或者 F
 
 可以通过下图来简单了解条件语句的执行过程：
 
-![image-20240722131514245](Image/image-20240722131514245.png)
+![image-20240722131514245](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson2/lesson2/Image/image-20240722131514245.png)
 
-代码执行过程：![img](Image/2321727438181.jpg)
+代码执行过程：![img](https://static.jyshare.com/images/mix/python-if.webp)
 
 ### 1.1 if 语句
 
@@ -278,7 +278,7 @@ Python 中的循环语句有 for 和 while。
 
 Python 循环语句的控制结构图如下所示：
 
-![image-20240722134314431](Image/image-20240722134314431.png)
+![image-20240722134314431](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson2/lesson2/Image/image-20240722134314431.png)
 
 ### 2.1 while 循环
 
@@ -291,7 +291,7 @@ while 判断条件(condition)：
 
 执行流程图如下：
 
-![image-20240722134353682](Image/image-20240722134353682.png)
+![image-20240722134353682](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson2/lesson2/Image/image-20240722134353682.png)
 
 同样需要注意冒号和缩进。另外，在 Python 中没有 do..while 循环。
 
@@ -404,7 +404,7 @@ else:
     <statements>
 ```
 
-![image-20240722141055084](Image/image-20240722141055084.png)
+![image-20240722141055084](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson2/lesson2/Image/image-20240722141055084.png)
 
 Python for 循环实例：
 
@@ -612,15 +612,15 @@ print("完成循环!")
 
 **break 执行流程图：**
 
-![image-20240722142445718](Image/image-20240722142445718.png)
+![image-20240722142445718](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson2/lesson2/Image/image-20240722142445718.png)
 
 **continue 执行流程图：**
 
-![image-20240722142521594](Image/image-20240722142521594.png)
+![image-20240722142521594](https://github.com/JohnnyShi/Algo_Curriculum/blob/lesson2/lesson2/Image/image-20240722142521594.png)
 
 while 语句代码执行过程：
 
-![img](Image/2331727438258.jpg)
+![img](https://static.jyshare.com/images/mix/python-while.webp)
 
 or 语句代码执行过程：
 

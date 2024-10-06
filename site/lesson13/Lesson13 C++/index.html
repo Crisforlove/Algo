@@ -627,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2781,17 +2781,26 @@
 </ul>
 </li>
 </ol>
-<p>```cpp
-   #include <iostream>
-   using namespace std;</p>
-<p>int main() {
-       int arr[] = {1, 2, 3, 4, 5};
-       int k = 2;  // 获取第三个元素（索引从0开始）
-       int element = arr[k];  // O(1)
-       cout &lt;&lt; "Element at index " &lt;&lt; k &lt;&lt; ": " &lt;&lt; element &lt;&lt; endl;
-       return 0;
-   }
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 获取第三个元素（索引从0开始）</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">];</span><span class="w">  </span><span class="c1">// O(1)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">   </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Element at index &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>时间复杂度</strong>：无论数组大小是多少，获取第 <code>k</code> 个元素所需时间是固定的，属于 <strong>O(1)</strong>。</p>
 <ol>
 <li><strong>O(n)</strong>：线性时间复杂度<ul>
@@ -2800,18 +2809,28 @@
 </ul>
 </li>
 </ol>
-<p>```cpp
-   #include <iostream>
-   using namespace std;</p>
-<p>int main() {
-       int arr[] = {1, 2, 3, 4, 5};
-       int n = sizeof(arr) / sizeof(arr[0]);
-       for (int i = 0; i &lt; n; i++) {  // O(n)
-           cout &lt;&lt; "Element at index " &lt;&lt; i &lt;&lt; ": " &lt;&lt; arr[i] &lt;&lt; endl;
-       }
-       return 0;
-   }
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// O(n)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">       </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Element at index &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>时间复杂度</strong>：遍历整个数组需要的时间与数组的长度 <code>n</code> 成正比，属于 <strong>O(n)</strong>。</p>
 <ol>
 <li><strong>O(n^2)</strong>：平方时间复杂度<ul>
@@ -2820,23 +2839,38 @@
 </ul>
 </li>
 </ol>
-<p>```cpp
-   #include <iostream>
-   using namespace std;</p>
-<p>int main() {
-       int arr[3][3] = {
-           {1, 2, 3},
-           {4, 5, 6},
-           {7, 8, 9}
-       };
-       for (int i = 0; i &lt; 3; i++) {  // O(n)
-           for (int j = 0; j &lt; 3; j++) {  // O(n)
-               cout &lt;&lt; "Element at [" &lt;&lt; i &lt;&lt; "][" &lt;&lt; j &lt;&lt; "]: " &lt;&lt; arr[i][j] &lt;&lt; endl;
-           }
-       }
-       return 0;
-   }
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">       </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">       </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">},</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">       </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">}</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">   </span><span class="p">};</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// O(n)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">       </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// O(n)</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">           </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Element at [&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;][&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;]: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">       </span><span class="p">}</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>时间复杂度</strong>：双重循环嵌套遍历每个元素，总的执行时间是 <code>n</code> 的平方，属于 <strong>O(n^2)</strong>。</p>
 <ol>
 <li><strong>O(n log n)</strong>：常见于排序算法（此章节后半部分会详细讲解）<ul>
@@ -2844,68 +2878,168 @@
 </ul>
 </li>
 </ol>
-<p>```cpp
-   #include <iostream>
-   #include <vector>
-   using namespace std;</p>
-<p>void merge(vector<int>&amp; arr, int l, int m, int r) {
-       int n1 = m - l + 1;
-       int n2 = r - m;</p>
-<pre><code>   vector&lt;int&gt; L(n1), R(n2);
-
-   for (int i = 0; i &lt; n1; i++)
-       L[i] = arr[l + i];
-   for (int i = 0; i &lt; n2; i++)
-       R[i] = arr[m + 1 + i];
-
-   int i = 0, j = 0, k = l;
-   while (i &lt; n1 &amp;&amp; j &lt; n2) {
-       if (L[i] &lt;= R[j]) {
-           arr[k] = L[i];
-           i++;
-       } else {
-           arr[k] = R[j];
-           j++;
-       }
-       k++;
-   }
-
-   while (i &lt; n1) {
-       arr[k] = L[i];
-       i++;
-       k++;
-   }
-
-   while (j &lt; n2) {
-       arr[k] = R[j];
-       j++;
-       k++;
-   }
-</code></pre>
-<p>}</p>
-<p>void mergeSort(vector<int>&amp; arr, int l, int r) {
-       if (l &gt;= r) return;
-       int m = l + (r - l) / 2;
-       mergeSort(arr, l, m);
-       mergeSort(arr, m + 1, r);
-       merge(arr, l, m, r);
-   }</p>
-<p>int main() {
-       vector<int> arr = {12, 11, 13, 5, 6, 7};
-       int arr_size = arr.size();</p>
-<pre><code>   mergeSort(arr, 0, arr_size - 1);
-
-   cout &lt;&lt; "Sorted array is: ";
-   for (int i = 0; i &lt; arr_size; i++)
-       cout &lt;&lt; arr[i] &lt;&lt; " ";
-   return 0;
-</code></pre>
-<p>}
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span>
+<span class="normal"><a href="#__codelineno-3-34">34</a></span>
+<span class="normal"><a href="#__codelineno-3-35">35</a></span>
+<span class="normal"><a href="#__codelineno-3-36">36</a></span>
+<span class="normal"><a href="#__codelineno-3-37">37</a></span>
+<span class="normal"><a href="#__codelineno-3-38">38</a></span>
+<span class="normal"><a href="#__codelineno-3-39">39</a></span>
+<span class="normal"><a href="#__codelineno-3-40">40</a></span>
+<span class="normal"><a href="#__codelineno-3-41">41</a></span>
+<span class="normal"><a href="#__codelineno-3-42">42</a></span>
+<span class="normal"><a href="#__codelineno-3-43">43</a></span>
+<span class="normal"><a href="#__codelineno-3-44">44</a></span>
+<span class="normal"><a href="#__codelineno-3-45">45</a></span>
+<span class="normal"><a href="#__codelineno-3-46">46</a></span>
+<span class="normal"><a href="#__codelineno-3-47">47</a></span>
+<span class="normal"><a href="#__codelineno-3-48">48</a></span>
+<span class="normal"><a href="#__codelineno-3-49">49</a></span>
+<span class="normal"><a href="#__codelineno-3-50">50</a></span>
+<span class="normal"><a href="#__codelineno-3-51">51</a></span>
+<span class="normal"><a href="#__codelineno-3-52">52</a></span>
+<span class="normal"><a href="#__codelineno-3-53">53</a></span>
+<span class="normal"><a href="#__codelineno-3-54">54</a></span>
+<span class="normal"><a href="#__codelineno-3-55">55</a></span>
+<span class="normal"><a href="#__codelineno-3-56">56</a></span>
+<span class="normal"><a href="#__codelineno-3-57">57</a></span>
+<span class="normal"><a href="#__codelineno-3-58">58</a></span>
+<span class="normal"><a href="#__codelineno-3-59">59</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">merge</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">   </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">L</span><span class="p">(</span><span class="n">n1</span><span class="p">),</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="n">n2</span><span class="p">);</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">       </span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">       </span><span class="n">R</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">m</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">   </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">           </span><span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">           </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">       </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">           </span><span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">           </span><span class="n">j</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">       </span><span class="p">}</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">       </span><span class="n">k</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">   </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">       </span><span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">       </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">       </span><span class="n">k</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a>
+<a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">   </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">       </span><span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">       </span><span class="n">j</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">       </span><span class="n">k</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="p">}</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40"></a>
+<a id="__codelineno-3-41" name="__codelineno-3-41"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mergeSort</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="w">   </span><span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">);</span>
+<a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="w">   </span><span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<a id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="w">   </span><span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<a id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="p">}</span>
+<a id="__codelineno-3-48" name="__codelineno-3-48"></a>
+<a id="__codelineno-3-49" name="__codelineno-3-49"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="w">   </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">};</span>
+<a id="__codelineno-3-51" name="__codelineno-3-51"></a><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">arr_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-3-52" name="__codelineno-3-52"></a>
+<a id="__codelineno-3-53" name="__codelineno-3-53"></a><span class="w">   </span><span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">arr_size</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-3-54" name="__codelineno-3-54"></a>
+<a id="__codelineno-3-55" name="__codelineno-3-55"></a><span class="w">   </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Sorted array is: &quot;</span><span class="p">;</span>
+<a id="__codelineno-3-56" name="__codelineno-3-56"></a><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arr_size</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-3-57" name="__codelineno-3-57"></a><span class="w">       </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<a id="__codelineno-3-58" name="__codelineno-3-58"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-3-59" name="__codelineno-3-59"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>时间复杂度</strong>：归并排序通过递归将数组分成更小的部分进行排序，时间复杂度为 <strong>O(n log n)</strong>。</p>
 <p><strong>为什么是 <code>O(n log n)</code></strong>?
     归并排序是一种 <strong>分治算法</strong>，我们可以把归并排序的步骤分为两部分：<strong>拆分</strong> 和 <strong>合并</strong>。</p>
-<pre><code>**1. 拆分过程：递归分解数组**
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code>**1. 拆分过程：递归分解数组**
 
 归并排序首先将数组递归地对半拆分，直到每个子数组只剩下一个元素。这个过程类似于构建一棵二叉树，每次将问题的规模减半。
 
@@ -2946,7 +3080,7 @@
 - **递归的深度是 `log n`**：由于每次递归都将数组对半分裂，整个递归过程只会进行 `log n` 次分裂。因此，递归树的深度是 `log n`。
 
 最终的时间复杂度是每层的时间 `O(n)` 乘以递归树的层数 `log n`，所以总时间复杂度是 `O(n log n)`。
-</code></pre>
+</code></pre></div></td></tr></table></div>
 <h3 id="_3">时间复杂度总结</h3>
 <ul>
 <li><strong>O(1)</strong>：执行时间不受输入规模影响。</li>
@@ -2956,24 +3090,40 @@
 </ul>
 <h3 id="_4">具体实例</h3>
 <p>考虑一个简单的算法：计算数组中所有元素的和。</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-
-int sumArray(int arr[], int n) {
-    int total = 0;
-    for (int i = 0; i &lt; n; i++) {
-        total += arr[i];  // 基本操作
-    }
-    return total;
-}
-
-int main() {
-    int arr[] = {1, 2, 3, 4, 5};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    cout &lt;&lt; &quot;Sum of array: &quot; &lt;&lt; sumArray(arr, n) &lt;&lt; endl;
-    return 0;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">sumArray</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">        </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w">  </span><span class="c1">// 基本操作</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">total</span><span class="p">;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">}</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Sum of array: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sumArray</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_5">步骤分析</h3>
 <ol>
 <li>
@@ -3010,31 +3160,51 @@ int main() {
 </ol>
 <h3 id="_6">随堂练习</h3>
 <h3 id="_7">判断以下代码的时间复杂度</h3>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-
-int findMax(int arr[], int n) {
-    int maxNum = arr[0];
-    for (int i = 0; i &lt; n; i++) {  // 基本操作
-        if (arr[i] &gt; maxNum) {
-            maxNum = arr[i];
-        }
-    }
-    return maxNum;
-}
-
-int main() {
-    int arr[] = {1, 5, 3, 9, 2};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    cout &lt;&lt; &quot;Max number: &quot; &lt;&lt; findMax(arr, n) &lt;&lt; endl;
-    return 0;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">findMax</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">maxNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 基本操作</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">maxNum</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">            </span><span class="n">maxNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">maxNum</span><span class="p">;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="p">}</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">};</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Max number: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">findMax</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_8">解答</h3>
-<p><strong>第一段代码（findMax）</strong>：
-- 基本操作是 <code>if (arr[i] &gt; maxNum)</code>。
-- 在最坏情况下，循环执行 n 次。
-- 所以时间复杂度是 O(n)。</p>
+<p><strong>第一段代码（findMax）</strong>：</p>
+<ul>
+<li>基本操作是 <code>if (arr[i] &gt; maxNum)</code>。</li>
+<li>在最坏情况下，循环执行 n 次。</li>
+<li>所以时间复杂度是 O(n)。</li>
+</ul>
 <h2 id="2">2. 排序算法与应用</h2>
 <p>排序是程序设计中一个非常基础但重要的操作。它不仅可以让数据按特定顺序排列，还能帮助我们解决许多与数据处理相关的问题。通过排序，我们可以更快地解决找第 <code>K</code> 大元素、合并重叠区间等问题。</p>
 <h3 id="_9"><strong>适用场景</strong></h3>
@@ -3055,60 +3225,105 @@ int main() {
 <h4 id="1_1">1. <strong>内置排序函数</strong></h4>
 <p>大多数编程语言都提供了内置的排序函数，它们经过优化，能以高效的方式进行排序。C++ 提供了 <code>std::sort()</code> 函数。</p>
 <p><strong>示例代码</strong>：</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;algorithm&gt;  // 包含 std::sort 函数
-
-using namespace std;
-
-int main() {
-    vector&lt;int&gt; nums = {3, 1, 4, 1, 5, 9};  // 定义一个整数数组
-
-    // 使用内置的排序函数对数组进行升序排序
-    sort(nums.begin(), nums.end());
-
-    // 输出排序后的数组
-    cout &lt;&lt; &quot;Sorted array: &quot;;
-    for (int num : nums) {
-        cout &lt;&lt; num &lt;&lt; &quot; &quot;;
-    }
-    cout &lt;&lt; endl;
-    return 0;
-}
-</code></pre>
-<p><strong>说明</strong>：
-- 这里我们使用了 <code>std::sort()</code> 函数，它会对 <code>nums</code> 数组进行升序排序。
-- 使用内置函数 <code>sort()</code> 是一种非常快捷的方法，对于大多数简单排序任务，它的效率非常高。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span><span class="c1">  // 包含 std::sort 函数</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">};</span><span class="w">  </span><span class="c1">// 定义一个整数数组</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="c1">// 使用内置的排序函数对数组进行升序排序</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">    </span><span class="n">sort</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="c1">// 输出排序后的数组</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Sorted array: &quot;</span><span class="p">;</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>说明</strong>：</p>
+<ul>
+<li>这里我们使用了 <code>std::sort()</code> 函数，它会对 <code>nums</code> 数组进行升序排序。</li>
+<li>使用内置函数 <code>sort()</code> 是一种非常快捷的方法，对于大多数简单排序任务，它的效率非常高。</li>
+</ul>
 <h4 id="2_1">2. <strong>自定义排序</strong></h4>
 <p>有时我们需要按照自定义的规则对数据进行排序。比如，我们可能希望按数组的某个特定元素进行排序，而不是按默认的顺序。在 C++ 中，我们可以通过 <code>std::sort()</code> 函数的第三个参数来自定义排序规则。</p>
 <p><strong>示例代码</strong>：</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;algorithm&gt;
-using namespace std;
-
-// 自定义比较函数，按数组中第二个元素升序排序
-bool compareBySecondElement(const vector&lt;int&gt;&amp; a, const vector&lt;int&gt;&amp; b) {
-    return a[1] &lt; b[1];
-}
-
-int main() {
-    vector&lt;vector&lt;int&gt;&gt; data = {{1, 3}, {2, 2}, {3, 1}};
-
-    // 使用自定义的排序规则按第二个元素排序
-    sort(data.begin(), data.end(), compareBySecondElement);
-
-    // 输出排序后的二维数组
-    for (const auto&amp; row : data) {
-        cout &lt;&lt; row[0] &lt;&lt; &quot;, &quot; &lt;&lt; row[1] &lt;&lt; endl;
-    }
-
-    return 0;
-}
-</code></pre>
-<p><strong>说明</strong>：
-- 在这个例子中，我们使用了自定义比较函数 <code>compareBySecondElement</code> 来按照二维数组中每一行的第二个元素进行排序。
-- <code>std::sort()</code> 的第三个参数就是这个比较函数，用于告诉 <code>sort()</code> 应该如何比较每对元素。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="c1">// 自定义比较函数，按数组中第二个元素升序排序</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">compareBySecondElement</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="p">}</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">}};</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">    </span><span class="c1">// 使用自定义的排序规则按第二个元素排序</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">    </span><span class="n">sort</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">compareBySecondElement</span><span class="p">);</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">    </span><span class="c1">// 输出排序后的二维数组</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>说明</strong>：</p>
+<ul>
+<li>在这个例子中，我们使用了自定义比较函数 <code>compareBySecondElement</code> 来按照二维数组中每一行的第二个元素进行排序。</li>
+<li><code>std::sort()</code> 的第三个参数就是这个比较函数，用于告诉 <code>sort()</code> 应该如何比较每对元素。</li>
+</ul>
 <h4 id="3">3. 排序优化</h4>
 <p>排序算法在处理不同规模数据时表现各异。以下是一些常见的排序算法及其适用场景，供大家初步了解：</p>
 <ul>
@@ -3156,24 +3371,39 @@ int main() {
 <h4 id="_12">解题思路：</h4>
 <p>可以先对数组进行降序排序，然后直接返回排好序后的数组中的第 <code>K</code> 个元素。</p>
 <h4 id="_13">代码实现：</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    // 自定义比较函数，进行降序排序
-    bool compareDesc(int a, int b) {
-        return a &gt; b;  // 返回 a &gt; b 表示降序
-    }
-
-    int findKthLargest(vector&lt;int&gt;&amp; nums, int k) {
-        // 对数组进行降序排序
-        sort(nums.begin(), nums.end(), compareDesc);
-        // 返回第 K 个元素
-        return nums[k - 1];
-    }
-};
-</code></pre>
-<p><strong>说明</strong>：
-- 这里我们通过定义 <code>compareDesc</code> 函数，该函数将两个整数 <code>a</code> 和 <code>b</code> 进行比较，并返回 <code>true</code> 如果 <code>a &gt; b</code>，这就实现了降序排序。
-- <code>sort()</code> 函数的第三个参数传入自定义的比较函数 <code>compareDesc</code> 来控制排序顺序。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="c1">// 自定义比较函数，进行降序排序</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">compareDesc</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">  </span><span class="c1">// 返回 a &gt; b 表示降序</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">findKthLargest</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">        </span><span class="c1">// 对数组进行降序排序</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">        </span><span class="n">sort</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">compareDesc</span><span class="p">);</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="c1">// 返回第 K 个元素</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>说明</strong>：</p>
+<ul>
+<li>这里我们通过定义 <code>compareDesc</code> 函数，该函数将两个整数 <code>a</code> 和 <code>b</code> 进行比较，并返回 <code>true</code> 如果 <code>a &gt; b</code>，这就实现了降序排序。</li>
+<li><code>sort()</code> 函数的第三个参数传入自定义的比较函数 <code>compareDesc</code> 来控制排序顺序。</li>
+</ul>
 <h3 id="22">2.2 排序算法举一反三</h3>
 <h3 id="221-lc56">2.2.1 LC56：合并区间</h3>
 <h4 id="_14">题目描述：</h4>
@@ -3184,44 +3414,77 @@ public:
 <li>然后遍历每个区间，若当前区间与前一个区间重叠，则合并它们；否则将当前区间直接加入结果列表。</li>
 </ol>
 <h4 id="_16">代码实现：</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    // 自定义比较函数，按区间的起始值进行排序
-    bool compareIntervals(const vector&lt;int&gt;&amp; a, const vector&lt;int&gt;&amp; b) {
-        return a[0] &lt; b[0];  // 按照起始位置升序排序
-    }
-
-    vector&lt;vector&lt;int&gt;&gt; merge(vector&lt;vector&lt;int&gt;&gt;&amp; intervals) {
-        if (intervals.empty()) return {};
-
-        // 按区间起始位置排序
-        sort(intervals.begin(), intervals.end(), compareIntervals);
-
-        vector&lt;vector&lt;int&gt;&gt; merged;
-
-        // 使用传统的 for 循环遍历区间
-        for (int i = 0; i &lt; intervals.size(); i++) {
-            if (merged.empty() || merged.back()[1] &lt; intervals[i][0]) {
-                // 如果结果为空或当前区间与上一个区间不重叠，直接加入结果
-                merged.push_back(intervals[i]);
-            } 
-            else {
-                // 如果重叠，更新最后一个区间的结束位置
-                merged.back()[1] = max(merged.back()[1], intervals[i][1]);
-            }
-        }
-
-        return merged;
-    }
-};
-</code></pre>
-<p><strong>讲解</strong>：
-- <strong>自定义排序</strong>：为了将所有区间按起始值升序排列，我们定义了 <code>compareIntervals</code> 函数，并将其传递给 <code>sort()</code> 函数，确保区间按照起始值排序，便于后续的合并操作。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span>
+<span class="normal"><a href="#__codelineno-9-24">24</a></span>
+<span class="normal"><a href="#__codelineno-9-25">25</a></span>
+<span class="normal"><a href="#__codelineno-9-26">26</a></span>
+<span class="normal"><a href="#__codelineno-9-27">27</a></span>
+<span class="normal"><a href="#__codelineno-9-28">28</a></span>
+<span class="normal"><a href="#__codelineno-9-29">29</a></span>
+<span class="normal"><a href="#__codelineno-9-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="c1">// 自定义比较函数，按区间的起始值进行排序</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">compareIntervals</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w">  </span><span class="c1">// 按照起始位置升序排序</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">merge</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span><span class="w"> </span><span class="n">intervals</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">intervals</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">{};</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">        </span><span class="c1">// 按区间起始位置排序</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">        </span><span class="n">sort</span><span class="p">(</span><span class="n">intervals</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">intervals</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">compareIntervals</span><span class="p">);</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">merged</span><span class="p">;</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">        </span><span class="c1">// 使用传统的 for 循环遍历区间</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">intervals</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">merged</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">merged</span><span class="p">.</span><span class="n">back</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">intervals</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">                </span><span class="c1">// 如果结果为空或当前区间与上一个区间不重叠，直接加入结果</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">                </span><span class="n">merged</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">intervals</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="w">                </span><span class="c1">// 如果重叠，更新最后一个区间的结束位置</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="w">                </span><span class="n">merged</span><span class="p">.</span><span class="n">back</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">merged</span><span class="p">.</span><span class="n">back</span><span class="p">()[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">intervals</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a>
+<a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">merged</span><span class="p">;</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>讲解</strong>：</p>
 <ul>
-<li><strong>遍历区间</strong>：排序后，我们遍历每一个区间。通过比较每个区间的起始值和上一个合并区间的结束值，判断它们是否重叠：</li>
-<li>如果没有重叠，就将当前区间直接加入 <code>merged</code> 结果。</li>
 <li>
-<p>如果重叠，更新上一个合并区间的结束值，使得它可以涵盖当前区间。</p>
+<p><strong>自定义排序</strong>：为了将所有区间按起始值升序排列，我们定义了 <code>compareIntervals</code> 函数，并将其传递给 <code>sort()</code> 函数，确保区间按照起始值排序，便于后续的合并操作。</p>
+</li>
+<li>
+<p><strong>遍历区间</strong>：排序后，我们遍历每一个区间。通过比较每个区间的起始值和上一个合并区间的结束值，判断它们是否重叠：</p>
+<ul>
+<li>如果没有重叠，就将当前区间直接加入 <code>merged</code> 结果。</li>
+<li>如果重叠，更新上一个合并区间的结束值，使得它可以涵盖当前区间。</li>
+</ul>
 </li>
 <li>
 <p><strong>合并逻辑</strong>：合并是通过比较 <code>merged.back()[1]</code>（已合并的最后一个区间的结束值）与当前区间的起始值来进行的。如果当前区间的起始值大于上一个区间的结束值，则说明它们不重叠，否则进行合并。</p>
@@ -3233,28 +3496,48 @@ public:
 <h4 id="_18">解题思路：</h4>
 <p>可以将所有的会议按照开始时间排序，然后遍历每个会议，检查是否有重叠区间。</p>
 <h4 id="_19">代码实现：</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    // 自定义比较函数，按会议的开始时间进行排序
-    bool compareMeetings(const vector&lt;int&gt;&amp; a, const vector&lt;int&gt;&amp; b) {
-        return a[0] &lt; b[0];  // 按照开始时间升序排序
-    }
-
-    bool canAttendMeetings(vector&lt;vector&lt;int&gt;&gt;&amp; intervals) {
-        // 使用自定义的比较函数进行排序
-        sort(intervals.begin(), intervals.end(), compareMeetings);
-
-        // 遍历会议，检查是否存在重叠
-        for (int i = 1; i &lt; intervals.size(); i++) {
-            if (intervals[i][0] &lt; intervals[i - 1][1]) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span>
+<span class="normal"><a href="#__codelineno-10-20">20</a></span>
+<span class="normal"><a href="#__codelineno-10-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="c1">// 自定义比较函数，按会议的开始时间进行排序</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">compareMeetings</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w">  </span><span class="c1">// 按照开始时间升序排序</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">canAttendMeetings</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span><span class="w"> </span><span class="n">intervals</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">        </span><span class="c1">// 使用自定义的比较函数进行排序</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">        </span><span class="n">sort</span><span class="p">(</span><span class="n">intervals</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">intervals</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">compareMeetings</span><span class="p">);</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">        </span><span class="c1">// 遍历会议，检查是否存在重叠</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">intervals</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">intervals</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">intervals</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_20">讲解：</h4>
 <ol>
 <li>
@@ -3277,37 +3560,64 @@ public:
 <li>返回排序后前 K 个元素。</li>
 </ol>
 <h4 id="_23">代码实现：</h4>
-<pre><code class="language-cpp">// 自定义比较函数，按频率降序排序
-bool compareByFrequency(const pair&lt;int, int&gt;&amp; a, const pair&lt;int, int&gt;&amp; b) {
-    return a.second &gt; b.second;  // 按照频率降序排列
-}
-
-vector&lt;int&gt; topKFrequent(vector&lt;int&gt;&amp; nums, int k) {
-    // 使用哈希表统计每个元素的出现次数
-    unordered_map&lt;int, int&gt; frequencyMap;
-    for (int num : nums) {
-        frequencyMap[num]++;
-    }
-
-    // 将哈希表中的元素转换为二维数组，第一维是数字，第二维是频率
-    vector&lt;pair&lt;int, int&gt;&gt; frequencyList;
-    for (auto&amp; it : frequencyMap) {
-        frequencyList.push_back(it);
-    }
-
-    // 使用自定义的比较函数进行排序
-    sort(frequencyList.begin(), frequencyList.end(), compareByFrequency);
-
-    // 取出前 K 个频率最高的元素
-    vector&lt;int&gt; result;
-    for (int i = 0; i &lt; k; i++) {
-        result.push_back(frequencyList[i].first);
-    }
-
-    return result;
-}
-
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span>
+<span class="normal"><a href="#__codelineno-11-24">24</a></span>
+<span class="normal"><a href="#__codelineno-11-25">25</a></span>
+<span class="normal"><a href="#__codelineno-11-26">26</a></span>
+<span class="normal"><a href="#__codelineno-11-27">27</a></span>
+<span class="normal"><a href="#__codelineno-11-28">28</a></span>
+<span class="normal"><a href="#__codelineno-11-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="c1">// 自定义比较函数，按频率降序排序</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">compareByFrequency</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="p">;</span><span class="w">  </span><span class="c1">// 按照频率降序排列</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="p">}</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">topKFrequent</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">    </span><span class="c1">// 使用哈希表统计每个元素的出现次数</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">    </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">frequencyMap</span><span class="p">;</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">        </span><span class="n">frequencyMap</span><span class="p">[</span><span class="n">num</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">    </span><span class="c1">// 将哈希表中的元素转换为二维数组，第一维是数字，第二维是频率</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">frequencyList</span><span class="p">;</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">frequencyMap</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">        </span><span class="n">frequencyList</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">it</span><span class="p">);</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">    </span><span class="c1">// 使用自定义的比较函数进行排序</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="w">    </span><span class="n">sort</span><span class="p">(</span><span class="n">frequencyList</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">frequencyList</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">compareByFrequency</span><span class="p">);</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="w">    </span><span class="c1">// 取出前 K 个频率最高的元素</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">k</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25"></a><span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">frequencyList</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">first</span><span class="p">);</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27"></a>
+<a id="__codelineno-11-28" name="__codelineno-11-28"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_24">讲解：</h4>
 <ol>
 <li>
@@ -3334,21 +3644,19 @@ vector&lt;int&gt; topKFrequent(vector&lt;int&gt;&amp; nums, int k) {
 <li>
 <p><strong>局部最优选择</strong>：<br />
    贪心算法在每一步中只做出当前看起来最优的选择，而<strong>不关心之后可能发生的情况</strong>。它不会考虑这次选择是否会影响后续决策，只看当下哪个选项是最有利的。例如，在分数背包问题中，贪心策略是每次优先选择单位重量价值最高的物品，因为它在当前的选择中带来的收益最大。</p>
-</li>
-<li>
-<p><strong>优点</strong>：通过每一步的最优选择，可以快速找到一个可行解。贪心算法的规则简单、直观，易于实现，通常可以通过一次扫描或排序解决问题，时间复杂度较低。例如在分数背包问题中，贪心算法只需要按单位价值排序，时间复杂度为 <code>(O(n log n))</code>。</p>
-</li>
-<li>
-<p><strong>缺点</strong>：局部最优解不一定能保证全局最优，因为在一些问题中，最佳的整体方案依赖于多步决策的综合效果，而不是单纯的每一步最优。贪心算法无法通过局部最优解找到全局最优解，尤其在复杂问题（如 0-1 背包问题）中，它可能会陷入次优解。</p>
+<ul>
+<li><strong>优点</strong>：通过每一步的最优选择，可以快速找到一个可行解。贪心算法的规则简单、直观，易于实现，通常可以通过一次扫描或排序解决问题，时间复杂度较低。例如在分数背包问题中，贪心算法只需要按单位价值排序，时间复杂度为 <code>(O(n log n))</code>。</li>
+<li><strong>缺点</strong>：局部最优解不一定能保证全局最优，因为在一些问题中，最佳的整体方案依赖于多步决策的综合效果，而不是单纯的每一步最优。贪心算法无法通过局部最优解找到全局最优解，尤其在复杂问题（如 0-1 背包问题）中，它可能会陷入次优解。</li>
+</ul>
 </li>
 <li>
 <p><strong>不可回溯</strong>：<br />
    贪心算法的一个重要特点是<strong>决策不可回头修改</strong>。一旦做出某个选择，算法就不会再考虑改变它，即使后续发现这个选择可能不是最优的。因为贪心算法依赖的是当前最优选择的策略，所以它不会为未来的选择留下回旋余地。</p>
-</li>
-<li>
-<p><strong>优点</strong>：由于不需要回溯，贪心算法执行速度非常快，时间复杂度通常比需要回溯的算法（如动态规划、回溯法等）更低。贪心算法的高效性体现在其快速、直接的解决思路上，适用于处理大规模问题时的高效求解。</p>
-</li>
+<ul>
+<li><strong>优点</strong>：由于不需要回溯，贪心算法执行速度非常快，时间复杂度通常比需要回溯的算法（如动态规划、回溯法等）更低。贪心算法的高效性体现在其快速、直接的解决思路上，适用于处理大规模问题时的高效求解。</li>
 <li><strong>缺点</strong>：由于贪心算法不具备回溯能力，它只能在符合贪心选择性质的问题中有效。如果问题不满足这种性质，算法可能会在后续步骤中陷入次优解或死胡同，无法达到全局最优解。</li>
+</ul>
+</li>
 </ol>
 <h4 id="_26">具体步骤</h4>
 <p>贪心算法通常遵循以下基本步骤：</p>
@@ -3373,16 +3681,20 @@ vector&lt;int&gt; topKFrequent(vector&lt;int&gt;&amp; nums, int k) {
 <h4 id="vs">贪心算法 vs 动态规划的判定标准</h4>
 <p>在区分一个问题是否适合使用贪心算法或动态规划时，<strong>最优子结构</strong>和<strong>子问题重叠</strong>是关键的判定标准：</p>
 <ol>
-<li><strong>贪心选择的适用条件</strong>：</li>
-<li><strong>局部最优选择性质</strong>：贪心算法每一步做出的选择都是局部最优解，且这些局部最优解构成了全局最优解。这种性质一般存在于可以通过逐步选择解决的<strong>简单优化问题</strong>。</li>
 <li>
-<p><strong>无后效性</strong>：未来的决策不依赖于之前的选择，因此一旦做出了选择，不需要回溯检查。例如，<strong>分数背包问题</strong>，每次选择单位价值最高的物品不会影响之后的选择。</p>
+<p><strong>贪心选择的适用条件</strong>：</p>
+<ul>
+<li><strong>局部最优选择性质</strong>：贪心算法每一步做出的选择都是局部最优解，且这些局部最优解构成了全局最优解。这种性质一般存在于可以通过逐步选择解决的<strong>简单优化问题</strong>。</li>
+<li><strong>无后效性</strong>：未来的决策不依赖于之前的选择，因此一旦做出了选择，不需要回溯检查。例如，<strong>分数背包问题</strong>，每次选择单位价值最高的物品不会影响之后的选择。</li>
+</ul>
 </li>
 <li>
 <p><strong>动态规划的适用条件</strong>：</p>
-</li>
+<ul>
 <li><strong>最优子结构</strong>：全局最优解依赖于子问题的最优解。如果每个子问题的解都影响到全局最优解，那么这种问题通常需要使用动态规划来解决。背包问题中的<strong>0-1 背包问题</strong>就属于此类问题，当前物品是否选入背包会影响未来的选择，因此无法简单通过贪心策略得到最优解。</li>
 <li><strong>子问题重叠</strong>：如果问题可以被拆分为多个子问题，且这些子问题之间存在重叠（即某个子问题的解会多次被使用），那么动态规划是更有效的选择。</li>
+</ul>
+</li>
 </ol>
 <p>总结来看，如果问题可以通过单纯的<strong>局部最优选择</strong>解决，并且未来的选择不依赖于过去的选择，通常可以使用贪心算法；否则需要通过动态规划来解决问题。</p>
 <h4 id="_28">简单例子</h4>
@@ -3409,26 +3721,36 @@ vector&lt;int&gt; topKFrequent(vector&lt;int&gt;&amp; nums, int k) {
 <p><strong>状态转移方程</strong>：这个就是动态规划中的“规则”，用来指导我们如何根据前面的计算结果推导出当前的最优解。</p>
 </li>
 </ol>
-<p>对于每件物品 <code>i</code>，你有两种选择：
-   - <strong>不选这件物品</strong>：那么最大价值就是 <code>dp[i-1][w]</code>，即背包容量保持不变，前面 i-1 个物品的最优解。
-   - <strong>选这件物品</strong>：如果选择物品 <code>i</code>，则当前的背包容量减少 <code>weight[i]</code>，而我们还获得了 <code>value[i]</code> 这个物品的价值。所以最大价值变成了 <code>dp[i-1][w - weight[i]] + value[i]</code>。</p>
+<p>对于每件物品 <code>i</code>，你有两种选择：</p>
+<ul>
+<li>
+<p><strong>不选这件物品</strong>：那么最大价值就是 <code>dp[i-1][w]</code>，即背包容量保持不变，前面 i-1 个物品的最优解。</p>
+</li>
+<li>
+<p><strong>选这件物品</strong>：如果选择物品 <code>i</code>，则当前的背包容量减少 <code>weight[i]</code>，而我们还获得了 <code>value[i]</code> 这个物品的价值。所以最大价值变成了 <code>dp[i-1][w - weight[i]] + value[i]</code>。</p>
+</li>
+</ul>
 <p>两者取较大值：
    <code>dp[i][w] = max(dp[i-1][w], dp[i-1][w - weight[i]] + value[i])</code></p>
 <ol>
-<li><strong>理解这段公式</strong>：</li>
-<li>如果你不选物品 <code>i</code>，那么你只能依赖前面 <code>i-1</code> 个物品在容量为 <code>w</code> 时的最优解，即 <code>dp[i-1][w]</code>。</li>
 <li>
-<p>如果你选了物品 <code>i</code>，那你需要腾出足够的空间来放它，也就是说背包容量会减少 <code>weight[i]</code>，然后你能获得这件物品的价值 <code>value[i]</code>，再加上前 <code>i-1</code> 个物品在减少了的容量 <code>w - weight[i]</code> 时的最优解，即 <code>dp[i-1][w - weight[i]]</code>。</p>
+<p><strong>理解这段公式</strong>：</p>
+<ul>
+<li>如果你不选物品 <code>i</code>，那么你只能依赖前面 <code>i-1</code> 个物品在容量为 <code>w</code> 时的最优解，即 <code>dp[i-1][w]</code>。</li>
+<li>如果你选了物品 <code>i</code>，那你需要腾出足够的空间来放它，也就是说背包容量会减少 <code>weight[i]</code>，然后你能获得这件物品的价值 <code>value[i]</code>，再加上前 <code>i-1</code> 个物品在减少了的容量 <code>w - weight[i]</code> 时的最优解，即 <code>dp[i-1][w - weight[i]]</code>。</li>
+</ul>
 </li>
 <li>
 <p><strong>如何求解</strong>：我们从空背包开始，逐步增加物品和容量，每次用上面这个公式去更新当前背包容量的最优解。通过这个递推过程，最后就能得到整个背包的最大价值。</p>
 </li>
 </ol>
 <h4 id="_31">举个简单例子：</h4>
-<p>假设我们有一个背包容量为 5，物品如下：
-- 物品 1：重量 2，价值 3
-- 物品 2：重量 3，价值 4
-- 物品 3：重量 4，价值 5</p>
+<p>假设我们有一个背包容量为 5，物品如下：</p>
+<ul>
+<li>物品 1：重量 2，价值 3</li>
+<li>物品 2：重量 3，价值 4</li>
+<li>物品 3：重量 4，价值 5</li>
+</ul>
 <p><strong>动态规划表的构建过程</strong>：</p>
 <table>
 <thead>
@@ -3490,12 +3812,14 @@ vector&lt;int&gt; topKFrequent(vector&lt;int&gt;&amp; nums, int k) {
 <h4 id="3_2">3. <strong>活动选择问题</strong>（贪心算法）</h4>
 <p><strong>问题</strong>：你有一系列活动，每个活动都有开始时间和结束时间。你需要选择尽可能多的活动，并且这些活动不能重叠。</p>
 <p><strong>贪心策略</strong>：每次选择结束时间最早且不与其他活动冲突的活动。</p>
-<p><strong>步骤</strong>：
-1. <strong>明确贪心策略</strong>：每次选择结束时间最早的活动，以留出更多时间给其他活动。
-2. <strong>排序</strong>：将活动按结束时间从早到晚排序。
-3. <strong>逐步选择</strong>：从第一个活动开始，依次选择结束时间最早且与之前活动不冲突的活动。
-4. <strong>检查可行性</strong>：每次选择活动时，检查该活动是否与已经选择的活动冲突。
-5. <strong>构造解</strong>：将每次选择的活动加入最终解，直到没有活动可以再选。</p>
+<p><strong>步骤</strong>：</p>
+<ol>
+<li><strong>明确贪心策略</strong>：每次选择结束时间最早的活动，以留出更多时间给其他活动。</li>
+<li><strong>排序</strong>：将活动按结束时间从早到晚排序。</li>
+<li><strong>逐步选择</strong>：从第一个活动开始，依次选择结束时间最早且与之前活动不冲突的活动。</li>
+<li><strong>检查可行性</strong>：每次选择活动时，检查该活动是否与已经选择的活动冲突。</li>
+<li><strong>构造解</strong>：将每次选择的活动加入最终解，直到没有活动可以再选。</li>
+</ol>
 <h4 id="_32">贪心算法的局限性</h4>
 <p>贪心算法并不总是能找到最优解。比如：</p>
 <h5 id="1-0-1">1. <strong>0-1 背包问题</strong></h5>
@@ -3507,105 +3831,175 @@ vector&lt;int&gt; topKFrequent(vector&lt;int&gt;&amp; nums, int k) {
 <h3 id="31">3.1 贪心算法例题讲解</h3>
 <h3 id="311-lc455">3.1.1 LC455: 分发饼干</h3>
 <p><strong>题目描述</strong>：有 <code>g</code> 个孩子和 <code>s</code> 个饼干，每个孩子都有一个贪心指数，表示他最少需要多少饼干。每个饼干都有一个大小，表示它可以满足某个孩子的需求。你要分发尽可能多的饼干给孩子，使得最多的孩子能得到满足。</p>
-<p><strong>贪心算法步骤</strong>：
-1. <strong>排序</strong>：将孩子的需求（贪心指数）和饼干的大小都进行升序排序。
-   - 这样可以确保我们可以用最小的饼干去满足最小需求的孩子，从而尽可能满足更多的孩子。</p>
+<p><strong>贪心算法步骤</strong>：</p>
 <ol>
-<li><strong>匹配</strong>：从最小的饼干和最小需求的孩子开始匹配。</li>
+<li>
+<p><strong>排序</strong>：将孩子的需求（贪心指数）和饼干的大小都进行升序排序。</p>
+<ul>
+<li>这样可以确保我们可以用最小的饼干去满足最小需求的孩子，从而尽可能满足更多的孩子。</li>
+</ul>
+</li>
+<li>
+<p><strong>匹配</strong>：从最小的饼干和最小需求的孩子开始匹配。</p>
+<ul>
 <li>每次如果饼干大小可以满足当前孩子的需求，就将这个饼干分配给这个孩子，然后移动到下一个孩子。</li>
 <li>如果当前饼干不够满足孩子需求，就继续尝试下一个更大的饼干，直到所有孩子或饼干用完。</li>
+</ul>
+</li>
 </ol>
 <h4 id="_34">代码实现：</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    int findContentChildren(vector&lt;int&gt;&amp; g, vector&lt;int&gt;&amp; s) {
-        // 将孩子的需求和饼干的大小排序
-        sort(g.begin(), g.end());
-        sort(s.begin(), s.end());
-
-        int i = 0, j = 0;
-
-        // 遍历孩子和饼干数组
-        while (i &lt; g.size() &amp;&amp; j &lt; s.size()) {
-            // 如果当前饼干能满足当前孩子
-            if (s[j] &gt;= g[i]) {
-                i++;  // 满足了孩子 i，处理下一个孩子
-            }
-            j++;  // 尝试下一个饼干
-        }
-
-        return i;  // 返回满足的孩子数量
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span>
+<span class="normal"><a href="#__codelineno-12-20">20</a></span>
+<span class="normal"><a href="#__codelineno-12-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">findContentChildren</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">        </span><span class="c1">// 将孩子的需求和饼干的大小排序</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">        </span><span class="n">sort</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">        </span><span class="n">sort</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">        </span><span class="c1">// 遍历孩子和饼干数组</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">            </span><span class="c1">// 如果当前饼干能满足当前孩子</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">                </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 满足了孩子 i，处理下一个孩子</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">            </span><span class="n">j</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 尝试下一个饼干</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">  </span><span class="c1">// 返回满足的孩子数量</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="_35">讲解：</h4>
 <ol>
-<li><strong>排序步骤</strong>：</li>
 <li>
-<p>首先将孩子的需求数组 <code>g</code> 和饼干大小数组 <code>s</code> 进行排序。排序后，较小的孩子需求和较小的饼干会排列在数组前面，这样可以尽量用最小的饼干去满足最小需求的孩子。</p>
+<p><strong>排序步骤</strong>：</p>
+<ul>
+<li>首先将孩子的需求数组 <code>g</code> 和饼干大小数组 <code>s</code> 进行排序。排序后，较小的孩子需求和较小的饼干会排列在数组前面，这样可以尽量用最小的饼干去满足最小需求的孩子。</li>
+</ul>
 </li>
 <li>
 <p><strong>匹配过程</strong>：</p>
-</li>
+<ul>
 <li>通过两个指针 <code>i</code> 和 <code>j</code> 分别指向孩子和饼干的数组。初始时，<code>i = 0</code>，<code>j = 0</code>，表示从第一个孩子和第一个饼干开始。</li>
 <li>当 <code>s[j] &gt;= g[i]</code> 时，表示当前饼干可以满足当前孩子的需求，孩子被满足，移动指针 <code>i</code>，处理下一个孩子。</li>
-<li>
-<p>无论是否满足，饼干都会被使用，所以 <code>j++</code> 每次都会移动到下一个饼干。</p>
+<li>无论是否满足，饼干都会被使用，所以 <code>j++</code> 每次都会移动到下一个饼干。</li>
+</ul>
 </li>
 <li>
 <p><strong>最终结果</strong>：</p>
-</li>
+<ul>
 <li>当遍历结束时，<code>i</code> 的值就是能够满足的孩子数量，即最后返回的结果。</li>
+</ul>
+</li>
 </ol>
 <h3 id="32">3.2 贪心算法举一反三</h3>
 <h3 id="321-lc-435">3.2.1 LC 435: 无重叠区间</h3>
 <p><strong>题目描述</strong>：给定一组区间，找到最少需要移除的区间数量，使得剩下的区间互不重叠。</p>
-<p><strong>贪心算法步骤</strong>：
-1. <strong>排序</strong>：按照区间的结束时间进行升序排序。排序后，我们可以优先选择结束时间较早的区间，这样能够为后续区间留出更多空间，减少冲突。</p>
+<p><strong>贪心算法步骤</strong>：</p>
 <ol>
-<li><strong>选择区间</strong>：每次选择结束时间最早且不与前一个选择的区间重叠的区间。如果当前区间的开始时间小于前一个区间的结束时间，说明发生了重叠，我们就需要移除当前区间。否则，我们更新当前区间为新的结束时间，并继续处理下一个区间。</li>
+<li>
+<p><strong>排序</strong>：按照区间的结束时间进行升序排序。排序后，我们可以优先选择结束时间较早的区间，这样能够为后续区间留出更多空间，减少冲突。</p>
+</li>
+<li>
+<p><strong>选择区间</strong>：每次选择结束时间最早且不与前一个选择的区间重叠的区间。如果当前区间的开始时间小于前一个区间的结束时间，说明发生了重叠，我们就需要移除当前区间。否则，我们更新当前区间为新的结束时间，并继续处理下一个区间。</p>
+</li>
 </ol>
 <h4 id="_36">代码实现：</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    // 自定义比较函数，按结束时间排序
-    bool compareIntervals(const vector&lt;int&gt;&amp; a, const vector&lt;int&gt;&amp; b) {
-        return a[1] &lt; b[1];  // 按照区间的结束时间升序排列
-    }
-    int eraseOverlapIntervals(vector&lt;vector&lt;int&gt;&gt;&amp; intervals) {
-        if (intervals.empty()) return 0;
-
-        // 使用自定义的比较函数进行排序
-        sort(intervals.begin(), intervals.end(), compareIntervals);
-
-        int count = 0;
-        int end = intervals[0][1];
-
-        for (int i = 1; i &lt; intervals.size(); i++) {
-            if (intervals[i][0] &lt; end) {
-                count++;
-            } 
-            else {
-                end = intervals[i][1];
-            }
-        }
-
-        return count;
-    }
-};
-</code></pre>
-<p><strong>讲解</strong>：
-1. <strong>排序步骤</strong>：
-   - 按区间的结束时间对所有区间进行排序。排序后的区间按结束时间从小到大排列，这样可以确保我们每次选择的区间结束得最早，能够尽量避免后续区间与其发生重叠。</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span>
+<span class="normal"><a href="#__codelineno-13-24">24</a></span>
+<span class="normal"><a href="#__codelineno-13-25">25</a></span>
+<span class="normal"><a href="#__codelineno-13-26">26</a></span>
+<span class="normal"><a href="#__codelineno-13-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="c1">// 自定义比较函数，按结束时间排序</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">compareIntervals</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w">  </span><span class="c1">// 按照区间的结束时间升序排列</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">eraseOverlapIntervals</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span><span class="w"> </span><span class="n">intervals</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">intervals</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">        </span><span class="c1">// 使用自定义的比较函数进行排序</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">        </span><span class="n">sort</span><span class="p">(</span><span class="n">intervals</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">intervals</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">compareIntervals</span><span class="p">);</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intervals</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">intervals</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">intervals</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">                </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="w">                </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intervals</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24"></a>
+<a id="__codelineno-13-25" name="__codelineno-13-25"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<strong>讲解</strong>：</p>
 <ol>
-<li><strong>遍历选择区间</strong>：</li>
 <li>
-<p>初始化一个 <code>end</code> 变量，表示已选定区间的结束时间。遍历剩余区间时，检查每个区间的开始时间是否与当前选定的结束时间发生重叠。如果当前区间的开始时间小于 <code>end</code>，说明发生了重叠，必须移除当前区间。如果没有重叠，则更新 <code>end</code> 为当前区间的结束时间。</p>
+<p><strong>排序步骤</strong>：</p>
+<ul>
+<li>按区间的结束时间对所有区间进行排序。排序后的区间按结束时间从小到大排列，这样可以确保我们每次选择的区间结束得最早，能够尽量避免后续区间与其发生重叠。</li>
+</ul>
+</li>
+<li>
+<p><strong>遍历选择区间</strong>：</p>
+<ul>
+<li>初始化一个 <code>end</code> 变量，表示已选定区间的结束时间。遍历剩余区间时，检查每个区间的开始时间是否与当前选定的结束时间发生重叠。如果当前区间的开始时间小于 <code>end</code>，说明发生了重叠，必须移除当前区间。如果没有重叠，则更新 <code>end</code> 为当前区间的结束时间。</li>
+</ul>
 </li>
 <li>
 <p><strong>返回结果</strong>：</p>
-</li>
+<ul>
 <li><code>count</code> 记录了被移除的区间数，遍历结束后，返回这个移除的区间数。</li>
+</ul>
+</li>
 </ol>
 <h3 id="322-lc-605">3.2.2 LC 605: 种花问题</h3>
 <p><strong>题目描述</strong>：<br />
@@ -3619,47 +4013,72 @@ public:
 <li>输出：<code>false</code></li>
 <li>解释：不能种下两朵花而不违反相邻规则。</li>
 </ul>
-<p><strong>贪心算法步骤</strong>：
-1. <strong>遍历花坛</strong>：从左到右依次检查每个位置。如果当前位置是空的 <code>0</code>，并且它的前一个位置和后一个位置也是空的（如果存在），那么可以在这个位置种花。</p>
+<p><strong>贪心算法步骤</strong>：</p>
 <ol>
-<li><strong>计数并跳过相邻位置</strong>：每次成功种花后，增加计数，并跳过下一个位置，因为相邻位置不能种花。</li>
+<li>
+<p><strong>遍历花坛</strong>：从左到右依次检查每个位置。如果当前位置是空的 <code>0</code>，并且它的前一个位置和后一个位置也是空的（如果存在），那么可以在这个位置种花。</p>
+</li>
+<li>
+<p><strong>计数并跳过相邻位置</strong>：每次成功种花后，增加计数，并跳过下一个位置，因为相邻位置不能种花。</p>
+</li>
 </ol>
 <h4 id="_37">代码实现：</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    bool canPlaceFlowers(vector&lt;int&gt;&amp; flowerbed, int n) {
-        int count = 0;  // 记录可以种花的数量
-
-        // 遍历整个花坛
-        for (int i = 0; i &lt; flowerbed.size(); i++) {
-            // 判断当前位置是否可以种花（检查前后位置，注意边界条件）
-            if (flowerbed[i] == 0 &amp;&amp; (i == 0 || flowerbed[i - 1] == 0) &amp;&amp; (i == flowerbed.size() - 1 || flowerbed[i + 1] == 0)) {
-                flowerbed[i] = 1;  // 种花
-                count++;  // 计数增加
-                i++;  // 跳过下一个位置，避免相邻种花
-            }
-            if (count &gt;= n) return true;  // 如果种够 n 朵花，返回 true
-        }
-        return count &gt;= n;  // 遍历结束，检查是否种够 n 朵花
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">canPlaceFlowers</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">flowerbed</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 记录可以种花的数量</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">        </span><span class="c1">// 遍历整个花坛</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">flowerbed</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">            </span><span class="c1">// 判断当前位置是否可以种花（检查前后位置，注意边界条件）</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">flowerbed</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">flowerbed</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">flowerbed</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">flowerbed</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">                </span><span class="n">flowerbed</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="c1">// 种花</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">                </span><span class="n">count</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 计数增加</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">                </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 跳过下一个位置，避免相邻种花</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// 如果种够 n 朵花，返回 true</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">  </span><span class="c1">// 遍历结束，检查是否种够 n 朵花</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>讲解：</strong></p>
 <ol>
-<li><strong>遍历判断能否种花</strong>：</li>
 <li>
-<p>遍历整个花坛，检查每个位置是否可以种花。当前位置必须满足三个条件才能种花：当前为 <code>0</code>，前一个位置（如果存在）为 <code>0</code>，后一个位置（如果存在）也为 <code>0</code>。注意检查花坛的边界（即第一个和最后一个位置）时，不需要检查不存在的前后位置。</p>
+<p><strong>遍历判断能否种花</strong>：</p>
+<ul>
+<li>遍历整个花坛，检查每个位置是否可以种花。当前位置必须满足三个条件才能种花：当前为 <code>0</code>，前一个位置（如果存在）为 <code>0</code>，后一个位置（如果存在）也为 <code>0</code>。注意检查花坛的边界（即第一个和最后一个位置）时，不需要检查不存在的前后位置。</li>
+</ul>
 </li>
 <li>
 <p><strong>种花后跳过相邻位置</strong>：</p>
-</li>
-<li>
-<p>每次成功种花后，跳过下一个位置，因为根据规则，相邻的位置不能种花。</p>
+<ul>
+<li>每次成功种花后，跳过下一个位置，因为根据规则，相邻的位置不能种花。</li>
+</ul>
 </li>
 <li>
 <p><strong>提前终止</strong>：</p>
-</li>
+<ul>
 <li>如果在遍历过程中已经种够了 <code>n</code> 朵花，则可以提前返回 <code>true</code>。如果遍历结束后还没有种够，则返回 <code>false</code>。</li>
+</ul>
+</li>
 </ol>
 <h3 id="323-lc-1029">3.2.3 LC 1029: 两地调度</h3>
 <p><strong>题目描述</strong>：<br />
@@ -3675,53 +4094,80 @@ public:
 </li>
 </ol>
 <h4 id="_38">代码实现：</h4>
-<pre><code class="language-cpp">class Solution {
-public:
-    // 自定义比较函数，按去 A 市和 B 市的费用差进行排序
-    bool compareCosts(const vector&lt;int&gt;&amp; a, const vector&lt;int&gt;&amp; b) {
-        return (a[0] - a[1]) &lt; (b[0] - b[1]);  // 按 aCost - bCost 进行升序排序
-    }
-    int twoCitySchedCost(vector&lt;vector&lt;int&gt;&gt;&amp; costs) {
-        // 使用自定义的比较函数进行排序
-        sort(costs.begin(), costs.end(), compareCosts);
-
-        int totalCost = 0;
-        int n = costs.size() / 2;
-
-        // 前 N 个人去 A 市，后 N 个人去 B 市
-        for (int i = 0; i &lt; n; i++) {
-            totalCost += costs[i][0];  // 去 A 市的费用
-        }
-        for (int i = n; i &lt; 2 * n; i++) {
-            totalCost += costs[i][1];  // 去 B 市的费用
-        }
-
-        return totalCost;
-    }
-};
-</code></pre>
-<p><strong>讲解：</strong></p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span>
+<span class="normal"><a href="#__codelineno-15-16">16</a></span>
+<span class="normal"><a href="#__codelineno-15-17">17</a></span>
+<span class="normal"><a href="#__codelineno-15-18">18</a></span>
+<span class="normal"><a href="#__codelineno-15-19">19</a></span>
+<span class="normal"><a href="#__codelineno-15-20">20</a></span>
+<span class="normal"><a href="#__codelineno-15-21">21</a></span>
+<span class="normal"><a href="#__codelineno-15-22">22</a></span>
+<span class="normal"><a href="#__codelineno-15-23">23</a></span>
+<span class="normal"><a href="#__codelineno-15-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">    </span><span class="c1">// 自定义比较函数，按去 A 市和 B 市的费用差进行排序</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">compareCosts</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w">  </span><span class="c1">// 按 aCost - bCost 进行升序排序</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">twoCitySchedCost</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span><span class="w"> </span><span class="n">costs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">        </span><span class="c1">// 使用自定义的比较函数进行排序</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">        </span><span class="n">sort</span><span class="p">(</span><span class="n">costs</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">costs</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">compareCosts</span><span class="p">);</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">totalCost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">costs</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">        </span><span class="c1">// 前 N 个人去 A 市，后 N 个人去 B 市</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">            </span><span class="n">totalCost</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">costs</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span><span class="w">  </span><span class="c1">// 去 A 市的费用</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">            </span><span class="n">totalCost</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">costs</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span><span class="w">  </span><span class="c1">// 去 B 市的费用</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a>
+<a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">totalCost</span><span class="p">;</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<strong>讲解：</strong></p>
 <ol>
-<li><strong>计算成本差异</strong>：</li>
 <li>
-<p>每个人都有去 A 市和 B 市的两种选择，我们可以通过 <code>aCost - bCost</code> 来衡量每个人去 A 市的额外成本。如果 <code>aCost &lt; bCost</code>，说明让这个人去 A 市更划算，反之则去 B 市更划算。</p>
+<p><strong>计算成本差异</strong>：</p>
+<ul>
+<li>每个人都有去 A 市和 B 市的两种选择，我们可以通过 <code>aCost - bCost</code> 来衡量每个人去 A 市的额外成本。如果 <code>aCost &lt; bCost</code>，说明让这个人去 A 市更划算，反之则去 B 市更划算。</li>
+</ul>
 </li>
 <li>
 <p><strong>排序步骤</strong>：</p>
-</li>
-<li>
-<p>我们根据 <code>aCost - bCost</code> 对 <code>costs</code> 数组进行排序，优先让那些去 A 市更便宜的人去 A 市，去 B 市更便宜的人去 B 市。</p>
+<ul>
+<li>我们根据 <code>aCost - bCost</code> 对 <code>costs</code> 数组进行排序，优先让那些去 A 市更便宜的人去 A 市，去 B 市更便宜的人去 B 市。</li>
+</ul>
 </li>
 <li>
 <p><strong>分配城市</strong>：</p>
-</li>
-<li>
-<p>排序后，前一半的人去 A 市，后一半的人去 B 市。这样可以确保在总费用最小的情况下，平衡去两座城市的人数。</p>
+<ul>
+<li>排序后，前一半的人去 A 市，后一半的人去 B 市。这样可以确保在总费用最小的情况下，平衡去两座城市的人数。</li>
+</ul>
 </li>
 <li>
 <p><strong>返回结果</strong>：</p>
-</li>
+<ul>
 <li>最终返回总的费用，即前 <code>N</code> 个人的 A 市费用和后 <code>N</code> 个人的 B 市费用之和。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_39">课后练习</h3>
 <h4 id="_40">排序问题</h4>

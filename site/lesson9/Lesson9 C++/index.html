@@ -627,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+      <a href="../../lesson1/Lesson1 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson2/Lesson2%20Python/" class="md-nav__link">
+      <a href="../../lesson2/Lesson2 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+      <a href="../../lesson3/Lesson3 Python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2136,18 +2136,18 @@
 </li>
 <li>
 <p><a href="#2-例题讲解">例题讲解</a></p>
-</li>
+<ul>
 <li><a href="#lc-344-反转字符串">LC 344 反转字符串</a></li>
-<li>
-<p><a href="#lc-125-验证回文串">LC 125 验证回文串</a></p>
+<li><a href="#lc-125-验证回文串">LC 125 验证回文串</a></li>
+</ul>
 </li>
 <li>
 <p><a href="#3-举一反三">举一反三</a></p>
-</li>
+<ul>
 <li><a href="#lc-345-反转字符串中的元音字母">LC 345 反转字符串中的元音字母</a></li>
 <li><a href="#lc-917-仅仅反转字母">LC 917 仅仅反转字母</a></li>
-<li>
-<p><a href="#lc-680-验证回文串">LC 680 验证回文串</a></p>
+<li><a href="#lc-680-验证回文串">LC 680 验证回文串</a></li>
+</ul>
 </li>
 <li>
 <p><a href="#课后练习">课后练习</a></p>
@@ -2164,21 +2164,34 @@
 <li>直到两指针相撞（即 <code>left==right</code>），或者满足其他要求的特殊条件时，跳出循环体。</li>
 </ol>
 <h3 id="12">1.2 对撞指针伪代码模版</h3>
-<pre><code>int left = 0;
-int right = len(nums) - 1;
-
-while (left &lt; right) {
-    if (满足某些条件) {
-        return 符合条件的值;
-    }
-    if (条件1) {
-        left++;  // 移动左指针
-    } else {
-        right--;  // 移动右指针
-    }
-}
-return -1;  // 如果没找到，返回标记值
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>int left = 0;
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>int right = len(nums) - 1;
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>while (left &lt; right) {
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    if (满足某些条件) {
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>        return 符合条件的值;
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    }
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    if (条件1) {
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>        left++;  // 移动左指针
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>    } else {
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>        right--;  // 移动右指针
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>    }
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>}
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>return -1;  // 如果没找到，返回标记值
+</code></pre></div></td></tr></table></div>
 <h3 id="13">1.3 对撞指针适用范围</h3>
 <p>对撞指针一般用来解决有序数组或者字符串问题：</p>
 <ul>
@@ -2193,31 +2206,46 @@ return -1;  // 如果没找到，返回标记值
 <h3 id="_3">题目分析</h3>
 <p>对于长度为 N 的字符数组，反转的过程就是将前后的字符交换，直到两端的指针相遇为止。具体来说：</p>
 <ol>
-<li><strong>双指针法：</strong></li>
+<li><strong>双指针法：</strong><ul>
 <li>初始化两个指针，<code>start</code> 指向字符串的第一个字符，<code>end</code> 指向最后一个字符。</li>
 <li>当 <code>start &lt; end</code> 时，交换这两个位置的字符，然后 <code>start</code> 指针右移，<code>end</code> 指针左移，直到两个指针相遇或交错。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_4">思路</h3>
 <ol>
-<li><strong>双指针思路：</strong></li>
+<li><strong>双指针思路：</strong><ul>
 <li>将 <code>start</code> 设置为 0，<code>end</code> 设置为 <code>s.size() - 1</code>。</li>
 <li>当 <code>start</code> 小于 <code>end</code> 时，交换 <code>s[start]</code> 和 <code>s[end]</code>，然后分别移动两个指针。</li>
 <li>当 <code>start &gt;= end</code> 时，说明字符串已经反转完成。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_5">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    void reverseString(vector&lt;char&gt;&amp; s) {
-        int start = 0;
-        int end = s.size() - 1;
-        while (start &lt; end) {
-            swap(s[start], s[end]); // 交换 start 和 end 位置的字符
-            start++;
-            end--;
-        }
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">reverseString</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">            </span><span class="n">swap</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">start</span><span class="p">],</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">end</span><span class="p">]);</span><span class="w"> </span><span class="c1">// 交换 start 和 end 位置的字符</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">            </span><span class="n">start</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">            </span><span class="n">end</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>要点说明：</strong></p>
 <ul>
 <li><strong>双指针法：</strong> 使用 <code>start</code> 和 <code>end</code> 两个指针从字符串的两端向中间移动，并交换相应位置的字符。</li>
@@ -2235,79 +2263,130 @@ public:
 </ul>
 <h3 id="_8">思路分析</h3>
 <ol>
-<li><strong>过滤非字母数字字符：</strong></li>
-<li>使用 <code>isalnum</code> 函数来检查字符是否为字母或数字。</li>
 <li>
-<p>跳过不属于字母数字的字符。</p>
+<p><strong>过滤非字母数字字符：</strong></p>
+<ul>
+<li>使用 <code>isalnum</code> 函数来检查字符是否为字母或数字。</li>
+<li>跳过不属于字母数字的字符。</li>
+</ul>
 </li>
 <li>
 <p><strong>双指针法：</strong></p>
-</li>
+<ul>
 <li>使用两个指针，一个指向字符串的开头，另一个指向字符串的结尾。</li>
-<li>
-<p>从两端开始向中间移动，逐个比较有效的字符。</p>
+<li>从两端开始向中间移动，逐个比较有效的字符。</li>
+</ul>
 </li>
 <li>
 <p><strong>忽略大小写：</strong></p>
-</li>
+<ul>
 <li>使用 <code>tolower</code> 或 <code>toupper</code> 函数来忽略大小写差异。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_9">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    bool isPalindrome(string s) {
-        int start = 0;
-        int end = s.length() - 1;
-        while (start &lt; end) {
-            // 移动 start 指针跳过非字母数字字符
-            if (!isalnum(s[start])) {
-                start++;
-                continue;
-            }
-            // 移动 end 指针跳过非字母数字字符
-            if (!isalnum(s[end])) {
-                end--;
-                continue;
-            }
-            // 忽略大小写比较字符
-            if (tolower(s[start]) != tolower(s[end])) {
-                return false;
-            }
-            start++;
-            end--;
-        }
-        return true;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isPalindrome</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">            </span><span class="c1">// 移动 start 指针跳过非字母数字字符</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isalnum</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">start</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">                </span><span class="n">start</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">                </span><span class="k">continue</span><span class="p">;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">            </span><span class="c1">// 移动 end 指针跳过非字母数字字符</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isalnum</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">end</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">                </span><span class="n">end</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">                </span><span class="k">continue</span><span class="p">;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">            </span><span class="c1">// 忽略大小写比较字符</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tolower</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">start</span><span class="p">])</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">tolower</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">end</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">            </span><span class="n">start</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">            </span><span class="n">end</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_10">切片法</h3>
 <p>可以通过预处理将字符串转换为只包含字母和数字的小写形式，然后判断这个处理后的字符串是否是回文。</p>
-<pre><code class="language-cpp">class Solution {
-public:
-    bool isPalindrome(string s) {
-        string sgood;
-        for (char c : s) {
-            if (isalnum(c)) {
-                sgood += tolower(c);
-            }
-        }
-        // 检查 sgood 是否是回文
-        int start = 0, end = sgood.length() - 1;
-        while (start &lt; end) {
-            if (sgood[start] != sgood[end]) {
-                return false;
-            }
-            start++;
-            end--;
-        }
-        return true;
-    }
-};
-</code></pre>
-<p><strong>要点说明：</strong>
-- 使用 <code>isalnum</code> 判断是否是字母或数字。
-- 使用 <code>tolower</code> 将字符转换为小写进行比较。
-- 采用双指针法，直接对原字符串进行判断，符合空间复杂度要求。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isPalindrome</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">sgood</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isalnum</span><span class="p">(</span><span class="n">c</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">                </span><span class="n">sgood</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">tolower</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">        </span><span class="c1">// 检查 sgood 是否是回文</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sgood</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sgood</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">sgood</span><span class="p">[</span><span class="n">end</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">            </span><span class="n">start</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">            </span><span class="n">end</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>要点说明：</strong></p>
+<ul>
+<li>使用 <code>isalnum</code> 判断是否是字母或数字。</li>
+<li>使用 <code>tolower</code> 将字符转换为小写进行比较。</li>
+<li>采用双指针法，直接对原字符串进行判断，符合空间复杂度要求。</li>
+</ul>
 <h2 id="3">3. 举一反三</h2>
 <h2 id="lc-345">LC 345 反转字符串中的元音字母</h2>
 <h3 id="_11">问题描述</h3>
@@ -2321,49 +2400,75 @@ public:
 <h3 id="_13">思路分析</h3>
 <p>我们可以使用 <strong>双指针法</strong> 对字符串中的元音字母进行反转。思路如下：</p>
 <ol>
-<li><strong>初始化两个指针</strong>：</li>
 <li>
-<p>一个指针 <code>start</code> 指向字符串的首位，另一个指针 <code>end</code> 指向字符串的末位。</p>
+<p><strong>初始化两个指针</strong>：</p>
+<ul>
+<li>一个指针 <code>start</code> 指向字符串的首位，另一个指针 <code>end</code> 指向字符串的末位。</li>
+</ul>
 </li>
 <li>
 <p><strong>元音字母的检查</strong>：</p>
-</li>
+<ul>
 <li>如果 <code>start</code> 和 <code>end</code> 所指字符都是元音字母，则交换它们，并将 <code>start</code> 向右移，<code>end</code> 向左移。</li>
 <li>如果 <code>start</code> 指向的字符不是元音字母，则向右移。</li>
-<li>
-<p>如果 <code>end</code> 指向的字符不是元音字母，则向左移。</p>
+<li>如果 <code>end</code> 指向的字符不是元音字母，则向左移。</li>
+</ul>
 </li>
 <li>
 <p><strong>继续检查直到 <code>start</code> &gt;= <code>end</code></strong>。</p>
 </li>
 </ol>
 <h3 id="_14">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    string reverseVowels(string s) {
-        string vowels = &quot;aeiouAEIOU&quot;;
-        int start = 0;
-        int end = s.length() - 1;
-
-        while (start &lt; end) {
-            // 用 while 循环找到最近的元音字母
-            while (start &lt; end &amp;&amp; vowels.find(s[start]) == string::npos) {
-                start++;
-            }
-            while (start &lt; end &amp;&amp; vowels.find(s[end]) == string::npos) {
-                end--;
-            }
-            // 交换元音字母
-            if (start &lt; end) {
-                swap(s[start], s[end]);
-                start++;
-                end--;
-            }
-        }
-        return s;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">reverseVowels</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">vowels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;aeiouAEIOU&quot;</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">            </span><span class="c1">// 用 while 循环找到最近的元音字母</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">vowels</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">start</span><span class="p">])</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">                </span><span class="n">start</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">vowels</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">end</span><span class="p">])</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">                </span><span class="n">end</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">            </span><span class="c1">// 交换元音字母</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">                </span><span class="n">swap</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">start</span><span class="p">],</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">end</span><span class="p">]);</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">                </span><span class="n">start</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">                </span><span class="n">end</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_15">说明</h3>
 <ul>
 <li><code>vowels.find(s[start]) != string::npos</code>：用于检查字符 <code>s[start]</code> 是否在 <code>vowels</code> 字符串中，表示这是一个元音字母。</li>
@@ -2386,50 +2491,78 @@ public:
 <h3 id="_18">思路分析</h3>
 <p>使用 <strong>双指针法</strong> 来处理字母反转。具体思路如下：</p>
 <ol>
-<li><strong>双指针初始化</strong>：</li>
 <li>
-<p>指针 <code>left</code> 从字符串左侧开始，指针 <code>right</code> 从字符串右侧开始。</p>
+<p><strong>双指针初始化</strong>：</p>
+<ul>
+<li>指针 <code>left</code> 从字符串左侧开始，指针 <code>right</code> 从字符串右侧开始。</li>
+</ul>
 </li>
 <li>
 <p><strong>寻找字母并交换</strong>：</p>
-</li>
+<ul>
 <li><code>left</code> 向右移动，跳过非字母字符，直到找到一个字母。</li>
 <li><code>right</code> 向左移动，跳过非字母字符，直到找到一个字母。</li>
-<li>
-<p>当 <code>left &lt; right</code> 时，交换这两个字母的位置，继续移动指针。</p>
+<li>当 <code>left &lt; right</code> 时，交换这两个字母的位置，继续移动指针。</li>
+</ul>
 </li>
 <li>
 <p><strong>停止条件</strong>：</p>
-</li>
+<ul>
 <li>当 <code>left &gt;= right</code> 时，表示所有字母都已反转，退出循环。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_19">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    string reverseOnlyLetters(string s) {
-        int left = 0;
-        int right = s.length() - 1;
-
-        while (left &lt; right) {
-            // 跳过左边的非字母字符
-            while (left &lt; right &amp;&amp; !isalpha(s[left])) {
-                left++;
-            }
-            // 跳过右边的非字母字符
-            while (left &lt; right &amp;&amp; !isalpha(s[right])) {
-                right--;
-            }
-            // 交换字母
-            if (left &lt; right) {
-                swap(s[left], s[right]);
-                left++;
-                right--;
-            }
-        }
-        return s;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">reverseOnlyLetters</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">            </span><span class="c1">// 跳过左边的非字母字符</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">isalpha</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">left</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">                </span><span class="n">left</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">            </span><span class="c1">// 跳过右边的非字母字符</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">isalpha</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">right</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">                </span><span class="n">right</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">            </span><span class="c1">// 交换字母</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">                </span><span class="n">swap</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">left</span><span class="p">],</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">right</span><span class="p">]);</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">                </span><span class="n">left</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">                </span><span class="n">right</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_20">解释</h3>
 <ol>
 <li><strong><code>isalpha(s[left])</code></strong>：检查字符是否是字母，跳过非字母字符。</li>
@@ -2446,55 +2579,89 @@ public:
 </ul>
 <h3 id="_23">思路分析</h3>
 <ol>
-<li><strong>双指针法</strong>：</li>
 <li>
-<p>从字符串的两端使用两个指针 <code>start</code> 和 <code>end</code>，逐字符向中间移动，检查是否是回文。</p>
+<p><strong>双指针法</strong>：</p>
+<ul>
+<li>从字符串的两端使用两个指针 <code>start</code> 和 <code>end</code>，逐字符向中间移动，检查是否是回文。</li>
+</ul>
 </li>
 <li>
 <p><strong>处理不匹配字符</strong>：</p>
-</li>
+<ul>
 <li>当 <code>s[start]</code> 和 <code>s[end]</code> 不相等时，可以尝试跳过一个字符（删除），并判断剩下的字符串是否是回文。</li>
-<li>
-<p>可以选择删除左边的字符（即 <code>start+1</code> 到 <code>end</code> 的子串）或右边的字符（即 <code>start</code> 到 <code>end-1</code> 的子串）来继续验证。</p>
+<li>可以选择删除左边的字符（即 <code>start+1</code> 到 <code>end</code> 的子串）或右边的字符（即 <code>start</code> 到 <code>end-1</code> 的子串）来继续验证。</li>
+</ul>
 </li>
 <li>
 <p><strong>辅助函数 <code>helper</code></strong>：</p>
-</li>
+<ul>
 <li>用于判断给定子串是否是回文串。</li>
+</ul>
+</li>
 </ol>
 <h3 id="_24">参考解答</h3>
-<pre><code class="language-cpp">class Solution {
-public:
-    // 辅助函数，判断子串是否为回文
-    bool helper(string s, int start, int end) {
-        while (start &lt; end) {
-            if (s[start] != s[end]) {
-                return false;
-            }
-            start++;
-            end--;
-        }
-        return true;
-    }
-
-    bool validPalindrome(string s) {
-        int start = 0;
-        int end = s.length() - 1;
-
-        while (start &lt; end) {
-            // 当遇到不匹配的字符时，尝试跳过一个字符
-            if (s[start] != s[end]) {
-                // 尝试跳过左边字符或右边字符后，检查是否为回文
-                return helper(s, start + 1, end) || helper(s, start, end - 1);
-            }
-            start++;
-            end--;
-        }
-
-        return true;
-    }
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span>
+<span class="normal"><a href="#__codelineno-6-27">27</a></span>
+<span class="normal"><a href="#__codelineno-6-28">28</a></span>
+<span class="normal"><a href="#__codelineno-6-29">29</a></span>
+<span class="normal"><a href="#__codelineno-6-30">30</a></span>
+<span class="normal"><a href="#__codelineno-6-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="c1">// 辅助函数，判断子串是否为回文</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">helper</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">end</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">            </span><span class="n">start</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">            </span><span class="n">end</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">validPalindrome</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">            </span><span class="c1">// 当遇到不匹配的字符时，尝试跳过一个字符</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">end</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">                </span><span class="c1">// 尝试跳过左边字符或右边字符后，检查是否为回文</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">helper</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">helper</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="w">            </span><span class="n">start</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="w">            </span><span class="n">end</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a>
+<a id="__codelineno-6-29" name="__codelineno-6-29"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="_25">说明</h3>
 <ol>
 <li><strong><code>helper</code> 函数</strong>：用于判断字符串 <code>s</code> 中从 <code>start</code> 到 <code>end</code> 是否为回文。</li>
