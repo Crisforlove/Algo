@@ -1,7 +1,6 @@
 # Lesson 1 Python的环境设置、数据类型、运算符和输入和输出
 # 目录
 
-- [Lesson 1 Python的环境设置、数据类型、运算符和输入和输出](#lesson-1-python的环境设置数据类型运算符和输入和输出)
   - [前言：为什么要学习Python](#前言为什么要学习python)
   - [1. Python环境设置](#1-python环境设置)
     - [1.1 为什么选择Anaconda](#11-为什么选择anaconda)
