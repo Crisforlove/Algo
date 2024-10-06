@@ -1,6 +1,6 @@
 # Lesson6 Leetcode入门/常用的字符串函数/Leetcode字符串练习
 
-# 目录
+## 目录
 
 - [1. Leetcode入门](#1-leetcode入门)
   - [1.1 初识Leetcode](#11-初识leetcode)
