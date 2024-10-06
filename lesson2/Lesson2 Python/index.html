@@ -1,0 +1,2442 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../lesson1/Lesson1%20Python/">
+      
+      
+        <link rel="next" href="../../lesson3/Lesson3%20Python/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
+    
+    
+      
+        <title>Lesson 2 - Algo Curriculum</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lesson2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Algo Curriculum" class="md-header__button md-logo" aria-label="Algo Curriculum" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algo Curriculum
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lesson 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Crisforlove/Algo.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Algo Curriculum" class="md-nav__button md-logo" aria-label="Algo Curriculum" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Algo Curriculum
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Crisforlove/Algo.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson1/Lesson1%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lesson2%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson3/Lesson3%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson4/Lesson4%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson5/Lesson5%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson6/Lesson6%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson7/Lesson7%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson8/Lesson8%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson9/Lesson9%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson10/Lesson10%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson11/Lesson11%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson12/Lesson12%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson13/Lesson13%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson14/Lesson14%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson15/Lesson15%20Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson1/Lesson1%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 2
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson3/Lesson3%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson4/Lesson4%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson5/Lesson5%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson6/Lesson6%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson7/Lesson7%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson8/Lesson8%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson9/Lesson9%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson10/Lesson10%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson11/Lesson11%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson12/Lesson12%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson13/Lesson13%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson14/Lesson14%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson15/Lesson15%20Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson1/Lesson1%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lesson2%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson3/Lesson3%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson4/Lesson4%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson5/Lesson5%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson6/Lesson6%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson7/Lesson7%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson8/Lesson8%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson9/Lesson9%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson10/Lesson10%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson11/Lesson11%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson12/Lesson12%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson13/Lesson13%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson14/Lesson14%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson15/Lesson15%20C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="lesson2">Lesson2 条件和循环</h1>
+<h1 id="_1">目录</h1>
+<ul>
+<li><a href="#lesson-2-条件和循环">Lesson 2 条件和循环</a></li>
+<li><a href="#1-条件控制">1 条件控制</a><ul>
+<li><a href="#11-if-语句">1.1 if 语句</a></li>
+<li><a href="#12-if-嵌套">1.2 if 嵌套</a></li>
+<li><a href="#13-matchcase">1.3 match...case</a></li>
+</ul>
+</li>
+<li><a href="#2-循环">2 循环</a><ul>
+<li><a href="#21-while-循环">2.1 while 循环</a></li>
+<li><a href="#22-无限循环">2.2 无限循环</a></li>
+<li><a href="#23-while-循环使用-else-语句">2.3 while 循环使用 else 语句</a></li>
+<li><a href="#24-简单语句组">2.4 简单语句组</a></li>
+<li><a href="#25-for-语句">2.5 for 语句</a></li>
+<li><a href="#26-range-函数">2.6 range() 函数</a></li>
+<li><a href="#27-break-和-continue-语句及循环中的-else-子句">2.7 break 和 continue 语句及循环中的 else 子句</a></li>
+<li><a href="#28-pass-语句">2.8 pass 语句</a></li>
+</ul>
+</li>
+<li><a href="#课后练习">课后练习</a><ul>
+<li><a href="#1-点餐程序">1. 点餐程序</a></li>
+<li><a href="#2-python-猜数字游戏">2. Python 猜数字游戏</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="1">1 条件控制</h2>
+<p>Python 条件语句是通过一条或多条语句的执行结果（True 或者 False）来决定执行的代码块。</p>
+<p>可以通过下图来简单了解条件语句的执行过程：</p>
+<p><img alt="image-20240722131514245" src="../Image/image-20240722131514245.png" /></p>
+<p>代码执行过程：<img alt="img" src="../Image/2321727438181.jpg" /></p>
+<h3 id="11-if">1.1 if 语句</h3>
+<p>Python中if语句的一般形式如下所示：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>if condition_1:
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    statement_block_1
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>elif condition_2:
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    statement_block_2
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>else:
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    statement_block_3
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>如果 "condition_1" 为 True 将执行 "statement_block_1" 块语句</li>
+<li>如果 "condition_1" 为False，将判断 "condition_2"</li>
+<li>如果"condition_2" 为 True 将执行 "statement_block_2" 块语句</li>
+<li>如果 "condition_2" 为False，将执行"statement_block_3"块语句</li>
+</ul>
+<p>Python 中用 <strong>elif</strong> 代替了 <strong>else if</strong>，所以if语句的关键字为：<strong>if – elif – else</strong>。</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>1、每个条件后面要使用冒号 <strong>:</strong>，表示接下来是满足条件后要执行的语句块。</li>
+<li>2、使用缩进来划分语句块，相同缩进数的语句在一起组成一个语句块。</li>
+<li>3、在 Python 中没有 <strong>switch...case</strong> 语句，但在 Python3.10 版本添加了 <strong>match...case</strong>，功能也类似，详见下文。</li>
+</ul>
+<p>以下是一个简单的 if 实例：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>var1 = 100
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>if var1:
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    print(&quot;if 表达式条件为 true（即var1不为零）&quot;)
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    print(var1)
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>var2 = 0
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>if var2:
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>    print(&quot;if 表达式条件为 true（即var2不为零)&quot;)
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>    print(var2)
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>else:
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>    print(&quot;if 表达式条件为 False（即var2为零)&quot;)
+</code></pre></div></td></tr></table></div>
+<p>输出结果为：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>if 表达式条件为 true（即var1不为零）
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>100
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>if 表达式条件为 False（即var2为零)
+</code></pre></div></td></tr></table></div>
+<p>从结果可以看到由于变量 var2 为 0，所以对应的 if 内的语句没有执行。</p>
+<p>以下实例演示了狗的年龄计算判断：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>age = int(input(&quot;请输入你家狗狗的年龄: &quot;))
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>print(&quot;&quot;)
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>if age &lt;= 0:
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    print(&quot;你是在逗我吧!&quot;)
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>elif age == 1:
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    print(&quot;相当于 14 岁的人。&quot;)
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>elif age == 2:
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>    print(&quot;相当于 22 岁的人。&quot;)
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>elif age &gt; 2:
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>    human = 22 + (age -2)*5
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>    print(&quot;对应人类年龄: &quot;, human)
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a># 退出提示
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>input(&quot;点击 enter（回车） 键退出&quot;)
+</code></pre></div></td></tr></table></div>
+<p>输出结果示例：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>请输入你家狗狗的年龄: 5
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>对应人类年龄:  37
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>点击 enter（回车） 键退出
+</code></pre></div></td></tr></table></div>
+<p>以下为if中常用的操作运算符：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">操作符</th>
+<th style="text-align: left;">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>&lt;</code></td>
+<td style="text-align: left;">小于</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;=</code></td>
+<td style="text-align: left;">小于或等于</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&gt;</code></td>
+<td style="text-align: left;">大于</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&gt;=</code></td>
+<td style="text-align: left;">大于或等于</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>==</code></td>
+<td style="text-align: left;">等于，比较两个值是否相等</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>!=</code></td>
+<td style="text-align: left;">不等于</td>
+</tr>
+</tbody>
+</table>
+<p>给出操作符运算的输出实例：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a># 程序演示了 == 操作符
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a># 使用数字
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>print(5 == 6)
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a># 使用变量
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>x = 5
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>y = 8
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>print(x == y)
+</code></pre></div></td></tr></table></div>
+<p>以上实例输出结果：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>False
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>False
+</code></pre></div></td></tr></table></div>
+<p>一个数字猜谜游戏：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a># 该实例演示了数字猜谜游戏
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>import random  #python自带的生成随机数的库
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>number = random.randint(0,10) #生成0-10之间的整数（以后会详细讲到）
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>guess = 0
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>print(&quot;数字猜谜游戏!&quot;)
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>while guess != number:
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>    guess = int(input(&quot;请输入你猜的数字：&quot;))
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>    if guess == number:
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>        print(&quot;恭喜，你猜对了！&quot;)
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>    elif guess &lt; number:
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>        print(&quot;猜的数字小了...&quot;)
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>    elif guess &gt; number:
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>        print(&quot;猜的数字大了...&quot;)
+</code></pre></div></td></tr></table></div>
+<p>实例输出结果如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>数字猜谜游戏!
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>请输入你猜的数字：5
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>猜的数字小了...
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>请输入你猜的数字：7
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>猜的数字小了...
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>请输入你猜的数字：8
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>猜的数字小了...
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>请输入你猜的数字：9
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>猜的数字小了...
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>请输入你猜的数字：10
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>恭喜，你猜对了！
+</code></pre></div></td></tr></table></div>
+<h3 id="12-if">1.2 if 嵌套</h3>
+<p>在嵌套 if 语句中，可以把 if...elif...else 结构放在另外一个 if...elif...else 结构中。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>if 表达式1:
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>    语句
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>    if 表达式2:
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>        语句
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>    elif 表达式3:
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>        语句
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>    else:
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>        语句
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>elif 表达式4:
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>    语句
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>else:
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>    语句
+</code></pre></div></td></tr></table></div>
+<p>实例：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>num=int(input(&quot;输入一个数字：&quot;))
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>if num%2==0:
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>    if num%3==0:
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>        print (&quot;你输入的数字可以整除 2 和 3&quot;)
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>    else:
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>        print (&quot;你输入的数字可以整除 2，但不能整除 3&quot;)
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>else:
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>    if num%3==0:
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>        print (&quot;你输入的数字可以整除 3，但不能整除 2&quot;)
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>    else:
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>        print  (&quot;你输入的数字不能整除 2 和 3&quot;)
+</code></pre></div></td></tr></table></div>
+<p>输出结果为：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>输入一个数字：10
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>你输入的数字可以整除 2，但不能整除 3
+</code></pre></div></td></tr></table></div>
+<h3 id="13-matchcase">1.3 match...case</h3>
+<p>Python 3.10 增加了 <strong>match...case</strong> 的条件判断，不需要再使用一连串的 <strong>if-else</strong> 来判断了。</p>
+<p>match 后的对象会依次与 case 后的内容进行匹配，如果匹配成功，则执行匹配到的表达式，否则直接跳过，<strong>_</strong> 可以匹配一切。</p>
+<p>语法格式如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span>
+<span class="normal"><a href="#__codelineno-12-7">7</a></span>
+<span class="normal"><a href="#__codelineno-12-8">8</a></span>
+<span class="normal"><a href="#__codelineno-12-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>match subject:
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>    case &lt;pattern_1&gt;:
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>        &lt;action_1&gt;
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>    case &lt;pattern_2&gt;:
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>        &lt;action_2&gt;
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>    case &lt;pattern_3&gt;:
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>        &lt;action_3&gt;
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>    case _:
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>        &lt;action_wildcard&gt;
+</code></pre></div></td></tr></table></div>
+<p><strong>case _:</strong> 类似于 C 和 Java 中的 <strong>default:</strong>，当其他 case 都无法匹配时，匹配这条，保证永远会匹配成功。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>def http_error(status):
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>    match status:
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>        case 400:
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>            return &quot;Bad request&quot;
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>        case 404:
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>            return &quot;Not found&quot;
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>        case 418:
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>            return &quot;I&#39;m a teapot&quot;
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>        case _:
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a>            return &quot;Something&#39;s wrong with the internet&quot;
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a>mystatus=400
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a>print(http_error(mystatus))
+</code></pre></div></td></tr></table></div>
+<p>以上是一个输出 HTTP 状态码的实例，输出结果为：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>Bad request
+</code></pre></div></td></tr></table></div>
+<p>一个 case 也可以设置多个匹配条件，条件使用 <strong>｜</strong> 隔开，例如：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>...
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>    case 401|403|404:
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>        return &quot;Not allowed&quot;
+</code></pre></div></td></tr></table></div>
+<h2 id="2">2 循环</h2>
+<p>Python 中的循环语句有 for 和 while。</p>
+<p>Python 循环语句的控制结构图如下所示：</p>
+<p><img alt="image-20240722134314431" src="../Image/image-20240722134314431.png" /></p>
+<h3 id="21-while">2.1 while 循环</h3>
+<p>Python 中 while 语句的一般形式：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>while 判断条件(condition)：
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>    执行语句(statements)……
+</code></pre></div></td></tr></table></div>
+<p>执行流程图如下：</p>
+<p><img alt="image-20240722134353682" src="../Image/image-20240722134353682.png" /></p>
+<p>同样需要注意冒号和缩进。另外，在 Python 中没有 do..while 循环。</p>
+<p>以下实例使用了 while 来计算 1 到 100 的总和：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span>
+<span class="normal"><a href="#__codelineno-17-5">5</a></span>
+<span class="normal"><a href="#__codelineno-17-6">6</a></span>
+<span class="normal"><a href="#__codelineno-17-7">7</a></span>
+<span class="normal"><a href="#__codelineno-17-8">8</a></span>
+<span class="normal"><a href="#__codelineno-17-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>n = 100
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>sum = 0
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>counter = 1
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>while counter &lt;= n:
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a>    sum = sum + counter
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>    counter += 1
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a>print(&quot;1 到 %d 之和为: %d&quot; % (n,sum))
+</code></pre></div></td></tr></table></div>
+<p>执行结果如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>1 到 100 之和为: 5050
+</code></pre></div></td></tr></table></div>
+<h3 id="22">2.2无限循环</h3>
+<p>我们可以通过设置条件表达式永远不为 false 来实现无限循环，实例如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">5</a></span>
+<span class="normal"><a href="#__codelineno-19-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>var = 1
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>while var == 1 :  # 表达式永远为 true
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>   num = int(input(&quot;输入一个数字  :&quot;))
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>   print (&quot;你输入的数字是: &quot;, num)
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a>print (&quot;Good bye!&quot;)
+</code></pre></div></td></tr></table></div>
+<p>执行以上脚本，输出结果如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>输入一个数字:5
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>你输入的数字是: 5
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>输入一个数字:2
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a>你输入的数字是: 2
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a>输入一个数字: 
+</code></pre></div></td></tr></table></div>
+<p>无限循环在服务器上客户端的实时请求非常有用。</p>
+<h3 id="23-while-else">2.3 while 循环使用 else 语句</h3>
+<p>如果 while 后面的条件语句为 false 时，则执行 else 的语句块。</p>
+<p>语法格式如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span>
+<span class="normal"><a href="#__codelineno-21-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>while &lt;expr&gt;:
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>    &lt;statement(s)&gt;
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a>else:
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>    &lt;additional_statement(s)&gt;
+</code></pre></div></td></tr></table></div>
+<p>expr 条件语句为 true 则执行 statement(s) 语句块，如果为 false，则执行 additional_statement(s)。</p>
+<p>循环输出数字，并判断大小：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span>
+<span class="normal"><a href="#__codelineno-22-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>count = 0
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>while count &lt; 5:
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>   print (count, &quot; 小于 5&quot;)
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a>   count = count + 1
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a>else:
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a>   print (count, &quot; 大于或等于 5&quot;)
+</code></pre></div></td></tr></table></div>
+<p>执行以上脚本，输出结果如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span>
+<span class="normal"><a href="#__codelineno-23-5">5</a></span>
+<span class="normal"><a href="#__codelineno-23-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>0  小于 5
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>1  小于 5
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>2  小于 5
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a>3  小于 5
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a>4  小于 5
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a>5  大于或等于 5
+</code></pre></div></td></tr></table></div>
+<h3 id="24">2.4 简单语句组</h3>
+<p>类似 if 语句的语法，如果你的 while 循环体中只有一条语句，你可以将该语句与 while 写在同一行中， 如下所示：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>flag = 1
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a>while (flag): print (&#39;CodeRaft泛编程!&#39;)
+</code></pre></div></td></tr></table></div>
+<p>需要主动终止输出。</p>
+<h3 id="25-for">2.5 for 语句</h3>
+<p>Python for 循环可以遍历任何可迭代对象，如一个列表或者一个字符串。</p>
+<p>for循环的一般格式如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>for &lt;variable&gt; in &lt;sequence&gt;:
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>    &lt;statements&gt;
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>else:
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a>    &lt;statements&gt;
+</code></pre></div></td></tr></table></div>
+<p><img alt="image-20240722141055084" src="../Image/image-20240722141055084.png" /></p>
+<p>Python for 循环实例：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>sites = [&quot;Baidu&quot;, &quot;Google&quot;,&quot;Taobao&quot;] #列表形式储存
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a>for site in sites:
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>    print(site)
+</code></pre></div></td></tr></table></div>
+<p>以上代码执行输出结果为：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a>Baidu
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a>Google
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a>Taobao
+</code></pre></div></td></tr></table></div>
+<p>也可用于打印字符串中的每个字符：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<span class="normal"><a href="#__codelineno-28-2">2</a></span>
+<span class="normal"><a href="#__codelineno-28-3">3</a></span>
+<span class="normal"><a href="#__codelineno-28-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a>word = &#39;CodeRaft&#39;
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a>for letter in word:
+<a id="__codelineno-28-4" name="__codelineno-28-4"></a>    print(letter)
+</code></pre></div></td></tr></table></div>
+<p>以上代码执行输出结果为：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span>
+<span class="normal"><a href="#__codelineno-29-3">3</a></span>
+<span class="normal"><a href="#__codelineno-29-4">4</a></span>
+<span class="normal"><a href="#__codelineno-29-5">5</a></span>
+<span class="normal"><a href="#__codelineno-29-6">6</a></span>
+<span class="normal"><a href="#__codelineno-29-7">7</a></span>
+<span class="normal"><a href="#__codelineno-29-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a>C
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a>o
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a>d
+<a id="__codelineno-29-4" name="__codelineno-29-4"></a>e
+<a id="__codelineno-29-5" name="__codelineno-29-5"></a>R
+<a id="__codelineno-29-6" name="__codelineno-29-6"></a>a
+<a id="__codelineno-29-7" name="__codelineno-29-7"></a>f
+<a id="__codelineno-29-8" name="__codelineno-29-8"></a>t
+</code></pre></div></td></tr></table></div>
+<p>整数范围值可以配合 range() 函数使用：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<span class="normal"><a href="#__codelineno-30-2">2</a></span>
+<span class="normal"><a href="#__codelineno-30-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>#1 到 5 的所有数字：
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a>for number in range(1, 6):
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a>    print(number)
+</code></pre></div></td></tr></table></div>
+<p>以上代码执行输出结果为：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<span class="normal"><a href="#__codelineno-31-2">2</a></span>
+<span class="normal"><a href="#__codelineno-31-3">3</a></span>
+<span class="normal"><a href="#__codelineno-31-4">4</a></span>
+<span class="normal"><a href="#__codelineno-31-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a>1
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a>2
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a>3
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a>4
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a>5
+</code></pre></div></td></tr></table></div>
+<p>在 Python 中，for...else 语句用于在循环结束后执行一段代码。</p>
+<p>语法格式如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span>
+<span class="normal"><a href="#__codelineno-32-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a>for item in iterable:
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a>    # 循环主体
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a>else:
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a>    # 循环结束后执行的代码
+</code></pre></div></td></tr></table></div>
+<p>当循环执行完毕（即遍历完 iterable 中的所有元素）后，会执行 else 子句中的代码，如果在循环过程中遇到了 break 语句，则会中断循环，此时不会执行 else 子句。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<span class="normal"><a href="#__codelineno-33-2">2</a></span>
+<span class="normal"><a href="#__codelineno-33-3">3</a></span>
+<span class="normal"><a href="#__codelineno-33-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a>for x in range(6):
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a>  print(x)
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a>else:
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a>  print(&quot;Finally finished!&quot;)
+</code></pre></div></td></tr></table></div>
+<p>执行脚本后，输出结果为：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
+<span class="normal"><a href="#__codelineno-34-2">2</a></span>
+<span class="normal"><a href="#__codelineno-34-3">3</a></span>
+<span class="normal"><a href="#__codelineno-34-4">4</a></span>
+<span class="normal"><a href="#__codelineno-34-5">5</a></span>
+<span class="normal"><a href="#__codelineno-34-6">6</a></span>
+<span class="normal"><a href="#__codelineno-34-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a>0
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a>1
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a>2
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a>3
+<a id="__codelineno-34-5" name="__codelineno-34-5"></a>4
+<a id="__codelineno-34-6" name="__codelineno-34-6"></a>5
+<a id="__codelineno-34-7" name="__codelineno-34-7"></a>Finally finished!
+</code></pre></div></td></tr></table></div>
+<p>以下 for 实例中使用了 break 语句，break 语句用于跳出当前循环体，不会执行 else 子句：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
+<span class="normal"><a href="#__codelineno-35-2">2</a></span>
+<span class="normal"><a href="#__codelineno-35-3">3</a></span>
+<span class="normal"><a href="#__codelineno-35-4">4</a></span>
+<span class="normal"><a href="#__codelineno-35-5">5</a></span>
+<span class="normal"><a href="#__codelineno-35-6">6</a></span>
+<span class="normal"><a href="#__codelineno-35-7">7</a></span>
+<span class="normal"><a href="#__codelineno-35-8">8</a></span>
+<span class="normal"><a href="#__codelineno-35-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a>sites = [&quot;Baidu&quot;, &quot;Google&quot;,&quot;Taobao&quot;]
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a>for site in sites:
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a>    if site == &quot;Google&quot;:
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a>        print(&quot;谷歌！&quot;)
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a>        break
+<a id="__codelineno-35-6" name="__codelineno-35-6"></a>    print(&quot;国际大厂： &quot; + site)
+<a id="__codelineno-35-7" name="__codelineno-35-7"></a>else:
+<a id="__codelineno-35-8" name="__codelineno-35-8"></a>    print(&quot;没有完成循环&quot;)
+<a id="__codelineno-35-9" name="__codelineno-35-9"></a>print(&quot;完成循环!&quot;)
+</code></pre></div></td></tr></table></div>
+<p>执行脚本后，在循环到 "Google"时会跳出循环体：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
+<span class="normal"><a href="#__codelineno-36-2">2</a></span>
+<span class="normal"><a href="#__codelineno-36-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a>国际大厂： Baidu
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a>谷歌！
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a>完成循环!
+</code></pre></div></td></tr></table></div>
+<h3 id="26-range">2.6 range() 函数</h3>
+<p>如果你需要遍历数字序列，可以使用内置 range() 函数，range括号的内的参数为左开右闭区间[   )，分别为遍历的起始数，终止数，以及步长，如果不声明，默认起始为0，步长为1。它会生成数列，例如:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span>
+<span class="normal"><a href="#__codelineno-37-2">2</a></span>
+<span class="normal"><a href="#__codelineno-37-3">3</a></span>
+<span class="normal"><a href="#__codelineno-37-4">4</a></span>
+<span class="normal"><a href="#__codelineno-37-5">5</a></span>
+<span class="normal"><a href="#__codelineno-37-6">6</a></span>
+<span class="normal"><a href="#__codelineno-37-7">7</a></span>
+<span class="normal"><a href="#__codelineno-37-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a>&gt;&gt;&gt;for i in range(5):
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a>...     print(i)
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a>...
+<a id="__codelineno-37-4" name="__codelineno-37-4"></a>0
+<a id="__codelineno-37-5" name="__codelineno-37-5"></a>1
+<a id="__codelineno-37-6" name="__codelineno-37-6"></a>2
+<a id="__codelineno-37-7" name="__codelineno-37-7"></a>3
+<a id="__codelineno-37-8" name="__codelineno-37-8"></a>4
+</code></pre></div></td></tr></table></div>
+<p>你也可以使用 range() 指定区间的值：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
+<span class="normal"><a href="#__codelineno-38-2">2</a></span>
+<span class="normal"><a href="#__codelineno-38-3">3</a></span>
+<span class="normal"><a href="#__codelineno-38-4">4</a></span>
+<span class="normal"><a href="#__codelineno-38-5">5</a></span>
+<span class="normal"><a href="#__codelineno-38-6">6</a></span>
+<span class="normal"><a href="#__codelineno-38-7">7</a></span>
+<span class="normal"><a href="#__codelineno-38-8">8</a></span>
+<span class="normal"><a href="#__codelineno-38-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a>&gt;&gt;&gt;for i in range(5,9) :
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a>    print(i)
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a>
+<a id="__codelineno-38-4" name="__codelineno-38-4"></a>
+<a id="__codelineno-38-5" name="__codelineno-38-5"></a>5
+<a id="__codelineno-38-6" name="__codelineno-38-6"></a>6
+<a id="__codelineno-38-7" name="__codelineno-38-7"></a>7
+<a id="__codelineno-38-8" name="__codelineno-38-8"></a>8
+<a id="__codelineno-38-9" name="__codelineno-38-9"></a>&gt;&gt;&gt;
+</code></pre></div></td></tr></table></div>
+<p>也可以使 range() 以指定数字开始并指定不同的增量(甚至可以是负数，叫做'步长'):</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
+<span class="normal"><a href="#__codelineno-39-2">2</a></span>
+<span class="normal"><a href="#__codelineno-39-3">3</a></span>
+<span class="normal"><a href="#__codelineno-39-4">4</a></span>
+<span class="normal"><a href="#__codelineno-39-5">5</a></span>
+<span class="normal"><a href="#__codelineno-39-6">6</a></span>
+<span class="normal"><a href="#__codelineno-39-7">7</a></span>
+<span class="normal"><a href="#__codelineno-39-8">8</a></span>
+<span class="normal"><a href="#__codelineno-39-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a>&gt;&gt;&gt;for i in range(0, 10, 3) :
+<a id="__codelineno-39-2" name="__codelineno-39-2"></a>    print(i)
+<a id="__codelineno-39-3" name="__codelineno-39-3"></a>
+<a id="__codelineno-39-4" name="__codelineno-39-4"></a>
+<a id="__codelineno-39-5" name="__codelineno-39-5"></a>0
+<a id="__codelineno-39-6" name="__codelineno-39-6"></a>3
+<a id="__codelineno-39-7" name="__codelineno-39-7"></a>6
+<a id="__codelineno-39-8" name="__codelineno-39-8"></a>9
+<a id="__codelineno-39-9" name="__codelineno-39-9"></a>&gt;&gt;&gt;
+</code></pre></div></td></tr></table></div>
+实现倒序遍历：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span>
+<span class="normal"><a href="#__codelineno-40-2">2</a></span>
+<span class="normal"><a href="#__codelineno-40-3">3</a></span>
+<span class="normal"><a href="#__codelineno-40-4">4</a></span>
+<span class="normal"><a href="#__codelineno-40-5">5</a></span>
+<span class="normal"><a href="#__codelineno-40-6">6</a></span>
+<span class="normal"><a href="#__codelineno-40-7">7</a></span>
+<span class="normal"><a href="#__codelineno-40-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a>&gt;&gt;&gt;for i in range(5,1,-1):
+<a id="__codelineno-40-2" name="__codelineno-40-2"></a>        print(i)
+<a id="__codelineno-40-3" name="__codelineno-40-3"></a>
+<a id="__codelineno-40-4" name="__codelineno-40-4"></a>5
+<a id="__codelineno-40-5" name="__codelineno-40-5"></a>4
+<a id="__codelineno-40-6" name="__codelineno-40-6"></a>3
+<a id="__codelineno-40-7" name="__codelineno-40-7"></a>2   
+<a id="__codelineno-40-8" name="__codelineno-40-8"></a>&gt;&gt;&gt;
+</code></pre></div></td></tr></table></div>
+<p>负数：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span>
+<span class="normal"><a href="#__codelineno-41-2">2</a></span>
+<span class="normal"><a href="#__codelineno-41-3">3</a></span>
+<span class="normal"><a href="#__codelineno-41-4">4</a></span>
+<span class="normal"><a href="#__codelineno-41-5">5</a></span>
+<span class="normal"><a href="#__codelineno-41-6">6</a></span>
+<span class="normal"><a href="#__codelineno-41-7">7</a></span>
+<span class="normal"><a href="#__codelineno-41-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a>&gt;&gt;&gt;for i in range(-10, -100, -30) :
+<a id="__codelineno-41-2" name="__codelineno-41-2"></a>    print(i)
+<a id="__codelineno-41-3" name="__codelineno-41-3"></a>
+<a id="__codelineno-41-4" name="__codelineno-41-4"></a>
+<a id="__codelineno-41-5" name="__codelineno-41-5"></a>-10
+<a id="__codelineno-41-6" name="__codelineno-41-6"></a>-40
+<a id="__codelineno-41-7" name="__codelineno-41-7"></a>-70
+<a id="__codelineno-41-8" name="__codelineno-41-8"></a>&gt;&gt;&gt;
+</code></pre></div></td></tr></table></div>
+<p>结合 range() 和 len() 函数以遍历一个序列的索引,如下所示：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span>
+<span class="normal"><a href="#__codelineno-42-2">2</a></span>
+<span class="normal"><a href="#__codelineno-42-3">3</a></span>
+<span class="normal"><a href="#__codelineno-42-4">4</a></span>
+<span class="normal"><a href="#__codelineno-42-5">5</a></span>
+<span class="normal"><a href="#__codelineno-42-6">6</a></span>
+<span class="normal"><a href="#__codelineno-42-7">7</a></span>
+<span class="normal"><a href="#__codelineno-42-8">8</a></span>
+<span class="normal"><a href="#__codelineno-42-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1"></a>&gt;&gt;&gt;a = [&#39;Google&#39;, &#39;Baidu&#39;, &#39;Taobao&#39;, &#39;QQ&#39;]
+<a id="__codelineno-42-2" name="__codelineno-42-2"></a>&gt;&gt;&gt; for i in range(len(a)):
+<a id="__codelineno-42-3" name="__codelineno-42-3"></a>...     print(i, a[i])
+<a id="__codelineno-42-4" name="__codelineno-42-4"></a>... 
+<a id="__codelineno-42-5" name="__codelineno-42-5"></a>0 Google
+<a id="__codelineno-42-6" name="__codelineno-42-6"></a>1 Baidu
+<a id="__codelineno-42-7" name="__codelineno-42-7"></a>2 Taobao
+<a id="__codelineno-42-8" name="__codelineno-42-8"></a>3 QQ
+<a id="__codelineno-42-9" name="__codelineno-42-9"></a>&gt;&gt;&gt;
+</code></pre></div></td></tr></table></div>
+<p>还可以使用 range() 函数来创建一个列表：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span>
+<span class="normal"><a href="#__codelineno-43-2">2</a></span>
+<span class="normal"><a href="#__codelineno-43-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a>&gt;&gt;&gt;list(range(5))
+<a id="__codelineno-43-2" name="__codelineno-43-2"></a>[0, 1, 2, 3, 4]
+<a id="__codelineno-43-3" name="__codelineno-43-3"></a>&gt;&gt;&gt;
+</code></pre></div></td></tr></table></div>
+<h4 id="break-continue-else">break 和 continue 语句及循环中的 else 子句</h4>
+<p><strong>break 执行流程图：</strong></p>
+<p><img alt="image-20240722142445718" src="../Image/image-20240722142445718.png" /></p>
+<p><strong>continue 执行流程图：</strong></p>
+<p><img alt="image-20240722142521594" src="../Image/image-20240722142521594.png" /></p>
+<p>while 语句代码执行过程：</p>
+<p><img alt="img" src="../Image/2331727438258.jpg" /></p>
+<p>or 语句代码执行过程：</p>
+<p><img alt="img" src="https://www.runoob.com/wp-content/uploads/2014/05/break-continue-536.png" /></p>
+<p><strong>break</strong> 语句可以跳出 for 和 while 的循环体。如果你从 for 或 while 循环中终止，任何对应的循环 else 块将不执行。</p>
+<p><strong>continue</strong> 语句被用来告诉 Python 跳过当前循环块中的剩余语句，然后继续进行下一轮循环。</p>
+<p>实例：</p>
+<p>while 中使用 break：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1">1</a></span>
+<span class="normal"><a href="#__codelineno-44-2">2</a></span>
+<span class="normal"><a href="#__codelineno-44-3">3</a></span>
+<span class="normal"><a href="#__codelineno-44-4">4</a></span>
+<span class="normal"><a href="#__codelineno-44-5">5</a></span>
+<span class="normal"><a href="#__codelineno-44-6">6</a></span>
+<span class="normal"><a href="#__codelineno-44-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a>n = 5
+<a id="__codelineno-44-2" name="__codelineno-44-2"></a>while n &gt; 0:
+<a id="__codelineno-44-3" name="__codelineno-44-3"></a>    n -= 1
+<a id="__codelineno-44-4" name="__codelineno-44-4"></a>    if n == 2:
+<a id="__codelineno-44-5" name="__codelineno-44-5"></a>        break
+<a id="__codelineno-44-6" name="__codelineno-44-6"></a>    print(n)
+<a id="__codelineno-44-7" name="__codelineno-44-7"></a>print(&#39;循环结束。&#39;)
+</code></pre></div></td></tr></table></div>
+<p>结果：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span>
+<span class="normal"><a href="#__codelineno-45-2">2</a></span>
+<span class="normal"><a href="#__codelineno-45-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1"></a>4
+<a id="__codelineno-45-2" name="__codelineno-45-2"></a>3
+<a id="__codelineno-45-3" name="__codelineno-45-3"></a>循环结束。
+</code></pre></div></td></tr></table></div>
+<p>while 中使用 continue：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span>
+<span class="normal"><a href="#__codelineno-46-2">2</a></span>
+<span class="normal"><a href="#__codelineno-46-3">3</a></span>
+<span class="normal"><a href="#__codelineno-46-4">4</a></span>
+<span class="normal"><a href="#__codelineno-46-5">5</a></span>
+<span class="normal"><a href="#__codelineno-46-6">6</a></span>
+<span class="normal"><a href="#__codelineno-46-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1"></a>n = 5
+<a id="__codelineno-46-2" name="__codelineno-46-2"></a>while n &gt; 0:
+<a id="__codelineno-46-3" name="__codelineno-46-3"></a>    n -= 1
+<a id="__codelineno-46-4" name="__codelineno-46-4"></a>    if n == 2:
+<a id="__codelineno-46-5" name="__codelineno-46-5"></a>        continue
+<a id="__codelineno-46-6" name="__codelineno-46-6"></a>    print(n)
+<a id="__codelineno-46-7" name="__codelineno-46-7"></a>print(&#39;循环结束。&#39;)
+</code></pre></div></td></tr></table></div>
+<p>结果：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1">1</a></span>
+<span class="normal"><a href="#__codelineno-47-2">2</a></span>
+<span class="normal"><a href="#__codelineno-47-3">3</a></span>
+<span class="normal"><a href="#__codelineno-47-4">4</a></span>
+<span class="normal"><a href="#__codelineno-47-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a>4
+<a id="__codelineno-47-2" name="__codelineno-47-2"></a>3
+<a id="__codelineno-47-3" name="__codelineno-47-3"></a>1
+<a id="__codelineno-47-4" name="__codelineno-47-4"></a>0
+<a id="__codelineno-47-5" name="__codelineno-47-5"></a>循环结束。
+</code></pre></div></td></tr></table></div>
+<p>循环语句可以有 else 子句，它在穷尽列表(以for循环)或条件变为 false (以while循环)导致循环终止时被执行，但循环被 break 终止时不执行。</p>
+<p>如下实例用于查询质数的循环例子：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span>
+<span class="normal"><a href="#__codelineno-48-2">2</a></span>
+<span class="normal"><a href="#__codelineno-48-3">3</a></span>
+<span class="normal"><a href="#__codelineno-48-4">4</a></span>
+<span class="normal"><a href="#__codelineno-48-5">5</a></span>
+<span class="normal"><a href="#__codelineno-48-6">6</a></span>
+<span class="normal"><a href="#__codelineno-48-7">7</a></span>
+<span class="normal"><a href="#__codelineno-48-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1"></a>for n in range(2, 10):
+<a id="__codelineno-48-2" name="__codelineno-48-2"></a>    for x in range(2, n):
+<a id="__codelineno-48-3" name="__codelineno-48-3"></a>        if n % x == 0:
+<a id="__codelineno-48-4" name="__codelineno-48-4"></a>            print(n, &#39;等于&#39;, x, &#39;*&#39;, n//x)
+<a id="__codelineno-48-5" name="__codelineno-48-5"></a>            break
+<a id="__codelineno-48-6" name="__codelineno-48-6"></a>    else:
+<a id="__codelineno-48-7" name="__codelineno-48-7"></a>        # 循环中没有找到元素
+<a id="__codelineno-48-8" name="__codelineno-48-8"></a>        print(n, &#39; 是质数&#39;)
+</code></pre></div></td></tr></table></div>
+<p>结果：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1">1</a></span>
+<span class="normal"><a href="#__codelineno-49-2">2</a></span>
+<span class="normal"><a href="#__codelineno-49-3">3</a></span>
+<span class="normal"><a href="#__codelineno-49-4">4</a></span>
+<span class="normal"><a href="#__codelineno-49-5">5</a></span>
+<span class="normal"><a href="#__codelineno-49-6">6</a></span>
+<span class="normal"><a href="#__codelineno-49-7">7</a></span>
+<span class="normal"><a href="#__codelineno-49-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1"></a>2  是质数
+<a id="__codelineno-49-2" name="__codelineno-49-2"></a>3  是质数
+<a id="__codelineno-49-3" name="__codelineno-49-3"></a>4 等于 2 * 2
+<a id="__codelineno-49-4" name="__codelineno-49-4"></a>5  是质数
+<a id="__codelineno-49-5" name="__codelineno-49-5"></a>6 等于 2 * 3
+<a id="__codelineno-49-6" name="__codelineno-49-6"></a>7  是质数
+<a id="__codelineno-49-7" name="__codelineno-49-7"></a>8 等于 2 * 4
+<a id="__codelineno-49-8" name="__codelineno-49-8"></a>9 等于 3 * 3
+</code></pre></div></td></tr></table></div>
+<h3 id="27-pass">2.7 pass 语句</h3>
+<p>Python pass是空语句，是为了保持程序结构的完整性。</p>
+<p>pass 不做任何事情，一般用做占位语句，如下实例</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1">1</a></span>
+<span class="normal"><a href="#__codelineno-50-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a>&gt;&gt;&gt;while True:
+<a id="__codelineno-50-2" name="__codelineno-50-2"></a>...     pass  # 等待键盘中断
+</code></pre></div></td></tr></table></div>
+<p>以下实例在字母为 o 时 执行 pass 语句块：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1">1</a></span>
+<span class="normal"><a href="#__codelineno-51-2">2</a></span>
+<span class="normal"><a href="#__codelineno-51-3">3</a></span>
+<span class="normal"><a href="#__codelineno-51-4">4</a></span>
+<span class="normal"><a href="#__codelineno-51-5">5</a></span>
+<span class="normal"><a href="#__codelineno-51-6">6</a></span>
+<span class="normal"><a href="#__codelineno-51-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1"></a>for letter in &#39;CodeRaft&#39;:
+<a id="__codelineno-51-2" name="__codelineno-51-2"></a>    if letter == &#39;f&#39;:
+<a id="__codelineno-51-3" name="__codelineno-51-3"></a>        pass
+<a id="__codelineno-51-4" name="__codelineno-51-4"></a>        print(&#39;执行 pass 块&#39;)
+<a id="__codelineno-51-5" name="__codelineno-51-5"></a>    print(&#39;当前字母 :&#39;, letter)
+<a id="__codelineno-51-6" name="__codelineno-51-6"></a>
+<a id="__codelineno-51-7" name="__codelineno-51-7"></a>print(&quot;Good bye!&quot;)
+</code></pre></div></td></tr></table></div>
+<p>结果：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-52-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-52-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-52-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-52-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-52-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-52-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-52-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-52-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-52-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1"></a>当前字母 : C
+<a id="__codelineno-52-2" name="__codelineno-52-2"></a>当前字母 : o
+<a id="__codelineno-52-3" name="__codelineno-52-3"></a>当前字母 : d
+<a id="__codelineno-52-4" name="__codelineno-52-4"></a>当前字母 : e
+<a id="__codelineno-52-5" name="__codelineno-52-5"></a>当前字母 : R
+<a id="__codelineno-52-6" name="__codelineno-52-6"></a>当前字母 : a
+<a id="__codelineno-52-7" name="__codelineno-52-7"></a>执行 pass 块
+<a id="__codelineno-52-8" name="__codelineno-52-8"></a>当前字母 : f
+<a id="__codelineno-52-9" name="__codelineno-52-9"></a>当前字母 : t
+<a id="__codelineno-52-10" name="__codelineno-52-10"></a>Good bye!
+</code></pre></div></td></tr></table></div>
+<h2 id="_2">课后练习</h2>
+<h3 id="1_1">1.点餐程序</h3>
+<p>题目描述：</p>
+<p>设计一个简单的餐厅点单程序，程序能够连续接受多个顾客的点单。程序提前知道汉堡、薯条和可乐的价格。每位顾客可以选择点汉堡、薯条和可乐的数量，程序将输出每位顾客的点单内容和总价，最后输出所有顾客的总销售额。</p>
+<h4 id="_3">要求：</h4>
+<ol>
+<li>程序开始时，定义汉堡、薯条和可乐的价格常量。</li>
+<li>使用循环语句连续接受顾客的点单，在开始计算前，可以设置一个专用的变量获取用户意图是继续点单还是退出（例：输入-1退出并计算总销售额，其他数字则进行下一轮点单）。</li>
+<li>每次接受顾客的点单后，输出顾客的点单内容和本次点单的总价。</li>
+<li>累加每位顾客的点单总价到总销售额中。</li>
+<li>退出点单后，输出所有顾客的总销售额。</li>
+</ol>
+<h4 id="_4">示例运行：</h4>
+<p>假设操作流程如下：</p>
+<ol>
+<li>第一位顾客点汉堡 2，薯条 1，可乐 3；</li>
+<li>第二位顾客点汉堡 1，薯条 2，可乐 2；</li>
+<li>选择退出程序。</li>
+</ol>
+<p>参考示例：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-53-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-53-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-53-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-53-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-53-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-53-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-53-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-53-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-53-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-53-10">10</a></span>
+<span class="normal"><a href="#__codelineno-53-11">11</a></span>
+<span class="normal"><a href="#__codelineno-53-12">12</a></span>
+<span class="normal"><a href="#__codelineno-53-13">13</a></span>
+<span class="normal"><a href="#__codelineno-53-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1"></a>输入-1退出并计算总销售额，其他数字继续点单: 1
+<a id="__codelineno-53-2" name="__codelineno-53-2"></a>请输入汉堡的数量: 2
+<a id="__codelineno-53-3" name="__codelineno-53-3"></a>请输入薯条的数量: 1
+<a id="__codelineno-53-4" name="__codelineno-53-4"></a>请输入可乐的数量: 3
+<a id="__codelineno-53-5" name="__codelineno-53-5"></a>顾客点单内容: 汉堡 2 个, 薯条 1 份, 可乐 3 瓶
+<a id="__codelineno-53-6" name="__codelineno-53-6"></a>本次点单总价: 44.50 元
+<a id="__codelineno-53-7" name="__codelineno-53-7"></a>输入-1退出并计算总销售额，其他数字继续点单: 1
+<a id="__codelineno-53-8" name="__codelineno-53-8"></a>请输入汉堡的数量: 1
+<a id="__codelineno-53-9" name="__codelineno-53-9"></a>请输入薯条的数量: 2
+<a id="__codelineno-53-10" name="__codelineno-53-10"></a>请输入可乐的数量: 2
+<a id="__codelineno-53-11" name="__codelineno-53-11"></a>顾客点单内容: 汉堡 1 个, 薯条 2 份, 可乐 2 瓶
+<a id="__codelineno-53-12" name="__codelineno-53-12"></a>本次点单总价: 33.50 元
+<a id="__codelineno-53-13" name="__codelineno-53-13"></a>输入-1退出并计算总销售额，其他数字继续点单: -1
+<a id="__codelineno-53-14" name="__codelineno-53-14"></a>所有顾客的总销售额: 78.00 元
+</code></pre></div></td></tr></table></div>
+<p>参考代码：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-54-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-54-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-54-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-54-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-54-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-54-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-54-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-54-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-54-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-54-10">10</a></span>
+<span class="normal"><a href="#__codelineno-54-11">11</a></span>
+<span class="normal"><a href="#__codelineno-54-12">12</a></span>
+<span class="normal"><a href="#__codelineno-54-13">13</a></span>
+<span class="normal"><a href="#__codelineno-54-14">14</a></span>
+<span class="normal"><a href="#__codelineno-54-15">15</a></span>
+<span class="normal"><a href="#__codelineno-54-16">16</a></span>
+<span class="normal"><a href="#__codelineno-54-17">17</a></span>
+<span class="normal"><a href="#__codelineno-54-18">18</a></span>
+<span class="normal"><a href="#__codelineno-54-19">19</a></span>
+<span class="normal"><a href="#__codelineno-54-20">20</a></span>
+<span class="normal"><a href="#__codelineno-54-21">21</a></span>
+<span class="normal"><a href="#__codelineno-54-22">22</a></span>
+<span class="normal"><a href="#__codelineno-54-23">23</a></span>
+<span class="normal"><a href="#__codelineno-54-24">24</a></span>
+<span class="normal"><a href="#__codelineno-54-25">25</a></span>
+<span class="normal"><a href="#__codelineno-54-26">26</a></span>
+<span class="normal"><a href="#__codelineno-54-27">27</a></span>
+<span class="normal"><a href="#__codelineno-54-28">28</a></span>
+<span class="normal"><a href="#__codelineno-54-29">29</a></span>
+<span class="normal"><a href="#__codelineno-54-30">30</a></span>
+<span class="normal"><a href="#__codelineno-54-31">31</a></span>
+<span class="normal"><a href="#__codelineno-54-32">32</a></span>
+<span class="normal"><a href="#__codelineno-54-33">33</a></span>
+<span class="normal"><a href="#__codelineno-54-34">34</a></span>
+<span class="normal"><a href="#__codelineno-54-35">35</a></span>
+<span class="normal"><a href="#__codelineno-54-36">36</a></span>
+<span class="normal"><a href="#__codelineno-54-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1"></a># 餐厅点单程序
+<a id="__codelineno-54-2" name="__codelineno-54-2"></a>
+<a id="__codelineno-54-3" name="__codelineno-54-3"></a># 定义商品的价格常量
+<a id="__codelineno-54-4" name="__codelineno-54-4"></a>PRICE_BURGER = 12.5  # 汉堡的价格
+<a id="__codelineno-54-5" name="__codelineno-54-5"></a>PRICE_FRIES = 6  # 薯条的价格
+<a id="__codelineno-54-6" name="__codelineno-54-6"></a>PRICE_COKE = 4.5  # 可乐的价格
+<a id="__codelineno-54-7" name="__codelineno-54-7"></a>
+<a id="__codelineno-54-8" name="__codelineno-54-8"></a># 初始化总销售额
+<a id="__codelineno-54-9" name="__codelineno-54-9"></a>total_sales = 0.0
+<a id="__codelineno-54-10" name="__codelineno-54-10"></a>
+<a id="__codelineno-54-11" name="__codelineno-54-11"></a>while True:
+<a id="__codelineno-54-12" name="__codelineno-54-12"></a>    # 提示用户输入是否继续点单，-1表示退出
+<a id="__codelineno-54-13" name="__codelineno-54-13"></a>    user_input = input(&quot;输入-1退出并计算总销售额，其他数字继续点单: &quot;)
+<a id="__codelineno-54-14" name="__codelineno-54-14"></a>    if user_input == &#39;-1&#39;:
+<a id="__codelineno-54-15" name="__codelineno-54-15"></a>        break
+<a id="__codelineno-54-16" name="__codelineno-54-16"></a>
+<a id="__codelineno-54-17" name="__codelineno-54-17"></a>    # 接受顾客的点单
+<a id="__codelineno-54-18" name="__codelineno-54-18"></a>    try:
+<a id="__codelineno-54-19" name="__codelineno-54-19"></a>        num_burgers = int(input(&quot;请输入汉堡的数量: &quot;))
+<a id="__codelineno-54-20" name="__codelineno-54-20"></a>        num_fries = int(input(&quot;请输入薯条的数量: &quot;))
+<a id="__codelineno-54-21" name="__codelineno-54-21"></a>        num_cokes = int(input(&quot;请输入可乐的数量: &quot;))
+<a id="__codelineno-54-22" name="__codelineno-54-22"></a>    except ValueError:
+<a id="__codelineno-54-23" name="__codelineno-54-23"></a>        print(&quot;请输入有效的数量。&quot;)
+<a id="__codelineno-54-24" name="__codelineno-54-24"></a>        continue
+<a id="__codelineno-54-25" name="__codelineno-54-25"></a>
+<a id="__codelineno-54-26" name="__codelineno-54-26"></a>    # 计算当前顾客的点单总价
+<a id="__codelineno-54-27" name="__codelineno-54-27"></a>    total_price = num_burgers * PRICE_BURGER + num_fries * PRICE_FRIES + num_cokes * PRICE_COKE
+<a id="__codelineno-54-28" name="__codelineno-54-28"></a>
+<a id="__codelineno-54-29" name="__codelineno-54-29"></a>    # 输出当前顾客的点单内容和总价
+<a id="__codelineno-54-30" name="__codelineno-54-30"></a>    print(f&quot;顾客点单内容: 汉堡 {num_burgers} 个, 薯条 {num_fries} 份, 可乐 {num_cokes} 瓶&quot;)
+<a id="__codelineno-54-31" name="__codelineno-54-31"></a>    print(f&quot;本次点单总价: {total_price:.2f} 元&quot;)
+<a id="__codelineno-54-32" name="__codelineno-54-32"></a>
+<a id="__codelineno-54-33" name="__codelineno-54-33"></a>    # 将本次点单总价累加到总销售额中
+<a id="__codelineno-54-34" name="__codelineno-54-34"></a>    total_sales += total_price
+<a id="__codelineno-54-35" name="__codelineno-54-35"></a>
+<a id="__codelineno-54-36" name="__codelineno-54-36"></a># 输出所有顾客的总销售额
+<a id="__codelineno-54-37" name="__codelineno-54-37"></a>print(f&quot;所有顾客的总销售额: {total_sales:.2f} 元&quot;)
+</code></pre></div></td></tr></table></div>
+<h3 id="2python">2.Python 猜数字游戏</h3>
+<p><strong>题目描述</strong>： 编写一个Python程序来实现一个猜数字游戏。程序将随机选择一个在1到100之间的数字，用户需要通过输入来猜这个数字，程序根据用户的猜测给出提示（猜高了、猜低了或猜对了），直到用户猜对为止。</p>
+<p><strong>具体要求</strong>：</p>
+<ol>
+<li>程序一开始应随机生成一个1到100之间的数字。</li>
+<li>用户输入猜测的数字，程序根据用户的输入给出相应的提示。</li>
+<li>如果用户猜对了，显示猜对的信息并结束游戏。</li>
+<li>如果用户猜错，根据猜测的数字是高于还是低于目标数字，给出相应的提示，并让用户继续猜。</li>
+<li>使用循环确保游戏可以继续进行，直到用户猜对为止。</li>
+</ol>
+<p>参考示例：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-1">1</a></span>
+<span class="normal"><a href="#__codelineno-55-2">2</a></span>
+<span class="normal"><a href="#__codelineno-55-3">3</a></span>
+<span class="normal"><a href="#__codelineno-55-4">4</a></span>
+<span class="normal"><a href="#__codelineno-55-5">5</a></span>
+<span class="normal"><a href="#__codelineno-55-6">6</a></span>
+<span class="normal"><a href="#__codelineno-55-7">7</a></span>
+<span class="normal"><a href="#__codelineno-55-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1"></a>欢迎参加猜数字游戏！请猜一个1到100之间的数字。
+<a id="__codelineno-55-2" name="__codelineno-55-2"></a>请输入你的猜测：50
+<a id="__codelineno-55-3" name="__codelineno-55-3"></a>太低了，再试试看！
+<a id="__codelineno-55-4" name="__codelineno-55-4"></a>请输入你的猜测：75
+<a id="__codelineno-55-5" name="__codelineno-55-5"></a>太高了，再试试看！
+<a id="__codelineno-55-6" name="__codelineno-55-6"></a>请输入你的猜测：62
+<a id="__codelineno-55-7" name="__codelineno-55-7"></a>恭喜你，猜对了！正确答案就是62。
+<a id="__codelineno-55-8" name="__codelineno-55-8"></a>游戏结束。谢谢参与！
+</code></pre></div></td></tr></table></div>
+<p>参考代码：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-56-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-56-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-56-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-56-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-56-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-56-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-56-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-56-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-56-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-56-10">10</a></span>
+<span class="normal"><a href="#__codelineno-56-11">11</a></span>
+<span class="normal"><a href="#__codelineno-56-12">12</a></span>
+<span class="normal"><a href="#__codelineno-56-13">13</a></span>
+<span class="normal"><a href="#__codelineno-56-14">14</a></span>
+<span class="normal"><a href="#__codelineno-56-15">15</a></span>
+<span class="normal"><a href="#__codelineno-56-16">16</a></span>
+<span class="normal"><a href="#__codelineno-56-17">17</a></span>
+<span class="normal"><a href="#__codelineno-56-18">18</a></span>
+<span class="normal"><a href="#__codelineno-56-19">19</a></span>
+<span class="normal"><a href="#__codelineno-56-20">20</a></span>
+<span class="normal"><a href="#__codelineno-56-21">21</a></span>
+<span class="normal"><a href="#__codelineno-56-22">22</a></span>
+<span class="normal"><a href="#__codelineno-56-23">23</a></span>
+<span class="normal"><a href="#__codelineno-56-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1"></a>import random
+<a id="__codelineno-56-2" name="__codelineno-56-2"></a>
+<a id="__codelineno-56-3" name="__codelineno-56-3"></a># 生成一个1到100之间的随机数
+<a id="__codelineno-56-4" name="__codelineno-56-4"></a>target_number = random.randint(1, 100)
+<a id="__codelineno-56-5" name="__codelineno-56-5"></a>guess = None
+<a id="__codelineno-56-6" name="__codelineno-56-6"></a>
+<a id="__codelineno-56-7" name="__codelineno-56-7"></a># 游戏欢迎信息
+<a id="__codelineno-56-8" name="__codelineno-56-8"></a>print(&quot;欢迎参加猜数字游戏！请猜一个1到100之间的数字。&quot;)
+<a id="__codelineno-56-9" name="__codelineno-56-9"></a>
+<a id="__codelineno-56-10" name="__codelineno-56-10"></a># 开始猜数字的循环
+<a id="__codelineno-56-11" name="__codelineno-56-11"></a>while guess != target_number:
+<a id="__codelineno-56-12" name="__codelineno-56-12"></a>    # 获取用户输入
+<a id="__codelineno-56-13" name="__codelineno-56-13"></a>    guess = int(input(&quot;请输入你的猜测：&quot;))
+<a id="__codelineno-56-14" name="__codelineno-56-14"></a>
+<a id="__codelineno-56-15" name="__codelineno-56-15"></a>    # 判断猜测结果
+<a id="__codelineno-56-16" name="__codelineno-56-16"></a>    if guess &lt; target_number:
+<a id="__codelineno-56-17" name="__codelineno-56-17"></a>        print(&quot;太低了，再试试看！&quot;)
+<a id="__codelineno-56-18" name="__codelineno-56-18"></a>    elif guess &gt; target_number:
+<a id="__codelineno-56-19" name="__codelineno-56-19"></a>        print(&quot;太高了，再试试看！&quot;)
+<a id="__codelineno-56-20" name="__codelineno-56-20"></a>    else:
+<a id="__codelineno-56-21" name="__codelineno-56-21"></a>        print(f&quot;恭喜你，猜对了！正确答案就是{target_number}。&quot;)
+<a id="__codelineno-56-22" name="__codelineno-56-22"></a>
+<a id="__codelineno-56-23" name="__codelineno-56-23"></a># 结束游戏
+<a id="__codelineno-56-24" name="__codelineno-56-24"></a>print(&quot;游戏结束。谢谢参与！&quot;)
+</code></pre></div></td></tr></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+    
+  </body>
+</html>
