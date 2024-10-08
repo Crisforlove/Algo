@@ -8,7 +8,7 @@
 
 创建一个列表，只要把逗号分隔的不同的数据项使用方括号括起来即可。如下所示：
 
-```
+```python
 list1 = ['Google', 'Baidu', 1997, 2000]
 list2 = [1, 2, 3, 4, 5 ]
 list3 = ["a", "b", "c", "d"]
@@ -47,7 +47,7 @@ list4 = ['red', 'green', 'blue', 'yellow', 'white', 'black']
 
 ![img](https://www.runoob.com/wp-content/uploads/2014/05/positive-indexes-1.png)
 
-```
+```python
 list = ['red', 'green', 'blue', 'yellow', 'white', 'black']
 print(list[0])
 print(list[1])
@@ -66,7 +66,7 @@ blue
 
 ![img](https://www.runoob.com/wp-content/uploads/2014/05/negative-indexes.png)
 
-```
+```python
 list = ['red', 'green', 'blue', 'yellow', 'white', 'black']
 print(list[-1])
 print(list[-2])
@@ -85,7 +85,7 @@ yellow
 
 ![img](https://www.runoob.com/wp-content/uploads/2014/05/first-slice.png)
 
-```
+```python
 nums = [10, 20, 30, 40, 50, 60, 70, 80, 90]
 print(nums[0:4])
 ```
@@ -98,7 +98,7 @@ print(nums[0:4])
 
 使用负数索引值截取：
 
-```
+```python
 list = ['Google', 'Amazon', "Zhihu", "Taobao", "Wiki"]
 
 # 读取第二位
@@ -120,7 +120,7 @@ list[1:-2]:  ['Amazon', 'Zhihu']
 
 你可以对列表的数据项进行修改或更新，你也可以使用 append() 方法来添加列表项，如下所示：
 
-```
+```python
 list = ['Google', 'Amazon', 1997, 2000]
 
 print ("第三个元素为 : ", list[2])
@@ -144,7 +144,7 @@ print ("更新后的列表 : ", list1)
 
 你还可以使用 `insert()` 方法在列表的指定位置插入元素。`insert()` 方法语法格式如下：
 
-```
+```python
 list.insert(index, obj)
 ```
 
@@ -152,7 +152,7 @@ list.insert(index, obj)
 
 示例代码如下：
 
-```
+```python
 list2 = ['Google', 'Amazon', 'Taobao']
 list2.insert(1, 'Baidu')  # 在索引为1的位置插入'Baidu'
 print("插入元素后的列表：", list2)
@@ -170,7 +170,7 @@ print("插入元素后的列表：", list2)
 
 可以使用 del 语句来删除列表中的元素，如下实例：
 
-```
+```python
 list = ['Google', 'Amazon', 1997, 2000]
  
 print ("原始列表 : ", list)
@@ -314,7 +314,7 @@ print(programming_languages.index("Python"))
 
 当然上面这种index方法有一个需要注意的点：如果我们index找不到搜索的值，就会报错，类似：
 
-```
+```python
 programming_languages = ["JavaScript","Python","Java","C++"]
 
 print(programming_languages.index("C"))
@@ -330,7 +330,7 @@ ValueError: 'C' is not in list
 
 为了避免这种错误的发生，我们可以使用if-else的方法来避免系统报错，示例为：
 
-```
+```python
 def find_index(lst, item):
     if item in lst:
         return lst.index(item)  # 如果找到，返回该值
@@ -390,7 +390,7 @@ print(python_indices)
 
 当然也可以通过索引来遍历内容，
 
-```
+```python
 programming_languages = ["JavaScript","Python","Java","Python","C++","Python"]
 for i in range(3):
     print(programming_languages[i])
@@ -429,7 +429,7 @@ Python列表是一种灵活且常用的数据结构，可以存储和操作任�
 
 代码示例：
 
-```
+```python
 def linear_search(name_list, target_name):
     for index in range(len(name_list)):
         if name_list[index] == target_name:

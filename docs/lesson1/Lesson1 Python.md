@@ -248,7 +248,7 @@ Anaconda因其全面的集成，对于初学者是极其友好的，虽然功能
 
 Python中单行注释以 **#** 开头，实例如下：
 
-```
+```python
 # 第一个注释
 print("Hello, Python!") # 第二个注释
 ```
@@ -261,7 +261,7 @@ Hello, Python!
 
 多行注释可以用多个 **#** 号，还有 **'''** 和 **" " "**：
 
-```
+```python
 # 第一个注释
 # 第二个注释
  
@@ -289,7 +289,7 @@ python最具特色的就是使用缩进来表示代码块，不需要使用大�
 
 缩进的空格数是可变的，但是同一个代码块的语句必须包含相同的缩进空格数。实例如下：
 
-```
+```python
 if True:
     print("True")
 else:
@@ -298,7 +298,7 @@ else:
 
 以下代码最后一行语句缩进数的空格数不一致，会导致运行错误：
 
-```
+```python
 if True:
     print("Answer")
     print("True")
@@ -326,7 +326,7 @@ Python 中的变量不需要声明。每个变量在使用前都必须赋值，�
 
 等号（=）运算符左边是一个变量名,等号（=）运算符右边是存储在变量中的值。例如：
 
-```
+```python
 counter = 100          # 整型变量
 miles   = 1000.0       # 浮点型变量
 name    = "CodeRaft"     # 字符串
@@ -348,7 +348,7 @@ CodeRaft
 
 Python允许你同时为多个变量赋值。例如：
 
-```
+```python
 a = b = c = 1
 ```
 
@@ -356,7 +356,7 @@ a = b = c = 1
 
 您也可以为多个对象指定多个变量。例如：
 
-```
+```python
 a, b, c = 1, 2, "CodeRaft"
 ```
 
@@ -376,7 +376,7 @@ Python中的数据类型极为丰富，包括基本数据类型和高级数据�
 - **浮点型（float）**：通常情况下的浮点数表示方法，可以使用科学计数法（如1.23e9）。
 - **布尔型（bool）**：包括True和False两种值，实际上是整型的子类型，True等于1，False等于0。
 
-```
+```python
 a = 3           # int
 b = 3.14        # float
 c = True        # bool
@@ -387,7 +387,7 @@ c = True        # bool
 - **字符串（str）**：文本类型，使用单引号或双引号包围。
 - 字符串是不可变序列，可以进行索引、切片、加法和乘法操作。
 
-```
+```python
 str1 = "Hello"
 str2 = 'World'
 print(str1 + " " + str2)  # 字符串连接
@@ -402,7 +402,7 @@ HelloHelloHello
 ```
 
 在Python中，str()函数可以将任何数据类型转换成字符串类型，而int()函数则可以将字符串或数字转换为整数类型，但前提是这个字符串或数字必须表示一个有效的整数。
-```
+```python
 # 假设我们有一个整数和一个字符串
 original_int = 123
 original_str = "456"
@@ -468,7 +468,7 @@ List（列表） 是 Python 中使用最频繁的数据类型。
 
 加号 **+** 是列表连接运算符，星号 * 是重复操作。如下实例：
 
-```
+```python
 list = [ 'abcd', 786 , 2.23, 'CodeRaft', 70.2 ]  # 定义一个列表
 tinylist = [123, 'CodeRaft']
 
@@ -496,7 +496,7 @@ abcd
 
 元组中的元素类型也可以不相同：
 
-```
+```python
 tuple = ( 'abcd', 786 , 2.23, 'CodeRaft', 70.2  )
 tinytuple = (123, 'CodeRaft')
 
@@ -541,7 +541,7 @@ set(value)
 
 
 
-```
+```python
 sites = {'Google', 'Taobao', 'Runoob', 'Facebook', 'Zhihu', 'Baidu'}
 
 print(sites)   # 输出集合，重复的元素被自动去掉
@@ -591,7 +591,7 @@ Runoob 在集合中
 
 在同一个字典中，键(key)必须是唯一的。
 
-```
+```python
 dict = {}
 dict['one'] = "CodeRaft"
 dict[2]     = "泛编程"
@@ -618,7 +618,7 @@ dict_values(['CodeRaft', 1, 'www.CodeRaft.com'])
 
 ### 	6.2 常用数据类型的使用实例
 
-```
+```python
 # 学生信息
 student_id = 12345
 student_name = "赵镇"
@@ -667,7 +667,7 @@ print("婚否：", is_married)
 
 以下实例演示了Python所有算术运算符的操作：
 
-```
+```python
 a = 21
 b = 10
 c = 0
@@ -727,7 +727,7 @@ c 的值为： 2
 
 以下实例演示了Python所有比较运算符的操作：
 
-```
+```python
 a = 21
 b = 10
  
@@ -794,7 +794,7 @@ b 大于等于 a
 
 以下实例演示了Python所有赋值运算符的操作：
 
-```
+```python
 a = 21
 b = 10
 c = 0
@@ -840,7 +840,7 @@ c 的值为： 99864
 
 下面是一个简单的实例，演示了海象运算符的使用：
 
-```
+```python
 # 传统写法
 n = 10
 if n > 5:
@@ -901,7 +901,7 @@ a^b = 0011 0001
 
 以下实例演示了Python所有位运算符的操作：
 
-```
+```python
 a = 60            # 60 = 0011 1100 
 b = 13            # 13 = 0000 1101 
 c = 0
@@ -950,7 +950,7 @@ Python语言支持逻辑运算符，以下假设变量 a 为 10, b为 20：
 
 以下实例演示了Python所有逻辑运算符的操作：
 
-```
+```python
 #!/usr/bin/python3
  
 a = 10
@@ -978,7 +978,7 @@ if a or b:
 else:
    print("变量 a 和 b 都不为 true")
  
-if not( a and b:
+if not( a and b):
    print("变量 a 和 b 都为 false，或其中一个变量为 false")
 else:
    print("变量 a 和 b 都为 true")
@@ -1006,7 +1006,7 @@ else:
 
 以下实例演示了Python所有成员运算符的操作：
 
-```
+```python
 a = 10
 b = 20
 list = [1, 2, 3, 4, 5 ]
@@ -1049,7 +1049,7 @@ else:
 **注：** id()函数用于获取对象内存地址。
 
 对于初学者来说，用的比较多的是判断通常在判断某个变量是否为 None 时，更推荐使用 is 而非 ==，因为 None 是一个特殊的单例对象。
-```
+```python
 value = None
 if value is None:
     print("Value is None")
@@ -1057,7 +1057,7 @@ if value is None:
 ```
 以下实例演示了Python所有身份运算符的操作：
 
-```
+```python
 a = 20
 b = 20
 if a is b:
@@ -1118,7 +1118,7 @@ True
 
 python中最常用读取用户输出的函数是`input()`，会自动识将用户输入内容转换为字符串类型，因此如果想要输入确定的数据类型需要提前申明。例如：
 
-```
+```python
 # 获取用户输入的姓名
 name = input("请输入你的姓名：")
 # 获取用户输入的年龄，并转换为整数
@@ -1152,7 +1152,7 @@ print(f"姓名: {name}\n年龄：{age}\n工资：{salary}")
 
 print每次输出后自动换行，是python最常用的一种输出方式，可以输出各种类型数据。
 
-```
+```python
 a = "CodeRaft"
 b = "泛编程"
 c = 2 + 2
@@ -1206,7 +1206,7 @@ OvO
 
 参考程序：
 
-```
+```python
 target = int(input("输入目标选项答案:"))
 a = target % 12
 b = target % 23
@@ -1266,7 +1266,7 @@ else:
 
 示例代码：
 
-```
+```python
 # 定义食物的价格
 burger_price = 5
 fries_price = 2

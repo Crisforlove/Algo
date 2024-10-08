@@ -61,7 +61,7 @@ def 函数名（参数列表）:
 
 让我们使用函数来输出"Hello World!"：
 
-```
+```python
 def hello() :
     print("Hello World!")
 
@@ -72,7 +72,7 @@ hello()
 
 比较两个数，并返回较大的数:
 
-```
+```python
 def max(a, b):
     if a > b:
         return a
@@ -92,7 +92,7 @@ print(max(a, b))
 
 计算面积函数:
 
-```
+```python
 # 计算面积函数
 def area(width, height):
     return width * height
@@ -107,7 +107,6 @@ print(f"width = {w},  height = {h},  area = {area(w, h)}")
 ```
 
 以上实例输出结果：
-
 ```
 Welcome CodeRaft
 width = 4  height = 5  area = 20
@@ -121,7 +120,7 @@ width = 4  height = 5  area = 20
 
 如下实例调用了 **printme()** 函数：
 
-```
+```python
 def printme(s):
     # 打印任何传入的字符串
     print(s)
@@ -144,7 +143,7 @@ printme("再次调用同一函数")
 
 在 python 中，类型属于对象，对象有不同类型的区分，变量是没有类型的：
 
-```
+```python
 a=[1,2,3]
 
 a="CodeRaft"
@@ -171,7 +170,7 @@ python 中一切都是对象，严格意义我们不能说值传递还是引用�
 
 通过 **id()** 函数来查看内存地址变化：
 
-```
+```python
 def change(a):
     print(id(a))   # 指向的是同一个对象
     a=10
@@ -198,7 +197,7 @@ change(a)
 
 可变对象在函数里修改了参数，那么在调用这个函数的函数里，原始的参数也被改变了。例如：
 
-```
+```python
 def changeme(mylist):
     mylist.append([1,2,3,4])
     print("函数内取值: ", mylist)
@@ -217,7 +216,7 @@ print("函数外取值: ", mylist)
 函数外取值:  [10, 20, 30, [1, 2, 3, 4]]
 ```
 但是如果我们把相同变量名mylist作为函数内局部变量，则不会对外面同变量名的变量值产生影响。例如：
-```
+```python
 def changeme(mylist):
     mylist = [1, 2, 3]
     mylist.append([1,2,3,4])
@@ -249,7 +248,7 @@ print("函数外取值: ", mylist)
 
 形式参数是在函数定义时使用的变量名称，用于接收传递给函数的值。形参在函数体内充当占位符，在函数调用时会被实参替代。
 
-```
+```python
 def greet(name):  # name 是形式参数
     print(f"Hello, {name}!")
 ```
@@ -284,7 +283,7 @@ greet("Alice")  # "Alice" 是实际参数
 
 调用 printme() 函数，你必须传入一个参数，不然会出现语法错误：
 
-```
+```python
 #可写函数说明
 def printme(s):
     print(s)
@@ -310,7 +309,7 @@ TypeError: printme() missing 1 required positional argument: 'str'
 
 以下实例在函数 printme() 调用时使用参数名：
 
-```
+```python
 #可写函数说明
 def printme(s):
     # 打印任何传入的字符串
@@ -329,7 +328,7 @@ CodeRaft
 
 以下实例中演示了函数参数的使用不需要使用指定顺序：
 
-```
+```python
 #可写函数说明
 def printinfo(name, age):
     print("名字: ", name)
@@ -351,7 +350,7 @@ printinfo(age=50, name="CodeRaft")
 
 调用函数时，如果没有传递参数，则会使用默认参数。以下实例中如果没有传入 age 参数，则使用默认值：
 
-```
+```python
 #可写函数说明
 def printinfo(name, age=35):
    "打印任何传入的字符串"
@@ -379,7 +378,7 @@ printinfo(name="CodeRaft")
 
 你可能需要一个函数能处理比当初声明时更多的参数。这些参数叫做不定长参数，和上述2种参数不同，声明时不会命名。基本语法如下：
 
-```
+```python
 def functionname([formal_args,] *var_args_tuple):
     function_suite
     return [expression]
@@ -387,7 +386,7 @@ def functionname([formal_args,] *var_args_tuple):
 
 加了星号 * 的参数会以元组(tuple)的形式导入，存放所有未命名的变量参数。
 
-```
+```python
 # 可写函数说明
 def printinfo(arg1, *vartuple):
     print("输出: ")
@@ -408,7 +407,7 @@ printinfo(70, 60, 50)
 
 如果在函数调用时没有指定参数，它就是一个空元组。我们也可以不向函数传递未命名的变量。如下实例：
 
-```
+```python
 # 可写函数说明
 def printinfo(arg1, *vartuple):
     print("输出: ")
@@ -434,7 +433,7 @@ printinfo(70, 60, 50)
 
 还有一种就是参数带两个星号 ** 基本语法如下：
 
-```
+```python
 def functionname([formal_args,] **var_args_dict):
     function_suite
     return [expression]
@@ -442,7 +441,7 @@ def functionname([formal_args,] **var_args_dict):
 
 加了两个星号 ** 的参数会以字典的形式导入。
 
-```
+```python
 # 可写函数说明
 def printinfo(arg1, **vardict):
     print("输出: ")
@@ -463,7 +462,7 @@ printinfo(1, a=2,b=3)
 
 声明函数时，参数中星号 * 可以单独出现，例如:
 
-```
+```python
 def f(a,b,*,c):
     return a+b+c
 ```
@@ -493,13 +492,13 @@ Python 使用 **lambda** 来创建匿名函数。
 
 lambda 函数的语法只包含一个语句，如下：
 
-```
+```python
 lambda [arg1 [,arg2,.....argn]]:expression
 ```
 
 设置参数a加上10:
 
-```
+```python
 x = lambda a : a + 10
 print(x(5))
 ```
@@ -513,7 +512,7 @@ print(x(5))
 ### 5.2 实例 
 以下实例匿名函数设置两个参数：
 
-```
+```python
 # 可写函数说明
 sum = lambda arg1, arg2: arg1 + arg2
  
@@ -526,7 +525,7 @@ print("相加后的值为: ", sum(20, 20))
 
 以下实例将匿名函数封装在 myfunc 函数中，通过传入不同的参数来创建不同的匿名函数：
 
-```
+```python
 def myfunc(n):
     return lambda a : a * n
  
@@ -550,7 +549,7 @@ print(mytripler(11))
 
 **return [表达式]** 语句用于退出函数，选择性地向调用方返回一个表达式。不带参数值的 return 语句返回 None。之前的例子都没有示范如何返回数值，以下实例演示了 return 语句的用法：
 
-```
+```python
 # 定义函数
 def sum(arg1, arg2):
    # 计算两个参数的和
@@ -574,7 +573,7 @@ print("函数外:", total)
 
 `return` 语句可以直接结束函数的执行，因此 `return` 后面的语句将不会被执行。下面的示例演示了这一特性：
 
-```
+```python
 def check_even(number):
     if number % 2 == 0:
         return True  # 如果条件为真，函数在此处结束，后续代码不会执行
@@ -595,7 +594,7 @@ print("结果:", result)
 
 在循环中使用 `return` 语句会导致函数提前结束，循环也会停止。以下示例展示了如何在循环中使用 `return` 来找到第一个符合条件的元素：
 
-```
+```python
 def find_first_even(numbers):
     for number in numbers:
         if number % 2 == 0:
@@ -618,7 +617,7 @@ print("第一个偶数是:", result)
 
 `return` 语句也可以用于简化条件判断结构，从而避免使用冗余的 `else` 语句。以下示例展示了如何使用 `return`使代码更简洁：
 
-```
+```python
 def is_positive(number):
     if number > 0:
         return True
@@ -645,14 +644,14 @@ Python 3.8 引入了一种新的函数参数语法，通过 `/` 来指明函数�
 - `/` 和 `*` 之间的参数（`c` 和 `d`）可以使用位置参数或关键字参数。
 - `*` 之后的参数（`e` 和 `f`）必须使用关键字参数。
 
-```
+```python
 def f(a, b, /, c, d, *, e, f):
     print(a, b, c, d, e, f)
 ```
 
 对于上述函数，以下调用方法是正确的：
 
-```
+```python
 f(10, 20, 30, d=40, e=50, f=60)
 ```
 
@@ -664,7 +663,7 @@ f(10, 20, 30, d=40, e=50, f=60)
 
 以下调用方法会产生错误：
 
-```
+```python
 f(10, b=20, c=30, d=40, e=50, f=60)  # 错误：b 不能使用关键字参数的形式
 f(10, 20, 30, 40, 50, f=60)          # 错误：e 必须使用关键字参数的形式
 ```
@@ -678,7 +677,7 @@ f(10, 20, 30, 40, 50, f=60)          # 错误：e 必须使用关键字参数的
 
 请将下列代码（Lesson2课后练习）的点单、打印客户点单内容、计算订单总价三个功能封装成独立的方法。
 
-```
+```python
 # 餐厅点单程序
 
 # 定义商品的价格常量
@@ -716,7 +715,7 @@ print(f"所有顾客的总销售额: {total_sales:.2f} 元")
 
 参考答案
 
-```
+```python
 # 餐厅点单程序
 
 # 定义商品的价格常量

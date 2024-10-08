@@ -58,7 +58,7 @@ Python 中用 **elif** 代替了 **else if**，所以if语句的关键字为：*
 
 以下是一个简单的 if 实例：
 
-```
+```python
 var1 = 100
 if var1:
     print("if 表达式条件为 true（即var1不为零）")
@@ -84,7 +84,7 @@ if 表达式条件为 False（即var2为零)
 
 以下实例演示了狗的年龄计算判断：
 
-```
+```python
 age = int(input("请输入你家狗狗的年龄: "))
 print("")
 if age <= 0:
@@ -125,7 +125,7 @@ input("点击 enter（回车） 键退出")
 
 给出操作符运算的输出实例：
 
-```
+```python
 # 程序演示了 == 操作符
 # 使用数字
 print(5 == 6)
@@ -144,7 +144,7 @@ False
 
 一个数字猜谜游戏：
 
-```
+```python
 # 该实例演示了数字猜谜游戏
 import random  #python自带的生成随机数的库
 number = random.randint(0,10) #生成0-10之间的整数（以后会详细讲到）
@@ -198,7 +198,7 @@ else:
 
 实例：
 
-```
+```python
 num=int(input("输入一个数字："))
 if num%2==0:
     if num%3==0:
@@ -241,7 +241,7 @@ match subject:
 
 **case _:** 类似于 C 和 Java 中的 **default:**，当其他 case 都无法匹配时，匹配这条，保证永远会匹配成功。
 
-```
+```python
 def http_error(status):
     match status:
         case 400:
@@ -296,7 +296,7 @@ while 判断条件(condition)：
 
 以下实例使用了 while 来计算 1 到 100 的总和：
 
-```
+```python
 n = 100
  
 sum = 0
@@ -318,7 +318,7 @@ print("1 到 %d 之和为: %d" % (n,sum))
 
 我们可以通过设置条件表达式永远不为 false 来实现无限循环，实例如下：
 
-```
+```python
 var = 1
 while var == 1 :  # 表达式永远为 true
    num = int(input("输入一个数字  :"))
@@ -356,7 +356,7 @@ expr 条件语句为 true 则执行 statement(s) 语句块，如果为 false，�
 
 循环输出数字，并判断大小：
 
-```
+```python
 count = 0
 while count < 5:
    print (count, " 小于 5")
@@ -380,7 +380,7 @@ else:
 
 类似 if 语句的语法，如果你的 while 循环体中只有一条语句，你可以将该语句与 while 写在同一行中， 如下所示：
 
-```
+```python
 flag = 1
  
 while (flag): print ('CodeRaft泛编程!')
@@ -407,7 +407,7 @@ else:
 
 Python for 循环实例：
 
-```
+```python
 sites = ["Baidu", "Google","Taobao"] #列表形式储存
 for site in sites:
     print(site)
@@ -423,7 +423,7 @@ Taobao
 
 也可用于打印字符串中的每个字符：
 
-```
+```python
 word = 'CodeRaft'
  
 for letter in word:
@@ -445,7 +445,7 @@ t
 
 整数范围值可以配合 range() 函数使用：
 
-```
+```python
 #1 到 5 的所有数字：
 for number in range(1, 6):
     print(number)
@@ -474,7 +474,7 @@ else:
 
 当循环执行完毕（即遍历完 iterable 中的所有元素）后，会执行 else 子句中的代码，如果在循环过程中遇到了 break 语句，则会中断循环，此时不会执行 else 子句。
 
-```
+```python
 for x in range(6):
   print(x)
 else:
@@ -495,7 +495,7 @@ Finally finished!
 
 以下 for 实例中使用了 break 语句，break 语句用于跳出当前循环体，不会执行 else 子句：
 
-```
+```python
 sites = ["Baidu", "Google","Taobao"]
 for site in sites:
     if site == "Google":
@@ -635,7 +635,7 @@ or 语句代码执行过程：
 
 while 中使用 break：
 
-```
+```python
 n = 5
 while n > 0:
     n -= 1
@@ -655,7 +655,7 @@ print('循环结束。')
 
 while 中使用 continue：
 
-```
+```python
 n = 5
 while n > 0:
     n -= 1
@@ -679,7 +679,7 @@ print('循环结束。')
 
 如下实例用于查询质数的循环例子：
 
-```
+```python
 for n in range(2, 10):
     for x in range(2, n):
         if n % x == 0:
@@ -716,7 +716,7 @@ pass 不做任何事情，一般用做占位语句，如下实例
 
 以下实例在字母为 o 时 执行 pass 语句块：
 
-```
+```python
 for letter in 'CodeRaft':
     if letter == 'f':
         pass
@@ -786,7 +786,7 @@ Good bye!
 
 参考代码：
 
-```
+```python
 # 餐厅点单程序
 
 # 定义商品的价格常量
@@ -853,7 +853,7 @@ print(f"所有顾客的总销售额: {total_sales:.2f} 元")
 
 参考代码：
 
-```
+```python
 import random
 
 # 生成一个1到100之间的随机数

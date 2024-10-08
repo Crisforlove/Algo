@@ -31,7 +31,7 @@
 
 ### 1.2 对撞指针伪代码模版
 
-```
+```python
 left, right = 0, len(nums) - 1
 
 while left < right:
@@ -79,7 +79,7 @@ return 没找到 或 找到对应值
 
 #### 参考解答1
 
-```
+```python
 class Solution(object):
     def reverseString(self, s):
         for i in range(len(s)//2):
@@ -89,7 +89,7 @@ class Solution(object):
 
 #### 参考解答2
 
-```
+```python
 class Solution(object):
     def reverseString(self, s):
         i = 0
@@ -107,7 +107,7 @@ class Solution(object):
 
 #### 调用函数法
 
-```
+```python
 class Solution(object):
     def reverseString(self, s):
         return s.reverse()
@@ -136,7 +136,7 @@ class Solution(object):
 
 #### 参考解答
 
-```
+```python
 class Solution(object):
     def isPalindrome(self, s):
         i, j = 0, len(s)-1
@@ -154,7 +154,7 @@ class Solution(object):
 
 #### 切片法
 
-```
+```python
 class Solution(object):
     def isPalindrome(self, s):
         sgood = "".join(ch.lower() for ch in s if ch.isalnum())
@@ -190,7 +190,7 @@ class Solution(object):
 
 #### 参考解答
 
-```
+```python
 class Solution(object):
     def reverseVowels(self, s):
         chars = list(s)
@@ -238,7 +238,7 @@ class Solution(object):
 
 #### 参考示例
 
-```
+```python
 class Solution(object):
     def reverseOnlyLetters(self, s):
         l,r = 0, len(s) - 1
@@ -278,7 +278,7 @@ class Solution(object):
 
 #### 参考解答
 
-```
+```python
 class Solution(object):
     def validPalindrome(self, s):
         if s == s[::-1]:

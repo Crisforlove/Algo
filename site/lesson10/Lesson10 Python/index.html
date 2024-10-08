@@ -2085,26 +2085,26 @@
 <p><strong>去重</strong>：当需要去除重复元素时，集合非常有用。例如，从列表中删除重复项。</p>
 <p><strong>集合操作</strong>：集合支持各种集合运算，如交集、并集和差集。</p>
 <p>交集：找到两个集合中共同的元素</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>set1 = {&quot;A&quot;, &quot;B&quot;, &quot;C&quot;}
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>set2 = {&quot;B&quot;, &quot;C&quot;, &quot;D&quot;}
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>intersection = set1 &amp; set2
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>print(intersection)  # 输出: {&#39;B&#39;, &#39;C&#39;}
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">set1</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">}</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">set2</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">}</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">intersection</span> <span class="o">=</span> <span class="n">set1</span> <span class="o">&amp;</span> <span class="n">set2</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">intersection</span><span class="p">)</span>  <span class="c1"># 输出: {&#39;B&#39;, &#39;C&#39;}</span>
 </code></pre></div></td></tr></table></div>
 <p>并集：合并两个集合的所有元素</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>union = set1 | set2
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>print(union)  # 输出: {&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;}
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">union</span> <span class="o">=</span> <span class="n">set1</span> <span class="o">|</span> <span class="n">set2</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">union</span><span class="p">)</span>  <span class="c1"># 输出: {&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;}</span>
 </code></pre></div></td></tr></table></div>
 <p>差集：找出只存在于第一个集合中的元素</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>difference = set1 - set2
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>print(difference)  # 输出: {&#39;A&#39;}
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">difference</span> <span class="o">=</span> <span class="n">set1</span> <span class="o">-</span> <span class="n">set2</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">difference</span><span class="p">)</span>  <span class="c1"># 输出: {&#39;A&#39;}</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="14">1.4 完整实例</h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
@@ -2118,21 +2118,21 @@
 <span class="normal"><a href="#__codelineno-6-12">12</a></span>
 <span class="normal"><a href="#__codelineno-6-13">13</a></span>
 <span class="normal"><a href="#__codelineno-6-14">14</a></span>
-<span class="normal"><a href="#__codelineno-6-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a># 集合操作的示例
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>set1 = {&quot;A&quot;, &quot;B&quot;, &quot;C&quot;}
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>set2 = {&quot;B&quot;, &quot;C&quot;, &quot;D&quot;}
+<span class="normal"><a href="#__codelineno-6-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># 集合操作的示例</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">set1</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">}</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">set2</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">}</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a># 交集
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>intersection = set1 &amp; set2
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a>print(&quot;Intersection (交集):&quot;, intersection)  # 输出: {&#39;B&#39;, &#39;C&#39;}
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="c1"># 交集</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="n">intersection</span> <span class="o">=</span> <span class="n">set1</span> <span class="o">&amp;</span> <span class="n">set2</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intersection (交集):&quot;</span><span class="p">,</span> <span class="n">intersection</span><span class="p">)</span>  <span class="c1"># 输出: {&#39;B&#39;, &#39;C&#39;}</span>
 <a id="__codelineno-6-8" name="__codelineno-6-8"></a>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a># 并集
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a>union = set1 | set2
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a>print(&quot;Union (并集):&quot;, union)  # 输出: {&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;}
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="c1"># 并集</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="n">union</span> <span class="o">=</span> <span class="n">set1</span> <span class="o">|</span> <span class="n">set2</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Union (并集):&quot;</span><span class="p">,</span> <span class="n">union</span><span class="p">)</span>  <span class="c1"># 输出: {&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;}</span>
 <a id="__codelineno-6-12" name="__codelineno-6-12"></a>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a># 差集
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a>difference = set1 - set2
-<a id="__codelineno-6-15" name="__codelineno-6-15"></a>print(&quot;Difference (差集):&quot;, difference)  # 输出: {&#39;A&#39;}
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="c1"># 差集</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="n">difference</span> <span class="o">=</span> <span class="n">set1</span> <span class="o">-</span> <span class="n">set2</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Difference (差集):&quot;</span><span class="p">,</span> <span class="n">difference</span><span class="p">)</span>  <span class="c1"># 输出: {&#39;A&#39;}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="2">2. 例题讲解</h2>
 <h3 id="21-lc349">2.1 LC349 两个数组的交集</h3>
@@ -2148,7 +2148,7 @@
 <li><strong>转换为列表</strong>：最后，将结果集合转换为列表并返回。</li>
 </ol>
 <h3 id="_4">参考解答</h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
@@ -2161,37 +2161,37 @@
 <span class="normal"><a href="#__codelineno-7-11">11</a></span>
 <span class="normal"><a href="#__codelineno-7-12">12</a></span>
 <span class="normal"><a href="#__codelineno-7-13">13</a></span>
-<span class="normal"><a href="#__codelineno-7-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>class Solution:
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>    def intersection(self, nums1: List[int], nums2: List[int]) -&gt; List[int]:
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>        # 将nums2转换为集合
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>        set2 = set(nums2)
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a>        # 使用集合来存储交集结果
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a>        intersect_set = set()
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a>        # 遍历nums1，检查每个元素是否在set2中
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a>        for num in nums1:
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a>            if num in set2:
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a>                intersect_set.add(num)
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a>                # 从set2中移除该元素，确保结果中元素唯一
-<a id="__codelineno-7-12" name="__codelineno-7-12"></a>                set2.remove(num)
-<a id="__codelineno-7-13" name="__codelineno-7-13"></a>        # 返回结果集合转换为列表
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a>                            return list(intersect_set)
+<span class="normal"><a href="#__codelineno-7-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>    <span class="k">def</span> <span class="nf">intersection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums1</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">nums2</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>        <span class="c1"># 将nums2转换为集合</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>        <span class="n">set2</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">nums2</span><span class="p">)</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>        <span class="c1"># 使用集合来存储交集结果</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>        <span class="n">intersect_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>        <span class="c1"># 遍历nums1，检查每个元素是否在set2中</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>        <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums1</span><span class="p">:</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>            <span class="k">if</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">set2</span><span class="p">:</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>                <span class="n">intersect_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>                <span class="c1"># 从set2中移除该元素，确保结果中元素唯一</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>                <span class="n">set2</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>        <span class="c1"># 返回结果集合转换为列表</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>                            <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">intersect_set</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="2_1">解法2 思路分析</h3>
 <p>1.将两个数组变为使用set()变为集合</p>
 <p>2.直接使用&amp;运算符来获得两个集合的交集</p>
 <p>3.返回list</p>
 <h3 id="_5">参考答案：</h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span>
 <span class="normal"><a href="#__codelineno-8-4">4</a></span>
 <span class="normal"><a href="#__codelineno-8-5">5</a></span>
-<span class="normal"><a href="#__codelineno-8-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>class Solution:
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a>    def intersection(self, nums1: List[int], nums2: List[int]) -&gt; List[int]:
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a>        set1 = set(nums1)
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a>        set2 = set(nums2)
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a>        # 求交集并返回
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a>        return list(set1 &amp; set2)
+<span class="normal"><a href="#__codelineno-8-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="k">def</span> <span class="nf">intersection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums1</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">nums2</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>        <span class="n">set1</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">nums1</span><span class="p">)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>        <span class="n">set2</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">nums2</span><span class="p">)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>        <span class="c1"># 求交集并返回</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">set1</span> <span class="o">&amp;</span> <span class="n">set2</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="22-lc645">2.2 LC645 错误的集合</h3>
 <h3 id="_6">问题描述</h3>
@@ -2211,7 +2211,7 @@
 </li>
 </ol>
 <h3 id="_8">参考解答</h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
@@ -2229,25 +2229,25 @@
 <span class="normal"><a href="#__codelineno-9-16">16</a></span>
 <span class="normal"><a href="#__codelineno-9-17">17</a></span>
 <span class="normal"><a href="#__codelineno-9-18">18</a></span>
-<span class="normal"><a href="#__codelineno-9-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>class Solution:
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>    def findErrorNums(self, nums: List[int]) -&gt; List[int]:
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a>        num_set = set()
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a>        duplicate = 0
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a>        n = len(nums)
+<span class="normal"><a href="#__codelineno-9-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>    <span class="k">def</span> <span class="nf">findErrorNums</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>        <span class="n">num_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>        <span class="n">duplicate</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
 <a id="__codelineno-9-6" name="__codelineno-9-6"></a>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a>        # 查找重复的数字
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a>        for num in nums:
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a>            if num in num_set:
-<a id="__codelineno-9-10" name="__codelineno-9-10"></a>                duplicate = num
-<a id="__codelineno-9-11" name="__codelineno-9-11"></a>            else:
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a>                num_set.add(num)
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>        <span class="c1"># 查找重复的数字</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>        <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>            <span class="k">if</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">num_set</span><span class="p">:</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>                <span class="n">duplicate</span> <span class="o">=</span> <span class="n">num</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>            <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>                <span class="n">num_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
 <a id="__codelineno-9-13" name="__codelineno-9-13"></a>
-<a id="__codelineno-9-14" name="__codelineno-9-14"></a>        # 查找丢失的数字
-<a id="__codelineno-9-15" name="__codelineno-9-15"></a>        for i in range(1, n+1):
-<a id="__codelineno-9-16" name="__codelineno-9-16"></a>            if i not in num_set:
-<a id="__codelineno-9-17" name="__codelineno-9-17"></a>                missing = i
-<a id="__codelineno-9-18" name="__codelineno-9-18"></a>                break
-<a id="__codelineno-9-19" name="__codelineno-9-19"></a>        return [duplicate, missing]
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a>        <span class="c1"># 查找丢失的数字</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>            <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">num_set</span><span class="p">:</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a>                <span class="n">missing</span> <span class="o">=</span> <span class="n">i</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a>                <span class="k">break</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a>        <span class="k">return</span> <span class="p">[</span><span class="n">duplicate</span><span class="p">,</span> <span class="n">missing</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="3">3. 举一反三</h2>
 <h3 id="31-lc575">3.1 LC575 分糖果</h3>
@@ -2262,7 +2262,7 @@
 <li>返回糖果种类数与可吃糖果数量中的较小值。</li>
 </ol>
 <h3 id="_11">参考解答</h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
@@ -2271,16 +2271,16 @@
 <span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-10-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>class Solution:
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a>    def distributeCandies(self, candyType: List[int]) -&gt; int:
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a>        # 使用集合来去重
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a>        unique_candies = set(candyType)
+<span class="normal"><a href="#__codelineno-10-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>    <span class="k">def</span> <span class="nf">distributeCandies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">candyType</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>        <span class="c1"># 使用集合来去重</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>        <span class="n">unique_candies</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">candyType</span><span class="p">)</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5"></a>
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a>        # Alice 能吃的糖果数量
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a>        n = len(candyType) // 2
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>        <span class="c1"># Alice 能吃的糖果数量</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">candyType</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
 <a id="__codelineno-10-8" name="__codelineno-10-8"></a>
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a>        # 返回能吃的最多种类
-<a id="__codelineno-10-10" name="__codelineno-10-10"></a>        return min(len(unique_candies), n)
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>        <span class="c1"># 返回能吃的最多种类</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>        <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">unique_candies</span><span class="p">),</span> <span class="n">n</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="_12">逻辑推理</h3>
 <ul>
@@ -2313,7 +2313,7 @@
 </li>
 </ol>
 <h3 id="_16">参考解答</h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
@@ -2323,17 +2323,17 @@
 <span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-11-10">10</a></span>
-<span class="normal"><a href="#__codelineno-11-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>class Solution:
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>    def numJewelsInStones(self, jewels: str, stones: str) -&gt; int:
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a>        jewel_set = set(jewels)
+<span class="normal"><a href="#__codelineno-11-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>    <span class="k">def</span> <span class="nf">numJewelsInStones</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">jewels</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">stones</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>        <span class="n">jewel_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">jewels</span><span class="p">)</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4"></a>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a>        # 计数石头中宝石的数量
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a>        count = 0
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a>        for stone in stones:
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a>            if stone in jewel_set:
-<a id="__codelineno-11-9" name="__codelineno-11-9"></a>                count += 1
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>        <span class="c1"># 计数石头中宝石的数量</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>        <span class="k">for</span> <span class="n">stone</span> <span class="ow">in</span> <span class="n">stones</span><span class="p">:</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>            <span class="k">if</span> <span class="n">stone</span> <span class="ow">in</span> <span class="n">jewel_set</span><span class="p">:</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>                <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
 <a id="__codelineno-11-10" name="__codelineno-11-10"></a>
-<a id="__codelineno-11-11" name="__codelineno-11-11"></a>        return count
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>        <span class="k">return</span> <span class="n">count</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="4">4. 课后练习</h2>
 <table>

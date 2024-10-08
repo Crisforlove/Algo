@@ -38,7 +38,6 @@
    std::unordered_set<int> set1 = {1, 2, 3};
    std::unordered_set<int> set2 = {2, 3, 4};
    std::unordered_set<int> intersection;
-     
    for (int elem : set1) {
       if (set2.find(elem) != set2.end()) {
           intersection.insert(elem);

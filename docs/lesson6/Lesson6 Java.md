@@ -208,12 +208,13 @@ class Solution {
 **调用函数法**
 ```java
 class Solution {
-public int countWords(String s) {
-     // 使用空格分隔字符串并计算单词数
-     String[] words = s.split("\\s+");
-     return words.length;
- }
+    public int countWords(String s) {
+        // 使用空格分隔字符串并计算单词数
+        String[] words = s.split("\\s+");
+        return words.length;
+    }
 }
+
 ```
 ## 举一反三
 
@@ -346,9 +347,9 @@ class Solution {
 **简洁版本**
 ```java
 class Solution {
-  public int findLUSlength(String a, String b) {
-    return !a.equals(b) ? Math.max(a.length(), b.length()) : -1;
-  }
+    public int findLUSlength(String a, String b) {
+        return !a.equals(b) ? Math.max(a.length(), b.length()) : -1;
+    }
 }
 ```
 

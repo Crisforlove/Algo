@@ -90,7 +90,7 @@ print(languages)  # 输出: set()
 
 交集：找到两个集合中共同的元素
 
-```
+```python
 set1 = {"A", "B", "C"}
 set2 = {"B", "C", "D"}
 intersection = set1 & set2
@@ -99,21 +99,21 @@ print(intersection)  # 输出: {'B', 'C'}
 
 并集：合并两个集合的所有元素
 
-```
+```python
 union = set1 | set2
 print(union)  # 输出: {'A', 'B', 'C', 'D'}
 ```
 
 差集：找出只存在于第一个集合中的元素
 
-```
+```python
 difference = set1 - set2
 print(difference)  # 输出: {'A'}
 ```
 
 ### 1.4 完整实例
 
-```
+```python
 # 集合操作的示例
 set1 = {"A", "B", "C"}
 set2 = {"B", "C", "D"}
@@ -151,7 +151,7 @@ print("Difference (差集):", difference)  # 输出: {'A'}
 
 ### 参考解答
 
-```
+```python
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
         # 将nums2转换为集合
@@ -180,7 +180,7 @@ class Solution:
 
 ### 参考答案：
 
-```
+```python
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
         set1 = set(nums1)
@@ -209,7 +209,7 @@ class Solution:
 
 ### 参考解答
 
-```
+```python
 class Solution:
     def findErrorNums(self, nums: List[int]) -> List[int]:
         num_set = set()
@@ -253,7 +253,7 @@ Alice 有 `n` 枚糖，其中第 `i` 枚糖的类型为 `candyType[i]`。Alice �
 
 ### 参考解答
 
-```
+```python
 class Solution:
     def distributeCandies(self, candyType: List[int]) -> int:
         # 使用集合来去重
@@ -297,7 +297,7 @@ class Solution:
 
 ### 参考解答
 
-```
+```python
 class Solution:
     def numJewelsInStones(self, jewels: str, stones: str) -> int:
         jewel_set = set(jewels)

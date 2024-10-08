@@ -46,29 +46,29 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class HashSetExample {
-   public static void main(String[] args) {
-      Set<String> set = new HashSet<>();
-      set.add("Java");
-      set.add("Python");
-      set.add("Java"); // 重复元素不会被添加
+    public static void main(String[] args) {
+        Set<String> set = new HashSet<>();
+        set.add("Java");
+        set.add("Python");
+        set.add("Java"); // 重复元素不会被添加
 
-      // 遍历并输出集合中的元素
-      for (String lang : set) {
-         System.out.println(lang);
-      }
+        // 遍历并输出集合中的元素
+        for (String lang : set) {
+            System.out.println(lang);
+        }
 
-      // 判断集合中是否包含某个元素
-      if (set.contains("Java")) {
-         System.out.println("Set contains Java");
-      }
+        // 判断集合中是否包含某个元素
+        if (set.contains("Java")) {
+            System.out.println("Set contains Java");
+        }
 
-      // 移除元素
-      set.remove("Python");
-      System.out.println("After removing Python: " + set);
+        // 移除元素
+        set.remove("Python");
+        System.out.println("After removing Python: " + set);
 
-      // 输出集合大小
-      System.out.println("Set size: " + set.size());
-   }
+        // 输出集合大小
+        System.out.println("Set size: " + set.size());
+    }
 }
 
 ```

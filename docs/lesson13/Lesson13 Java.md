@@ -44,12 +44,12 @@
 
 ```java
 public class Main {
-   public static void main(String[] args) {
-       int[] arr = {1, 2, 3, 4, 5};
-       int k = 2;  // 获取第三个元素（索引从0开始）
-       int element = arr[k];  // O(1)
-       System.out.println("Element at index " + k + ": " + element);
-   }
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int k = 2;  // 获取第三个元素（索引从0开始）
+        int element = arr[k];  // O(1)
+        System.out.println("Element at index " + k + ": " + element);
+    }
 }
 ```
 
@@ -62,13 +62,13 @@ public class Main {
 
 ```java
 public class Main {
-   public static void main(String[] args) {
-       int[] arr = {1, 2, 3, 4, 5};
-       int n = arr.length;  // 获取数组的长度
-       for (int i = 0; i < n; i++) {  // O(n)
-           System.out.println("Element at index " + i + ": " + arr[i]);
-       }
-   }
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int n = arr.length;  // 获取数组的长度
+        for (int i = 0; i < n; i++) {  // O(n)
+            System.out.println("Element at index " + i + ": " + arr[i]);
+        }
+    }
 }
 ```
    
@@ -81,19 +81,19 @@ public class Main {
 
 ```java
 public class Main {
-   public static void main(String[] args) {
-       int[][] arr = {
-           {1, 2, 3},
-           {4, 5, 6},
-           {7, 8, 9}
-       };
+    public static void main(String[] args) {
+        int[][] arr = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
 
-       for (int i = 0; i < 3; i++) {  // O(n)
-           for (int j = 0; j < 3; j++) {  // O(n)
-               System.out.println("Element at [" + i + "][" + j + "]: " + arr[i][j]);
-           }
-       }
-   }
+        for (int i = 0; i < 3; i++) {  // O(n)
+            for (int j = 0; j < 3; j++) {  // O(n)
+                System.out.println("Element at [" + i + "][" + j + "]: " + arr[i][j]);
+            }
+        }
+    }
 }
 ```
    **时间复杂度**：双重循环嵌套遍历每个元素，总的执行时间是 `n` 的平方，属于 **O(n^2)**。
@@ -107,47 +107,47 @@ import java.util.Arrays;
 
 public class Main {
 
-   // 合并两个子数组
-   public static void merge(int[] arr, int l, int m, int r) {
-       int n1 = m - l + 1;
-       int n2 = r - m;
+    // 合并两个子数组
+    public static void merge(int[] arr, int l, int m, int r) {
+        int n1 = m - l + 1;
+        int n2 = r - m;
 
-       int[] L = new int[n1];
-       int[] R = new int[n2];
+        int[] L = new int[n1];
+        int[] R = new int[n2];
+ 
+        // 将数据复制到临时数组 L 和 R
+        for (int i = 0; i < n1; i++)
+            L[i] = arr[l + i];
+        for (int i = 0; i < n2; i++)
+            R[i] = arr[m + 1 + i];
 
-       // 将数据复制到临时数组 L 和 R
-       for (int i = 0; i < n1; i++)
-           L[i] = arr[l + i];
-       for (int i = 0; i < n2; i++)
-           R[i] = arr[m + 1 + i];
+        // 合并临时数组到 arr
+        int i = 0, j = 0, k = l;
+        while (i < n1 && j < n2) {
+            if (L[i] <= R[j]) {
+                arr[k] = L[i];
+                i++;
+            } else {
+                arr[k] = R[j];
+                j++;
+            }
+            k++;
+        }
 
-       // 合并临时数组到 arr
-       int i = 0, j = 0, k = l;
-       while (i < n1 && j < n2) {
-           if (L[i] <= R[j]) {
-               arr[k] = L[i];
-               i++;
-           } else {
-               arr[k] = R[j];
-               j++;
-           }
-           k++;
-       }
+        // 复制剩余的 L 中的元素（如果有）
+        while (i < n1) {
+            arr[k] = L[i];
+            i++;
+            k++;
+        }
 
-       // 复制剩余的 L 中的元素（如果有）
-       while (i < n1) {
-           arr[k] = L[i];
-           i++;
-           k++;
-       }
-
-       // 复制剩余的 R 中的元素（如果有）
-       while (j < n2) {
-           arr[k] = R[j];
-           j++;
-           k++;
-       }
-   }
+        // 复制剩余的 R 中的元素（如果有）
+        while (j < n2) {
+            arr[k] = R[j];
+            j++;
+            k++;
+        }
+    }
 
    // 递归拆分数组
    public static void mergeSort(int[] arr, int l, int r) {
@@ -163,14 +163,14 @@ public class Main {
        }
    }
 
-   public static void main(String[] args) {
-       int[] arr = {12, 11, 13, 5, 6, 7};
-       int arr_size = arr.length;
+    public static void main(String[] args) {
+        int[] arr = {12, 11, 13, 5, 6, 7};
+        int arr_size = arr.length;
 
-       mergeSort(arr, 0, arr_size - 1);
+        mergeSort(arr, 0, arr_size - 1);
 
-       System.out.println("Sorted array is: " + Arrays.toString(arr));
-   }
+        System.out.println("Sorted array is: " + Arrays.toString(arr));
+    }
 }
 ```
 
@@ -374,29 +374,29 @@ public class Main {
 import java.util.Comparator;
 
 class Person {
-   String name;
-   int age;
+    String name;
+    int age;
 
-   Person(String name, int age) {
-       this.name = name;
-       this.age = age;
-   }
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
-   public String getName() {
-       return name;
-   }
+    public String getName() {
+        return name;
+    }
 
-   public int getAge() {
-       return age;
-   }
+    public int getAge() {
+        return age;
+    }
 }
 
 // 自定义比较器，根据年龄排序
 class AgeComparator implements Comparator<Person> {
-   @Override
-   public int compare(Person p1, Person p2) {
-       return Integer.compare(p1.getAge(), p2.getAge());
-   }
+    @Override
+    public int compare(Person p1, Person p2) {
+        return Integer.compare(p1.getAge(), p2.getAge());
+    }
 }
 ```
 
@@ -409,40 +409,40 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 class Person {
-   String name;
-   int age;
+    String name;
+    int age;
 
-   Person(String name, int age) {
-       this.name = name;
-       this.name = name;
-       this.age = age;
-   }
+    Person(String name, int age) {
+        this.name = name;
+        this.name = name;
+        this.age = age;
+    }
 
-   public String getName() {
-       return name;
-   }
+    public String getName() {
+        return name;
+    }
 
-   public int getAge() {
-       return age;
-   }
+    public int getAge() {
+        return age;
+    }
 }
 
 public class Main {
-   public static void main(String[] args) {
-       Person[] people = {
-           new Person("Alice", 30),
-           new Person("Bob", 25),
-           new Person("Charlie", 35)
-       };
+    public static void main(String[] args) {
+        Person[] people = {
+            new Person("Alice", 30),
+            new Person("Bob", 25),
+            new Person("Charlie", 35)
+        };
 
-       // 使用 Lambda 表达式按年龄排序
-       Arrays.sort(people, (p1, p2) -> Integer.compare(p1.getAge(), p2.getAge()));
+        // 使用 Lambda 表达式按年龄排序
+        Arrays.sort(people, (p1, p2) -> Integer.compare(p1.getAge(), p2.getAge()));
 
-       // 打印排序后的结果
-       for (Person p : people) {
-           System.out.println(p.getName() + ": " + p.getAge());
-       }
-   }
+        // 打印排序后的结果
+        for (Person p : people) {
+            System.out.println(p.getName() + ": " + p.getAge());
+        }
+    }
 }
 ```
 
@@ -452,12 +452,12 @@ public class Main {
 
 ```java
 Arrays.sort(people, (p1, p2) -> {
-   int ageComparison = Integer.compare(p1.getAge(), p2.getAge());
-   if (ageComparison != 0) {
-       return ageComparison; // 如果年龄不同，返回比较结果
-   } else {
-       return p1.getName().compareTo(p2.getName()); // 年龄相同则按名字排序
-   }
+    int ageComparison = Integer.compare(p1.getAge(), p2.getAge());
+    if (ageComparison != 0) {
+        return ageComparison; // 如果年龄不同，返回比较结果
+    } else {
+        return p1.getName().compareTo(p2.getName()); // 年龄相同则按名字排序
+    }
 });
 ```
 
@@ -470,41 +470,41 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 class Person {
-   String name;
-   int age;
+    String name;
+    int age;
 
-   Person(String name, int age) {
-       this.name = name;
-       this.age = age;
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
    }
 
-   public String getName() {
-       return name;
-   }
-
-   public int getAge() {
-       return age;
-   }
+    public int getAge() {
+        return age;
+    }
 }
 
 public class Main {
-   public static void main(String[] args) {
-       Person[] people = {
-           new Person("Alice", 30),
-           new Person("Bob", 25),
-           new Person("Charlie", 35),
-           new Person("David", 25)
-       };
+    public static void main(String[] args) {
+        Person[] people = {
+            new Person("Alice", 30),
+            new Person("Bob", 25),
+            new Person("Charlie", 35),
+            new Person("David", 25)
+        };
 
-       // 按年龄排序
-       Arrays.sort(people, Comparator.comparingInt(Person::getAge)
-           .thenComparing(Person::getName)); // 若年龄相同则按名字排序
+        // 按年龄排序
+        Arrays.sort(people, Comparator.comparingInt(Person::getAge)
+            .thenComparing(Person::getName)); // 若年龄相同则按名字排序
 
-       // 打印排序后的结果
-       for (Person p : people) {
-           System.out.println(p.getName() + ": " + p.getAge());
-       }
-   }
+        // 打印排序后的结果
+        for (Person p : people) {
+            System.out.println(p.getName() + ": " + p.getAge());
+        }
+    }
 }
 ```
 

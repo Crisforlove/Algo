@@ -74,9 +74,9 @@ public class Main {
 
 ```java
 public class MathUtils {
-   public int add(int a, int b) {
-      return a + b;
-  }
+    public int add(int a, int b) {
+        return a + b;
+    }
 }
 ```
 
@@ -84,9 +84,9 @@ public class MathUtils {
 
 ```java
 public class Printer {
-  public void printMessage(String message) {
-      System.out.println(message);
-  }
+    public void printMessage(String message) {
+        System.out.println(message);
+    }
 }
 ```
 
@@ -165,9 +165,9 @@ public static void main(String[] args) {
 
 ```java
 public void calculateSum(int a, int b) {
-  // 函数体
-  int sum = a + b;
-  System.out.println("Sum: " + sum);
+    // 函数体
+    int sum = a + b;
+    System.out.println("Sum: " + sum);
 }
 ```
 
@@ -179,20 +179,20 @@ public void calculateSum(int a, int b) {
 
 ```java
 public class Main {
-  public static void main(String[] args) {
-      int num1 = 10;
-      int num2 = 20;
+    public static void main(String[] args) {
+        int num1 = 10;
+        int num2 = 20;
 
-      // 调用函数并传递实际参数
-      calculateSum(num1, num2);
-  }
+        // 调用函数并传递实际参数
+        calculateSum(num1, num2);
+    }
 
-  // 定义函数
-  public static void calculateSum(int a, int b) {
-      // 函数体
-      int sum = a + b;
-      System.out.println("Sum: " + sum);
-  }
+    // 定义函数
+    public static void calculateSum(int a, int b) {
+        // 函数体
+        int sum = a + b;
+        System.out.println("Sum: " + sum);
+    }
 }
 ```
 
@@ -210,27 +210,28 @@ public class Main {
 ```java
 public class MathUtils {
 
- // To be implemented
+    // To be implemented
 
-public static void main(String[] args) {
-  MathUtils utils = new MathUtils();
-  float product = utils.multiply(5.5f, 3.2f);
-  System.out.println("The product is: " + product);  // 输出应该是 17.6
- }
+    public static void main(String[] args) {
+        MathUtils utils = new MathUtils();
+        float product = utils.multiply(5.5f, 3.2f);
+        System.out.println("The product is: " + product);  // 输出应该是 17.6
+    }
 }
+
 ```
 解答
 ```java
 public class MathUtils {
- public float multiply(float a, float b) {
-     return a * b;
- }
+    public float multiply(float a, float b) {
+        return a * b;
+    }
 
- public static void main(String[] args) {
-     MathUtils utils = new MathUtils();
-     float product = utils.multiply(5.5f, 3.2f);
-     System.out.println("The product is: " + product);  // 输出应该是 17.6
- }
+    public static void main(String[] args) {
+        MathUtils utils = new MathUtils();
+        float product = utils.multiply(5.5f, 3.2f);
+        System.out.println("The product is: " + product);  // 输出应该是 17.6
+    }
 }
 ```
 
@@ -240,71 +241,73 @@ public class MathUtils {
 import java.util.Scanner;
 
 public class RestaurantOrder {
-  public static void main(String[] args) {
-      // 定义价格常量
-      final double BURGER_PRICE = 12.5;
-      final double FRIES_PRICE = 6.0;
-      final double COKE_PRICE = 4.5;
+    public static void main(String[] args) {
+        // 定义价格常量
+        final double BURGER_PRICE = 12.5;
+        final double FRIES_PRICE = 6.0;
+        final double COKE_PRICE = 4.5;
 
-      // 创建Scanner对象以获取用户输入
-      Scanner scanner = new Scanner(System.in);
+        // 创建 Scanner 对象以获取用户输入
+        Scanner scanner = new Scanner(System.in);
 
-      // 初始化总销售额
-      double totalSales = 0.0;
+        // 初始化总销售额
+        double totalSales = 0.0;
 
-      // 开始循环，直到顾客选择退出
-      while (true) {
-          // 初始化点单数量
-          int option = 0;
-          int burgers = 0;
-          int fries = 0;
-          int cokes = 0;
+        // 开始循环，直到顾客选择退出
+        while (true) {
+            // 初始化点单数量
+            int option = 0;
+            int burgers = 0;
+            int fries = 0;
+            int cokes = 0;
 
-          // 获取用户点单
-          System.out.print("\n请点单（输入-1退出，其他整数进入点单）：");
-          option = scanner.nextInt();
+            // 获取用户点单
+            System.out.print("\n请点单（输入-1退出，其他整数进入点单）：");
+            option = scanner.nextInt();
 
-          // 如果输入为0，则退出循环
-          if (option == -1) {
-              break;
-          }
+            // 如果输入为-1，则退出循环
+            if (option == -1) {
+                break;
+            }
 
-          System.out.print("请输入汉堡的数量：");
-          burgers = scanner.nextInt();
+            // 获取各项食物的数量
+            System.out.print("请输入汉堡的数量：");
+            burgers = scanner.nextInt();
 
-          System.out.print("请输入薯条的数量：");
-          fries = scanner.nextInt();
+            System.out.print("请输入薯条的数量：");
+            fries = scanner.nextInt();
 
-          System.out.print("请输入可乐的数量：");
-          cokes = scanner.nextInt();
+            System.out.print("请输入可乐的数量：");
+            cokes = scanner.nextInt();
 
-          // 打印客户点单内容
-          System.out.println("\n客户点单内容：");
-          if (burgers > 0) {
-              System.out.println("汉堡 x " + burgers);
-          }
-          if (fries > 0) {
-              System.out.println("薯条 x " + fries);
-          }
-          if (cokes > 0) {
-              System.out.println("可乐 x " + cokes);
-          }
+            // 打印客户点单内容
+            System.out.println("\n客户点单内容：");
+            if (burgers > 0) {
+                System.out.println("汉堡 x " + burgers);
+            }
+            if (fries > 0) {
+                System.out.println("薯条 x " + fries);
+            }
+            if (cokes > 0) {
+                System.out.println("可乐 x " + cokes);
+            }
 
-          // 计算本次点单的总价
-          double orderTotal = burgers * BURGER_PRICE + fries * FRIES_PRICE + cokes * COKE_PRICE;
-          // 累加到总销售额
-          totalSales += orderTotal;
+            // 计算本次点单的总价
+            double orderTotal = burgers * BURGER_PRICE + fries * FRIES_PRICE + cokes * COKE_PRICE;
 
-          // 打印本次点单的总价
-          System.out.println("\n本次点单总价：" + orderTotal + " 元");
-      }
+            // 累加到总销售额
+            totalSales += orderTotal;
 
-      // 打印所有顾客的总销售额
-      System.out.println("\n所有顾客的总销售额：" + totalSales + " 元");
+            // 打印本次点单的总价
+            System.out.println("\n本次点单总价：" + orderTotal + " 元");
+        }
 
-      // 关闭Scanner
-      scanner.close();
-  }
+        // 打印所有顾客的总销售额
+        System.out.println("\n所有顾客的总销售额：" + totalSales + " 元");
+
+        // 关闭 Scanner
+        scanner.close();
+    }
 }
 ```
 
@@ -313,68 +316,68 @@ public class RestaurantOrder {
 import java.util.Scanner;
 
 public class RestaurantOrder {
-// 定义价格常量
-private static final double BURGER_PRICE = 12.5;
-private static final double FRIES_PRICE = 6.0;
-private static final double COKE_PRICE = 4.5;
+    // 定义价格常量
+    private static final double BURGER_PRICE = 12.5;
+    private static final double FRIES_PRICE = 6.0;
+    private static final double COKE_PRICE = 4.5;
 
-  public static void main(String[] args) {
-      Scanner scanner = new Scanner(System.in);
-      double totalSales = 0.0;
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double totalSales = 0.0;
 
-      while (true) {
-          int option = getUserOption(scanner);
+        while (true) {
+            int option = getUserOption(scanner);
 
-          if (option == -1) {
-              break;
-          }
+            if (option == -1) {
+                break;
+            }
 
-          int burgers = getQuantity(scanner, "汉堡");
-          int fries = getQuantity(scanner, "薯条");
-          int cokes = getQuantity(scanner, "可乐");
+            int burgers = getQuantity(scanner, "汉堡");
+            int fries = getQuantity(scanner, "薯条");
+            int cokes = getQuantity(scanner, "可乐");
 
-          printOrderDetails(burgers, fries, cokes);
-          double orderTotal = calculateOrderTotal(burgers, fries, cokes);
-          totalSales += orderTotal;
+            printOrderDetails(burgers, fries, cokes);
+            double orderTotal = calculateOrderTotal(burgers, fries, cokes);
+            totalSales += orderTotal;
 
-          System.out.println("\n本次点单总价：" + orderTotal + " 元");
-      }
+            System.out.println("\n本次点单总价：" + orderTotal + " 元");
+        }
 
-      System.out.println("\n所有顾客的总销售额：" + totalSales + " 元");
+        System.out.println("\n所有顾客的总销售额：" + totalSales + " 元");
 
-      scanner.close();
-  }
+        scanner.close();
+    }
 
-  // 获取用户的点单选项
-  private static int getUserOption(Scanner scanner) {
-      System.out.print("\n请点单（输入-1退出，其他整数进入点单）：");
-      return scanner.nextInt();
-  }
+    // 获取用户的点单选项
+    private static int getUserOption(Scanner scanner) {
+        System.out.print("\n请点单（输入-1退出，其他整数进入点单）：");
+        return scanner.nextInt();
+    }
 
-  // 获取特定商品的数量
-  private static int getQuantity(Scanner scanner, String itemName) {
-      System.out.print("请输入" + itemName + "的数量：");
-      return scanner.nextInt();
-  }
+    // 获取特定商品的数量
+    private static int getQuantity(Scanner scanner, String itemName) {
+        System.out.print("请输入" + itemName + "的数量：");
+        return scanner.nextInt();
+    }
 
-  // 打印客户点单内容
-  private static void printOrderDetails(int burgers, int fries, int cokes) {
-      System.out.println("\n客户点单内容：");
-      if (burgers > 0) {
-          System.out.println("汉堡 x " + burgers);
-      }
-      if (fries > 0) {
-          System.out.println("薯条 x " + fries);
-      }
-      if (cokes > 0) {
-          System.out.println("可乐 x " + cokes);
-      }
-  }
+    // 打印客户点单内容
+    private static void printOrderDetails(int burgers, int fries, int cokes) {
+        System.out.println("\n客户点单内容：");
+        if (burgers > 0) {
+            System.out.println("汉堡 x " + burgers);
+        }
+        if (fries > 0) {
+            System.out.println("薯条 x " + fries);
+        }
+        if (cokes > 0) {
+            System.out.println("可乐 x " + cokes);
+        }
+    }
 
-  // 计算订单总价
-  private static double calculateOrderTotal(int burgers, int fries, int cokes) {
-      return burgers * BURGER_PRICE + fries * FRIES_PRICE + cokes * COKE_PRICE;
-  }
+    // 计算订单总价
+    private static double calculateOrderTotal(int burgers, int fries, int cokes) {
+        return burgers * BURGER_PRICE + fries * FRIES_PRICE + cokes * COKE_PRICE;
+    }
 }
 ```
 

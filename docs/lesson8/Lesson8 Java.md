@@ -100,26 +100,26 @@ class Solution {
 
 ```java
 class Solution {
-   public boolean isPalindrome(String s) {
-      StringBuilder sgood = new StringBuilder(); // 用于存储有效字符
-      int length = s.length();
+    public boolean isPalindrome(String s) {
+        StringBuilder sgood = new StringBuilder(); // 用于存储有效字符
+        int length = s.length();
 
-      // 遍历输入字符串
-      for (int i = 0; i < length; i++) {
-         char ch = s.charAt(i); // 获取当前字符
+        // 遍历输入字符串
+        for (int i = 0; i < length; i++) {
+            char ch = s.charAt(i); // 获取当前字符
 
-         // 判断是否为字母或数字
-         if (Character.isLetterOrDigit(ch)) {
-            sgood.append(Character.toLowerCase(ch)); // 转为小写并添加到有效字符中
-         }
-      }
+            // 判断是否为字母或数字
+            if (Character.isLetterOrDigit(ch)) {
+                sgood.append(Character.toLowerCase(ch)); // 转为小写并添加到有效字符中
+            }
+        }
 
-      // 创建反转后的有效字符字符串
-      StringBuilder sgood_rev = new StringBuilder(sgood).reverse();
+        // 创建反转后的有效字符字符串
+        StringBuilder sgood_rev = new StringBuilder(sgood).reverse();
 
-      // 使用 contentEquals 方法比较有效字符和反转字符
-      return sgood.contentEquals(sgood_rev);
-   }
+        // 使用 contentEquals 方法比较有效字符和反转字符
+        return sgood.contentEquals(sgood_rev);
+    }
 }
 ```
 
@@ -494,28 +494,28 @@ public class Solution{
 
 ```java
 class Solution {
-   public int reverse(int x) {
-      int result = 0;
+    public int reverse(int x) {
+        int result = 0;
 
-      while (x != 0) {
-         int digit = x % 10;
+        while (x != 0) {
+            int digit = x % 10;
 
-         // 检查是否会溢出：如果 result 超过了边界，返回 0
-         if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
-            return 0;
-         }
-         if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
-            return 0;
-         }
+            // 检查是否会溢出：如果 result 超过了边界，返回 0
+            if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
+                return 0;
+            }
+            if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && digit < -8)) {
+                return 0;
+            }
 
-         // 构建反转后的结果
-         result = result * 10 + digit;
-         // 移除 x 的最后一位
-         x /= 10;
-      }
+            // 构建反转后的结果
+            result = result * 10 + digit;
+            // 移除 x 的最后一位
+            x /= 10;
+        }
 
-      return result;
-   }
+        return result;
+    }
 }
 ```
 

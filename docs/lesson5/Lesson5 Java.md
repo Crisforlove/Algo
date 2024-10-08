@@ -150,19 +150,19 @@ public class ArrayListExample {
 import java.util.ArrayList;
 
 public class Main {
-   public static void main(String[] args) {
-      // 创建一个 ArrayList 并添加元素
-      ArrayList<String> fruits = new ArrayList<>();
-      fruits.add("Apple");
-      fruits.add("Banana");
-      fruits.add("Cherry");
+    public static void main(String[] args) {
+        // 创建一个 ArrayList 并添加元素
+        ArrayList<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Cherry");
 
-      // 获取第一个元素
-      String firstFruit = fruits.get(0); // 获取第一个元素，值为"Apple"
+        // 获取第一个元素
+        String firstFruit = fruits.get(0); // 获取第一个元素，值为"Apple"
 
-      // 输出第一个元素
-      System.out.println("The first fruit is: " + firstFruit);
-   }
+        // 输出第一个元素
+        System.out.println("The first fruit is: " + firstFruit);
+    }
 }
 ```
 
@@ -174,19 +174,19 @@ public class Main {
 import java.util.ArrayList;
 
 public class Main {
-   public static void main(String[] args) {
-      // 创建一个 ArrayList 并添加元素
-      ArrayList<String> fruits = new ArrayList<>();
-      fruits.add("Apple");
-      fruits.add("Banana");
-      fruits.add("Cherry");
+    public static void main(String[] args) {
+        // 创建一个 ArrayList 并添加元素
+        ArrayList<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Cherry");
       
-      // 删除索引为1的元素，即"Banana"
-      fruits.remove(1);
+        // 删除索引为1的元素，即"Banana"
+        fruits.remove(1);
 
-      // 打印删除后的列表
-      System.out.println("Fruits list after removal: " + fruits);
-   }
+        // 打印删除后的列表
+        System.out.println("Fruits list after removal: " + fruits);
+    }
 }
 
 ```
@@ -199,26 +199,26 @@ public class Main {
 import java.util.ArrayList;
 
 public class Main {
-   public static void main(String[] args) {
-      // 创建一个 ArrayList 并添加元素
-      ArrayList<String> fruits = new ArrayList<>();
-      fruits.add("Apple");
-      fruits.add("Banana");
-      fruits.add("Cherry");
+    public static void main(String[] args) {
+        // 创建一个 ArrayList 并添加元素
+        ArrayList<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Cherry");
 
-      // 获取列表大小
-      int size = fruits.size(); // 获取当前列表的大小，值为3
+        // 获取列表大小
+        int size = fruits.size(); // 获取当前列表的大小，值为3
       
-      // 删除索引为1的元素，即"Banana"
-      fruits.remove(1);
+        // 删除索引为1的元素，即"Banana"
+        fruits.remove(1);
 
-      // 获取列表大小
-      int size = fruits.size(); // 获取当前列表的大小，值为2
-      System.out.println("The size of the fruits list is: " + size);
+        // 获取列表大小
+        int size = fruits.size(); // 获取当前列表的大小，值为2
+        System.out.println("The size of the fruits list is: " + size);
 
-      // 打印删除后的列表
-      System.out.println("Fruits list after removal: " + fruits);
-   }
+        // 打印删除后的列表
+        System.out.println("Fruits list after removal: " + fruits);
+    }
 }
 
 ```
@@ -231,20 +231,19 @@ public class Main {
 import java.util.ArrayList;
 
 public class Main {
-   public static void main(String[] args) {
-      // 创建一个 ArrayList 并添加元素
-      ArrayList<String> fruits = new ArrayList<>();
-      fruits.add("Apple");
-      fruits.add("Banana");
-      fruits.add("Cherry");
+    public static void main(String[] args) {
+        // 创建一个 ArrayList 并添加元素
+        ArrayList<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Cherry");
       
-      // 使用增强的 for 循环遍历并打印列表中的每个元素
-      System.out.println("Fruits in the list:");
-      for (String fruit : fruits) {
-         System.out.println(fruit);
-      }
-      
-   }
+        // 使用增强的 for 循环遍历并打印列表中的每个元素
+        System.out.println("Fruits in the list:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+    }
 }
 ```
 
@@ -511,25 +510,25 @@ public class ArrayListExample {
 import java.util.ArrayList;
 
 public class LinearSearchExample {
-  public static void main(String[] args) {
-    // 创建一个包含一些整数的 ArrayList
-    // To be implemented
-
-    
-    // 要查找的目标元素
-    int target = 30;
-
-    
-    // 线性搜索方法
-    // To be implemented
-
-    // 打印结果
-    if (index != -1) {
-      System.out.println("元素 " + target + " 在列表中的索引是: " + index);
-    } else {
-      System.out.println("元素 " + target + " 不在列表中。");
+    public static void main(String[] args) {
+        // 创建一个包含一些整数的 ArrayList
+        // To be implemented
+   
+       
+        // 要查找的目标元素
+        int target = 30;
+   
+       
+        // 线性搜索方法
+        // To be implemented
+   
+        // 打印结果
+        if (index != -1) {
+            System.out.println("元素 " + target + " 在列表中的索引是: " + index);
+        } else {
+            System.out.println("元素 " + target + " 不在列表中。");
+        }
     }
-  }
 }
 
 ```
@@ -540,34 +539,34 @@ public class LinearSearchExample {
 import java.util.ArrayList;
 
 public class LinearSearchExample {
-  public static void main(String[] args) {
-    // 创建一个包含一些整数的 ArrayList
-     ArrayList<Integer> list = new ArrayList<>();
-     list.add(10);
-     list.add(20);
-     list.add(30);
-     list.add(40);
-     list.add(50);
+    public static void main(String[] args) {
+        // 创建一个包含一些整数的 ArrayList
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        list.add(50);
 
-    // 要查找的目标元素
-    int target = 30;
+        // 要查找的目标元素
+        int target = 30;
 
-    // 线性搜索方法
-    int index = -1;
-    for (int i = 0; i < list.size(); i++) {
-      if (list.get(i) == target) {
-        index = i;  // 找到目标元素，记录索引
-        break;  // 一旦找到就可以退出循环
-      }
+         // 线性搜索方法
+        int index = -1;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == target) {
+                index = i;  // 找到目标元素，记录索引
+                break;  // 一旦找到就可以退出循环
+            }
+       } 
+
+        // 打印结果
+        if (index != -1) {
+            System.out.println("元素 " + target + " 在列表中的索引是: " + index);
+        } else {
+            System.out.println("元素 " + target + " 不在列表中。");
+        }
     }
-
-    // 打印结果
-    if (index != -1) {
-      System.out.println("元素 " + target + " 在列表中的索引是: " + index);
-    } else {
-      System.out.println("元素 " + target + " 不在列表中。");
-    }
-  }
 }
 
 ```

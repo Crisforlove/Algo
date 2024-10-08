@@ -678,25 +678,25 @@ class Solution {
 
 ```java
 class Solution {
-   public String convertToTitle(int columnNumber) {
-      StringBuilder result = new StringBuilder();
+    public String convertToTitle(int columnNumber) {
+        StringBuilder result = new StringBuilder();
 
-      // 处理进制转换
-      while (columnNumber > 0) {
-         // 因为是从 1 开始的列，所以需要先减1
-         columnNumber--;
+        // 处理进制转换
+        while (columnNumber > 0) {
+            // 因为是从 1 开始的列，所以需要先减1
+            columnNumber--;
 
-         // 计算当前位对应的字母
-         char currentChar = (char) ('A' + (columnNumber % 26));
-         result.append(currentChar);  // 将字符添加到结果字符串中
+            // 计算当前位对应的字母
+            char currentChar = (char) ('A' + (columnNumber % 26));
+            result.append(currentChar);  // 将字符添加到结果字符串中
 
-         // 减少列号
-         columnNumber /= 26;
-      }
+            // 减少列号
+            columnNumber /= 26;
+        }
 
-      // 由于我们是从低位开始计算，因此需要反转结果
-      return result.reverse().toString();  // 直接反转并转换为字符串
-   }
+        // 由于我们是从低位开始计算，因此需要反转结果
+        return result.reverse().toString();  // 直接反转并转换为字符串
+    }
 }
 ```
 

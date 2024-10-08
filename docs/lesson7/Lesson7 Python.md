@@ -60,7 +60,7 @@ ASCII（American Standard Code for Information Interchange，美国信息交换�
 
 **示例：字符到整数的转换**
 
-```
+```python
 digit = '5'  # '5' 的 ASCII 值是 53
 num = ord(digit) - ord('0')  # '5' - '0' = 5
 print(f"字符 {digit} 转换为整数是 {num}")
@@ -78,7 +78,7 @@ print(f"字符 {digit} 转换为整数是 {num}")
 
 **示例：整数到字符的转换**
 
-```
+```python
 num = 7
 digit = chr(num + ord('0'))  # 7 + '0' = '7'
 print(f"整数 {num} 转换为字符是 {digit}")
@@ -100,7 +100,7 @@ print(f"整数 {num} 转换为字符是 {digit}")
 
 **示例：字符到字母表位置的转换**
 
-```
+```python
 letter = 'C'  # 'C' 的 ASCII 值是 67
 position = ord(letter) - ord('A')  # 'C' - 'A' = 2
 print(f"字符 {letter} 在字母表中的位置是 {position}")
@@ -118,7 +118,7 @@ print(f"字符 {letter} 在字母表中的位置是 {position}")
 
 **示例：字母表位置到字符的转换**
 
-```
+```python
 position = 2
 letter = chr(position + ord('A'))  # 2 + 'A' = 'C'
 print(f"字母表中位置 {position} 对应的字符是 {letter}")
@@ -136,7 +136,7 @@ print(f"字母表中位置 {position} 对应的字符是 {letter}")
 
 **示例：处理字符串中的数字和字母**
 
-```
+```python
 str_input = "A3C7"
 sum_num = 0
 
@@ -193,7 +193,7 @@ C 在字母表中的位置是: 2
 
 #### 参考答案
 
-```
+```python
 class Solution:
     def freqAlphabets(self, s: str) -> str:
         # 用一个列表存储字母 a-z 的映射
@@ -242,7 +242,7 @@ class Solution:
 
 #### 参考解答
 
-```
+```python
 class Solution:
     def firstUniqChar(self, s: str) -> int:
         # 定义大小为26的列表，记录每个字符出现的次数
@@ -296,7 +296,7 @@ AB -> 28
 2. **进制转换**：将列名看作是 26 进制数，从右到左遍历字符串，将每个字符转换成数字并乘以 26 的幂次累加到结果中。
 3. **返回结果**：最终的累加结果即为 Excel 表格列名对应的列序号。
 
-```
+```python
 class Solution:
     def titleToNumber(self, columnTitle: str) -> int:
         result = 0
@@ -343,7 +343,7 @@ class Solution:
 
 #### 参考解答
 
-```
+```python
 class Solution:
     def uniqueMorseRepresentations(self, words: list[str]) -> int:
         # 用数组来存储字母到摩斯密码的映射
@@ -426,7 +426,7 @@ class Solution:
 
 ### 用 Python实现十进制到二进制的转换
 
-```
+```python
 def decimal_to_binary(num):
     ans = ""
     while num > 0:
@@ -462,7 +462,7 @@ print(binary_representation)
 
 ### 用 Python实现二进制到十进制的转换
 
-```cpp
+```python
 def binary_to_decimal(binary_str):
     ans = 0
     for char in binary_str:
@@ -503,7 +503,7 @@ print(decimal_value)
 
 #### 示例：用 Python 实现十进制到十六进制的转换
 
-```
+```python
 def dec_to_hex(num):
     result = ""
     while num != 0:
@@ -574,7 +574,7 @@ print(dec_to_hex(479))
 
 #### 参考解答
 
-```
+```python
 class Solution:
     def convertToBase7(self, num: int) -> str:
         initial_num = num  # 保存初始值
@@ -645,7 +645,7 @@ class Solution:
 
 #### 参考解答
 
-```
+```python
 class Solution:
     def convertToTitle(self, columnNumber: int) -> str:
         result = []
@@ -693,7 +693,7 @@ class Solution:
 
 #### 参考解答
 
-```
+```python
 class Solution:
     def selfDividingNumbers(self, left: int, right: int) -> List[int]:
         def isSelfDividing(num: int) -> bool:
@@ -726,7 +726,7 @@ class Solution:
 
 #### 参考解答
 
-```
+```python
 class Solution:
     def hasAlternatingBits(self, n: int) -> bool:
         now = n % 2  # 提取当前位
