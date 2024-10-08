@@ -1792,13 +1792,13 @@
 <p>数组在Java，C / C ++，JavaScript等大多数编程语言中都很流行。但是，在Python中，它们并不常见。人们经常谈论Python数组时，他们谈论的是Python列表。</p>
 <p>列表比数组灵活得多。它们可以存储不同数据类型的元素，包括字符串。列表比数组要快，如果需要对数组和矩阵进行数学计算，可以使用Numpy库之类的方法，本章着重讨论列表的各种操作方法。</p>
 <p>创建一个列表，只要把逗号分隔的不同的数据项使用方括号括起来即可。如下所示：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>list1 = [&#39;Google&#39;, &#39;Baidu&#39;, 1997, 2000]
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>list2 = [1, 2, 3, 4, 5 ]
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>list3 = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>list4 = [&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;, &#39;yellow&#39;, &#39;white&#39;, &#39;black&#39;]
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Google&#39;</span><span class="p">,</span> <span class="s1">&#39;Baidu&#39;</span><span class="p">,</span> <span class="mi">1997</span><span class="p">,</span> <span class="mi">2000</span><span class="p">]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">]</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">list3</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">list4</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="_1">目录</h2>
 <ul>
@@ -1840,13 +1840,13 @@
 <p>与字符串的索引一样，列表索引从 <strong>0</strong> 开始，第二个索引是 <strong>1</strong>，依此类推。</p>
 <p>通过索引列表可以进行截取、组合等操作。</p>
 <p><img alt="img" src="https://www.runoob.com/wp-content/uploads/2014/05/positive-indexes-1.png" /></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>list = [&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;, &#39;yellow&#39;, &#39;white&#39;, &#39;black&#39;]
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>print(list[0])
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>print(list[1])
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>print(list[2])
+<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">]</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -1857,13 +1857,13 @@
 </code></pre></div></td></tr></table></div>
 <p>索引也可以从尾部开始，最后一个元素的索引为 <strong>-1</strong>，往前一位为 <strong>-2</strong>，以此类推。</p>
 <p><img alt="img" src="https://www.runoob.com/wp-content/uploads/2014/05/negative-indexes.png" /></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>list = [&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;, &#39;yellow&#39;, &#39;white&#39;, &#39;black&#39;]
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>print(list[-1])
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>print(list[-2])
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>print(list[-3])
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">]</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
@@ -1874,25 +1874,25 @@
 </code></pre></div></td></tr></table></div>
 <p>使用下标索引来访问列表中的值，同样你也可以使用方括号 <strong>[]</strong> 的形式截取字符，如下所示：</p>
 <p><img alt="img" src="https://www.runoob.com/wp-content/uploads/2014/05/first-slice.png" /></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>nums = [10, 20, 30, 40, 50, 60, 70, 80, 90]
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>print(nums[0:4])
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>[10, 20, 30, 40]
 </code></pre></div></td></tr></table></div>
 <p>使用负数索引值截取：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span>
 <span class="normal"><a href="#__codelineno-7-4">4</a></span>
 <span class="normal"><a href="#__codelineno-7-5">5</a></span>
-<span class="normal"><a href="#__codelineno-7-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>list = [&#39;Google&#39;, &#39;Amazon&#39;, &quot;Zhihu&quot;, &quot;Taobao&quot;, &quot;Wiki&quot;]
+<span class="normal"><a href="#__codelineno-7-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Google&#39;</span><span class="p">,</span> <span class="s1">&#39;Amazon&#39;</span><span class="p">,</span> <span class="s2">&quot;Zhihu&quot;</span><span class="p">,</span> <span class="s2">&quot;Taobao&quot;</span><span class="p">,</span> <span class="s2">&quot;Wiki&quot;</span><span class="p">]</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a># 读取第二位
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>print (&quot;list[1]: &quot;, list[1])
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a># 从第二位开始（包含）截取到倒数第二位（不包含）
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a>print (&quot;list[1:-2]: &quot;, list[1:-2])
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="c1"># 读取第二位</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;list[1]: &quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="c1"># 从第二位开始（包含）截取到倒数第二位（不包含）</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;list[1:-2]: &quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
@@ -1902,7 +1902,7 @@
 <h3 id="12">1.2 更新列表</h3>
 <h4 id="121-append">1.2.1 使用append()方法</h4>
 <p>你可以对列表的数据项进行修改或更新，你也可以使用 append() 方法来添加列表项，如下所示：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
 <span class="normal"><a href="#__codelineno-9-4">4</a></span>
@@ -1910,15 +1910,15 @@
 <span class="normal"><a href="#__codelineno-9-6">6</a></span>
 <span class="normal"><a href="#__codelineno-9-7">7</a></span>
 <span class="normal"><a href="#__codelineno-9-8">8</a></span>
-<span class="normal"><a href="#__codelineno-9-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>list = [&#39;Google&#39;, &#39;Amazon&#39;, 1997, 2000]
+<span class="normal"><a href="#__codelineno-9-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Google&#39;</span><span class="p">,</span> <span class="s1">&#39;Amazon&#39;</span><span class="p">,</span> <span class="mi">1997</span><span class="p">,</span> <span class="mi">2000</span><span class="p">]</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a>print (&quot;第三个元素为 : &quot;, list[2])
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a>list[2] = 2001
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a>print (&quot;更新后的第三个元素为 : &quot;, list[2])
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;第三个元素为 : &quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2001</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;更新后的第三个元素为 : &quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 <a id="__codelineno-9-6" name="__codelineno-9-6"></a>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a>list1 = [&#39;Google&#39;, &#39;Amazon&#39;, &#39;Taobao&#39;]
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a>list1.append(&#39;Baidu&#39;)   #append()用于添加元素添加到列表最后一位
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a>print (&quot;更新后的列表 : &quot;, list1)
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Google&#39;</span><span class="p">,</span> <span class="s1">&#39;Amazon&#39;</span><span class="p">,</span> <span class="s1">&#39;Taobao&#39;</span><span class="p">]</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="n">list1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Baidu&#39;</span><span class="p">)</span>   <span class="c1">#append()用于添加元素添加到列表最后一位</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;更新后的列表 : &quot;</span><span class="p">,</span> <span class="n">list1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
@@ -1929,30 +1929,30 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="122-insert">1.2.2 使用insert()方法</h4>
 <p>你还可以使用 <code>insert()</code> 方法在列表的指定位置插入元素。<code>insert()</code> 方法语法格式如下：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>list.insert(index, obj)
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="nb">list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>其中，<code>index</code> 是插入位置的索引，<code>obj</code> 是要插入的对象。</p>
 <p>示例代码如下：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
 <span class="normal"><a href="#__codelineno-12-2">2</a></span>
-<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>list2 = [&#39;Google&#39;, &#39;Amazon&#39;, &#39;Taobao&#39;]
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a>list2.insert(1, &#39;Baidu&#39;)  # 在索引为1的位置插入&#39;Baidu&#39;
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a>print(&quot;插入元素后的列表：&quot;, list2)
+<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Google&#39;</span><span class="p">,</span> <span class="s1">&#39;Amazon&#39;</span><span class="p">,</span> <span class="s1">&#39;Taobao&#39;</span><span class="p">]</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">list2</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Baidu&#39;</span><span class="p">)</span>  <span class="c1"># 在索引为1的位置插入&#39;Baidu&#39;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;插入元素后的列表：&quot;</span><span class="p">,</span> <span class="n">list2</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>插入元素后的列表： [&#39;Google&#39;, &#39;Baidu&#39;, &#39;Amazon&#39;, &#39;Taobao&#39;]
 </code></pre></div></td></tr></table></div>
 <h3 id="13">1.3 删除列表元素</h3>
 <p>可以使用 del 语句来删除列表中的元素，如下实例：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
 <span class="normal"><a href="#__codelineno-14-3">3</a></span>
 <span class="normal"><a href="#__codelineno-14-4">4</a></span>
-<span class="normal"><a href="#__codelineno-14-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>list = [&#39;Google&#39;, &#39;Amazon&#39;, 1997, 2000]
+<span class="normal"><a href="#__codelineno-14-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Google&#39;</span><span class="p">,</span> <span class="s1">&#39;Amazon&#39;</span><span class="p">,</span> <span class="mi">1997</span><span class="p">,</span> <span class="mi">2000</span><span class="p">]</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2"></a>
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a>print (&quot;原始列表 : &quot;, list)
-<a id="__codelineno-14-4" name="__codelineno-14-4"></a>del list[2]
-<a id="__codelineno-14-5" name="__codelineno-14-5"></a>print (&quot;删除第三个元素 : &quot;, list)
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;原始列表 : &quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="k">del</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;删除第三个元素 : &quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
@@ -2183,11 +2183,11 @@
 </code></pre></div></td></tr></table></div>
 <p>传递的参数是区分大小写的。这意味着如果你传递的是 “python”，而不是 “Python”，你将收到一个错误，因为带有小写 “p” 的 “python” 不是列表的一部分。</p>
 <p>当然上面这种index方法有一个需要注意的点：如果我们index找不到搜索的值，就会报错，类似：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
 <span class="normal"><a href="#__codelineno-23-2">2</a></span>
-<span class="normal"><a href="#__codelineno-23-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>programming_languages = [&quot;JavaScript&quot;,&quot;Python&quot;,&quot;Java&quot;,&quot;C++&quot;]
+<span class="normal"><a href="#__codelineno-23-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="n">programming_languages</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;JavaScript&quot;</span><span class="p">,</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span><span class="s2">&quot;Java&quot;</span><span class="p">,</span><span class="s2">&quot;C++&quot;</span><span class="p">]</span>
 <a id="__codelineno-23-2" name="__codelineno-23-2"></a>
-<a id="__codelineno-23-3" name="__codelineno-23-3"></a>print(programming_languages.index(&quot;C&quot;))
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">programming_languages</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
 <p>报错为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
@@ -2197,7 +2197,7 @@
 <a id="__codelineno-24-3" name="__codelineno-24-3"></a>ValueError: &#39;C&#39; is not in list
 </code></pre></div></td></tr></table></div>
 <p>为了避免这种错误的发生，我们可以使用if-else的方法来避免系统报错，示例为：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-25-4"> 4</a></span>
@@ -2206,16 +2206,16 @@
 <span class="normal"><a href="#__codelineno-25-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-25-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-25-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-25-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>def find_index(lst, item):
-<a id="__codelineno-25-2" name="__codelineno-25-2"></a>    if item in lst:
-<a id="__codelineno-25-3" name="__codelineno-25-3"></a>        return lst.index(item)  # 如果找到，返回该值
-<a id="__codelineno-25-4" name="__codelineno-25-4"></a>    else:
-<a id="__codelineno-25-5" name="__codelineno-25-5"></a>        return -1  # 否则返回-1
+<span class="normal"><a href="#__codelineno-25-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="k">def</span> <span class="nf">find_index</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>    <span class="k">if</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>        <span class="k">return</span> <span class="n">lst</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>  <span class="c1"># 如果找到，返回该值</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a>        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>  <span class="c1"># 否则返回-1</span>
 <a id="__codelineno-25-6" name="__codelineno-25-6"></a>
-<a id="__codelineno-25-7" name="__codelineno-25-7"></a>programming_languages = [&quot;JavaScript&quot;, &quot;Python&quot;, &quot;Java&quot;, &quot;C++&quot;]
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="n">programming_languages</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;JavaScript&quot;</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;Java&quot;</span><span class="p">,</span> <span class="s2">&quot;C++&quot;</span><span class="p">]</span>
 <a id="__codelineno-25-8" name="__codelineno-25-8"></a>
-<a id="__codelineno-25-9" name="__codelineno-25-9"></a>print(find_index(programming_languages, &quot;Python&quot;))  # 输出: 1
-<a id="__codelineno-25-10" name="__codelineno-25-10"></a>print(find_index(programming_languages, &quot;python&quot;))  # 输出: -1
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">find_index</span><span class="p">(</span><span class="n">programming_languages</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">))</span>  <span class="c1"># 输出: 1</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">find_index</span><span class="p">(</span><span class="n">programming_languages</span><span class="p">,</span> <span class="s2">&quot;python&quot;</span><span class="p">))</span>  <span class="c1"># 输出: -1</span>
 </code></pre></div></td></tr></table></div>
 <p>输出为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
@@ -2256,11 +2256,11 @@
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>[1, 3, 5]
 </code></pre></div></td></tr></table></div>
 <p>当然也可以通过索引来遍历内容，</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
 <span class="normal"><a href="#__codelineno-31-2">2</a></span>
-<span class="normal"><a href="#__codelineno-31-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a>programming_languages = [&quot;JavaScript&quot;,&quot;Python&quot;,&quot;Java&quot;,&quot;Python&quot;,&quot;C++&quot;,&quot;Python&quot;]
-<a id="__codelineno-31-2" name="__codelineno-31-2"></a>for i in range(3):
-<a id="__codelineno-31-3" name="__codelineno-31-3"></a>    print(programming_languages[i])
+<span class="normal"><a href="#__codelineno-31-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="n">programming_languages</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;JavaScript&quot;</span><span class="p">,</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span><span class="s2">&quot;Java&quot;</span><span class="p">,</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span><span class="s2">&quot;C++&quot;</span><span class="p">,</span><span class="s2">&quot;Python&quot;</span><span class="p">]</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">programming_languages</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
 <p>结果为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
@@ -2283,7 +2283,7 @@
 3.返回结果: 如果找到匹配的姓名，返回该姓名在列表中的索引；如果找不到，返回 -1。</li>
 </ol>
 <p>代码示例：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-33-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-33-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-33-4"> 4</a></span>
@@ -2298,22 +2298,22 @@
 <span class="normal"><a href="#__codelineno-33-13">13</a></span>
 <span class="normal"><a href="#__codelineno-33-14">14</a></span>
 <span class="normal"><a href="#__codelineno-33-15">15</a></span>
-<span class="normal"><a href="#__codelineno-33-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a>def linear_search(name_list, target_name):
-<a id="__codelineno-33-2" name="__codelineno-33-2"></a>    for index in range(len(name_list)):
-<a id="__codelineno-33-3" name="__codelineno-33-3"></a>        if name_list[index] == target_name:
-<a id="__codelineno-33-4" name="__codelineno-33-4"></a>            return index
-<a id="__codelineno-33-5" name="__codelineno-33-5"></a>    return -1
+<span class="normal"><a href="#__codelineno-33-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="k">def</span> <span class="nf">linear_search</span><span class="p">(</span><span class="n">name_list</span><span class="p">,</span> <span class="n">target_name</span><span class="p">):</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a>    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">name_list</span><span class="p">)):</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a>        <span class="k">if</span> <span class="n">name_list</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">target_name</span><span class="p">:</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a>            <span class="k">return</span> <span class="n">index</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a>    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
 <a id="__codelineno-33-6" name="__codelineno-33-6"></a>
-<a id="__codelineno-33-7" name="__codelineno-33-7"></a># 示例用法
-<a id="__codelineno-33-8" name="__codelineno-33-8"></a>names = [&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;, &quot;David&quot;, &quot;Eve&quot;]
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a><span class="c1"># 示例用法</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="s2">&quot;David&quot;</span><span class="p">,</span> <span class="s2">&quot;Eve&quot;</span><span class="p">]</span>
 <a id="__codelineno-33-9" name="__codelineno-33-9"></a>
-<a id="__codelineno-33-10" name="__codelineno-33-10"></a># 搜索 &quot;Bob&quot; 的位置
-<a id="__codelineno-33-11" name="__codelineno-33-11"></a>index = linear_search(names, &quot;Bob&quot;)
-<a id="__codelineno-33-12" name="__codelineno-33-12"></a>print(f&quot;Bob&#39;s index is: {index}&quot;)  # 输出: Bob&#39;s index is: 1
+<a id="__codelineno-33-10" name="__codelineno-33-10"></a><span class="c1"># 搜索 &quot;Bob&quot; 的位置</span>
+<a id="__codelineno-33-11" name="__codelineno-33-11"></a><span class="n">index</span> <span class="o">=</span> <span class="n">linear_search</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">)</span>
+<a id="__codelineno-33-12" name="__codelineno-33-12"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Bob&#39;s index is: </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># 输出: Bob&#39;s index is: 1</span>
 <a id="__codelineno-33-13" name="__codelineno-33-13"></a>
-<a id="__codelineno-33-14" name="__codelineno-33-14"></a># 搜索 &quot;Frank&quot; 的位置
-<a id="__codelineno-33-15" name="__codelineno-33-15"></a>index = linear_search(names, &quot;Frank&quot;)
-<a id="__codelineno-33-16" name="__codelineno-33-16"></a>print(f&quot;Frank&#39;s index is: {index}&quot;)  # 输出: Frank&#39;s index is: -1
+<a id="__codelineno-33-14" name="__codelineno-33-14"></a><span class="c1"># 搜索 &quot;Frank&quot; 的位置</span>
+<a id="__codelineno-33-15" name="__codelineno-33-15"></a><span class="n">index</span> <span class="o">=</span> <span class="n">linear_search</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="s2">&quot;Frank&quot;</span><span class="p">)</span>
+<a id="__codelineno-33-16" name="__codelineno-33-16"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Frank&#39;s index is: </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># 输出: Frank&#39;s index is: -1</span>
 </code></pre></div></td></tr></table></div>
 <p>参考输出：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>

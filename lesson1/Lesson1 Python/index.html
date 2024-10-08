@@ -2501,15 +2501,15 @@
 </table>
 <h4 id="43">4.3 注释</h4>
 <p>Python中单行注释以 <strong>#</strong> 开头，实例如下：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a># 第一个注释
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>print(&quot;Hello, Python!&quot;) # 第二个注释
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 第一个注释</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, Python!&quot;</span><span class="p">)</span> <span class="c1"># 第二个注释</span>
 </code></pre></div></td></tr></table></div>
 <p>执行以上代码，输出结果为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Hello, Python!
 </code></pre></div></td></tr></table></div>
 <p>多行注释可以用多个 <strong>#</strong> 号，还有 <strong>'''</strong> 和 <strong>" " "</strong>：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
@@ -2521,19 +2521,19 @@
 <span class="normal"><a href="#__codelineno-3-10">10</a></span>
 <span class="normal"><a href="#__codelineno-3-11">11</a></span>
 <span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a># 第一个注释
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a># 第二个注释
+<span class="normal"><a href="#__codelineno-3-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 第一个注释</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="c1"># 第二个注释</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>&#39;&#39;&#39;
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>第三注释
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>第四注释
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>&#39;&#39;&#39;
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="sd">&#39;&#39;&#39;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="sd">第三注释</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="sd">第四注释</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="sd">&#39;&#39;&#39;</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a>&quot;&quot;&quot;
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a>第五注释
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a>第六注释
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a>&quot;&quot;&quot;
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a>print(&quot;Hello, Python!&quot;)
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="sd">第五注释</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="sd">第六注释</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, Python!&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>执行以上代码，输出结果为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>Hello, Python!
@@ -2541,26 +2541,26 @@
 <h4 id="44">4.4 行和缩进</h4>
 <p>python最具特色的就是使用缩进来表示代码块，不需要使用大括号 <strong>{}</strong> 。</p>
 <p>缩进的空格数是可变的，但是同一个代码块的语句必须包含相同的缩进空格数。实例如下：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>if True:
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    print(&quot;True&quot;)
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>else:
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>    print(&quot;False&quot;)
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;True&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;False&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以下代码最后一行语句缩进数的空格数不一致，会导致运行错误：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
 <span class="normal"><a href="#__codelineno-6-3">3</a></span>
 <span class="normal"><a href="#__codelineno-6-4">4</a></span>
 <span class="normal"><a href="#__codelineno-6-5">5</a></span>
-<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>if True:
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    print(&quot;Answer&quot;)
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>    print(&quot;True&quot;)
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>else:
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>    print(&quot;Answer&quot;)
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>  print(&quot;False&quot;)    # 缩进不一致，会导致运行错误
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Answer&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;True&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Answer&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;False&quot;</span><span class="p">)</span>    <span class="c1"># 缩进不一致，会导致运行错误</span>
 </code></pre></div></td></tr></table></div>
 <p>以上程序由于缩进不一致，执行后会出现类似以下错误：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
@@ -2576,19 +2576,19 @@
 <p>在 Python 中，变量就是变量，它没有类型，我们所说的"类型"是变量所指的内存中对象的类型。</p>
 <p>等号（=）用来给变量赋值。</p>
 <p>等号（=）运算符左边是一个变量名,等号（=）运算符右边是存储在变量中的值。例如：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span>
 <span class="normal"><a href="#__codelineno-8-4">4</a></span>
 <span class="normal"><a href="#__codelineno-8-5">5</a></span>
 <span class="normal"><a href="#__codelineno-8-6">6</a></span>
-<span class="normal"><a href="#__codelineno-8-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>counter = 100          # 整型变量
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a>miles   = 1000.0       # 浮点型变量
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a>name    = &quot;CodeRaft&quot;     # 字符串
+<span class="normal"><a href="#__codelineno-8-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">counter</span> <span class="o">=</span> <span class="mi">100</span>          <span class="c1"># 整型变量</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">miles</span>   <span class="o">=</span> <span class="mf">1000.0</span>       <span class="c1"># 浮点型变量</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">name</span>    <span class="o">=</span> <span class="s2">&quot;CodeRaft&quot;</span>     <span class="c1"># 字符串</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a>print(counter)
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a>print(miles)
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a>print(name)
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">miles</span><span class="p">)</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>执行以上程序会输出如下结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
@@ -2599,11 +2599,11 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="51">5.1 多个变量赋值</h4>
 <p>Python允许你同时为多个变量赋值。例如：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>a = b = c = 1
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例，创建一个整型对象，值为 1，从后向前赋值，三个变量被赋予相同的数值。</p>
 <p>您也可以为多个对象指定多个变量。例如：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>a, b, c = 1, 2, &quot;CodeRaft&quot;
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;CodeRaft&quot;</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例，两个整型对象 1 和 2 的分配给变量 a 和 b，字符串对象 "CodeRaft" 分配给变量 c。</p>
 <h2 id="6-python">6 Python的数据类型</h2>
@@ -2615,24 +2615,24 @@
 <li><strong>浮点型（float）</strong>：通常情况下的浮点数表示方法，可以使用科学计数法（如1.23e9）。</li>
 <li><strong>布尔型（bool）</strong>：包括True和False两种值，实际上是整型的子类型，True等于1，False等于0。</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
 <span class="normal"><a href="#__codelineno-12-2">2</a></span>
-<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>a = 3           # int
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a>b = 3.14        # float
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a>c = True        # bool
+<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>           <span class="c1"># int</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mf">3.14</span>        <span class="c1"># float</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="n">c</span> <span class="o">=</span> <span class="kc">True</span>        <span class="c1"># bool</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="612">6.1.2 字符串</h4>
 <ul>
 <li><strong>字符串（str）</strong>：文本类型，使用单引号或双引号包围。</li>
 <li>字符串是不可变序列，可以进行索引、切片、加法和乘法操作。</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
 <span class="normal"><a href="#__codelineno-13-3">3</a></span>
-<span class="normal"><a href="#__codelineno-13-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>str1 = &quot;Hello&quot;
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a>str2 = &#39;World&#39;
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a>print(str1 + &quot; &quot; + str2)  # 字符串连接
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a>print(str1 * 3)           # 字符串重复
+<span class="normal"><a href="#__codelineno-13-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">str1</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">str2</span> <span class="o">=</span> <span class="s1">&#39;World&#39;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">str1</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">str2</span><span class="p">)</span>  <span class="c1"># 字符串连接</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">str1</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>           <span class="c1"># 字符串重复</span>
 </code></pre></div></td></tr></table></div>
 <p>这样输出的结果为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
@@ -2640,7 +2640,7 @@
 <a id="__codelineno-14-2" name="__codelineno-14-2"></a>HelloHelloHello
 </code></pre></div></td></tr></table></div>
 <p>在Python中，str()函数可以将任何数据类型转换成字符串类型，而int()函数则可以将字符串或数字转换为整数类型，但前提是这个字符串或数字必须表示一个有效的整数。
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
@@ -2657,24 +2657,24 @@
 <span class="normal"><a href="#__codelineno-15-15">15</a></span>
 <span class="normal"><a href="#__codelineno-15-16">16</a></span>
 <span class="normal"><a href="#__codelineno-15-17">17</a></span>
-<span class="normal"><a href="#__codelineno-15-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a># 假设我们有一个整数和一个字符串
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a>original_int = 123
-<a id="__codelineno-15-3" name="__codelineno-15-3"></a>original_str = &quot;456&quot;
+<span class="normal"><a href="#__codelineno-15-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="c1"># 假设我们有一个整数和一个字符串</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="n">original_int</span> <span class="o">=</span> <span class="mi">123</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="n">original_str</span> <span class="o">=</span> <span class="s2">&quot;456&quot;</span>
 <a id="__codelineno-15-4" name="__codelineno-15-4"></a>
-<a id="__codelineno-15-5" name="__codelineno-15-5"></a># 使用str()函数将整数转换为字符串
-<a id="__codelineno-15-6" name="__codelineno-15-6"></a>int_as_str = str(original_int)
-<a id="__codelineno-15-7" name="__codelineno-15-7"></a>print(&quot;整数转换为字符串:&quot;, int_as_str)
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="c1"># 使用str()函数将整数转换为字符串</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="n">int_as_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">original_int</span><span class="p">)</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;整数转换为字符串:&quot;</span><span class="p">,</span> <span class="n">int_as_str</span><span class="p">)</span>
 <a id="__codelineno-15-8" name="__codelineno-15-8"></a>
-<a id="__codelineno-15-9" name="__codelineno-15-9"></a># 使用int()函数将字符串转换回整数
-<a id="__codelineno-15-10" name="__codelineno-15-10"></a>str_as_int = int(original_str)
-<a id="__codelineno-15-11" name="__codelineno-15-11"></a>print(&quot;字符串转换为整数:&quot;, str_as_int)
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="c1"># 使用int()函数将字符串转换回整数</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="n">str_as_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">original_str</span><span class="p">)</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;字符串转换为整数:&quot;</span><span class="p">,</span> <span class="n">str_as_int</span><span class="p">)</span>
 <a id="__codelineno-15-12" name="__codelineno-15-12"></a>
-<a id="__codelineno-15-13" name="__codelineno-15-13"></a># 注意：如果字符串包含非数字字符，int()函数会抛出ValueError
-<a id="__codelineno-15-14" name="__codelineno-15-14"></a>invalid_str = &quot;abc&quot;
-<a id="__codelineno-15-15" name="__codelineno-15-15"></a>try:
-<a id="__codelineno-15-16" name="__codelineno-15-16"></a>    invalid_int = int(invalid_str)
-<a id="__codelineno-15-17" name="__codelineno-15-17"></a>except ValueError:
-<a id="__codelineno-15-18" name="__codelineno-15-18"></a>    print(&quot;错误：无法将非数字字符串转换为整数&quot;)
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="c1"># 注意：如果字符串包含非数字字符，int()函数会抛出ValueError</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="n">invalid_str</span> <span class="o">=</span> <span class="s2">&quot;abc&quot;</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a>    <span class="n">invalid_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">invalid_str</span><span class="p">)</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;错误：无法将非数字字符串转换为整数&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 输出结果：
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
@@ -2707,7 +2707,7 @@
 <p>索引值以 <strong>0</strong> 为开始值，<strong>-1</strong> 为从末尾的开始位置。</p>
 <p><img alt="img" src="https://www.runoob.com/wp-content/uploads/2014/08/list_slicing1_new1.png" /></p>
 <p>加号 <strong>+</strong> 是列表连接运算符，星号 * 是重复操作。如下实例：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
 <span class="normal"><a href="#__codelineno-18-2">2</a></span>
 <span class="normal"><a href="#__codelineno-18-3">3</a></span>
 <span class="normal"><a href="#__codelineno-18-4">4</a></span>
@@ -2715,15 +2715,15 @@
 <span class="normal"><a href="#__codelineno-18-6">6</a></span>
 <span class="normal"><a href="#__codelineno-18-7">7</a></span>
 <span class="normal"><a href="#__codelineno-18-8">8</a></span>
-<span class="normal"><a href="#__codelineno-18-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>list = [ &#39;abcd&#39;, 786 , 2.23, &#39;CodeRaft&#39;, 70.2 ]  # 定义一个列表
-<a id="__codelineno-18-2" name="__codelineno-18-2"></a>tinylist = [123, &#39;CodeRaft&#39;]
+<span class="normal"><a href="#__codelineno-18-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;abcd&#39;</span><span class="p">,</span> <span class="mi">786</span> <span class="p">,</span> <span class="mf">2.23</span><span class="p">,</span> <span class="s1">&#39;CodeRaft&#39;</span><span class="p">,</span> <span class="mf">70.2</span> <span class="p">]</span>  <span class="c1"># 定义一个列表</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="n">tinylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;CodeRaft&#39;</span><span class="p">]</span>
 <a id="__codelineno-18-3" name="__codelineno-18-3"></a>
-<a id="__codelineno-18-4" name="__codelineno-18-4"></a>print(list)            # 打印整个列表
-<a id="__codelineno-18-5" name="__codelineno-18-5"></a>print(list[0])         # 打印列表的第一个元素
-<a id="__codelineno-18-6" name="__codelineno-18-6"></a>print(list[1:3])       # 打印列表第二到第四个元素（不包含第四个元素）
-<a id="__codelineno-18-7" name="__codelineno-18-7"></a>print(list[2:])        # 打印列表从第三个元素开始到末尾
-<a id="__codelineno-18-8" name="__codelineno-18-8"></a>print(tinylist * 2)    # 打印tinylist列表两次
-<a id="__codelineno-18-9" name="__codelineno-18-9"></a>print(list + tinylist)  # 打印两个列表拼接在一起的结果
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>            <span class="c1"># 打印整个列表</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>         <span class="c1"># 打印列表的第一个元素</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>       <span class="c1"># 打印列表第二到第四个元素（不包含第四个元素）</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>        <span class="c1"># 打印列表从第三个元素开始到末尾</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">tinylist</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>    <span class="c1"># 打印tinylist列表两次</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span> <span class="o">+</span> <span class="n">tinylist</span><span class="p">)</span>  <span class="c1"># 打印两个列表拼接在一起的结果</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
@@ -2741,7 +2741,7 @@
 <h4 id="615-tuple">6.1.5 Tuple（元组）</h4>
 <p>元组（tuple）与列表类似，不同之处在于元组的元素不能修改。元组写在小括号 <strong>()</strong> 里，元素之间用逗号隔开。</p>
 <p>元组中的元素类型也可以不相同：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
 <span class="normal"><a href="#__codelineno-20-2">2</a></span>
 <span class="normal"><a href="#__codelineno-20-3">3</a></span>
 <span class="normal"><a href="#__codelineno-20-4">4</a></span>
@@ -2749,15 +2749,15 @@
 <span class="normal"><a href="#__codelineno-20-6">6</a></span>
 <span class="normal"><a href="#__codelineno-20-7">7</a></span>
 <span class="normal"><a href="#__codelineno-20-8">8</a></span>
-<span class="normal"><a href="#__codelineno-20-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>tuple = ( &#39;abcd&#39;, 786 , 2.23, &#39;CodeRaft&#39;, 70.2  )
-<a id="__codelineno-20-2" name="__codelineno-20-2"></a>tinytuple = (123, &#39;CodeRaft&#39;)
+<span class="normal"><a href="#__codelineno-20-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span> <span class="s1">&#39;abcd&#39;</span><span class="p">,</span> <span class="mi">786</span> <span class="p">,</span> <span class="mf">2.23</span><span class="p">,</span> <span class="s1">&#39;CodeRaft&#39;</span><span class="p">,</span> <span class="mf">70.2</span>  <span class="p">)</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="n">tinytuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;CodeRaft&#39;</span><span class="p">)</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3"></a>
-<a id="__codelineno-20-4" name="__codelineno-20-4"></a>print(tuple)             # 输出完整元组
-<a id="__codelineno-20-5" name="__codelineno-20-5"></a>print(tuple[0])          # 输出元组的第一个元素
-<a id="__codelineno-20-6" name="__codelineno-20-6"></a>print(tuple[1:3])        # 输出从第二个元素开始到第三个元素
-<a id="__codelineno-20-7" name="__codelineno-20-7"></a>print(tuple[2:])         # 输出从第三个元素开始的所有元素
-<a id="__codelineno-20-8" name="__codelineno-20-8"></a>print(tinytuple * 2)     # 输出两次元组
-<a id="__codelineno-20-9" name="__codelineno-20-9"></a>print(tuple + tinytuple) # 连接元组
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="nb">print</span><span class="p">(</span><span class="nb">tuple</span><span class="p">)</span>             <span class="c1"># 输出完整元组</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="nb">print</span><span class="p">(</span><span class="nb">tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>          <span class="c1"># 输出元组的第一个元素</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="nb">print</span><span class="p">(</span><span class="nb">tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>        <span class="c1"># 输出从第二个元素开始到第三个元素</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="nb">print</span><span class="p">(</span><span class="nb">tuple</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>         <span class="c1"># 输出从第三个元素开始的所有元素</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">tinytuple</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>     <span class="c1"># 输出两次元组</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="nb">print</span><span class="p">(</span><span class="nb">tuple</span> <span class="o">+</span> <span class="n">tinytuple</span><span class="p">)</span> <span class="c1"># 连接元组</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
@@ -2785,7 +2785,7 @@
 <a id="__codelineno-22-2" name="__codelineno-22-2"></a>或者
 <a id="__codelineno-22-3" name="__codelineno-22-3"></a>set(value)
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
@@ -2808,30 +2808,30 @@
 <span class="normal"><a href="#__codelineno-23-21">21</a></span>
 <span class="normal"><a href="#__codelineno-23-22">22</a></span>
 <span class="normal"><a href="#__codelineno-23-23">23</a></span>
-<span class="normal"><a href="#__codelineno-23-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>sites = {&#39;Google&#39;, &#39;Taobao&#39;, &#39;Runoob&#39;, &#39;Facebook&#39;, &#39;Zhihu&#39;, &#39;Baidu&#39;}
+<span class="normal"><a href="#__codelineno-23-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="n">sites</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Google&#39;</span><span class="p">,</span> <span class="s1">&#39;Taobao&#39;</span><span class="p">,</span> <span class="s1">&#39;Runoob&#39;</span><span class="p">,</span> <span class="s1">&#39;Facebook&#39;</span><span class="p">,</span> <span class="s1">&#39;Zhihu&#39;</span><span class="p">,</span> <span class="s1">&#39;Baidu&#39;</span><span class="p">}</span>
 <a id="__codelineno-23-2" name="__codelineno-23-2"></a>
-<a id="__codelineno-23-3" name="__codelineno-23-3"></a>print(sites)   # 输出集合，重复的元素被自动去掉
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">sites</span><span class="p">)</span>   <span class="c1"># 输出集合，重复的元素被自动去掉</span>
 <a id="__codelineno-23-4" name="__codelineno-23-4"></a>
-<a id="__codelineno-23-5" name="__codelineno-23-5"></a># 成员测试
-<a id="__codelineno-23-6" name="__codelineno-23-6"></a>if &#39;Runoob&#39; in sites :
-<a id="__codelineno-23-7" name="__codelineno-23-7"></a>    print(&#39;Runoob 在集合中&#39;)
-<a id="__codelineno-23-8" name="__codelineno-23-8"></a>else :
-<a id="__codelineno-23-9" name="__codelineno-23-9"></a>    print(&#39;Runoob 不在集合中&#39;)
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="c1"># 成员测试</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="k">if</span> <span class="s1">&#39;Runoob&#39;</span> <span class="ow">in</span> <span class="n">sites</span> <span class="p">:</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Runoob 在集合中&#39;</span><span class="p">)</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="k">else</span> <span class="p">:</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Runoob 不在集合中&#39;</span><span class="p">)</span>
 <a id="__codelineno-23-10" name="__codelineno-23-10"></a>
 <a id="__codelineno-23-11" name="__codelineno-23-11"></a>
-<a id="__codelineno-23-12" name="__codelineno-23-12"></a># set可以进行集合运算
-<a id="__codelineno-23-13" name="__codelineno-23-13"></a>a = set(&#39;abracadabra&#39;)
-<a id="__codelineno-23-14" name="__codelineno-23-14"></a>b = set(&#39;alacazam&#39;)
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="c1"># set可以进行集合运算</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="n">a</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;abracadabra&#39;</span><span class="p">)</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="n">b</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;alacazam&#39;</span><span class="p">)</span>
 <a id="__codelineno-23-15" name="__codelineno-23-15"></a>
-<a id="__codelineno-23-16" name="__codelineno-23-16"></a>print(a)
+<a id="__codelineno-23-16" name="__codelineno-23-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <a id="__codelineno-23-17" name="__codelineno-23-17"></a>
-<a id="__codelineno-23-18" name="__codelineno-23-18"></a>print(a - b)     # a 和 b 的差集
+<a id="__codelineno-23-18" name="__codelineno-23-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>     <span class="c1"># a 和 b 的差集</span>
 <a id="__codelineno-23-19" name="__codelineno-23-19"></a>
-<a id="__codelineno-23-20" name="__codelineno-23-20"></a>print(a | b)     # a 和 b 的并集
+<a id="__codelineno-23-20" name="__codelineno-23-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">|</span> <span class="n">b</span><span class="p">)</span>     <span class="c1"># a 和 b 的并集</span>
 <a id="__codelineno-23-21" name="__codelineno-23-21"></a>
-<a id="__codelineno-23-22" name="__codelineno-23-22"></a>print(a &amp; b)     # a 和 b 的交集
+<a id="__codelineno-23-22" name="__codelineno-23-22"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span>     <span class="c1"># a 和 b 的交集</span>
 <a id="__codelineno-23-23" name="__codelineno-23-23"></a>
-<a id="__codelineno-23-24" name="__codelineno-23-24"></a>print(a ^ b)     # a 和 b 中不同时存在的元素
+<a id="__codelineno-23-24" name="__codelineno-23-24"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">^</span> <span class="n">b</span><span class="p">)</span>     <span class="c1"># a 和 b 中不同时存在的元素</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
@@ -2854,7 +2854,7 @@
 <p>字典是一种映射类型，字典用 <strong>{ }</strong> 标识，它是一个无序的 <strong>键(key) : 值(value)</strong> 的集合。</p>
 <p>键(key)必须使用不可变类型。</p>
 <p>在同一个字典中，键(key)必须是唯一的。</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-25-4"> 4</a></span>
@@ -2865,18 +2865,18 @@
 <span class="normal"><a href="#__codelineno-25-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-25-10">10</a></span>
 <span class="normal"><a href="#__codelineno-25-11">11</a></span>
-<span class="normal"><a href="#__codelineno-25-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>dict = {}
-<a id="__codelineno-25-2" name="__codelineno-25-2"></a>dict[&#39;one&#39;] = &quot;CodeRaft&quot;
-<a id="__codelineno-25-3" name="__codelineno-25-3"></a>dict[2]     = &quot;泛编程&quot;
+<span class="normal"><a href="#__codelineno-25-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="nb">dict</span> <span class="o">=</span> <span class="p">{}</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="nb">dict</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;CodeRaft&quot;</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="nb">dict</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>     <span class="o">=</span> <span class="s2">&quot;泛编程&quot;</span>
 <a id="__codelineno-25-4" name="__codelineno-25-4"></a>
-<a id="__codelineno-25-5" name="__codelineno-25-5"></a>tinydict = {&#39;name&#39;: &#39;CodeRaft&#39;,&#39;code&#39;:1, &#39;site&#39;: &#39;www.CodeRaft.com&#39;}
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="n">tinydict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;CodeRaft&#39;</span><span class="p">,</span><span class="s1">&#39;code&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;site&#39;</span><span class="p">:</span> <span class="s1">&#39;www.CodeRaft.com&#39;</span><span class="p">}</span>
 <a id="__codelineno-25-6" name="__codelineno-25-6"></a>
 <a id="__codelineno-25-7" name="__codelineno-25-7"></a>
-<a id="__codelineno-25-8" name="__codelineno-25-8"></a>print(dict[&#39;one&#39;])       # 输出键为 &#39;one&#39; 的值
-<a id="__codelineno-25-9" name="__codelineno-25-9"></a>print(dict[2])           # 输出键为 2 的值
-<a id="__codelineno-25-10" name="__codelineno-25-10"></a>print(tinydict)          # 输出完整的字典
-<a id="__codelineno-25-11" name="__codelineno-25-11"></a>print(tinydict.keys())   # 输出所有键
-<a id="__codelineno-25-12" name="__codelineno-25-12"></a>print(tinydict.values()) # 输出所有值
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">])</span>       <span class="c1"># 输出键为 &#39;one&#39; 的值</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>           <span class="c1"># 输出键为 2 的值</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">tinydict</span><span class="p">)</span>          <span class="c1"># 输出完整的字典</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">tinydict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>   <span class="c1"># 输出所有键</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">tinydict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="c1"># 输出所有值</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
@@ -2890,7 +2890,7 @@
 <a id="__codelineno-26-5" name="__codelineno-26-5"></a>dict_values([&#39;CodeRaft&#39;, 1, &#39;www.CodeRaft.com&#39;])
 </code></pre></div></td></tr></table></div>
 <h3 id="62">6.2 常用数据类型的使用实例</h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-27-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-27-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-27-4"> 4</a></span>
@@ -2905,22 +2905,22 @@
 <span class="normal"><a href="#__codelineno-27-13">13</a></span>
 <span class="normal"><a href="#__codelineno-27-14">14</a></span>
 <span class="normal"><a href="#__codelineno-27-15">15</a></span>
-<span class="normal"><a href="#__codelineno-27-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a># 学生信息
-<a id="__codelineno-27-2" name="__codelineno-27-2"></a>student_id = 12345
-<a id="__codelineno-27-3" name="__codelineno-27-3"></a>student_name = &quot;赵镇&quot;
-<a id="__codelineno-27-4" name="__codelineno-27-4"></a>age = 20
-<a id="__codelineno-27-5" name="__codelineno-27-5"></a>score = 92.5
-<a id="__codelineno-27-6" name="__codelineno-27-6"></a>gender = &#39;男&#39;
-<a id="__codelineno-27-7" name="__codelineno-27-7"></a>is_married = False
+<span class="normal"><a href="#__codelineno-27-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="c1"># 学生信息</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="n">student_id</span> <span class="o">=</span> <span class="mi">12345</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="n">student_name</span> <span class="o">=</span> <span class="s2">&quot;赵镇&quot;</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="n">score</span> <span class="o">=</span> <span class="mf">92.5</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="n">gender</span> <span class="o">=</span> <span class="s1">&#39;男&#39;</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7"></a><span class="n">is_married</span> <span class="o">=</span> <span class="kc">False</span>
 <a id="__codelineno-27-8" name="__codelineno-27-8"></a>
-<a id="__codelineno-27-9" name="__codelineno-27-9"></a># 输出学生信息
-<a id="__codelineno-27-10" name="__codelineno-27-10"></a>print(&quot;学生信息：&quot;)
-<a id="__codelineno-27-11" name="__codelineno-27-11"></a>print(&quot;学号：&quot;, student_id)
-<a id="__codelineno-27-12" name="__codelineno-27-12"></a>print(&quot;姓名：&quot;, student_name)
-<a id="__codelineno-27-13" name="__codelineno-27-13"></a>print(&quot;年龄：&quot;, age)
-<a id="__codelineno-27-14" name="__codelineno-27-14"></a>print(&quot;成绩：&quot;, score)
-<a id="__codelineno-27-15" name="__codelineno-27-15"></a>print(&quot;性别：&quot;, gender)
-<a id="__codelineno-27-16" name="__codelineno-27-16"></a>print(&quot;婚否：&quot;, is_married)
+<a id="__codelineno-27-9" name="__codelineno-27-9"></a><span class="c1"># 输出学生信息</span>
+<a id="__codelineno-27-10" name="__codelineno-27-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;学生信息：&quot;</span><span class="p">)</span>
+<a id="__codelineno-27-11" name="__codelineno-27-11"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;学号：&quot;</span><span class="p">,</span> <span class="n">student_id</span><span class="p">)</span>
+<a id="__codelineno-27-12" name="__codelineno-27-12"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;姓名：&quot;</span><span class="p">,</span> <span class="n">student_name</span><span class="p">)</span>
+<a id="__codelineno-27-13" name="__codelineno-27-13"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;年龄：&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+<a id="__codelineno-27-14" name="__codelineno-27-14"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;成绩：&quot;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+<a id="__codelineno-27-15" name="__codelineno-27-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;性别：&quot;</span><span class="p">,</span> <span class="n">gender</span><span class="p">)</span>
+<a id="__codelineno-27-16" name="__codelineno-27-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;婚否：&quot;</span><span class="p">,</span> <span class="n">is_married</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>输出结果为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
@@ -2987,7 +2987,7 @@
 </tbody>
 </table>
 <p>以下实例演示了Python所有算术运算符的操作：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-29-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-29-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-29-4"> 4</a></span>
@@ -3015,35 +3015,35 @@
 <span class="normal"><a href="#__codelineno-29-26">26</a></span>
 <span class="normal"><a href="#__codelineno-29-27">27</a></span>
 <span class="normal"><a href="#__codelineno-29-28">28</a></span>
-<span class="normal"><a href="#__codelineno-29-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a>a = 21
-<a id="__codelineno-29-2" name="__codelineno-29-2"></a>b = 10
-<a id="__codelineno-29-3" name="__codelineno-29-3"></a>c = 0
+<span class="normal"><a href="#__codelineno-29-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">21</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-29-4" name="__codelineno-29-4"></a>
-<a id="__codelineno-29-5" name="__codelineno-29-5"></a>c = a + b
-<a id="__codelineno-29-6" name="__codelineno-29-6"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-29-5" name="__codelineno-29-5"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-29-7" name="__codelineno-29-7"></a>
-<a id="__codelineno-29-8" name="__codelineno-29-8"></a>c = a - b
-<a id="__codelineno-29-9" name="__codelineno-29-9"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-29-8" name="__codelineno-29-8"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-29-10" name="__codelineno-29-10"></a>
-<a id="__codelineno-29-11" name="__codelineno-29-11"></a>c = a * b
-<a id="__codelineno-29-12" name="__codelineno-29-12"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-29-11" name="__codelineno-29-11"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<a id="__codelineno-29-12" name="__codelineno-29-12"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-29-13" name="__codelineno-29-13"></a>
-<a id="__codelineno-29-14" name="__codelineno-29-14"></a>c = a / b
-<a id="__codelineno-29-15" name="__codelineno-29-15"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-29-14" name="__codelineno-29-14"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+<a id="__codelineno-29-15" name="__codelineno-29-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-29-16" name="__codelineno-29-16"></a>
-<a id="__codelineno-29-17" name="__codelineno-29-17"></a>c = a % b
-<a id="__codelineno-29-18" name="__codelineno-29-18"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-29-17" name="__codelineno-29-17"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span>
+<a id="__codelineno-29-18" name="__codelineno-29-18"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-29-19" name="__codelineno-29-19"></a>
-<a id="__codelineno-29-20" name="__codelineno-29-20"></a># 修改变量 a 、b 、c
-<a id="__codelineno-29-21" name="__codelineno-29-21"></a>a = 2
-<a id="__codelineno-29-22" name="__codelineno-29-22"></a>b = 3
-<a id="__codelineno-29-23" name="__codelineno-29-23"></a>c = a**b 
-<a id="__codelineno-29-24" name="__codelineno-29-24"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-29-20" name="__codelineno-29-20"></a><span class="c1"># 修改变量 a 、b 、c</span>
+<a id="__codelineno-29-21" name="__codelineno-29-21"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-29-22" name="__codelineno-29-22"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-29-23" name="__codelineno-29-23"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">**</span><span class="n">b</span> 
+<a id="__codelineno-29-24" name="__codelineno-29-24"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-29-25" name="__codelineno-29-25"></a>
-<a id="__codelineno-29-26" name="__codelineno-29-26"></a>a = 10
-<a id="__codelineno-29-27" name="__codelineno-29-27"></a>b = 5
-<a id="__codelineno-29-28" name="__codelineno-29-28"></a>c = a//b 
-<a id="__codelineno-29-29" name="__codelineno-29-29"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-29-26" name="__codelineno-29-26"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-29-27" name="__codelineno-29-27"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-29-28" name="__codelineno-29-28"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">//</span><span class="n">b</span> 
+<a id="__codelineno-29-29" name="__codelineno-29-29"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
@@ -3109,7 +3109,7 @@
 </tbody>
 </table>
 <p>以下实例演示了Python所有比较运算符的操作：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-31-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-31-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-31-4"> 4</a></span>
@@ -3143,41 +3143,41 @@
 <span class="normal"><a href="#__codelineno-31-32">32</a></span>
 <span class="normal"><a href="#__codelineno-31-33">33</a></span>
 <span class="normal"><a href="#__codelineno-31-34">34</a></span>
-<span class="normal"><a href="#__codelineno-31-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a>a = 21
-<a id="__codelineno-31-2" name="__codelineno-31-2"></a>b = 10
+<span class="normal"><a href="#__codelineno-31-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">21</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
 <a id="__codelineno-31-3" name="__codelineno-31-3"></a>
-<a id="__codelineno-31-4" name="__codelineno-31-4"></a>if a == b:
-<a id="__codelineno-31-5" name="__codelineno-31-5"></a>   print(&quot;a 等于 b&quot;)
-<a id="__codelineno-31-6" name="__codelineno-31-6"></a>else:
-<a id="__codelineno-31-7" name="__codelineno-31-7"></a>   print(&quot;a 不等于 b&quot;)
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 等于 b&quot;</span><span class="p">)</span>
+<a id="__codelineno-31-6" name="__codelineno-31-6"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-31-7" name="__codelineno-31-7"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 不等于 b&quot;</span><span class="p">)</span>
 <a id="__codelineno-31-8" name="__codelineno-31-8"></a>
-<a id="__codelineno-31-9" name="__codelineno-31-9"></a>if a != b:
-<a id="__codelineno-31-10" name="__codelineno-31-10"></a>   print(&quot;a 不等于 b&quot;)
-<a id="__codelineno-31-11" name="__codelineno-31-11"></a>else:
-<a id="__codelineno-31-12" name="__codelineno-31-12"></a>   print(&quot;a 等于 b&quot;)
+<a id="__codelineno-31-9" name="__codelineno-31-9"></a><span class="k">if</span> <span class="n">a</span> <span class="o">!=</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-31-10" name="__codelineno-31-10"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 不等于 b&quot;</span><span class="p">)</span>
+<a id="__codelineno-31-11" name="__codelineno-31-11"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-31-12" name="__codelineno-31-12"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 等于 b&quot;</span><span class="p">)</span>
 <a id="__codelineno-31-13" name="__codelineno-31-13"></a>
-<a id="__codelineno-31-14" name="__codelineno-31-14"></a>if a &lt; b:
-<a id="__codelineno-31-15" name="__codelineno-31-15"></a>   print(&quot;a 小于 b&quot;)
-<a id="__codelineno-31-16" name="__codelineno-31-16"></a>else:
-<a id="__codelineno-31-17" name="__codelineno-31-17"></a>   print(&quot;a 大于等于 b&quot;)
+<a id="__codelineno-31-14" name="__codelineno-31-14"></a><span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-31-15" name="__codelineno-31-15"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 小于 b&quot;</span><span class="p">)</span>
+<a id="__codelineno-31-16" name="__codelineno-31-16"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-31-17" name="__codelineno-31-17"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 大于等于 b&quot;</span><span class="p">)</span>
 <a id="__codelineno-31-18" name="__codelineno-31-18"></a>
-<a id="__codelineno-31-19" name="__codelineno-31-19"></a>if a &gt; b:
-<a id="__codelineno-31-20" name="__codelineno-31-20"></a>   print(&quot;a 大于 b&quot;)
-<a id="__codelineno-31-21" name="__codelineno-31-21"></a>else:
-<a id="__codelineno-31-22" name="__codelineno-31-22"></a>   print(&quot;a 小于等于 b&quot;)
+<a id="__codelineno-31-19" name="__codelineno-31-19"></a><span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-31-20" name="__codelineno-31-20"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 大于 b&quot;</span><span class="p">)</span>
+<a id="__codelineno-31-21" name="__codelineno-31-21"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-31-22" name="__codelineno-31-22"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 小于等于 b&quot;</span><span class="p">)</span>
 <a id="__codelineno-31-23" name="__codelineno-31-23"></a>
-<a id="__codelineno-31-24" name="__codelineno-31-24"></a># 修改变量 a 和 b 的值
-<a id="__codelineno-31-25" name="__codelineno-31-25"></a>a = 5
-<a id="__codelineno-31-26" name="__codelineno-31-26"></a>b = 20
-<a id="__codelineno-31-27" name="__codelineno-31-27"></a>if a &lt;= b:
-<a id="__codelineno-31-28" name="__codelineno-31-28"></a>   print(&quot;a 小于等于 b&quot;)
-<a id="__codelineno-31-29" name="__codelineno-31-29"></a>else:
-<a id="__codelineno-31-30" name="__codelineno-31-30"></a>   print(&quot;a 大于  b&quot;)
+<a id="__codelineno-31-24" name="__codelineno-31-24"></a><span class="c1"># 修改变量 a 和 b 的值</span>
+<a id="__codelineno-31-25" name="__codelineno-31-25"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-31-26" name="__codelineno-31-26"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-31-27" name="__codelineno-31-27"></a><span class="k">if</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-31-28" name="__codelineno-31-28"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 小于等于 b&quot;</span><span class="p">)</span>
+<a id="__codelineno-31-29" name="__codelineno-31-29"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-31-30" name="__codelineno-31-30"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 大于  b&quot;</span><span class="p">)</span>
 <a id="__codelineno-31-31" name="__codelineno-31-31"></a>
-<a id="__codelineno-31-32" name="__codelineno-31-32"></a>if b &gt;= a:
-<a id="__codelineno-31-33" name="__codelineno-31-33"></a>   print(&quot;b 大于等于 a&quot;)
-<a id="__codelineno-31-34" name="__codelineno-31-34"></a>else:
-<a id="__codelineno-31-35" name="__codelineno-31-35"></a>   print(&quot;b 小于 a&quot;)
+<a id="__codelineno-31-32" name="__codelineno-31-32"></a><span class="k">if</span> <span class="n">b</span> <span class="o">&gt;=</span> <span class="n">a</span><span class="p">:</span>
+<a id="__codelineno-31-33" name="__codelineno-31-33"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b 大于等于 a&quot;</span><span class="p">)</span>
+<a id="__codelineno-31-34" name="__codelineno-31-34"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-31-35" name="__codelineno-31-35"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b 小于 a&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
@@ -3251,7 +3251,7 @@
 </tbody>
 </table>
 <p>以下实例演示了Python所有赋值运算符的操作：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-33-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-33-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-33-4"> 4</a></span>
@@ -3275,31 +3275,31 @@
 <span class="normal"><a href="#__codelineno-33-22">22</a></span>
 <span class="normal"><a href="#__codelineno-33-23">23</a></span>
 <span class="normal"><a href="#__codelineno-33-24">24</a></span>
-<span class="normal"><a href="#__codelineno-33-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a>a = 21
-<a id="__codelineno-33-2" name="__codelineno-33-2"></a>b = 10
-<a id="__codelineno-33-3" name="__codelineno-33-3"></a>c = 0
+<span class="normal"><a href="#__codelineno-33-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">21</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-33-4" name="__codelineno-33-4"></a>
-<a id="__codelineno-33-5" name="__codelineno-33-5"></a>c = a + b
-<a id="__codelineno-33-6" name="__codelineno-33-6"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-33-7" name="__codelineno-33-7"></a>
-<a id="__codelineno-33-8" name="__codelineno-33-8"></a>c += a
-<a id="__codelineno-33-9" name="__codelineno-33-9"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a><span class="n">c</span> <span class="o">+=</span> <span class="n">a</span>
+<a id="__codelineno-33-9" name="__codelineno-33-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-33-10" name="__codelineno-33-10"></a>
-<a id="__codelineno-33-11" name="__codelineno-33-11"></a>c *= a
-<a id="__codelineno-33-12" name="__codelineno-33-12"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-33-11" name="__codelineno-33-11"></a><span class="n">c</span> <span class="o">*=</span> <span class="n">a</span>
+<a id="__codelineno-33-12" name="__codelineno-33-12"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-33-13" name="__codelineno-33-13"></a>
-<a id="__codelineno-33-14" name="__codelineno-33-14"></a>c /= a 
-<a id="__codelineno-33-15" name="__codelineno-33-15"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-33-14" name="__codelineno-33-14"></a><span class="n">c</span> <span class="o">/=</span> <span class="n">a</span> 
+<a id="__codelineno-33-15" name="__codelineno-33-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-33-16" name="__codelineno-33-16"></a>
-<a id="__codelineno-33-17" name="__codelineno-33-17"></a>c = 2
-<a id="__codelineno-33-18" name="__codelineno-33-18"></a>c %= a
-<a id="__codelineno-33-19" name="__codelineno-33-19"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-33-17" name="__codelineno-33-17"></a><span class="n">c</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-33-18" name="__codelineno-33-18"></a><span class="n">c</span> <span class="o">%=</span> <span class="n">a</span>
+<a id="__codelineno-33-19" name="__codelineno-33-19"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-33-20" name="__codelineno-33-20"></a>
-<a id="__codelineno-33-21" name="__codelineno-33-21"></a>c **= a
-<a id="__codelineno-33-22" name="__codelineno-33-22"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-33-21" name="__codelineno-33-21"></a><span class="n">c</span> <span class="o">**=</span> <span class="n">a</span>
+<a id="__codelineno-33-22" name="__codelineno-33-22"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-33-23" name="__codelineno-33-23"></a>
-<a id="__codelineno-33-24" name="__codelineno-33-24"></a>c //= a
-<a id="__codelineno-33-25" name="__codelineno-33-25"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-33-24" name="__codelineno-33-24"></a><span class="n">c</span> <span class="o">//=</span> <span class="n">a</span>
+<a id="__codelineno-33-25" name="__codelineno-33-25"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
@@ -3319,21 +3319,21 @@
 <p>在 Python 3.8 及更高版本中，引入了一种新的语法特性，称为"海象运算符"（Walrus Operator），它使用 <strong>:=</strong> 符号。这个运算符的主要目的是在表达式中同时进行赋值和返回赋值的值。</p>
 <p>使用海象运算符可以在一些情况下简化代码，尤其是在需要在表达式中使用赋值结果的情况下。这对于简化循环条件或表达式中的重复计算很有用。</p>
 <p>下面是一个简单的实例，演示了海象运算符的使用：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
 <span class="normal"><a href="#__codelineno-35-2">2</a></span>
 <span class="normal"><a href="#__codelineno-35-3">3</a></span>
 <span class="normal"><a href="#__codelineno-35-4">4</a></span>
 <span class="normal"><a href="#__codelineno-35-5">5</a></span>
 <span class="normal"><a href="#__codelineno-35-6">6</a></span>
 <span class="normal"><a href="#__codelineno-35-7">7</a></span>
-<span class="normal"><a href="#__codelineno-35-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a># 传统写法
-<a id="__codelineno-35-2" name="__codelineno-35-2"></a>n = 10
-<a id="__codelineno-35-3" name="__codelineno-35-3"></a>if n &gt; 5:
-<a id="__codelineno-35-4" name="__codelineno-35-4"></a>    print(n)
+<span class="normal"><a href="#__codelineno-35-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="c1"># 传统写法</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 <a id="__codelineno-35-5" name="__codelineno-35-5"></a>
-<a id="__codelineno-35-6" name="__codelineno-35-6"></a># 使用海象运算符
-<a id="__codelineno-35-7" name="__codelineno-35-7"></a>if (n := 10) &gt; 5:
-<a id="__codelineno-35-8" name="__codelineno-35-8"></a>    print(n)
+<a id="__codelineno-35-6" name="__codelineno-35-6"></a><span class="c1"># 使用海象运算符</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7"></a><span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">:=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <ol>
 <li><code>if (n := 10) &gt; 5:</code></li>
@@ -3424,7 +3424,7 @@
 </tbody>
 </table>
 <p>以下实例演示了Python所有位运算符的操作：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-37-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-37-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-37-4"> 4</a></span>
@@ -3444,27 +3444,27 @@
 <span class="normal"><a href="#__codelineno-37-18">18</a></span>
 <span class="normal"><a href="#__codelineno-37-19">19</a></span>
 <span class="normal"><a href="#__codelineno-37-20">20</a></span>
-<span class="normal"><a href="#__codelineno-37-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a>a = 60            # 60 = 0011 1100 
-<a id="__codelineno-37-2" name="__codelineno-37-2"></a>b = 13            # 13 = 0000 1101 
-<a id="__codelineno-37-3" name="__codelineno-37-3"></a>c = 0
+<span class="normal"><a href="#__codelineno-37-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">60</span>            <span class="c1"># 60 = 0011 1100 </span>
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">13</span>            <span class="c1"># 13 = 0000 1101 </span>
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a><span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-37-4" name="__codelineno-37-4"></a>
-<a id="__codelineno-37-5" name="__codelineno-37-5"></a>c = a &amp; b        # 12 = 0000 1100
-<a id="__codelineno-37-6" name="__codelineno-37-6"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-37-5" name="__codelineno-37-5"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span>        <span class="c1"># 12 = 0000 1100</span>
+<a id="__codelineno-37-6" name="__codelineno-37-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-37-7" name="__codelineno-37-7"></a>
-<a id="__codelineno-37-8" name="__codelineno-37-8"></a>c = a | b        # 61 = 0011 1101 
-<a id="__codelineno-37-9" name="__codelineno-37-9"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-37-8" name="__codelineno-37-8"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">|</span> <span class="n">b</span>        <span class="c1"># 61 = 0011 1101 </span>
+<a id="__codelineno-37-9" name="__codelineno-37-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-37-10" name="__codelineno-37-10"></a>
-<a id="__codelineno-37-11" name="__codelineno-37-11"></a>c = a ^ b        # 49 = 0011 0001
-<a id="__codelineno-37-12" name="__codelineno-37-12"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-37-11" name="__codelineno-37-11"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">^</span> <span class="n">b</span>        <span class="c1"># 49 = 0011 0001</span>
+<a id="__codelineno-37-12" name="__codelineno-37-12"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-37-13" name="__codelineno-37-13"></a>
-<a id="__codelineno-37-14" name="__codelineno-37-14"></a>c = ~a           # -61 = 1100 0011
-<a id="__codelineno-37-15" name="__codelineno-37-15"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-37-14" name="__codelineno-37-14"></a><span class="n">c</span> <span class="o">=</span> <span class="o">~</span><span class="n">a</span>           <span class="c1"># -61 = 1100 0011</span>
+<a id="__codelineno-37-15" name="__codelineno-37-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-37-16" name="__codelineno-37-16"></a>
-<a id="__codelineno-37-17" name="__codelineno-37-17"></a>c = a &lt;&lt; 2       # 240 = 1111 0000
-<a id="__codelineno-37-18" name="__codelineno-37-18"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-37-17" name="__codelineno-37-17"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span>       <span class="c1"># 240 = 1111 0000</span>
+<a id="__codelineno-37-18" name="__codelineno-37-18"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <a id="__codelineno-37-19" name="__codelineno-37-19"></a>
-<a id="__codelineno-37-20" name="__codelineno-37-20"></a>c = a &gt;&gt; 2       # 15 = 0000 1111
-<a id="__codelineno-37-21" name="__codelineno-37-21"></a>print(&quot;c 的值为：&quot;, c)
+<a id="__codelineno-37-20" name="__codelineno-37-20"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span>       <span class="c1"># 15 = 0000 1111</span>
+<a id="__codelineno-37-21" name="__codelineno-37-21"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c 的值为：&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
@@ -3512,7 +3512,7 @@
 </tbody>
 </table>
 <p>以下实例演示了Python所有逻辑运算符的操作：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-39-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-39-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-39-4"> 4</a></span>
@@ -3542,37 +3542,37 @@
 <span class="normal"><a href="#__codelineno-39-28">28</a></span>
 <span class="normal"><a href="#__codelineno-39-29">29</a></span>
 <span class="normal"><a href="#__codelineno-39-30">30</a></span>
-<span class="normal"><a href="#__codelineno-39-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a>#!/usr/bin/python3
+<span class="normal"><a href="#__codelineno-39-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="ch">#!/usr/bin/python3</span>
 <a id="__codelineno-39-2" name="__codelineno-39-2"></a>
-<a id="__codelineno-39-3" name="__codelineno-39-3"></a>a = 10
-<a id="__codelineno-39-4" name="__codelineno-39-4"></a>b = 20
+<a id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
 <a id="__codelineno-39-5" name="__codelineno-39-5"></a>
-<a id="__codelineno-39-6" name="__codelineno-39-6"></a>if a and b:
-<a id="__codelineno-39-7" name="__codelineno-39-7"></a>   print(&quot;变量 a 和 b 都为 true&quot;)
-<a id="__codelineno-39-8" name="__codelineno-39-8"></a>else:
-<a id="__codelineno-39-9" name="__codelineno-39-9"></a>   print(&quot;变量 a 和 b 有一个不为 true&quot;)
+<a id="__codelineno-39-6" name="__codelineno-39-6"></a><span class="k">if</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-39-7" name="__codelineno-39-7"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 a 和 b 都为 true&quot;</span><span class="p">)</span>
+<a id="__codelineno-39-8" name="__codelineno-39-8"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-39-9" name="__codelineno-39-9"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 a 和 b 有一个不为 true&quot;</span><span class="p">)</span>
 <a id="__codelineno-39-10" name="__codelineno-39-10"></a>
-<a id="__codelineno-39-11" name="__codelineno-39-11"></a>if a or b:
-<a id="__codelineno-39-12" name="__codelineno-39-12"></a>   print(&quot;变量 a 和 b 都为 true，或其中一个变量为 true&quot;)
-<a id="__codelineno-39-13" name="__codelineno-39-13"></a>else:
-<a id="__codelineno-39-14" name="__codelineno-39-14"></a>   print(&quot;变量 a 和 b 都不为 true&quot;)
+<a id="__codelineno-39-11" name="__codelineno-39-11"></a><span class="k">if</span> <span class="n">a</span> <span class="ow">or</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-39-12" name="__codelineno-39-12"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 a 和 b 都为 true，或其中一个变量为 true&quot;</span><span class="p">)</span>
+<a id="__codelineno-39-13" name="__codelineno-39-13"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-39-14" name="__codelineno-39-14"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 a 和 b 都不为 true&quot;</span><span class="p">)</span>
 <a id="__codelineno-39-15" name="__codelineno-39-15"></a>
-<a id="__codelineno-39-16" name="__codelineno-39-16"></a># 修改变量 a 的值
-<a id="__codelineno-39-17" name="__codelineno-39-17"></a>a = 0
-<a id="__codelineno-39-18" name="__codelineno-39-18"></a>if a and b:
-<a id="__codelineno-39-19" name="__codelineno-39-19"></a>   print(&quot;变量 a 和 b 都为 true&quot;)
-<a id="__codelineno-39-20" name="__codelineno-39-20"></a>else:
-<a id="__codelineno-39-21" name="__codelineno-39-21"></a>   print(&quot;变量 a 和 b 有一个不为 true&quot;)
+<a id="__codelineno-39-16" name="__codelineno-39-16"></a><span class="c1"># 修改变量 a 的值</span>
+<a id="__codelineno-39-17" name="__codelineno-39-17"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-39-18" name="__codelineno-39-18"></a><span class="k">if</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-39-19" name="__codelineno-39-19"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 a 和 b 都为 true&quot;</span><span class="p">)</span>
+<a id="__codelineno-39-20" name="__codelineno-39-20"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-39-21" name="__codelineno-39-21"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 a 和 b 有一个不为 true&quot;</span><span class="p">)</span>
 <a id="__codelineno-39-22" name="__codelineno-39-22"></a>
-<a id="__codelineno-39-23" name="__codelineno-39-23"></a>if a or b:
-<a id="__codelineno-39-24" name="__codelineno-39-24"></a>   print(&quot;变量 a 和 b 都为 true，或其中一个变量为 true&quot;)
-<a id="__codelineno-39-25" name="__codelineno-39-25"></a>else:
-<a id="__codelineno-39-26" name="__codelineno-39-26"></a>   print(&quot;变量 a 和 b 都不为 true&quot;)
+<a id="__codelineno-39-23" name="__codelineno-39-23"></a><span class="k">if</span> <span class="n">a</span> <span class="ow">or</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-39-24" name="__codelineno-39-24"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 a 和 b 都为 true，或其中一个变量为 true&quot;</span><span class="p">)</span>
+<a id="__codelineno-39-25" name="__codelineno-39-25"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-39-26" name="__codelineno-39-26"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 a 和 b 都不为 true&quot;</span><span class="p">)</span>
 <a id="__codelineno-39-27" name="__codelineno-39-27"></a>
-<a id="__codelineno-39-28" name="__codelineno-39-28"></a>if not( a and b:
-<a id="__codelineno-39-29" name="__codelineno-39-29"></a>   print(&quot;变量 a 和 b 都为 false，或其中一个变量为 false&quot;)
-<a id="__codelineno-39-30" name="__codelineno-39-30"></a>else:
-<a id="__codelineno-39-31" name="__codelineno-39-31"></a>   print(&quot;变量 a 和 b 都为 true&quot;)
+<a id="__codelineno-39-28" name="__codelineno-39-28"></a><span class="k">if</span> <span class="ow">not</span><span class="p">(</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">):</span>
+<a id="__codelineno-39-29" name="__codelineno-39-29"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 a 和 b 都为 false，或其中一个变量为 false&quot;</span><span class="p">)</span>
+<a id="__codelineno-39-30" name="__codelineno-39-30"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-39-31" name="__codelineno-39-31"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 a 和 b 都为 true&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span>
@@ -3609,7 +3609,7 @@
 </tbody>
 </table>
 <p>以下实例演示了Python所有成员运算符的操作：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-41-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-41-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-41-4"> 4</a></span>
@@ -3628,26 +3628,26 @@
 <span class="normal"><a href="#__codelineno-41-17">17</a></span>
 <span class="normal"><a href="#__codelineno-41-18">18</a></span>
 <span class="normal"><a href="#__codelineno-41-19">19</a></span>
-<span class="normal"><a href="#__codelineno-41-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a>a = 10
-<a id="__codelineno-41-2" name="__codelineno-41-2"></a>b = 20
-<a id="__codelineno-41-3" name="__codelineno-41-3"></a>list = [1, 2, 3, 4, 5 ]
+<span class="normal"><a href="#__codelineno-41-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-41-3" name="__codelineno-41-3"></a><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">]</span>
 <a id="__codelineno-41-4" name="__codelineno-41-4"></a>
-<a id="__codelineno-41-5" name="__codelineno-41-5"></a>if a in list:
-<a id="__codelineno-41-6" name="__codelineno-41-6"></a>   print(&quot;变量 a 在给定的列表中 list 中&quot;)
-<a id="__codelineno-41-7" name="__codelineno-41-7"></a>else:
-<a id="__codelineno-41-8" name="__codelineno-41-8"></a>   print(&quot;变量 a 不在给定的列表中 list 中&quot;)
+<a id="__codelineno-41-5" name="__codelineno-41-5"></a><span class="k">if</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+<a id="__codelineno-41-6" name="__codelineno-41-6"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 a 在给定的列表中 list 中&quot;</span><span class="p">)</span>
+<a id="__codelineno-41-7" name="__codelineno-41-7"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-41-8" name="__codelineno-41-8"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 a 不在给定的列表中 list 中&quot;</span><span class="p">)</span>
 <a id="__codelineno-41-9" name="__codelineno-41-9"></a>
-<a id="__codelineno-41-10" name="__codelineno-41-10"></a>if b not in list:
-<a id="__codelineno-41-11" name="__codelineno-41-11"></a>   print(&quot;变量 b 不在给定的列表中 list 中&quot;)
-<a id="__codelineno-41-12" name="__codelineno-41-12"></a>else:
-<a id="__codelineno-41-13" name="__codelineno-41-13"></a>   print(&quot;变量 b 在给定的列表中 list 中&quot;)
+<a id="__codelineno-41-10" name="__codelineno-41-10"></a><span class="k">if</span> <span class="n">b</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+<a id="__codelineno-41-11" name="__codelineno-41-11"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 b 不在给定的列表中 list 中&quot;</span><span class="p">)</span>
+<a id="__codelineno-41-12" name="__codelineno-41-12"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-41-13" name="__codelineno-41-13"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 b 在给定的列表中 list 中&quot;</span><span class="p">)</span>
 <a id="__codelineno-41-14" name="__codelineno-41-14"></a>
-<a id="__codelineno-41-15" name="__codelineno-41-15"></a># 修改变量 a 的值
-<a id="__codelineno-41-16" name="__codelineno-41-16"></a>a = 2
-<a id="__codelineno-41-17" name="__codelineno-41-17"></a>if a in list:
-<a id="__codelineno-41-18" name="__codelineno-41-18"></a>   print(&quot;变量 a 在给定的列表中 list 中&quot;)
-<a id="__codelineno-41-19" name="__codelineno-41-19"></a>else:
-<a id="__codelineno-41-20" name="__codelineno-41-20"></a>   print(&quot;变量 a 不在给定的列表中 list 中&quot;)
+<a id="__codelineno-41-15" name="__codelineno-41-15"></a><span class="c1"># 修改变量 a 的值</span>
+<a id="__codelineno-41-16" name="__codelineno-41-16"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-41-17" name="__codelineno-41-17"></a><span class="k">if</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+<a id="__codelineno-41-18" name="__codelineno-41-18"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 a 在给定的列表中 list 中&quot;</span><span class="p">)</span>
+<a id="__codelineno-41-19" name="__codelineno-41-19"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-41-20" name="__codelineno-41-20"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;变量 a 不在给定的列表中 list 中&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span>
@@ -3681,14 +3681,14 @@
 </table>
 <p><strong>注：</strong> id()函数用于获取对象内存地址。</p>
 <p>对于初学者来说，用的比较多的是判断通常在判断某个变量是否为 None 时，更推荐使用 is 而非 ==，因为 None 是一个特殊的单例对象。
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span>
 <span class="normal"><a href="#__codelineno-43-2">2</a></span>
-<span class="normal"><a href="#__codelineno-43-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a>value = None
-<a id="__codelineno-43-2" name="__codelineno-43-2"></a>if value is None:
-<a id="__codelineno-43-3" name="__codelineno-43-3"></a>    print(&quot;Value is None&quot;)
+<span class="normal"><a href="#__codelineno-43-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2"></a><span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Value is None&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 以下实例演示了Python所有身份运算符的操作：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-44-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-44-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-44-4"> 4</a></span>
@@ -3710,29 +3710,29 @@
 <span class="normal"><a href="#__codelineno-44-20">20</a></span>
 <span class="normal"><a href="#__codelineno-44-21">21</a></span>
 <span class="normal"><a href="#__codelineno-44-22">22</a></span>
-<span class="normal"><a href="#__codelineno-44-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a>a = 20
-<a id="__codelineno-44-2" name="__codelineno-44-2"></a>b = 20
-<a id="__codelineno-44-3" name="__codelineno-44-3"></a>if a is b:
-<a id="__codelineno-44-4" name="__codelineno-44-4"></a>    print(&quot;a 和 b 有相同的标识&quot;)
-<a id="__codelineno-44-5" name="__codelineno-44-5"></a>else:
-<a id="__codelineno-44-6" name="__codelineno-44-6"></a>    print(&quot;a 和 b 没有相同的标识&quot;)
+<span class="normal"><a href="#__codelineno-44-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-44-3" name="__codelineno-44-3"></a><span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-44-4" name="__codelineno-44-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 和 b 有相同的标识&quot;</span><span class="p">)</span>
+<a id="__codelineno-44-5" name="__codelineno-44-5"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-44-6" name="__codelineno-44-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 和 b 没有相同的标识&quot;</span><span class="p">)</span>
 <a id="__codelineno-44-7" name="__codelineno-44-7"></a>
-<a id="__codelineno-44-8" name="__codelineno-44-8"></a>if id(a) == id(b):
-<a id="__codelineno-44-9" name="__codelineno-44-9"></a>    print(&quot;a 和 b 有相同的标识&quot;)
-<a id="__codelineno-44-10" name="__codelineno-44-10"></a>else:
-<a id="__codelineno-44-11" name="__codelineno-44-11"></a>    print(&quot;a 和 b 没有相同的标识&quot;)
+<a id="__codelineno-44-8" name="__codelineno-44-8"></a><span class="k">if</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+<a id="__codelineno-44-9" name="__codelineno-44-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 和 b 有相同的标识&quot;</span><span class="p">)</span>
+<a id="__codelineno-44-10" name="__codelineno-44-10"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-44-11" name="__codelineno-44-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 和 b 没有相同的标识&quot;</span><span class="p">)</span>
 <a id="__codelineno-44-12" name="__codelineno-44-12"></a>
-<a id="__codelineno-44-13" name="__codelineno-44-13"></a># 修改变量 b 的值
-<a id="__codelineno-44-14" name="__codelineno-44-14"></a>b = 30
-<a id="__codelineno-44-15" name="__codelineno-44-15"></a>if a is b:
-<a id="__codelineno-44-16" name="__codelineno-44-16"></a>   print(&quot;a 和 b 有相同的标识&quot;)
-<a id="__codelineno-44-17" name="__codelineno-44-17"></a>else:
-<a id="__codelineno-44-18" name="__codelineno-44-18"></a>   print(&quot;a 和 b 没有相同的标识&quot;)
+<a id="__codelineno-44-13" name="__codelineno-44-13"></a><span class="c1"># 修改变量 b 的值</span>
+<a id="__codelineno-44-14" name="__codelineno-44-14"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">30</span>
+<a id="__codelineno-44-15" name="__codelineno-44-15"></a><span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-44-16" name="__codelineno-44-16"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 和 b 有相同的标识&quot;</span><span class="p">)</span>
+<a id="__codelineno-44-17" name="__codelineno-44-17"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-44-18" name="__codelineno-44-18"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 和 b 没有相同的标识&quot;</span><span class="p">)</span>
 <a id="__codelineno-44-19" name="__codelineno-44-19"></a>
-<a id="__codelineno-44-20" name="__codelineno-44-20"></a>if a is not b:
-<a id="__codelineno-44-21" name="__codelineno-44-21"></a>   print(&quot;a 和 b 没有相同的标识&quot;)
-<a id="__codelineno-44-22" name="__codelineno-44-22"></a>else:
-<a id="__codelineno-44-23" name="__codelineno-44-23"></a>   print(&quot;a 和 b 有相同的标识&quot;)
+<a id="__codelineno-44-20" name="__codelineno-44-20"></a><span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-44-21" name="__codelineno-44-21"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 和 b 没有相同的标识&quot;</span><span class="p">)</span>
+<a id="__codelineno-44-22" name="__codelineno-44-22"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-44-23" name="__codelineno-44-23"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a 和 b 有相同的标识&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span>
@@ -3770,7 +3770,7 @@
 <h2 id="8-python">8 Python的输入与输出</h2>
 <h3 id="81-input">8.1 使用 <code>input</code> 读取字符串/整数/浮点数</h3>
 <p>python中最常用读取用户输出的函数是<code>input()</code>，会自动识将用户输入内容转换为字符串类型，因此如果想要输入确定的数据类型需要提前申明。例如：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-47-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-47-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-47-4"> 4</a></span>
@@ -3779,16 +3779,16 @@
 <span class="normal"><a href="#__codelineno-47-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-47-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-47-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-47-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a># 获取用户输入的姓名
-<a id="__codelineno-47-2" name="__codelineno-47-2"></a>name = input(&quot;请输入你的姓名：&quot;)
-<a id="__codelineno-47-3" name="__codelineno-47-3"></a># 获取用户输入的年龄，并转换为整数
-<a id="__codelineno-47-4" name="__codelineno-47-4"></a>age = int(input(&quot;请输入你的年龄：&quot;))
-<a id="__codelineno-47-5" name="__codelineno-47-5"></a># 获取用户输入的工资，并转换为浮点数
-<a id="__codelineno-47-6" name="__codelineno-47-6"></a>salary = float(input(&quot;请输入你的工资：&quot;))
+<span class="normal"><a href="#__codelineno-47-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a><span class="c1"># 获取用户输入的姓名</span>
+<a id="__codelineno-47-2" name="__codelineno-47-2"></a><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入你的姓名：&quot;</span><span class="p">)</span>
+<a id="__codelineno-47-3" name="__codelineno-47-3"></a><span class="c1"># 获取用户输入的年龄，并转换为整数</span>
+<a id="__codelineno-47-4" name="__codelineno-47-4"></a><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入你的年龄：&quot;</span><span class="p">))</span>
+<a id="__codelineno-47-5" name="__codelineno-47-5"></a><span class="c1"># 获取用户输入的工资，并转换为浮点数</span>
+<a id="__codelineno-47-6" name="__codelineno-47-6"></a><span class="n">salary</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入你的工资：&quot;</span><span class="p">))</span>
 <a id="__codelineno-47-7" name="__codelineno-47-7"></a>
-<a id="__codelineno-47-8" name="__codelineno-47-8"></a># 打印用户的信息
-<a id="__codelineno-47-9" name="__codelineno-47-9"></a>print(&quot;你的信息如下：&quot;)
-<a id="__codelineno-47-10" name="__codelineno-47-10"></a>print(f&quot;姓名: {name}\n年龄：{age}\n工资：{salary}&quot;)
+<a id="__codelineno-47-8" name="__codelineno-47-8"></a><span class="c1"># 打印用户的信息</span>
+<a id="__codelineno-47-9" name="__codelineno-47-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;你的信息如下：&quot;</span><span class="p">)</span>
+<a id="__codelineno-47-10" name="__codelineno-47-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;姓名: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">年龄：</span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="se">\n</span><span class="s2">工资：</span><span class="si">{</span><span class="n">salary</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>例如输入为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span>
@@ -3808,7 +3808,7 @@
 </code></pre></div></td></tr></table></div>
 <h3 id="82-print">8.2 <code>print</code> 输出</h3>
 <p>print每次输出后自动换行，是python最常用的一种输出方式，可以输出各种类型数据。</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1">1</a></span>
 <span class="normal"><a href="#__codelineno-50-2">2</a></span>
 <span class="normal"><a href="#__codelineno-50-3">3</a></span>
 <span class="normal"><a href="#__codelineno-50-4">4</a></span>
@@ -3816,15 +3816,15 @@
 <span class="normal"><a href="#__codelineno-50-6">6</a></span>
 <span class="normal"><a href="#__codelineno-50-7">7</a></span>
 <span class="normal"><a href="#__codelineno-50-8">8</a></span>
-<span class="normal"><a href="#__codelineno-50-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a>a = &quot;CodeRaft&quot;
-<a id="__codelineno-50-2" name="__codelineno-50-2"></a>b = &quot;泛编程&quot;
-<a id="__codelineno-50-3" name="__codelineno-50-3"></a>c = 2 + 2
-<a id="__codelineno-50-4" name="__codelineno-50-4"></a># Printing the strings
-<a id="__codelineno-50-5" name="__codelineno-50-5"></a>print(a)
-<a id="__codelineno-50-6" name="__codelineno-50-6"></a>print(b)
-<a id="__codelineno-50-7" name="__codelineno-50-7"></a>print(c)
-<a id="__codelineno-50-8" name="__codelineno-50-8"></a>print(&quot;我实现了自动换行&quot;)  
-<a id="__codelineno-50-9" name="__codelineno-50-9"></a>print(&quot;OvO&quot;)
+<span class="normal"><a href="#__codelineno-50-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;CodeRaft&quot;</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2"></a><span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;泛编程&quot;</span>
+<a id="__codelineno-50-3" name="__codelineno-50-3"></a><span class="n">c</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+<a id="__codelineno-50-4" name="__codelineno-50-4"></a><span class="c1"># Printing the strings</span>
+<a id="__codelineno-50-5" name="__codelineno-50-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-50-6" name="__codelineno-50-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<a id="__codelineno-50-7" name="__codelineno-50-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<a id="__codelineno-50-8" name="__codelineno-50-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;我实现了自动换行&quot;</span><span class="p">)</span>  
+<a id="__codelineno-50-9" name="__codelineno-50-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;OvO&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>输出结果为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1">1</a></span>
@@ -3858,7 +3858,7 @@
 <p>(C) 8577</p>
 <p>(D) 9233</p>
 <p>参考程序：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1">1</a></span>
 <span class="normal"><a href="#__codelineno-52-2">2</a></span>
 <span class="normal"><a href="#__codelineno-52-3">3</a></span>
 <span class="normal"><a href="#__codelineno-52-4">4</a></span>
@@ -3866,15 +3866,15 @@
 <span class="normal"><a href="#__codelineno-52-6">6</a></span>
 <span class="normal"><a href="#__codelineno-52-7">7</a></span>
 <span class="normal"><a href="#__codelineno-52-8">8</a></span>
-<span class="normal"><a href="#__codelineno-52-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1"></a>target = int(input(&quot;输入目标选项答案:&quot;))
-<a id="__codelineno-52-2" name="__codelineno-52-2"></a>a = target % 12
-<a id="__codelineno-52-3" name="__codelineno-52-3"></a>b = target % 23
-<a id="__codelineno-52-4" name="__codelineno-52-4"></a>c = target % 31
-<a id="__codelineno-52-5" name="__codelineno-52-5"></a>print(&quot;a=&quot;,a,&quot;\nb=&quot;,b,&quot;\nc=&quot;,c)
-<a id="__codelineno-52-6" name="__codelineno-52-6"></a>if a == b == c == 1:
-<a id="__codelineno-52-7" name="__codelineno-52-7"></a>    print(&quot;Correct,That&#39;s what I find!!&quot;)
-<a id="__codelineno-52-8" name="__codelineno-52-8"></a>else:
-<a id="__codelineno-52-9" name="__codelineno-52-9"></a>    print(&quot;Wrong,Please try another Answer!&quot;)
+<span class="normal"><a href="#__codelineno-52-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1"></a><span class="n">target</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;输入目标选项答案:&quot;</span><span class="p">))</span>
+<a id="__codelineno-52-2" name="__codelineno-52-2"></a><span class="n">a</span> <span class="o">=</span> <span class="n">target</span> <span class="o">%</span> <span class="mi">12</span>
+<a id="__codelineno-52-3" name="__codelineno-52-3"></a><span class="n">b</span> <span class="o">=</span> <span class="n">target</span> <span class="o">%</span> <span class="mi">23</span>
+<a id="__codelineno-52-4" name="__codelineno-52-4"></a><span class="n">c</span> <span class="o">=</span> <span class="n">target</span> <span class="o">%</span> <span class="mi">31</span>
+<a id="__codelineno-52-5" name="__codelineno-52-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a=&quot;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">b=&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">c=&quot;</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+<a id="__codelineno-52-6" name="__codelineno-52-6"></a><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="o">==</span> <span class="n">c</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-52-7" name="__codelineno-52-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Correct,That&#39;s what I find!!&quot;</span><span class="p">)</span>
+<a id="__codelineno-52-8" name="__codelineno-52-8"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-52-9" name="__codelineno-52-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wrong,Please try another Answer!&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>2.编写一个Python程序，用于模拟餐厅的点单过程。程序应提前告知用户汉堡、薯条和可乐的价格，并通过用户输入获得点单信息。最后，程序应分行输出客户点的内容，并打印出总价。</p>
 <p><strong>价格信息：</strong></p>
@@ -3927,7 +3927,7 @@
 <li>使用 <code>print()</code> 函数输出结果。</li>
 </ul>
 <p>示例代码：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-54-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-54-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-54-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-54-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-54-4"> 4</a></span>
@@ -3952,32 +3952,32 @@
 <span class="normal"><a href="#__codelineno-54-23">23</a></span>
 <span class="normal"><a href="#__codelineno-54-24">24</a></span>
 <span class="normal"><a href="#__codelineno-54-25">25</a></span>
-<span class="normal"><a href="#__codelineno-54-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1"></a># 定义食物的价格
-<a id="__codelineno-54-2" name="__codelineno-54-2"></a>burger_price = 5
-<a id="__codelineno-54-3" name="__codelineno-54-3"></a>fries_price = 2
-<a id="__codelineno-54-4" name="__codelineno-54-4"></a>cola_price = 1
+<span class="normal"><a href="#__codelineno-54-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1"></a><span class="c1"># 定义食物的价格</span>
+<a id="__codelineno-54-2" name="__codelineno-54-2"></a><span class="n">burger_price</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-54-3" name="__codelineno-54-3"></a><span class="n">fries_price</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-54-4" name="__codelineno-54-4"></a><span class="n">cola_price</span> <span class="o">=</span> <span class="mi">1</span>
 <a id="__codelineno-54-5" name="__codelineno-54-5"></a>
-<a id="__codelineno-54-6" name="__codelineno-54-6"></a># 显示价格信息
-<a id="__codelineno-54-7" name="__codelineno-54-7"></a>print(f&quot;汉堡：${burger_price}&quot;)
-<a id="__codelineno-54-8" name="__codelineno-54-8"></a>print(f&quot;薯条：${fries_price}&quot;)
-<a id="__codelineno-54-9" name="__codelineno-54-9"></a>print(f&quot;可乐：${cola_price}\n&quot;)
+<a id="__codelineno-54-6" name="__codelineno-54-6"></a><span class="c1"># 显示价格信息</span>
+<a id="__codelineno-54-7" name="__codelineno-54-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;汉堡：$</span><span class="si">{</span><span class="n">burger_price</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-54-8" name="__codelineno-54-8"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;薯条：$</span><span class="si">{</span><span class="n">fries_price</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-54-9" name="__codelineno-54-9"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;可乐：$</span><span class="si">{</span><span class="n">cola_price</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-54-10" name="__codelineno-54-10"></a>
-<a id="__codelineno-54-11" name="__codelineno-54-11"></a># 获取用户输入的点单数量
-<a id="__codelineno-54-12" name="__codelineno-54-12"></a>burger_count = int(input(&quot;请输入汉堡的数量：&quot;))
-<a id="__codelineno-54-13" name="__codelineno-54-13"></a>fries_count = int(input(&quot;请输入薯条的数量：&quot;))
-<a id="__codelineno-54-14" name="__codelineno-54-14"></a>cola_count = int(input(&quot;请输入可乐的数量：&quot;))
+<a id="__codelineno-54-11" name="__codelineno-54-11"></a><span class="c1"># 获取用户输入的点单数量</span>
+<a id="__codelineno-54-12" name="__codelineno-54-12"></a><span class="n">burger_count</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入汉堡的数量：&quot;</span><span class="p">))</span>
+<a id="__codelineno-54-13" name="__codelineno-54-13"></a><span class="n">fries_count</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入薯条的数量：&quot;</span><span class="p">))</span>
+<a id="__codelineno-54-14" name="__codelineno-54-14"></a><span class="n">cola_count</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入可乐的数量：&quot;</span><span class="p">))</span>
 <a id="__codelineno-54-15" name="__codelineno-54-15"></a>
-<a id="__codelineno-54-16" name="__codelineno-54-16"></a># 计算总价
-<a id="__codelineno-54-17" name="__codelineno-54-17"></a>total_price = (burger_count * burger_price +
-<a id="__codelineno-54-18" name="__codelineno-54-18"></a>               fries_count * fries_price +
-<a id="__codelineno-54-19" name="__codelineno-54-19"></a>               cola_count * cola_price)
+<a id="__codelineno-54-16" name="__codelineno-54-16"></a><span class="c1"># 计算总价</span>
+<a id="__codelineno-54-17" name="__codelineno-54-17"></a><span class="n">total_price</span> <span class="o">=</span> <span class="p">(</span><span class="n">burger_count</span> <span class="o">*</span> <span class="n">burger_price</span> <span class="o">+</span>
+<a id="__codelineno-54-18" name="__codelineno-54-18"></a>               <span class="n">fries_count</span> <span class="o">*</span> <span class="n">fries_price</span> <span class="o">+</span>
+<a id="__codelineno-54-19" name="__codelineno-54-19"></a>               <span class="n">cola_count</span> <span class="o">*</span> <span class="n">cola_price</span><span class="p">)</span>
 <a id="__codelineno-54-20" name="__codelineno-54-20"></a>
-<a id="__codelineno-54-21" name="__codelineno-54-21"></a># 输出点单内容和总价
-<a id="__codelineno-54-22" name="__codelineno-54-22"></a>print(&quot;\n您的点单如下：&quot;)
-<a id="__codelineno-54-23" name="__codelineno-54-23"></a>print(f&quot;汉堡 X {burger_count}&quot;)
-<a id="__codelineno-54-24" name="__codelineno-54-24"></a>print(f&quot;薯条 X {fries_count}&quot;)
-<a id="__codelineno-54-25" name="__codelineno-54-25"></a>print(f&quot;可乐 X {cola_count}&quot;)
-<a id="__codelineno-54-26" name="__codelineno-54-26"></a>print(f&quot;\n总价：${total_price}&quot;)
+<a id="__codelineno-54-21" name="__codelineno-54-21"></a><span class="c1"># 输出点单内容和总价</span>
+<a id="__codelineno-54-22" name="__codelineno-54-22"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">您的点单如下：&quot;</span><span class="p">)</span>
+<a id="__codelineno-54-23" name="__codelineno-54-23"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;汉堡 X </span><span class="si">{</span><span class="n">burger_count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-54-24" name="__codelineno-54-24"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;薯条 X </span><span class="si">{</span><span class="n">fries_count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-54-25" name="__codelineno-54-25"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;可乐 X </span><span class="si">{</span><span class="n">cola_count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-54-26" name="__codelineno-54-26"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">总价：$</span><span class="si">{</span><span class="n">total_price</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 
 

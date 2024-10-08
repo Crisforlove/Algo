@@ -2012,17 +2012,17 @@
 <p>默认情况下，参数值和参数名称是按函数声明中定义的顺序匹配起来的。</p>
 <h3 id="_2">实例</h3>
 <p>让我们使用函数来输出"Hello World!"：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>def hello() :
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    print(&quot;Hello World!&quot;)
+<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">hello</span><span class="p">()</span> <span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>hello()
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">hello</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <p>更复杂点的应用，函数中带上参数变量:</p>
 <p>比较两个数，并返回较大的数:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#__codelineno-2-4">4</a></span>
@@ -2030,21 +2030,21 @@
 <span class="normal"><a href="#__codelineno-2-6">6</a></span>
 <span class="normal"><a href="#__codelineno-2-7">7</a></span>
 <span class="normal"><a href="#__codelineno-2-8">8</a></span>
-<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>def max(a, b):
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    if a &gt; b:
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>        return a
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    else:
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>        return b
+<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>        <span class="k">return</span> <span class="n">a</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>        <span class="k">return</span> <span class="n">b</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>a = 4
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>b = 5
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>print(max(a, b))
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>5
 </code></pre></div></td></tr></table></div>
 <p>计算面积函数:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
@@ -2054,28 +2054,28 @@
 <span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a># 计算面积函数
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>def area(width, height):
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>    return width * height
+<span class="normal"><a href="#__codelineno-4-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 计算面积函数</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>def print_welcome(name):
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>    print(f&quot;Welcome {name}&quot;)
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="k">def</span> <span class="nf">print_welcome</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Welcome </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-4-7" name="__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>print_welcome(&quot;CodeRaft&quot;)
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>w = 4
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>h = 5
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a>print(f&quot;width = {w},  height = {h},  area = {area(w, h)}&quot;)
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="n">print_welcome</span><span class="p">(</span><span class="s2">&quot;CodeRaft&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="n">w</span> <span class="o">=</span> <span class="mi">4</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="n">h</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;width = </span><span class="si">{</span><span class="n">w</span><span class="si">}</span><span class="s2">,  height = </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">,  area = </span><span class="si">{</span><span class="n">area</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>以上实例输出结果：</p>
+<p>以上实例输出结果：
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Welcome CodeRaft
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>width = 4  height = 5  area = 20
-</code></pre></div></td></tr></table></div>
+</code></pre></div></td></tr></table></div></p>
 <h2 id="2">2 函数调用</h2>
 <p>定义一个函数：给了函数一个名称，指定了函数里包含的参数，和代码块结构。</p>
 <p>函数定义完成以后，可以调用执行。</p>
 <p>如下实例调用了 <strong>printme()</strong> 函数：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
 <span class="normal"><a href="#__codelineno-6-3">3</a></span>
 <span class="normal"><a href="#__codelineno-6-4">4</a></span>
@@ -2083,15 +2083,15 @@
 <span class="normal"><a href="#__codelineno-6-6">6</a></span>
 <span class="normal"><a href="#__codelineno-6-7">7</a></span>
 <span class="normal"><a href="#__codelineno-6-8">8</a></span>
-<span class="normal"><a href="#__codelineno-6-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>def printme(s):
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    # 打印任何传入的字符串
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>    print(s)
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>    return
+<span class="normal"><a href="#__codelineno-6-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">def</span> <span class="nf">printme</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="c1"># 打印任何传入的字符串</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>    <span class="k">return</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5"></a>
 <a id="__codelineno-6-6" name="__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a># 调用函数
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a>printme(&quot;我要调用用户自定义函数!&quot;)
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a>printme(&quot;再次调用同一函数&quot;)
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="c1"># 调用函数</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="n">printme</span><span class="p">(</span><span class="s2">&quot;我要调用用户自定义函数!&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="n">printme</span><span class="p">(</span><span class="s2">&quot;再次调用同一函数&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
@@ -2100,11 +2100,11 @@
 </code></pre></div></td></tr></table></div>
 <h2 id="3">3 参数传递</h2>
 <p>在 python 中，类型属于对象，对象有不同类型的区分，变量是没有类型的：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>a=[1,2,3]
+<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a>a=&quot;CodeRaft&quot;
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">a</span><span class="o">=</span><span class="s2">&quot;CodeRaft&quot;</span>
 </code></pre></div></td></tr></table></div>
 <p>以上代码中，<strong>[1,2,3]</strong> 是 List 类型，<strong>"CodeRaft"</strong> 是 String 类型，而变量 a 是没有类型，它仅仅是一个对象的引用（一个指针），可以是指向 List 类型对象，也可以是指向 String 类型对象。</p>
 <h3 id="31-mutableimmutable">3.1 可更改(mutable)与不可更改(immutable)对象：</h3>
@@ -2121,21 +2121,21 @@
 <p>python 中一切都是对象，严格意义我们不能说值传递还是引用传递，我们应该说传不可变对象和传可变对象。</p>
 <h3 id="32-python">3.2 python 传不可变对象实例</h3>
 <p>通过 <strong>id()</strong> 函数来查看内存地址变化：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
 <span class="normal"><a href="#__codelineno-9-4">4</a></span>
 <span class="normal"><a href="#__codelineno-9-5">5</a></span>
 <span class="normal"><a href="#__codelineno-9-6">6</a></span>
 <span class="normal"><a href="#__codelineno-9-7">7</a></span>
-<span class="normal"><a href="#__codelineno-9-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>def change(a):
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>    print(id(a))   # 指向的是同一个对象
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a>    a=10
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a>    print(id(a))   # 一个新对象
+<span class="normal"><a href="#__codelineno-9-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">def</span> <span class="nf">change</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>   <span class="c1"># 指向的是同一个对象</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>    <span class="n">a</span><span class="o">=</span><span class="mi">10</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>   <span class="c1"># 一个新对象</span>
 <a id="__codelineno-9-5" name="__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a>a=1
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a>print(id(a))
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a>change(a)
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="n">a</span><span class="o">=</span><span class="mi">1</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="n">change</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果为：</p>
 <p>*因每台设备而异</p>
@@ -2148,7 +2148,7 @@
 <p>可以看见在调用函数前后，形参和实参指向的是同一个对象（对象 id 相同），在函数内部修改形参后，形参指向的是不同的 id。</p>
 <h3 id="33">3.3 传可变对象实例</h3>
 <p>可变对象在函数里修改了参数，那么在调用这个函数的函数里，原始的参数也被改变了。例如：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
 <span class="normal"><a href="#__codelineno-11-2">2</a></span>
 <span class="normal"><a href="#__codelineno-11-3">3</a></span>
 <span class="normal"><a href="#__codelineno-11-4">4</a></span>
@@ -2156,15 +2156,15 @@
 <span class="normal"><a href="#__codelineno-11-6">6</a></span>
 <span class="normal"><a href="#__codelineno-11-7">7</a></span>
 <span class="normal"><a href="#__codelineno-11-8">8</a></span>
-<span class="normal"><a href="#__codelineno-11-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>def changeme(mylist):
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>    mylist.append([1,2,3,4])
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a>    print(&quot;函数内取值: &quot;, mylist)
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a>    return
+<span class="normal"><a href="#__codelineno-11-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">def</span> <span class="nf">changeme</span><span class="p">(</span><span class="n">mylist</span><span class="p">):</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>    <span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;函数内取值: &quot;</span><span class="p">,</span> <span class="n">mylist</span><span class="p">)</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>    <span class="k">return</span>
 <a id="__codelineno-11-5" name="__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a># 调用changeme函数
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a>mylist = [10,20,30]
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a>changeme(mylist)
-<a id="__codelineno-11-9" name="__codelineno-11-9"></a>print(&quot;函数外取值: &quot;, mylist)
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="c1"># 调用changeme函数</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">]</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="n">changeme</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;函数外取值: &quot;</span><span class="p">,</span> <span class="n">mylist</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>传入函数的和在末尾添加新内容的对象用的是同一个引用。故输出结果如下：</p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
@@ -2172,7 +2172,7 @@
 <a id="__codelineno-12-2" name="__codelineno-12-2"></a>函数外取值:  [10, 20, 30, [1, 2, 3, 4]]
 </code></pre></div></td></tr></table></div>
 但是如果我们把相同变量名mylist作为函数内局部变量，则不会对外面同变量名的变量值产生影响。例如：
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
@@ -2181,16 +2181,16 @@
 <span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-13-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>def changeme(mylist):
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a>    mylist = [1, 2, 3]
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a>    mylist.append([1,2,3,4])
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a>    print(&quot;函数内取值: &quot;, mylist)
-<a id="__codelineno-13-5" name="__codelineno-13-5"></a>    return
+<span class="normal"><a href="#__codelineno-13-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">def</span> <span class="nf">changeme</span><span class="p">(</span><span class="n">mylist</span><span class="p">):</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>    <span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>    <span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;函数内取值: &quot;</span><span class="p">,</span> <span class="n">mylist</span><span class="p">)</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>    <span class="k">return</span>
 <a id="__codelineno-13-6" name="__codelineno-13-6"></a>
-<a id="__codelineno-13-7" name="__codelineno-13-7"></a># 调用changeme函数
-<a id="__codelineno-13-8" name="__codelineno-13-8"></a>mylist = [10,20,30]
-<a id="__codelineno-13-9" name="__codelineno-13-9"></a>changeme(mylist)
-<a id="__codelineno-13-10" name="__codelineno-13-10"></a>print(&quot;函数外取值: &quot;, mylist)
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="c1"># 调用changeme函数</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">]</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="n">changeme</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;函数外取值: &quot;</span><span class="p">,</span> <span class="n">mylist</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 在函数内部，mylist从[10,20,30]指向了新的[1，2，3]，因此输出结果如下：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
@@ -2207,9 +2207,9 @@
 </ul>
 <h3 id="41">4.1 形式参数（形参）</h3>
 <p>形式参数是在函数定义时使用的变量名称，用于接收传递给函数的值。形参在函数体内充当占位符，在函数调用时会被实参替代。</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
-<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>def greet(name):  # name 是形式参数
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a>    print(f&quot;Hello, {name}!&quot;)
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>  <span class="c1"># name 是形式参数</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>在这个例子中，<code>name</code> 是一个形式参数。当调用 <code>greet</code> 函数时，<code>name</code> 将被实际参数的值替换。</p>
 <h3 id="42">4.2 实际参数（实参）</h3>
@@ -2229,19 +2229,19 @@
 <h3 id="45">4.5 必需参数</h3>
 <p>必需参数须以正确的顺序传入函数。调用时的数量必须和声明时的一样。</p>
 <p>调用 printme() 函数，你必须传入一个参数，不然会出现语法错误：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
 <span class="normal"><a href="#__codelineno-17-2">2</a></span>
 <span class="normal"><a href="#__codelineno-17-3">3</a></span>
 <span class="normal"><a href="#__codelineno-17-4">4</a></span>
 <span class="normal"><a href="#__codelineno-17-5">5</a></span>
 <span class="normal"><a href="#__codelineno-17-6">6</a></span>
-<span class="normal"><a href="#__codelineno-17-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>#可写函数说明
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a>def printme(s):
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a>    print(s)
-<a id="__codelineno-17-4" name="__codelineno-17-4"></a>    return
+<span class="normal"><a href="#__codelineno-17-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="c1">#可写函数说明</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="k">def</span> <span class="nf">printme</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>    <span class="k">return</span>
 <a id="__codelineno-17-5" name="__codelineno-17-5"></a>
-<a id="__codelineno-17-6" name="__codelineno-17-6"></a># 调用 printme 函数，不加参数会报错
-<a id="__codelineno-17-7" name="__codelineno-17-7"></a>printme()
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="c1"># 调用 printme 函数，不加参数会报错</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="n">printme</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
 <span class="normal"><a href="#__codelineno-18-2">2</a></span>
@@ -2257,41 +2257,41 @@
 <p>关键字参数和函数调用关系紧密，函数调用使用关键字参数来确定传入的参数值。</p>
 <p>使用关键字参数允许函数调用时参数的顺序与声明时不一致，因为 Python 解释器能够用参数名匹配参数值。</p>
 <p>以下实例在函数 printme() 调用时使用参数名：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
 <span class="normal"><a href="#__codelineno-19-2">2</a></span>
 <span class="normal"><a href="#__codelineno-19-3">3</a></span>
 <span class="normal"><a href="#__codelineno-19-4">4</a></span>
 <span class="normal"><a href="#__codelineno-19-5">5</a></span>
 <span class="normal"><a href="#__codelineno-19-6">6</a></span>
 <span class="normal"><a href="#__codelineno-19-7">7</a></span>
-<span class="normal"><a href="#__codelineno-19-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>#可写函数说明
-<a id="__codelineno-19-2" name="__codelineno-19-2"></a>def printme(s):
-<a id="__codelineno-19-3" name="__codelineno-19-3"></a>    # 打印任何传入的字符串
-<a id="__codelineno-19-4" name="__codelineno-19-4"></a>    print(s)
-<a id="__codelineno-19-5" name="__codelineno-19-5"></a>    return
+<span class="normal"><a href="#__codelineno-19-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="c1">#可写函数说明</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="k">def</span> <span class="nf">printme</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>    <span class="c1"># 打印任何传入的字符串</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a>    <span class="k">return</span>
 <a id="__codelineno-19-6" name="__codelineno-19-6"></a>
-<a id="__codelineno-19-7" name="__codelineno-19-7"></a>#调用printme函数
-<a id="__codelineno-19-8" name="__codelineno-19-8"></a>printme(s=&quot;CodeRaft&quot;)
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="c1">#调用printme函数</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="n">printme</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="s2">&quot;CodeRaft&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>CodeRaft
 </code></pre></div></td></tr></table></div>
 <p>以下实例中演示了函数参数的使用不需要使用指定顺序：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
 <span class="normal"><a href="#__codelineno-21-2">2</a></span>
 <span class="normal"><a href="#__codelineno-21-3">3</a></span>
 <span class="normal"><a href="#__codelineno-21-4">4</a></span>
 <span class="normal"><a href="#__codelineno-21-5">5</a></span>
 <span class="normal"><a href="#__codelineno-21-6">6</a></span>
 <span class="normal"><a href="#__codelineno-21-7">7</a></span>
-<span class="normal"><a href="#__codelineno-21-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>#可写函数说明
-<a id="__codelineno-21-2" name="__codelineno-21-2"></a>def printinfo(name, age):
-<a id="__codelineno-21-3" name="__codelineno-21-3"></a>    print(&quot;名字: &quot;, name)
-<a id="__codelineno-21-4" name="__codelineno-21-4"></a>    print(&quot;年龄: &quot;, age)
-<a id="__codelineno-21-5" name="__codelineno-21-5"></a>    return
+<span class="normal"><a href="#__codelineno-21-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="c1">#可写函数说明</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="k">def</span> <span class="nf">printinfo</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;名字: &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;年龄: &quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>    <span class="k">return</span>
 <a id="__codelineno-21-6" name="__codelineno-21-6"></a>
-<a id="__codelineno-21-7" name="__codelineno-21-7"></a>#调用printinfo函数
-<a id="__codelineno-21-8" name="__codelineno-21-8"></a>printinfo(age=50, name=&quot;CodeRaft&quot;)
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="c1">#调用printinfo函数</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="n">printinfo</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;CodeRaft&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
@@ -2300,7 +2300,7 @@
 </code></pre></div></td></tr></table></div>
 <h3 id="47">4.7 默认参数（选修）</h3>
 <p>调用函数时，如果没有传递参数，则会使用默认参数。以下实例中如果没有传入 age 参数，则使用默认值：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
@@ -2310,17 +2310,17 @@
 <span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-23-10">10</a></span>
-<span class="normal"><a href="#__codelineno-23-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>#可写函数说明
-<a id="__codelineno-23-2" name="__codelineno-23-2"></a>def printinfo(name, age=35):
-<a id="__codelineno-23-3" name="__codelineno-23-3"></a>   &quot;打印任何传入的字符串&quot;
-<a id="__codelineno-23-4" name="__codelineno-23-4"></a>    print(&quot;名字: &quot;, name)
-<a id="__codelineno-23-5" name="__codelineno-23-5"></a>    print(&quot;年龄: &quot;, age)
-<a id="__codelineno-23-6" name="__codelineno-23-6"></a>    return
+<span class="normal"><a href="#__codelineno-23-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="c1">#可写函数说明</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="k">def</span> <span class="nf">printinfo</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">35</span><span class="p">):</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>   <span class="s2">&quot;打印任何传入的字符串&quot;</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;名字: &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;年龄: &quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a>    <span class="k">return</span>
 <a id="__codelineno-23-7" name="__codelineno-23-7"></a>
-<a id="__codelineno-23-8" name="__codelineno-23-8"></a>#调用printinfo函数
-<a id="__codelineno-23-9" name="__codelineno-23-9"></a>printinfo(age=50, name=&quot;CodeRaft&quot;)
-<a id="__codelineno-23-10" name="__codelineno-23-10"></a>print(&quot;------------------------&quot;)
-<a id="__codelineno-23-11" name="__codelineno-23-11"></a>printinfo(name=&quot;CodeRaft&quot;)
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="c1">#调用printinfo函数</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="n">printinfo</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;CodeRaft&quot;</span><span class="p">)</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------&quot;</span><span class="p">)</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="n">printinfo</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;CodeRaft&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>输出为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
@@ -2335,28 +2335,28 @@
 </code></pre></div></td></tr></table></div>
 <h3 id="48">4.8 不定长参数（选修）</h3>
 <p>你可能需要一个函数能处理比当初声明时更多的参数。这些参数叫做不定长参数，和上述2种参数不同，声明时不会命名。基本语法如下：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
 <span class="normal"><a href="#__codelineno-25-2">2</a></span>
-<span class="normal"><a href="#__codelineno-25-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>def functionname([formal_args,] *var_args_tuple):
-<a id="__codelineno-25-2" name="__codelineno-25-2"></a>    function_suite
-<a id="__codelineno-25-3" name="__codelineno-25-3"></a>    return [expression]
+<span class="normal"><a href="#__codelineno-25-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="k">def</span> <span class="nf">functionname</span><span class="p">([</span><span class="n">formal_args</span><span class="p">,]</span> <span class="o">*</span><span class="n">var_args_tuple</span><span class="p">):</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>    <span class="n">function_suite</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>    <span class="k">return</span> <span class="p">[</span><span class="n">expression</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 <p>加了星号 * 的参数会以元组(tuple)的形式导入，存放所有未命名的变量参数。</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
 <span class="normal"><a href="#__codelineno-26-2">2</a></span>
 <span class="normal"><a href="#__codelineno-26-3">3</a></span>
 <span class="normal"><a href="#__codelineno-26-4">4</a></span>
 <span class="normal"><a href="#__codelineno-26-5">5</a></span>
 <span class="normal"><a href="#__codelineno-26-6">6</a></span>
 <span class="normal"><a href="#__codelineno-26-7">7</a></span>
-<span class="normal"><a href="#__codelineno-26-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a># 可写函数说明
-<a id="__codelineno-26-2" name="__codelineno-26-2"></a>def printinfo(arg1, *vartuple):
-<a id="__codelineno-26-3" name="__codelineno-26-3"></a>    print(&quot;输出: &quot;)
-<a id="__codelineno-26-4" name="__codelineno-26-4"></a>    print(arg1)
-<a id="__codelineno-26-5" name="__codelineno-26-5"></a>    print(vartuple)
+<span class="normal"><a href="#__codelineno-26-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="c1"># 可写函数说明</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="k">def</span> <span class="nf">printinfo</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="o">*</span><span class="n">vartuple</span><span class="p">):</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;输出: &quot;</span><span class="p">)</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">vartuple</span><span class="p">)</span>
 <a id="__codelineno-26-6" name="__codelineno-26-6"></a>
-<a id="__codelineno-26-7" name="__codelineno-26-7"></a># 调用printinfo 函数
-<a id="__codelineno-26-8" name="__codelineno-26-8"></a>printinfo(70, 60, 50)
+<a id="__codelineno-26-7" name="__codelineno-26-7"></a><span class="c1"># 调用printinfo 函数</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8"></a><span class="n">printinfo</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
@@ -2366,7 +2366,7 @@
 <a id="__codelineno-27-3" name="__codelineno-27-3"></a>(60, 50)
 </code></pre></div></td></tr></table></div>
 <p>如果在函数调用时没有指定参数，它就是一个空元组。我们也可以不向函数传递未命名的变量。如下实例：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-28-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-28-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-28-4"> 4</a></span>
@@ -2376,17 +2376,17 @@
 <span class="normal"><a href="#__codelineno-28-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-28-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-28-10">10</a></span>
-<span class="normal"><a href="#__codelineno-28-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a># 可写函数说明
-<a id="__codelineno-28-2" name="__codelineno-28-2"></a>def printinfo(arg1, *vartuple):
-<a id="__codelineno-28-3" name="__codelineno-28-3"></a>    print(&quot;输出: &quot;)
-<a id="__codelineno-28-4" name="__codelineno-28-4"></a>    print(arg1)
-<a id="__codelineno-28-5" name="__codelineno-28-5"></a>    for var in vartuple:
-<a id="__codelineno-28-6" name="__codelineno-28-6"></a>        print(var)
-<a id="__codelineno-28-7" name="__codelineno-28-7"></a>    return
+<span class="normal"><a href="#__codelineno-28-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="c1"># 可写函数说明</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="k">def</span> <span class="nf">printinfo</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="o">*</span><span class="n">vartuple</span><span class="p">):</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;输出: &quot;</span><span class="p">)</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5"></a>    <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">vartuple</span><span class="p">:</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7"></a>    <span class="k">return</span>
 <a id="__codelineno-28-8" name="__codelineno-28-8"></a>
-<a id="__codelineno-28-9" name="__codelineno-28-9"></a># 调用printinfo 函数
-<a id="__codelineno-28-10" name="__codelineno-28-10"></a>printinfo(10)
-<a id="__codelineno-28-11" name="__codelineno-28-11"></a>printinfo(70, 60, 50)
+<a id="__codelineno-28-9" name="__codelineno-28-9"></a><span class="c1"># 调用printinfo 函数</span>
+<a id="__codelineno-28-10" name="__codelineno-28-10"></a><span class="n">printinfo</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-28-11" name="__codelineno-28-11"></a><span class="n">printinfo</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
 <span class="normal"><a href="#__codelineno-29-2">2</a></span>
@@ -2403,28 +2403,28 @@
 <a id="__codelineno-29-7" name="__codelineno-29-7"></a>50
 </code></pre></div></td></tr></table></div>
 <p>还有一种就是参数带两个星号 ** 基本语法如下：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
 <span class="normal"><a href="#__codelineno-30-2">2</a></span>
-<span class="normal"><a href="#__codelineno-30-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>def functionname([formal_args,] **var_args_dict):
-<a id="__codelineno-30-2" name="__codelineno-30-2"></a>    function_suite
-<a id="__codelineno-30-3" name="__codelineno-30-3"></a>    return [expression]
+<span class="normal"><a href="#__codelineno-30-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="k">def</span> <span class="nf">functionname</span><span class="p">([</span><span class="n">formal_args</span><span class="p">,]</span> <span class="o">**</span><span class="n">var_args_dict</span><span class="p">):</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a>    <span class="n">function_suite</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a>    <span class="k">return</span> <span class="p">[</span><span class="n">expression</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 <p>加了两个星号 ** 的参数会以字典的形式导入。</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
 <span class="normal"><a href="#__codelineno-31-2">2</a></span>
 <span class="normal"><a href="#__codelineno-31-3">3</a></span>
 <span class="normal"><a href="#__codelineno-31-4">4</a></span>
 <span class="normal"><a href="#__codelineno-31-5">5</a></span>
 <span class="normal"><a href="#__codelineno-31-6">6</a></span>
 <span class="normal"><a href="#__codelineno-31-7">7</a></span>
-<span class="normal"><a href="#__codelineno-31-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a># 可写函数说明
-<a id="__codelineno-31-2" name="__codelineno-31-2"></a>def printinfo(arg1, **vardict):
-<a id="__codelineno-31-3" name="__codelineno-31-3"></a>    print(&quot;输出: &quot;)
-<a id="__codelineno-31-4" name="__codelineno-31-4"></a>    print(arg1)
-<a id="__codelineno-31-5" name="__codelineno-31-5"></a>    print(vardict)
+<span class="normal"><a href="#__codelineno-31-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="c1"># 可写函数说明</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="k">def</span> <span class="nf">printinfo</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="o">**</span><span class="n">vardict</span><span class="p">):</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;输出: &quot;</span><span class="p">)</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">vardict</span><span class="p">)</span>
 <a id="__codelineno-31-6" name="__codelineno-31-6"></a>
-<a id="__codelineno-31-7" name="__codelineno-31-7"></a># 调用printinfo 函数
-<a id="__codelineno-31-8" name="__codelineno-31-8"></a>printinfo(1, a=2,b=3)
+<a id="__codelineno-31-7" name="__codelineno-31-7"></a><span class="c1"># 调用printinfo 函数</span>
+<a id="__codelineno-31-8" name="__codelineno-31-8"></a><span class="n">printinfo</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
@@ -2434,9 +2434,9 @@
 <a id="__codelineno-32-3" name="__codelineno-32-3"></a>{&#39;a&#39;: 2, &#39;b&#39;: 3}
 </code></pre></div></td></tr></table></div>
 <p>声明函数时，参数中星号 * 可以单独出现，例如:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
-<span class="normal"><a href="#__codelineno-33-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a>def f(a,b,*,c):
-<a id="__codelineno-33-2" name="__codelineno-33-2"></a>    return a+b+c
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<span class="normal"><a href="#__codelineno-33-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="o">*</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a>    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span>
 </code></pre></div></td></tr></table></div>
 <p>如果单独出现星号 *，则星号 * 后的参数必须用关键字传入：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
@@ -2464,47 +2464,47 @@
 <p>所谓匿名，意即不再使用 <strong>def</strong> 语句这样标准的形式定义一个函数。</p>
 <h3 id="51">5.1 语法</h3>
 <p>lambda 函数的语法只包含一个语句，如下：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a>lambda [arg1 [,arg2,.....argn]]:expression
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="k">lambda</span> <span class="p">[</span><span class="n">arg1</span> <span class="p">[,</span><span class="n">arg2</span><span class="p">,</span><span class="o">.....</span><span class="n">argn</span><span class="p">]]:</span><span class="n">expression</span>
 </code></pre></div></td></tr></table></div>
 <p>设置参数a加上10:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
-<span class="normal"><a href="#__codelineno-36-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a>x = lambda a : a + 10
-<a id="__codelineno-36-2" name="__codelineno-36-2"></a>print(x(5))
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
+<span class="normal"><a href="#__codelineno-36-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="n">x</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span> <span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">10</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a>15
 </code></pre></div></td></tr></table></div>
 <h3 id="52">5.2 实例</h3>
 <p>以下实例匿名函数设置两个参数：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
 <span class="normal"><a href="#__codelineno-38-2">2</a></span>
 <span class="normal"><a href="#__codelineno-38-3">3</a></span>
 <span class="normal"><a href="#__codelineno-38-4">4</a></span>
 <span class="normal"><a href="#__codelineno-38-5">5</a></span>
-<span class="normal"><a href="#__codelineno-38-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a># 可写函数说明
-<a id="__codelineno-38-2" name="__codelineno-38-2"></a>sum = lambda arg1, arg2: arg1 + arg2
+<span class="normal"><a href="#__codelineno-38-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="c1"># 可写函数说明</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="nb">sum</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">:</span> <span class="n">arg1</span> <span class="o">+</span> <span class="n">arg2</span>
 <a id="__codelineno-38-3" name="__codelineno-38-3"></a>
-<a id="__codelineno-38-4" name="__codelineno-38-4"></a># 调用sum函数
-<a id="__codelineno-38-5" name="__codelineno-38-5"></a>print(&quot;相加后的值为: &quot;, sum(10, 20))
-<a id="__codelineno-38-6" name="__codelineno-38-6"></a>print(&quot;相加后的值为: &quot;, sum(20, 20))
+<a id="__codelineno-38-4" name="__codelineno-38-4"></a><span class="c1"># 调用sum函数</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;相加后的值为: &quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<a id="__codelineno-38-6" name="__codelineno-38-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;相加后的值为: &quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
 <p>我们可以将匿名函数封装在一个函数内，这样可以使用同样的代码来创建多个匿名函数。</p>
 <p>以下实例将匿名函数封装在 myfunc 函数中，通过传入不同的参数来创建不同的匿名函数：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
 <span class="normal"><a href="#__codelineno-39-2">2</a></span>
 <span class="normal"><a href="#__codelineno-39-3">3</a></span>
 <span class="normal"><a href="#__codelineno-39-4">4</a></span>
 <span class="normal"><a href="#__codelineno-39-5">5</a></span>
 <span class="normal"><a href="#__codelineno-39-6">6</a></span>
 <span class="normal"><a href="#__codelineno-39-7">7</a></span>
-<span class="normal"><a href="#__codelineno-39-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a>def myfunc(n):
-<a id="__codelineno-39-2" name="__codelineno-39-2"></a>    return lambda a : a * n
+<span class="normal"><a href="#__codelineno-39-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2"></a>    <span class="k">return</span> <span class="k">lambda</span> <span class="n">a</span> <span class="p">:</span> <span class="n">a</span> <span class="o">*</span> <span class="n">n</span>
 <a id="__codelineno-39-3" name="__codelineno-39-3"></a>
-<a id="__codelineno-39-4" name="__codelineno-39-4"></a>mydoubler = myfunc(2)
-<a id="__codelineno-39-5" name="__codelineno-39-5"></a>mytripler = myfunc(3)
+<a id="__codelineno-39-4" name="__codelineno-39-4"></a><span class="n">mydoubler</span> <span class="o">=</span> <span class="n">myfunc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5"></a><span class="n">mytripler</span> <span class="o">=</span> <span class="n">myfunc</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <a id="__codelineno-39-6" name="__codelineno-39-6"></a>
-<a id="__codelineno-39-7" name="__codelineno-39-7"></a>print(mydoubler(11))
-<a id="__codelineno-39-8" name="__codelineno-39-8"></a>print(mytripler(11))
+<a id="__codelineno-39-7" name="__codelineno-39-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">mydoubler</span><span class="p">(</span><span class="mi">11</span><span class="p">))</span>
+<a id="__codelineno-39-8" name="__codelineno-39-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">mytripler</span><span class="p">(</span><span class="mi">11</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span>
@@ -2514,7 +2514,7 @@
 <h2 id="6-return">6 return 语句</h2>
 <h3 id="61">6.1 基础用法</h3>
 <p><strong>return [表达式]</strong> 语句用于退出函数，选择性地向调用方返回一个表达式。不带参数值的 return 语句返回 None。之前的例子都没有示范如何返回数值，以下实例演示了 return 语句的用法：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-41-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-41-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-41-4"> 4</a></span>
@@ -2523,16 +2523,16 @@
 <span class="normal"><a href="#__codelineno-41-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-41-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-41-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-41-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a># 定义函数
-<a id="__codelineno-41-2" name="__codelineno-41-2"></a>def sum(arg1, arg2):
-<a id="__codelineno-41-3" name="__codelineno-41-3"></a>   # 计算两个参数的和
-<a id="__codelineno-41-4" name="__codelineno-41-4"></a>   total = arg1 + arg2
-<a id="__codelineno-41-5" name="__codelineno-41-5"></a>   print(&quot;函数内:&quot;, total)
-<a id="__codelineno-41-6" name="__codelineno-41-6"></a>   return total
+<span class="normal"><a href="#__codelineno-41-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="c1"># 定义函数</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2"></a><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">):</span>
+<a id="__codelineno-41-3" name="__codelineno-41-3"></a>   <span class="c1"># 计算两个参数的和</span>
+<a id="__codelineno-41-4" name="__codelineno-41-4"></a>   <span class="n">total</span> <span class="o">=</span> <span class="n">arg1</span> <span class="o">+</span> <span class="n">arg2</span>
+<a id="__codelineno-41-5" name="__codelineno-41-5"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;函数内:&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
+<a id="__codelineno-41-6" name="__codelineno-41-6"></a>   <span class="k">return</span> <span class="n">total</span>
 <a id="__codelineno-41-7" name="__codelineno-41-7"></a>
-<a id="__codelineno-41-8" name="__codelineno-41-8"></a># 调用 sum 函数
-<a id="__codelineno-41-9" name="__codelineno-41-9"></a>total = sum(10, 20)
-<a id="__codelineno-41-10" name="__codelineno-41-10"></a>print(&quot;函数外:&quot;, total)
+<a id="__codelineno-41-8" name="__codelineno-41-8"></a><span class="c1"># 调用 sum 函数</span>
+<a id="__codelineno-41-9" name="__codelineno-41-9"></a><span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<a id="__codelineno-41-10" name="__codelineno-41-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;函数外:&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>以上实例输出结果：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span>
@@ -2541,42 +2541,42 @@
 </code></pre></div></td></tr></table></div>
 <h3 id="62">6.2 <strong>提前结束函数</strong></h3>
 <p><code>return</code> 语句可以直接结束函数的执行，因此 <code>return</code> 后面的语句将不会被执行。下面的示例演示了这一特性：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span>
 <span class="normal"><a href="#__codelineno-43-2">2</a></span>
 <span class="normal"><a href="#__codelineno-43-3">3</a></span>
 <span class="normal"><a href="#__codelineno-43-4">4</a></span>
 <span class="normal"><a href="#__codelineno-43-5">5</a></span>
 <span class="normal"><a href="#__codelineno-43-6">6</a></span>
 <span class="normal"><a href="#__codelineno-43-7">7</a></span>
-<span class="normal"><a href="#__codelineno-43-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a>def check_even(number):
-<a id="__codelineno-43-2" name="__codelineno-43-2"></a>    if number % 2 == 0:
-<a id="__codelineno-43-3" name="__codelineno-43-3"></a>        return True  # 如果条件为真，函数在此处结束，后续代码不会执行
-<a id="__codelineno-43-4" name="__codelineno-43-4"></a>    print(&quot;这是一个奇数&quot;)
-<a id="__codelineno-43-5" name="__codelineno-43-5"></a>    return False
+<span class="normal"><a href="#__codelineno-43-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="k">def</span> <span class="nf">check_even</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2"></a>    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3"></a>        <span class="k">return</span> <span class="kc">True</span>  <span class="c1"># 如果条件为真，函数在此处结束，后续代码不会执行</span>
+<a id="__codelineno-43-4" name="__codelineno-43-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;这是一个奇数&quot;</span><span class="p">)</span>
+<a id="__codelineno-43-5" name="__codelineno-43-5"></a>    <span class="k">return</span> <span class="kc">False</span>
 <a id="__codelineno-43-6" name="__codelineno-43-6"></a>
-<a id="__codelineno-43-7" name="__codelineno-43-7"></a>result = check_even(4)
-<a id="__codelineno-43-8" name="__codelineno-43-8"></a>print(&quot;结果:&quot;, result)
+<a id="__codelineno-43-7" name="__codelineno-43-7"></a><span class="n">result</span> <span class="o">=</span> <span class="n">check_even</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<a id="__codelineno-43-8" name="__codelineno-43-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;结果:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>在上述示例中，如果传入的数字是偶数，<code>return True</code> 会直接终止函数的执行，因此 <code>print("这是一个奇数")</code> 不会被执行。输出结果为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a>结果: True
 </code></pre></div></td></tr></table></div>
 <h3 id="63-return">6.3 循环中的 <code>return</code></h3>
 <p>在循环中使用 <code>return</code> 语句会导致函数提前结束，循环也会停止。以下示例展示了如何在循环中使用 <code>return</code> 来找到第一个符合条件的元素：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span>
 <span class="normal"><a href="#__codelineno-45-2">2</a></span>
 <span class="normal"><a href="#__codelineno-45-3">3</a></span>
 <span class="normal"><a href="#__codelineno-45-4">4</a></span>
 <span class="normal"><a href="#__codelineno-45-5">5</a></span>
 <span class="normal"><a href="#__codelineno-45-6">6</a></span>
 <span class="normal"><a href="#__codelineno-45-7">7</a></span>
-<span class="normal"><a href="#__codelineno-45-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1"></a>def find_first_even(numbers):
-<a id="__codelineno-45-2" name="__codelineno-45-2"></a>    for number in numbers:
-<a id="__codelineno-45-3" name="__codelineno-45-3"></a>        if number % 2 == 0:
-<a id="__codelineno-45-4" name="__codelineno-45-4"></a>            return number  # 一旦找到偶数，立即返回，结束函数
-<a id="__codelineno-45-5" name="__codelineno-45-5"></a>    return None  # 如果循环结束没有找到偶数，返回 None
+<span class="normal"><a href="#__codelineno-45-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1"></a><span class="k">def</span> <span class="nf">find_first_even</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2"></a>    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+<a id="__codelineno-45-3" name="__codelineno-45-3"></a>        <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-45-4" name="__codelineno-45-4"></a>            <span class="k">return</span> <span class="n">number</span>  <span class="c1"># 一旦找到偶数，立即返回，结束函数</span>
+<a id="__codelineno-45-5" name="__codelineno-45-5"></a>    <span class="k">return</span> <span class="kc">None</span>  <span class="c1"># 如果循环结束没有找到偶数，返回 None</span>
 <a id="__codelineno-45-6" name="__codelineno-45-6"></a>
-<a id="__codelineno-45-7" name="__codelineno-45-7"></a>result = find_first_even([1, 3, 5, 6, 7])
-<a id="__codelineno-45-8" name="__codelineno-45-8"></a>print(&quot;第一个偶数是:&quot;, result)
+<a id="__codelineno-45-7" name="__codelineno-45-7"></a><span class="n">result</span> <span class="o">=</span> <span class="n">find_first_even</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+<a id="__codelineno-45-8" name="__codelineno-45-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;第一个偶数是:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>执行该代码后，输出结果为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1"></a>第一个偶数是: 6
@@ -2584,19 +2584,19 @@
 <p>可以看到，当函数找到第一个偶数时，<code>return</code> 立即结束函数的执行，并返回该偶数。</p>
 <h3 id="64">6.4 优化条件判断</h3>
 <p><code>return</code> 语句也可以用于简化条件判断结构，从而避免使用冗余的 <code>else</code> 语句。以下示例展示了如何使用 <code>return</code>使代码更简洁：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1">1</a></span>
 <span class="normal"><a href="#__codelineno-47-2">2</a></span>
 <span class="normal"><a href="#__codelineno-47-3">3</a></span>
 <span class="normal"><a href="#__codelineno-47-4">4</a></span>
 <span class="normal"><a href="#__codelineno-47-5">5</a></span>
 <span class="normal"><a href="#__codelineno-47-6">6</a></span>
-<span class="normal"><a href="#__codelineno-47-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a>def is_positive(number):
-<a id="__codelineno-47-2" name="__codelineno-47-2"></a>    if number &gt; 0:
-<a id="__codelineno-47-3" name="__codelineno-47-3"></a>        return True
-<a id="__codelineno-47-4" name="__codelineno-47-4"></a>    return False  # 因为上面的 return 语句，else 可以省略
+<span class="normal"><a href="#__codelineno-47-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a><span class="k">def</span> <span class="nf">is_positive</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+<a id="__codelineno-47-2" name="__codelineno-47-2"></a>    <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-47-3" name="__codelineno-47-3"></a>        <span class="k">return</span> <span class="kc">True</span>
+<a id="__codelineno-47-4" name="__codelineno-47-4"></a>    <span class="k">return</span> <span class="kc">False</span>  <span class="c1"># 因为上面的 return 语句，else 可以省略</span>
 <a id="__codelineno-47-5" name="__codelineno-47-5"></a>
-<a id="__codelineno-47-6" name="__codelineno-47-6"></a>result = is_positive(-5)
-<a id="__codelineno-47-7" name="__codelineno-47-7"></a>print(&quot;是否为正数:&quot;, result)
+<a id="__codelineno-47-6" name="__codelineno-47-6"></a><span class="n">result</span> <span class="o">=</span> <span class="n">is_positive</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-47-7" name="__codelineno-47-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;是否为正数:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>此示例的输出结果为：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1"></a>是否为正数: False
@@ -2609,12 +2609,12 @@
 <li><code>/</code> 和 <code>*</code> 之间的参数（<code>c</code> 和 <code>d</code>）可以使用位置参数或关键字参数。</li>
 <li><code>*</code> 之后的参数（<code>e</code> 和 <code>f</code>）必须使用关键字参数。</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1">1</a></span>
-<span class="normal"><a href="#__codelineno-49-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1"></a>def f(a, b, /, c, d, *, e, f):
-<a id="__codelineno-49-2" name="__codelineno-49-2"></a>    print(a, b, c, d, e, f)
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1">1</a></span>
+<span class="normal"><a href="#__codelineno-49-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1"></a><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>对于上述函数，以下调用方法是正确的：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a>f(10, 20, 30, d=40, e=50, f=60)
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a><span class="n">f</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>在这个调用中：</p>
 <ul>
@@ -2623,15 +2623,15 @@
 <li><code>e</code> 和 <code>f</code> 必须使用关键字参数的形式传递。</li>
 </ul>
 <p>以下调用方法会产生错误：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1">1</a></span>
-<span class="normal"><a href="#__codelineno-51-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1"></a>f(10, b=20, c=30, d=40, e=50, f=60)  # 错误：b 不能使用关键字参数的形式
-<a id="__codelineno-51-2" name="__codelineno-51-2"></a>f(10, 20, 30, 40, 50, f=60)          # 错误：e 必须使用关键字参数的形式
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1">1</a></span>
+<span class="normal"><a href="#__codelineno-51-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1"></a><span class="n">f</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>  <span class="c1"># 错误：b 不能使用关键字参数的形式</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2"></a><span class="n">f</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>          <span class="c1"># 错误：e 必须使用关键字参数的形式</span>
 </code></pre></div></td></tr></table></div>
 <p>在第一个错误示例中，<code>b</code> 作为关键字参数传递是不允许的，因为它在 <code>/</code> 之前，必须作为位置参数传递。</p>
 <p>在第二个错误示例中，<code>e</code> 没有通过关键字参数传递，但因为它在 <code>*</code> 之后，所以必须以关键字参数形式传递。</p>
 <h2 id="_3">课后练习</h2>
 <p>请将下列代码（Lesson2课后练习）的点单、打印客户点单内容、计算订单总价三个功能封装成独立的方法。</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-52-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-52-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-52-4"> 4</a></span>
@@ -2663,42 +2663,42 @@
 <span class="normal"><a href="#__codelineno-52-30">30</a></span>
 <span class="normal"><a href="#__codelineno-52-31">31</a></span>
 <span class="normal"><a href="#__codelineno-52-32">32</a></span>
-<span class="normal"><a href="#__codelineno-52-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1"></a># 餐厅点单程序
+<span class="normal"><a href="#__codelineno-52-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1"></a><span class="c1"># 餐厅点单程序</span>
 <a id="__codelineno-52-2" name="__codelineno-52-2"></a>
-<a id="__codelineno-52-3" name="__codelineno-52-3"></a># 定义商品的价格常量
-<a id="__codelineno-52-4" name="__codelineno-52-4"></a>PRICE_BURGER = 12.5  # 汉堡的价格
-<a id="__codelineno-52-5" name="__codelineno-52-5"></a>PRICE_FRIES = 6  # 薯条的价格
-<a id="__codelineno-52-6" name="__codelineno-52-6"></a>PRICE_COKE = 4.5  # 可乐的价格
+<a id="__codelineno-52-3" name="__codelineno-52-3"></a><span class="c1"># 定义商品的价格常量</span>
+<a id="__codelineno-52-4" name="__codelineno-52-4"></a><span class="n">PRICE_BURGER</span> <span class="o">=</span> <span class="mf">12.5</span>  <span class="c1"># 汉堡的价格</span>
+<a id="__codelineno-52-5" name="__codelineno-52-5"></a><span class="n">PRICE_FRIES</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># 薯条的价格</span>
+<a id="__codelineno-52-6" name="__codelineno-52-6"></a><span class="n">PRICE_COKE</span> <span class="o">=</span> <span class="mf">4.5</span>  <span class="c1"># 可乐的价格</span>
 <a id="__codelineno-52-7" name="__codelineno-52-7"></a>
-<a id="__codelineno-52-8" name="__codelineno-52-8"></a># 初始化总销售额
-<a id="__codelineno-52-9" name="__codelineno-52-9"></a>total_sales = 0.0
+<a id="__codelineno-52-8" name="__codelineno-52-8"></a><span class="c1"># 初始化总销售额</span>
+<a id="__codelineno-52-9" name="__codelineno-52-9"></a><span class="n">total_sales</span> <span class="o">=</span> <span class="mf">0.0</span>
 <a id="__codelineno-52-10" name="__codelineno-52-10"></a>
-<a id="__codelineno-52-11" name="__codelineno-52-11"></a>while True:
-<a id="__codelineno-52-12" name="__codelineno-52-12"></a>    # 提示用户输入是否继续点单，-1表示退出
-<a id="__codelineno-52-13" name="__codelineno-52-13"></a>    user_input = input(&quot;输入-1退出并计算总销售额，其他数字继续点单: &quot;)
-<a id="__codelineno-52-14" name="__codelineno-52-14"></a>    if user_input == &#39;-1&#39;:
-<a id="__codelineno-52-15" name="__codelineno-52-15"></a>        break
+<a id="__codelineno-52-11" name="__codelineno-52-11"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-52-12" name="__codelineno-52-12"></a>    <span class="c1"># 提示用户输入是否继续点单，-1表示退出</span>
+<a id="__codelineno-52-13" name="__codelineno-52-13"></a>    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;输入-1退出并计算总销售额，其他数字继续点单: &quot;</span><span class="p">)</span>
+<a id="__codelineno-52-14" name="__codelineno-52-14"></a>    <span class="k">if</span> <span class="n">user_input</span> <span class="o">==</span> <span class="s1">&#39;-1&#39;</span><span class="p">:</span>
+<a id="__codelineno-52-15" name="__codelineno-52-15"></a>        <span class="k">break</span>
 <a id="__codelineno-52-16" name="__codelineno-52-16"></a>
-<a id="__codelineno-52-17" name="__codelineno-52-17"></a>    # 接受顾客的点单
-<a id="__codelineno-52-18" name="__codelineno-52-18"></a>    num_burgers = int(input(&quot;请输入汉堡的数量: &quot;))
-<a id="__codelineno-52-19" name="__codelineno-52-19"></a>    num_fries = int(input(&quot;请输入薯条的数量: &quot;))
-<a id="__codelineno-52-20" name="__codelineno-52-20"></a>    num_cokes = int(input(&quot;请输入可乐的数量: &quot;))
+<a id="__codelineno-52-17" name="__codelineno-52-17"></a>    <span class="c1"># 接受顾客的点单</span>
+<a id="__codelineno-52-18" name="__codelineno-52-18"></a>    <span class="n">num_burgers</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入汉堡的数量: &quot;</span><span class="p">))</span>
+<a id="__codelineno-52-19" name="__codelineno-52-19"></a>    <span class="n">num_fries</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入薯条的数量: &quot;</span><span class="p">))</span>
+<a id="__codelineno-52-20" name="__codelineno-52-20"></a>    <span class="n">num_cokes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入可乐的数量: &quot;</span><span class="p">))</span>
 <a id="__codelineno-52-21" name="__codelineno-52-21"></a>
-<a id="__codelineno-52-22" name="__codelineno-52-22"></a>    # 计算当前顾客的点单总价
-<a id="__codelineno-52-23" name="__codelineno-52-23"></a>    total_price = num_burgers * PRICE_BURGER + num_fries * PRICE_FRIES + num_cokes * PRICE_COKE
+<a id="__codelineno-52-22" name="__codelineno-52-22"></a>    <span class="c1"># 计算当前顾客的点单总价</span>
+<a id="__codelineno-52-23" name="__codelineno-52-23"></a>    <span class="n">total_price</span> <span class="o">=</span> <span class="n">num_burgers</span> <span class="o">*</span> <span class="n">PRICE_BURGER</span> <span class="o">+</span> <span class="n">num_fries</span> <span class="o">*</span> <span class="n">PRICE_FRIES</span> <span class="o">+</span> <span class="n">num_cokes</span> <span class="o">*</span> <span class="n">PRICE_COKE</span>
 <a id="__codelineno-52-24" name="__codelineno-52-24"></a>
-<a id="__codelineno-52-25" name="__codelineno-52-25"></a>    # 输出当前顾客的点单内容和总价
-<a id="__codelineno-52-26" name="__codelineno-52-26"></a>    print(f&quot;顾客点单内容: 汉堡 {num_burgers} 个, 薯条 {num_fries} 份, 可乐 {num_cokes} 瓶&quot;)
-<a id="__codelineno-52-27" name="__codelineno-52-27"></a>    print(f&quot;本次点单总价: {total_price:.2f} 元&quot;)
+<a id="__codelineno-52-25" name="__codelineno-52-25"></a>    <span class="c1"># 输出当前顾客的点单内容和总价</span>
+<a id="__codelineno-52-26" name="__codelineno-52-26"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;顾客点单内容: 汉堡 </span><span class="si">{</span><span class="n">num_burgers</span><span class="si">}</span><span class="s2"> 个, 薯条 </span><span class="si">{</span><span class="n">num_fries</span><span class="si">}</span><span class="s2"> 份, 可乐 </span><span class="si">{</span><span class="n">num_cokes</span><span class="si">}</span><span class="s2"> 瓶&quot;</span><span class="p">)</span>
+<a id="__codelineno-52-27" name="__codelineno-52-27"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;本次点单总价: </span><span class="si">{</span><span class="n">total_price</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> 元&quot;</span><span class="p">)</span>
 <a id="__codelineno-52-28" name="__codelineno-52-28"></a>
-<a id="__codelineno-52-29" name="__codelineno-52-29"></a>    # 将本次点单总价累加到总销售额中
-<a id="__codelineno-52-30" name="__codelineno-52-30"></a>    total_sales += total_price
+<a id="__codelineno-52-29" name="__codelineno-52-29"></a>    <span class="c1"># 将本次点单总价累加到总销售额中</span>
+<a id="__codelineno-52-30" name="__codelineno-52-30"></a>    <span class="n">total_sales</span> <span class="o">+=</span> <span class="n">total_price</span>
 <a id="__codelineno-52-31" name="__codelineno-52-31"></a>
-<a id="__codelineno-52-32" name="__codelineno-52-32"></a># 输出所有顾客的总销售额
-<a id="__codelineno-52-33" name="__codelineno-52-33"></a>print(f&quot;所有顾客的总销售额: {total_sales:.2f} 元&quot;)
+<a id="__codelineno-52-32" name="__codelineno-52-32"></a><span class="c1"># 输出所有顾客的总销售额</span>
+<a id="__codelineno-52-33" name="__codelineno-52-33"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;所有顾客的总销售额: </span><span class="si">{</span><span class="n">total_sales</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> 元&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>参考答案</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-53-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-53-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-53-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-53-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-53-4"> 4</a></span>
@@ -2744,53 +2744,53 @@
 <span class="normal"><a href="#__codelineno-53-44">44</a></span>
 <span class="normal"><a href="#__codelineno-53-45">45</a></span>
 <span class="normal"><a href="#__codelineno-53-46">46</a></span>
-<span class="normal"><a href="#__codelineno-53-47">47</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1"></a># 餐厅点单程序
+<span class="normal"><a href="#__codelineno-53-47">47</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1"></a><span class="c1"># 餐厅点单程序</span>
 <a id="__codelineno-53-2" name="__codelineno-53-2"></a>
-<a id="__codelineno-53-3" name="__codelineno-53-3"></a># 定义商品的价格常量
-<a id="__codelineno-53-4" name="__codelineno-53-4"></a>PRICE_BURGER = 12.5  # 汉堡的价格
-<a id="__codelineno-53-5" name="__codelineno-53-5"></a>PRICE_FRIES = 6  # 薯条的价格
-<a id="__codelineno-53-6" name="__codelineno-53-6"></a>PRICE_COKE = 4.5  # 可乐的价格
+<a id="__codelineno-53-3" name="__codelineno-53-3"></a><span class="c1"># 定义商品的价格常量</span>
+<a id="__codelineno-53-4" name="__codelineno-53-4"></a><span class="n">PRICE_BURGER</span> <span class="o">=</span> <span class="mf">12.5</span>  <span class="c1"># 汉堡的价格</span>
+<a id="__codelineno-53-5" name="__codelineno-53-5"></a><span class="n">PRICE_FRIES</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># 薯条的价格</span>
+<a id="__codelineno-53-6" name="__codelineno-53-6"></a><span class="n">PRICE_COKE</span> <span class="o">=</span> <span class="mf">4.5</span>  <span class="c1"># 可乐的价格</span>
 <a id="__codelineno-53-7" name="__codelineno-53-7"></a>
-<a id="__codelineno-53-8" name="__codelineno-53-8"></a># 初始化总销售额
-<a id="__codelineno-53-9" name="__codelineno-53-9"></a>total_sales = 0.0
+<a id="__codelineno-53-8" name="__codelineno-53-8"></a><span class="c1"># 初始化总销售额</span>
+<a id="__codelineno-53-9" name="__codelineno-53-9"></a><span class="n">total_sales</span> <span class="o">=</span> <span class="mf">0.0</span>
 <a id="__codelineno-53-10" name="__codelineno-53-10"></a>
-<a id="__codelineno-53-11" name="__codelineno-53-11"></a>def take_order():
-<a id="__codelineno-53-12" name="__codelineno-53-12"></a>    num_burgers = int(input(&quot;请输入汉堡的数量: &quot;))
-<a id="__codelineno-53-13" name="__codelineno-53-13"></a>    num_fries = int(input(&quot;请输入薯条的数量: &quot;))
-<a id="__codelineno-53-14" name="__codelineno-53-14"></a>    num_cokes = int(input(&quot;请输入可乐的数量: &quot;))
-<a id="__codelineno-53-15" name="__codelineno-53-15"></a>    return num_burgers, num_fries, num_cokes
+<a id="__codelineno-53-11" name="__codelineno-53-11"></a><span class="k">def</span> <span class="nf">take_order</span><span class="p">():</span>
+<a id="__codelineno-53-12" name="__codelineno-53-12"></a>    <span class="n">num_burgers</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入汉堡的数量: &quot;</span><span class="p">))</span>
+<a id="__codelineno-53-13" name="__codelineno-53-13"></a>    <span class="n">num_fries</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入薯条的数量: &quot;</span><span class="p">))</span>
+<a id="__codelineno-53-14" name="__codelineno-53-14"></a>    <span class="n">num_cokes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入可乐的数量: &quot;</span><span class="p">))</span>
+<a id="__codelineno-53-15" name="__codelineno-53-15"></a>    <span class="k">return</span> <span class="n">num_burgers</span><span class="p">,</span> <span class="n">num_fries</span><span class="p">,</span> <span class="n">num_cokes</span>
 <a id="__codelineno-53-16" name="__codelineno-53-16"></a>
-<a id="__codelineno-53-17" name="__codelineno-53-17"></a>def print_order(num_burgers, num_fries, num_cokes):
-<a id="__codelineno-53-18" name="__codelineno-53-18"></a>    # 打印顾客的点单内容。
-<a id="__codelineno-53-19" name="__codelineno-53-19"></a>    print(f&quot;顾客点单内容: 汉堡 {num_burgers} 个, 薯条 {num_fries} 份, 可乐 {num_cokes} 瓶&quot;)
+<a id="__codelineno-53-17" name="__codelineno-53-17"></a><span class="k">def</span> <span class="nf">print_order</span><span class="p">(</span><span class="n">num_burgers</span><span class="p">,</span> <span class="n">num_fries</span><span class="p">,</span> <span class="n">num_cokes</span><span class="p">):</span>
+<a id="__codelineno-53-18" name="__codelineno-53-18"></a>    <span class="c1"># 打印顾客的点单内容。</span>
+<a id="__codelineno-53-19" name="__codelineno-53-19"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;顾客点单内容: 汉堡 </span><span class="si">{</span><span class="n">num_burgers</span><span class="si">}</span><span class="s2"> 个, 薯条 </span><span class="si">{</span><span class="n">num_fries</span><span class="si">}</span><span class="s2"> 份, 可乐 </span><span class="si">{</span><span class="n">num_cokes</span><span class="si">}</span><span class="s2"> 瓶&quot;</span><span class="p">)</span>
 <a id="__codelineno-53-20" name="__codelineno-53-20"></a>
-<a id="__codelineno-53-21" name="__codelineno-53-21"></a>def calculate_total_price(num_burgers, num_fries, num_cokes):
-<a id="__codelineno-53-22" name="__codelineno-53-22"></a>    # 计算并返回点单总价。
-<a id="__codelineno-53-23" name="__codelineno-53-23"></a>    return num_burgers * PRICE_BURGER + num_fries * PRICE_FRIES + num_cokes * PRICE_COKE
+<a id="__codelineno-53-21" name="__codelineno-53-21"></a><span class="k">def</span> <span class="nf">calculate_total_price</span><span class="p">(</span><span class="n">num_burgers</span><span class="p">,</span> <span class="n">num_fries</span><span class="p">,</span> <span class="n">num_cokes</span><span class="p">):</span>
+<a id="__codelineno-53-22" name="__codelineno-53-22"></a>    <span class="c1"># 计算并返回点单总价。</span>
+<a id="__codelineno-53-23" name="__codelineno-53-23"></a>    <span class="k">return</span> <span class="n">num_burgers</span> <span class="o">*</span> <span class="n">PRICE_BURGER</span> <span class="o">+</span> <span class="n">num_fries</span> <span class="o">*</span> <span class="n">PRICE_FRIES</span> <span class="o">+</span> <span class="n">num_cokes</span> <span class="o">*</span> <span class="n">PRICE_COKE</span>
 <a id="__codelineno-53-24" name="__codelineno-53-24"></a>
-<a id="__codelineno-53-25" name="__codelineno-53-25"></a>while True:
-<a id="__codelineno-53-26" name="__codelineno-53-26"></a>    # 提示用户输入是否继续点单，-1表示退出
-<a id="__codelineno-53-27" name="__codelineno-53-27"></a>    user_input = input(&quot;输入-1退出并计算总销售额，其他数字继续点单: &quot;)
-<a id="__codelineno-53-28" name="__codelineno-53-28"></a>    if user_input == &#39;-1&#39;:
-<a id="__codelineno-53-29" name="__codelineno-53-29"></a>        break
+<a id="__codelineno-53-25" name="__codelineno-53-25"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-53-26" name="__codelineno-53-26"></a>    <span class="c1"># 提示用户输入是否继续点单，-1表示退出</span>
+<a id="__codelineno-53-27" name="__codelineno-53-27"></a>    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;输入-1退出并计算总销售额，其他数字继续点单: &quot;</span><span class="p">)</span>
+<a id="__codelineno-53-28" name="__codelineno-53-28"></a>    <span class="k">if</span> <span class="n">user_input</span> <span class="o">==</span> <span class="s1">&#39;-1&#39;</span><span class="p">:</span>
+<a id="__codelineno-53-29" name="__codelineno-53-29"></a>        <span class="k">break</span>
 <a id="__codelineno-53-30" name="__codelineno-53-30"></a>
-<a id="__codelineno-53-31" name="__codelineno-53-31"></a>    # 接受顾客的点单
-<a id="__codelineno-53-32" name="__codelineno-53-32"></a>    num_burgers, num_fries, num_cokes = take_order()
-<a id="__codelineno-53-33" name="__codelineno-53-33"></a>    if num_burgers is None or num_fries is None or num_cokes is None:
-<a id="__codelineno-53-34" name="__codelineno-53-34"></a>        continue
+<a id="__codelineno-53-31" name="__codelineno-53-31"></a>    <span class="c1"># 接受顾客的点单</span>
+<a id="__codelineno-53-32" name="__codelineno-53-32"></a>    <span class="n">num_burgers</span><span class="p">,</span> <span class="n">num_fries</span><span class="p">,</span> <span class="n">num_cokes</span> <span class="o">=</span> <span class="n">take_order</span><span class="p">()</span>
+<a id="__codelineno-53-33" name="__codelineno-53-33"></a>    <span class="k">if</span> <span class="n">num_burgers</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">num_fries</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">num_cokes</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-53-34" name="__codelineno-53-34"></a>        <span class="k">continue</span>
 <a id="__codelineno-53-35" name="__codelineno-53-35"></a>
-<a id="__codelineno-53-36" name="__codelineno-53-36"></a>    # 打印顾客的点单内容
-<a id="__codelineno-53-37" name="__codelineno-53-37"></a>    print_order(num_burgers, num_fries, num_cokes)
+<a id="__codelineno-53-36" name="__codelineno-53-36"></a>    <span class="c1"># 打印顾客的点单内容</span>
+<a id="__codelineno-53-37" name="__codelineno-53-37"></a>    <span class="n">print_order</span><span class="p">(</span><span class="n">num_burgers</span><span class="p">,</span> <span class="n">num_fries</span><span class="p">,</span> <span class="n">num_cokes</span><span class="p">)</span>
 <a id="__codelineno-53-38" name="__codelineno-53-38"></a>
-<a id="__codelineno-53-39" name="__codelineno-53-39"></a>    # 计算并输出当前顾客的点单总价
-<a id="__codelineno-53-40" name="__codelineno-53-40"></a>    total_price = calculate_total_price(num_burgers, num_fries, num_cokes)
-<a id="__codelineno-53-41" name="__codelineno-53-41"></a>    print(f&quot;本次点单总价: {total_price:.2f} 元&quot;)
+<a id="__codelineno-53-39" name="__codelineno-53-39"></a>    <span class="c1"># 计算并输出当前顾客的点单总价</span>
+<a id="__codelineno-53-40" name="__codelineno-53-40"></a>    <span class="n">total_price</span> <span class="o">=</span> <span class="n">calculate_total_price</span><span class="p">(</span><span class="n">num_burgers</span><span class="p">,</span> <span class="n">num_fries</span><span class="p">,</span> <span class="n">num_cokes</span><span class="p">)</span>
+<a id="__codelineno-53-41" name="__codelineno-53-41"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;本次点单总价: </span><span class="si">{</span><span class="n">total_price</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> 元&quot;</span><span class="p">)</span>
 <a id="__codelineno-53-42" name="__codelineno-53-42"></a>
-<a id="__codelineno-53-43" name="__codelineno-53-43"></a>    # 将本次点单总价累加到总销售额中
-<a id="__codelineno-53-44" name="__codelineno-53-44"></a>    total_sales += total_price
+<a id="__codelineno-53-43" name="__codelineno-53-43"></a>    <span class="c1"># 将本次点单总价累加到总销售额中</span>
+<a id="__codelineno-53-44" name="__codelineno-53-44"></a>    <span class="n">total_sales</span> <span class="o">+=</span> <span class="n">total_price</span>
 <a id="__codelineno-53-45" name="__codelineno-53-45"></a>
-<a id="__codelineno-53-46" name="__codelineno-53-46"></a># 输出所有顾客的总销售额
-<a id="__codelineno-53-47" name="__codelineno-53-47"></a>print(f&quot;所有顾客的总销售额: {total_sales:.2f} 元&quot;)
+<a id="__codelineno-53-46" name="__codelineno-53-46"></a><span class="c1"># 输出所有顾客的总销售额</span>
+<a id="__codelineno-53-47" name="__codelineno-53-47"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;所有顾客的总销售额: </span><span class="si">{</span><span class="n">total_sales</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> 元&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 
 

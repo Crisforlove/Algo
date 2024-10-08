@@ -2143,7 +2143,7 @@
 <li>直到两指针相撞（即 <code>left==right</code>），或者满足其他要求的特殊条件时，跳出循环体。</li>
 </ol>
 <h3 id="12">1.2 对撞指针伪代码模版</h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
@@ -2153,17 +2153,17 @@
 <span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>left, right = 0, len(nums) - 1
+<span class="normal"><a href="#__codelineno-0-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>while left &lt; right:
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    if 满足要求的特殊条件:
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>        return 符合条件的值 
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    elif 一定条件 1:
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>        left += 1
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    elif 一定条件 2:
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>        right -= 1
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">while</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="k">if</span> <span class="n">满足要求的特殊条件</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="k">return</span> <span class="n">符合条件的值</span> 
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="k">elif</span> <span class="n">一定条件</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>        <span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="k">elif</span> <span class="n">一定条件</span> <span class="mi">2</span><span class="p">:</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>        <span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a>return 没找到 或 找到对应值
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="k">return</span> <span class="n">没找到</span> <span class="n">或</span> <span class="n">找到对应值</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="13">1.3 对撞指针适用范围</h3>
 <p>对撞指针一般用来解决有序数组或者字符串问题：</p>
@@ -2193,18 +2193,18 @@
 <li>字符数组是可变的，但你不能使用额外的数组空间，因此需要在原地修改字符顺序。</li>
 </ul>
 <h4 id="1_1">参考解答1</h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>class Solution(object):
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    def reverseString(self, s):
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>        for i in range(len(s)//2):
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>            s[i],s[-1-i] = s[-1-i],s[i]
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>        return s
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="k">def</span> <span class="nf">reverseString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>            <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">],</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="k">return</span> <span class="n">s</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="2_1">参考解答2</h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
@@ -2214,24 +2214,24 @@
 <span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>class Solution(object):
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    def reverseString(self, s):
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>        i = 0
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>        j = len(s) -1
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>        while i &lt; j:
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a>            temp = s[i]
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>            s[i] = s[j]
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>            s[j] = temp
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>            i += 1
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>            j -= 1
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a>        return s
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">def</span> <span class="nf">reverseString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>        <span class="n">j</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>            <span class="n">temp</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>            <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>            <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>            <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>        <span class="k">return</span> <span class="n">s</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="_4">调用函数法</h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>class Solution(object):
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    def reverseString(self, s):
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>        return s.reverse()
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="k">def</span> <span class="nf">reverseString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>        <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="22-lc-125">2.2 LC 125 验证回文串</h3>
 <h4 id="_5">问题描述</h4>
@@ -2246,7 +2246,7 @@
 <h4 id="_7">思路分析</h4>
 <p>最简单的方法是对字符串 <code>s</code> 进行一次遍历，并将其中的字母和数字字符进行保留，放在另一个字符串 <code>sgood</code> 中。这样我们只需要判断 <code>sgood</code> 是否是一个普通的回文串即可。使用双指针，从字符串的两端向中间遍历，逐个比较对应字符。</p>
 <h4 id="_8">参考解答</h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
@@ -2258,28 +2258,28 @@
 <span class="normal"><a href="#__codelineno-4-10">10</a></span>
 <span class="normal"><a href="#__codelineno-4-11">11</a></span>
 <span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>class Solution(object):
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>    def isPalindrome(self, s):
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>        i, j = 0, len(s)-1
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>        while i &lt; j:
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>            while i &lt; j and not s[i].isalnum():
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>                i += 1
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>            while i &lt; j and not s[j].isalnum():
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>                j -= 1
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>            if s[i].lower() != s[j].lower():
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>                return False
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a>            i += 1
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a>            j -= 1
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a>        return True     
+<span class="normal"><a href="#__codelineno-4-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="k">def</span> <span class="nf">isPalindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>            <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">isalnum</span><span class="p">():</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>            <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">isalnum</span><span class="p">():</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>                <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>            <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>                <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>            <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>        <span class="k">return</span> <span class="kc">True</span>     
 </code></pre></div></td></tr></table></div>
 <h4 id="_9">切片法</h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>class Solution(object):
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    def isPalindrome(self, s):
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>        sgood = &quot;&quot;.join(ch.lower() for ch in s if ch.isalnum())
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>        return sgood == sgood[::-1]
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="k">def</span> <span class="nf">isPalindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>        <span class="n">sgood</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ch</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span> <span class="k">if</span> <span class="n">ch</span><span class="o">.</span><span class="n">isalnum</span><span class="p">())</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>        <span class="k">return</span> <span class="n">sgood</span> <span class="o">==</span> <span class="n">sgood</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="3">3 举一反三</h2>
 <h3 id="31-lc-345">3.1 LC 345 反转字符串中的元音字母</h3>
@@ -2299,7 +2299,7 @@
 <li>此时，如果 <code>l &lt; r</code>，那么交换 <code>l</code> 和 <code>r</code> 指向的元音字母，否则说明所有的元音字母均已遍历过，就可以退出遍历的过程。</li>
 </ul>
 <h4 id="_13">参考解答</h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
@@ -2315,23 +2315,23 @@
 <span class="normal"><a href="#__codelineno-6-14">14</a></span>
 <span class="normal"><a href="#__codelineno-6-15">15</a></span>
 <span class="normal"><a href="#__codelineno-6-16">16</a></span>
-<span class="normal"><a href="#__codelineno-6-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>class Solution(object):
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    def reverseVowels(self, s):
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>        chars = list(s)
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>        l, r = 0, len(s) - 1
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>        vowels = set(&#39;aeiouAEIOU&#39;)
+<span class="normal"><a href="#__codelineno-6-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="k">def</span> <span class="nf">reverseVowels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>        <span class="n">chars</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>        <span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>        <span class="n">vowels</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;aeiouAEIOU&#39;</span><span class="p">)</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a>        while l &lt; r:
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a>            while l &lt; len(s) and chars[l] not in vowels:
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a>                l += 1
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a>            while r &gt;= 0 and chars[r] not in vowels:
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a>                r -= 1
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a>            if l &gt;= r:
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a>                break
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a>            chars[l], chars[r] = chars[r],chars[l]
-<a id="__codelineno-6-15" name="__codelineno-6-15"></a>            l += 1
-<a id="__codelineno-6-16" name="__codelineno-6-16"></a>            r -= 1
-<a id="__codelineno-6-17" name="__codelineno-6-17"></a>        return &quot;&quot;.join(chars)
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>        <span class="k">while</span> <span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">:</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>            <span class="k">while</span> <span class="n">l</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="ow">and</span> <span class="n">chars</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">vowels</span><span class="p">:</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>                <span class="n">l</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>            <span class="k">while</span> <span class="n">r</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">chars</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">vowels</span><span class="p">:</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>                <span class="n">r</span> <span class="o">-=</span> <span class="mi">1</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>            <span class="k">if</span> <span class="n">l</span> <span class="o">&gt;=</span> <span class="n">r</span><span class="p">:</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>                <span class="k">break</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>            <span class="n">chars</span><span class="p">[</span><span class="n">l</span><span class="p">],</span> <span class="n">chars</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="n">chars</span><span class="p">[</span><span class="n">r</span><span class="p">],</span><span class="n">chars</span><span class="p">[</span><span class="n">l</span><span class="p">]</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>            <span class="n">l</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a>            <span class="n">r</span> <span class="o">-=</span> <span class="mi">1</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a>        <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">chars</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="32-lc-917">3.2 LC 917 仅仅反转字母</h3>
 <h4 id="_14">问题描述</h4>
@@ -2354,7 +2354,7 @@
 <li>交换这两个字母并移动指针，直到 <code>l</code> 和 <code>r</code> 相遇。</li>
 </ul>
 <h4 id="_17">参考示例</h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
@@ -2366,19 +2366,19 @@
 <span class="normal"><a href="#__codelineno-7-10">10</a></span>
 <span class="normal"><a href="#__codelineno-7-11">11</a></span>
 <span class="normal"><a href="#__codelineno-7-12">12</a></span>
-<span class="normal"><a href="#__codelineno-7-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>class Solution(object):
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>    def reverseOnlyLetters(self, s):
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>        l,r = 0, len(s) - 1
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>        slist = list(s)
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a>        while l &lt; r:
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a>            while l &lt; r and not s[l].isalpha():
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a>                l += 1
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a>            while l &lt; r and not s[r].isalpha():
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a>                r -= 1
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a>            slist[l], slist[r] = slist[r], slist[l]
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a>            l += 1
-<a id="__codelineno-7-12" name="__codelineno-7-12"></a>            r -= 1
-<a id="__codelineno-7-13" name="__codelineno-7-13"></a>        return &quot;&quot;.join(slist)
+<span class="normal"><a href="#__codelineno-7-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>    <span class="k">def</span> <span class="nf">reverseOnlyLetters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>        <span class="n">l</span><span class="p">,</span><span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>        <span class="n">slist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>        <span class="k">while</span> <span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">:</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>            <span class="k">while</span> <span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">s</span><span class="p">[</span><span class="n">l</span><span class="p">]</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>                <span class="n">l</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>            <span class="k">while</span> <span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">s</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>                <span class="n">r</span> <span class="o">-=</span> <span class="mi">1</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>            <span class="n">slist</span><span class="p">[</span><span class="n">l</span><span class="p">],</span> <span class="n">slist</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="n">slist</span><span class="p">[</span><span class="n">r</span><span class="p">],</span> <span class="n">slist</span><span class="p">[</span><span class="n">l</span><span class="p">]</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>            <span class="n">l</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>            <span class="n">r</span> <span class="o">-=</span> <span class="mi">1</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>        <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">slist</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="33-lc-680-ii">3.3 LC 680 验证回文串 II</h3>
 <h4 id="_18">问题描述</h4>
@@ -2396,7 +2396,7 @@
 <li>一旦发现两个字符不匹配，可以尝试删除左边或右边的一个字符，再判断删除后的字符串是否为回文串。</li>
 </ul>
 <h4 id="_21">参考解答</h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
@@ -2408,19 +2408,19 @@
 <span class="normal"><a href="#__codelineno-8-10">10</a></span>
 <span class="normal"><a href="#__codelineno-8-11">11</a></span>
 <span class="normal"><a href="#__codelineno-8-12">12</a></span>
-<span class="normal"><a href="#__codelineno-8-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>class Solution(object):
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a>    def validPalindrome(self, s):
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a>        if s == s[::-1]:
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a>            return True
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a>        l, r = 0, len(s)-1
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a>        while l &lt; r:
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a>            if s[l] == s[r]:
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a>                l += 1
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a>                r -= 1
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a>            else:
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a>                 # 尝试删除左边或右边的字符后检查是否是回文
-<a id="__codelineno-8-12" name="__codelineno-8-12"></a>                return s[l+1:r+1] == s[l+1:r+1][::-1] or s[l:r] == s[l:r][::-1]
-<a id="__codelineno-8-13" name="__codelineno-8-13"></a>        return True
+<span class="normal"><a href="#__codelineno-8-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="k">def</span> <span class="nf">validPalindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>        <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>            <span class="k">return</span> <span class="kc">True</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>        <span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>        <span class="k">while</span> <span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">:</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>            <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="n">r</span><span class="p">]:</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>                <span class="n">l</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>                <span class="n">r</span> <span class="o">-=</span> <span class="mi">1</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>            <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>                 <span class="c1"># 尝试删除左边或右边的字符后检查是否是回文</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a>                <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span> <span class="n">s</span><span class="p">[</span><span class="n">l</span><span class="p">:</span><span class="n">r</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="n">l</span><span class="p">:</span><span class="n">r</span><span class="p">][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a>        <span class="k">return</span> <span class="kc">True</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="_22">课后练习</h2>
 <table>
