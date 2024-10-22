@@ -1,0 +1,65 @@
+/* 为发起人单独设置样式 */
+.initiator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contributors {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contributor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contributor:hover {
+    background-color: #dee2e6;
+    transform: translateY(-5px);  /* 鼠标悬停时的浮动效果 */
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+a {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* 项目概述部分美化 */
+#overview {
+    background-color: #f1f3f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
