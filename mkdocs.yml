@@ -63,4 +63,7 @@ markdown_extensions:
   - pymdownx.superfences       # 支持嵌套代码块和内容块
   - pymdownx.inlinehilite      # 支持内联代码块高亮
   - pymdownx.tilde             # 支持 ~~~ 格式的代码块
-  - pymdownx.betterem          # 提升 Markdown 中的文本强调效果
+  - pymdownx.betterem          # 提升 Markdown 中的文本强调效果、
+
+extra_css:
+  - assets/stylesheets/custom.css

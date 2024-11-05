@@ -1,4 +1,10 @@
 # Lesson 1 Python的环境设置、数据类型、运算符和输入和输出
+## Contributors
+<div class="contributor">
+    <img src="https://github.com/Crisforlove.png" alt="Crisforlove" class="avatar">
+    <a href="https://github.com/Crisforlove">Crisforlove</a>
+</div>
+
 ## 目录
 
   - [前言：为什么要学习Python](#前言为什么要学习python)
